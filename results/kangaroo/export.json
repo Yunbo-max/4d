@@ -1,0 +1,6 @@
+{
+  "frames": 16,
+  "animations_in_glb": 1,
+  "animation_fps": 8,
+  "preview": "Left: supplied official example. Right: generated geometry rendered with fixed lighting; color is a visualization material, not inferred texture."
+}

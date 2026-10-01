@@ -6,8 +6,21 @@
 
 - 官方代码与依赖已在 RTX 2080 Ti 22GB 上完成导入检查。
 - 官方 kangaroo 示例包含 16 帧 512×512 RGBA 图像。
-- 权重已下载并校验；**推理验证进行中，尚未发布生成结果**。
+- **官方袋鼠示例推理已完成**：16 帧动态网格，约 10 分 49 秒，采样显存峰值 10,255 MiB（约 10.0 GiB）。
+- 每帧 19,999 个顶点、39,994 个三角面，拓扑一致、数据有效，并检测到运动。
+- 本次记录对应一个官方示例；完整 benchmark 尚未运行。
 - 使用 FP16、`--low_ram`、seed=42，保留官方默认推理步数。
+
+## 生成结果
+
+![输入视频与生成网格](results/kangaroo/preview.gif)
+
+左侧为官方输入视频；右侧是本次生成的三维网格，使用蓝色预览材质。
+
+- [动画 GLB](results/kangaroo/animated_mesh.glb)
+- [逐帧网格压缩包](results/kangaroo/per-frame-meshes.zip)
+- [变形数组](results/kangaroo/deformations.npz)
+- [运行报告](results/kangaroo/report.json)与[显存采样](results/kangaroo/gpu-memory.csv)
 
 ## 目录
 
@@ -50,3 +63,16 @@ git pull --ff-only
 - [ActionMesh 官方仓库](https://github.com/facebookresearch/actionmesh)，版本 `d5c01f5045df55819e337369c9617f603c667e00`。
 - [TripoSG 官方仓库](https://github.com/VAST-AI-Research/TripoSG)，版本 `fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c`。
 - 两个项目的原始 LICENSE 均保留在对应目录。上游代码归原作者所有；本仓库整理复现流程及实际运行记录。
+
+## 导出动画和预览
+
+完成一次推理后，可以使用 Blender 3.5.1 导出单文件动画和预览：
+
+```bash
+cd actionmesh
+inference-env/bin/python export_result.py outputs/<运行目录> --blender /path/to/blender
+```
+
+导出包括 `animated_mesh.glb`、`preview.gif`、`deformations.npz` 和 `per-frame-meshes.zip`。
+预览左侧为官方输入，右侧为生成网格，使用统一蓝色材质和固定灯光。
+如果 Blender 缺少本地动态库，可以用 `--library-dir` 指定单独准备的库目录。

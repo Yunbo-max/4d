@@ -1,0 +1,12 @@
+[
+  "inference/video_to_animated_mesh.py",
+  "--input",
+  "assets/examples/kangaroo",
+  "--output_dir",
+  "/root/rivermind-data/actionmesh-repro/outputs/kangaroo-lowram-fp16-20261001T124252",
+  "--low_ram",
+  "--dtype",
+  "float16",
+  "--seed",
+  "42"
+]
