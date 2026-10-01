@@ -31,7 +31,8 @@ lo = vertices.min(axis=(0, 1))
 hi = vertices.max(axis=(0, 1))
 center = Vector(((lo + hi) / 2).tolist())
 scale = float(max(hi - lo))
-bpy.ops.object.camera_add(location=center + Vector((2.4, -4.0, 1.7)) * scale)
+camera_offset = (-2.4, 4.0, 1.7) if '--reverse-view' in sys.argv else (2.4, -4.0, 1.7)
+bpy.ops.object.camera_add(location=center + Vector(camera_offset) * scale)
 camera = bpy.context.object
 camera.rotation_euler = (center - camera.location).to_track_quat('-Z', 'Y').to_euler()
 camera.data.type = 'ORTHO'

@@ -1,0 +1,12 @@
+[
+  "/root/rivermind-data/actionmesh-repro/repo/inference/video_to_animated_mesh.py",
+  "--input",
+  "/root/rivermind-data/actionmesh-repro/outputs/input-modes-20261001/inputs/kangaroo.mp4",
+  "--output_dir",
+  "/root/rivermind-data/actionmesh-repro/outputs/input-modes-20261001/kangaroo-video",
+  "--low_ram",
+  "--dtype",
+  "float16",
+  "--seed",
+  "42"
+]

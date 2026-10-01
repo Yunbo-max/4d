@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/facebookresearch/pytorch3d",
+  "revision": "88e182f989c80836f4bd744e0d9cb1852762ce01",
+  "purpose": "CUDA point-cloud sampling used by TripoSGVAE in video + mesh inference",
+  "source_modified": false,
+  "build_environment": {
+    "FORCE_CUDA": "1",
+    "TORCH_CUDA_ARCH_LIST": "7.5",
+    "MAX_JOBS": "4",
+    "CUB_HOME": "/usr/local/cuda/include"
+  },
+  "install_scope": "project inference-env only",
+  "command": "python -m pip install --no-build-isolation --no-deps -v ./tools/pytorch3d-source"
+}

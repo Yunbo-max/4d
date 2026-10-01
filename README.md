@@ -8,8 +8,28 @@
 - 官方 kangaroo 示例包含 16 帧 512×512 RGBA 图像。
 - **官方袋鼠示例推理已完成**：16 帧动态网格，约 10 分 49 秒，采样显存峰值 10,255 MiB（约 10.0 GiB）。
 - 每帧 19,999 个顶点、39,994 个三角面，拓扑一致、数据有效，并检测到运动。
-- 本次记录对应一个官方示例；完整 benchmark 尚未运行。
+- 已完成 PNG 序列、MP4、MP4 + GLB 三种输入流程验证，覆盖袋鼠和熊猫两个官方样例；完整 benchmark 尚未运行。
 - 使用 FP16、`--low_ram`、seed=42，保留官方默认推理步数。
+
+## 输入类型实测（2026-10-01）
+
+| 输入模式 | 结果 | 帧数 | 官方入口耗时 | 峰值显存 |
+|---|---|---:|---:|---:|
+| PNG 连续帧（袋鼠） | 通过 | 16 | 10 分 49 秒 | 10,255 MiB |
+| MP4 视频（袋鼠） | 通过 | 16 | 11 分 6 秒 | 10,257 MiB |
+| MP4 + GLB（熊猫） | 通过 | 16 | 10 分 16 秒 | 10,255 MiB |
+| 文字 prompt | 不支持：入口拒绝 | — | — | — |
+| 单张图片 | 不支持：入口拒绝 | — | — | — |
+
+文字和单图没有直接生成入口；如需此类输入，须先通过其他模型生成视频。
+
+[测试设计、运行记录与复现方法](results/input-modes/README.md)
+
+| 袋鼠：MP4 → 4D | 熊猫：MP4 + GLB → 4D |
+|---|---|
+| ![袋鼠视频推理](results/input-modes/kangaroo-video/preview.gif) | ![熊猫视频加模型推理](results/input-modes/panda-video-mesh/preview.gif) |
+
+熊猫动画 GLB 保留原始拓扑和纹理；上方 GIF 使用统一蓝色材质展示几何。熊猫耗时包含官方入口自带的 GPU 渲染，表中均不含后续 Blender 导出和文件传输。
 
 ## 生成结果
 
@@ -52,7 +72,7 @@ inference-env/bin/python finish_inference.py --run
 ## 同步到电脑
 
 ```bash
-cd /Users/yunbo/Documents/Codex/4d
+cd /Users/yunbo/Documents/4d
 git pull --ff-only
 ```
 

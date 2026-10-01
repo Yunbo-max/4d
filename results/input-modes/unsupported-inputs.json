@@ -1,0 +1,20 @@
+[
+  {
+    "input": "text",
+    "expected_rejection": true,
+    "error_type": "ValueError",
+    "message": "Unsupported input: a kangaroo boxing. Expected video file, image pattern, or directory."
+  },
+  {
+    "input": "single_png",
+    "expected_rejection": true,
+    "error_type": "ValueError",
+    "message": "Unsupported input: /root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo/00.png. Expected video file, image pattern, or directory."
+  },
+  {
+    "input": "one_frame_folder",
+    "expected_rejection": true,
+    "error_type": "AssertionError",
+    "message": "At least 16 frames are required, got 1"
+  }
+]

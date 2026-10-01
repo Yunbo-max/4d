@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-01",
+  "device": "NVIDIA GeForce RTX 2080 Ti 22528 MiB",
+  "generation_tests": [
+    {
+      "mode": "PNG 连续帧（袋鼠）",
+      "status": "verified",
+      "frames": 16,
+      "elapsed_seconds": 649.329652313143,
+      "nvidia_smi_peak_mib": 10255,
+      "report": "kangaroo/report.json"
+    },
+    {
+      "mode": "MP4 视频（袋鼠）",
+      "status": "verified",
+      "frames": 16,
+      "elapsed_seconds": 666.030010053888,
+      "nvidia_smi_peak_mib": 10257,
+      "report": "input-modes/kangaroo-video/report.json"
+    },
+    {
+      "mode": "MP4 + GLB（熊猫）",
+      "status": "verified",
+      "frames": 16,
+      "elapsed_seconds": 615.982034556102,
+      "nvidia_smi_peak_mib": 10255,
+      "report": "input-modes/panda-video-mesh/report.json"
+    }
+  ],
+  "unsupported_inputs": [
+    {
+      "input": "text",
+      "expected_rejection": true,
+      "error_type": "ValueError",
+      "message": "Unsupported input: a kangaroo boxing. Expected video file, image pattern, or directory."
+    },
+    {
+      "input": "single_png",
+      "expected_rejection": true,
+      "error_type": "ValueError",
+      "message": "Unsupported input: /root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo/00.png. Expected video file, image pattern, or directory."
+    },
+    {
+      "input": "one_frame_folder",
+      "expected_rejection": true,
+      "error_type": "AssertionError",
+      "message": "At least 16 frames are required, got 1"
+    }
+  ],
+  "scope": "Two official subjects, three supported input flows; prior PNG run reused and revalidated. Not a quality benchmark.",
+  "timing_note": "Official script time; panda includes optional PyTorch3D rendering. Excludes Blender export, downloads and transfer."
+}

@@ -1,0 +1,18 @@
+{
+  "python": "3.12.13",
+  "torch": "2.12.1+cu130",
+  "torchvision": "0.27.1+cu130",
+  "cuda": "13.0",
+  "gpu": "NVIDIA GeForce RTX 2080 Ti, 22528 MiB, 580.119.02",
+  "source_sha256": {
+    "inference/video_to_animated_mesh.py": "8b7c5af8b713b87f7a2059b78309616cbf1ad7144f63843362b88dfd66d76bae",
+    "inference/video_and_3d_to_animated_mesh.py": "1c57a76d465fcfd700ced0fe2759f49393c90e1424ac83a799f83fc0b995c069",
+    "actionmesh/pipeline_with_3d.py": "aaff5d928647921ac3e6d6a7ddc73414f89f7307fc55b533435a2749226360d6",
+    "actionmesh/preprocessing/mesh_processor.py": "0ce2c86f28cc84eb23beda5471c55b45f29420abb9c1d39d8b3aa69b81c6da65"
+  },
+  "inference_device": "cuda",
+  "note": "GPU inference; Blender preview rendering uses CPU and is timed separately.",
+  "pytorch3d": "0.7.9",
+  "pytorch3d_revision": "88e182f989c80836f4bd744e0d9cb1852762ce01",
+  "pytorch3d_cuda_smoke": "passed: farthest-point sampling, nearest-neighbor search, ActionMesh VAE and renderer imports"
+}

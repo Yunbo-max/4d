@@ -5,5 +5,12 @@
   "frames": 16,
   "elapsed_seconds": 649.329652313143,
   "nvidia_smi_peak_mib": 10255,
-  "code_revision": "d5c01f5045df55819e337369c9617f603c667e00"
+  "code_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+  "input_modes_complete": true,
+  "input_modes_summary": "input-modes/summary.json",
+  "verified_generation_modes": [
+    "png_sequence",
+    "mp4",
+    "mp4_plus_glb"
+  ]
 }

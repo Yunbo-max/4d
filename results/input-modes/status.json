@@ -1,0 +1,10 @@
+[
+  {
+    "mode": "kangaroo-video",
+    "exit_code": 0
+  },
+  {
+    "mode": "panda-video-mesh",
+    "exit_code": 0
+  }
+]

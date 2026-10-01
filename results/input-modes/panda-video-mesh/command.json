@@ -1,0 +1,14 @@
+[
+  "/root/rivermind-data/actionmesh-repro/repo/inference/video_and_3d_to_animated_mesh.py",
+  "--input",
+  "/root/rivermind-data/actionmesh-repro/outputs/input-modes-20261001/inputs/panda.mp4",
+  "--output_dir",
+  "/root/rivermind-data/actionmesh-repro/outputs/input-modes-20261001/panda-video-mesh",
+  "--low_ram",
+  "--dtype",
+  "float16",
+  "--seed",
+  "42",
+  "--mesh_input",
+  "/root/rivermind-data/actionmesh-repro/repo/assets/examples/panda/panda.glb"
+]

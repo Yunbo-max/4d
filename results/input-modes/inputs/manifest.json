@@ -1,0 +1,14 @@
+{
+  "source": "Official ActionMesh example PNG sequences",
+  "frames": 16,
+  "fps": 8,
+  "size": [
+    512,
+    512
+  ],
+  "encoding": "OpenCV mp4v, RGBA composited on white; no masks passed to inference",
+  "files": {
+    "kangaroo.mp4": "8ed2a2346aa9b3da7cc183bb8b0ebc5aaf869dd246107cf7eb61608b7b9c74ab",
+    "panda.mp4": "8fc19a327b7ace0df77eb5ee74c0fa56234b7182d8fbea1deb456c3005bd70dd"
+  }
+}
