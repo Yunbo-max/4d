@@ -1,0 +1,17 @@
+{
+  "status": "inference_validation_in_progress",
+  "inference_complete": false,
+  "date": "2026-10-01",
+  "gpu": "RTX 2080 Ti 22GB",
+  "sample": "official kangaroo, 16 RGBA frames",
+  "precision": "float16",
+  "mode": "low_ram",
+  "seed": 42,
+  "code_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+  "checks": [
+    "imports passed",
+    "official 16-frame sample validated",
+    "CUDA mesh extraction smoke test passed",
+    "all downloaded weights passed size/SHA256 verification"
+  ]
+}

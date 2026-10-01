@@ -1,0 +1,15 @@
+**/__pycache__/
+**/.DS_Store
+**/.cache/
+**/*env/
+**/weights/
+**/pretrained_weights/
+**/hf-cache/
+**/logs/
+**/tools/
+**/*.aria2
+**/*.incomplete
+**/manifests/
+**/.env
+**/.env.*
+.superpowers/

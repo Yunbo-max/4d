@@ -1,0 +1,249 @@
+[
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "LICENSE.txt",
+    "path": "weights/ActionMesh/LICENSE.txt",
+    "size": 12675,
+    "sha256": "d6b41838fa748a1d88481a3d0ef476c87f5538747f54057f9324066606af32a7"
+  },
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "README.md",
+    "path": "weights/ActionMesh/README.md",
+    "size": 2117,
+    "sha256": "70e3b125975c34cbf227e4ba1d0bad25081d495a964e61627881b9149a96429a"
+  },
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "autoencoder/config.json",
+    "path": "weights/ActionMesh/autoencoder/config.json",
+    "size": 335,
+    "sha256": "54c31cfd5fae6c3ce4051f0fa05473fea7295ea1746a74d245da6900560e3e3b"
+  },
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "autoencoder/model.safetensors",
+    "path": "weights/ActionMesh/autoencoder/model.safetensors",
+    "size": 856877444,
+    "sha256": "fc9846ab877cc162788dceff2ee0170082bb48520e55346cb4777814cfb507bb",
+    "mirror_url": "https://modelscope.cn/models/facebook/ActionMesh/resolve/53db78a4a27aa61f4f4ae7fd0240b0b653b64691/autoencoder/model.safetensors"
+  },
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "config.json",
+    "path": "weights/ActionMesh/config.json",
+    "size": 57,
+    "sha256": "ca21a6d401902ccda26ed58b1d332b1643da5670565322bd392944a96dc8ebe2"
+  },
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "denoiser/config.json",
+    "path": "weights/ActionMesh/denoiser/config.json",
+    "size": 248,
+    "sha256": "2cd1258ea721d4b34a27d25934f932f695ae201bee6adde187b746b9f7030ea8"
+  },
+  {
+    "repo": "facebook/ActionMesh",
+    "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "file": "denoiser/model.safetensors",
+    "path": "weights/ActionMesh/denoiser/model.safetensors",
+    "size": 5758281000,
+    "sha256": "04a3c74d8c38efa70e01c36ff08ef207af8e572e2b9c0eee715453c7934090fc",
+    "mirror_url": "https://modelscope.cn/models/facebook/ActionMesh/resolve/53db78a4a27aa61f4f4ae7fd0240b0b653b64691/denoiser/model.safetensors"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "README.md",
+    "path": "weights/TripoSG/README.md",
+    "size": 1465,
+    "sha256": "0f4c34a1a17acdbcff02c259d7f4f7b5df1b8956395c625c28da97930eb82ef3"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "feature_extractor_dinov2/preprocessor_config.json",
+    "path": "weights/TripoSG/feature_extractor_dinov2/preprocessor_config.json",
+    "size": 436,
+    "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "image_encoder_dinov2/config.json",
+    "path": "weights/TripoSG/image_encoder_dinov2/config.json",
+    "size": 1104,
+    "sha256": "8ed81b0d5ffd2c8b2cecd7dc1326d3eefa409bc9d525537b6b2a3c70a992fd02"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "image_encoder_dinov2/model.safetensors",
+    "path": "weights/TripoSG/image_encoder_dinov2/model.safetensors",
+    "size": 1217522888,
+    "sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+    "mirror_url": "https://modelscope.cn/models/VAST-AI-Research/TripoSG/resolve/ff96bb678d7dba85001e5f2ec6f57189b3e8aa57/image_encoder_dinov2/model.safetensors"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "model_index.json",
+    "path": "weights/TripoSG/model_index.json",
+    "size": 525,
+    "sha256": "750af638d10fc67a5f43d19ef0a0d1d3d446174e24b73bddd0a49226016c80c2"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "scheduler/scheduler_config.json",
+    "path": "weights/TripoSG/scheduler/scheduler_config.json",
+    "size": 158,
+    "sha256": "ea7c9b4d502dcaba97cd85291cfd7dbd3c6c82cbc4c775af5c6d9224864279c9"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "transformer/config.json",
+    "path": "weights/TripoSG/transformer/config.json",
+    "size": 191,
+    "sha256": "54ad779e68f9bc7303122cdf291f6db48dec7c67e41d28c05ac359daf914128a"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "transformer/diffusion_pytorch_model.safetensors",
+    "path": "weights/TripoSG/transformer/diffusion_pytorch_model.safetensors",
+    "size": 5758280104,
+    "sha256": "9192b5923f7b605b394192809aa2ceb73bf0f4009674d8e3b999b45bb97d4bf2",
+    "mirror_url": "https://modelscope.cn/models/VAST-AI-Research/TripoSG/resolve/ff96bb678d7dba85001e5f2ec6f57189b3e8aa57/transformer/diffusion_pytorch_model.safetensors"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "vae/config.json",
+    "path": "weights/TripoSG/vae/config.json",
+    "size": 335,
+    "sha256": "2fb6ba9b364d42c9681879dca0f7edcb978f2db974a1ca4b15d28f9b15a5baed"
+  },
+  {
+    "repo": "VAST-AI/TripoSG",
+    "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "file": "vae/diffusion_pytorch_model.safetensors",
+    "path": "weights/TripoSG/vae/diffusion_pytorch_model.safetensors",
+    "size": 970685468,
+    "sha256": "a2e667c24927a5a35e5f19fcb4c75890e9399aa966b6db8131d7df733a750c8b",
+    "mirror_url": "https://modelscope.cn/models/VAST-AI-Research/TripoSG/resolve/ff96bb678d7dba85001e5f2ec6f57189b3e8aa57/vae/diffusion_pytorch_model.safetensors"
+  },
+  {
+    "repo": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "file": "README.md",
+    "path": "weights/dinov2/README.md",
+    "size": 3033,
+    "sha256": "0be39948cdb4f4c364c505c039cffe26ba8097b7300bf55f361952c8b17a5fee"
+  },
+  {
+    "repo": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "file": "config.json",
+    "path": "weights/dinov2/config.json",
+    "size": 549,
+    "sha256": "12df51c069a2dc1305e34ba71ef58bc2407ea553b75f4722a1715c1bce3bbed0"
+  },
+  {
+    "repo": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "file": "model.safetensors",
+    "path": "weights/dinov2/model.safetensors",
+    "size": 1217522888,
+    "sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+    "mirror_url": "https://modelscope.cn/models/facebook/dinov2-large/resolve/b8c1ab6eb90a82f1fd5f228985cd8b80efffc0fc/model.safetensors"
+  },
+  {
+    "repo": "facebook/dinov2-large",
+    "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "file": "preprocessor_config.json",
+    "path": "weights/dinov2/preprocessor_config.json",
+    "size": 436,
+    "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "MyConfig.py",
+    "path": "weights/RMBG/MyConfig.py",
+    "size": 326,
+    "sha256": "6ed4bf30d736b4fac18ca044e719a8cfc76bee7e71f022aa6f9e8853aa580d0b"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "MyPipe.py",
+    "path": "weights/RMBG/MyPipe.py",
+    "size": 2887,
+    "sha256": "ab93d1432f145082f631c58291a1b977785d1e2ae7f80fc5d76126c4113d1594"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "README.md",
+    "path": "weights/RMBG/README.md",
+    "size": 6395,
+    "sha256": "24e08231e4a1f467f69fd9a5f279c259544212dbeb581c710700f27effd07875"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "briarmbg.py",
+    "path": "weights/RMBG/briarmbg.py",
+    "size": 13101,
+    "sha256": "1dbefbca5c1a3ec1afde2a2164b05274e7f62c861fa62e62a84525ff603a955d"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "config.json",
+    "path": "weights/RMBG/config.json",
+    "size": 548,
+    "sha256": "d774e7d35151efb2479a83f132a57048334adf722e6e354309e30c56e3b35fbe"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "example_inference.py",
+    "path": "weights/RMBG/example_inference.py",
+    "size": 1090,
+    "sha256": "02f466374258ac228e00a372ff6d379f25c948bce57ff1288f780bf7de395e1a"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "model.safetensors",
+    "path": "weights/RMBG/model.safetensors",
+    "size": 176381984,
+    "sha256": "46ef7fe46f2ae284d8f1aaa24bfa5fca5ef25a34e2c7caa890a0029eb100e87f",
+    "mirror_url": "https://modelscope.cn/models/briaai/RMBG-1.4/resolve/30e7e83f526e109d2e849a678f2dcf90ec966af8/model.safetensors"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "preprocessor_config.json",
+    "path": "weights/RMBG/preprocessor_config.json",
+    "size": 345,
+    "sha256": "6f9c2cfdb87edd9b83c1314629657d5b320a6a89f8481c872a36253132e33afa"
+  },
+  {
+    "repo": "briaai/RMBG-1.4",
+    "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "file": "utilities.py",
+    "path": "weights/RMBG/utilities.py",
+    "size": 980,
+    "sha256": "c9e358b02d6687a752e45cb71730e3a6b8a251a50c66e8cc17ba25e3d7b0603f"
+  }
+]
