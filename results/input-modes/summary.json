@@ -27,26 +27,39 @@
       "report": "input-modes/panda-video-mesh/report.json"
     }
   ],
-  "unsupported_inputs": [
+  "scope": "Two official subjects and three video-input formats; not a test of all four project applications. Prior PNG run reused.",
+  "timing_note": "Official script time; panda includes optional PyTorch3D rendering. Excludes Blender export, downloads and transfer.",
+  "video_loader_negative_checks": [
     {
       "input": "text",
       "expected_rejection": true,
       "error_type": "ValueError",
-      "message": "Unsupported input: a kangaroo boxing. Expected video file, image pattern, or directory."
+      "message": "Unsupported input: a kangaroo boxing. Expected video file, image pattern, or directory.",
+      "test_scope": "actionmesh.io.video_input.load_frames only",
+      "application_support_conclusion": "not evaluated; loader rejection does not establish lack of text/image-to-4D support"
     },
     {
       "input": "single_png",
       "expected_rejection": true,
       "error_type": "ValueError",
-      "message": "Unsupported input: /root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo/00.png. Expected video file, image pattern, or directory."
+      "message": "Unsupported input: /root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo/00.png. Expected video file, image pattern, or directory.",
+      "test_scope": "actionmesh.io.video_input.load_frames only",
+      "application_support_conclusion": "not evaluated; loader rejection does not establish lack of text/image-to-4D support"
     },
     {
       "input": "one_frame_folder",
       "expected_rejection": true,
       "error_type": "AssertionError",
-      "message": "At least 16 frames are required, got 1"
+      "message": "At least 16 frames are required, got 1",
+      "test_scope": "actionmesh.io.video_input.load_frames only",
+      "application_support_conclusion": "not evaluated; loader rejection does not establish lack of text/image-to-4D support"
     }
   ],
-  "scope": "Two official subjects, three supported input flows; prior PNG run reused and revalidated. Not a quality benchmark.",
-  "timing_note": "Official script time; panda includes optional PyTorch3D rendering. Excludes Blender export, downloads and transfer."
+  "application_suite_complete": false,
+  "applications": {
+    "video_to_4d": "verified",
+    "3d_plus_text_to_4d": "not_integrated_or_tested",
+    "image_plus_text_to_4d": "not_integrated_or_tested",
+    "text_to_4d": "not_integrated_or_tested"
+  }
 }

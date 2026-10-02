@@ -3,18 +3,24 @@
     "input": "text",
     "expected_rejection": true,
     "error_type": "ValueError",
-    "message": "Unsupported input: a kangaroo boxing. Expected video file, image pattern, or directory."
+    "message": "Unsupported input: a kangaroo boxing. Expected video file, image pattern, or directory.",
+    "test_scope": "actionmesh.io.video_input.load_frames only",
+    "application_support_conclusion": "not evaluated; loader rejection does not establish lack of text/image-to-4D support"
   },
   {
     "input": "single_png",
     "expected_rejection": true,
     "error_type": "ValueError",
-    "message": "Unsupported input: /root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo/00.png. Expected video file, image pattern, or directory."
+    "message": "Unsupported input: /root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo/00.png. Expected video file, image pattern, or directory.",
+    "test_scope": "actionmesh.io.video_input.load_frames only",
+    "application_support_conclusion": "not evaluated; loader rejection does not establish lack of text/image-to-4D support"
   },
   {
     "input": "one_frame_folder",
     "expected_rejection": true,
     "error_type": "AssertionError",
-    "message": "At least 16 frames are required, got 1"
+    "message": "At least 16 frames are required, got 1",
+    "test_scope": "actionmesh.io.video_input.load_frames only",
+    "application_support_conclusion": "not evaluated; loader rejection does not establish lack of text/image-to-4D support"
   }
 ]

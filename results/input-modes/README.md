@@ -2,6 +2,8 @@
 
 使用 RTX 2080 Ti 22GB 执行官方预训练模型推理。所有生成测试均为 CUDA、FP16、`--low_ram`、seed=42、默认推理步数，未启用 `--fast`。
 
+**2026-10-02 更正：此实验测试视频输入格式，不是官网四种应用的完整测试。文字、图片 + 文字、3D + 文字三个应用尚未接入前置生成步骤。见[调试证据](application-debug-20261002.md)。**
+
 ## 实测结果
 
 | 输入模式 | 结果 | 帧数 | 官方入口耗时 | 峰值显存 |
@@ -9,14 +11,14 @@
 | PNG 连续帧（袋鼠） | 通过 | 16 | 10 分 49 秒 | 10,255 MiB |
 | MP4 视频（袋鼠） | 通过 | 16 | 11 分 6 秒 | 10,257 MiB |
 | MP4 + GLB（熊猫） | 通过 | 16 | 10 分 16 秒 | 10,255 MiB |
-| 文字 prompt | 不支持：入口拒绝 | — | — | — |
-| 单张图片 | 不支持：入口拒绝 | — | — | — |
+| 文字 → 4D | 官方展示；完整流程尚未接入和测试 | — | — | — |
+| 图片 + 文字 → 4D | 官方展示；完整流程尚未接入和测试 | — | — | — |
 
 熊猫输出保留 9,606 个顶点、11,118 个三角面，2048×2048 原纹理逐像素一致。所有成功案例都包含 16 帧有效顶点、非零运动与单文件 GLB 动画轨道。
 
 - [袋鼠 MP4 动画预览](kangaroo-video/preview.gif) · [动画 GLB](kangaroo-video/animated_mesh.glb)
 - [熊猫 MP4 + GLB 动画预览](panda-video-mesh/preview.gif) · [带纹理动画 GLB](panda-video-mesh/animated_mesh.glb) · [GPU 多视角预览](panda-video-mesh/grid_normal.mp4)
-- [完整机器可读汇总](summary.json) · [输入拒绝记录](unsupported-inputs.json) · [首次缺依赖失败日志](failed-attempts/panda-missing-pytorch3d/inference.log)
+- [完整机器可读汇总](summary.json) · [视频加载器的负向测试记录](unsupported-inputs.json) · [首次缺依赖失败日志](failed-attempts/panda-missing-pytorch3d/inference.log)
 
 ## 测试设计
 
@@ -25,12 +27,12 @@
 | PNG 序列 → 动态网格 | 官方袋鼠，16 帧 RGBA | 使用此前已完成的 [PNG 推理记录](../kangaroo/report.json)，本轮不重复运行 |
 | MP4 → 动态网格 | 同一袋鼠的 16 帧，合成 8 fps MP4 | 视频解码、自动去背景、GPU 推理、16 帧有效动态网格 |
 | MP4 + GLB → 动态网格 | 官方熊猫 16 帧合成的 MP4 + 官方 `panda.glb` | GPU 推理、保留输入拓扑、动画 GLB 内嵌纹理 |
-| 文字 | `a kangaroo boxing` | 输入加载器应拒绝；没有文字生成推理入口 |
+| 文字 | `a kangaroo boxing` | 输入加载器应拒绝；此测试没有调用文字生成流程 |
 | 单张图片 | 单 PNG 文件、仅含一张 PNG 的文件夹 | 输入加载器应拒绝；序列至少需要 16 帧 |
 
 MP4 通过 OpenCV `mp4v` 编码生成，先将原始 RGBA 图片合成到白色背景；模型实际接收 MP4 文件，没有传入透明遮罩。编码与自动去背景会改变输入，因此 PNG 与 MP4 结果不要求逐顶点一致。
 
-这是一组输入流程验证，不是模型精度 benchmark，也不代表所有视频、所有三维模型都能成功。文字与单图只测试入口拒绝行为，没有串接外部视频生成模型。
+这是一组输入流程验证，不是模型精度 benchmark，也不代表所有视频、所有三维模型都能成功。文字与单图只测试了视频帧加载器的拒绝行为，没有调用文字或图文生成流程；这些记录不能用于判定完整应用不受支持。
 
 ## 文件说明
 

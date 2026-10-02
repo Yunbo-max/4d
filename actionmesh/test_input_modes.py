@@ -1,4 +1,4 @@
-"""Reproduce supported input modes on one CUDA GPU; leave upstream code unchanged."""
+"""Test video input formats on CUDA, not the complete text/image application pipelines."""
 import argparse
 import hashlib
 import json
@@ -52,7 +52,7 @@ def prepare():
         try:
             load_frames(value, max_frames=31)
         except (ValueError, AssertionError) as exc:
-            checks.append({'input': name, 'expected_rejection': True, 'error_type': type(exc).__name__, 'message': str(exc)})
+            checks.append({'test_scope': 'actionmesh.io.video_input.load_frames only; does not evaluate complete application support', 'input': name, 'expected_rejection': True, 'error_type': type(exc).__name__, 'message': str(exc)})
         else:
             raise AssertionError('Unexpectedly accepted ' + name)
     write(SUITE / 'unsupported-inputs.json', checks)
