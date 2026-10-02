@@ -58,8 +58,14 @@
   "application_suite_complete": false,
   "applications": {
     "video_to_4d": "verified",
-    "3d_plus_text_to_4d": "not_integrated_or_tested",
-    "image_plus_text_to_4d": "not_integrated_or_tested",
-    "text_to_4d": "not_integrated_or_tested"
+    "3d_plus_text_to_4d": "not_evaluated_by_this_video_format_suite",
+    "image_plus_text_to_4d": "not_evaluated_by_this_video_format_suite",
+    "text_to_4d": "not_evaluated_by_this_video_format_suite"
+  },
+  "follow_up": {
+    "date": "2026-10-02",
+    "report": "../applications-20261002/README.md",
+    "text_image_and_3d_text_cases": "verified_end_to_end_with_Wan_frontend",
+    "scope": "Separate later experiments; does not change this video-format suite scope."
   }
 }

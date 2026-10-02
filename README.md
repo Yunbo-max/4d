@@ -1,57 +1,53 @@
 # 4D 研究复现
 
-当前项目：**ActionMesh（CVPR 2026）官方预训练权重推理**。
+当前项目：**ActionMesh（CVPR 2026）官方预训练权重推理**，使用 RTX 2080 Ti 22 GiB，没有训练。
 
-## 状态
+## 四种应用实测
 
-- 官方代码与依赖已在 RTX 2080 Ti 22GB 上完成导入检查。
-- 官方 kangaroo 示例包含 16 帧 512×512 RGBA 图像。
-- **官方袋鼠示例推理已完成**：16 帧动态网格，约 10 分 49 秒，采样显存峰值 10,255 MiB（约 10.0 GiB）。
-- 每帧 19,999 个顶点、39,994 个三角面，拓扑一致、数据有效，并检测到运动。
-- 已完成 PNG 序列、MP4、MP4 + GLB 三种视频输入流程验证，覆盖袋鼠和熊猫两个官方样例；完整 benchmark 尚未运行。
-- 使用 FP16、`--low_ram`、seed=42，保留官方默认推理步数。
+2026-10-02 已补上外部 Wan 视频生成模型，完成文字、图片 + 文字、3D + 文字三个端到端样例。视频应用沿用此前验证的袋鼠基线。此前“视频加载器拒绝文字/单图”的结果只说明入口用错，不能判定项目不支持这些应用。
 
-## 输入类型实测（2026-10-01）
+| 应用 | 实测样例 | 结果 | 前置视频 / ActionMesh 显存峰值 |
+|---|---|---|---:|
+| 视频 → 4D | 官方袋鼠视频 | 已验证16帧动态网格 | 不适用 / 10,257 MiB |
+| 文字 → 4D | 章鱼演奏沙锤 | 已生成16帧动画；局部断连、漂浮，沙锤不准确 | 10,347 / 10,257 MiB |
+| 图片 + 文字 → 4D | 蘑菇图片 + 唱歌剧 | 已生成16帧动画；无纹理，有嘴部及肢体动作 | 13,201 / 10,255 MiB |
+| 3D + 文字 → 4D | 熊猫GLB + 悠闲行走 | 已生成16帧动画，保留原拓扑和纹理像素 | 13,201 / 10,255 MiB |
 
-| 输入模式 | 结果 | 帧数 | 官方入口耗时 | 峰值显存 |
-|---|---|---:|---:|---:|
-| PNG 连续帧（袋鼠） | 通过 | 16 | 10 分 49 秒 | 10,255 MiB |
-| MP4 视频（袋鼠） | 通过 | 16 | 11 分 6 秒 | 10,257 MiB |
-| MP4 + GLB（熊猫） | 通过 | 16 | 10 分 16 秒 | 10,255 MiB |
-| 文字 → 4D | 官方展示；完整流程尚未接入和测试 | — | — | — |
-| 图片 + 文字 → 4D | 官方展示；完整流程尚未接入和测试 | — | — | — |
+已采样的视频生成和ActionMesh阶段最大值为 **13,201 MiB（12.89 GiB）**；单图静态重建另记录PyTorch显存，详见[静态阶段报告](results/applications-20261002/image-mushroom/static-anchor/report.json)。只对应512×512、33帧、50步的前置视频配置和ActionMesh低显存配置，不能推广到默认720p或更长视频。技术流程已通，画面质量仍有局限，并非完整论文benchmark或官网同配置复刻。
 
-**范围更正（2026-10-02）：官网展示视频、3D + 文字、图片 + 文字、纯文字四种应用。当前仅验证了视频相关流程；把文字或单图交给视频帧加载器后的拒绝结果，不能证明项目不支持文字或图文生成。**
+| 视频：袋鼠 | 3D + 文字：熊猫 | 图片 + 文字：蘑菇 | 文字：章鱼 |
+|---|---|---|---|
+| ![袋鼠视频到4D](results/input-modes/kangaroo-video/preview.gif) | ![熊猫动画](results/applications-20261002/mesh-panda/animated-preview.gif) | ![蘑菇动画](results/applications-20261002/image-mushroom/animated-preview.gif) | ![章鱼动画](results/applications-20261002/text-octopus/animated-preview.gif) |
 
-论文第 3.4 节明确使用外部图像、三维和视频生成模型组成完整应用流程。当前部署尚未接入前置视频生成器，三个文字驱动应用仍待实现和验证。见[重新调试记录](results/input-modes/application-debug-20261002.md)。
+[完整结果、实际提示词、时间/显存、复现命令与效果限制](results/applications-20261002/README.md)
 
-[测试设计、运行记录与复现方法](results/input-modes/README.md)
+- [视频→4D：袋鼠动画 GLB](results/input-modes/kangaroo-video/animated_mesh.glb)
+- [章鱼动画 GLB](results/applications-20261002/text-octopus/animated_mesh.glb)
+- [蘑菇动画 GLB](results/applications-20261002/image-mushroom/animated_mesh.glb)
+- [熊猫带纹理动画 GLB](results/applications-20261002/mesh-panda/animated_mesh.glb)
+- [接入前的根因诊断](results/input-modes/application-debug-20261002.md)
 
-| 袋鼠：MP4 → 4D | 熊猫：MP4 + GLB → 4D |
-|---|---|
-| ![袋鼠视频推理](results/input-modes/kangaroo-video/preview.gif) | ![熊猫视频加模型推理](results/input-modes/panda-video-mesh/preview.gif) |
+前置采用`Wan-AI/Wan2.2-TI2V-5B-Diffusers`，不是已确认的作者演示模型版本。文字走论文允许的文字→视频→4D路线；另外两例用模型正面渲染和动作文字生成视频，再将视频与网格输入ActionMesh。
 
-熊猫动画 GLB 保留原始拓扑和纹理；上方 GIF 使用统一蓝色材质展示几何。熊猫耗时包含官方入口自带的 GPU 渲染，表中均不含后续 Blender 导出和文件传输。
+## 已有视频格式基线（2026-10-01）
 
-## 生成结果
+| 视频输入格式 | 官方入口耗时 | 峰值显存 |
+|---|---:|---:|
+| PNG连续帧（袋鼠） | 649.33 s | 10,255 MiB |
+| MP4（袋鼠） | 666.03 s | 10,257 MiB |
+| MP4 + GLB（熊猫） | 615.98 s | 10,255 MiB |
 
-![输入视频与生成网格](results/kangaroo/preview.gif)
-
-左侧为官方输入视频；右侧是本次生成的三维网格，使用蓝色预览材质。
-
-- [动画 GLB](results/kangaroo/animated_mesh.glb)
-- [逐帧网格压缩包](results/kangaroo/per-frame-meshes.zip)
-- [变形数组](results/kangaroo/deformations.npz)
-- [运行报告](results/kangaroo/report.json)与[显存采样](results/kangaroo/gpu-memory.csv)
+均为16帧、FP16、`--low_ram`、seed42、官方默认100/30步，未启用`--fast`。见[视频输入格式实测](results/input-modes/README.md)及[最初袋鼠结果](results/kangaroo/preview.gif)。
 
 ## 目录
 
-- `actionmesh/repo/`：官方代码及示例，保留原许可证。
-- `actionmesh/repo/third_party/TripoSG/`：对应固定版本的 TripoSG。
-- `actionmesh/weights-manifest.json`：固定模型版本、文件大小、官方 SHA256、哈希一致的国内镜像地址。
-- `actionmesh/download_weights.py`：生成断点续传下载清单并下载、校验。
-- `actionmesh/finish_inference.py`：校验权重、运行官方示例、检查输出并记录显存。
-- `results/`：运行记录与后续生成结果。
+- `actionmesh/repo/`：固定官方代码与TripoSG，保留原许可证。
+- `actionmesh/weights-manifest.json`、`download_weights.py`：ActionMesh相关权重及国内镜像下载校验。
+- `actionmesh/video-weights-manifest.json`、`download_video_weights.py`、`verify_video_weights.py`：前置Wan权重及FP16派生审计。
+- `actionmesh/prepare_application_anchor.py`、`render_application_mesh.py`：单图三维重建与正面渲染。
+- `actionmesh/run_application_case.py`：固定三例的视频、ActionMesh与导出入口。
+- `actionmesh/render_animation_check.py`：实际GLB重新导入、动画和材质检查。
+- `results/applications-20261002/`：新结果、原始输入、中间视频、逐帧网格、日志与验收记录。
 
 ## Linux GPU 环境
 
@@ -86,9 +82,11 @@ git pull --ff-only
 - [TripoSG 官方仓库](https://github.com/VAST-AI-Research/TripoSG)，版本 `fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c`。
 - 两个项目的原始 LICENSE 均保留在对应目录。上游代码归原作者所有；本仓库整理复现流程及实际运行记录。
 
-## 导出动画和预览
+## 旧袋鼠基线的导出
 
-完成一次推理后，可以使用 Blender 3.5.1 导出单文件动画和预览：
+以下`export_result.py`仅用于旧袋鼠基线；新应用请使用`run_application_case.py --stage export`，以保留各自输入和原始纹理。
+
+完成袋鼠推理后，可以使用 Blender 3.5.1 导出单文件动画和预览：
 
 ```bash
 cd actionmesh

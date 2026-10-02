@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "-u",
+    "/root/rivermind-data/actionmesh-repro/run_application_backend.py",
+    "--child",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--video",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/generated.mp4",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-4d",
+    "--seed",
+    "42",
+    "--mesh",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/anchor.glb"
+  ],
+  "timeout_seconds": 3600
+}

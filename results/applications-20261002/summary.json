@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-02",
+  "status": "three_new_application_cases_technically_verified",
+  "training_performed": false,
+  "gpu": "NVIDIA GeForce RTX 2080 Ti 22528 MiB",
+  "video_baseline": {
+    "rerun_this_round": false,
+    "report": "../input-modes/kangaroo-video/report.json",
+    "status": "previously_verified"
+  },
+  "scope": "Short-clip application inference, not a full benchmark or exact authors frontend reproduction.",
+  "cases": {
+    "text-octopus": {
+      "status": "verified",
+      "actual_prompt": "An octopus playing maracas. A single full-body cartoon octopus rhythmically shakes two maracas with its tentacles. Static camera, centered subject, plain white background, consistent shape, all limbs visible.",
+      "video_frontend_seconds": 162.54039397719316,
+      "video_stage_sampled_peak_mib": 10347.0,
+      "actionmesh_seconds": 672.1958642329555,
+      "actionmesh_sampled_peak_mib": 10257,
+      "output_frames": 16,
+      "vertices_per_frame": 19997,
+      "triangles_per_frame": 39990,
+      "actual_glb_reimport_animation_verified": true,
+      "manual_visual_review": "视频中章鱼抬起和放下触手，但沙锤形状不准确；实际GLB有局部断连和漂浮，不能当作高质量成品资产。",
+      "animated_glb_sha256": "b6ca61ce0081a125d8d36ca03cd5356ed9c1e1aaeee91c33a01688789b7cc86f",
+      "preview": "text-octopus/animated-preview.gif",
+      "report": "text-octopus/report.json"
+    },
+    "image-mushroom": {
+      "status": "verified",
+      "actual_prompt": "An anthropomorphic mushroom character singing opera. Its mouth opens and closes expressively and its arms gesture while singing. Full body remains centered. Static camera, plain light background, consistent shape.",
+      "video_frontend_seconds": 161.50782690010965,
+      "video_stage_sampled_peak_mib": 13201.0,
+      "actionmesh_seconds": 624.4278106761631,
+      "actionmesh_sampled_peak_mib": 10255,
+      "output_frames": 16,
+      "vertices_per_frame": 19986,
+      "triangles_per_frame": 39970,
+      "actual_glb_reimport_animation_verified": true,
+      "manual_visual_review": "实际GLB保留蘑菇轮廓，有肢体和嘴部形变；无纹理、没有音频，不能证明准确表达了唱歌剧。",
+      "animated_glb_sha256": "9818ccbdce970081f6204b0b9ce9cd35d803bc9e64432fe8f2993259bda70bf0",
+      "preview": "image-mushroom/animated-preview.gif",
+      "report": "image-mushroom/report.json"
+    },
+    "mesh-panda": {
+      "status": "verified",
+      "actual_prompt": "A panda casually walking, taking gentle steps in place with natural arm swings. Full body remains visible and centered. Static camera, plain light background, consistent shape.",
+      "video_frontend_seconds": 165.67258963012137,
+      "video_stage_sampled_peak_mib": 13201.0,
+      "actionmesh_seconds": 612.148290904006,
+      "actionmesh_sampled_peak_mib": 10255,
+      "output_frames": 16,
+      "vertices_per_frame": 9606,
+      "triangles_per_frame": 11118,
+      "actual_glb_reimport_animation_verified": true,
+      "manual_visual_review": "实际GLB保留可见纹理，有抬脚和手臂动作；前置视频及网格存在形状与大小变化，走路自然度有限。",
+      "animated_glb_sha256": "43efbda499abc1a74dd14bd129930341bf00b472a384ea399c9e5b8c816030ad",
+      "preview": "mesh-panda/animated-preview.gif",
+      "report": "mesh-panda/report.json"
+    }
+  },
+  "sampled_peak_mib": 13201.0,
+  "sampled_peak_scope": "Video generation and ActionMesh stages. Static image anchor has PyTorch allocation/reservation statistics only; see its report.",
+  "static_anchor_report": "image-mushroom/static-anchor/report.json",
+  "total_application_types_with_verified_examples": 4
+}

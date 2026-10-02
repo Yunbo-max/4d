@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "source_glb_sha256": "43efbda499abc1a74dd14bd129930341bf00b472a384ea399c9e5b8c816030ad",
+  "render_check_sha256": "da28849e420c21491946c050d6a033cf90e04a55e247728954bac42e09ddd51e",
+  "preview_sha256": "c8ba31d56186a5bbe04463ca64cbcad4734235d3a3f47d852be0324424b2ca34",
+  "frames": 16,
+  "requested_playback_fps": 8,
+  "gif_duration_note": "GIF stores time in centiseconds; requested 125ms may be quantized by encoder.",
+  "materials": "Actual imported GLB materials and UVs, preserved",
+  "camera_view_index": 3
+}

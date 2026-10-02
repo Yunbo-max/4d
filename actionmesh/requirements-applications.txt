@@ -1,0 +1,14 @@
+# Tested Python application dependencies on the existing CUDA environment.
+# Install after creating the inference environment described in README.md.
+# Native GPU stack observed: torch 2.12.1+cu130, torchvision 0.27.1+cu130,
+# pytorch3d 0.7.9; provision these for the server separately.
+-r requirements-inference.txt
+numpy==1.26.4
+transformers==4.57.6
+diffusers==0.39.0
+accelerate==1.15.0
+safetensors==0.8.0
+huggingface_hub==0.36.2
+imageio==2.38.0
+imageio-ffmpeg==0.6.0
+Pillow==12.2.0

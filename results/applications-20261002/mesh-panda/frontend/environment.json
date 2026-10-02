@@ -1,0 +1,9 @@
+{
+  "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:20:58) [GCC 14.3.0]",
+  "platform": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+  "torch": "2.12.1+cu130",
+  "diffusers": "0.39.0",
+  "transformers": "4.57.6",
+  "accelerate": "1.15.0",
+  "safetensors": "0.8.0"
+}

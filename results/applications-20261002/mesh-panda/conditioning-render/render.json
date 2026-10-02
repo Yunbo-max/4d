@@ -1,0 +1,30 @@
+{
+  "source_mesh": "repo/assets/examples/panda/panda.glb",
+  "renderer": "Blender 3.5.1 Cycles CPU",
+  "camera_offsets": [
+    [
+      0,
+      -4,
+      0.7
+    ],
+    [
+      4,
+      0,
+      0.7
+    ],
+    [
+      0,
+      4,
+      0.7
+    ],
+    [
+      -4,
+      0,
+      0.7
+    ]
+  ],
+  "resolution": [
+    512,
+    512
+  ]
+}

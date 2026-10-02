@@ -1,0 +1,78 @@
+{
+  "status": "technical_checks_passed",
+  "started_utc": "2026-10-02T09:03:41Z",
+  "semantic_evaluation": "not_performed_requires_visual_review",
+  "current_stage": "video",
+  "validation": {
+    "checks": {
+      "frame_count_matches_request": true,
+      "at_least_16_frames": true,
+      "decoded_frames_finite": true,
+      "no_black_frames": true,
+      "not_pixel_identical_static": true
+    },
+    "frame_shape": [
+      33,
+      512,
+      512,
+      3
+    ],
+    "mean_pixel_value_per_frame": [
+      235.27712122599283,
+      235.77875518798828,
+      235.84099451700845,
+      235.80741119384766,
+      235.75759506225586,
+      235.51999282836914,
+      235.33758799235025,
+      235.13502502441406,
+      235.1388053894043,
+      234.84176890055338,
+      234.63355255126953,
+      234.31876118977866,
+      234.09159088134766,
+      234.09784444173178,
+      234.24997838338217,
+      233.97366078694662,
+      233.95945485432944,
+      233.99456278483072,
+      233.86367797851562,
+      233.73477172851562,
+      233.73371378580728,
+      234.17074839274088,
+      234.85648473103842,
+      235.00827026367188,
+      235.06777064005533,
+      235.79450352986655,
+      235.7406857808431,
+      235.64695485432944,
+      235.56553904215494,
+      235.57616678873697,
+      235.91789118448892,
+      235.92573038736978,
+      235.69114557902017
+    ],
+    "mean_absolute_adjacent_frame_difference_8bit": 1.5215849081675212,
+    "max_adjacent_frame_difference_8bit": 255,
+    "semantic_evaluation": "not_performed_requires_visual_review",
+    "scope": "short_clip_application_test",
+    "full_resolution_benchmark": false,
+    "mp4_readback_frames": 33
+  },
+  "artifacts": {
+    "generated.mp4": {
+      "bytes": 41297,
+      "sha256": "cace48e1ab07393aab8e2731fb87e81d17de18d8d763e988b814a316922ab547"
+    },
+    "preview.gif": {
+      "bytes": 2815952,
+      "sha256": "d86ceb68357004bbbbcc3d113598806a42c1fda53c30f54c36d69fceedae0881"
+    },
+    "prompt-embeddings.safetensors": {
+      "bytes": 16777592,
+      "sha256": "4972bb57a6f84f2ab73da3afdc16079a2c13087db54db1017b7f815074aae423"
+    }
+  },
+  "finished_utc": "2026-10-02T09:06:22Z",
+  "elapsed_seconds": 161.50782690010965
+}

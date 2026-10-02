@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "prepare_application_anchor.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--image",
+    "data/mushroom.png",
+    "--output",
+    "outputs/applications-20261002/image-mushroom-anchor",
+    "--seed",
+    "42"
+  ],
+  "python": "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+  "cwd": "/root/rivermind-data/actionmesh-repro",
+  "offline": true
+}

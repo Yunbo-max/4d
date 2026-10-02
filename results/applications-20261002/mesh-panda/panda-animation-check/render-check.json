@@ -1,0 +1,349 @@
+{
+  "status": "verified",
+  "source_glb": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-4d/animated_mesh.glb",
+  "source_sha256": "43efbda499abc1a74dd14bd129930341bf00b472a384ea399c9e5b8c816030ad",
+  "uses_deformation_arrays": false,
+  "blender_version": "3.5.1",
+  "renderer": "Cycles CPU",
+  "samples": 16,
+  "resolution": [
+    512,
+    512
+  ],
+  "actions": [
+    {
+      "name": "KeyAction_geometry_0",
+      "frame_range": [
+        0.0,
+        45.0
+      ],
+      "fcurve_count": 16,
+      "key_times": [
+        0.0,
+        3.0,
+        6.0,
+        9.0,
+        12.0,
+        15.0,
+        18.0,
+        21.0,
+        24.0,
+        27.0,
+        30.0,
+        33.0,
+        36.0,
+        39.0,
+        42.0,
+        45.0
+      ]
+    }
+  ],
+  "animation_frame_range": [
+    0.0,
+    45.0
+  ],
+  "imported_scene_fps": 24.0,
+  "selected_key_times": [
+    0.0,
+    3.0,
+    6.0,
+    9.0,
+    12.0,
+    15.0,
+    18.0,
+    21.0,
+    24.0,
+    27.0,
+    30.0,
+    33.0,
+    36.0,
+    39.0,
+    42.0,
+    45.0
+  ],
+  "selected_relative_seconds": [
+    0.0,
+    0.125,
+    0.25,
+    0.375,
+    0.5,
+    0.625,
+    0.75,
+    0.875,
+    1.0,
+    1.125,
+    1.25,
+    1.375,
+    1.5,
+    1.625,
+    1.75,
+    1.875
+  ],
+  "selection": "Evenly spaced actual imported key indices, including first and last",
+  "animation_policy": "Evaluate the GLB importer's active animation and default NLA state",
+  "material_inspection": {
+    "meshes": [
+      {
+        "object": "geometry_0",
+        "mesh": "geometry_0",
+        "vertices": 9606,
+        "polygons": 11118,
+        "uv_layers": [
+          {
+            "name": "UVMap",
+            "loops": 33354
+          }
+        ],
+        "material_slots": [
+          "baked_texture_material"
+        ],
+        "shape_keys": [
+          "Basis",
+          "Frame_0",
+          "Frame_1",
+          "Frame_2",
+          "Frame_3",
+          "Frame_4",
+          "Frame_5",
+          "Frame_6",
+          "Frame_7",
+          "Frame_8",
+          "Frame_9",
+          "Frame_10",
+          "Frame_11",
+          "Frame_12",
+          "Frame_13",
+          "Frame_14",
+          "Frame_15"
+        ]
+      }
+    ],
+    "materials": [
+      {
+        "name": "baked_texture_material",
+        "use_nodes": true,
+        "blend_method": "OPAQUE",
+        "image_nodes": [
+          {
+            "node": "Image Texture",
+            "image": "Image_0"
+          }
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "size": [
+          2048,
+          2048
+        ],
+        "channels": 4,
+        "colorspace": "sRGB",
+        "packed": true,
+        "source": "FILE",
+        "float_pixel_count": 16777216,
+        "decoded_float32_pixel_sha256": "517dd177ce3dfbebdd2933ac12a6610d456544b74f3155512f9d2ee53a6a4537"
+      }
+    ],
+    "texture_image_count": 1,
+    "material_policy": "Imported GLB materials and UVs; no replacement or recoloring"
+  },
+  "world_bounds": {
+    "min": [
+      -0.5580304265022278,
+      -0.9776798486709595,
+      -0.9988723993301392
+    ],
+    "max": [
+      0.7154327630996704,
+      0.9771092534065247,
+      0.9994425773620605
+    ]
+  },
+  "frame_geometry": [
+    {
+      "key_time": 0.0,
+      "max_world_vertex_displacement_from_first": 0.0
+    },
+    {
+      "key_time": 3.0,
+      "max_world_vertex_displacement_from_first": 0.12886647702119006
+    },
+    {
+      "key_time": 6.0,
+      "max_world_vertex_displacement_from_first": 0.1759092011091173
+    },
+    {
+      "key_time": 9.0,
+      "max_world_vertex_displacement_from_first": 0.2478598970741332
+    },
+    {
+      "key_time": 12.0,
+      "max_world_vertex_displacement_from_first": 0.47584446407868414
+    },
+    {
+      "key_time": 15.0,
+      "max_world_vertex_displacement_from_first": 0.7650573292476583
+    },
+    {
+      "key_time": 18.0,
+      "max_world_vertex_displacement_from_first": 0.8700167209374723
+    },
+    {
+      "key_time": 21.0,
+      "max_world_vertex_displacement_from_first": 0.9525976040944121
+    },
+    {
+      "key_time": 24.0,
+      "max_world_vertex_displacement_from_first": 0.9223390649137304
+    },
+    {
+      "key_time": 27.0,
+      "max_world_vertex_displacement_from_first": 0.8822776348328072
+    },
+    {
+      "key_time": 30.0,
+      "max_world_vertex_displacement_from_first": 0.8561639160915195
+    },
+    {
+      "key_time": 33.0,
+      "max_world_vertex_displacement_from_first": 0.8405460699569476
+    },
+    {
+      "key_time": 36.0,
+      "max_world_vertex_displacement_from_first": 0.8326377957812497
+    },
+    {
+      "key_time": 39.0,
+      "max_world_vertex_displacement_from_first": 0.8254347266308385
+    },
+    {
+      "key_time": 42.0,
+      "max_world_vertex_displacement_from_first": 0.8232752524337054
+    },
+    {
+      "key_time": 45.0,
+      "max_world_vertex_displacement_from_first": 0.8209220838170505
+    }
+  ],
+  "world_vertex_counts": {
+    "geometry_0": 9606
+  },
+  "evaluated_world_vertices_finite": true,
+  "max_world_vertex_displacement": 0.9525976040944121,
+  "motion_threshold": 1.9983149766921997e-07,
+  "evaluated_animation_moves": true,
+  "camera_offset": [
+    0,
+    -4,
+    0.7
+  ],
+  "camera_center": [
+    0.07870116829872131,
+    -0.0002852976322174072,
+    0.00028508901596069336
+  ],
+  "camera_ortho_scale": 2.697725296020508,
+  "fixed_camera_and_lighting": true,
+  "bounds_policy": "Union of evaluated world-space vertices across all selected times",
+  "rendered_frames": [
+    {
+      "file": "frame_000.png",
+      "key_time": 0.0,
+      "sha256": "685c305de682192afee0f3280ca72f5124b1b1be57f3965ad8ef5401c780c378",
+      "bytes": 292561
+    },
+    {
+      "file": "frame_001.png",
+      "key_time": 3.0,
+      "sha256": "b8afe34d9eee14d083f7ad1c4c4362813ebd777664a04a5d58c736e81bd95e0d",
+      "bytes": 290829
+    },
+    {
+      "file": "frame_002.png",
+      "key_time": 6.0,
+      "sha256": "194e518514aedb867254c8b1df68b2ae43a3f037ea0c543904cecba74d4509d0",
+      "bytes": 290989
+    },
+    {
+      "file": "frame_003.png",
+      "key_time": 9.0,
+      "sha256": "4c6346851521464270897b589d72bfc237aa29dfa8c4cbfa5a3d524d75f6ee86",
+      "bytes": 290138
+    },
+    {
+      "file": "frame_004.png",
+      "key_time": 12.0,
+      "sha256": "140357f8c659e041b46152b1f903f41bac3da9347f8a85ea56ac4716ed01f8d8",
+      "bytes": 290738
+    },
+    {
+      "file": "frame_005.png",
+      "key_time": 15.0,
+      "sha256": "cc4477be1ac2dbd0c9a7438570df3a6e571d1436a7a08fd78d5fed159ebc680d",
+      "bytes": 290217
+    },
+    {
+      "file": "frame_006.png",
+      "key_time": 18.0,
+      "sha256": "4f3b29907f082914ecb4a2795f6f34ed2f0b3a877b05ff2b99b7ed868d3adc55",
+      "bytes": 290093
+    },
+    {
+      "file": "frame_007.png",
+      "key_time": 21.0,
+      "sha256": "b0a0565842fb9b33d0b964d85f4a2fe79a9f2409d5d06453c76b542710cb8fe9",
+      "bytes": 288933
+    },
+    {
+      "file": "frame_008.png",
+      "key_time": 24.0,
+      "sha256": "dd4d18761a512e03e9a687dcb1d8c001d8542d04f76468dcd4d29e7b7e82f26d",
+      "bytes": 288686
+    },
+    {
+      "file": "frame_009.png",
+      "key_time": 27.0,
+      "sha256": "72feb1b9f4378651c2f9026f0e6bed92f13417be411145bc4350d5b33e3d4bba",
+      "bytes": 287881
+    },
+    {
+      "file": "frame_010.png",
+      "key_time": 30.0,
+      "sha256": "2a0d710a2fdf45f437e9b9dab4b38e2c240d87569c0c6a7f9521ba792371391d",
+      "bytes": 288750
+    },
+    {
+      "file": "frame_011.png",
+      "key_time": 33.0,
+      "sha256": "183335103cf92944ab28bde493835a79ba558a1716b647c0e79d9b10427f5043",
+      "bytes": 287806
+    },
+    {
+      "file": "frame_012.png",
+      "key_time": 36.0,
+      "sha256": "92ce7793ec0d0aa65bb1a7be60b55e5d17c1971120d9494c9d1d17bc54d87fef",
+      "bytes": 287170
+    },
+    {
+      "file": "frame_013.png",
+      "key_time": 39.0,
+      "sha256": "d6c4bb11165331d39ac49c9fabc3092e68e7e6c3185a89e712d08f993af8e659",
+      "bytes": 287212
+    },
+    {
+      "file": "frame_014.png",
+      "key_time": 42.0,
+      "sha256": "8e5d3f9e7da2d8d2a81e701f069e91f6d8d00a9519f3beca6208cbfd202c6a9b",
+      "bytes": 285989
+    },
+    {
+      "file": "frame_015.png",
+      "key_time": 45.0,
+      "sha256": "069f0c7ee99d38a199e1bfeb276870e610fda0768a9029667985a043c3f7f203",
+      "bytes": 285834
+    }
+  ],
+  "elapsed_seconds": 31.664381277980283
+}

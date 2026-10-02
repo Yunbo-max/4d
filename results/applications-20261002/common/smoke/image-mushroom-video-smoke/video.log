@@ -1,0 +1,6 @@
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 48.06it/s]Loading checkpoint shards: 100%|██████████| 5/5 [00:00<00:00, 47.98it/s]
+The config attributes {'clip_output': False} were passed to AutoencoderKLWan, but are not expected and will be ignored. Please verify your config.json configuration file.
+Loading pipeline components...:   0%|          | 0/4 [00:00<?, ?it/s]Loading pipeline components...:  50%|█████     | 2/4 [00:00<00:00,  3.28it/s]Loading pipeline components...: 100%|██████████| 4/4 [00:00<00:00,  6.46it/s]
+  0%|          | 0/2 [00:00<?, ?it/s]{"step": 1, "timestep": 999.0, "elapsed_seconds": 3.9689796939492226, "latent_abs_max": 4.280783653259277, "allocated_bytes": 12869930496, "reserved_bytes": 13037993984}
+ 50%|█████     | 1/2 [00:02<00:02,  2.90s/it]{"step": 2, "timestep": 833.0, "elapsed_seconds": 4.199294751975685, "latent_abs_max": 8.205195426940918, "allocated_bytes": 12870422016, "reserved_bytes": 13037993984}
+100%|██████████| 2/2 [00:03<00:00,  1.32s/it]100%|██████████| 2/2 [00:03<00:00,  1.56s/it]

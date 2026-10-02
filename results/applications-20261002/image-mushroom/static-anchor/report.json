@@ -1,0 +1,73 @@
+{
+  "status": "verified_static_anchor",
+  "animation_complete": false,
+  "source_image": "/root/rivermind-data/actionmesh-repro/data/mushroom.png",
+  "source_sha256": "33978cf2fe791fa2436460badf22940c357d8c2f1a53f8c0dbd15b051f63bd9f",
+  "input_had_valid_alpha": false,
+  "seed": 42,
+  "parameters": {
+    "stage_0_steps": 100,
+    "guidance_scale": 7.5,
+    "face_decimation": 40000,
+    "floaters_threshold": 0.02
+  },
+  "raw_geometry": {
+    "vertices": 964972,
+    "triangles": 1929944,
+    "finite_vertices": true,
+    "valid_triangle_indices": true,
+    "bounds": [
+      [
+        -0.9049045443534851,
+        -0.9536110758781433,
+        -0.865293025970459
+      ],
+      [
+        0.8752900958061218,
+        0.920168936252594,
+        0.829849362373352
+      ]
+    ],
+    "extents": [
+      1.780194640159607,
+      1.8737800121307373,
+      1.695142388343811
+    ],
+    "surface_area": 10.335141583721434,
+    "watertight": true,
+    "validation_scope": "Finite, nonempty, indexed triangle geometry and GLB roundtrip; does not establish reconstruction quality."
+  },
+  "geometry": {
+    "vertices": 19986,
+    "triangles": 39970,
+    "finite_vertices": true,
+    "valid_triangle_indices": true,
+    "bounds": [
+      [
+        -0.9050764719811428,
+        -0.9536038016749859,
+        -0.865094431426367
+      ],
+      [
+        0.8754377584296932,
+        0.9203254128615068,
+        0.8304817484471751
+      ]
+    ],
+    "extents": [
+      1.780514230410836,
+      1.8739292145364927,
+      1.6955761798735423
+    ],
+    "surface_area": 10.375955880877651,
+    "watertight": false,
+    "validation_scope": "Finite, nonempty, indexed triangle geometry and GLB roundtrip; does not establish reconstruction quality."
+  },
+  "anchor_sha256": "ca0c93c030a9f56ce6dd9fee91e9ef1e94fde210cdd9ad76940963994241d052",
+  "condition_sha256": "34e322a1be3a12af12fe56e004c0dd43b2f0887ef4066d3c03dfd9da7cc7b962",
+  "elapsed_gpu_stages_seconds": 71.36614630487747,
+  "peak_allocated_bytes": 6303564800,
+  "peak_reserved_bytes": 9636413440,
+  "timing_scope": "Stages cover model loading, image processing, static generation, mesh processing and export; exclude weight hashing and imports.",
+  "next_step": "Generate a real motion video from condition.png plus the action prompt, then pass that video and anchor.glb to run_application_backend.py --mesh."
+}

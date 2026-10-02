@@ -1,0 +1,30 @@
+{
+  "seed": 42,
+  "height": 512,
+  "width": 512,
+  "frames": 33,
+  "steps": 50,
+  "guidance_scale": 5.0,
+  "cases": {
+    "text-octopus": {
+      "mode": "text",
+      "prompt": "An octopus playing maracas. A single full-body cartoon octopus rhythmically shakes two maracas with its tentacles. Static camera, centered subject, plain white background, consistent shape, all limbs visible.",
+      "route": "text -> Wan T2V -> ActionMesh"
+    },
+    "image-mushroom": {
+      "mode": "image",
+      "prompt": "An anthropomorphic mushroom character singing opera. Its mouth opens and closes expressively and its arms gesture while singing. Full body remains centered. Static camera, plain light background, consistent shape.",
+      "image": "outputs/applications-20261002/mushroom-render/view_0.png",
+      "mesh": "outputs/applications-20261002/image-mushroom-anchor/anchor.glb",
+      "original_image": "data/mushroom.png",
+      "route": "image -> TripoSG -> front render -> Wan I2V -> ActionMesh with generated mesh"
+    },
+    "mesh-panda": {
+      "mode": "image",
+      "prompt": "A panda casually walking, taking gentle steps in place with natural arm swings. Full body remains visible and centered. Static camera, plain light background, consistent shape.",
+      "image": "outputs/applications-20261002/panda-render/view_0.png",
+      "mesh": "repo/assets/examples/panda/panda.glb",
+      "route": "mesh -> front render -> Wan I2V -> ActionMesh with original mesh"
+    }
+  }
+}

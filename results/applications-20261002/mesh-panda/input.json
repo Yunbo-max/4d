@@ -1,0 +1,140 @@
+{
+  "source_video": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/generated.mp4",
+  "source_sha256": "b5d3c093e5f8b8fcf9863798d2d2ad0ccae73b8831c1b6c1cdc39e91ba718879",
+  "source_decoded_frames": 33,
+  "source_fps": 24.0,
+  "selected_frames": 16,
+  "frame_selection": "uniformly spaced real decoded frame indices, including first and last",
+  "preprocessing_is_official_default": false,
+  "note": "No frame duplication or interpolation. Official ActionMesh consumes these PNGs with sequential timesteps 0..15; source timestamps are recorded but are not passed to the model.",
+  "frames": [
+    {
+      "file": "input-frames/00.png",
+      "source_frame_index": 0,
+      "timestamp_seconds": 0.0,
+      "width": 512,
+      "height": 512,
+      "sha256": "59d0d50f47352e99d5e9ae9d9a35ae9dc92fe12d5c334ced1dd78c9034bdf075"
+    },
+    {
+      "file": "input-frames/01.png",
+      "source_frame_index": 2,
+      "timestamp_seconds": 0.08333333333333333,
+      "width": 512,
+      "height": 512,
+      "sha256": "424abaf6c83a468a1256e8cfceca509411c8d050e336aa9de9bc4b7e28e83791"
+    },
+    {
+      "file": "input-frames/02.png",
+      "source_frame_index": 4,
+      "timestamp_seconds": 0.16666666666666666,
+      "width": 512,
+      "height": 512,
+      "sha256": "1cd18c10dc4c41bc5d7cdf24a23aa887a7c082deb4da8ea99fddb04c33532b30"
+    },
+    {
+      "file": "input-frames/03.png",
+      "source_frame_index": 6,
+      "timestamp_seconds": 0.25,
+      "width": 512,
+      "height": 512,
+      "sha256": "c80701bc38b3e4e86a6944ecda095d1ae72e5b9f8b76f2232d3fb6002370d5c2"
+    },
+    {
+      "file": "input-frames/04.png",
+      "source_frame_index": 9,
+      "timestamp_seconds": 0.375,
+      "width": 512,
+      "height": 512,
+      "sha256": "3eccc37ec83c728590645665af5580535a554187be55852188e18a616edc81c4"
+    },
+    {
+      "file": "input-frames/05.png",
+      "source_frame_index": 11,
+      "timestamp_seconds": 0.4583333333333333,
+      "width": 512,
+      "height": 512,
+      "sha256": "6a834e31be1cec95cab3a0ed6b6fb8eff54ac664cf4468b88bc3f2addde53d56"
+    },
+    {
+      "file": "input-frames/06.png",
+      "source_frame_index": 13,
+      "timestamp_seconds": 0.5416666666666666,
+      "width": 512,
+      "height": 512,
+      "sha256": "76910f48730d708af76f47e90a4c91ea5c1e2b6c662adad7e3256c8fb12cb5aa"
+    },
+    {
+      "file": "input-frames/07.png",
+      "source_frame_index": 15,
+      "timestamp_seconds": 0.625,
+      "width": 512,
+      "height": 512,
+      "sha256": "f2f45fa1c1e6acde7410dbfa3246361c495c845367980644056fdcb65067f8df"
+    },
+    {
+      "file": "input-frames/08.png",
+      "source_frame_index": 17,
+      "timestamp_seconds": 0.7083333333333334,
+      "width": 512,
+      "height": 512,
+      "sha256": "66bfea4e5bfcc61c3ea6211f6e42217a1756ee87e07c890bbd45fc01329f5200"
+    },
+    {
+      "file": "input-frames/09.png",
+      "source_frame_index": 19,
+      "timestamp_seconds": 0.7916666666666666,
+      "width": 512,
+      "height": 512,
+      "sha256": "711d56aa855cc022cc4da0548cacb96680ebe1958e08da68edfab4094bd52867"
+    },
+    {
+      "file": "input-frames/10.png",
+      "source_frame_index": 21,
+      "timestamp_seconds": 0.875,
+      "width": 512,
+      "height": 512,
+      "sha256": "e3b610d9d6b449e9312c5a21d861906a54ec9b2171a7e7a328db4ed44f32f11b"
+    },
+    {
+      "file": "input-frames/11.png",
+      "source_frame_index": 23,
+      "timestamp_seconds": 0.9583333333333334,
+      "width": 512,
+      "height": 512,
+      "sha256": "2ad4fbe4a207d9a2dac35cfee4ead72f7516269ae96f834f27159c1578747055"
+    },
+    {
+      "file": "input-frames/12.png",
+      "source_frame_index": 26,
+      "timestamp_seconds": 1.0833333333333333,
+      "width": 512,
+      "height": 512,
+      "sha256": "e4d902b384f10e1a9b5e52705d0268d8d40cc65b68fffd2bb09b325e7404dd67"
+    },
+    {
+      "file": "input-frames/13.png",
+      "source_frame_index": 28,
+      "timestamp_seconds": 1.1666666666666667,
+      "width": 512,
+      "height": 512,
+      "sha256": "8838e992002ba8cab246cd61f700a8fc96fce9a6cdbc651e8275ef2198783db5"
+    },
+    {
+      "file": "input-frames/14.png",
+      "source_frame_index": 30,
+      "timestamp_seconds": 1.25,
+      "width": 512,
+      "height": 512,
+      "sha256": "78a0bb742b51b04c7de1a58863ba1c3d74cbb37f92ae21322fd221fbc898b8c1"
+    },
+    {
+      "file": "input-frames/15.png",
+      "source_frame_index": 32,
+      "timestamp_seconds": 1.3333333333333333,
+      "width": 512,
+      "height": 512,
+      "sha256": "341165ddb3669ba7256557fc4222e7378e30e0be496ecd7f11ef0db21eae094a"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "runtime_smoke_completed",
+  "started_utc": "2026-10-02T08:57:20Z",
+  "semantic_evaluation": "not_performed_requires_visual_review",
+  "current_stage": "video",
+  "validation": {
+    "checks": {
+      "frame_count_matches_request": true,
+      "at_least_16_frames": true,
+      "decoded_frames_finite": true,
+      "no_black_frames": true,
+      "not_pixel_identical_static": true
+    },
+    "frame_shape": [
+      17,
+      256,
+      256,
+      3
+    ],
+    "mean_pixel_value_per_frame": [
+      218.2824910481771,
+      236.94032287597656,
+      248.04979960123697,
+      253.6760050455729,
+      254.52198791503906,
+      253.9837188720703,
+      254.37943522135416,
+      254.61092122395834,
+      254.7067413330078,
+      254.6777547200521,
+      254.67280069986978,
+      254.7177988688151,
+      254.7529754638672,
+      254.6529337565104,
+      254.61693827311197,
+      254.6173299153646,
+      254.72596740722656
+    ],
+    "mean_absolute_adjacent_frame_difference_8bit": 2.48397159576416,
+    "max_adjacent_frame_difference_8bit": 116,
+    "semantic_evaluation": "not_performed_requires_visual_review",
+    "scope": "runtime_smoke_test_only",
+    "full_resolution_benchmark": false,
+    "mp4_readback_frames": 17
+  },
+  "artifacts": {
+    "generated.mp4": {
+      "bytes": 8267,
+      "sha256": "08dd4fff50ac6b92c7343c3ef43cbba079566136062cddbf2bfb5e4e64d33559"
+    },
+    "preview.gif": {
+      "bytes": 255480,
+      "sha256": "7ba4b29aa5ac5402b575a5c421a6c287086f929fde33b2375b0c246d190f9aac"
+    },
+    "prompt-embeddings.safetensors": {
+      "bytes": 16777592,
+      "sha256": "917f7c10b2b4d3c4ee2b8db3b79afbcfe7d6e4c9cf131c626d7de61cceb7ddbb"
+    }
+  },
+  "finished_utc": "2026-10-02T08:58:28Z",
+  "elapsed_seconds": 68.40021018916741
+}

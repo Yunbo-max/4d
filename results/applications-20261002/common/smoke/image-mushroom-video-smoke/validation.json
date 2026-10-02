@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "frame_count_matches_request": true,
+    "at_least_16_frames": true,
+    "decoded_frames_finite": true,
+    "no_black_frames": true,
+    "not_pixel_identical_static": true
+  },
+  "frame_shape": [
+    17,
+    256,
+    256,
+    3
+  ],
+  "mean_pixel_value_per_frame": [
+    235.21964518229166,
+    240.51446024576822,
+    103.40151468912761,
+    68.46462504069011,
+    60.58021545410156,
+    58.85978698730469,
+    49.87655131022135,
+    189.6333262125651,
+    248.9821573893229,
+    251.5419667561849,
+    250.19229634602866,
+    249.5525105794271,
+    248.76884969075522,
+    246.20385233561197,
+    244.07581583658853,
+    243.35611979166666,
+    242.9936777750651
+  ],
+  "mean_absolute_adjacent_frame_difference_8bit": 28.37895743052165,
+  "max_adjacent_frame_difference_8bit": 255,
+  "semantic_evaluation": "not_performed_requires_visual_review",
+  "scope": "runtime_smoke_test_only",
+  "full_resolution_benchmark": false,
+  "mp4_readback_frames": 17
+}

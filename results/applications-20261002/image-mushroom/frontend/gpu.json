@@ -1,0 +1,10 @@
+{
+  "name": "NVIDIA GeForce RTX 2080 Ti",
+  "total_memory_bytes": 23069917184,
+  "capability": [
+    7,
+    5
+  ],
+  "torch_cuda": "13.0",
+  "cuda_visible_devices": null
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "background_removal_load_and_process",
+    "status": "complete",
+    "elapsed_seconds": 1.5815176931209862,
+    "peak_allocated_bytes": 966713344,
+    "peak_reserved_bytes": 1012924416
+  },
+  {
+    "name": "official_image_preprocessing",
+    "status": "complete",
+    "elapsed_seconds": 0.07411894877441227,
+    "peak_allocated_bytes": 0,
+    "peak_reserved_bytes": 0
+  },
+  {
+    "name": "triposg_model_load",
+    "status": "complete",
+    "elapsed_seconds": 4.0197884880471975,
+    "peak_allocated_bytes": 3973381120,
+    "peak_reserved_bytes": 3974103040
+  },
+  {
+    "name": "triposg_100_step_generation_and_extraction",
+    "status": "complete",
+    "elapsed_seconds": 59.98531014705077,
+    "peak_allocated_bytes": 6303564800,
+    "peak_reserved_bytes": 9636413440
+  },
+  {
+    "name": "official_mesh_postprocessing",
+    "status": "complete",
+    "elapsed_seconds": 5.662257310934365,
+    "peak_allocated_bytes": 8519680,
+    "peak_reserved_bytes": 20971520
+  },
+  {
+    "name": "glb_export_and_roundtrip_validation",
+    "status": "complete",
+    "elapsed_seconds": 0.04315371694974601,
+    "peak_allocated_bytes": 8519680,
+    "peak_reserved_bytes": 20971520
+  }
+]

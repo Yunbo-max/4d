@@ -1,0 +1,30 @@
+{
+  "stage": "encode-text",
+  "started_utc": "2026-10-02T08:58:55Z",
+  "status": "completed",
+  "result": {
+    "encoder_device": "cpu",
+    "encoder_dtype": "float32",
+    "max_sequence_length": 512,
+    "finite_before_and_after_fp16_cast": true,
+    "embeddings": {
+      "prompt_embeds": [
+        1,
+        512,
+        4096
+      ],
+      "negative_prompt_embeds": [
+        1,
+        512,
+        4096
+      ]
+    }
+  },
+  "elapsed_seconds": 38.44073484092951,
+  "finished_utc": "2026-10-02T08:59:33Z",
+  "cuda": {
+    "cuda_initialized": false,
+    "peak_allocated_bytes": 0,
+    "peak_reserved_bytes": 0
+  }
+}

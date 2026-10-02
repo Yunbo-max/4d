@@ -1,0 +1,79 @@
+{
+  "stage": "video",
+  "started_utc": "2026-10-02T09:04:18Z",
+  "status": "completed",
+  "result": {
+    "generation_seconds": 108.23317416408099,
+    "all_denoising_latents_finite": true,
+    "denoising_steps_checked": 50,
+    "transformer_dtype": "float16_with_upstream_fp32_modules",
+    "fp32_preserved_parameter_count": 95,
+    "vae_dtype": "float32",
+    "model_cpu_offload": true,
+    "vae_tiling": true,
+    "attention_backend": "PyTorch_SDPA_automatic_dispatch",
+    "validation": {
+      "checks": {
+        "frame_count_matches_request": true,
+        "at_least_16_frames": true,
+        "decoded_frames_finite": true,
+        "no_black_frames": true,
+        "not_pixel_identical_static": true
+      },
+      "frame_shape": [
+        33,
+        512,
+        512,
+        3
+      ],
+      "mean_pixel_value_per_frame": [
+        235.27712122599283,
+        235.77875518798828,
+        235.84099451700845,
+        235.80741119384766,
+        235.75759506225586,
+        235.51999282836914,
+        235.33758799235025,
+        235.13502502441406,
+        235.1388053894043,
+        234.84176890055338,
+        234.63355255126953,
+        234.31876118977866,
+        234.09159088134766,
+        234.09784444173178,
+        234.24997838338217,
+        233.97366078694662,
+        233.95945485432944,
+        233.99456278483072,
+        233.86367797851562,
+        233.73477172851562,
+        233.73371378580728,
+        234.17074839274088,
+        234.85648473103842,
+        235.00827026367188,
+        235.06777064005533,
+        235.79450352986655,
+        235.7406857808431,
+        235.64695485432944,
+        235.56553904215494,
+        235.57616678873697,
+        235.91789118448892,
+        235.92573038736978,
+        235.69114557902017
+      ],
+      "mean_absolute_adjacent_frame_difference_8bit": 1.5215849081675212,
+      "max_adjacent_frame_difference_8bit": 255,
+      "semantic_evaluation": "not_performed_requires_visual_review",
+      "scope": "short_clip_application_test",
+      "full_resolution_benchmark": false,
+      "mp4_readback_frames": 33
+    }
+  },
+  "elapsed_seconds": 121.75505718612112,
+  "finished_utc": "2026-10-02T09:06:20Z",
+  "cuda": {
+    "cuda_initialized": true,
+    "peak_allocated_bytes": 13353053184,
+    "peak_reserved_bytes": 13621002240
+  }
+}

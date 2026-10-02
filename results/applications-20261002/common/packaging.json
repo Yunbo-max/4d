@@ -1,0 +1,1262 @@
+{
+  "status": "verified_frontend_evidence_packaged",
+  "created_utc": "2026-10-02T09:54:37Z",
+  "source_root": "/root/rivermind-data/actionmesh-repro",
+  "cases_sha256": "975309666a07f2b5f322371d0fe7eaaedaff00987292cbacfc6190778c6bfe37",
+  "validation_scope": "Verified existing backend exports, frontend reports, exact source-video/mesh linkage, artifact SHA256s and audit provenance. Does not repeat inference or independently evaluate prompt fidelity.",
+  "omitted_artifacts": {
+    "text-octopus": {
+      "prompt-embeddings.safetensors": {
+        "bytes": 16777592,
+        "sha256": "413eff205c6b491e54b6135cf772ad6a52728fabe666f76cd391073e1b1c8f59",
+        "reason": "Verified before packaging; omitted to keep portable evidence small. Original report retains this hash."
+      }
+    },
+    "image-mushroom": {
+      "prompt-embeddings.safetensors": {
+        "bytes": 16777592,
+        "sha256": "4972bb57a6f84f2ab73da3afdc16079a2c13087db54db1017b7f815074aae423",
+        "reason": "Verified before packaging; omitted to keep portable evidence small. Original report retains this hash."
+      }
+    },
+    "mesh-panda": {
+      "prompt-embeddings.safetensors": {
+        "bytes": 16777592,
+        "sha256": "0b62c0b9d3e864016b2908cb9b45f3d30cbde08f57905371ff6421198f2382f4",
+        "reason": "Verified before packaging; omitted to keep portable evidence small. Original report retains this hash."
+      }
+    }
+  },
+  "copied_files": [
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/config.json",
+      "destination": "text-octopus/frontend/config.json",
+      "bytes": 1785,
+      "sha256": "869d337e1910a5336039b7ffedab78d5a8875a8a3e71c9958d3e86b0be5a0d2b"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/report.json",
+      "destination": "text-octopus/frontend/report.json",
+      "bytes": 2196,
+      "sha256": "f9d58f3a71fae462e96968d610a53689bfe1a704a8ac0921806b5c04f13e7c73"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/environment.json",
+      "destination": "text-octopus/frontend/environment.json",
+      "bytes": 296,
+      "sha256": "02e56485474c75c0807c6fa6dc22addb81a7de1bb1201ac72ef2ab6f4b7a8e2d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/gpu.json",
+      "destination": "text-octopus/frontend/gpu.json",
+      "bytes": 172,
+      "sha256": "18cfcd3d4a3b366468bda56497c35a34cd081cfd68d6288ef9cb8f6d0ecd8225"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/validation.json",
+      "destination": "text-octopus/frontend/validation.json",
+      "bytes": 1366,
+      "sha256": "f2a8dd79677560c45370a7a03cf950cb380fd1c5344384e5750f5477e22bfdee"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/denoising-steps.jsonl",
+      "destination": "text-octopus/frontend/denoising-steps.jsonl",
+      "bytes": 8508,
+      "sha256": "f50f5724b1785975688c481e7bc37751471af575384238dd55ba1d43e97ba0a3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/encode-text-report.json",
+      "destination": "text-octopus/frontend/encode-text-report.json",
+      "bytes": 620,
+      "sha256": "234d519deabcaef59cd203e6a85a05065d811765cb4e27ca374f847589c604fb"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/encode-text-supervisor.json",
+      "destination": "text-octopus/frontend/encode-text-supervisor.json",
+      "bytes": 642,
+      "sha256": "ef9e09f78057de24e7b76786316c39c068955a9953b2489b7dd34140b117be2b"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/encode-text.log",
+      "destination": "text-octopus/frontend/encode-text.log",
+      "bytes": 470,
+      "sha256": "76e3521db82076e98dfbcd3f0c6a319649affa95d7a190529b508b15d654d74b"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/encode-text-gpu.csv",
+      "destination": "text-octopus/frontend/encode-text-gpu.csv",
+      "bytes": 2988,
+      "sha256": "bbd38f23561a88d82164d7af42631c514eb31308b191dcb1e4b37fc024857a26"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/video-report.json",
+      "destination": "text-octopus/frontend/video-report.json",
+      "bytes": 2293,
+      "sha256": "898b09cdd58f5a0642d34c9d387a62e77fd849dec382602555f98c21814ac1c4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/video-supervisor.json",
+      "destination": "text-octopus/frontend/video-supervisor.json",
+      "bytes": 635,
+      "sha256": "d2d1b3dbf2ddb0feb71c1fe181e4951969e8b70833d04adba03f8dd2f882e5c3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/video.log",
+      "destination": "text-octopus/frontend/video.log",
+      "bytes": 12233,
+      "sha256": "ba97289b832fdbd086d2dc4ad6ee2408a34e00850f4ae9069857712fdf2f5d83"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/video-gpu.csv",
+      "destination": "text-octopus/frontend/video-gpu.csv",
+      "bytes": 9859,
+      "sha256": "3aafcdbecc2738ef64f74a36170411e8163a71d124e4eb950a965b2f740d47da"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/generated.mp4",
+      "destination": "text-octopus/frontend/generated.mp4",
+      "bytes": 58297,
+      "sha256": "eb971e7208bfba6d5111f8a8e609eabd96f4a15f431bba4658c04ac954dd39fd"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/preview.gif",
+      "destination": "text-octopus/frontend/preview.gif",
+      "bytes": 673100,
+      "sha256": "15bf47e4f912323999804cb1a981af076459ef33b5316bbace594be141a9cd47"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/000.png",
+      "destination": "text-octopus/frontend/frames/000.png",
+      "bytes": 47784,
+      "sha256": "c6cb7123537b7a442e0a1a94b2cac2dd4323fb7dd943f18450d9631e657d1771"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/001.png",
+      "destination": "text-octopus/frontend/frames/001.png",
+      "bytes": 46692,
+      "sha256": "6cb2fe4559139a87c6b0f8653d1c270fcb2d2a5dbb5f75c2160eb5bb7a293886"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/002.png",
+      "destination": "text-octopus/frontend/frames/002.png",
+      "bytes": 47153,
+      "sha256": "74c4693d392df431a2ec6312d0ee4c249cc90342a6c2c2c89fa16fd4aeb281d5"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/003.png",
+      "destination": "text-octopus/frontend/frames/003.png",
+      "bytes": 47519,
+      "sha256": "990b99553bf10d1463a612db57971dbbec819d064d89db46851b4ecf347a1c51"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/004.png",
+      "destination": "text-octopus/frontend/frames/004.png",
+      "bytes": 46287,
+      "sha256": "f36921c67e4ba3a30bb632ffa611900d02e9f5dd932e2ba14a1a768a63dae8b6"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/005.png",
+      "destination": "text-octopus/frontend/frames/005.png",
+      "bytes": 47365,
+      "sha256": "761f1d8d6ba60282eec15be72d1c13aabfce03a9c439e135d5b0500e4c04d32c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/006.png",
+      "destination": "text-octopus/frontend/frames/006.png",
+      "bytes": 61781,
+      "sha256": "fa04dbc95a44e43ee4211e442cf8eaae1ef75cf9490cb5579aa638f449948b1b"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/007.png",
+      "destination": "text-octopus/frontend/frames/007.png",
+      "bytes": 62573,
+      "sha256": "79c0015bb14ab4c5bbc157f229cc9aa6aed6153d2181e6beeffc9b50bc5c9597"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/008.png",
+      "destination": "text-octopus/frontend/frames/008.png",
+      "bytes": 71084,
+      "sha256": "81ed140c2a66da92bea0e69fa2f8d829e67e49757d4f40a59ddfabaf8b492f6e"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/009.png",
+      "destination": "text-octopus/frontend/frames/009.png",
+      "bytes": 72340,
+      "sha256": "5267d62a484a889e4ab26d7a44a0e0725c52a0e654ac3090ae33d09bb7556cfb"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/010.png",
+      "destination": "text-octopus/frontend/frames/010.png",
+      "bytes": 73384,
+      "sha256": "a3b08fe5743a47515b7c7632b3ad3a1eef2debd0b80057e9f24895b09ba26956"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/011.png",
+      "destination": "text-octopus/frontend/frames/011.png",
+      "bytes": 79940,
+      "sha256": "3c0ab19b46e9cb21a0ae696f2d8fe8cd16f30778a27e2b7457ce61eb21ca064f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/012.png",
+      "destination": "text-octopus/frontend/frames/012.png",
+      "bytes": 79672,
+      "sha256": "41e8c5ce9e620ae6c1f536f9d919fb59a230eb9cc38eb075430566127df5208f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/013.png",
+      "destination": "text-octopus/frontend/frames/013.png",
+      "bytes": 73352,
+      "sha256": "4f22e8f52aa90368cd2fae5dadc1946324fdb2497e55d5f7e5a7fa070b5a87ec"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/014.png",
+      "destination": "text-octopus/frontend/frames/014.png",
+      "bytes": 74060,
+      "sha256": "bae983ed0912da67a56a624a7e03a0a0c81d0cacbb0c2976d60b0a1953f6cd5f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/015.png",
+      "destination": "text-octopus/frontend/frames/015.png",
+      "bytes": 74015,
+      "sha256": "9ec053b155a4f2159857c73b03543029d1c4e964b3ed8a09f9bf6c17a2dba250"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/016.png",
+      "destination": "text-octopus/frontend/frames/016.png",
+      "bytes": 73339,
+      "sha256": "0af1def1a94511bf5adf321cffc60d9eb2da0a99b1b02e69dc2f5f6aeb284da2"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/017.png",
+      "destination": "text-octopus/frontend/frames/017.png",
+      "bytes": 70335,
+      "sha256": "238c92fbb075f739fcd408528fc74dfcd8a4033c65b3eaa94cd95dc5dc7d7bf7"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/018.png",
+      "destination": "text-octopus/frontend/frames/018.png",
+      "bytes": 69532,
+      "sha256": "0c9dcf1954180c01f89d8172bf868a1f92ba71b77dfa774f788f0254dfdff5a1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/019.png",
+      "destination": "text-octopus/frontend/frames/019.png",
+      "bytes": 72614,
+      "sha256": "3c6e8e94d2449eb2620139fba2ebd7ce97bd5d5417527bdd24d433c9f3f596e5"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/020.png",
+      "destination": "text-octopus/frontend/frames/020.png",
+      "bytes": 79096,
+      "sha256": "afe7f5b647524c00d01e11811707677ec3dd72d14ed46797a03d96ba7239044a"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/021.png",
+      "destination": "text-octopus/frontend/frames/021.png",
+      "bytes": 70009,
+      "sha256": "3037b4aecba09aca560383ce9f84c5253b1791f023a718bc5852cd5a7b3f439c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/022.png",
+      "destination": "text-octopus/frontend/frames/022.png",
+      "bytes": 61842,
+      "sha256": "28894d3d03c8fcf01d8b231e32750206adf06cea98b3fe8ed3a6ac3c4c48c968"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/023.png",
+      "destination": "text-octopus/frontend/frames/023.png",
+      "bytes": 59792,
+      "sha256": "760cb87eeee5dd42e1ba6a323b021b63e678d4e2af4cfcf81e80fa4473b9efe3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/024.png",
+      "destination": "text-octopus/frontend/frames/024.png",
+      "bytes": 58848,
+      "sha256": "55e2f0751f1e8273c3daa38d1a61bbea7adec003fc1fb39183f404017bdc7f13"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/025.png",
+      "destination": "text-octopus/frontend/frames/025.png",
+      "bytes": 54928,
+      "sha256": "e435848a53db453b08e6c23031362343dbadfb08783230fcbcadaa534b5b85f4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/026.png",
+      "destination": "text-octopus/frontend/frames/026.png",
+      "bytes": 55236,
+      "sha256": "40abd3b15a5e2bc15747e22985fbcb2ad5c523ab8f2baa518cb31a2211a43daf"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/027.png",
+      "destination": "text-octopus/frontend/frames/027.png",
+      "bytes": 54839,
+      "sha256": "3ef63908173a74d6ad06c365dc6f81b07a4c314f5b7b63f03a0dada19eee7ee7"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/028.png",
+      "destination": "text-octopus/frontend/frames/028.png",
+      "bytes": 54298,
+      "sha256": "96ef89b67dc27276ff03179c5fe37b2bc5efc637435cb77360ae39a27f1bb47a"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/029.png",
+      "destination": "text-octopus/frontend/frames/029.png",
+      "bytes": 53291,
+      "sha256": "aa7ba51b3cd31ace6fd3a3d85ec16897133bf7eab821f60af689247b0370838d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/030.png",
+      "destination": "text-octopus/frontend/frames/030.png",
+      "bytes": 53822,
+      "sha256": "664bcf02e7431deeb2476ea33ba458a34c4c61296e6505e56f3e7c771202ffd2"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/031.png",
+      "destination": "text-octopus/frontend/frames/031.png",
+      "bytes": 53471,
+      "sha256": "88b39e2d2853d33e0caceb913c058bb6ea03045e8cbab3bbbe71e271d4f0fdbb"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video/frames/032.png",
+      "destination": "text-octopus/frontend/frames/032.png",
+      "bytes": 52736,
+      "sha256": "da05dfc05e97c3457963847efc13442ddd101b898f3d769c3866615bfdb0e8d9"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/config.json",
+      "destination": "image-mushroom/frontend/config.json",
+      "bytes": 1947,
+      "sha256": "8c23065e1dbc6cf378410ab10454ff9ef19bf1e24633b6a0a8aad9e4f15fa6e8"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/report.json",
+      "destination": "image-mushroom/frontend/report.json",
+      "bytes": 2202,
+      "sha256": "5880be039429d5bec9fba15428e26d1cafc09f2458f6f34251d8bce7cc1a153c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/environment.json",
+      "destination": "image-mushroom/frontend/environment.json",
+      "bytes": 296,
+      "sha256": "02e56485474c75c0807c6fa6dc22addb81a7de1bb1201ac72ef2ab6f4b7a8e2d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/gpu.json",
+      "destination": "image-mushroom/frontend/gpu.json",
+      "bytes": 172,
+      "sha256": "18cfcd3d4a3b366468bda56497c35a34cd081cfd68d6288ef9cb8f6d0ecd8225"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/validation.json",
+      "destination": "image-mushroom/frontend/validation.json",
+      "bytes": 1371,
+      "sha256": "1a0f0665b0275baae5eae63699a64f32ebad0051ee6786207b0734b40d19b9b2"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/denoising-steps.jsonl",
+      "destination": "image-mushroom/frontend/denoising-steps.jsonl",
+      "bytes": 8498,
+      "sha256": "93fca53d515fc071146c2f84d8b6bee0e0d0e6faca49d08da91b9ae49b4fd495"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/encode-text-report.json",
+      "destination": "image-mushroom/frontend/encode-text-report.json",
+      "bytes": 621,
+      "sha256": "a9862ad53461299a662abbc6d4655fc1d3f28bee4f64c241d295d05d97810ef4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/encode-text-supervisor.json",
+      "destination": "image-mushroom/frontend/encode-text-supervisor.json",
+      "bytes": 644,
+      "sha256": "da920782502234b751abdb739b8a5f06ac8137d4f2dff5d7ffbf116f98dccc28"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/encode-text.log",
+      "destination": "image-mushroom/frontend/encode-text.log",
+      "bytes": 470,
+      "sha256": "359756bf6fbc4dae0696363c3e52faa4fd8c5e2144ecd2240626488f69b63b97"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/encode-text-gpu.csv",
+      "destination": "image-mushroom/frontend/encode-text-gpu.csv",
+      "bytes": 2838,
+      "sha256": "c74f90df13986c0c19fb11fd54fd501ff7ecd256e2b5e6ad40c97abf567073ec"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/video-report.json",
+      "destination": "image-mushroom/frontend/video-report.json",
+      "bytes": 2298,
+      "sha256": "a710b3252bcba56099b8ef5c466f63bdcedf2688a065f141c2cefba53ca08ba1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/video-supervisor.json",
+      "destination": "image-mushroom/frontend/video-supervisor.json",
+      "bytes": 637,
+      "sha256": "97e651b61870eb8375a21579f73ae9cfd4536d68ea1bc8b48445ca1ffa8aac6c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/video.log",
+      "destination": "image-mushroom/frontend/video.log",
+      "bytes": 12144,
+      "sha256": "2c137477e5f1106c5f8cde3deffa653f2a1ff4a7c9aa09e16642ab9700ec8011"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/video-gpu.csv",
+      "destination": "image-mushroom/frontend/video-gpu.csv",
+      "bytes": 9981,
+      "sha256": "69ad509644b422a050eb38ed17ba91505846013ebded01423b67d4f9acb1eee1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/generated.mp4",
+      "destination": "image-mushroom/frontend/generated.mp4",
+      "bytes": 41297,
+      "sha256": "cace48e1ab07393aab8e2731fb87e81d17de18d8d763e988b814a316922ab547"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/preview.gif",
+      "destination": "image-mushroom/frontend/preview.gif",
+      "bytes": 2815952,
+      "sha256": "d86ceb68357004bbbbcc3d113598806a42c1fda53c30f54c36d69fceedae0881"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/000.png",
+      "destination": "image-mushroom/frontend/frames/000.png",
+      "bytes": 163706,
+      "sha256": "ea1ad01483e343a127e39b459e9d593b9e9eac65dadb65fd6d2f37e740125bae"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/001.png",
+      "destination": "image-mushroom/frontend/frames/001.png",
+      "bytes": 185932,
+      "sha256": "73c27aa3ac1dbd885a8fe26d84d7020fb943a0a6b545c0dc5c79a6b65f6165e6"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/002.png",
+      "destination": "image-mushroom/frontend/frames/002.png",
+      "bytes": 176495,
+      "sha256": "c1f6dc7d7436ca4a63d4434cccd880052d56056c3d5356fc0235d43061e06195"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/003.png",
+      "destination": "image-mushroom/frontend/frames/003.png",
+      "bytes": 176638,
+      "sha256": "55927a3d61f7a35e07c42841162082f191c81d57f05c32631264b0a4d662d521"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/004.png",
+      "destination": "image-mushroom/frontend/frames/004.png",
+      "bytes": 179723,
+      "sha256": "4ec59e01148d426d6df24c7ba8263399857336ef67ed19708ea06a3bc5773f30"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/005.png",
+      "destination": "image-mushroom/frontend/frames/005.png",
+      "bytes": 185462,
+      "sha256": "ada2d7527a68d021436e53040ed2127508b9d5f16b1285b6f855921d0f8ec3ba"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/006.png",
+      "destination": "image-mushroom/frontend/frames/006.png",
+      "bytes": 187579,
+      "sha256": "e5ac5f2f9e8a28cb193d82bcdc505e14dcc9bb849e66c1c2c76af3f84ba9fe42"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/007.png",
+      "destination": "image-mushroom/frontend/frames/007.png",
+      "bytes": 189848,
+      "sha256": "fdcf76816a4d51c3fb00edbf1f2a6e3d77df091d40610697cbeb2a7e1b43a74f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/008.png",
+      "destination": "image-mushroom/frontend/frames/008.png",
+      "bytes": 191358,
+      "sha256": "ec9e1da6f41ab157103532a45dc71d271954737494ecb3c01bdceeeba1e8e1c1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/009.png",
+      "destination": "image-mushroom/frontend/frames/009.png",
+      "bytes": 193589,
+      "sha256": "198372365c58e3d86959134d7082afb2cb871cb4f0d66dc47766402041939964"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/010.png",
+      "destination": "image-mushroom/frontend/frames/010.png",
+      "bytes": 194323,
+      "sha256": "7f669ee0d651256dbfdced9cc143653806525d6cf7c646a902b38a032ec5707c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/011.png",
+      "destination": "image-mushroom/frontend/frames/011.png",
+      "bytes": 198451,
+      "sha256": "c5d2ae154f0453dc227a0fe2a6b20ee57339ec86e7ec2369999e6c132923c34c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/012.png",
+      "destination": "image-mushroom/frontend/frames/012.png",
+      "bytes": 197607,
+      "sha256": "5acc4fd3cd8e3fc10c1e3b1b670d2ad6bb91aedc2999a2d886999e07f6596afc"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/013.png",
+      "destination": "image-mushroom/frontend/frames/013.png",
+      "bytes": 195272,
+      "sha256": "289157c8837c9201f7c56b31b5853cd3f6e8839e770ecae78b0d83fa7b03c266"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/014.png",
+      "destination": "image-mushroom/frontend/frames/014.png",
+      "bytes": 196969,
+      "sha256": "1a7a6867ede0a0deed6578f814cc28168cdb54c88968a0f1a98a552c4d27f347"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/015.png",
+      "destination": "image-mushroom/frontend/frames/015.png",
+      "bytes": 197149,
+      "sha256": "fccbcb7235b30bc38041b51823243ab3fcaa1f0fd8b9b96f8879d294bf8f9240"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/016.png",
+      "destination": "image-mushroom/frontend/frames/016.png",
+      "bytes": 196639,
+      "sha256": "9af2fc7f01a194c1fbfd438ab91842db423452a9ab38546eac6c149ffa4f385c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/017.png",
+      "destination": "image-mushroom/frontend/frames/017.png",
+      "bytes": 197017,
+      "sha256": "7b5d84b491e73182cecf44555776880952d0bc39ec2cb7ebe049d64d2f7133d9"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/018.png",
+      "destination": "image-mushroom/frontend/frames/018.png",
+      "bytes": 196323,
+      "sha256": "a819944ff50f5c1aa6cf0d9fb89a703cb78b209e9fcf8b791d02fdca8c7fc1f3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/019.png",
+      "destination": "image-mushroom/frontend/frames/019.png",
+      "bytes": 197280,
+      "sha256": "b57342f9fc821764ee890bff35ca9cf5c3d8a1dcbda99c174003f18292ab0f79"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/020.png",
+      "destination": "image-mushroom/frontend/frames/020.png",
+      "bytes": 199004,
+      "sha256": "2be11f1486b9204075929332e3ed49aa583f9099d69629eddc2b15cc05dad539"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/021.png",
+      "destination": "image-mushroom/frontend/frames/021.png",
+      "bytes": 185436,
+      "sha256": "08cf140431a99b16f911823b260efa2c595615480a88c29b1d3919f4b3fa9092"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/022.png",
+      "destination": "image-mushroom/frontend/frames/022.png",
+      "bytes": 182779,
+      "sha256": "60500946a6b1f11cc58f0c8daeec64425940cc663cd6e34bea89367177199b29"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/023.png",
+      "destination": "image-mushroom/frontend/frames/023.png",
+      "bytes": 179451,
+      "sha256": "64012f0e5079d85c5e635529d08f932d32f239a3207594c670258bfceae9b4a7"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/024.png",
+      "destination": "image-mushroom/frontend/frames/024.png",
+      "bytes": 173281,
+      "sha256": "3bb7a53c3e88617a23b23f287e23f49495b07583c2fe321ccff14deff51a8953"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/025.png",
+      "destination": "image-mushroom/frontend/frames/025.png",
+      "bytes": 187270,
+      "sha256": "ef7199bf26b828f7550a71a6ac144431dc40ef9f26bff08984aec7e962b76237"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/026.png",
+      "destination": "image-mushroom/frontend/frames/026.png",
+      "bytes": 186219,
+      "sha256": "560959c6d1fbc1791530df48463bd26a971e4b961f0f2f46c226e1bee36f6757"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/027.png",
+      "destination": "image-mushroom/frontend/frames/027.png",
+      "bytes": 188396,
+      "sha256": "7b8113b4fa1a84fad30f43bca2974fb5a2797e205cf43befca1d1fc3e683625c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/028.png",
+      "destination": "image-mushroom/frontend/frames/028.png",
+      "bytes": 188423,
+      "sha256": "289ffb426c2e9520260e077ea1a4d3374ebd71c4bfccc4873ae47a9a6335a821"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/029.png",
+      "destination": "image-mushroom/frontend/frames/029.png",
+      "bytes": 188161,
+      "sha256": "fe0d5cf571e77d8b85c10cc98fd154cbd3fbafa19f0112412ddedaa5dca59dc7"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/030.png",
+      "destination": "image-mushroom/frontend/frames/030.png",
+      "bytes": 187150,
+      "sha256": "bdbf90a386877c707b98940577f9de41a406e9acb46b7a560a32a7e27a0ffaca"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/031.png",
+      "destination": "image-mushroom/frontend/frames/031.png",
+      "bytes": 188351,
+      "sha256": "8e86156497b99c967f5bd52a8873ba8975e1c255f9868a762fda4ba6e614e246"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/frames/032.png",
+      "destination": "image-mushroom/frontend/frames/032.png",
+      "bytes": 187542,
+      "sha256": "78b55accccba1b827cdb292e69f75b12608219e3d49992cdea05cdb51958f15a"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video/input.png",
+      "destination": "image-mushroom/frontend/input.png",
+      "bytes": 162338,
+      "sha256": "79a9a694f38c30237ece9ac0dac0308c17ed071099aa1b2c430d7b591a386972"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mushroom-render/render.json",
+      "destination": "image-mushroom/conditioning-render/render.json",
+      "bytes": 360,
+      "sha256": "54f8e5b5c47e934115de0a61bbc4aa552ed1e460205d7e17f21f07e89b694d3d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mushroom-render/view_0.png",
+      "destination": "image-mushroom/conditioning-render/view_0.png",
+      "bytes": 231043,
+      "sha256": "315d1f856d393f0bdbacfd76f4d1842e4f751629ad87da00089306db1d78d4b4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mushroom-render/view_1.png",
+      "destination": "image-mushroom/conditioning-render/view_1.png",
+      "bytes": 214707,
+      "sha256": "107d2a7b4f9216c760d2f1e527ad547642481a65841cc6d6e59e9cb3f61364f9"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mushroom-render/view_2.png",
+      "destination": "image-mushroom/conditioning-render/view_2.png",
+      "bytes": 202181,
+      "sha256": "d8b1908a06aa0b60478631daf2e8fe4bf8da7f1517973d327a0862a254b692ff"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mushroom-render/view_3.png",
+      "destination": "image-mushroom/conditioning-render/view_3.png",
+      "bytes": 201313,
+      "sha256": "cc2e957cc86b3f58dc07e728da943357be0202a9a0361679e7fba581d3c81387"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/config.json",
+      "destination": "mesh-panda/frontend/config.json",
+      "bytes": 1903,
+      "sha256": "9e4dc1744c862eafe1b5b705a1a87c8416157b22855e189ea3af8d28837ddce6"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/report.json",
+      "destination": "mesh-panda/frontend/report.json",
+      "bytes": 2190,
+      "sha256": "22e11d352b0df88479fff84ac1c833c6cea1e165f65c23bb0a34b7be9289952c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/environment.json",
+      "destination": "mesh-panda/frontend/environment.json",
+      "bytes": 296,
+      "sha256": "02e56485474c75c0807c6fa6dc22addb81a7de1bb1201ac72ef2ab6f4b7a8e2d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/gpu.json",
+      "destination": "mesh-panda/frontend/gpu.json",
+      "bytes": 172,
+      "sha256": "18cfcd3d4a3b366468bda56497c35a34cd081cfd68d6288ef9cb8f6d0ecd8225"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/validation.json",
+      "destination": "mesh-panda/frontend/validation.json",
+      "bytes": 1359,
+      "sha256": "8301fd4b2390db79496411056910e1b9f6983965db72d11a87a7afde351e297d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/denoising-steps.jsonl",
+      "destination": "mesh-panda/frontend/denoising-steps.jsonl",
+      "bytes": 8511,
+      "sha256": "c5122b7b413dfdc1b163d459d7886b1ec863ecad4be696a1b3ed61a8414463d4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/encode-text-report.json",
+      "destination": "mesh-panda/frontend/encode-text-report.json",
+      "bytes": 620,
+      "sha256": "52e7f5853b012973d5cade3bff46bd2e4a3322bf5beda3543513fefa5ab26e5c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/encode-text-supervisor.json",
+      "destination": "mesh-panda/frontend/encode-text-supervisor.json",
+      "bytes": 640,
+      "sha256": "7f48b562eb18fd23e86b24c3d8c92f029919a00e75a3c17872ddbdbf9132104d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/encode-text.log",
+      "destination": "mesh-panda/frontend/encode-text.log",
+      "bytes": 470,
+      "sha256": "953d8a4b9a7babbf6bed94eefb8d3670b3f75d615b74e821848ebf725be8d019"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/encode-text-gpu.csv",
+      "destination": "mesh-panda/frontend/encode-text-gpu.csv",
+      "bytes": 2913,
+      "sha256": "e20e584ecc2e4d8d4eba5b79137c31da591dd5a0f9dba8f0feeedb208fad33e4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/video-report.json",
+      "destination": "mesh-panda/frontend/video-report.json",
+      "bytes": 2286,
+      "sha256": "a4f6f40bf64794f27b178e106280f4e5d61d698651d874f4b6334c38579667c9"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/video-supervisor.json",
+      "destination": "mesh-panda/frontend/video-supervisor.json",
+      "bytes": 632,
+      "sha256": "25a3a9995b0316d601e545109acb76f77fc2fc7e62ff5434b56050cbe949a6ba"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/video.log",
+      "destination": "mesh-panda/frontend/video.log",
+      "bytes": 12232,
+      "sha256": "4abbc53ded6fff39a17363b33d75bfeb71f83a17b9986bdb0b82b64d7977cf50"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/video-gpu.csv",
+      "destination": "mesh-panda/frontend/video-gpu.csv",
+      "bytes": 10213,
+      "sha256": "f39b4fe65ad1075de909264a15b5d7657c0214c50bcd3901f540b42ce8e006be"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/generated.mp4",
+      "destination": "mesh-panda/frontend/generated.mp4",
+      "bytes": 63415,
+      "sha256": "b5d3c093e5f8b8fcf9863798d2d2ad0ccae73b8831c1b6c1cdc39e91ba718879"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/preview.gif",
+      "destination": "mesh-panda/frontend/preview.gif",
+      "bytes": 2942447,
+      "sha256": "8843551a823eaa1f520943ec3736b8e6d061c314e49d142d74b414b5efee1b80"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/000.png",
+      "destination": "mesh-panda/frontend/frames/000.png",
+      "bytes": 227133,
+      "sha256": "d1b0573be80ad961950ef52777cf546ec10b7d968fac5956f01eb6fe6439d46e"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/001.png",
+      "destination": "mesh-panda/frontend/frames/001.png",
+      "bytes": 248549,
+      "sha256": "c220d1e6d4ad2eaa2e15f371f680685788be05f3a48e8105ed1d2c2ce450bb4e"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/002.png",
+      "destination": "mesh-panda/frontend/frames/002.png",
+      "bytes": 241910,
+      "sha256": "6fe3977b61dfbbd9e1b839cefd6eb1ce72f8af8556b4f4a67881cfcb6093bb7a"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/003.png",
+      "destination": "mesh-panda/frontend/frames/003.png",
+      "bytes": 242354,
+      "sha256": "99178d40a88357515f8ab84be6a8cf542ad272e23102b84879a80f076a85100d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/004.png",
+      "destination": "mesh-panda/frontend/frames/004.png",
+      "bytes": 242638,
+      "sha256": "a0bb134ca7f95e624f8338c5e93586f34b3db448062782a0f46467ddd5694ea3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/005.png",
+      "destination": "mesh-panda/frontend/frames/005.png",
+      "bytes": 245767,
+      "sha256": "316c6a88d4f6696ae80607add99d4264c525430f46eea9a4f0f14b52315fb7f6"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/006.png",
+      "destination": "mesh-panda/frontend/frames/006.png",
+      "bytes": 246504,
+      "sha256": "b022418fd813b63e33667e8d8288b7efae954b3a4907a2c28aa1466274756555"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/007.png",
+      "destination": "mesh-panda/frontend/frames/007.png",
+      "bytes": 246908,
+      "sha256": "a3031abc101a7c02e785563516fe354b00772fa0b0abdecccadf188228bea1a1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/008.png",
+      "destination": "mesh-panda/frontend/frames/008.png",
+      "bytes": 247507,
+      "sha256": "2afb2ffa01ea09eaf7a34b94aab837c2de7015972ac6ecab3ce662ec3d839f3f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/009.png",
+      "destination": "mesh-panda/frontend/frames/009.png",
+      "bytes": 250122,
+      "sha256": "c6c1bb6c7c8be0ea91d0f2c50881dadc5a39a5a08d277ffd829e274a5d1d0728"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/010.png",
+      "destination": "mesh-panda/frontend/frames/010.png",
+      "bytes": 249942,
+      "sha256": "4c801453a2cbf6282a6a42e775d6ede8c4b55e5dfc892cf82fd02aa745cefa83"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/011.png",
+      "destination": "mesh-panda/frontend/frames/011.png",
+      "bytes": 249107,
+      "sha256": "3489e1f7bdb0bd434c9a0a5971c0d3d811bc2c1bc50c198b1fc1177412ed6848"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/012.png",
+      "destination": "mesh-panda/frontend/frames/012.png",
+      "bytes": 245486,
+      "sha256": "55d9fe35f80a5d4a8d4bb5c40c9e91b4bcd90a04b519cb91f0fbfd4308de2f3a"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/013.png",
+      "destination": "mesh-panda/frontend/frames/013.png",
+      "bytes": 242482,
+      "sha256": "8d068cc7a2aca4cd321d9ea9061a802e4c20337a44cdbbc8877252dd3c054291"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/014.png",
+      "destination": "mesh-panda/frontend/frames/014.png",
+      "bytes": 241997,
+      "sha256": "275b8cb59f13f13d3532d1a7adffd17c614b3a4dfd53232241a6203f91c9f687"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/015.png",
+      "destination": "mesh-panda/frontend/frames/015.png",
+      "bytes": 239998,
+      "sha256": "90f031ed1e54a4817de38c6fec7ef0c9bcfa9cd62b05262337e4e8e558ca0cf8"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/016.png",
+      "destination": "mesh-panda/frontend/frames/016.png",
+      "bytes": 237835,
+      "sha256": "ac91c0845a35d34e4a82ca70f542cbd737c9732c3143144f1def633987f3b0f3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/017.png",
+      "destination": "mesh-panda/frontend/frames/017.png",
+      "bytes": 237587,
+      "sha256": "06c975bf92a8cb2986f9269ddb12689d20299090cc669a9be17a0bd575f444eb"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/018.png",
+      "destination": "mesh-panda/frontend/frames/018.png",
+      "bytes": 236849,
+      "sha256": "0d306554b1f5022a7f35e20732f4d689cceedff78de39e5f15ac2f0250dbfbaa"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/019.png",
+      "destination": "mesh-panda/frontend/frames/019.png",
+      "bytes": 235710,
+      "sha256": "870283902133cddb09a4ce9d635eb7990fee2478d0471788162099e15aea1fcf"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/020.png",
+      "destination": "mesh-panda/frontend/frames/020.png",
+      "bytes": 236370,
+      "sha256": "7c16bdc1d65ea9b43d17c01c541f2a4b06a3e7618fab3750920fa897658db23b"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/021.png",
+      "destination": "mesh-panda/frontend/frames/021.png",
+      "bytes": 198531,
+      "sha256": "eab5484bf367e237f0a8710b2849ba9e3c1f6c6e9a21dce7b58790e5740ec73f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/022.png",
+      "destination": "mesh-panda/frontend/frames/022.png",
+      "bytes": 208479,
+      "sha256": "af21c0d4de2082343f9badbda0e06f373d5ade3fb240870fe77297463efbb6f6"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/023.png",
+      "destination": "mesh-panda/frontend/frames/023.png",
+      "bytes": 203872,
+      "sha256": "7de93ee847cfe8116075dc133aee11068aebd9ac91fa257d87dec8bc830ef855"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/024.png",
+      "destination": "mesh-panda/frontend/frames/024.png",
+      "bytes": 196681,
+      "sha256": "fe1785ff93464d57075f710f03def3610a5a486b9774c744e0cc211b48344ce1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/025.png",
+      "destination": "mesh-panda/frontend/frames/025.png",
+      "bytes": 223673,
+      "sha256": "0aea424e1e84cadb2dfc2651cf9deba6d8886dd6f159acd3002dc9d9708d40a3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/026.png",
+      "destination": "mesh-panda/frontend/frames/026.png",
+      "bytes": 219533,
+      "sha256": "8bbcc9a71513a46fe78932bd5f5a5476186429ed6d7041d63dc045073f106508"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/027.png",
+      "destination": "mesh-panda/frontend/frames/027.png",
+      "bytes": 218814,
+      "sha256": "f89e6a328584fd7d6832059cfbfb379b4420c0933687f33e76340ba00a93eb16"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/028.png",
+      "destination": "mesh-panda/frontend/frames/028.png",
+      "bytes": 216073,
+      "sha256": "c391c3d89ca1322700a9efeefd0a1f88d479b002c98d3389ef9c868ae0b0c60f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/029.png",
+      "destination": "mesh-panda/frontend/frames/029.png",
+      "bytes": 217925,
+      "sha256": "2a1d7acb04df0fd9ba89aa323016a85b27867309ab1ee59af3e6e0c2f1e5ef00"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/030.png",
+      "destination": "mesh-panda/frontend/frames/030.png",
+      "bytes": 215956,
+      "sha256": "53bbd454e0469ea778a9c0edc23f400204ff5e8a785d5a565ee556fcf64704e2"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/031.png",
+      "destination": "mesh-panda/frontend/frames/031.png",
+      "bytes": 215168,
+      "sha256": "1e8b82d6c5aea54894bdc38a4322c1a6020470f3541050eb6d099cece18d5585"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/frames/032.png",
+      "destination": "mesh-panda/frontend/frames/032.png",
+      "bytes": 212252,
+      "sha256": "d533447faabb4db3a11799447832bb0f27e02b0f315bb7b022f3a1cffd22c703"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/input.png",
+      "destination": "mesh-panda/frontend/input.png",
+      "bytes": 223633,
+      "sha256": "4e5ba0c69b72f39704b658d5c1f5c78ce39af7fbd7a8fdc5a7e2d55856b6cdb7"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/panda-render/render.json",
+      "destination": "mesh-panda/conditioning-render/render.json",
+      "bytes": 334,
+      "sha256": "692ec4f4a71c5e85261708e8af207248db1f33aae0ffc122c20a4cea8ca4348b"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/panda-render/view_0.png",
+      "destination": "mesh-panda/conditioning-render/view_0.png",
+      "bytes": 307027,
+      "sha256": "8930e5b82c1fe827818190a87fe74cfa0c5733b563f2634b396665a016845c04"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/panda-render/view_1.png",
+      "destination": "mesh-panda/conditioning-render/view_1.png",
+      "bytes": 289223,
+      "sha256": "eeb50845a03a55b6a23587665739fc4a235a5318d19dc7b3c2066ef1987c59a6"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/panda-render/view_2.png",
+      "destination": "mesh-panda/conditioning-render/view_2.png",
+      "bytes": 302767,
+      "sha256": "23b2608441b8e98a688c9f7ba6bde696197db2411eea2d06a937eda4d4749ff7"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/panda-render/view_3.png",
+      "destination": "mesh-panda/conditioning-render/view_3.png",
+      "bytes": 289256,
+      "sha256": "6cdfe5cd9babcb7a9ab36bb7a31d22fe005f80237db38c3bb2c3815f25ea6a0c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/data/mushroom.png",
+      "destination": "image-mushroom/original-input/mushroom.png",
+      "bytes": 156239,
+      "sha256": "33978cf2fe791fa2436460badf22940c357d8c2f1a53f8c0dbd15b051f63bd9f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/data/mushroom.json",
+      "destination": "image-mushroom/original-input/mushroom.json",
+      "bytes": 289,
+      "sha256": "975db82cc16bbc994723f5c7e5bc1af3dcf8491507098889523dadaa82a85b98"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/anchor.glb",
+      "destination": "image-mushroom/static-anchor/anchor.glb",
+      "bytes": 720252,
+      "sha256": "ca0c93c030a9f56ce6dd9fee91e9ef1e94fde210cdd9ad76940963994241d052"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/foreground.png",
+      "destination": "image-mushroom/static-anchor/foreground.png",
+      "bytes": 177637,
+      "sha256": "69d6e680b1e9daeea681a790d1266a006fd51f88effe2bcb5e4f19238e71e1e2"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/condition.png",
+      "destination": "image-mushroom/static-anchor/condition.png",
+      "bytes": 150161,
+      "sha256": "34e322a1be3a12af12fe56e004c0dd43b2f0887ef4066d3c03dfd9da7cc7b962"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/input.json",
+      "destination": "image-mushroom/static-anchor/input.json",
+      "bytes": 169,
+      "sha256": "53489a88589c6b7e6aa8e08e9c439c075befe42a05d97267907a9dcae7e9dd68"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/weights-verified.json",
+      "destination": "image-mushroom/static-anchor/weights-verified.json",
+      "bytes": 5308,
+      "sha256": "8fde7c3b92cd7f733319898cae874b88e59951335b53b3796ddd4c3a32e8404c"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/command.json",
+      "destination": "image-mushroom/static-anchor/command.json",
+      "bytes": 401,
+      "sha256": "9aadd9d1a637d785d4f1e58d97adfcde976e650950ecc0cc9f7698d1b2f2d0c3"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/config.json",
+      "destination": "image-mushroom/static-anchor/config.json",
+      "bytes": 1391,
+      "sha256": "ffeb0df75189d8a4d9b6be5653725a559dabcd423a484c58b0c23bbec89f6266"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/environment.json",
+      "destination": "image-mushroom/static-anchor/environment.json",
+      "bytes": 301,
+      "sha256": "317d95e6a38568683abd0975f48a04cd8c3878e51f32b4ce2a1bee6a6139de16"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/stages.json",
+      "destination": "image-mushroom/static-anchor/stages.json",
+      "bytes": 1192,
+      "sha256": "3516961f773bec489f553684c9245aaa4e11b8ce6b7c84c3164435ad7a5ed9ce"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/report.json",
+      "destination": "image-mushroom/static-anchor/report.json",
+      "bytes": 2349,
+      "sha256": "b5b84143fce0f29741327160ddb9d6ae92c2bc0d040f1e65af3a6d52fadf2bc5"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/status.json",
+      "destination": "image-mushroom/static-anchor/status.json",
+      "bytes": 119,
+      "sha256": "8ff54fff9954a1872f8e2e9f65722fcadc9fa70f04f646a29bfefe1e2e1af5b4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-anchor/source-image.png",
+      "destination": "image-mushroom/static-anchor/source-image.png",
+      "bytes": 156239,
+      "sha256": "33978cf2fe791fa2436460badf22940c357d8c2f1a53f8c0dbd15b051f63bd9f"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/application-cases.json",
+      "destination": "common/application-cases.json",
+      "bytes": 1485,
+      "sha256": "975309666a07f2b5f322371d0fe7eaaedaff00987292cbacfc6190778c6bfe37"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/manifests/wan-weights-audit.json",
+      "destination": "common/verification/wan-weights-audit.json",
+      "bytes": 252661,
+      "sha256": "4bc2afb1aef5d6e9c36c34a9615815b7fe0dc351a430087da8fd0f68e72a4ab4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/manifests/wan-weights-verified.json",
+      "destination": "common/verification/wan-weights-verified.json",
+      "bytes": 8106,
+      "sha256": "92e1a6ccadc4dc81041f5650b853890ceff2c9212631bb8a3526eaeed2558992"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/video-weights-manifest.json",
+      "destination": "common/verification/video-weights-manifest.json",
+      "bytes": 20762,
+      "sha256": "f7159b1b9d0a82df8613075fda72cdcf3994d5529d36cfdb926c386f80a3db66"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/config.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/config.json",
+      "bytes": 1947,
+      "sha256": "5290ce57502be600195e230e5442517afe53c1cc5199280afb1a14957a12e245"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/report.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/report.json",
+      "bytes": 1772,
+      "sha256": "07c6379979d0d79ecb6e6f0d392d86b2d745b68c21206c31ee8b92fc6baf5634"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/environment.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/environment.json",
+      "bytes": 296,
+      "sha256": "02e56485474c75c0807c6fa6dc22addb81a7de1bb1201ac72ef2ab6f4b7a8e2d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/gpu.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/gpu.json",
+      "bytes": 172,
+      "sha256": "18cfcd3d4a3b366468bda56497c35a34cd081cfd68d6288ef9cb8f6d0ecd8225"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/validation.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/validation.json",
+      "bytes": 975,
+      "sha256": "0cf2c7c7533f3c8f2513308d7664539138de85bd2066f848c42f3ba252389df5"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/denoising-steps.jsonl",
+      "destination": "common/smoke/image-mushroom-video-smoke/denoising-steps.jsonl",
+      "bytes": 339,
+      "sha256": "6005e44b45c7970adada70db418cddada35246211a973b5ec13480c496e551f1"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/encode-text-report.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/encode-text-report.json",
+      "bytes": 620,
+      "sha256": "9b356a54cfd20c938aa7369a573783db0b029e55f91c2675637c1aca1d7ef465"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/encode-text-supervisor.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/encode-text-supervisor.json",
+      "bytes": 649,
+      "sha256": "c252097aa582084ed5f30be76143b0a36c36d95c23a43b9f417532b41d5186ea"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/encode-text.log",
+      "destination": "common/smoke/image-mushroom-video-smoke/encode-text.log",
+      "bytes": 470,
+      "sha256": "0151e1dae0de445f14e94f3cca180d579866fec2416ec7494a5e5a5c29ae1880"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/encode-text-gpu.csv",
+      "destination": "common/smoke/image-mushroom-video-smoke/encode-text-gpu.csv",
+      "bytes": 3063,
+      "sha256": "435e7a724467591770398bbe37f1b6449928c088a28068bf97ca1fea25700bdb"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/video-report.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/video-report.json",
+      "bytes": 1837,
+      "sha256": "b196526339e6f2e0c0c42344acd6bc60117ffca1ef20e347f56966fa9ccbeddd"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/video-supervisor.json",
+      "destination": "common/smoke/image-mushroom-video-smoke/video-supervisor.json",
+      "bytes": 642,
+      "sha256": "fef167b4bc670207ec08e7d523cb43d5adbfd0bd52a28e662a3c8539bba64bbf"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/video.log",
+      "destination": "common/smoke/image-mushroom-video-smoke/video.log",
+      "bytes": 1246,
+      "sha256": "ec72faac5321476a8888222074807536ccdadfbb86b6e2d1f813a2d2b3f96a41"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video-smoke/video-gpu.csv",
+      "destination": "common/smoke/image-mushroom-video-smoke/video-gpu.csv",
+      "bytes": 2243,
+      "sha256": "03495b1e445aa5494c4144df100862c146fc883f89df425f2330d6bf9b976b88"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/config.json",
+      "destination": "common/smoke/text-octopus-video-smoke/config.json",
+      "bytes": 1785,
+      "sha256": "624c045d191170524475f51c0d001eb4d0df26fb5bda89d753e2de949d433593"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/report.json",
+      "destination": "common/smoke/text-octopus-video-smoke/report.json",
+      "bytes": 1770,
+      "sha256": "343e0144fab6b340250f9619f9200feec80385218d58ab1784c44727ad12e2a9"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/environment.json",
+      "destination": "common/smoke/text-octopus-video-smoke/environment.json",
+      "bytes": 296,
+      "sha256": "02e56485474c75c0807c6fa6dc22addb81a7de1bb1201ac72ef2ab6f4b7a8e2d"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/gpu.json",
+      "destination": "common/smoke/text-octopus-video-smoke/gpu.json",
+      "bytes": 172,
+      "sha256": "18cfcd3d4a3b366468bda56497c35a34cd081cfd68d6288ef9cb8f6d0ecd8225"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/validation.json",
+      "destination": "common/smoke/text-octopus-video-smoke/validation.json",
+      "bytes": 974,
+      "sha256": "2bae842576625b12da7d8d0aa2362ce78b3547f2b07dd9df1a6f8e7a36993d75"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/denoising-steps.jsonl",
+      "destination": "common/smoke/text-octopus-video-smoke/denoising-steps.jsonl",
+      "bytes": 338,
+      "sha256": "05c0d0a1bea4801071ff96ee4d0b4f0f20f28bc4d5d962cb00e1d117ec1f733e"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/encode-text-report.json",
+      "destination": "common/smoke/text-octopus-video-smoke/encode-text-report.json",
+      "bytes": 620,
+      "sha256": "a93122dea5eef64f02bbb467672ff7578b31c0221f55574492a9443cdb7e3102"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/encode-text-supervisor.json",
+      "destination": "common/smoke/text-octopus-video-smoke/encode-text-supervisor.json",
+      "bytes": 648,
+      "sha256": "2cd3d2551602e0579cdaeed0cd9174393aeefb33bc8c333ca0c3f627e055bfaf"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/encode-text.log",
+      "destination": "common/smoke/text-octopus-video-smoke/encode-text.log",
+      "bytes": 470,
+      "sha256": "5f82be68b46b2c8ee6e06e71d5aa47f4d52c087b77ebce67d72f18b765e6a544"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/encode-text-gpu.csv",
+      "destination": "common/smoke/text-octopus-video-smoke/encode-text-gpu.csv",
+      "bytes": 2988,
+      "sha256": "288a45a15c079756d9ed874662b6bc774710a503f32568cd018abe634cd4e588"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/video-report.json",
+      "destination": "common/smoke/text-octopus-video-smoke/video-report.json",
+      "bytes": 1835,
+      "sha256": "013a4bf855dc7799cbc1a81461257ef07ef6df728f43613849d23cd73ffe36a4"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/video-supervisor.json",
+      "destination": "common/smoke/text-octopus-video-smoke/video-supervisor.json",
+      "bytes": 638,
+      "sha256": "85b8f9fdde52bdddd7307cac93c26eb343bcc089959dcc4da22118a893a7fa85"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/video.log",
+      "destination": "common/smoke/text-octopus-video-smoke/video.log",
+      "bytes": 1251,
+      "sha256": "b8854e482b77c766c403a2aa9433bd80214464f9b56a87aec2983177a1ab8c26"
+    },
+    {
+      "source": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video-smoke/video-gpu.csv",
+      "destination": "common/smoke/text-octopus-video-smoke/video-gpu.csv",
+      "bytes": 2312,
+      "sha256": "1b895df9414d78917d7cc1f1111024089a4d5177cd26dbd948a2a87602ddaa89"
+    }
+  ]
+}

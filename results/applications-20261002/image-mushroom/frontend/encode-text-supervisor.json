@@ -1,0 +1,20 @@
+{
+  "stage": "encode-text",
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "-u",
+    "/root/rivermind-data/actionmesh-repro/generate_application_video.py",
+    "--stage",
+    "encode-text",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/image-mushroom-video"
+  ],
+  "timeout_seconds": 3600,
+  "elapsed_seconds": 37.17731634201482,
+  "return_code": 0,
+  "nvidia_smi_sampled_peak_mib_by_gpu": {
+    "GPU-4910bb04-2d00-ca81-f64a-2031568758ad": 3.0
+  },
+  "nvidia_smi_scope": "whole_GPU_including_other_processes_not_process_exclusive",
+  "sampling_error": null
+}

@@ -1,0 +1,36 @@
+{
+  "status": "verified",
+  "commands": [
+    [
+      "/root/rivermind-data/actionmesh-repro/tools/blender-3.5.1-linux-x64/blender",
+      "-b",
+      "-P",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/glb_export.py",
+      "--",
+      "--vertices_npy",
+      "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-4d/deformations_vertices.npy",
+      "--faces_npy",
+      "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-4d/deformations_faces.npy",
+      "--output_glb",
+      "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-4d/animated_mesh.glb",
+      "--fps",
+      "8"
+    ],
+    [
+      "/root/rivermind-data/actionmesh-repro/tools/blender-3.5.1-linux-x64/blender",
+      "-b",
+      "-t",
+      "8",
+      "-P",
+      "/root/rivermind-data/actionmesh-repro/render_preview.py",
+      "--",
+      "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-4d"
+    ]
+  ],
+  "elapsed_seconds": 17.180715850088745,
+  "playback_fps": 8,
+  "gif_requested_frame_duration_ms": 125,
+  "source_video_fps": 24.0,
+  "render_device": "CPU",
+  "preview_camera": "default"
+}

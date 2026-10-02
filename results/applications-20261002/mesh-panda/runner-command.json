@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "-u",
+    "/root/rivermind-data/actionmesh-repro/run_application_backend.py",
+    "--child",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--video",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-video/generated.mp4",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-4d",
+    "--seed",
+    "42",
+    "--mesh",
+    "/root/rivermind-data/actionmesh-repro/repo/assets/examples/panda/panda.glb"
+  ],
+  "timeout_seconds": 3600
+}

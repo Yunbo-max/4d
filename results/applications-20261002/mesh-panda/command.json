@@ -1,0 +1,24 @@
+{
+  "cwd": "/root/rivermind-data/actionmesh-repro/repo",
+  "entrypoint_argv": [
+    "/root/rivermind-data/actionmesh-repro/repo/inference/video_and_3d_to_animated_mesh.py",
+    "--input",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-4d/input-frames",
+    "--output_dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-4d",
+    "--low_ram",
+    "--dtype",
+    "float16",
+    "--seed",
+    "42",
+    "--mesh_input",
+    "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/mesh-panda-4d/input-mesh.glb"
+  ],
+  "execution": "runpy.run_path of absolute entrypoint in CUDA child process",
+  "python": "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+  "offline": true,
+  "fast": false,
+  "config": "actionmesh_lowram.yaml",
+  "stage_0_steps": 100,
+  "stage_1_steps": 30
+}

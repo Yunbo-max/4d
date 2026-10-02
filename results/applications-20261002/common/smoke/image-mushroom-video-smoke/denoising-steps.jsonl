@@ -1,0 +1,2 @@
+{"step": 1, "timestep": 999.0, "elapsed_seconds": 3.9689796939492226, "latent_abs_max": 4.280783653259277, "allocated_bytes": 12869930496, "reserved_bytes": 13037993984}
+{"step": 2, "timestep": 833.0, "elapsed_seconds": 4.199294751975685, "latent_abs_max": 8.205195426940918, "allocated_bytes": 12870422016, "reserved_bytes": 13037993984}

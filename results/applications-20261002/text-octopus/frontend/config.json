@@ -1,0 +1,33 @@
+{
+  "mode": "text",
+  "prompt": "An octopus playing maracas. A single full-body cartoon octopus rhythmically shakes two maracas with its tentacles. Static camera, centered subject, plain white background, consistent shape, all limbs visible.",
+  "negative_prompt": "overexposed, static, blurred details, subtitles, watermark, worst quality, low quality, JPEG compression artifacts, deformed, disfigured, extra limbs, fused limbs, still picture, messy background, many subjects, camera movement",
+  "image": null,
+  "output": "/root/rivermind-data/actionmesh-repro/outputs/applications-20261002/text-octopus-video",
+  "root": "/root/rivermind-data/actionmesh-repro",
+  "seed": 42,
+  "height": 512,
+  "width": 512,
+  "frames": 33,
+  "steps": 50,
+  "guidance_scale": 5.0,
+  "fps": 24,
+  "smoke": false,
+  "timeout": 3600,
+  "cpu_threads": 8,
+  "created_utc": "2026-10-02T09:00:22Z",
+  "model_directory": "/root/rivermind-data/actionmesh-repro/weights/Wan2.2-TI2V-5B-Diffusers",
+  "frontend_reference": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+  "image_sha256": null,
+  "image_preprocessing": "EXIF orientation, white alpha composite, aspect-preserving white pad",
+  "precision": "T5_CPU_FP32_then_transformer_FP16_with_FP32_modules_and_VAE_FP32",
+  "scope": "short_clip_application_test",
+  "author_exact_video_model_reproduction": false,
+  "official_default_resolution": false,
+  "config_sha256": {
+    "model_index.json": "6a72faeb564b0e894aea8fc4ef27241106eb739e8584e869b61589a65473add7",
+    "transformer/config.json": "dc00d9866e72cf77db6b531aaa33be4dc7148fef9338442bd0ae9181f7075e9b",
+    "vae/config.json": "d996c340fe9a7df5d7371f76a7d8d6956f6c98256080074d8434fa5eeac11360",
+    "scheduler/scheduler_config.json": "571a3eed68bcd943a61b9fea8efa9e141472216ada59f928c8b5128ce24b32e0"
+  }
+}

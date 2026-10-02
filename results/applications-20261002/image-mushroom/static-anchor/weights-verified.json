@@ -1,0 +1,140 @@
+{
+  "manifest": "/root/rivermind-data/actionmesh-repro/weights-manifest.json",
+  "manifest_sha256": "55bdd725afe926efa8cafdcd67df1be89d31de06eaaeba9651cb53ce0299f24e",
+  "files": [
+    {
+      "path": "weights/TripoSG/README.md",
+      "bytes": 1465,
+      "sha256": "0f4c34a1a17acdbcff02c259d7f4f7b5df1b8956395c625c28da97930eb82ef3",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/feature_extractor_dinov2/preprocessor_config.json",
+      "bytes": 436,
+      "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/image_encoder_dinov2/config.json",
+      "bytes": 1104,
+      "sha256": "8ed81b0d5ffd2c8b2cecd7dc1326d3eefa409bc9d525537b6b2a3c70a992fd02",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/image_encoder_dinov2/model.safetensors",
+      "bytes": 1217522888,
+      "sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/model_index.json",
+      "bytes": 525,
+      "sha256": "750af638d10fc67a5f43d19ef0a0d1d3d446174e24b73bddd0a49226016c80c2",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/scheduler/scheduler_config.json",
+      "bytes": 158,
+      "sha256": "ea7c9b4d502dcaba97cd85291cfd7dbd3c6c82cbc4c775af5c6d9224864279c9",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/transformer/config.json",
+      "bytes": 191,
+      "sha256": "54ad779e68f9bc7303122cdf291f6db48dec7c67e41d28c05ac359daf914128a",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/transformer/diffusion_pytorch_model.safetensors",
+      "bytes": 5758280104,
+      "sha256": "9192b5923f7b605b394192809aa2ceb73bf0f4009674d8e3b999b45bb97d4bf2",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/vae/config.json",
+      "bytes": 335,
+      "sha256": "2fb6ba9b364d42c9681879dca0f7edcb978f2db974a1ca4b15d28f9b15a5baed",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/TripoSG/vae/diffusion_pytorch_model.safetensors",
+      "bytes": 970685468,
+      "sha256": "a2e667c24927a5a35e5f19fcb4c75890e9399aa966b6db8131d7df733a750c8b",
+      "repo": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    {
+      "path": "weights/RMBG/MyConfig.py",
+      "bytes": 326,
+      "sha256": "6ed4bf30d736b4fac18ca044e719a8cfc76bee7e71f022aa6f9e8853aa580d0b",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/MyPipe.py",
+      "bytes": 2887,
+      "sha256": "ab93d1432f145082f631c58291a1b977785d1e2ae7f80fc5d76126c4113d1594",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/README.md",
+      "bytes": 6395,
+      "sha256": "24e08231e4a1f467f69fd9a5f279c259544212dbeb581c710700f27effd07875",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/briarmbg.py",
+      "bytes": 13101,
+      "sha256": "1dbefbca5c1a3ec1afde2a2164b05274e7f62c861fa62e62a84525ff603a955d",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/config.json",
+      "bytes": 548,
+      "sha256": "d774e7d35151efb2479a83f132a57048334adf722e6e354309e30c56e3b35fbe",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/example_inference.py",
+      "bytes": 1090,
+      "sha256": "02f466374258ac228e00a372ff6d379f25c948bce57ff1288f780bf7de395e1a",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/model.safetensors",
+      "bytes": 176381984,
+      "sha256": "46ef7fe46f2ae284d8f1aaa24bfa5fca5ef25a34e2c7caa890a0029eb100e87f",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/preprocessor_config.json",
+      "bytes": 345,
+      "sha256": "6f9c2cfdb87edd9b83c1314629657d5b320a6a89f8481c872a36253132e33afa",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    },
+    {
+      "path": "weights/RMBG/utilities.py",
+      "bytes": 980,
+      "sha256": "c9e358b02d6687a752e45cb71730e3a6b8a251a50c66e8cc17ba25e3d7b0603f",
+      "repo": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    }
+  ],
+  "network_downloads_enabled": false
+}
