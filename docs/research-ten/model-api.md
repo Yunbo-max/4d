@@ -21,7 +21,12 @@ result = probe_cycles(
     max_query_points=32768)
 ```
 
-`decoder` must already be in eval mode with every parameter frozen. `latents`
+`decoder` must already be in eval mode with every parameter frozen.
+The adapter also accepts an optional `step_callback(step, total)` forwarded to
+the native decoder for progress and budget accounting. Native callbacks occur
+before each target; a callback alone does not prove CUDA completion.
+
+`latents`
 has shape `[T,N,D]` or `[1,T,N,D]`; `context_times[T]` is the full ordered latent
 clock. The adapter signature is
 `adapter(source_time, target_times, positions[Q,3], normals[Q,3], vertex_ids[Q])`
@@ -120,8 +125,11 @@ where `indices` are global frame IDs and `known` maps global IDs to hard latent
 values. It returns `{"latents": [window_length,N,D], "representation_id": ...}`.
 It invokes the real `_denoise_latents` with a fresh native `LatentBank` and the
 window's actual input/context. At least 16 frames per native window are required
-by `ActionMeshInput`; a short final window fails instead of being padded.
-For the example W=16/O=4, use 52 frames for exactly four full windows.
+by `ActionMeshInput`. The rollout driver shifts the final window backward to
+keep its full requested length without repeating or dropping real frames;
+the final overlap can exceed the requested minimum. It records all window IDs
+and actual overlap sizes. W=16/O=4 gives four windows for 52 frames and six
+windows for 70 frames; set max_rollouts to cover forward and backward calls.
 Times must stay distinct under native float32 and LatentBank's 1e-5 matching.
 
 The driver makes at least four forward window calls. Only caller-provided
@@ -151,7 +159,7 @@ updates, official evaluation, and measured resource use. The current cached
 ## Verification status
 
 `PYTHONPATH=actionmesh python3 -m unittest research_ten.tests.test_model_methods -v`
-has 15 passing NumPy tests locally and two skipped Torch tests. The latter test
+has 17 passing NumPy tests locally and two skipped Torch tests in this revision. The latter test
 full-clock decoder semantics, NumPy/Torch guidance parity, caller-input purity
 and finite FP16 extremes when Torch is available. Constructed demos explicitly
 set natural-data validation claims false. Live native GPU smoke results are

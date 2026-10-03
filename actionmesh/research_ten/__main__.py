@@ -1,4 +1,4 @@
-"""Unified constructed controls. Real input APIs are documented in each module."""
+"""Constructed controls plus independent qualified real-input screening."""
 from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
@@ -59,11 +59,25 @@ def main():
     run = sub.add_parser("controls", help="Run analytic/constructed controls, not a benchmark")
     run.add_argument("--methods", type=int, nargs="+", choices=sorted(METHODS), default=sorted(METHODS))
     run.add_argument("--output", type=Path, required=True)
+    geometry = sub.add_parser("geometry", help="Run ONE of H1/H5/H8 and its controls on qualified NPZ observations")
+    geometry.add_argument("--method", type=int, choices=(1,5,8), required=True)
+    geometry.add_argument("--input", type=Path, required=True)
+    geometry.add_argument("--evidence", type=Path, required=True)
+    geometry.add_argument("--output", type=Path, required=True)
+    native = sub.add_parser("guidance", help="Run H9 with matched full 30-step live controls and complete mesh decoding")
+    from .native_pair import add_arguments
+    add_arguments(native)
     args = parser.parse_args()
     if args.command == "list":
         print(json.dumps(METHODS, indent=2))
         return 0
     try:
+        if args.command == "geometry":
+            from .geometry_run import run_geometry
+            return run_geometry(args.method, args.input, args.evidence, args.output)
+        if args.command == "guidance":
+            from .native_pair import run_guidance
+            return run_guidance(args)
         return controls(args.methods, args.output)
     except (ValueError, FileExistsError) as error:
         parser.error(str(error))

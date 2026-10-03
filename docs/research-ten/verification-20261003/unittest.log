@@ -1,0 +1,116 @@
+test_controls_write_finite_results_and_preserve_existing_output (test_cli.CommandLineTests.test_controls_write_finite_results_and_preserve_existing_output) ... ok
+test_list_reports_external_input_requirements (test_cli.CommandLineTests.test_list_reports_external_input_requirements) ... ok
+test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor (test_m01_elasticity.ElasticityTests.test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor) ... ok
+test_face_edges_and_fixed_vertices_are_respected (test_m01_elasticity.ElasticityTests.test_face_edges_and_fixed_vertices_are_respected) ... ok
+test_invalid_time_and_edges_are_rejected (test_m01_elasticity.ElasticityTests.test_invalid_time_and_edges_are_rejected) ... ok
+test_local_elasticity_retains_supported_action_and_regularizes_noise (test_m01_elasticity.ElasticityTests.test_local_elasticity_retains_supported_action_and_regularizes_noise) ... ok
+test_observed_evidence_selects_strain_not_motion_amplitude (test_m01_elasticity.ElasticityTests.test_observed_evidence_selects_strain_not_motion_amplitude) ... ok
+test_shuffled_control_preserves_weight_distribution (test_m01_elasticity.ElasticityTests.test_shuffled_control_preserves_weight_distribution) ... ok
+test_acceleration_preserves_identity_through_ambiguous_crossing (test_m03_correspondence.CorrespondenceTests.test_acceleration_preserves_identity_through_ambiguous_crossing) ... ok
+test_candidate_slot_reordering_does_not_change_selected_physical_track (test_m03_correspondence.CorrespondenceTests.test_candidate_slot_reordering_does_not_change_selected_physical_track) ... ok
+test_dp_matches_exhaustive_temporal_objective (test_m03_correspondence.CorrespondenceTests.test_dp_matches_exhaustive_temporal_objective) ... ok
+test_mask_is_respected_and_all_invalid_is_explicit (test_m03_correspondence.CorrespondenceTests.test_mask_is_respected_and_all_invalid_is_explicit) ... ok
+test_nonfinite_rejected (test_m03_correspondence.CorrespondenceTests.test_nonfinite_rejected) ... ok
+test_surface_evidence_keeps_adjacent_points_together (test_m03_correspondence.CorrespondenceTests.test_surface_evidence_keeps_adjacent_points_together) ... ok
+test_unidentifiable_and_oversized_components_are_not_silent (test_m03_correspondence.CorrespondenceTests.test_unidentifiable_and_oversized_components_are_not_silent) ... ok
+test_bad_visibility_and_nonfinite_rejected (test_m04_occlusion.OcclusionTests.test_bad_visibility_and_nonfinite_rejected) ... ok
+test_irregular_timestamps_and_multiple_gaps (test_m04_occlusion.OcclusionTests.test_irregular_timestamps_and_multiple_gaps) ... ok
+test_long_closed_gap_abstains_before_dense_solve (test_m04_occlusion.OcclusionTests.test_long_closed_gap_abstains_before_dense_solve) ... ok
+test_one_sided_gap_abstains (test_m04_occlusion.OcclusionTests.test_one_sided_gap_abstains) ... ok
+test_plain_temporal_baseline_matches_linear_for_affine_motion (test_m04_occlusion.OcclusionTests.test_plain_temporal_baseline_matches_linear_for_affine_motion) ... ok
+test_visible_samples_exact_and_neighbor_recovers_nonlinear_gap (test_m04_occlusion.OcclusionTests.test_visible_samples_exact_and_neighbor_recovers_nonlinear_gap) ... ok
+test_bbox_and_global_controls_are_executable (test_m05_scale.ScaleTests.test_bbox_and_global_controls_are_executable) ... ok
+test_fractional_masks_and_degenerate_region_are_rejected (test_m05_scale.ScaleTests.test_fractional_masks_and_degenerate_region_are_rejected) ... ok
+test_rigid_sequence_is_identity_and_missing_stability_abstains (test_m05_scale.ScaleTests.test_rigid_sequence_is_identity_and_missing_stability_abstains) ... ok
+test_scale_fix_keeps_translation_rotation_and_articulation (test_m05_scale.ScaleTests.test_scale_fix_keeps_translation_rotation_and_articulation) ... ok
+test_similarity_recovers_known_transform_despite_stable_region_outlier (test_m05_scale.ScaleTests.test_similarity_recovers_known_transform_despite_stable_region_outlier) ... ok
+test_action_gate_blocks_static_and_feasibility_differs_from_text (test_m06_selection.SelectionTests.test_action_gate_blocks_static_and_feasibility_differs_from_text) ... ok
+test_all_ineligible_abstains_instead_of_selecting_static (test_m06_selection.SelectionTests.test_all_ineligible_abstains_instead_of_selecting_static) ... ok
+test_duplicate_ids_rejected (test_m06_selection.SelectionTests.test_duplicate_ids_rejected) ... ok
+test_invalid_selection_seed_fails_before_expensive_generation (test_m06_selection.SelectionTests.test_invalid_selection_seed_fails_before_expensive_generation) ... ok
+test_large_finite_weights_keep_ranking_and_normalization (test_m06_selection.SelectionTests.test_large_finite_weights_keep_ranking_and_normalization) ... ok
+test_missing_and_invalid_scores_rejected (test_m06_selection.SelectionTests.test_missing_and_invalid_scores_rejected) ... ok
+test_no_tracks_are_invalid_not_perfectly_stable (test_m06_selection.SelectionTests.test_no_tracks_are_invalid_not_perfectly_stable) ... ok
+test_nonuniform_distortion_lowers_shape_score (test_m06_selection.SelectionTests.test_nonuniform_distortion_lowers_shape_score) ... ok
+test_pipeline_never_calls_backend_when_action_gate_fails (test_m06_selection.SelectionTests.test_pipeline_never_calls_backend_when_action_gate_fails) ... ok
+test_pipeline_scores_every_candidate_but_reconstructs_selected_one_only (test_m06_selection.SelectionTests.test_pipeline_scores_every_candidate_but_reconstructs_selected_one_only) ... ok
+test_random_control_respects_same_action_gate (test_m06_selection.SelectionTests.test_random_control_respects_same_action_gate) ... ok
+test_translation_and_uniform_camera_scale_do_not_change_proportion (test_m06_selection.SelectionTests.test_translation_and_uniform_camera_scale_do_not_change_proportion) ... ok
+test_validity_gate_applies_to_all_policies (test_m06_selection.SelectionTests.test_validity_gate_applies_to_all_policies) ... ok
+test_all_strategies_charge_unique_probes_and_use_exact_budget (test_m07_sampling.SamplingTests.test_all_strategies_charge_unique_probes_and_use_exact_budget) ... ok
+test_distance_chunk_partition_preserves_queries_and_interpolation (test_m07_sampling.SamplingTests.test_distance_chunk_partition_preserves_queries_and_interpolation) ... ok
+test_global_translation_reproduced_from_one_paid_query (test_m07_sampling.SamplingTests.test_global_translation_reproduced_from_one_paid_query) ... ok
+test_invalid_budget_geometry_and_decoder_shape_are_rejected (test_m07_sampling.SamplingTests.test_invalid_budget_geometry_and_decoder_shape_are_rejected) ... ok
+test_no_full_trajectory_argument_and_callback_receives_only_budgeted_indices (test_m07_sampling.SamplingTests.test_no_full_trajectory_argument_and_callback_receives_only_budgeted_indices) ... ok
+test_residual_score_changes_allocation_after_observed_nonuniform_motion (test_m07_sampling.SamplingTests.test_residual_score_changes_allocation_after_observed_nonuniform_motion) ... ok
+test_contact_projection_moves_only_normal_and_preserves_other_vertices (test_m08_contact.ContactTests.test_contact_projection_moves_only_normal_and_preserves_other_vertices) ... ok
+test_coupled_halfspaces_converge_and_standard_control_is_feasible (test_m08_contact.ContactTests.test_coupled_halfspaces_converge_and_standard_control_is_feasible) ... ok
+test_dykstra_minimizes_change_when_plain_projection_overshoots (test_m08_contact.ContactTests.test_dykstra_minimizes_change_when_plain_projection_overshoots) ... ok
+test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices (test_m08_contact.ContactTests.test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices) ... ok
+test_infeasible_displacement_bound_is_reported_and_pins_hold (test_m08_contact.ContactTests.test_infeasible_displacement_bound_is_reported_and_pins_hold) ... ok
+test_invalid_constraint_and_fractional_pin_ids_are_rejected (test_m08_contact.ContactTests.test_invalid_constraint_and_fractional_pin_ids_are_rejected) ... ok
+test_large_hash_box_falls_back_without_cartesian_enumeration (test_m08_contact.ContactTests.test_large_hash_box_falls_back_without_cartesian_enumeration) ... ok
+test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact (test_m08_contact.ContactTests.test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact) ... ok
+test_unrepresentable_hash_coordinates_use_finite_aabb_scan (test_m08_contact.ContactTests.test_unrepresentable_hash_coordinates_use_finite_aabb_scan) ... ok
+test_budget_is_checked_before_decoder_work (test_model_methods.CycleTests.test_budget_is_checked_before_decoder_work) ... ok
+test_consensus_solves_anchored_graph_not_just_averaging (test_model_methods.CycleTests.test_consensus_solves_anchored_graph_not_just_averaging) ... ok
+test_degenerate_normals_are_not_silently_invented (test_model_methods.CycleTests.test_degenerate_normals_are_not_silently_invented) ... ok
+test_inconsistent_path_is_detected_without_claiming_quality_gain (test_model_methods.CycleTests.test_inconsistent_path_is_detected_without_claiming_quality_gain) ... ok
+test_rigid_flow_composes_and_recomputes_intermediate_normals (test_model_methods.CycleTests.test_rigid_flow_composes_and_recomputes_intermediate_normals) ... ok
+test_invalid_shapes_and_nonfinite_are_rejected (test_model_methods.GuidanceTests.test_invalid_shapes_and_nonfinite_are_rejected) ... ok
+test_live_flow_requeries_changed_state_and_never_changes_known_latent (test_model_methods.GuidanceTests.test_live_flow_requeries_changed_state_and_never_changes_known_latent) ... ok
+test_normmatched_and_random_controls_have_declared_budgets (test_model_methods.GuidanceTests.test_normmatched_and_random_controls_have_declared_budgets) ... ok
+test_projection_removes_only_conflicting_component_and_respects_anchor (test_model_methods.GuidanceTests.test_projection_removes_only_conflicting_component_and_respects_anchor) ... ok
+test_zero_mesh_and_nonconflict_are_unchanged (test_model_methods.GuidanceTests.test_zero_mesh_and_nonconflict_are_unchanged) ... ok
+test_decoder_adapter_uses_full_context_clock_and_absolute_output (test_model_methods.TorchAdapterTests.test_decoder_adapter_uses_full_context_clock_and_absolute_output) ... skipped 'native Torch tests run on GPU environment'
+test_three_branch_parity_input_purity_and_half_extreme (test_model_methods.TorchAdapterTests.test_three_branch_parity_input_purity_and_half_extreme) ... skipped 'native Torch tests run on GPU environment'
+test_budget_and_short_input_reject_before_rollout (test_model_methods.WindowTests.test_budget_and_short_input_reject_before_rollout) ... ok
+test_four_windows_rerun_backward_and_preserve_original_source_anchors (test_model_methods.WindowTests.test_four_windows_rerun_backward_and_preserve_original_source_anchors) ... ok
+test_invalid_seed_is_rejected_before_any_rollout (test_model_methods.WindowTests.test_invalid_seed_is_rejected_before_any_rollout) ... ok
+test_later_context_updates_earlier_overlap_instead_of_self_conditioning (test_model_methods.WindowTests.test_later_context_updates_earlier_overlap_instead_of_self_conditioning) ... ok
+test_native_length_tail_keeps_every_frame_without_padding (test_model_methods.WindowTests.test_native_length_tail_keeps_every_frame_without_padding) ... ok
+test_representation_mismatch_and_mutated_anchors_fail (test_model_methods.WindowTests.test_representation_mismatch_and_mutated_anchors_fail) ... ok
+test_unreliable_future_is_not_used_as_backward_evidence (test_model_methods.WindowTests.test_unreliable_future_is_not_used_as_backward_evidence) ... ok
+test_changed_cache_hash_fails_even_if_geometry_is_finite (test_native_pair.CensusCacheTests.test_changed_cache_hash_fails_even_if_geometry_is_finite) ... ok
+test_other_cohort_assets_and_repeat_seed_are_not_rejected (test_native_pair.CensusCacheTests.test_other_cohort_assets_and_repeat_seed_are_not_rejected) ... ok
+test_all_interventions_have_matching_three_branch_controls (test_native_pair.NativePlanTests.test_all_interventions_have_matching_three_branch_controls) ... ok
+test_native_update_sign_and_schedule_are_explicit (test_native_pair.NativePlanTests.test_native_update_sign_and_schedule_are_explicit) ... ok
+test_contact_and_elasticity_produce_separate_baselines (test_real_runs.GeometryRunTests.test_contact_and_elasticity_produce_separate_baselines) ... {"method": 8, "arm": "original", "status": "completed"}
+{"method": 8, "arm": "bounded_normal", "status": "completed"}
+{"method": 8, "arm": "standard_projection", "status": "completed"}
+{"method": 1, "arm": "original", "status": "completed"}
+{"method": 1, "arm": "observed_elasticity", "status": "completed"}
+{"method": 1, "arm": "uniform_0.001", "status": "completed"}
+{"method": 1, "arm": "uniform_1", "status": "completed"}
+{"method": 1, "arm": "uniform_100", "status": "completed"}
+{"method": 1, "arm": "uniform_mean", "status": "completed"}
+{"method": 1, "arm": "motion", "status": "completed"}
+{"method": 1, "arm": "shuffled", "status": "completed"}
+ok
+test_fractional_contact_frame_is_not_truncated_to_an_integer (test_real_runs.GeometryRunTests.test_fractional_contact_frame_is_not_truncated_to_an_integer) ... ok
+test_infeasible_contact_is_counted_and_debug_sequence_is_not_a_success (test_real_runs.GeometryRunTests.test_infeasible_contact_is_counted_and_debug_sequence_is_not_a_success) ... {"method": 8, "arm": "original", "status": "completed"}
+{"method": 8, "arm": "bounded_normal", "status": "failed"}
+{"method": 8, "arm": "standard_projection", "status": "completed"}
+ok
+test_privileged_extra_array_is_not_silently_consumed (test_real_runs.GeometryRunTests.test_privileged_extra_array_is_not_silently_consumed) ... ok
+test_scale_pair_retains_pose_and_can_feed_existing_evaluator (test_real_runs.GeometryRunTests.test_scale_pair_retains_pose_and_can_feed_existing_evaluator) ... {"method": 5, "arm": "original", "status": "completed"}
+{"method": 5, "arm": "stable_region", "status": "completed"}
+{"method": 5, "arm": "bbox", "status": "completed"}
+{"method": 5, "arm": "global_sim3", "status": "completed"}
+ok
+test_source_change_invalidates_every_completed_arm_for_evaluation (test_real_runs.GeometryRunTests.test_source_change_invalidates_every_completed_arm_for_evaluation) ... {"method": 5, "arm": "original", "status": "completed"}
+{"method": 5, "arm": "stable_region", "status": "completed"}
+{"method": 5, "arm": "bbox", "status": "completed"}
+{"method": 5, "arm": "global_sim3", "status": "completed"}
+ok
+test_source_deletion_invalidates_outputs_and_preserves_report (test_real_runs.GeometryRunTests.test_source_deletion_invalidates_outputs_and_preserves_report) ... {"method": 5, "arm": "original", "status": "completed"}
+{"method": 5, "arm": "stable_region", "status": "completed"}
+{"method": 5, "arm": "bbox", "status": "completed"}
+{"method": 5, "arm": "global_sim3", "status": "completed"}
+ok
+test_unqualified_stable_mask_and_hash_change_fail_before_run (test_real_runs.GeometryRunTests.test_unqualified_stable_mask_and_hash_change_fail_before_run) ... ok
+
+----------------------------------------------------------------------
+Ran 85 tests in 0.950s
+
+OK (skipped=2)

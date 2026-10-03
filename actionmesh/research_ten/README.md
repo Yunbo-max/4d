@@ -2,6 +2,8 @@
 
 对应用户提供的 [十项研究计划](../../docs/research-ten/user-ten-hypotheses-20261002.md)。每项是独立干预，模型权重冻结；代码实现与软件测试不等于自然数据上的科研有效性。
 
+2026-10-03复核修订新增真实输入的 `geometry` 和完整30步 `guidance` 入口，修正两步smoke的flow方向和长视频尾窗口。先读 [修正版运行说明与逐项缺口](../../docs/research-ten/latest-update-review-20261003.md)。当前修订验证85项：83通过，2项因没有Torch跳过；新增真实CUDA对照尚未运行。
+
 | # | 实现文件 | 方法 |
 |---|---|---|
 | 1 | `m01_elasticity.py` | 观测支持的局部弹性约束 |
@@ -34,7 +36,7 @@ python -m research_ten controls --methods 5 1 8 --output ../results/geometry-con
 
 `controls` 使用明确标注的构造样例，保存逐项结果、耗时与模块哈希，禁止覆盖已有目录。它不会自动下载数据、生成视频、训练权重或把构造样例算作 ActionBench 成绩。
 
-本机与远端整套71项测试均已通过，零跳过。完整版本、日志和GPU结果见 [本轮验证报告](../../results/ten-methods-20261003/README.md)。本机当前使用CPU执行这些测试；原生ActionMesh的CUDA检查在远端2080 Ti执行。Mac安装方式依据 [PyTorch官方指南](https://pytorch.org/get-started/locally/)，锁定环境记录位于本轮结果目录。
+原v1版本的本机与远端整套71项测试均已通过，零跳过。历史版本、日志和GPU结果见 [v1验证报告](../../results/ten-methods-20261003/README.md)。原v1本机使用CPU执行这些测试，原生ActionMesh的CUDA检查在远端2080 Ti执行。Mac安装方式依据 [PyTorch官方指南](https://pytorch.org/get-started/locally/)，锁定环境记录位于历史结果目录。
 
 真实输入与公开 API：
 

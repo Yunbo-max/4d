@@ -137,6 +137,9 @@ def main():
             from actionmesh.model.temporal_denoiser import ActionMeshDenoiser
             from actionmesh.scheduler.scheduler import SchedulerFlow
             from actionmesh.scheduler.guidance import ClassifierFreeGuidance
+            from actionmesh.utils import load_config
+            from omegaconf import OmegaConf
+            from research_ten.native_pair import scheduler_parameters
             denoiser = ActionMeshDenoiser.from_pretrained(
                 str(args.root/"repo/pretrained_weights/ActionMesh/denoiser"),
                 local_files_only=True).eval().cuda()
@@ -148,12 +151,16 @@ def main():
             mask = torch.zeros((1,16),device="cuda")
             mask[:,0] = 1.
             times = torch.arange(16,dtype=torch.float32,device="cuda")[None]
-            scheduler = SchedulerFlow(num_inference_steps=2, split_cfg_batch=True)
+            cfg = OmegaConf.to_container(load_config("actionmesh_lowram", str(args.root/"repo/actionmesh/configs")), resolve=True)
+            parameters = scheduler_parameters(cfg)
+            parameters["num_inference_steps"] = 2  # interface check only
+            scheduler = SchedulerFlow(**parameters)
             noise = scheduler.get_noise([2048,64],1,16,device="cuda:0",
                                          generator=torch.Generator(device="cuda").manual_seed(42))
             noise[:,0] = anchor
             outputs = {}
             report["guidance"] = {}
+            report["guidance"]["scheduler_parameters"] = parameters
             original_forward = denoiser.forward
             for mode in ("scalar", "projection"):
                 check("native_guidance_two_steps_"+mode)

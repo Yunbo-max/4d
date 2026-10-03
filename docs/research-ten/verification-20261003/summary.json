@@ -1,0 +1,34 @@
+{
+  "base_commit": "81f4f48330aef6d0c00dce9826335a3b1287850e",
+  "tests_run": 85,
+  "passed": 83,
+  "skipped": [
+    {
+      "test": "test_decoder_adapter_uses_full_context_clock_and_absolute_output (test_model_methods.TorchAdapterTests.test_decoder_adapter_uses_full_context_clock_and_absolute_output)",
+      "reason": "native Torch tests run on GPU environment"
+    },
+    {
+      "test": "test_three_branch_parity_input_purity_and_half_extreme (test_model_methods.TorchAdapterTests.test_three_branch_parity_input_purity_and_half_extreme)",
+      "reason": "native Torch tests run on GPU environment"
+    }
+  ],
+  "failures": 0,
+  "errors": 0,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "torch_installed": false,
+  "native_cuda_run": false,
+  "natural_efficacy_evaluated": false,
+  "source_sha256": {
+    "research_ten/__main__.py": "d0bcd473c3494f48024a8df590ce30c4c708838a20672f4360a0180b4271a49c",
+    "research_ten/actionmesh_adapter.py": "8ecc35edca7f4d3f278397a1c233dcab6000044bd7ce267c1d393dbb0e5e6978",
+    "research_ten/m10_windows.py": "1a560931d0ed64396d1f36d8ea53feccf1184c4b5808b6c4a983d9f5ebd96c26",
+    "research_ten/native_smoke.py": "51735225a684204384c13fa4b4a00104d8c58bf8241393499e6ab7ae8282c505",
+    "research_ten/case_io.py": "4ea71eab72f6ee19c42761a7077cc255af02c3b4050368f610ba413b1cc5a70d",
+    "research_ten/geometry_run.py": "8502166e1ab883663e198e8d09c1da01bd6d0ce14faa38a128363a2397760766",
+    "research_ten/native_pair.py": "8ba38e05ed9baf353b56100fd85981214bd8600bf4720e0cad1e40f1192cb93a",
+    "research_ten/tests/test_model_methods.py": "642ef545d1e49efc6f0f46ef568f7b441168ac8f8b2c1b075e700108f82a74cc",
+    "research_ten/tests/test_native_pair.py": "00d0228c8fedd97e63d73e7d8be5190ce1f84fb6fc8d8fc1a924badf31a8ea1d",
+    "research_ten/tests/test_real_runs.py": "6183fed211d54c51dce2cb94e4c63e775b318253e3ae0fc4847ad6339fd497f5"
+  }
+}

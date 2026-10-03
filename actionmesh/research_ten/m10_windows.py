@@ -19,6 +19,9 @@ def rollout_windows(callback, times, window_size, overlap, anchors, representati
     is a required provenance assertion, not evidence inferred from numeric
     equality. Caller must qualify common anchor/token/coordinate meaning first.
     max_rollouts includes both directions; no hidden candidate passes.
+    Every window has window_size distinct frames. A short tail shifts the last
+    window back to end at the final real frame, increasing its overlap instead
+    of padding or dropping observations. overlap is therefore a minimum.
     """
     times=np.asarray(times,dtype=float);reliable=np.asarray(future_reliable)
     if (times.ndim!=1 or len(times)<2 or not np.isfinite(times).all() or np.any(np.diff(times)<=0)
@@ -27,12 +30,16 @@ def rollout_windows(callback, times, window_size, overlap, anchors, representati
             or reliable.shape!=times.shape or not np.isin(reliable,[0,1]).all()
             or not isinstance(backward_updates,(int,np.integer)) or backward_updates<0
             or not isinstance(max_rollouts,(int,np.integer)) or max_rollouts<1
+            or isinstance(seed,(bool,np.bool_)) or not isinstance(seed,(int,np.integer)) or seed<0
             or not isinstance(representation_id,str) or not representation_id.strip()):
         raise ValueError("invalid windows, times, reliability, identity or budget")
     reliable=reliable.astype(bool)
     windows=[];start=0
     while True:
-        indices=np.arange(start,min(start+window_size,len(times)),dtype=int)
+        if len(times)<window_size:
+            raise ValueError("sequence is shorter than one complete window")
+        start=min(start,len(times)-window_size)
+        indices=np.arange(start,start+window_size,dtype=int)
         windows.append(indices)
         if indices[-1]==len(times)-1:
             break
@@ -123,6 +130,8 @@ def rollout_windows(callback, times, window_size, overlap, anchors, representati
             "rollout_count":len(records),"max_rollouts":int(max_rollouts),
             "requested_backward_updates":int(backward_updates),
             "records":records,"skipped":skipped,"source_anchor_indices":sorted(fixed),
+            "window_indices":[w.tolist() for w in windows],
+            "actual_overlap_sizes":[int(len(np.intersect1d(a,b))) for a,b in zip(windows,windows[1:])],
             "backward_boundaries":boundaries,"terminal_boundary_is_ground_truth":False,
             "representation_id":representation_id,"unaligned_averaging":False,
             "natural_long_video_validated":False}

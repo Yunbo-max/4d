@@ -9,10 +9,13 @@ import numpy as np
 
 
 class ActionMeshDecoderAdapter:
-    def __init__(self, decoder, latents, times, *, device="cuda:0", autocast=True):
+    def __init__(self, decoder, latents, times, *, device="cuda:0", autocast=True, step_callback=None):
         import torch
         self.torch=torch;self.device=torch.device(device);self.autocast=bool(autocast)
         self.decoder=decoder;self.times=np.asarray(times,dtype=float)
+        if step_callback is not None and not callable(step_callback):
+            raise TypeError("step_callback must be callable")
+        self.step_callback=step_callback
         if (self.times.ndim!=1 or len(self.times)<2 or not np.isfinite(self.times).all()
                 or np.any(np.diff(self.times)<=0)):
             raise ValueError("finite strictly increasing context clock required")
@@ -54,7 +57,8 @@ class ActionMeshDecoderAdapter:
         target=(torch.as_tensor(targets,dtype=torch.float32,device=self.device)[None]-low[:,None])/span[:,None]
         with torch.inference_mode(), torch.autocast(device_type=self.device.type,
                 dtype=torch.float16,enabled=self.autocast and self.device.type=="cuda"):
-            displacement=self.decoder(self.latents,self.framestep,source,target,query)
+            options={} if self.step_callback is None else {"step_callback":self.step_callback}
+            displacement=self.decoder(self.latents,self.framestep,source,target,query,**options)
             absolute=self.decoder.apply_displacement(vertex=query[...,:3],displacement=displacement)
         expected=(1,len(targets),len(xyz),3)
         if tuple(absolute.shape)!=expected or not torch.isfinite(absolute).all():

@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "geometry_cli_returncode": 0,
+  "variants_loaded_by_existing_evaluator": 4,
+  "declared_denominator": 4,
+  "evidence": "constructed XYZ+normal fixture; I/O compatibility only",
+  "native_cuda_run": false,
+  "official_quality_metrics_run": false
+}

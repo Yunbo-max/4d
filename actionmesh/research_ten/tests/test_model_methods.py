@@ -150,6 +150,31 @@ class GuidanceTests(unittest.TestCase):
 
 
 class WindowTests(unittest.TestCase):
+    def test_native_length_tail_keeps_every_frame_without_padding(self):
+        calls = []
+        toy = self.callback(calls)
+        def native_shape(indices, known, direction, seed, representation_id):
+            self.assertEqual(len(indices), 16, "native ActionMesh rejects short tails")
+            return toy(indices, known, direction, seed, representation_id)
+        result = rollout_windows(native_shape, np.arange(70.), 16, 4,
+            {0: np.array([0.])}, "same-anchor", future_reliable=np.ones(70, bool),
+            backward_updates=6, max_rollouts=12)
+        self.assertEqual(result["latents"].shape, (70, 1))
+        self.assertEqual(result["forward_rollouts"], 6)
+        self.assertEqual(result["backward_rollouts"], 6)
+        covered = np.unique(np.concatenate([np.asarray(c[0]) for c in calls]))
+        np.testing.assert_array_equal(covered, np.arange(70))
+        self.assertEqual(calls[5][0], tuple(range(54, 70)))
+        self.assertEqual(result["latents"][0, 0], 0.)
+
+    def test_invalid_seed_is_rejected_before_any_rollout(self):
+        calls = []
+        with self.assertRaises(ValueError):
+            rollout_windows(self.callback(calls), np.arange(13.), 4, 1,
+                {0: np.array([0.])}, "id", future_reliable=np.ones(13, bool),
+                seed=-1)
+        self.assertFalse(calls)
+
     def callback(self,records):
         def rollout(indices,known,direction,seed,representation_id):
             records.append((tuple(indices),{k:v.copy() for k,v in known.items()},direction,seed))
