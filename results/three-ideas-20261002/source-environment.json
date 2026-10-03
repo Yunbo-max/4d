@@ -1,0 +1,49 @@
+{
+  "captured_utc": "2026-10-02T15:03:12Z",
+  "source_files": [
+    {
+      "path": "actionmesh/pipeline.py",
+      "sha256": "0934b6801676a9e6f188e5b07450109e0c3359c10fa1230a9b9c69f056fd50f2"
+    },
+    {
+      "path": "actionmesh/scheduler/scheduler.py",
+      "sha256": "a881535cb0c1e155aa8572208f83aa034d31d5e4e3e487d51db9c35f27f1b1ae"
+    },
+    {
+      "path": "actionmesh/scheduler/guidance.py",
+      "sha256": "f164ec67b8c02334e5193ab13998e29cae02f834c88f3df1aedab52e88ee8c87"
+    },
+    {
+      "path": "actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/model/temporal_denoiser.py",
+      "sha256": "0a9984767009135c7b579c2a139e0585eae67a77629379c3d15f3cb0fa82a444"
+    },
+    {
+      "path": "actionmesh/io/mesh_io.py",
+      "sha256": "7188e46e8bf6ee27314498966653e9985cefbb8a91276d368e95f2989669987f"
+    },
+    {
+      "path": "actionmesh/configs/actionmesh.yaml",
+      "sha256": "2c1da517256133af1f986739e32ded0f00a2d58df82d5a338348f75595acccff"
+    },
+    {
+      "path": "actionmesh/configs/actionmesh_lowram.yaml",
+      "sha256": "17a66d65110bda031534aea9e9ef9ff7a7eaf4e49cc3e26550661609f9a1067b"
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 2080 Ti, 22528 MiB, 580.119.02",
+  "disk_available_bytes": 9114886144,
+  "python": "3.12.13",
+  "packages": {
+    "torch": "2.12.1+cu130",
+    "numpy": "1.26.4",
+    "trimesh": "5.1.0",
+    "diffusers": "0.39.0",
+    "transformers": "4.57.6",
+    "hydra-core": "1.3.7",
+    "safetensors": "0.8.0"
+  }
+}

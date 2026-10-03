@@ -1,0 +1,10 @@
+{
+  "official_formula_CD_M_cached": 0.22629764676094055,
+  "shared_alignment_CD4D_cached": 0.11420762781027448,
+  "first_frame_NN_ties_cached": {
+    "pred_to_gt_first_second_distance_ties": 0,
+    "gt_to_pred_first_second_distance_ties": 0,
+    "absolute_tie_tolerance": 1e-12
+  },
+  "scope": "Unchanged cached reference metrics; no recomputation and no algebraic subtraction from auxiliary readouts"
+}

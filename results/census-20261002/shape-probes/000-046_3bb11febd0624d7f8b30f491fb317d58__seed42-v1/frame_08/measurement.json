@@ -1,0 +1,52 @@
+{
+  "frame": 8,
+  "decode_and_mesh_save_seconds": 33.82234562304802,
+  "elapsed_frame_seconds": 34.858706237981096,
+  "stageI_vertices": 2435826,
+  "stageI_faces": 1118728,
+  "stageII_vertices": 19633,
+  "stageII_faces": 39412,
+  "stageI_bounds": [
+    [
+      -0.6265577077865601,
+      -0.9586374163627625,
+      -0.5795908570289612
+    ],
+    [
+      0.6035417914390564,
+      0.9461614489555359,
+      0.6831287145614624
+    ]
+  ],
+  "stageII_bounds": [
+    [
+      -0.6228203177452087,
+      -0.9523043632507324,
+      -0.5813223123550415
+    ],
+    [
+      0.6323845386505127,
+      0.9642540216445923,
+      0.6854852437973022
+    ]
+  ],
+  "samples_per_mesh": 50000,
+  "sample_seed": 20261010,
+  "finite": true,
+  "metric": {
+    "symmetric_mean_unsquared": 0.010853959513473213,
+    "stageI_to_stageII_mean_unsquared": 0.010808739602635979,
+    "stageII_to_stageI_mean_unsquared": 0.010899179424310448,
+    "stageI_to_stageII_p95_unsquared": 0.021995123262614578,
+    "stageII_to_stageI_p95_unsquared": 0.022295008547552814,
+    "units": "Native canonical coordinate units; no scale fitting or ICP",
+    "definition": "0.5 * (mean nearest Euclidean distance A->B + mean nearest Euclidean distance B->A)",
+    "scope": "Monte Carlo surface-set discrepancy, not official ActionBench CD and not material-motion CD-M"
+  },
+  "frame0_calibration": false,
+  "sha256": {
+    "stageI-raw-mesh.npz": "ee367345453338aa4b624573f6986ff4e695e870c64fbc1251757990e9d0e0a1",
+    "stageI-raw.glb": "34877682466e9b6ac8f1d2ebf6dbf231588306b181392547ad28dbe4c0a47428",
+    "surface-samples.npz": "5679bb37c15bc41da05a4627b30f5d46824d9b6d8066ed34263dc8b27009d911"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "frame": 15,
+  "surface_seed": 59,
+  "stageI_aligned_to_gt": {
+    "first_to_second_mean_unsquared": 0.027397005796816802,
+    "second_to_first_mean_unsquared": 0.02923816759283217,
+    "sum_unsquared": 0.05663517338964898,
+    "half_sum_unsquared": 0.02831758669482449,
+    "first_to_second_p95_unsquared": 0.0759974587419321,
+    "second_to_first_p95_unsquared": 0.07770211409665824,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "stageII_aligned_to_gt": {
+    "first_to_second_mean_unsquared": 0.029086497962188013,
+    "second_to_first_mean_unsquared": 0.0325791009724255,
+    "sum_unsquared": 0.061665598934613514,
+    "half_sum_unsquared": 0.030832799467306757,
+    "first_to_second_p95_unsquared": 0.0805165798057106,
+    "second_to_first_p95_unsquared": 0.08798907389703499,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "stageII_minus_stageI_gt_cd": 0.005030425544964537,
+  "stageI_vs_stageII_raw_canonical": {
+    "first_to_second_mean_unsquared": 0.008069917679793781,
+    "second_to_first_mean_unsquared": 0.007881537412954649,
+    "sum_unsquared": 0.01595145509274843,
+    "half_sum_unsquared": 0.007975727546374215,
+    "first_to_second_p95_unsquared": 0.01604592232172149,
+    "second_to_first_p95_unsquared": 0.015401850973559882,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "stageI_vs_stageII_shared_aligned": {
+    "first_to_second_mean_unsquared": 0.008200184151719355,
+    "second_to_first_mean_unsquared": 0.008007901587162932,
+    "sum_unsquared": 0.016208085738882286,
+    "half_sum_unsquared": 0.008104042869441143,
+    "first_to_second_p95_unsquared": 0.016121412967973807,
+    "second_to_first_p95_unsquared": 0.015405038716479086,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "stageI_raw_to_gt_without_alignment": {
+    "first_to_second_mean_unsquared": 0.31592754258659955,
+    "second_to_first_mean_unsquared": 0.33757061539042177,
+    "sum_unsquared": 0.6534981579770214,
+    "half_sum_unsquared": 0.3267490789885107,
+    "first_to_second_p95_unsquared": 0.7454283843662436,
+    "second_to_first_p95_unsquared": 0.7369383473895449,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "stageII_raw_to_gt_without_alignment": {
+    "first_to_second_mean_unsquared": 0.315730401653546,
+    "second_to_first_mean_unsquared": 0.34176854727441613,
+    "sum_unsquared": 0.6574989489279621,
+    "half_sum_unsquared": 0.32874947446398106,
+    "first_to_second_p95_unsquared": 0.7361833538283665,
+    "second_to_first_p95_unsquared": 0.7421190887598772,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "unaligned_gt_warning": "Raw-to-GT values mix coordinate mismatch and geometry; calibration diagnostics only",
+  "official_cd_scalar_crosscheck": {
+    "stageI": 0.05663517338964898,
+    "stageII": 0.061665598934613514
+  },
+  "clouds_sha256": "19886f87a37d755be516216682db284e0220c387268c9288060b8d0932c6da32"
+}

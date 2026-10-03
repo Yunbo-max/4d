@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research_prepare_v1.py",
+    "prepare",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/prepare",
+    "--seed",
+    "42"
+  ],
+  "root": "/root/rivermind-data/actionmesh-repro",
+  "script_sha256": "ce4bc30dc36fd9bd020e44a5d76bb85927124660ebdc2492e80c9b5e99a8c086",
+  "offline": true,
+  "scope": "Exploratory pilot; no formal NaturalGate0 or quality claim"
+}

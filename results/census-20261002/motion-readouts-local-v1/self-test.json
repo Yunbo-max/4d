@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "checks": [
+    "constant anchor offset with matching motion gives zero errors",
+    "static prediction misses linear and accelerating GT",
+    "common constant translation leaves all readouts invariant",
+    "common time-dependent translation preserves errors, not ratios",
+    "crossing wrong-NN counterexample remains nonzero despite semantically matching motion",
+    "zero GT motion yields null ratios and explicit spurious-motion flags",
+    "each query subset acts on its own NN direction"
+  ],
+  "crossing_counterexample": {
+    "correct_map_displacement_error": 0.0,
+    "NN_map_displacement_error": 6.0,
+    "NN_map_velocity_error": 4.0
+  },
+  "scope": "Analytic NumPy fixtures; no model, GT file, CUDA or metric fit",
+  "script_sha256": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028"
+}

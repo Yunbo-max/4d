@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "variant": "closest_surface",
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "solver_qualified": false,
+  "frame_reports": [
+    {
+      "frame": 0,
+      "solver": {
+        "numerically_qualified": true,
+        "bypass": "exact original bytes"
+      },
+      "geometry": {
+        "mean_surface_distance": 0.0001648408226135574,
+        "p95_surface_distance": 0.0005551476423657407,
+        "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+        "max_displacement_over_D": 0.0,
+        "trust_violation_over_D": 0.0,
+        "trust_boundary_fraction": 0.0,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 0,
+        "new_degenerate_faces": 0,
+        "orientation_reversal_count_relative_native": 0,
+        "edge_length_ratio_quantiles_01_50_99": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": true,
+      "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+    },
+    {
+      "frame": 8,
+      "solver": {
+        "numerically_qualified": true
+      },
+      "geometry": {
+        "mean_surface_distance": 8.034844810358754e-09,
+        "p95_surface_distance": 2.1715814464566937e-08,
+        "mean_squared_surface_distance_over_D2": 1.9836297231029333e-17,
+        "max_displacement_over_D": 0.01141292027143904,
+        "trust_violation_over_D": 0.0,
+        "trust_boundary_fraction": 0.0,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 28,
+        "new_degenerate_faces": 28,
+        "orientation_reversal_count_relative_native": 266,
+        "edge_length_ratio_quantiles_01_50_99": [
+          0.5413853411637037,
+          0.9951467169422286,
+          1.8333599752613055
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": false,
+      "frame_artifact_sha256": "0f6c7cac98a578cdccb432361b7c8c3ec5067fe340d7c112f4142599edcdecb3"
+    },
+    {
+      "frame": 15,
+      "solver": {
+        "numerically_qualified": true
+      },
+      "geometry": {
+        "mean_surface_distance": 8.823467682607726e-09,
+        "p95_surface_distance": 2.3316637200570867e-08,
+        "mean_squared_surface_distance_over_D2": 1.7674536149948872e-17,
+        "max_displacement_over_D": 0.01748506020002749,
+        "trust_violation_over_D": 0.0,
+        "trust_boundary_fraction": 0.0,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 80,
+        "new_degenerate_faces": 80,
+        "orientation_reversal_count_relative_native": 563,
+        "edge_length_ratio_quantiles_01_50_99": [
+          0.34317112802583144,
+          0.9919831553628506,
+          2.6752036675597908
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": false,
+      "frame_artifact_sha256": "5147258ca980c5555fe9d95055e2760f460ba12a36c3a20049a57062731d0eb7"
+    }
+  ],
+  "started_utc": "2026-10-02T19:09:22.946732+00:00",
+  "sequence_sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db",
+  "anchor_bitwise_held": true,
+  "vertex_dtype": "float32",
+  "geometry_only": true,
+  "ended_utc": "2026-10-02T19:09:55.928005+00:00",
+  "elapsed_seconds": 32.981070164823905
+}

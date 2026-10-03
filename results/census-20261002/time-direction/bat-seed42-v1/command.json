@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_time_direction.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/bat-seed42-v1",
+    "--max-seconds",
+    "300"
+  ],
+  "implementation_sha256": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d"
+}

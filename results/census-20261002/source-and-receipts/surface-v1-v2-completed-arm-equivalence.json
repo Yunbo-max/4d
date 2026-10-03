@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "label": "mannequin",
+      "arm": "identity",
+      "all_arrays_bitwise_equal": true,
+      "v1_sha256": "82810fa8a789e68786121b6b9b5432029b2964290ed152d808536996d140ab88",
+      "v2_sha256": "82810fa8a789e68786121b6b9b5432029b2964290ed152d808536996d140ab88"
+    },
+    {
+      "label": "mannequin",
+      "arm": "closest_surface",
+      "all_arrays_bitwise_equal": true,
+      "v1_sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db",
+      "v2_sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db"
+    },
+    {
+      "label": "mannequin",
+      "arm": "normal_only",
+      "all_arrays_bitwise_equal": true,
+      "v1_sha256": "e176e969663c403c3758d719da2c8a97b43f9b193ebfce6ddfea98077b239d3f",
+      "v2_sha256": "e176e969663c403c3758d719da2c8a97b43f9b193ebfce6ddfea98077b239d3f"
+    },
+    {
+      "label": "bat",
+      "arm": "identity",
+      "all_arrays_bitwise_equal": true,
+      "v1_sha256": "7ed1b007f216278fa2c4b3d2bc9446044ca8e3ca3afe663f34caf0870ed7bb46",
+      "v2_sha256": "7ed1b007f216278fa2c4b3d2bc9446044ca8e3ca3afe663f34caf0870ed7bb46"
+    },
+    {
+      "label": "bat",
+      "arm": "closest_surface",
+      "all_arrays_bitwise_equal": true,
+      "v1_sha256": "c6db9b43e948630c975fb45f6761158f4edeaf89baa03f5d72c61b171837181d",
+      "v2_sha256": "c6db9b43e948630c975fb45f6761158f4edeaf89baa03f5d72c61b171837181d"
+    },
+    {
+      "label": "bat",
+      "arm": "normal_only",
+      "all_arrays_bitwise_equal": true,
+      "v1_sha256": "e2e51021e0881ef61331bc768a45e9ecf92c3d1e9bee59cbb546ffe68a6dcd8a",
+      "v2_sha256": "e2e51021e0881ef61331bc768a45e9ecf92c3d1e9bee59cbb546ffe68a6dcd8a"
+    }
+  ],
+  "scope": "Full-path equivalence for all previously completed arms; ARAPv1 incomplete, not claimed equivalent output"
+}

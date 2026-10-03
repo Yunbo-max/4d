@@ -1,0 +1,88 @@
+{
+  "per_frame": [
+    {
+      "frame": 0,
+      "cycle_separation_mean": 0.019426633186176056,
+      "fixed_pairing_lower_bound": 0.006955431508741253
+    },
+    {
+      "frame": 1,
+      "cycle_separation_mean": 0.019709695824626637,
+      "fixed_pairing_lower_bound": 0.0070439772025495525
+    },
+    {
+      "frame": 2,
+      "cycle_separation_mean": 0.019964191438800405,
+      "fixed_pairing_lower_bound": 0.007120837695032152
+    },
+    {
+      "frame": 3,
+      "cycle_separation_mean": 0.0200361298120688,
+      "fixed_pairing_lower_bound": 0.007139269293443481
+    },
+    {
+      "frame": 4,
+      "cycle_separation_mean": 0.020445704320753946,
+      "fixed_pairing_lower_bound": 0.007256252297209824
+    },
+    {
+      "frame": 5,
+      "cycle_separation_mean": 0.02158761831814334,
+      "fixed_pairing_lower_bound": 0.007595955322710924
+    },
+    {
+      "frame": 6,
+      "cycle_separation_mean": 0.02280944335039957,
+      "fixed_pairing_lower_bound": 0.007962978809619338
+    },
+    {
+      "frame": 7,
+      "cycle_separation_mean": 0.023867601721639185,
+      "fixed_pairing_lower_bound": 0.00828235550721108
+    },
+    {
+      "frame": 8,
+      "cycle_separation_mean": 0.024822424667917297,
+      "fixed_pairing_lower_bound": 0.008572717176795435
+    },
+    {
+      "frame": 9,
+      "cycle_separation_mean": 0.025682806746985587,
+      "fixed_pairing_lower_bound": 0.008835612723046093
+    },
+    {
+      "frame": 10,
+      "cycle_separation_mean": 0.026532726458889357,
+      "fixed_pairing_lower_bound": 0.009100158867149282
+    },
+    {
+      "frame": 11,
+      "cycle_separation_mean": 0.027295392797045837,
+      "fixed_pairing_lower_bound": 0.009339807984355686
+    },
+    {
+      "frame": 12,
+      "cycle_separation_mean": 0.02780478085438687,
+      "fixed_pairing_lower_bound": 0.009497501418809744
+    },
+    {
+      "frame": 13,
+      "cycle_separation_mean": 0.02801755532982317,
+      "fixed_pairing_lower_bound": 0.009560406798364394
+    },
+    {
+      "frame": 14,
+      "cycle_separation_mean": 0.027915573059891115,
+      "fixed_pairing_lower_bound": 0.00953106110736906
+    },
+    {
+      "frame": 15,
+      "cycle_separation_mean": 0.027426608533140225,
+      "fixed_pairing_lower_bound": 0.009387741655511067
+    }
+  ],
+  "sequence_lower_bound_with_fixed_anchor": 0.011440924649652467,
+  "actual_fixed_anchor_cost": 0.056828160535262344,
+  "cycle_index_mismatch_fraction": 0.80683,
+  "scope": "Conservative lower bound for fixed first-frame assignments; arbitrary disconnected future points allowed. Not all anchor-geometry error and not necessarily attainable by a mesh."
+}

@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-03",
+  "release_url": "https://github.com/Yunbo-max/4d/releases/tag/results-2026-10-03",
+  "scope": "Nine retained raw census experiment archives. Model weights and downloaded source datasets are distributed separately.",
+  "total_bytes": 1395634341,
+  "assets": [
+    {
+      "name": "checkpoint-controls-surface-v1.tar.gz",
+      "size_bytes": 193369849,
+      "sha256": "75d7f5b84bff70a92d44ee15d4f17e8d7a05e1aa19e32e8d12a09afcc1221ede",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-controls-surface-v1.tar.gz"
+    },
+    {
+      "name": "checkpoint-final10-direction-complete.tar.gz",
+      "size_bytes": 88954382,
+      "sha256": "bdc7e1d0e5558e57268e5fe7659635e46045f0342b08af421a01fccdfb3e0ab2",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-final10-direction-complete.tar.gz"
+    },
+    {
+      "name": "checkpoint-first-complete.tar.gz",
+      "size_bytes": 116790,
+      "sha256": "190e83579f6f7c96170bcc2bf2d36868557dd3bb23a0833758573cad8904d444",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-first-complete.tar.gz"
+    },
+    {
+      "name": "checkpoint-first2-full.tar.gz",
+      "size_bytes": 76381626,
+      "sha256": "023f58610613287a8a74e1d28513b4e4dfa4bfe660e06ac989714cc6aaa9bd2d",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-first2-full.tar.gz"
+    },
+    {
+      "name": "checkpoint-motion-final-v1.tar.gz",
+      "size_bytes": 70926031,
+      "sha256": "b16da00fbc6f2a417829591556fbdccc831f1033dfa6b050dc9d9bd5beca06e3",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-motion-final-v1.tar.gz"
+    },
+    {
+      "name": "checkpoint-primary8.tar.gz",
+      "size_bytes": 228581744,
+      "sha256": "7f60b5da4ef0d491ba7796cdcac049c80b6ac811780df83023f960be4ae8f739",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-primary8.tar.gz"
+    },
+    {
+      "name": "checkpoint-stage-mannequin.tar.gz",
+      "size_bytes": 62412252,
+      "sha256": "e09b11cc8fba7611ee7971d3191a315538ac1e5bffa28a90dbb92cd2921bb21c",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-stage-mannequin.tar.gz"
+    },
+    {
+      "name": "checkpoint-stage8-ranking-v1.tar.gz",
+      "size_bytes": 588497346,
+      "sha256": "358870d22e2adf223fd9b1367ddc4dbd14ec76389def998030d48044a1d1b8c2",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-stage8-ranking-v1.tar.gz"
+    },
+    {
+      "name": "checkpoint-surface-v2-direction-v1.tar.gz",
+      "size_bytes": 86394321,
+      "sha256": "4452641303d7ab64bfff4ee2ff6913f69a8686e133c8d525f08cd7e199dfa215",
+      "download_url": "https://github.com/Yunbo-max/4d/releases/download/results-2026-10-03/checkpoint-surface-v2-direction-v1.tar.gz"
+    }
+  ]
+}

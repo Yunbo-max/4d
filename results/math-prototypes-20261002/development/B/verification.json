@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "evidence_scope": "constructed numerical controls; not 4D efficacy",
+  "timestamp_utc": "2026-10-02T22:29:51.873582+00:00",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "numpy": "2.5.1",
+  "platform": "macOS-14.2-arm64-arm-64bit-Mach-O",
+  "source_sha256": {
+    "research_math/controllability.py": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc",
+    "research_math/tests/test_controllability.py": "b6fac43458906b8142553e84fe7792c4c554685a81934e3988a8b567e2f8b536"
+  },
+  "observed_verification": [
+    {
+      "command": "python3 -m unittest discover -s research_math/tests -p test_controllability.py -v",
+      "stage": "before implementation",
+      "exit_code": 1,
+      "tests": 15,
+      "failures": 15,
+      "reason": "setUp explicitly failed because B implementation was absent"
+    },
+    {
+      "command": "python3 -m unittest discover -s research_math/tests -p test_controllability.py -v",
+      "stage": "after implementation",
+      "exit_code": 0,
+      "tests": 15,
+      "failures": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s research_math/tests -v",
+      "stage": "complete currently available math-prototype suite",
+      "exit_code": 0,
+      "tests": 40,
+      "failures": 0
+    }
+  ],
+  "independent_review": {
+    "agent": "/root/census_evaluator",
+    "scope": "read-only linear-algebra source review",
+    "result": "No blocking issue identified; no tests rerun or edits."
+  },
+  "demo": {
+    "evidence_scope": "constructed numerical controls; not 4D efficacy",
+    "missing_direction": {
+      "model_residual_squared": 1.0,
+      "output_residual_squared": 0.0,
+      "nested_gap": 1.0,
+      "explanation": "model exposes e1 only; action permits e1 and e2; requested edit is e2"
+    },
+    "trust_budget": {
+      "unbounded_residual_squared": 0.0,
+      "bounded_residual_squared": 0.9980010000000014,
+      "unbounded_output_step_norm": 1000.0,
+      "bounded_output_step_norm": 0.9999999999992946,
+      "explanation": "gain .001 needs displacement 1000 for unit edit; budget is 1"
+    }
+  },
+  "limitations": [
+    "Dense local equality-constrained observable Jacobians; unilateral inequality active sets are not implemented.",
+    "SVD truncation and finite differences restrict measured control space; not full-model impossibility.",
+    "Finite nonlinear acceptance depends on caller contract/retraction, not the linearized score.",
+    "No GPU, SSH, network, downloads, or generated 4D editing result in this development evidence.",
+    "Real decoder differentiation memory and <=22 GiB feasibility are not established by these tests."
+  ]
+}

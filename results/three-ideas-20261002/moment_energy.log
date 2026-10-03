@@ -1,0 +1,21 @@
+/root/rivermind-data/actionmesh-repro/repo/actionmesh/utils.py:56: Hydra14MigrationWarning: 
+version_base="1.1" selects Hydra 1.1 compatibility behavior.
+Hydra 1.4 will remove this compatibility behavior.
+Before upgrading to Hydra 1.4, set version_base="1.3" and test your application.
+See https://hydra.cc/docs/upgrades/1.3_to_1.4/prepare_for_1_4/ for preparation instructions.
+  with initialize_config_dir(
+/root/rivermind-data/actionmesh-repro/inference-env/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'actionmesh_lowram': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+Loading weights from local directory
+PROBE step=21/30 mode=moment-energy change_rms=0.0910784
+PROBE step=22/30 mode=moment-energy change_rms=0.116804
+PROBE step=23/30 mode=moment-energy change_rms=0.138743
+PROBE step=24/30 mode=moment-energy change_rms=0.144848
+PROBE step=25/30 mode=moment-energy change_rms=0.12876
+PROBE step=26/30 mode=moment-energy change_rms=0.110393
+PROBE step=27/30 mode=moment-energy change_rms=0.0985555
+PROBE step=28/30 mode=moment-energy change_rms=0.0962533
+PROBE step=29/30 mode=moment-energy change_rms=0.0845319
+PROBE step=30/30 mode=moment-energy change_rms=0.0809554
+Loading weights from local directory
+Temporal 3D Decoding (Stage II):   0%|          | 0/15 [00:00<?, ?it/s]Temporal 3D Decoding (Stage II):   7%|▋         | 1/15 [00:02<00:39,  2.82s/it]Temporal 3D Decoding (Stage II):  20%|██        | 3/15 [00:04<00:18,  1.52s/it]Temporal 3D Decoding (Stage II):  27%|██▋       | 4/15 [00:08<00:23,  2.10s/it]Temporal 3D Decoding (Stage II):  33%|███▎      | 5/15 [00:11<00:24,  2.46s/it]Temporal 3D Decoding (Stage II):  40%|████      | 6/15 [00:14<00:24,  2.69s/it]Temporal 3D Decoding (Stage II):  47%|████▋     | 7/15 [00:17<00:22,  2.85s/it]Temporal 3D Decoding (Stage II):  53%|█████▎    | 8/15 [00:20<00:20,  2.95s/it]Temporal 3D Decoding (Stage II):  60%|██████    | 9/15 [00:24<00:18,  3.03s/it]Temporal 3D Decoding (Stage II):  67%|██████▋   | 10/15 [00:27<00:15,  3.08s/it]Temporal 3D Decoding (Stage II):  73%|███████▎  | 11/15 [00:30<00:12,  3.11s/it]Temporal 3D Decoding (Stage II):  80%|████████  | 12/15 [00:33<00:09,  3.14s/it]Temporal 3D Decoding (Stage II):  87%|████████▋ | 13/15 [00:36<00:06,  3.15s/it]Temporal 3D Decoding (Stage II):  93%|█████████▎| 14/15 [00:40<00:03,  3.16s/it]Temporal 3D Decoding (Stage II): 100%|██████████| 15/15 [00:43<00:00,  3.17s/it]Temporal 3D Decoding (Stage II): 100%|██████████| 15/15 [00:43<00:00,  2.88s/it]

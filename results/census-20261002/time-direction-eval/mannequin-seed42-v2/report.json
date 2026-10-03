@@ -1,0 +1,2451 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "started_utc": "2026-10-02T19:37:21.802495+00:00",
+  "arms": {
+    "forward": {
+      "status": "evaluated_from_bitwise_native_cache",
+      "source_report_status": "completed",
+      "independent_discrepancy": {
+        "bitwise_equal": true,
+        "moving_rms_xyz_over_D": 0.0,
+        "moving_max_abs_coordinate_over_D": 0.0
+      },
+      "metrics": {
+        "cd_4d_shared_alignment": 0.0700466637999096,
+        "cd_motion": 0.12774424254894257,
+        "per_frame_shape": [
+          {
+            "frame": 0,
+            "independent_sample_seed": 44,
+            "official_framewise_cd_shared_alignment": 0.05667908281266629,
+            "material_cloud_query10k_cd_native": 0.056928178140878964,
+            "material_cloud_query10k_cd_negative": 0.056928178140878964,
+            "material_cloud_query10k_cd_positive": 0.056928178140878964,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.056828160535262344,
+            "fixed_assignment_minus_full_query_shape_gap": 0.0
+          },
+          {
+            "frame": 1,
+            "independent_sample_seed": 45,
+            "official_framewise_cd_shared_alignment": 0.05655395059608382,
+            "material_cloud_query10k_cd_native": 0.05657842280108619,
+            "material_cloud_query10k_cd_negative": 0.05657842280108619,
+            "material_cloud_query10k_cd_positive": 0.05657842280108619,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.056494535263653944,
+            "fixed_assignment_minus_full_query_shape_gap": 0.012186210943694237
+          },
+          {
+            "frame": 2,
+            "independent_sample_seed": 46,
+            "official_framewise_cd_shared_alignment": 0.05827842414029324,
+            "material_cloud_query10k_cd_native": 0.058471761686373136,
+            "material_cloud_query10k_cd_negative": 0.058471761686373136,
+            "material_cloud_query10k_cd_positive": 0.058471761686373136,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.05818074883483193,
+            "fixed_assignment_minus_full_query_shape_gap": 0.024598537811713186
+          },
+          {
+            "frame": 3,
+            "independent_sample_seed": 47,
+            "official_framewise_cd_shared_alignment": 0.05920616411596566,
+            "material_cloud_query10k_cd_native": 0.05971612528252849,
+            "material_cloud_query10k_cd_negative": 0.05971612528252849,
+            "material_cloud_query10k_cd_positive": 0.05971612528252849,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.059387330810603906,
+            "fixed_assignment_minus_full_query_shape_gap": 0.031022944939897545
+          },
+          {
+            "frame": 4,
+            "independent_sample_seed": 48,
+            "official_framewise_cd_shared_alignment": 0.06272800120765874,
+            "material_cloud_query10k_cd_native": 0.06283378819300943,
+            "material_cloud_query10k_cd_negative": 0.06283378819300944,
+            "material_cloud_query10k_cd_positive": 0.06283378819300943,
+            "max_control_shape_cd_difference": 1.3877787807814457e-17,
+            "material_cloud_full100k_query_cd": 0.06250434670406588,
+            "fixed_assignment_minus_full_query_shape_gap": 0.036640293113668176
+          },
+          {
+            "frame": 5,
+            "independent_sample_seed": 49,
+            "official_framewise_cd_shared_alignment": 0.06602306166759772,
+            "material_cloud_query10k_cd_native": 0.06653983699337883,
+            "material_cloud_query10k_cd_negative": 0.06653983699337883,
+            "material_cloud_query10k_cd_positive": 0.06653983699337881,
+            "max_control_shape_cd_difference": 1.3877787807814457e-17,
+            "material_cloud_full100k_query_cd": 0.06600859390535384,
+            "fixed_assignment_minus_full_query_shape_gap": 0.044320195429258566
+          },
+          {
+            "frame": 6,
+            "independent_sample_seed": 50,
+            "official_framewise_cd_shared_alignment": 0.0691952810009914,
+            "material_cloud_query10k_cd_native": 0.06975719305084124,
+            "material_cloud_query10k_cd_negative": 0.06975719305084124,
+            "material_cloud_query10k_cd_positive": 0.06975719305084124,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.06896893871431731,
+            "fixed_assignment_minus_full_query_shape_gap": 0.052415928349585514
+          },
+          {
+            "frame": 7,
+            "independent_sample_seed": 51,
+            "official_framewise_cd_shared_alignment": 0.07033420392235387,
+            "material_cloud_query10k_cd_native": 0.07142573343362207,
+            "material_cloud_query10k_cd_negative": 0.07142573343362207,
+            "material_cloud_query10k_cd_positive": 0.07142573343362207,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.07050929130995148,
+            "fixed_assignment_minus_full_query_shape_gap": 0.05996374573776986
+          },
+          {
+            "frame": 8,
+            "independent_sample_seed": 52,
+            "official_framewise_cd_shared_alignment": 0.07010537720774633,
+            "material_cloud_query10k_cd_native": 0.0709659321007224,
+            "material_cloud_query10k_cd_negative": 0.0709659321007224,
+            "material_cloud_query10k_cd_positive": 0.0709659321007224,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.07002362235142767,
+            "fixed_assignment_minus_full_query_shape_gap": 0.06388001890771164
+          },
+          {
+            "frame": 9,
+            "independent_sample_seed": 53,
+            "official_framewise_cd_shared_alignment": 0.07125969568859669,
+            "material_cloud_query10k_cd_native": 0.07211489844901109,
+            "material_cloud_query10k_cd_negative": 0.07211489844901109,
+            "material_cloud_query10k_cd_positive": 0.07211489844901109,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.07133766904192942,
+            "fixed_assignment_minus_full_query_shape_gap": 0.0679680647032557
+          },
+          {
+            "frame": 10,
+            "independent_sample_seed": 54,
+            "official_framewise_cd_shared_alignment": 0.07353886565577816,
+            "material_cloud_query10k_cd_native": 0.07370389684573411,
+            "material_cloud_query10k_cd_negative": 0.07370389684573411,
+            "material_cloud_query10k_cd_positive": 0.07370389684573411,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.0732320015166439,
+            "fixed_assignment_minus_full_query_shape_gap": 0.07518117894272679
+          },
+          {
+            "frame": 11,
+            "independent_sample_seed": 55,
+            "official_framewise_cd_shared_alignment": 0.07458897786050514,
+            "material_cloud_query10k_cd_native": 0.07508850446746104,
+            "material_cloud_query10k_cd_negative": 0.07508850446746104,
+            "material_cloud_query10k_cd_positive": 0.07508850446746103,
+            "max_control_shape_cd_difference": 1.3877787807814457e-17,
+            "material_cloud_full100k_query_cd": 0.07474677165727321,
+            "fixed_assignment_minus_full_query_shape_gap": 0.08434932002141778
+          },
+          {
+            "frame": 12,
+            "independent_sample_seed": 56,
+            "official_framewise_cd_shared_alignment": 0.07740917901707896,
+            "material_cloud_query10k_cd_native": 0.07667222844726237,
+            "material_cloud_query10k_cd_negative": 0.07667222844726235,
+            "material_cloud_query10k_cd_positive": 0.07667222844726235,
+            "max_control_shape_cd_difference": 2.7755575615628914e-17,
+            "material_cloud_full100k_query_cd": 0.07635959660609651,
+            "fixed_assignment_minus_full_query_shape_gap": 0.09165600674117863
+          },
+          {
+            "frame": 13,
+            "independent_sample_seed": 57,
+            "official_framewise_cd_shared_alignment": 0.08193490442245943,
+            "material_cloud_query10k_cd_native": 0.08127964597484175,
+            "material_cloud_query10k_cd_negative": 0.08127964597484175,
+            "material_cloud_query10k_cd_positive": 0.08127964597484175,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.08090395979314813,
+            "fixed_assignment_minus_full_query_shape_gap": 0.09523397773548181
+          },
+          {
+            "frame": 14,
+            "independent_sample_seed": 58,
+            "official_framewise_cd_shared_alignment": 0.085915059209487,
+            "material_cloud_query10k_cd_native": 0.08542857315505634,
+            "material_cloud_query10k_cd_negative": 0.08542857315505634,
+            "material_cloud_query10k_cd_positive": 0.08542857315505634,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.08494070024401082,
+            "fixed_assignment_minus_full_query_shape_gap": 0.09631451779971731
+          },
+          {
+            "frame": 15,
+            "independent_sample_seed": 59,
+            "official_framewise_cd_shared_alignment": 0.0869963922732912,
+            "material_cloud_query10k_cd_native": 0.08721692062404829,
+            "material_cloud_query10k_cd_negative": 0.08721692062404829,
+            "material_cloud_query10k_cd_positive": 0.08721692062404829,
+            "max_control_shape_cd_difference": 0.0,
+            "material_cloud_full100k_query_cd": 0.08669919758283268,
+            "fixed_assignment_minus_full_query_shape_gap": 0.09105161775752951
+          }
+        ],
+        "per_frame_motion": [
+          {
+            "frame": 0,
+            "pred_to_gt_fixed_nn": 0.02681452543634781,
+            "gt_to_pred_fixed_nn": 0.030013635098914533,
+            "sum_unsquared": 0.056828160535262344
+          },
+          {
+            "frame": 1,
+            "pred_to_gt_fixed_nn": 0.03335967063127387,
+            "gt_to_pred_fixed_nn": 0.035321075576074314,
+            "sum_unsquared": 0.06868074620734818
+          },
+          {
+            "frame": 2,
+            "pred_to_gt_fixed_nn": 0.041136452370818144,
+            "gt_to_pred_fixed_nn": 0.04164283427572697,
+            "sum_unsquared": 0.08277928664654512
+          },
+          {
+            "frame": 3,
+            "pred_to_gt_fixed_nn": 0.045455058227918996,
+            "gt_to_pred_fixed_nn": 0.04495521752258246,
+            "sum_unsquared": 0.09041027575050145
+          },
+          {
+            "frame": 4,
+            "pred_to_gt_fixed_nn": 0.05012469600954405,
+            "gt_to_pred_fixed_nn": 0.04901994380819,
+            "sum_unsquared": 0.09914463981773405
+          },
+          {
+            "frame": 5,
+            "pred_to_gt_fixed_nn": 0.05553688000394005,
+            "gt_to_pred_fixed_nn": 0.05479190933067235,
+            "sum_unsquared": 0.1103287893346124
+          },
+          {
+            "frame": 6,
+            "pred_to_gt_fixed_nn": 0.060858249217676665,
+            "gt_to_pred_fixed_nn": 0.060526617846226156,
+            "sum_unsquared": 0.12138486706390282
+          },
+          {
+            "frame": 7,
+            "pred_to_gt_fixed_nn": 0.0650750421116766,
+            "gt_to_pred_fixed_nn": 0.06539799493604473,
+            "sum_unsquared": 0.13047303704772134
+          },
+          {
+            "frame": 8,
+            "pred_to_gt_fixed_nn": 0.06683041592156518,
+            "gt_to_pred_fixed_nn": 0.06707322533757414,
+            "sum_unsquared": 0.1339036412591393
+          },
+          {
+            "frame": 9,
+            "pred_to_gt_fixed_nn": 0.0694970377991624,
+            "gt_to_pred_fixed_nn": 0.06980869594602272,
+            "sum_unsquared": 0.13930573374518512
+          },
+          {
+            "frame": 10,
+            "pred_to_gt_fixed_nn": 0.07353979748711645,
+            "gt_to_pred_fixed_nn": 0.07487338297225422,
+            "sum_unsquared": 0.14841318045937069
+          },
+          {
+            "frame": 11,
+            "pred_to_gt_fixed_nn": 0.07876244435968048,
+            "gt_to_pred_fixed_nn": 0.0803336473190105,
+            "sum_unsquared": 0.159096091678691
+          },
+          {
+            "frame": 12,
+            "pred_to_gt_fixed_nn": 0.08331002594295729,
+            "gt_to_pred_fixed_nn": 0.08470557740431785,
+            "sum_unsquared": 0.16801560334727514
+          },
+          {
+            "frame": 13,
+            "pred_to_gt_fixed_nn": 0.08751554995199409,
+            "gt_to_pred_fixed_nn": 0.08862238757663583,
+            "sum_unsquared": 0.17613793752862994
+          },
+          {
+            "frame": 14,
+            "pred_to_gt_fixed_nn": 0.09011000779476364,
+            "gt_to_pred_fixed_nn": 0.0911452102489645,
+            "sum_unsquared": 0.18125521804372813
+          },
+          {
+            "frame": 15,
+            "pred_to_gt_fixed_nn": 0.08852601471546828,
+            "gt_to_pred_fixed_nn": 0.0892248006248939,
+            "sum_unsquared": 0.1777508153403622
+          }
+        ],
+        "trajectory_amplitude": [
+          {
+            "frame": 0,
+            "mean_displacement_from_frame0": 0.0,
+            "mean_step_displacement": 0.0
+          },
+          {
+            "frame": 1,
+            "mean_displacement_from_frame0": 0.021868338063410955,
+            "mean_step_displacement": 0.021868338063410955
+          },
+          {
+            "frame": 2,
+            "mean_displacement_from_frame0": 0.044301262919001765,
+            "mean_step_displacement": 0.024304833247191977
+          },
+          {
+            "frame": 3,
+            "mean_displacement_from_frame0": 0.0670118476608521,
+            "mean_step_displacement": 0.02649044840277682
+          },
+          {
+            "frame": 4,
+            "mean_displacement_from_frame0": 0.09254586074826715,
+            "mean_step_displacement": 0.030090329047182982
+          },
+          {
+            "frame": 5,
+            "mean_displacement_from_frame0": 0.11734245872144651,
+            "mean_step_displacement": 0.029558027763623203
+          },
+          {
+            "frame": 6,
+            "mean_displacement_from_frame0": 0.13978354309955776,
+            "mean_step_displacement": 0.030036945301061473
+          },
+          {
+            "frame": 7,
+            "mean_displacement_from_frame0": 0.15814107505569144,
+            "mean_step_displacement": 0.03148690430158475
+          },
+          {
+            "frame": 8,
+            "mean_displacement_from_frame0": 0.175451262948672,
+            "mean_step_displacement": 0.037321271332608784
+          },
+          {
+            "frame": 9,
+            "mean_displacement_from_frame0": 0.1930498695233855,
+            "mean_step_displacement": 0.042042174229086265
+          },
+          {
+            "frame": 10,
+            "mean_displacement_from_frame0": 0.21061029983630014,
+            "mean_step_displacement": 0.042697303649164686
+          },
+          {
+            "frame": 11,
+            "mean_displacement_from_frame0": 0.23248367296406705,
+            "mean_step_displacement": 0.042896138666197674
+          },
+          {
+            "frame": 12,
+            "mean_displacement_from_frame0": 0.256445565708209,
+            "mean_step_displacement": 0.0378037753709002
+          },
+          {
+            "frame": 13,
+            "mean_displacement_from_frame0": 0.27765486081265656,
+            "mean_step_displacement": 0.031642323251811315
+          },
+          {
+            "frame": 14,
+            "mean_displacement_from_frame0": 0.29513645847815556,
+            "mean_step_displacement": 0.03189937483123655
+          },
+          {
+            "frame": 15,
+            "mean_displacement_from_frame0": 0.30735311874689486,
+            "mean_step_displacement": 0.034182514371567774
+          }
+        ],
+        "normal_consistency": [
+          {
+            "frame": 0,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8198371710513935,
+              "mean_signed_cosine": 0.7157609184188526,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8253767072913293,
+              "mean_signed_cosine": 0.7592399056136977,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8226069391713614,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 1,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8284589702432071,
+              "mean_signed_cosine": 0.7735541145301971,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8331107166168839,
+              "mean_signed_cosine": 0.7808191094509978,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8307848434300455,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 2,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8358105478036385,
+              "mean_signed_cosine": 0.791248434527883,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8352931846794219,
+              "mean_signed_cosine": 0.7888678991647127,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8355518662415302,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 3,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8319861587264128,
+              "mean_signed_cosine": 0.7761194052825435,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8360268471787012,
+              "mean_signed_cosine": 0.783558769423975,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.834006502952557,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 4,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.819433595069323,
+              "mean_signed_cosine": 0.7462160168633781,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8290077386966577,
+              "mean_signed_cosine": 0.76481616015786,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8242206668829903,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 5,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8154154354013624,
+              "mean_signed_cosine": 0.7497898773638103,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8312176056532844,
+              "mean_signed_cosine": 0.7731049845784727,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8233165205273234,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 6,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8097336046488035,
+              "mean_signed_cosine": 0.7343466164771802,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8195308291672829,
+              "mean_signed_cosine": 0.758688894307072,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8146322169080432,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 7,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8156904095503678,
+              "mean_signed_cosine": 0.7447562984381543,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8126548549545595,
+              "mean_signed_cosine": 0.7404311717029285,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8141726322524636,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 8,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8135110481113079,
+              "mean_signed_cosine": 0.7464918958897644,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8095061210081206,
+              "mean_signed_cosine": 0.7340678932516945,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8115085845597143,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 9,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.803937128964378,
+              "mean_signed_cosine": 0.7360634842038231,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8015057120746412,
+              "mean_signed_cosine": 0.7237008271587694,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8027214205195096,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 10,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.790640398524331,
+              "mean_signed_cosine": 0.7074652548162156,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7918380512161427,
+              "mean_signed_cosine": 0.7004773412867328,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7912392248702369,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 11,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7902537738492867,
+              "mean_signed_cosine": 0.6935719319005895,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7827836153120099,
+              "mean_signed_cosine": 0.6896782414797519,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7865186945806484,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 12,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7795850133777324,
+              "mean_signed_cosine": 0.6721157155784802,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7722043849810363,
+              "mean_signed_cosine": 0.6758426623400735,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7758946991793844,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 13,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7758176726089683,
+              "mean_signed_cosine": 0.6573601341248041,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7638170264662878,
+              "mean_signed_cosine": 0.6644906156394254,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.769817349537628,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 14,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7707512430102657,
+              "mean_signed_cosine": 0.6401868850403083,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7562924859625489,
+              "mean_signed_cosine": 0.6507541675034512,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7635218644864072,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 15,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7659845683825801,
+              "mean_signed_cosine": 0.6385034842331562,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7491828562332931,
+              "mean_signed_cosine": 0.646623770917102,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7575837123079365,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          }
+        ],
+        "geometry": {
+          "frames": [
+            {
+              "frame": 0,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.285239569658346,
+              "minimum_triangle_area": 1.785098291870512e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 1,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2428667689782054,
+              "minimum_triangle_area": 1.7568064587712528e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 2,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2342704888720775,
+              "minimum_triangle_area": 8.62011937865323e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 3,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.224991074695897,
+              "minimum_triangle_area": 1.4637841715528787e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 4,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2110594327126476,
+              "minimum_triangle_area": 1.0121620238792673e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 5,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.198487922665083,
+              "minimum_triangle_area": 2.3849662260116605e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 6,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1820655653903263,
+              "minimum_triangle_area": 2.460223329790211e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 7,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1548706301975913,
+              "minimum_triangle_area": 2.787913174246966e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 8,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1482211012684966,
+              "minimum_triangle_area": 1.827696226860729e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 9,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1680151127507044,
+              "minimum_triangle_area": 9.570892643929676e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 10,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1879438841565486,
+              "minimum_triangle_area": 8.337274913149254e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 11,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1982055834382668,
+              "minimum_triangle_area": 2.2517122227051825e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 12,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2164182748706756,
+              "minimum_triangle_area": 1.1680428588339838e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 13,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.222748048087273,
+              "minimum_triangle_area": 1.4833321328579565e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 14,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.226052440000051,
+              "minimum_triangle_area": 8.37335267979627e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 15,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2331671157085466,
+              "minimum_triangle_area": 4.9376195089960846e-08,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            }
+          ],
+          "normal_comparison": "Same physical frame and fixed face IDs vs native; orientation change is not a claim of triangle inversion/self-intersection",
+          "degeneration_definition": "Twice triangle area <=1e-12 times fixed aligned-anchor diagonal squared"
+        },
+        "core_metrics_reused": true,
+        "native_cloud_source": "cached_cloud"
+      },
+      "summary": {
+        "cd4d": 0.0700466637999096,
+        "cd_motion": 0.12774424254894257,
+        "mean_normal_absolute_cosine": 0.8036311086504863,
+        "normal_valid_frames": 16,
+        "mean_displacement_from_frame0": 0.16182371845541052,
+        "endpoint_displacement_from_frame0": 0.30735311874689486,
+        "mean_step_displacement_frames1_to15": 0.032954713455293695,
+        "mean_near_degenerate_face_fraction": 0.0,
+        "maximum_near_degenerate_face_count": 0
+      },
+      "delta_cd4d_vs_native": 0.0,
+      "delta_cdm_vs_native": 0.0
+    },
+    "row_permutation": {
+      "status": "evaluated",
+      "source_report_status": "completed",
+      "independent_discrepancy": {
+        "bitwise_equal": false,
+        "moving_rms_xyz_over_D": 5.50931094961733e-06,
+        "moving_max_abs_coordinate_over_D": 0.00014361829934697462
+      },
+      "metrics": {
+        "cd_4d_shared_alignment": 0.07002011734117648,
+        "cd_motion": 0.1277424395084381,
+        "per_frame_shape": [
+          {
+            "frame": 0,
+            "sampling_seed": 44,
+            "cd4d_contribution": 0.05667908281266629,
+            "delta_vs_native": 0.0
+          },
+          {
+            "frame": 1,
+            "sampling_seed": 45,
+            "cd4d_contribution": 0.05660346247236618,
+            "delta_vs_native": 4.9511876282361256e-05
+          },
+          {
+            "frame": 2,
+            "sampling_seed": 46,
+            "cd4d_contribution": 0.05829592427874132,
+            "delta_vs_native": 1.7500138448083014e-05
+          },
+          {
+            "frame": 3,
+            "sampling_seed": 47,
+            "cd4d_contribution": 0.0591055084909677,
+            "delta_vs_native": -0.00010065562499796121
+          },
+          {
+            "frame": 4,
+            "sampling_seed": 48,
+            "cd4d_contribution": 0.06277519078874874,
+            "delta_vs_native": 4.71895810899986e-05
+          },
+          {
+            "frame": 5,
+            "sampling_seed": 49,
+            "cd4d_contribution": 0.06593739630363915,
+            "delta_vs_native": -8.566536395857027e-05
+          },
+          {
+            "frame": 6,
+            "sampling_seed": 50,
+            "cd4d_contribution": 0.06923519710937251,
+            "delta_vs_native": 3.991610838111059e-05
+          },
+          {
+            "frame": 7,
+            "sampling_seed": 51,
+            "cd4d_contribution": 0.07042621279426219,
+            "delta_vs_native": 9.200887190831397e-05
+          },
+          {
+            "frame": 8,
+            "sampling_seed": 52,
+            "cd4d_contribution": 0.07018031993156398,
+            "delta_vs_native": 7.49427238176531e-05
+          },
+          {
+            "frame": 9,
+            "sampling_seed": 53,
+            "cd4d_contribution": 0.07118314055503389,
+            "delta_vs_native": -7.655513356280563e-05
+          },
+          {
+            "frame": 10,
+            "sampling_seed": 54,
+            "cd4d_contribution": 0.07362674810960645,
+            "delta_vs_native": 8.788245382829185e-05
+          },
+          {
+            "frame": 11,
+            "sampling_seed": 55,
+            "cd4d_contribution": 0.07468320144084095,
+            "delta_vs_native": 9.422358033581157e-05
+          },
+          {
+            "frame": 12,
+            "sampling_seed": 56,
+            "cd4d_contribution": 0.07730402053919122,
+            "delta_vs_native": -0.00010515847788773736
+          },
+          {
+            "frame": 13,
+            "sampling_seed": 57,
+            "cd4d_contribution": 0.08167384549255831,
+            "delta_vs_native": -0.0002610589299011229
+          },
+          {
+            "frame": 14,
+            "sampling_seed": 58,
+            "cd4d_contribution": 0.08577309102319962,
+            "delta_vs_native": -0.00014196818628738062
+          },
+          {
+            "frame": 15,
+            "sampling_seed": 59,
+            "cd4d_contribution": 0.08683953531606521,
+            "delta_vs_native": -0.0001568569572259898
+          }
+        ],
+        "per_frame_motion": [
+          {
+            "frame": 0,
+            "pred_to_gt_fixed_nn": 0.02681452543634781,
+            "gt_to_pred_fixed_nn": 0.030013635098914533,
+            "sum_unsquared": 0.056828160535262344
+          },
+          {
+            "frame": 1,
+            "pred_to_gt_fixed_nn": 0.03335978561371728,
+            "gt_to_pred_fixed_nn": 0.03532013435922172,
+            "sum_unsquared": 0.068679919972939
+          },
+          {
+            "frame": 2,
+            "pred_to_gt_fixed_nn": 0.04113699051077126,
+            "gt_to_pred_fixed_nn": 0.04164345352318743,
+            "sum_unsquared": 0.08278044403395868
+          },
+          {
+            "frame": 3,
+            "pred_to_gt_fixed_nn": 0.0454546789482115,
+            "gt_to_pred_fixed_nn": 0.0449547366382056,
+            "sum_unsquared": 0.0904094155864171
+          },
+          {
+            "frame": 4,
+            "pred_to_gt_fixed_nn": 0.05012310407472203,
+            "gt_to_pred_fixed_nn": 0.049017943037504876,
+            "sum_unsquared": 0.0991410471122269
+          },
+          {
+            "frame": 5,
+            "pred_to_gt_fixed_nn": 0.055535755194173836,
+            "gt_to_pred_fixed_nn": 0.054791228697428626,
+            "sum_unsquared": 0.11032698389160246
+          },
+          {
+            "frame": 6,
+            "pred_to_gt_fixed_nn": 0.060857797467022794,
+            "gt_to_pred_fixed_nn": 0.06052679633810505,
+            "sum_unsquared": 0.12138459380512784
+          },
+          {
+            "frame": 7,
+            "pred_to_gt_fixed_nn": 0.06507305796072489,
+            "gt_to_pred_fixed_nn": 0.06539717079480074,
+            "sum_unsquared": 0.13047022875552564
+          },
+          {
+            "frame": 8,
+            "pred_to_gt_fixed_nn": 0.06682953872734876,
+            "gt_to_pred_fixed_nn": 0.06707273693874319,
+            "sum_unsquared": 0.13390227566609195
+          },
+          {
+            "frame": 9,
+            "pred_to_gt_fixed_nn": 0.06949432333789794,
+            "gt_to_pred_fixed_nn": 0.06980691154216236,
+            "sum_unsquared": 0.1393012348800603
+          },
+          {
+            "frame": 10,
+            "pred_to_gt_fixed_nn": 0.07353991175259791,
+            "gt_to_pred_fixed_nn": 0.07487330200819399,
+            "sum_unsquared": 0.14841321376079192
+          },
+          {
+            "frame": 11,
+            "pred_to_gt_fixed_nn": 0.07875957310630571,
+            "gt_to_pred_fixed_nn": 0.08033112954681647,
+            "sum_unsquared": 0.1590907026531222
+          },
+          {
+            "frame": 12,
+            "pred_to_gt_fixed_nn": 0.08330840009182161,
+            "gt_to_pred_fixed_nn": 0.08470435144133284,
+            "sum_unsquared": 0.16801275153315445
+          },
+          {
+            "frame": 13,
+            "pred_to_gt_fixed_nn": 0.08751182473330961,
+            "gt_to_pred_fixed_nn": 0.08861962880954588,
+            "sum_unsquared": 0.17613145354285548
+          },
+          {
+            "frame": 14,
+            "pred_to_gt_fixed_nn": 0.09010811905294708,
+            "gt_to_pred_fixed_nn": 0.09114275483381577,
+            "sum_unsquared": 0.18125087388676286
+          },
+          {
+            "frame": 15,
+            "pred_to_gt_fixed_nn": 0.0885277925061426,
+            "gt_to_pred_fixed_nn": 0.08922788055676234,
+            "sum_unsquared": 0.17775567306290493
+          }
+        ],
+        "trajectory_amplitude": [
+          {
+            "frame": 0,
+            "mean_displacement_from_frame0": 0.0,
+            "mean_step_displacement": 0.0
+          },
+          {
+            "frame": 1,
+            "mean_displacement_from_frame0": 0.021859160759895704,
+            "mean_step_displacement": 0.021859160759895704
+          },
+          {
+            "frame": 2,
+            "mean_displacement_from_frame0": 0.044296944262027564,
+            "mean_step_displacement": 0.02431080992448393
+          },
+          {
+            "frame": 3,
+            "mean_displacement_from_frame0": 0.06700979936765702,
+            "mean_step_displacement": 0.0264937237714336
+          },
+          {
+            "frame": 4,
+            "mean_displacement_from_frame0": 0.09253430694327348,
+            "mean_step_displacement": 0.03007766466088177
+          },
+          {
+            "frame": 5,
+            "mean_displacement_from_frame0": 0.11733806028005911,
+            "mean_step_displacement": 0.029564744808227256
+          },
+          {
+            "frame": 6,
+            "mean_displacement_from_frame0": 0.13978632263991345,
+            "mean_step_displacement": 0.030043546821562163
+          },
+          {
+            "frame": 7,
+            "mean_displacement_from_frame0": 0.15813768027530073,
+            "mean_step_displacement": 0.03147779068219313
+          },
+          {
+            "frame": 8,
+            "mean_displacement_from_frame0": 0.17545132933642235,
+            "mean_step_displacement": 0.037329465999965894
+          },
+          {
+            "frame": 9,
+            "mean_displacement_from_frame0": 0.19304888383686597,
+            "mean_step_displacement": 0.042036402431511216
+          },
+          {
+            "frame": 10,
+            "mean_displacement_from_frame0": 0.21061122500577548,
+            "mean_step_displacement": 0.042707936250339036
+          },
+          {
+            "frame": 11,
+            "mean_displacement_from_frame0": 0.23247587059713665,
+            "mean_step_displacement": 0.042883032164173544
+          },
+          {
+            "frame": 12,
+            "mean_displacement_from_frame0": 0.2564409797644351,
+            "mean_step_displacement": 0.037811783280144874
+          },
+          {
+            "frame": 13,
+            "mean_displacement_from_frame0": 0.27765598547165027,
+            "mean_step_displacement": 0.03164843444239385
+          },
+          {
+            "frame": 14,
+            "mean_displacement_from_frame0": 0.29513097219000567,
+            "mean_step_displacement": 0.03188874076008766
+          },
+          {
+            "frame": 15,
+            "mean_displacement_from_frame0": 0.3073555902248362,
+            "mean_step_displacement": 0.03419089810643051
+          }
+        ],
+        "normal_consistency": [
+          {
+            "frame": 0,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8198371710513935,
+              "mean_signed_cosine": 0.7157609184188526,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8253767072913293,
+              "mean_signed_cosine": 0.7592399056136977,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8226069391713614,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 1,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8279031593365166,
+              "mean_signed_cosine": 0.7736175010759845,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8329731356226144,
+              "mean_signed_cosine": 0.7810401368327291,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8304381474795655,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 2,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8360796536030705,
+              "mean_signed_cosine": 0.7919550366072855,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8354004385658125,
+              "mean_signed_cosine": 0.7905125232434796,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8357400460844415,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 3,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8325927820399427,
+              "mean_signed_cosine": 0.7768457526516171,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8360397117568389,
+              "mean_signed_cosine": 0.7851302167114229,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8343162468983908,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 4,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8186141987161467,
+              "mean_signed_cosine": 0.7472203262943631,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8294423014461978,
+              "mean_signed_cosine": 0.7644898160009709,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8240282500811722,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 5,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8154294361415366,
+              "mean_signed_cosine": 0.7505129334561195,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8306909861500921,
+              "mean_signed_cosine": 0.7736027100616533,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8230602111458143,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 6,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8100546360427268,
+              "mean_signed_cosine": 0.7348025967224543,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8196844448418246,
+              "mean_signed_cosine": 0.7567288348965779,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8148695404422757,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 7,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.816360029135059,
+              "mean_signed_cosine": 0.7454242401817371,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8125020856072771,
+              "mean_signed_cosine": 0.7405046632113419,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.814431057371168,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 8,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.813040288552365,
+              "mean_signed_cosine": 0.7446525054902744,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8091352037196327,
+              "mean_signed_cosine": 0.7331862320683811,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8110877461359989,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 9,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8054989167089924,
+              "mean_signed_cosine": 0.7392783953740831,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8030623121820774,
+              "mean_signed_cosine": 0.7227214508141236,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8042806144455349,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 10,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7901373111183316,
+              "mean_signed_cosine": 0.7064979465896888,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7913798186276618,
+              "mean_signed_cosine": 0.6993476342522325,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7907585648729967,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 11,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7895504786802485,
+              "mean_signed_cosine": 0.6901837841139326,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7816408587502472,
+              "mean_signed_cosine": 0.6868425557561968,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7855956687152479,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 12,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7800378056450423,
+              "mean_signed_cosine": 0.6733715627404994,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7729449609824492,
+              "mean_signed_cosine": 0.6743924793352924,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7764913833137458,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 13,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7767677505205334,
+              "mean_signed_cosine": 0.6584667835560284,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7639530632558397,
+              "mean_signed_cosine": 0.6657194060987333,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7703604068881865,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 14,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.77017997300773,
+              "mean_signed_cosine": 0.63916717125748,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7569266546743585,
+              "mean_signed_cosine": 0.6518941643837386,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7635533138410442,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 15,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7633182079695561,
+              "mean_signed_cosine": 0.6366877374903377,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.74959296738743,
+              "mean_signed_cosine": 0.6483548563149321,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7564555876784931,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          }
+        ],
+        "geometry": {
+          "frames": [
+            {
+              "frame": 0,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.285239569658346,
+              "minimum_triangle_area": 1.785098291870512e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 1,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.242881435154263,
+              "minimum_triangle_area": 1.7539319853294216e-07,
+              "face_normal_cosine_to_native_mean": 0.9999999688042697,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 2,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.234216268639381,
+              "minimum_triangle_area": 8.98795758994949e-08,
+              "face_normal_cosine_to_native_mean": 0.9999999555451017,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 3,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2249693407473474,
+              "minimum_triangle_area": 1.4636114927174626e-07,
+              "face_normal_cosine_to_native_mean": 0.9999999529892794,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 4,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2110153957697865,
+              "minimum_triangle_area": 1.014949659684449e-07,
+              "face_normal_cosine_to_native_mean": 0.9999999450067081,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 5,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1984782622713426,
+              "minimum_triangle_area": 2.2290230604186924e-08,
+              "face_normal_cosine_to_native_mean": 0.9999997005051278,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 6,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1820282518652743,
+              "minimum_triangle_area": 2.465159649089823e-07,
+              "face_normal_cosine_to_native_mean": 0.9999998484334264,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 7,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.154830084300279,
+              "minimum_triangle_area": 2.799127943395067e-07,
+              "face_normal_cosine_to_native_mean": 0.9999999129779003,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 8,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.148170142457168,
+              "minimum_triangle_area": 1.820473262081066e-07,
+              "face_normal_cosine_to_native_mean": 0.9999999170963312,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 9,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.167911816765309,
+              "minimum_triangle_area": 9.705759950331481e-08,
+              "face_normal_cosine_to_native_mean": 0.9999998939202125,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 10,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1879053368474484,
+              "minimum_triangle_area": 8.584943008544728e-08,
+              "face_normal_cosine_to_native_mean": 0.9999998651499208,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 11,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1981602301954783,
+              "minimum_triangle_area": 2.341004119706004e-08,
+              "face_normal_cosine_to_native_mean": 0.9999997539249961,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 12,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.216355266276627,
+              "minimum_triangle_area": 1.1483550505065663e-07,
+              "face_normal_cosine_to_native_mean": 0.9999997611532898,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 13,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.222711240199446,
+              "minimum_triangle_area": 1.4876733998527027e-07,
+              "face_normal_cosine_to_native_mean": 0.999998765480896,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 14,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.226012691469661,
+              "minimum_triangle_area": 8.719821736536376e-08,
+              "face_normal_cosine_to_native_mean": 0.999999532292432,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 15,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2331102545361383,
+              "minimum_triangle_area": 4.990746827692695e-08,
+              "face_normal_cosine_to_native_mean": 0.9999997061758947,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            }
+          ],
+          "normal_comparison": "Same physical frame and fixed face IDs vs native; orientation change is not a claim of triangle inversion/self-intersection",
+          "degeneration_definition": "Twice triangle area <=1e-12 times fixed aligned-anchor diagonal squared"
+        },
+        "core_metrics_reused": false
+      },
+      "summary": {
+        "cd4d": 0.07002011734117648,
+        "cd_motion": 0.1277424395084381,
+        "mean_normal_absolute_cosine": 0.8036296077853399,
+        "normal_valid_frames": 16,
+        "mean_displacement_from_frame0": 0.16182081943470342,
+        "endpoint_displacement_from_frame0": 0.3073555902248362,
+        "mean_step_displacement_frames1_to15": 0.032954942324248275,
+        "mean_near_degenerate_face_fraction": 0.0,
+        "maximum_near_degenerate_face_count": 0
+      },
+      "delta_summary_vs_native": {
+        "cd4d": -2.6546458733123224e-05,
+        "cd_motion": -1.8030405044555664e-06,
+        "mean_normal_absolute_cosine": -1.5008651463865874e-06,
+        "mean_displacement_from_frame0": -2.8990207071033502e-06,
+        "endpoint_displacement_from_frame0": 2.4714779413570476e-06,
+        "mean_step_displacement_frames1_to15": 2.288689545798528e-07,
+        "mean_near_degenerate_face_fraction": 0.0,
+        "maximum_near_degenerate_face_count": 0
+      },
+      "delta_cd4d_vs_native": -2.6546458733123224e-05,
+      "delta_cdm_vs_native": -1.8030405044555664e-06
+    },
+    "time_reversal": {
+      "status": "evaluated",
+      "source_report_status": "completed",
+      "independent_discrepancy": {
+        "bitwise_equal": false,
+        "moving_rms_xyz_over_D": 0.0007179739804960688,
+        "moving_max_abs_coordinate_over_D": 0.013616473644683031
+      },
+      "metrics": {
+        "cd_4d_shared_alignment": 0.06949669243422525,
+        "cd_motion": 0.12728363275527954,
+        "per_frame_shape": [
+          {
+            "frame": 0,
+            "sampling_seed": 44,
+            "cd4d_contribution": 0.05667908281266629,
+            "delta_vs_native": 0.0
+          },
+          {
+            "frame": 1,
+            "sampling_seed": 45,
+            "cd4d_contribution": 0.05674296704648983,
+            "delta_vs_native": 0.00018901645040601128
+          },
+          {
+            "frame": 2,
+            "sampling_seed": 46,
+            "cd4d_contribution": 0.05823939529841558,
+            "delta_vs_native": -3.9028841877654374e-05
+          },
+          {
+            "frame": 3,
+            "sampling_seed": 47,
+            "cd4d_contribution": 0.05900520016517559,
+            "delta_vs_native": -0.00020096395079007012
+          },
+          {
+            "frame": 4,
+            "sampling_seed": 48,
+            "cd4d_contribution": 0.061893356636500384,
+            "delta_vs_native": -0.0008346445711583592
+          },
+          {
+            "frame": 5,
+            "sampling_seed": 49,
+            "cd4d_contribution": 0.06603304601987796,
+            "delta_vs_native": 9.984352280237307e-06
+          },
+          {
+            "frame": 6,
+            "sampling_seed": 50,
+            "cd4d_contribution": 0.06793020767693904,
+            "delta_vs_native": -0.0012650733240523598
+          },
+          {
+            "frame": 7,
+            "sampling_seed": 51,
+            "cd4d_contribution": 0.07009174763164835,
+            "delta_vs_native": -0.00024245629070551722
+          },
+          {
+            "frame": 8,
+            "sampling_seed": 52,
+            "cd4d_contribution": 0.0696114369886102,
+            "delta_vs_native": -0.0004939402191361242
+          },
+          {
+            "frame": 9,
+            "sampling_seed": 53,
+            "cd4d_contribution": 0.07118567741997889,
+            "delta_vs_native": -7.40182686178037e-05
+          },
+          {
+            "frame": 10,
+            "sampling_seed": 54,
+            "cd4d_contribution": 0.07313816734749692,
+            "delta_vs_native": -0.00040069830828123876
+          },
+          {
+            "frame": 11,
+            "sampling_seed": 55,
+            "cd4d_contribution": 0.07364967374740675,
+            "delta_vs_native": -0.0009393041130983937
+          },
+          {
+            "frame": 12,
+            "sampling_seed": 56,
+            "cd4d_contribution": 0.075906819421036,
+            "delta_vs_native": -0.0015023595960429598
+          },
+          {
+            "frame": 13,
+            "sampling_seed": 57,
+            "cd4d_contribution": 0.08074030977221955,
+            "delta_vs_native": -0.001194594650239883
+          },
+          {
+            "frame": 14,
+            "sampling_seed": 58,
+            "cd4d_contribution": 0.08518102914876996,
+            "delta_vs_native": -0.0007340300607170391
+          },
+          {
+            "frame": 15,
+            "sampling_seed": 59,
+            "cd4d_contribution": 0.08591896181437267,
+            "delta_vs_native": -0.0010774304589185324
+          }
+        ],
+        "per_frame_motion": [
+          {
+            "frame": 0,
+            "pred_to_gt_fixed_nn": 0.02681452543634781,
+            "gt_to_pred_fixed_nn": 0.030013635098914533,
+            "sum_unsquared": 0.056828160535262344
+          },
+          {
+            "frame": 1,
+            "pred_to_gt_fixed_nn": 0.03340570871316415,
+            "gt_to_pred_fixed_nn": 0.0352594019289591,
+            "sum_unsquared": 0.06866511064212324
+          },
+          {
+            "frame": 2,
+            "pred_to_gt_fixed_nn": 0.04098380706464897,
+            "gt_to_pred_fixed_nn": 0.04125885329662506,
+            "sum_unsquared": 0.08224266036127403
+          },
+          {
+            "frame": 3,
+            "pred_to_gt_fixed_nn": 0.04506259353555069,
+            "gt_to_pred_fixed_nn": 0.044440321951969175,
+            "sum_unsquared": 0.08950291548751987
+          },
+          {
+            "frame": 4,
+            "pred_to_gt_fixed_nn": 0.049603357812421055,
+            "gt_to_pred_fixed_nn": 0.04826605944064095,
+            "sum_unsquared": 0.097869417253062
+          },
+          {
+            "frame": 5,
+            "pred_to_gt_fixed_nn": 0.05512391273566502,
+            "gt_to_pred_fixed_nn": 0.05422929379612392,
+            "sum_unsquared": 0.10935320653178894
+          },
+          {
+            "frame": 6,
+            "pred_to_gt_fixed_nn": 0.060502500854767924,
+            "gt_to_pred_fixed_nn": 0.060221995815506114,
+            "sum_unsquared": 0.12072449667027405
+          },
+          {
+            "frame": 7,
+            "pred_to_gt_fixed_nn": 0.06484523316993726,
+            "gt_to_pred_fixed_nn": 0.06521829091540327,
+            "sum_unsquared": 0.13006352408534053
+          },
+          {
+            "frame": 8,
+            "pred_to_gt_fixed_nn": 0.06681344207622926,
+            "gt_to_pred_fixed_nn": 0.06707545352488736,
+            "sum_unsquared": 0.1338888956011166
+          },
+          {
+            "frame": 9,
+            "pred_to_gt_fixed_nn": 0.06951235491394935,
+            "gt_to_pred_fixed_nn": 0.06986694486202004,
+            "sum_unsquared": 0.13937929977596938
+          },
+          {
+            "frame": 10,
+            "pred_to_gt_fixed_nn": 0.07342604380666215,
+            "gt_to_pred_fixed_nn": 0.07483248908314045,
+            "sum_unsquared": 0.14825853288980262
+          },
+          {
+            "frame": 11,
+            "pred_to_gt_fixed_nn": 0.07847093016227938,
+            "gt_to_pred_fixed_nn": 0.08011797967050052,
+            "sum_unsquared": 0.1585889098327799
+          },
+          {
+            "frame": 12,
+            "pred_to_gt_fixed_nn": 0.08266025246115634,
+            "gt_to_pred_fixed_nn": 0.08403309399365795,
+            "sum_unsquared": 0.1666933464548143
+          },
+          {
+            "frame": 13,
+            "pred_to_gt_fixed_nn": 0.0870617789352866,
+            "gt_to_pred_fixed_nn": 0.08818051057586936,
+            "sum_unsquared": 0.17524228951115595
+          },
+          {
+            "frame": 14,
+            "pred_to_gt_fixed_nn": 0.0901174109547113,
+            "gt_to_pred_fixed_nn": 0.09139803151555634,
+            "sum_unsquared": 0.18151544247026763
+          },
+          {
+            "frame": 15,
+            "pred_to_gt_fixed_nn": 0.08833425029762995,
+            "gt_to_pred_fixed_nn": 0.08938735607802918,
+            "sum_unsquared": 0.17772160637565915
+          }
+        ],
+        "trajectory_amplitude": [
+          {
+            "frame": 0,
+            "mean_displacement_from_frame0": 0.0,
+            "mean_step_displacement": 0.0
+          },
+          {
+            "frame": 1,
+            "mean_displacement_from_frame0": 0.020338433625313478,
+            "mean_step_displacement": 0.020338433625313478
+          },
+          {
+            "frame": 2,
+            "mean_displacement_from_frame0": 0.04172393246872757,
+            "mean_step_displacement": 0.0233951133900749
+          },
+          {
+            "frame": 3,
+            "mean_displacement_from_frame0": 0.06505107659138971,
+            "mean_step_displacement": 0.026966472109072437
+          },
+          {
+            "frame": 4,
+            "mean_displacement_from_frame0": 0.09039051671919761,
+            "mean_step_displacement": 0.029843770649878164
+          },
+          {
+            "frame": 5,
+            "mean_displacement_from_frame0": 0.11557812715694368,
+            "mean_step_displacement": 0.029635740507781227
+          },
+          {
+            "frame": 6,
+            "mean_displacement_from_frame0": 0.13829065256100653,
+            "mean_step_displacement": 0.029689375698947456
+          },
+          {
+            "frame": 7,
+            "mean_displacement_from_frame0": 0.15691207686977424,
+            "mean_step_displacement": 0.03128406531157031
+          },
+          {
+            "frame": 8,
+            "mean_displacement_from_frame0": 0.17497973453955362,
+            "mean_step_displacement": 0.03718499748429848
+          },
+          {
+            "frame": 9,
+            "mean_displacement_from_frame0": 0.19264369276916213,
+            "mean_step_displacement": 0.04183933599376605
+          },
+          {
+            "frame": 10,
+            "mean_displacement_from_frame0": 0.20980372175099318,
+            "mean_step_displacement": 0.041714758412878125
+          },
+          {
+            "frame": 11,
+            "mean_displacement_from_frame0": 0.23069671021529856,
+            "mean_step_displacement": 0.04125231113429486
+          },
+          {
+            "frame": 12,
+            "mean_displacement_from_frame0": 0.25453128209570813,
+            "mean_step_displacement": 0.03796446134768311
+          },
+          {
+            "frame": 13,
+            "mean_displacement_from_frame0": 0.27642271213601616,
+            "mean_step_displacement": 0.032542882498346255
+          },
+          {
+            "frame": 14,
+            "mean_displacement_from_frame0": 0.2949257260015398,
+            "mean_step_displacement": 0.03313881701387377
+          },
+          {
+            "frame": 15,
+            "mean_displacement_from_frame0": 0.306889404183346,
+            "mean_step_displacement": 0.033887251217387185
+          }
+        ],
+        "normal_consistency": [
+          {
+            "frame": 0,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8198371710513935,
+              "mean_signed_cosine": 0.7157609184188526,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8253767072913293,
+              "mean_signed_cosine": 0.7592399056136977,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8226069391713614,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 1,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8319484164211055,
+              "mean_signed_cosine": 0.7767303813021988,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8342896274631332,
+              "mean_signed_cosine": 0.7786531391832121,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8331190219421194,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 2,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8356960860689673,
+              "mean_signed_cosine": 0.7890606389359234,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8351808511735502,
+              "mean_signed_cosine": 0.7872450880894126,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8354384686212588,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 3,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8300293000787747,
+              "mean_signed_cosine": 0.7773071773643698,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8373078048372387,
+              "mean_signed_cosine": 0.7843090974730401,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8336685524580068,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 4,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8212455919217589,
+              "mean_signed_cosine": 0.7497943540827356,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8303566667878979,
+              "mean_signed_cosine": 0.7688099671214677,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8258011293548284,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 5,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8137347804489901,
+              "mean_signed_cosine": 0.7496394814485633,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8297780029643221,
+              "mean_signed_cosine": 0.7713563483755875,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8217563917066562,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 6,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.808340159851534,
+              "mean_signed_cosine": 0.7366556283525597,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8195553771538066,
+              "mean_signed_cosine": 0.756649563089529,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8139477685026703,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 7,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8115780008437138,
+              "mean_signed_cosine": 0.7378731177716531,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8117673595769609,
+              "mean_signed_cosine": 0.7378436269914807,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8116726802103373,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 8,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8106774047912321,
+              "mean_signed_cosine": 0.7423927309326693,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.809176701478006,
+              "mean_signed_cosine": 0.7326386058459097,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.809927053134619,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 9,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.8062642234952354,
+              "mean_signed_cosine": 0.7382647578400854,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.8012085049263191,
+              "mean_signed_cosine": 0.716922675837926,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.8037363642107773,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 10,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7918811592469168,
+              "mean_signed_cosine": 0.7126944006851902,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7879692153221038,
+              "mean_signed_cosine": 0.7019118520174438,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7899251872845103,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 11,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7854751043304581,
+              "mean_signed_cosine": 0.6945436808360883,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7815357016386233,
+              "mean_signed_cosine": 0.6904116014552963,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7835054029845407,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 12,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.784517772364404,
+              "mean_signed_cosine": 0.6779960547933891,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7721168014217749,
+              "mean_signed_cosine": 0.6798540659459102,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7783172868930894,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 13,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7767663980002357,
+              "mean_signed_cosine": 0.6574062910957479,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.763842727097236,
+              "mean_signed_cosine": 0.665445912704235,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7703045625487359,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 14,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7667143314113981,
+              "mean_signed_cosine": 0.6417747274758193,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.754796218023872,
+              "mean_signed_cosine": 0.6554514524978009,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.760755274717635,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          },
+          {
+            "frame": 15,
+            "pred_to_gt": {
+              "mean_absolute_cosine": 0.7690944917483015,
+              "mean_signed_cosine": 0.6454071871914161,
+              "valid_queries": 10000
+            },
+            "gt_to_pred": {
+              "mean_absolute_cosine": 0.7505187749110339,
+              "mean_signed_cosine": 0.6528734692271712,
+              "valid_queries": 10000
+            },
+            "symmetric_mean_absolute_cosine": 0.7598066333296677,
+            "definition": "Auxiliary nearest-surface normal consistency, two direction means averaged; not an official ActionBench metric; flat face normals after shared affine transform"
+          }
+        ],
+        "geometry": {
+          "frames": [
+            {
+              "frame": 0,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.285239569658346,
+              "minimum_triangle_area": 1.785098291870512e-07,
+              "face_normal_cosine_to_native_mean": 1.0,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 1,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2420191684076585,
+              "minimum_triangle_area": 2.66690591648472e-09,
+              "face_normal_cosine_to_native_mean": 0.9997398965876292,
+              "face_normal_opposed_to_native_fraction": 0.0,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 2,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2362788918159398,
+              "minimum_triangle_area": 7.427649618375078e-08,
+              "face_normal_cosine_to_native_mean": 0.9996459285846556,
+              "face_normal_opposed_to_native_fraction": 2.5010004001600642e-05,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 3,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2227937079637736,
+              "minimum_triangle_area": 2.1098286867428346e-07,
+              "face_normal_cosine_to_native_mean": 0.9995476337204637,
+              "face_normal_opposed_to_native_fraction": 2.5010004001600642e-05,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 4,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2178169822462497,
+              "minimum_triangle_area": 1.6057012919974827e-07,
+              "face_normal_cosine_to_native_mean": 0.9993522343566854,
+              "face_normal_opposed_to_native_fraction": 5.0020008003201284e-05,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 5,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.205263024297228,
+              "minimum_triangle_area": 4.4302827036771974e-08,
+              "face_normal_cosine_to_native_mean": 0.9991382633643556,
+              "face_normal_opposed_to_native_fraction": 0.00010004001600640257,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 6,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.188369263273575,
+              "minimum_triangle_area": 1.177023243178654e-07,
+              "face_normal_cosine_to_native_mean": 0.998990577835682,
+              "face_normal_opposed_to_native_fraction": 7.503001200480192e-05,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 7,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.160885183841043,
+              "minimum_triangle_area": 2.1910382980495938e-07,
+              "face_normal_cosine_to_native_mean": 0.9991113281291112,
+              "face_normal_opposed_to_native_fraction": 7.503001200480192e-05,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 8,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1577728298576497,
+              "minimum_triangle_area": 2.820884957595081e-07,
+              "face_normal_cosine_to_native_mean": 0.9990296300751351,
+              "face_normal_opposed_to_native_fraction": 7.503001200480192e-05,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 9,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1749893781386542,
+              "minimum_triangle_area": 2.1258352137163648e-07,
+              "face_normal_cosine_to_native_mean": 0.9989370150538276,
+              "face_normal_opposed_to_native_fraction": 0.00010004001600640257,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 10,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.1927133339134444,
+              "minimum_triangle_area": 1.9879982365575795e-07,
+              "face_normal_cosine_to_native_mean": 0.9986630510757608,
+              "face_normal_opposed_to_native_fraction": 0.0001250500200080032,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 11,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2039900124074214,
+              "minimum_triangle_area": 1.4432899846845304e-07,
+              "face_normal_cosine_to_native_mean": 0.998208894038573,
+              "face_normal_opposed_to_native_fraction": 0.00015006002400960383,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 12,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2224950472283025,
+              "minimum_triangle_area": 1.253794900053267e-07,
+              "face_normal_cosine_to_native_mean": 0.997566562052037,
+              "face_normal_opposed_to_native_fraction": 0.00030012004801920766,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 13,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.2301549970283063,
+              "minimum_triangle_area": 6.248591203391689e-08,
+              "face_normal_cosine_to_native_mean": 0.9968684911430152,
+              "face_normal_opposed_to_native_fraction": 0.0006502601040416166,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 14,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.238516155912123,
+              "minimum_triangle_area": 1.1034782462155894e-07,
+              "face_normal_cosine_to_native_mean": 0.9959822998874169,
+              "face_normal_opposed_to_native_fraction": 0.0008003201280512205,
+              "normal_comparison_valid_faces": 39984
+            },
+            {
+              "frame": 15,
+              "faces": 39984,
+              "near_degenerate_faces": 0,
+              "near_degenerate_fraction": 0.0,
+              "twice_area_threshold": 7.124706897910843e-12,
+              "total_surface_area": 3.24990296155277,
+              "minimum_triangle_area": 5.6093033184214074e-08,
+              "face_normal_cosine_to_native_mean": 0.9940796910576631,
+              "face_normal_opposed_to_native_fraction": 0.001525610244097639,
+              "normal_comparison_valid_faces": 39984
+            }
+          ],
+          "normal_comparison": "Same physical frame and fixed face IDs vs native; orientation change is not a claim of triangle inversion/self-intersection",
+          "degeneration_definition": "Twice triangle area <=1e-12 times fixed aligned-anchor diagonal squared"
+        },
+        "core_metrics_reused": false
+      },
+      "summary": {
+        "cd4d": 0.06949669243422525,
+        "cd_motion": 0.12728363275527954,
+        "mean_normal_absolute_cosine": 0.8033930448169259,
+        "normal_valid_frames": 16,
+        "mean_displacement_from_frame0": 0.16057361248024815,
+        "endpoint_displacement_from_frame0": 0.306889404183346,
+        "mean_step_displacement_frames1_to15": 0.03271185242634438,
+        "mean_near_degenerate_face_fraction": 0.0,
+        "maximum_near_degenerate_face_count": 0
+      },
+      "delta_summary_vs_native": {
+        "cd4d": -0.0005499713656843541,
+        "cd_motion": -0.0004606097936630249,
+        "mean_normal_absolute_cosine": -0.00023806383356039795,
+        "mean_displacement_from_frame0": -0.0012501059751623689,
+        "endpoint_displacement_from_frame0": -0.0004637145635488782,
+        "mean_step_displacement_frames1_to15": -0.00024286102894931216,
+        "mean_near_degenerate_face_fraction": 0.0,
+        "maximum_near_degenerate_face_count": 0
+      },
+      "delta_cd4d_vs_native": -0.0005499713656843541,
+      "delta_cdm_vs_native": -0.0004606097936630249
+    }
+  },
+  "independent_control_gates_passed": true,
+  "stage": "time_reversal_frame15_shape_normal",
+  "elapsed_seconds": 27.76643559895456,
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "independent_assets": 1,
+  "native_reference_summary": {
+    "cd4d": 0.0700466637999096,
+    "cd_motion": 0.12774424254894257,
+    "mean_normal_absolute_cosine": 0.8036311086504863,
+    "normal_valid_frames": 16,
+    "mean_displacement_from_frame0": 0.16182371845541052,
+    "endpoint_displacement_from_frame0": 0.30735311874689486,
+    "mean_step_displacement_frames1_to15": 0.032954713455293695,
+    "mean_near_degenerate_face_fraction": 0.0,
+    "maximum_near_degenerate_face_count": 0
+  },
+  "gt_trajectory_amplitude_reference": [
+    {
+      "frame": 0,
+      "mean_displacement_from_frame0": 0.0,
+      "mean_step_displacement": 0.0
+    },
+    {
+      "frame": 1,
+      "mean_displacement_from_frame0": 0.025953246320936825,
+      "mean_step_displacement": 0.025953246320936825
+    },
+    {
+      "frame": 2,
+      "mean_displacement_from_frame0": 0.04958678882075823,
+      "mean_step_displacement": 0.0254636167984344
+    },
+    {
+      "frame": 3,
+      "mean_displacement_from_frame0": 0.07214040523798884,
+      "mean_step_displacement": 0.026848437668075292
+    },
+    {
+      "frame": 4,
+      "mean_displacement_from_frame0": 0.09598847131896547,
+      "mean_step_displacement": 0.029925756100525683
+    },
+    {
+      "frame": 5,
+      "mean_displacement_from_frame0": 0.1199055421489921,
+      "mean_step_displacement": 0.031967785231400904
+    },
+    {
+      "frame": 6,
+      "mean_displacement_from_frame0": 0.1417371601624984,
+      "mean_step_displacement": 0.032688300478970866
+    },
+    {
+      "frame": 7,
+      "mean_displacement_from_frame0": 0.1605297733877347,
+      "mean_step_displacement": 0.03548686718116367
+    },
+    {
+      "frame": 8,
+      "mean_displacement_from_frame0": 0.17812319504716367,
+      "mean_step_displacement": 0.04150768605673907
+    },
+    {
+      "frame": 9,
+      "mean_displacement_from_frame0": 0.19616175349839549,
+      "mean_step_displacement": 0.04535533632814944
+    },
+    {
+      "frame": 10,
+      "mean_displacement_from_frame0": 0.21775111399349564,
+      "mean_step_displacement": 0.046312629441264005
+    },
+    {
+      "frame": 11,
+      "mean_displacement_from_frame0": 0.24087724236534117,
+      "mean_step_displacement": 0.043109449262075314
+    },
+    {
+      "frame": 12,
+      "mean_displacement_from_frame0": 0.2630742577056995,
+      "mean_step_displacement": 0.03685901758299335
+    },
+    {
+      "frame": 13,
+      "mean_displacement_from_frame0": 0.2817628149566731,
+      "mean_step_displacement": 0.031131337529640705
+    },
+    {
+      "frame": 14,
+      "mean_displacement_from_frame0": 0.2962049976081872,
+      "mean_step_displacement": 0.02946847585680876
+    },
+    {
+      "frame": 15,
+      "mean_displacement_from_frame0": 0.3075071641507026,
+      "mean_step_displacement": 0.03522333096206124
+    }
+  ],
+  "all_arms_retained": true,
+  "cuda_used": false,
+  "icp_run": false,
+  "native_core_metrics_recomputed": false,
+  "GT_used_only_for_evaluation": true,
+  "scientific_scope": "One paired asset diagnostic; all16frames are repeated observations, not16 independent assets. No causal-error or new-method claim.",
+  "ended_utc": "2026-10-02T19:37:49.569390+00:00",
+  "peak_process_rss": 913112,
+  "peak_process_rss_units": "KiB"
+}

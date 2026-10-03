@@ -1,0 +1,25 @@
+{
+  "status": "implementation_prepared_not_executed",
+  "date": "2026-10-02",
+  "scope": "Bounded Stage-II decoder diagnostic; no new-method, full-reverse-diffusion, uncertainty-validity or quality claim",
+  "cases_in_frozen_order": [
+    {"uid": "000-037_1358c424008a43cbaa35eba5e58551ac", "label": "mannequin", "seed": 42},
+    {"uid": "000-043_061697e330d44524bd11f8cf95772e2d", "label": "bat", "seed": 42}
+  ],
+  "inputs": "Reuse completed case prepared.npz, denoised.npz and sequence.npz after their native report hashes validate. Preserve all 16 forward Stage-I latent rows, frame-0 source mesh, faces, cached FP32 XYZ/normals and query IDs. No input video, image encoder, denoising, Stage0 regeneration, GT or alignment is read for correction.",
+  "arms_in_order": [
+    {"name": "forward", "latent_physical_rows": "0..15", "clock_times": "0..15", "source_physical": 0, "source_clock": 0, "targets_physical": "1..15", "target_clocks": "1..15", "required_control": "Bitwise equality to the native 16-frame sequence; failure blocks other arms and interpretation."},
+    {"name": "row_permutation", "latent_physical_rows": "15..0", "clock_times": "15..0, so each physical frame retains its original label", "source_physical": 0, "source_row_index": 15, "source_clock": 0, "targets_physical": "1..15", "target_clocks": "1..15", "required_control": "Timestamp-preserving permutation must have moving-coordinate RMS/D <=1e-4 and maximum absolute coordinate error/D <=1e-3; failure blocks reversal interpretation."},
+    {"name": "time_reversal", "latent_physical_rows": "0..15", "clock_times": "15..0", "source_physical": 0, "source_clock": 15, "targets_physical": "1..15", "target_clocks": "14..0", "required_control": "All 16 physical frames once, exact anchor bytes, unchanged faces/query IDs. Disagreement must be interpreted relative to permutation noise, never as GT error."}
+  ],
+  "api": "Call frozen ActionMeshAutoencoder.forward with explicit latent, framestep, source_alpha, target_alphas, query and callback, then its existing apply_displacement in native direct mode. Use official get_scaling/apply_scaling. Do not call generate_mesh_animation with anchor_idx=15 or drop_first=True.",
+  "numeric_policy": "Keep native stacked latent dtype, FP32 checkpoint storage and cached FP32 query; CUDA FP16 autocast exactly as original StageII. Native LatentBank promotes its FP16 Stage0 anchor while stacking FP32 generated rows; verify exact promoted values, do not reject that native dtype promotion. Forward mismatch is an adapter/numerics qualification failure, not scientific direction evidence. Record recomputed feature discrepancy but decode cached features.",
+  "signal_rule": "Report reversal RMS over the fixed anchor bbox diagonal and the ratio to max(permutation RMS,1e-8). A ratio >10 is an implementation-level separation from the canary floor, not evidence of useful uncertainty or improved quality.",
+  "outputs": "Fresh separate directory, every arm predeclared, sequence.npz in common physical chronology with all16 identities, source/query/weight/code hashes, alpha mappings, per-arm reports, progress and resource samples. Preserve failures and blocked arms.",
+  "resource_budget": {"per_asset_seconds": 300, "required_external_process_group_deadline_seconds": 300, "gpu_reservation_mib": 6144, "torch_allocator_cap_mib": 5120, "parent_audited_native_stageII_physical_peaks_mib": [3431, 3427], "native_stageII_samples_per_case": [50, 50], "qualification": "Parent audited native GPU samples between stage1_completed and stage2_completed and authorized a6144MiB reservation for one decoder with three SERIAL arms. This adapter peak remains unmeasured. Parent scheduler enforces aggregate reservation6144+native10752+headroom2048=18944MiB. No backward pass or additional model residence; allocator cap does not bound all driver memory."},
+  "later_evaluation": "After both control gates pass, use untouched official full16 CD4D/CDM and common anchor alignment; report every case/frame and geometry/motion-amplitude changes. Do not average directions as a new method in this diagnostic.",
+  "seed_control_caveat": "Existing seed43 native cases may regenerate Stage0 and change topology. Compare external geometry/motion metrics across those runs, never subtract their vertex arrays by index. A same-anchor independent Stage-I-noise contrast would need its own frozen protocol; it is not run here.",
+  "interpretation": "A nonzero reversal difference shows decoder coordinate-direction sensitivity. Known prior work already covers reversal fusion, reversal consistency and group averaging. Error prediction beyond seed variation and useful intervention remain untested.",
+  "source_audits": ["census-time-reversal-api-20261002.md", "census-time-reversal-index-repro-20261002.json", "time-reversal-collision-20261002.md"],
+  "validation_this_task": "Source/API inspection plus CPU-only mapping/identity fixtures; no SSH, GPU launch, model loading or direction result."
+}

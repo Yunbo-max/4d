@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/math-prototypes-20261002/research_math/native_probe.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/math-prototypes-20261002/native-mannequin-v1",
+    "--points",
+    "24",
+    "--max-seconds",
+    "600"
+  ],
+  "points": 24,
+  "seconds_cap": 600.0
+}

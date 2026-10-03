@@ -1,0 +1,41 @@
+{
+  "evidence_kind": "constructed_toy_controls",
+  "native_dataset": false,
+  "gpu_used": false,
+  "dependencies": [
+    "numpy",
+    "Python standard library"
+  ],
+  "files": [
+    {
+      "path": "research_math/contact_events.py",
+      "sha256": "11207842fdf5bc94654cf2af9a7ad48eeb6783485e3eb9aa6a70f1bf5c47b72d",
+      "bytes": 21932
+    },
+    {
+      "path": "research_math/tests/test_contact_events.py",
+      "sha256": "410794554a2333191beb5f13330b5c94a41ec8253e2cc6acdaedece41b298db1",
+      "bytes": 7451
+    },
+    {
+      "path": "results/math-prototypes-20261002/development/C/red.log",
+      "sha256": "ff7776d81b54b2d08d0189880e8818c790256bb95b6beffe2fb8d865d191a58e",
+      "bytes": 3207
+    },
+    {
+      "path": "results/math-prototypes-20261002/development/C/green-first.log",
+      "sha256": "f3384f3cfdd2293a6a6ca6f899e95bc06e2a9f1dd54f03b0e85c3126cf1c2c79",
+      "bytes": 2215
+    },
+    {
+      "path": "results/math-prototypes-20261002/development/C/package-tests.log",
+      "sha256": "7e431334945d4ce7db90368286fcbc35ef8720ad7478577f402cf984fa0a8d06",
+      "bytes": 6285
+    },
+    {
+      "path": "results/math-prototypes-20261002/development/C/controls-v1.json",
+      "sha256": "255ac8bc388eec32b7c76bb57ea394fe3df26c15c2374a632f23ab098424d6ee",
+      "bytes": 8060
+    }
+  ]
+}

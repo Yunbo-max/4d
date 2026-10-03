@@ -1,0 +1,32 @@
+{
+  "frames": [
+    0,
+    8,
+    15
+  ],
+  "arms": [
+    "identity",
+    "closest_surface",
+    "normal_only",
+    "arap"
+  ],
+  "anchor_bitwise_unchanged": true,
+  "amendment": "Frozen before correction: exact triangle queries replace area-sampled approximate targets/density controls after isolated Rtree1.4.1 installation.",
+  "trust_radius": "0.02 * original anchor bbox diagonal",
+  "gt_guidance": false,
+  "camera_or_alignment_guidance": false,
+  "gpu_used": false,
+  "targets": "All referenced triangles of native Stage-I flash surfaces; no decimation or component removal",
+  "closest_query_batch_size": 128,
+  "normal_only": "5 scalar updates along fixed original-frame vertex normals; cumulative trust scalar clipped",
+  "arap_outer_iterations": 5,
+  "arap_local_global_per_outer": 5,
+  "arap_energy": "E=(1/(N D^2))*sum_i||Y_i-q_i||^2 + (1/(2 E D^2))*sum_{undirected(i,j)}(||Y_i-Y_j-R_i(X_i-X_j)||^2+||Y_i-Y_j-R_j(X_i-X_j)||^2)",
+  "arap_weights": "Uniform undirected edges; coefficients1 for data and ARAP; reference X is native mesh at the SAME time",
+  "arap_constraint": "For every vertex ||Y_i-X_i||<=0.02D",
+  "arap_global_solver": "Projected gradient on fixed-R convex subproblem, step1/(2/N+4maxdegree/E); true trust-ball projection each iterate, not clipped unconstrained solve",
+  "arap_global_max_iterations": 200,
+  "arap_projected_step_rms_over_D_tolerance": 1e-07,
+  "arap_qualification": "Every inner solve converged and descended; every outer step descended; final outer relative energy change<=1e-3; no new degenerate faces/trust violations",
+  "semantics": "Output geometry baseline, not novel steering. Fixed topology does not prove material correspondence. Three frames cannot establish CD-M improvement."
+}

@@ -1,0 +1,35 @@
+{
+  "frozen_utc": "2026-10-02T19:43:59.514102+00:00",
+  "scope": "Complete stage-attribution diagnostics on remaining6 of alreadyfrozen8 assets; first2 inspected so developmental, not independentconfirmation",
+  "uids": [
+    "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+    "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+    "000-078_b0b646eb731848f7837ab8257dfc658c",
+    "000-067_09a05166420843fab423047a799c87da",
+    "000-046_3bb11febd0624d7f8b30f491fb317d58",
+    "000-014_6cf7de7d14064b23be17811d19a63f13"
+  ],
+  "frames": [
+    0,
+    8,
+    15
+  ],
+  "seed": 42,
+  "source_hashes": {
+    "research_census_shape_probe.py": "dc26a05ae4cfe05bc3774db53764f5a240cb8f17e26ce224ab429fa435034a49",
+    "research_census_stage_gt.py": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f"
+  },
+  "manifest_sha256": "fa09175162348ac21e4f35f06dec89642b6460243aab33c72710ec5f9d814bbb",
+  "same_settings": "Same nativeflash depth9 FP16bounds/chunks and cachedStageI latents as first2; no newdiffusion, no training. OneGTanchorICP separatelysaved perasset, sharedbetweenstage/time for evaluation only.",
+  "resource": {
+    "max_concurrency": 2,
+    "probe_reservation_mib": 8192,
+    "eval_reservation_mib": 2048,
+    "headroom_mib": 2048,
+    "per_child_seconds": 300,
+    "total_seconds": 2400,
+    "policy": "newqueuev2 latches stopadmission onfailure and drains activeownedchildren"
+  },
+  "metrics": "pairedStageI/II GTsurfaceCD at0/8/15; reportmovingframes8/15 andallthree separately; noCD-M for independentStageI topology; no additivecausalerrorfractionclaim",
+  "limitations": "No newbaselineimages/casesselected; denominatorall8retainsnegative/unaffected andfailed. Newsourcebranchmaybedifferentcomplexity; preserveOOM/timeouts, noadaptivefallback."
+}

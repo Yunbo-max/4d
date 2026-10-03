@@ -1,0 +1,21 @@
+SHAPE_PROBE stage=loading_source_caches elapsed=6.72s
+SHAPE_PROBE stage=loading_standalone_vae elapsed=6.83s
+There are modules in TripoSGVAEModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+SHAPE_PROBE stage=vae_ready elapsed=7.81s
+SHAPE_PROBE stage=frame_00_decode_start elapsed=7.81s
+/root/rivermind-data/actionmesh-repro/repo/third_party/TripoSG/triposg/inference_utils.py:259: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+final grids shape =  torch.Size([505, 505, 505])
+SHAPE_PROBE stage=frame_00_decoded_saved elapsed=28.54s
+SHAPE_PROBE stage=frame_00_samples_saved elapsed=28.93s
+SHAPE_PROBE stage=frame_00_completed elapsed=29.29s
+SHAPE_PROBE stage=frame_08_decode_start elapsed=29.29s
+final grids shape =  torch.Size([505, 505, 505])
+SHAPE_PROBE stage=frame_08_decoded_saved elapsed=45.39s
+SHAPE_PROBE stage=frame_08_samples_saved elapsed=45.75s
+SHAPE_PROBE stage=frame_08_completed elapsed=46.14s
+SHAPE_PROBE stage=frame_15_decode_start elapsed=46.14s
+final grids shape =  torch.Size([505, 505, 505])
+SHAPE_PROBE stage=frame_15_decoded_saved elapsed=62.99s
+SHAPE_PROBE stage=frame_15_samples_saved elapsed=63.38s
+SHAPE_PROBE stage=frame_15_completed elapsed=63.76s

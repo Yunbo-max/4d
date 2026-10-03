@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "research_census_motion_readout.py",
+    "--case-dir",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-first2-full/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "--stage-gt-dir",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage-mannequin/stage-gt/mannequin-seed42-v1",
+    "--native-cache-dir",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-controls-surface-v1/motion-controls/mannequin-seed42-v1",
+    "--gt-dir",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/census-local-data/data",
+    "--output",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1",
+    "--max-seconds",
+    "180"
+  ],
+  "script_sha256": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028",
+  "CPU_only": true,
+  "max_seconds": 180.0
+}

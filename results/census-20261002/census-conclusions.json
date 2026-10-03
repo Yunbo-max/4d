@@ -1,0 +1,250 @@
+{
+  "status": "completed",
+  "utc": "2026-10-02T20:11:49.196257+00:00",
+  "n_independent_assets": 8,
+  "n_native_runs": 10,
+  "stage": {
+    "n_assets": 8,
+    "frames": [
+      0,
+      8,
+      15
+    ],
+    "primary_moving_frames": [
+      8,
+      15
+    ],
+    "n_stageII_worse": 5,
+    "n_stageII_better": 3,
+    "mean_stageI_moving_cd": 0.07950740726262599,
+    "mean_stageII_moving_cd": 0.08120599186659935,
+    "rows": [
+      {
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "stageI_moving_cd": 0.07434236188895307,
+        "stageII_moving_cd": 0.07855088474051877,
+        "stageII_minus_stageI": 0.004208522851565699,
+        "relative_change": 0.056610023472916673,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage-mannequin/stage-gt/mannequin-seed42-v1/report.json"
+      },
+      {
+        "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+        "stageI_moving_cd": 0.1468270193234099,
+        "stageII_moving_cd": 0.1439822394857035,
+        "stageII_minus_stageI": -0.0028447798377064237,
+        "relative_change": -0.019375043168589717,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-controls-surface-v1/stage-gt/bat-seed42-v1/report.json"
+      },
+      {
+        "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+        "stageI_moving_cd": 0.10502908977194642,
+        "stageII_moving_cd": 0.11654071453958872,
+        "stageII_minus_stageI": 0.011511624767642309,
+        "relative_change": 0.10960415626411625,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/report.json"
+      },
+      {
+        "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+        "stageI_moving_cd": 0.06003028860952787,
+        "stageII_moving_cd": 0.06189526418462145,
+        "stageII_minus_stageI": 0.0018649755750935817,
+        "relative_change": 0.03106724319159074,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/report.json"
+      },
+      {
+        "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+        "stageI_moving_cd": 0.08788766181023333,
+        "stageII_moving_cd": 0.08906302453202228,
+        "stageII_minus_stageI": 0.0011753627217889473,
+        "relative_change": 0.013373466736739288,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/report.json"
+      },
+      {
+        "uid": "000-067_09a05166420843fab423047a799c87da",
+        "stageI_moving_cd": 0.036343334104015024,
+        "stageII_moving_cd": 0.03503847973946865,
+        "stageII_minus_stageI": -0.0013048543645463734,
+        "relative_change": -0.035903540407488915,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/report.json"
+      },
+      {
+        "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+        "stageI_moving_cd": 0.04770112058081001,
+        "stageII_moving_cd": 0.0451661444828407,
+        "stageII_minus_stageI": -0.0025349760979693076,
+        "relative_change": -0.05314290455032034,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json"
+      },
+      {
+        "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+        "stageI_moving_cd": 0.07789838201211234,
+        "stageII_moving_cd": 0.0794111832280307,
+        "stageII_minus_stageI": 0.0015128012159183607,
+        "relative_change": 0.01942018790176074,
+        "source": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/report.json"
+      }
+    ],
+    "cloud_files_hash_verified": 24
+  },
+  "motion": [
+    {
+      "asset": "mannequin",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "metrics": {
+        "displacement": {
+          "native": 0.12588967053978237,
+          "reversed": 0.12552198096477452,
+          "relative_error_reduction": 0.0029207287097606453
+        },
+        "velocity": {
+          "native": 0.03113749565304992,
+          "reversed": 0.03139407965315503,
+          "relative_error_reduction": -0.008240354425548515
+        },
+        "acceleration": {
+          "native": 0.02017233964289651,
+          "reversed": 0.020529094989996916,
+          "relative_error_reduction": -0.017685372813263735
+        }
+      }
+    },
+    {
+      "asset": "bat",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "metrics": {
+        "displacement": {
+          "native": 0.23624061715777,
+          "reversed": 0.23530657118548787,
+          "relative_error_reduction": 0.003953790772813417
+        },
+        "velocity": {
+          "native": 0.052907791314038236,
+          "reversed": 0.052467820591057396,
+          "relative_error_reduction": 0.008315802116352956
+        },
+        "acceleration": {
+          "native": 0.031836588602196916,
+          "reversed": 0.03228513071151268,
+          "relative_error_reduction": -0.014088887315169468
+        }
+      }
+    }
+  ],
+  "ranking": [
+    {
+      "asset": "mannequin",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "screen_pass": false,
+      "scores": {
+        "reversal_disagreement": {
+          "spearman": 0.6481023290170232,
+          "risk_enrichment": 1.9810970789575444,
+          "retained_risk_ratio": 0.8909892134491617
+        },
+        "native_motion_amplitude": {
+          "spearman": 0.7342671926386719,
+          "risk_enrichment": 3.1225604463344836,
+          "retained_risk_ratio": 0.7641599504072797
+        },
+        "stageI_sample_distance": {
+          "spearman": 0.46894106682941067,
+          "risk_enrichment": 1.6500318867418,
+          "retained_risk_ratio": 0.9277742348064668
+        }
+      },
+      "comparisons": {
+        "native_motion_amplitude": {
+          "defined": true,
+          "spearman_delta": -0.08616486362164866,
+          "risk_enrichment_delta": -1.1414633673769392,
+          "retained_risk_ratio_delta": 0.12682926304188202,
+          "descriptive_beats_baseline": false
+        },
+        "stageI_sample_distance": {
+          "defined": true,
+          "spearman_delta": 0.17916126218761258,
+          "risk_enrichment_delta": 0.3310651922157444,
+          "retained_risk_ratio_delta": -0.0367850213573051,
+          "descriptive_beats_baseline": true
+        }
+      }
+    },
+    {
+      "asset": "bat",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "screen_pass": true,
+      "scores": {
+        "reversal_disagreement": {
+          "spearman": 0.8337160290931603,
+          "risk_enrichment": 1.894207150444067,
+          "retained_risk_ratio": 0.9006436499506594
+        },
+        "native_motion_amplitude": {
+          "spearman": 0.7277904671579046,
+          "risk_enrichment": 1.796957582089327,
+          "retained_risk_ratio": 0.9114491575456303
+        },
+        "stageI_sample_distance": {
+          "spearman": 0.3302292104902921,
+          "risk_enrichment": 1.6062561617323647,
+          "retained_risk_ratio": 0.9326382042519594
+        }
+      },
+      "comparisons": {
+        "native_motion_amplitude": {
+          "defined": true,
+          "spearman_delta": 0.10592556193525571,
+          "risk_enrichment_delta": 0.09724956835473986,
+          "retained_risk_ratio_delta": -0.010805507594970898,
+          "descriptive_beats_baseline": true
+        },
+        "stageI_sample_distance": {
+          "defined": true,
+          "spearman_delta": 0.5034868186028683,
+          "risk_enrichment_delta": 0.2879509887117022,
+          "retained_risk_ratio_delta": -0.03199455430130005,
+          "descriptive_beats_baseline": true
+        }
+      }
+    }
+  ],
+  "resources": {
+    "stage_remaining6_wall_seconds": 337.9823801268358,
+    "stage_remaining6_completed_jobs": 12,
+    "physical_peak_mib": 10447,
+    "max_observed_gpu_processes": 2,
+    "maximum_concurrency": 2,
+    "queue_events": []
+  },
+  "disposition": {
+    "unconditional_surface_energy": "Do not promote: opposing GT effects, mesh damage, ARAP outer convergence unqualified.",
+    "reverse_decoder_as_quality_method": "Do not promote: small CD gains; acceleration worse on both and velocity worse on mannequin.",
+    "reversal_disagreement_as_universal_uncertainty": "Do not promote: loses to native motion amplitude on one of two assets. Retain diagnostic only.",
+    "camera_or_track_conditioned_guidance": "Deferred: input-only registration and visible-track reliability unqualified. No implementation/result claim.",
+    "source_anchor_cocycle": "Diagnostic only: known prior and cycle-consistent wrong-motion counterexample; no experiment claim."
+  },
+  "limitations": [
+    "Eight developmental assets from one synthetic benchmark and one frozen backbone; no population prevalence or cross-model claim.",
+    "Only frames8/15 are stage geometry primary; geometry CDs are not additive causal components.",
+    "Motion errors conditional on first-frame NN; no semantic material GT or per-second claims.",
+    "Ranking is descriptive N=2; score-based rejection is a diagnostic, not filtering the official benchmark.",
+    "Formal importance/novelty/gate0 remain not ready."
+  ],
+  "source_reports_sha256": {
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage-mannequin/stage-gt/mannequin-seed42-v1/report.json": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-controls-surface-v1/stage-gt/bat-seed42-v1/report.json": "7e0438a7ad489659e179fed6a05e911940d314ed23b1d48a4bacc1fc87131713",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/report.json": "d9707d12c4a02e9ef201f307f77d32bec395087a4749f93b6996fe07f3e5f210",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/report.json": "7eea08a9b8b5c2e50e4f87dc63553aee7c6f57208b403dd338db44eea9efb51e",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/report.json": "0b8d5c7237c1f79c531693e62c9fd9b852769ae347b8474ab40db220eafe5a04",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/report.json": "2ae0ea14e3c2b246381fe21eaccbd6662984c19d4e8803677ef8b0404c09d7ef",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json": "797757577b505d9897046c2c7c6b96c9301956408f790c970e181997a9ec7200",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/report.json": "c483d1864ea21b99e21dfffcc224224c5a5d1219ef17ee7df316b114fb294999",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/report.json": "a27acc73f9a34620874367f74b079d1d7b7801dd221c74f6aa9a73b2ee1a2d6f",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-motion-final-v1/motion-readouts-direction-v1/mannequin-seed42-v1/report.json": "ad5c26f6817e49d52f89c901737c62cdb921764f929c54a01b644c829821d721",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/disagreement-rank-v1/mannequin-seed42-v1/report.json": "e105cf463007b4ca6bec0366ca7e1a5a84daddf910d1582100ec14c8e3f7791a",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/motion-readouts-local-v1/bat-seed42-v1/report.json": "e3e06d0df5af7bd6822c0340286aa489c3fbbfe997d9591a273208b17d7ff901",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-motion-final-v1/motion-readouts-direction-v1/bat-seed42-v1/report.json": "4796d0ca86e6ac3a95345dcd2e27b6da54e65c7fe036d83913c33479894c117b",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/disagreement-rank-v1/bat-seed42-v1/report.json": "32a7c5872e78d017f4759876de1f993d37ed6ff7aa67ac7ae6a8d7f57b940c87",
+    "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1/queue-stage-remaining6-v1/queue.json": "984728c81f6e7897b6ad5b0dfd609e47f5dcd0e808156176208e6dffd04732b6"
+  }
+}

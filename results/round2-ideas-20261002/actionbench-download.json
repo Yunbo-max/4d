@@ -1,0 +1,37 @@
+{
+  "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "source": "official Hugging Face pinned HTTPS; fallback after Chinese mirror connection timeout",
+  "files": [
+    {
+      "file": "LICENSE.txt",
+      "bytes": 12675,
+      "sha256": "d6b41838fa748a1d88481a3d0ef476c87f5538747f54057f9324066606af32a7"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3029,
+      "sha256": "e9b39a7a7aca797672967b2886162d1bf6fdd921dda8301c919157a713534880"
+    },
+    {
+      "file": "data/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+      "bytes": 38400128,
+      "sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284"
+    },
+    {
+      "file": "data/000-000_f15298421b3d4e0fab4c43863a7e72fd/surfaces.npy",
+      "bytes": 38400128,
+      "sha256": "3432d2e0760461ee3dc4d4fae5b18f4bd1fd03ac3b7f38757f3c3444dfcc2ddc"
+    },
+    {
+      "file": "data/000-001_095641b042f049c3aa86792836f8993d/surfaces.npy",
+      "bytes": 38400128,
+      "sha256": "f5eba4600805db999d6031b0065b5e481f27f328b41e48ea41df0edc47e3f265"
+    },
+    {
+      "file": "data/000-003_90288386ca914411ab648f08db734fea/surfaces.npy",
+      "bytes": 38400128,
+      "sha256": "f1d871a06549a7906e3e46bd01613bf1d1ad08212368bc4af82bde22814a6948"
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,407 @@
+{
+  "status": "completed",
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "protocol": {
+    "name": "Conditional fixed-anchor-NN motion readout; auxiliary, not official CD-M",
+    "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "tracked_surface_points": 100000,
+    "query_count_each_direction": 10000,
+    "query_rng": "numpy.random.RandomState(seed).permutation(100000)[:10000]",
+    "query_seeds": {
+      "predicted": 44,
+      "gt": 45
+    },
+    "sampling": "Exact cached synchronized seed44 faces/barycentric trajectories, all16frames; no independent framewise sample used here",
+    "alignment": "Exact saved Stage-GT frame0 matrix already applied in cached native cloud; no transformation refit or normalization",
+    "maps": "nu[i]=NN_GT0(P0[i]); mu[j]=NN_P0(G0[j]); reuse exact original full100k maps without rematching",
+    "displacement": {
+      "pred_to_gt": "mean_i_in_I norm((Pt[i]-P0[i])-(Gt[nu[i]]-G0[nu[i]]))",
+      "gt_to_pred": "mean_j_in_J norm((Pt[mu[j]]-P0[mu[j]])-(Gt[j]-G0[j]))",
+      "primary_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "units": "aligned dataset coordinate units"
+    },
+    "velocity": {
+      "operator": "X[t]-X[t-1]",
+      "primary_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "units": "coordinate units per frame"
+    },
+    "acceleration": {
+      "operator": "X[t]-2*X[t-1]+X[t-2]",
+      "primary_frames": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "units": "coordinate units per frame squared"
+    },
+    "aggregation": "Unsquared Euclidean vector error, mean queries in each direction, then sum two direction means; temporal mean over valid frames only",
+    "amplitude_ratio": "Mean predicted vector magnitude divided by matched GT mean vector magnitude, separately by direction and order. Sequence ratio divides aggregate means, never averages pointwise/per-frame ratios",
+    "zero_gt_epsilon": 1e-12,
+    "zero_gt_policy": "Ratio is null at GT mean <= epsilon; report zero-GT and spurious-prediction flags; never substitute zero error or infinity",
+    "precision": "float32 cached source clouds; selected trajectories promoted to float64 before all differences, norms and means",
+    "interpretation": [
+      "Subtracting each paired trajectory's initial position removes constant positional offsets only conditional on the fixed pairing",
+      "Wrong first-frame NN/material pairing, anisotropic alignment, sampling and occlusion remain confounds; this is not geometry-independent ground-truth motion",
+      "Official CD-M uses absolute tracked point positions and full100k queries; this auxiliary readout uses differences and10k queries. Do not subtract or compare their scalar summaries as an algebraic decomposition",
+      "Velocity and acceleration use frame indices; unknown physical frame rate prevents claims in units per second",
+      "Magnitude agreement does not establish direction, phase or material correctness; inspect vector errors alongside ratios",
+      "GT is used only for evaluation. No GT-guided steering, oracle generation, model inference or training is performed",
+      "Two frozen seed42 assets only; frames, derivatives and query samples are not extra independent assets"
+    ],
+    "future_arm_comparison": "Qualify arm completion/source hashes and exact native frame0/topology/query identity first. Use identical saved material sampling, shared matrix, maps and query IDs; do not fit a new map for the arm",
+    "not_recomputed": [
+      "CD3D",
+      "CD4D",
+      "CD-M",
+      "nearest-neighbour maps",
+      "ICP",
+      "surface sampling"
+    ]
+  },
+  "arms": {
+    "row_permutation": {
+      "status": "completed",
+      "summaries": {
+        "displacement": {
+          "frames": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_count": 15,
+          "pred_to_gt": {
+            "mean_endpoint_error": 0.06100628524560833,
+            "predicted_mean_magnitude": 0.1738168992179883,
+            "gt_mean_magnitude": 0.1686650791600913,
+            "predicted_to_gt_magnitude_ratio": 1.0305446751844052,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "gt_to_pred": {
+            "mean_endpoint_error": 0.06488127051991546,
+            "predicted_mean_magnitude": 0.17367087109658208,
+            "gt_mean_magnitude": 0.1772240234198334,
+            "predicted_to_gt_magnitude_ratio": 0.9799510684009577,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "sum_directional_mean_endpoint_error": 0.1258875557655238
+        },
+        "velocity": {
+          "frames": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_count": 15,
+          "pred_to_gt": {
+            "mean_endpoint_error": 0.015379685618275424,
+            "predicted_mean_magnitude": 0.033179535169754824,
+            "gt_mean_magnitude": 0.03319287069574825,
+            "predicted_to_gt_magnitude_ratio": 0.9995982412574176,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "gt_to_pred": {
+            "mean_endpoint_error": 0.01575722090839273,
+            "predicted_mean_magnitude": 0.033413617866068654,
+            "gt_mean_magnitude": 0.03464149662664565,
+            "predicted_to_gt_magnitude_ratio": 0.9645546849834272,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "sum_directional_mean_endpoint_error": 0.031136906526668156
+        },
+        "acceleration": {
+          "frames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_count": 14,
+          "pred_to_gt": {
+            "mean_endpoint_error": 0.010015400785706835,
+            "predicted_mean_magnitude": 0.012720507545651485,
+            "gt_mean_magnitude": 0.012892166778885146,
+            "predicted_to_gt_magnitude_ratio": 0.9866849974734422,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "gt_to_pred": {
+            "mean_endpoint_error": 0.010154491294409752,
+            "predicted_mean_magnitude": 0.012662458498067488,
+            "gt_mean_magnitude": 0.01349707652410509,
+            "predicted_to_gt_magnitude_ratio": 0.9381630514914088,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "sum_directional_mean_endpoint_error": 0.02016989208011659
+        }
+      },
+      "cloud_array_sha256": "a7559ce85439bda08173bb50c684bf99f0d52d2ca3ca372c3f6756072ee8c345",
+      "source_sequence_sha256": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e"
+    },
+    "time_reversal": {
+      "status": "completed",
+      "summaries": {
+        "displacement": {
+          "frames": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_count": 15,
+          "pred_to_gt": {
+            "mean_endpoint_error": 0.060783031155810775,
+            "predicted_mean_magnitude": 0.17248511508570658,
+            "gt_mean_magnitude": 0.1686650791600913,
+            "predicted_to_gt_magnitude_ratio": 1.0226486475127992,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "gt_to_pred": {
+            "mean_endpoint_error": 0.06473894980896375,
+            "predicted_mean_magnitude": 0.1722981057534218,
+            "gt_mean_magnitude": 0.1772240234198334,
+            "predicted_to_gt_magnitude_ratio": 0.9722051357860081,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "sum_directional_mean_endpoint_error": 0.12552198096477452
+        },
+        "velocity": {
+          "frames": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_count": 15,
+          "pred_to_gt": {
+            "mean_endpoint_error": 0.015506659154824947,
+            "predicted_mean_magnitude": 0.03293572758906302,
+            "gt_mean_magnitude": 0.03319287069574825,
+            "predicted_to_gt_magnitude_ratio": 0.992253062139691,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "gt_to_pred": {
+            "mean_endpoint_error": 0.01588742049833008,
+            "predicted_mean_magnitude": 0.03317003118376056,
+            "gt_mean_magnitude": 0.03464149662664565,
+            "predicted_to_gt_magnitude_ratio": 0.9575230406831422,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "sum_directional_mean_endpoint_error": 0.03139407965315503
+        },
+        "acceleration": {
+          "frames": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_count": 14,
+          "pred_to_gt": {
+            "mean_endpoint_error": 0.01020479182668837,
+            "predicted_mean_magnitude": 0.012693904083054541,
+            "gt_mean_magnitude": 0.012892166778885146,
+            "predicted_to_gt_magnitude_ratio": 0.9846214605169924,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "gt_to_pred": {
+            "mean_endpoint_error": 0.010324303163308544,
+            "predicted_mean_magnitude": 0.012626798640172908,
+            "gt_mean_magnitude": 0.01349707652410509,
+            "predicted_to_gt_magnitude_ratio": 0.935521008391861,
+            "zero_gt_motion": false,
+            "spurious_prediction_motion_when_gt_zero": false
+          },
+          "sum_directional_mean_endpoint_error": 0.020529094989996916
+        }
+      },
+      "cloud_array_sha256": "6de492e8e3dbbc1974ad90c33f9a68e6b1c8f47f39a44ae83396b8235848326a",
+      "source_sequence_sha256": "30a9dca36e150c97274a25beef3a4f610f3e9e3b9be62d455df16475756d4513"
+    }
+  },
+  "source_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/report.json": "0c49e4972b7b693c1132cb1e28661eca694094a3c5ec10f018582c306c3e4657",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction-eval/mannequin-seed42-v2/report.json": "ddfd26619ad1d3845a0204b3caa707b022a3e6d188a82655880e81373b78d1aa",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction-eval/mannequin-seed42-v2/provenance.json": "738dcb1131b5b1c52bbbe03e66761c509b1bc5a2e3221dc26240ba03aafe45e4",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/report.json": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/shared-anchor-transform.npy": "087faeccc3cddec510e984efe6895f11893497986fe65bf1f53d0befb31d2f65",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/report.json": "18f84982f0696655569be6d6a1e8674e77e36ef69de750ef3478964c7bfeaad0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/provenance.json": "522e532e0e3f711a0b2119f0fdd4226ed7545a77743ec1eb2b16bbad39486a1f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/protocol.json": "bb6f98c91c457d005a79977aa467a84ab1f636aacaed1b940a2579c96b66b665",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/controls.json": "dba4ffd3f41445d2c1ba3ef28b06ae58c8c06171de96de46addaf4d94da6a975",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/per-frame-shape.json": "a96108329aaa2f5ddfa9508486e961ec0f3867a702d2de1c2f64c934f089b0e0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/sampling-and-maps.npz": "483b25a06f701cf432ab6b54e6365770e1e6dd6f00d65fd5d7bc47dd210ac37a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/forward/report.json": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/forward/sequence.npz": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/row_permutation/report.json": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/row_permutation/sequence.npz": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/time_reversal/report.json": "675fdff12d4be3aa2f5f7d3337087d64478a742f54ee7950dfb40d568bc86718",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/time_reversal/sequence.npz": "30a9dca36e150c97274a25beef3a4f610f3e9e3b9be62d455df16475756d4513",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/prepared.npz": "6e4bdcee50dde10cc3261a621b888a127012b16eadbab89ad7fdd32ed4fab12d",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/denoised.npz": "378c94754bfde49714012b0bccce38488f4cdb10b71b9439142c5a901ae31785",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/code-provenance.json": "19e05a62168cb31b128faf0928882ac3927f5d0848332368909e5b3a3334b0c0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/aligned-material-clouds.npz": "dee52e6578c0fc14dbc7ba231ed95744a50fd2339d5112bab39f2a688f203230",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_direction_motion.py": "29716caace8b3250ab88d3dc272a219b812229b9181d93847af32bb31459d657",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_motion_readout.py": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_time_direction_eval.py": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_eval.py": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_motion_controls.py": "f5fdb10d3443a8c1f605e58b6d08c450cfb87d63d7e1031189a0cc4bd899d6aa",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_stage_gt.py": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_time_direction.py": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_three_ideas.py": "f0cfd328e15293ff0b83d3af88caeb63b61e1adf565c75a0887d4412cf1c2830",
+    "/root/rivermind-data/actionmesh-repro/repo/actionbench/benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+    "/root/rivermind-data/actionmesh-repro/repo/actionbench/chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+    "/root/rivermind-data/actionmesh-repro/repo/actionbench/icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+    "/root/rivermind-data/actionmesh-repro/repo/actionbench/sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+    "/root/rivermind-data/actionmesh-repro/repo/actionbench/sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+    "/root/rivermind-data/actionmesh-repro/repo/actionbench/evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+  },
+  "evaluator_provenance_sha256": "738dcb1131b5b1c52bbbe03e66761c509b1bc5a2e3221dc26240ba03aafe45e4",
+  "independent_evaluation_sources_qualified": true,
+  "scope": "Developmental auxiliary readout; exact first-frame NN remains a conditional correspondence, not semantic GT identity.",
+  "official_CD_recomputed": false,
+  "ICP_run": false,
+  "model_loaded": false,
+  "all16frames": true,
+  "seconds": 6.623362654121593,
+  "cuda_initialized": false
+}

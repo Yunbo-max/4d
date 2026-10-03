@@ -1,0 +1,7 @@
+{
+  "pid": 41175,
+  "process_group_id": 41175,
+  "started_utc": "2026-10-02T19:27:57.436169+00:00",
+  "script_sha256": "19f1da2f3872a69b04acdfdb4638677180c48aca90f13b1f6a88b790256f70d5",
+  "receipt": "/root/rivermind-data/actionmesh-repro/research/census-20261002/direction-after-census-v2.json"
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-02",
+  "status": "research hypotheses; no new GPU efficacy results",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "c3ab7b3a96034c5af3fb27e40d587a04e7518f39076631c30f45776572aaf92a"
+    },
+    {
+      "path": "question-cards.json",
+      "sha256": "b60f5dff073a87cf99dae85446ed4d86a64005e4091fe0bc687cf68abf4b3d5b"
+    },
+    {
+      "path": "algebra-sanity.json",
+      "sha256": "8c89e0782a6681af7692663617bbef6dec368be7c0a11b31118191871832d74c"
+    },
+    {
+      "path": "literature/new-directions-contact-20261002.md",
+      "sha256": "c9e38ce30557087faa8195d437a3904dbdf526c6b68d488918045c5736e63b86"
+    },
+    {
+      "path": "literature/new-directions-contact-math-20261002.md",
+      "sha256": "b893b40b183c4c4e3b8b55d716a117863d1e24be76040f48189ac7e691851d3a"
+    },
+    {
+      "path": "literature/new-directions-editing-20261002.md",
+      "sha256": "b25b5b47bd13bc3f49927afd6689d6d1484269e875b319ffa37784894e1c4baf"
+    },
+    {
+      "path": "literature/new-directions-editing-math-20261002.md",
+      "sha256": "ca986541fe5bab7a1a6814eb3829cdd0b966e664b4f0e3658531e8898b8b9e86"
+    },
+    {
+      "path": "literature/new-directions-observability-20261002-report.md",
+      "sha256": "67cc3f0e201a1a378581ad666ca414afb29812458c8ebb9dffb42d8e03b1f523"
+    },
+    {
+      "path": "literature/new-directions-observability-math-20261002.md",
+      "sha256": "767f4f6512cc73b588a5c331470d990e8e5804b5aba6de6f4bcdf374d53a631f"
+    }
+  ]
+}

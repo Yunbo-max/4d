@@ -1,0 +1,68 @@
+{
+  "status": "completed",
+  "pid": 43620,
+  "jobs": [
+    {
+      "name": "mannequin",
+      "status": "completed",
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_disagreement_rank.py",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+        "--direction-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2",
+        "--probe-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+        "--native-cache-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1",
+        "--stage-gt-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1",
+        "--gt-dir",
+        "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+        "--protocol",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/census-disagreement-rank-protocol-20261002.json",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/disagreement-rank-v1/mannequin-seed42-v1",
+        "--max-seconds",
+        "240"
+      ],
+      "source_sha256": "b739db990f227a9dfff77d22024eae1231868f496686d4e0a6707d8331688557",
+      "pid": 43621,
+      "exit_code": 0,
+      "seconds": 2.2693448020145297
+    },
+    {
+      "name": "bat",
+      "status": "completed",
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_disagreement_rank.py",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+        "--direction-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/bat-seed42-v1",
+        "--probe-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1",
+        "--native-cache-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/bat-seed42-v1",
+        "--stage-gt-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+        "--gt-dir",
+        "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+        "--protocol",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/census-disagreement-rank-protocol-20261002.json",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/disagreement-rank-v1/bat-seed42-v1",
+        "--max-seconds",
+        "240"
+      ],
+      "source_sha256": "b739db990f227a9dfff77d22024eae1231868f496686d4e0a6707d8331688557",
+      "pid": 43627,
+      "exit_code": 0,
+      "seconds": 2.319390585180372
+    }
+  ]
+}

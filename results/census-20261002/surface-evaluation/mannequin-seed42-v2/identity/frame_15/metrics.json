@@ -1,0 +1,104 @@
+{
+  "frame": 15,
+  "surface_seed": 59,
+  "aligned_to_gt": {
+    "first_to_second_mean_unsquared": 0.03799660306363869,
+    "second_to_first_mean_unsquared": 0.04899978920965251,
+    "sum_unsquared": 0.0869963922732912,
+    "half_sum_unsquared": 0.0434981961366456,
+    "first_to_second_p95_unsquared": 0.10442122641755065,
+    "second_to_first_p95_unsquared": 0.14883804861449132,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "official_cd_scalar_crosscheck": 0.0869963922732912,
+  "stageI_surface_agreement_raw": {
+    "first_to_second_mean_unsquared": 0.012711799909629335,
+    "second_to_first_mean_unsquared": 0.013740143193856065,
+    "sum_unsquared": 0.0264519431034854,
+    "half_sum_unsquared": 0.0132259715517427,
+    "first_to_second_p95_unsquared": 0.026541615069110853,
+    "second_to_first_p95_unsquared": 0.03026033198511647,
+    "tree_points_per_set": 100000,
+    "query_points_per_direction": 10000,
+    "first_query_seed": 44,
+    "second_query_seed": 45
+  },
+  "geometry": {
+    "reference": "same-time unmodified Stage-II vertices and fixed faces",
+    "anchor_diagonal": 2.6802071721341636,
+    "triangle_area2_threshold": 7.18351048555941e-12,
+    "reference_degenerate_triangles": 0,
+    "degenerate_triangles": 0,
+    "new_degenerate_triangles": 0,
+    "total_area": 3.204997636090698,
+    "reference_total_area": 3.204997636090698,
+    "total_area_ratio": 1.0,
+    "triangle_area_ratio_quantiles": {
+      "0": 1.0,
+      "0.01": 1.0,
+      "0.05": 1.0,
+      "0.5": 1.0,
+      "0.95": 1.0,
+      "0.99": 1.0,
+      "1": 1.0
+    },
+    "new_area_collapse_below_10_percent": 0,
+    "normal_comparable_triangles": 39984,
+    "normal_orientation_reversals": 0,
+    "normal_cosine_quantiles": {
+      "0": 0.9999999999999998,
+      "0.01": 0.9999999999999998,
+      "0.05": 0.9999999999999998,
+      "0.5": 1.0,
+      "0.95": 1.0000000000000002,
+      "0.99": 1.0000000000000002,
+      "1": 1.0000000000000002
+    },
+    "unique_edges": 59976,
+    "reference_zero_length_edges": 0,
+    "edge_length_ratio_quantiles": {
+      "0": 1.0,
+      "0.01": 1.0,
+      "0.05": 1.0,
+      "0.5": 1.0,
+      "0.95": 1.0,
+      "0.99": 1.0,
+      "1": 1.0
+    },
+    "displacement_quantiles": {
+      "0": 0.0,
+      "0.01": 0.0,
+      "0.05": 0.0,
+      "0.5": 0.0,
+      "0.95": 0.0,
+      "0.99": 0.0,
+      "1": 0.0
+    },
+    "displacement_over_anchor_diagonal_quantiles": {
+      "0": 0.0,
+      "0.01": 0.0,
+      "0.05": 0.0,
+      "0.5": 0.0,
+      "0.95": 0.0,
+      "0.99": 0.0,
+      "1": 0.0
+    },
+    "fixed_trust_radius": 0.05360414344268327,
+    "trust_radius_violations": 0,
+    "at_trust_radius_fraction": 0.0,
+    "topology_unchanged": true,
+    "interpretation": "Fixed topology does not prevent crossings/folds; normal sign and area are diagnostics, not complete self-intersection tests."
+  },
+  "samples_sha256": "122a1b6a86905c4b0f058d0f1804893e97ee004628f72e37456527a159578cb3",
+  "identity_vs_saved_stageII_cd_difference": 0.0,
+  "identity_vs_saved_stageII_aligned_sample_max_difference": 0.0,
+  "effect_vs_identity": {
+    "cd_delta": 0.0,
+    "relative_cd_improvement": 0.0,
+    "stageI_sampled_cd_delta": 0.0,
+    "stageI_sampled_cd_relative_reduction": 0.0
+  }
+}

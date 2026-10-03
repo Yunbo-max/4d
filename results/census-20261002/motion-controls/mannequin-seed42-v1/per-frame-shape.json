@@ -1,0 +1,182 @@
+{
+  "frames": [
+    {
+      "frame": 0,
+      "independent_sample_seed": 44,
+      "official_framewise_cd_shared_alignment": 0.05667908281266629,
+      "material_cloud_query10k_cd_native": 0.056928178140878964,
+      "material_cloud_query10k_cd_negative": 0.056928178140878964,
+      "material_cloud_query10k_cd_positive": 0.056928178140878964,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.056828160535262344,
+      "fixed_assignment_minus_full_query_shape_gap": 0.0
+    },
+    {
+      "frame": 1,
+      "independent_sample_seed": 45,
+      "official_framewise_cd_shared_alignment": 0.05655395059608382,
+      "material_cloud_query10k_cd_native": 0.05657842280108619,
+      "material_cloud_query10k_cd_negative": 0.05657842280108619,
+      "material_cloud_query10k_cd_positive": 0.05657842280108619,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.056494535263653944,
+      "fixed_assignment_minus_full_query_shape_gap": 0.012186210943694237
+    },
+    {
+      "frame": 2,
+      "independent_sample_seed": 46,
+      "official_framewise_cd_shared_alignment": 0.05827842414029324,
+      "material_cloud_query10k_cd_native": 0.058471761686373136,
+      "material_cloud_query10k_cd_negative": 0.058471761686373136,
+      "material_cloud_query10k_cd_positive": 0.058471761686373136,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.05818074883483193,
+      "fixed_assignment_minus_full_query_shape_gap": 0.024598537811713186
+    },
+    {
+      "frame": 3,
+      "independent_sample_seed": 47,
+      "official_framewise_cd_shared_alignment": 0.05920616411596566,
+      "material_cloud_query10k_cd_native": 0.05971612528252849,
+      "material_cloud_query10k_cd_negative": 0.05971612528252849,
+      "material_cloud_query10k_cd_positive": 0.05971612528252849,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.059387330810603906,
+      "fixed_assignment_minus_full_query_shape_gap": 0.031022944939897545
+    },
+    {
+      "frame": 4,
+      "independent_sample_seed": 48,
+      "official_framewise_cd_shared_alignment": 0.06272800120765874,
+      "material_cloud_query10k_cd_native": 0.06283378819300943,
+      "material_cloud_query10k_cd_negative": 0.06283378819300944,
+      "material_cloud_query10k_cd_positive": 0.06283378819300943,
+      "max_control_shape_cd_difference": 1.3877787807814457e-17,
+      "material_cloud_full100k_query_cd": 0.06250434670406588,
+      "fixed_assignment_minus_full_query_shape_gap": 0.036640293113668176
+    },
+    {
+      "frame": 5,
+      "independent_sample_seed": 49,
+      "official_framewise_cd_shared_alignment": 0.06602306166759772,
+      "material_cloud_query10k_cd_native": 0.06653983699337883,
+      "material_cloud_query10k_cd_negative": 0.06653983699337883,
+      "material_cloud_query10k_cd_positive": 0.06653983699337881,
+      "max_control_shape_cd_difference": 1.3877787807814457e-17,
+      "material_cloud_full100k_query_cd": 0.06600859390535384,
+      "fixed_assignment_minus_full_query_shape_gap": 0.044320195429258566
+    },
+    {
+      "frame": 6,
+      "independent_sample_seed": 50,
+      "official_framewise_cd_shared_alignment": 0.0691952810009914,
+      "material_cloud_query10k_cd_native": 0.06975719305084124,
+      "material_cloud_query10k_cd_negative": 0.06975719305084124,
+      "material_cloud_query10k_cd_positive": 0.06975719305084124,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.06896893871431731,
+      "fixed_assignment_minus_full_query_shape_gap": 0.052415928349585514
+    },
+    {
+      "frame": 7,
+      "independent_sample_seed": 51,
+      "official_framewise_cd_shared_alignment": 0.07033420392235387,
+      "material_cloud_query10k_cd_native": 0.07142573343362207,
+      "material_cloud_query10k_cd_negative": 0.07142573343362207,
+      "material_cloud_query10k_cd_positive": 0.07142573343362207,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.07050929130995148,
+      "fixed_assignment_minus_full_query_shape_gap": 0.05996374573776986
+    },
+    {
+      "frame": 8,
+      "independent_sample_seed": 52,
+      "official_framewise_cd_shared_alignment": 0.07010537720774633,
+      "material_cloud_query10k_cd_native": 0.0709659321007224,
+      "material_cloud_query10k_cd_negative": 0.0709659321007224,
+      "material_cloud_query10k_cd_positive": 0.0709659321007224,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.07002362235142767,
+      "fixed_assignment_minus_full_query_shape_gap": 0.06388001890771164
+    },
+    {
+      "frame": 9,
+      "independent_sample_seed": 53,
+      "official_framewise_cd_shared_alignment": 0.07125969568859669,
+      "material_cloud_query10k_cd_native": 0.07211489844901109,
+      "material_cloud_query10k_cd_negative": 0.07211489844901109,
+      "material_cloud_query10k_cd_positive": 0.07211489844901109,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.07133766904192942,
+      "fixed_assignment_minus_full_query_shape_gap": 0.0679680647032557
+    },
+    {
+      "frame": 10,
+      "independent_sample_seed": 54,
+      "official_framewise_cd_shared_alignment": 0.07353886565577816,
+      "material_cloud_query10k_cd_native": 0.07370389684573411,
+      "material_cloud_query10k_cd_negative": 0.07370389684573411,
+      "material_cloud_query10k_cd_positive": 0.07370389684573411,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.0732320015166439,
+      "fixed_assignment_minus_full_query_shape_gap": 0.07518117894272679
+    },
+    {
+      "frame": 11,
+      "independent_sample_seed": 55,
+      "official_framewise_cd_shared_alignment": 0.07458897786050514,
+      "material_cloud_query10k_cd_native": 0.07508850446746104,
+      "material_cloud_query10k_cd_negative": 0.07508850446746104,
+      "material_cloud_query10k_cd_positive": 0.07508850446746103,
+      "max_control_shape_cd_difference": 1.3877787807814457e-17,
+      "material_cloud_full100k_query_cd": 0.07474677165727321,
+      "fixed_assignment_minus_full_query_shape_gap": 0.08434932002141778
+    },
+    {
+      "frame": 12,
+      "independent_sample_seed": 56,
+      "official_framewise_cd_shared_alignment": 0.07740917901707896,
+      "material_cloud_query10k_cd_native": 0.07667222844726237,
+      "material_cloud_query10k_cd_negative": 0.07667222844726235,
+      "material_cloud_query10k_cd_positive": 0.07667222844726235,
+      "max_control_shape_cd_difference": 2.7755575615628914e-17,
+      "material_cloud_full100k_query_cd": 0.07635959660609651,
+      "fixed_assignment_minus_full_query_shape_gap": 0.09165600674117863
+    },
+    {
+      "frame": 13,
+      "independent_sample_seed": 57,
+      "official_framewise_cd_shared_alignment": 0.08193490442245943,
+      "material_cloud_query10k_cd_native": 0.08127964597484175,
+      "material_cloud_query10k_cd_negative": 0.08127964597484175,
+      "material_cloud_query10k_cd_positive": 0.08127964597484175,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.08090395979314813,
+      "fixed_assignment_minus_full_query_shape_gap": 0.09523397773548181
+    },
+    {
+      "frame": 14,
+      "independent_sample_seed": 58,
+      "official_framewise_cd_shared_alignment": 0.085915059209487,
+      "material_cloud_query10k_cd_native": 0.08542857315505634,
+      "material_cloud_query10k_cd_negative": 0.08542857315505634,
+      "material_cloud_query10k_cd_positive": 0.08542857315505634,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.08494070024401082,
+      "fixed_assignment_minus_full_query_shape_gap": 0.09631451779971731
+    },
+    {
+      "frame": 15,
+      "independent_sample_seed": 59,
+      "official_framewise_cd_shared_alignment": 0.0869963922732912,
+      "material_cloud_query10k_cd_native": 0.08721692062404829,
+      "material_cloud_query10k_cd_negative": 0.08721692062404829,
+      "material_cloud_query10k_cd_positive": 0.08721692062404829,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.08669919758283268,
+      "fixed_assignment_minus_full_query_shape_gap": 0.09105161775752951
+    }
+  ],
+  "shared_alignment_cd4d_16frame_mean": 0.0700466637999096,
+  "historical_evaluator_bitwise_identity_claimed": false
+}

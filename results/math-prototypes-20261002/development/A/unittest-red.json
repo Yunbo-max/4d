@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research_math/tests",
+    "-p",
+    "test_correlated.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "phase": "before implementation"
+}

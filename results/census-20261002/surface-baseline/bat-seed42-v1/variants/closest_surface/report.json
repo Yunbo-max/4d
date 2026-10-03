@@ -1,0 +1,98 @@
+{
+  "status": "completed",
+  "variant": "closest_surface",
+  "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+  "seed": 42,
+  "solver_qualified": false,
+  "frame_reports": [
+    {
+      "frame": 0,
+      "solver": {
+        "numerically_qualified": true,
+        "bypass": "exact original bytes"
+      },
+      "geometry": {
+        "mean_surface_distance": 0.00018340989975072872,
+        "p95_surface_distance": 0.0008387897452582941,
+        "mean_squared_surface_distance_over_D2": 1.9995216081814364e-08,
+        "max_displacement_over_D": 0.0,
+        "trust_violation_over_D": 0.0,
+        "trust_boundary_fraction": 0.0,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 0,
+        "new_degenerate_faces": 0,
+        "orientation_reversal_count_relative_native": 0,
+        "edge_length_ratio_quantiles_01_50_99": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": true,
+      "frame_artifact_sha256": "818fe5a08c5896b04b995200eaaa5f225964d02f6bd64289dd18377296bb2ecc"
+    },
+    {
+      "frame": 8,
+      "solver": {
+        "numerically_qualified": true
+      },
+      "geometry": {
+        "mean_surface_distance": 1.9195153217669544e-06,
+        "p95_surface_distance": 2.0740403433399742e-08,
+        "mean_squared_surface_distance_over_D2": 1.0795503052618216e-09,
+        "max_displacement_over_D": 0.020000005926852533,
+        "trust_violation_over_D": 5.926852533061355e-09,
+        "trust_boundary_fraction": 0.0006523484544359695,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 1459,
+        "new_degenerate_faces": 1459,
+        "orientation_reversal_count_relative_native": 1728,
+        "edge_length_ratio_quantiles_01_50_99": [
+          0.0,
+          0.9872039025470918,
+          3.7877560546591154
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": false,
+      "frame_artifact_sha256": "73183e8d80e7667997c6009a2999062083bc9d68e10819d9814d987d25e9972b"
+    },
+    {
+      "frame": 15,
+      "solver": {
+        "numerically_qualified": true
+      },
+      "geometry": {
+        "mean_surface_distance": 7.901159223874788e-05,
+        "p95_surface_distance": 1.7491327413354364e-08,
+        "mean_squared_surface_distance_over_D2": 4.1651308663834773e-07,
+        "max_displacement_over_D": 0.020000007257639292,
+        "trust_violation_over_D": 7.257639291630147e-09,
+        "trust_boundary_fraction": 0.0034122842232035327,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 1267,
+        "new_degenerate_faces": 1267,
+        "orientation_reversal_count_relative_native": 2010,
+        "edge_length_ratio_quantiles_01_50_99": [
+          0.0,
+          0.9866178282061813,
+          3.525148943948659
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": false,
+      "frame_artifact_sha256": "8457a433ac3e0eaac55d9a25a1377e75d344f7652a2996413c8db18cf8716132"
+    }
+  ],
+  "started_utc": "2026-10-02T18:46:01.958217+00:00",
+  "sequence_sha256": "c6db9b43e948630c975fb45f6761158f4edeaf89baa03f5d72c61b171837181d",
+  "anchor_bitwise_held": true,
+  "vertex_dtype": "float32",
+  "geometry_only": true,
+  "ended_utc": "2026-10-02T18:48:03.670459+00:00",
+  "elapsed_seconds": 121.71206888789311
+}

@@ -1,0 +1,18 @@
+{
+  "dataset": "facebook/actionbench",
+  "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "selection": "lexicographic first four UIDs, before observing arrays or results; developmental nonrepresentative subset",
+  "uids": [
+    "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+    "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+    "000-001_095641b042f049c3aa86792836f8993d",
+    "000-003_90288386ca914411ab648f08db734fea"
+  ],
+  "files": [
+    "data/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+    "data/000-000_f15298421b3d4e0fab4c43863a7e72fd/surfaces.npy",
+    "data/000-001_095641b042f049c3aa86792836f8993d/surfaces.npy",
+    "data/000-003_90288386ca914411ab648f08db734fea/surfaces.npy"
+  ],
+  "purpose": "surface-normal relief edit propagation; not official ActionBench generation benchmark"
+}

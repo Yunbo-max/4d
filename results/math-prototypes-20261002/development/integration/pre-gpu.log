@@ -1,0 +1,24 @@
+test_constructed_demo_explicitly_allows_output_baseline_to_win (research_math.tests.test_controllability.ControllabilityTests.test_constructed_demo_explicitly_allows_output_baseline_to_win) ... ok
+test_contract_only_projector_can_leave_model_tangent (research_math.tests.test_controllability.ControllabilityTests.test_contract_only_projector_can_leave_model_tangent) ... ok
+test_contract_orthogonality_roundoff_does_not_destroy_nullspace (research_math.tests.test_controllability.ControllabilityTests.test_contract_orthogonality_roundoff_does_not_destroy_nullspace) ... ok
+test_full_spd_edit_metric_changes_optimum (research_math.tests.test_controllability.ControllabilityTests.test_full_spd_edit_metric_changes_optimum) ... ok
+test_invalid_metrics_shapes_and_nonfinite_inputs_fail (research_math.tests.test_controllability.ControllabilityTests.test_invalid_metrics_shapes_and_nonfinite_inputs_fail) ... ok
+test_invertible_latent_reparameterization (research_math.tests.test_controllability.ControllabilityTests.test_invertible_latent_reparameterization) ... ok
+test_metric_projection_and_first_order_preservation (research_math.tests.test_controllability.ControllabilityTests.test_metric_projection_and_first_order_preservation) ... ok
+test_nested_gap_and_false_nesting_refusal (research_math.tests.test_controllability.ControllabilityTests.test_nested_gap_and_false_nesting_refusal) ... ok
+test_nonlinear_acceptance_backtracks_and_does_not_hide_rejection (research_math.tests.test_controllability.ControllabilityTests.test_nonlinear_acceptance_backtracks_and_does_not_hide_rejection) ... ok
+test_nullspace_rank_deficient_and_empty (research_math.tests.test_controllability.ControllabilityTests.test_nullspace_rank_deficient_and_empty) ... ok
+test_output_coordinates_and_metric_transform_together (research_math.tests.test_controllability.ControllabilityTests.test_output_coordinates_and_metric_transform_together) ... ok
+test_trust_solve_is_not_clipped_unbounded_solution (research_math.tests.test_controllability.ControllabilityTests.test_trust_solve_is_not_clipped_unbounded_solution) ... ok
+test_unbounded_reachability_does_not_imply_bounded_success (research_math.tests.test_controllability.ControllabilityTests.test_unbounded_reachability_does_not_imply_bounded_success) ... ok
+test_unreachable_rank_deficient_and_no_direction (research_math.tests.test_controllability.ControllabilityTests.test_unreachable_rank_deficient_and_no_direction) ... ok
+test_zero_radius_and_zero_target_are_not_nan_scores (research_math.tests.test_controllability.ControllabilityTests.test_zero_radius_and_zero_target_are_not_nan_scores) ... ok
+test_contract_preserves_middle_frame_and_edit_targets_late_frame (research_math.tests.test_native_probe.NativeProbeTests.test_contract_preserves_middle_frame_and_edit_targets_late_frame) ... ok
+test_native_source_hash_mismatch_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_native_source_hash_mismatch_rejected) ... ok
+test_nonfinite_or_degenerate_controls_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_nonfinite_or_degenerate_controls_rejected) ... ok
+test_query_controls_keep_normals_unchanged (research_math.tests.test_native_probe.NativeProbeTests.test_query_controls_keep_normals_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.044s
+
+OK

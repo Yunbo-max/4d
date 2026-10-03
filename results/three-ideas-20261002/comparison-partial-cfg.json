@@ -1,0 +1,36 @@
+{
+  "baseline": {
+    "frames": 16,
+    "vertices": 19999,
+    "triangles": 39994,
+    "finite": true,
+    "fixed_reference_scale": 2.775290388570003,
+    "anchor_max_abs_difference": 0.0,
+    "same_index_mean_distance_to_unmodified_over_scale": 0.0,
+    "mean_displacement_from_anchor_over_scale": 0.04079809009337042,
+    "mean_frame_speed_over_scale": 0.011230725383534666,
+    "frame_speed_retention_vs_unmodified": 1.0,
+    "mean_frame_acceleration_over_scale": 0.00653824301542565,
+    "edge_absolute_log_strain_p95": 0.22444869736254902,
+    "edge_absolute_log_strain_mean": 0.07275549195976298,
+    "bbox_diagonal_max_over_anchor": 1.0052962582236695,
+    "frame_centroid_distance_to_unmodified_over_scale": 0.0
+  },
+  "cfg_cap": {
+    "frames": 16,
+    "vertices": 19999,
+    "triangles": 39994,
+    "finite": true,
+    "fixed_reference_scale": 2.775290388570003,
+    "anchor_max_abs_difference": 0.0,
+    "same_index_mean_distance_to_unmodified_over_scale": 0.0007465913163144184,
+    "mean_displacement_from_anchor_over_scale": 0.040817198195591244,
+    "mean_frame_speed_over_scale": 0.0112513459956054,
+    "frame_speed_retention_vs_unmodified": 1.0018360890651787,
+    "mean_frame_acceleration_over_scale": 0.006562041014836528,
+    "edge_absolute_log_strain_p95": 0.22219496433267136,
+    "edge_absolute_log_strain_mean": 0.0719889666605025,
+    "bbox_diagonal_max_over_anchor": 1.0048405063991208,
+    "frame_centroid_distance_to_unmodified_over_scale": 0.00011006074743396752
+  }
+}

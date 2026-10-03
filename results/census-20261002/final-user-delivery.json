@@ -1,0 +1,2613 @@
+{
+  "status": "completed",
+  "utc": "2026-10-02T20:14:12.963662+00:00",
+  "destination": "/Users/yunbo/Documents/4d",
+  "files": [
+    {
+      "path": "results/census-20261002/final10-direction-delivery.json",
+      "bytes": 10423,
+      "sha256": "fd230a8c16c05756b5dc41d77994eee934c6133f125d225eb82b48e77c9b74c8"
+    },
+    {
+      "path": "results/census-20261002/primary8-delivery.json",
+      "bytes": 541,
+      "sha256": "b2eaeb95f272e1708e870c3a66210d43af4deef022faf66c0d169d8a9787dc8b"
+    },
+    {
+      "path": "results/census-20261002/stage8-motion-ranking-delivery.json",
+      "bytes": 948,
+      "sha256": "cd55eff0da44c8a88cd5e00ff9778aa960dfa6b2ceab421c0d3814c9b9cc1be9"
+    },
+    {
+      "path": "results/census-20261002/census-conclusions.json",
+      "bytes": 13754,
+      "sha256": "1466b0151414c08bcc476d21e9ac657065d56e09fb07fa1bcf394461c46c242c"
+    },
+    {
+      "path": "results/census-20261002/scheduled-direction-batch.json",
+      "bytes": 455,
+      "sha256": "7189f9ef7d845c9f763951016806cac398efe2fa8bec1a947271325ef63c60da"
+    },
+    {
+      "path": "results/census-20261002/README.md",
+      "bytes": 8613,
+      "sha256": "ea9445ee4b686d6e636ea3193dc3a46057363b1c2b343577ef0339054f483fd3"
+    },
+    {
+      "path": "results/census-20261002/controls-surface-v1-delivery.json",
+      "bytes": 5863,
+      "sha256": "1dc410ffc22369124ff355584e0910b5e9a333d59a3005713d791be184c2d659"
+    },
+    {
+      "path": "results/census-20261002/surface-v2-direction-v1-delivery.json",
+      "bytes": 282,
+      "sha256": "458f167d836834766a2ea5f63cbbfc1c9c44a45bacfa6083d8c8bc4cd210daab"
+    },
+    {
+      "path": "results/census-20261002/protocol.md",
+      "bytes": 5945,
+      "sha256": "81078d860af7abab874393234138c3aeff07cca5ea4e9b6009c693425d0485b1"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__frame00.png",
+      "bytes": 44680,
+      "sha256": "4d8bf36bfbcb2dfdbf71bda43fb3bbb4cee6f2e3d44412edd4a052940ae1fbea"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/projection-contact-sheet.png",
+      "bytes": 740358,
+      "sha256": "e70098a19efaf7984c24ac643d132515e9443dc968c302febe7dd30d2c6390fa"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__frame15.png",
+      "bytes": 47195,
+      "sha256": "b38d60294203524cef2b4bb147e3ebb466227feb02281d86b06036affbe092aa"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-078_b0b646eb731848f7837ab8257dfc658c__frame00.png",
+      "bytes": 73085,
+      "sha256": "109c3f4717038fcf7d683af0b69d9f6e879b8c4f9ae13ee117a5768f19649878"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-078_b0b646eb731848f7837ab8257dfc658c__frame15.png",
+      "bytes": 70114,
+      "sha256": "ba7d07d2fb7cbbe5e8e240fcd19d63b43685ebae03302127170b785a6f26d5c0"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/report.json",
+      "bytes": 13016,
+      "sha256": "dbd43ffa20651e65a8c4208a7d6ac9d48258d5db5a925c1e6c27cfd50e507507"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-073_1008f82a1e4b4a5ea61e878803b997d0__frame15.png",
+      "bytes": 104331,
+      "sha256": "6a56173bcfb1c1a42cb87caa32be9299613bd82679f4b59405148e02f16f406d"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-073_1008f82a1e4b4a5ea61e878803b997d0__frame00.png",
+      "bytes": 94057,
+      "sha256": "20cf73978a1596db45b075c1ccbd93e09cfee77ea668039af23da7f49a7abcfe"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-037_1358c424008a43cbaa35eba5e58551ac__frame15.png",
+      "bytes": 50805,
+      "sha256": "2955b507c647041bd2ff6c2e94dc671bb867f98d02589a0a473e33b0bd08c2c2"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-046_3bb11febd0624d7f8b30f491fb317d58__frame00.png",
+      "bytes": 83019,
+      "sha256": "e815d039a4fbcba41b749fca82bada162bca361f02e2a2aba43fcdb0e482e277"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-046_3bb11febd0624d7f8b30f491fb317d58__frame15.png",
+      "bytes": 82083,
+      "sha256": "6ced399da46142ece0faba7f90cbd9073ad30c7a51513fe9dfc47c55b9f2f787"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-037_1358c424008a43cbaa35eba5e58551ac__frame00.png",
+      "bytes": 54988,
+      "sha256": "44bec26e1634f8930d836f95d3a51e62b1b2adda80e4b47308367f3c49c886cd"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-043_061697e330d44524bd11f8cf95772e2d__frame15.png",
+      "bytes": 38777,
+      "sha256": "2d3a3a46f6758d47060bd7997f76d1479270c1fa448b59a70d555fac7a420c97"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-014_6cf7de7d14064b23be17811d19a63f13__frame08.png",
+      "bytes": 80928,
+      "sha256": "432a962c30335c087f056f23a954597b97124509b69e6e4128b9f8f6e577649f"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-043_061697e330d44524bd11f8cf95772e2d__frame00.png",
+      "bytes": 38136,
+      "sha256": "21268d2e5b3ef88648c5f422a7184840b24c462b00dcadc5c46cb8ba980b3244"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-067_09a05166420843fab423047a799c87da__frame00.png",
+      "bytes": 57248,
+      "sha256": "f90906380a2b174e08e723180a69dc4a952a07a908bdda18ebe318dd47976452"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-067_09a05166420843fab423047a799c87da__frame15.png",
+      "bytes": 54901,
+      "sha256": "0adfe1803ac9bca527c6fdb5be9a2bfac334e7f155975925f581249648888684"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-037_1358c424008a43cbaa35eba5e58551ac__frame08.png",
+      "bytes": 50856,
+      "sha256": "e347ef53d19a791424c2cdb0346162bfae286c3d66e8a150cb9be802572e32e2"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-046_3bb11febd0624d7f8b30f491fb317d58__frame08.png",
+      "bytes": 87485,
+      "sha256": "c4d4afc95e037cea540a41d5e6d2a177243ec763ec9121e86ef774e38160b017"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-043_061697e330d44524bd11f8cf95772e2d__frame08.png",
+      "bytes": 36330,
+      "sha256": "eb145b25c3080f100f83523e38d88b7e20c5402fe9a712d4c9f8812209f01612"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-014_6cf7de7d14064b23be17811d19a63f13__frame00.png",
+      "bytes": 91175,
+      "sha256": "891349a35708477f3e2109551a89a33457f41cd26b72a915c9c8658d779d9263"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-014_6cf7de7d14064b23be17811d19a63f13__frame15.png",
+      "bytes": 85071,
+      "sha256": "9c4a7696e5c70c674344648dfaf24b34756c21edfb7d9abe79aa939a0ade77d6"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-067_09a05166420843fab423047a799c87da__frame08.png",
+      "bytes": 56429,
+      "sha256": "361a4592f5522006aa8446f61713a3777fc1f7d1f52353f152ef0ba78fd372c6"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/protocol.json",
+      "bytes": 569,
+      "sha256": "366ea544137a56109af67da97b781f9f9154f416521fd7e0d8e8fc2125709854"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__frame08.png",
+      "bytes": 45675,
+      "sha256": "ccc8a855bdc0ba32be1409d817886bcedc8a4811f159398d905f579c92799804"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-078_b0b646eb731848f7837ab8257dfc658c__frame08.png",
+      "bytes": 72110,
+      "sha256": "374308019001a2925b0b5b1c1751746f8d12cec17248e735ecb36f6baff7028b"
+    },
+    {
+      "path": "results/census-20261002/camera-check-v1/000-073_1008f82a1e4b4a5ea61e878803b997d0__frame08.png",
+      "bytes": 106618,
+      "sha256": "53a85f6469e77d514773665b47ab42daa1b06447a7894f2ae7ba56b0e959e44b"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/stagegt-000-078_b0b646eb731848f7837ab8257dfc658c__seed42.log",
+      "bytes": 439,
+      "sha256": "3328bf8d8b36e149a45feff2276051258fca462bab7395469e8384d3a7e0dd7f"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/probe-000-078_b0b646eb731848f7837ab8257dfc658c__seed42.log",
+      "bytes": 1682,
+      "sha256": "5a3becbbd4581c8f7aca58286ed8592eded5899d5e15b008d901a5b8ab728f14"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/probe-000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42.log",
+      "bytes": 1682,
+      "sha256": "4832af48cb601ae0d5fe592c39397f0b3ba9772c2c9e6260176dbaa815df6824"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/stagegt-000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42.log",
+      "bytes": 439,
+      "sha256": "db1b242ccad62b6c6fbb114260caf07fa696fc016df298bf68bf5e0a7f7bdcf3"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/stagegt-000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42.log",
+      "bytes": 437,
+      "sha256": "c19d2d30d499bbcf4bd7fa74c4d33f682f42c96b1fc5663e25495c0cc4952565"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/probe-000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42.log",
+      "bytes": 1682,
+      "sha256": "5fe3186f2d5ce32fc86d4d212889b343804f8eb8951a7cf347e300b60a8b93cd"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/probe-000-014_6cf7de7d14064b23be17811d19a63f13__seed42.log",
+      "bytes": 1685,
+      "sha256": "bc8e11c004567e5214990d06f95adbf211202258178e182a746e1fe87b937659"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/stagegt-000-014_6cf7de7d14064b23be17811d19a63f13__seed42.log",
+      "bytes": 439,
+      "sha256": "87c56c2b7cdf116d03498098a566ee19fd069bdf78e114e6b26b0f452b3d7aac"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/stagegt-000-046_3bb11febd0624d7f8b30f491fb317d58__seed42.log",
+      "bytes": 439,
+      "sha256": "e7c6cb26374a865c5387194bb12ad16be599f521966f09c696736829c6d0f822"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/probe-000-046_3bb11febd0624d7f8b30f491fb317d58__seed42.log",
+      "bytes": 1682,
+      "sha256": "34a73ab6f1daf1e65048d7e0f3b446926b575996f51e7d9696c2ab5555e94ecf"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/queue.json",
+      "bytes": 20406,
+      "sha256": "984728c81f6e7897b6ad5b0dfd609e47f5dcd0e808156176208e6dffd04732b6"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/manifest.json",
+      "bytes": 14497,
+      "sha256": "fa09175162348ac21e4f35f06dec89642b6460243aab33c72710ec5f9d814bbb"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/gpu-samples.jsonl",
+      "bytes": 62564,
+      "sha256": "4a066d280782c08ded2abbbd541c1f90bd1bd41a059288c66beb36a40a1a29c7"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/stagegt-000-067_09a05166420843fab423047a799c87da__seed42.log",
+      "bytes": 437,
+      "sha256": "26dbae3374896fb52d499a34feda0bae8f5931773345bfb28f94c6b1180081de"
+    },
+    {
+      "path": "results/census-20261002/queue-stage-remaining6-v1/probe-000-067_09a05166420843fab423047a799c87da__seed42.log",
+      "bytes": 1682,
+      "sha256": "15870c6232e406a45f159a6e4f5acc64d997a0c3eb05214b887b03be2767c71a"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-014_6cf7de7d14064b23be17811d19a63f13__seed42.json",
+      "bytes": 5559,
+      "sha256": "6fc7d9f525d8a6c3017eac597761f8a94e9488056a647150348cd1fc812fe5b9"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42.json",
+      "bytes": 5563,
+      "sha256": "46d4733b186e2f9dd3276a23c77d703792f67da57e770ae726b0b1eb5d2ea528"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-078_b0b646eb731848f7837ab8257dfc658c__seed42.json",
+      "bytes": 5567,
+      "sha256": "04ad105ccd31f3b33edc4a985f5603f00d2552f5851f016f6b90787759b19b58"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42.json",
+      "bytes": 5563,
+      "sha256": "79867cbea64fb7fa4f4b9447638ebf3fbfca2c8fe5bdba9e3ae7c732f32e1872"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed42.json",
+      "bytes": 5622,
+      "sha256": "d11c89067fef3f98058f69a74aefb81414034a3041fa7a05f95a3a7f4fbcff4b"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42.json",
+      "bytes": 5559,
+      "sha256": "e0914a44f2e838cdde7476a9dd5a183c08fe8a226a2c2bfc04270ab44194acf6"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed42.json",
+      "bytes": 5567,
+      "sha256": "84c5b80ff93f1a3502aa187a6bc6bfaecd2c467477838cc50fde03cbc24fbc7d"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed43.json",
+      "bytes": 5555,
+      "sha256": "131f42ea9fb78f0fa657b4eda563e53f4165f97665baf9bcd81d27a43ab30d25"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-067_09a05166420843fab423047a799c87da__seed42.json",
+      "bytes": 5563,
+      "sha256": "1fb7b37433bd98f6eea1885273944cf4a1e45784e9c6f65bfb6a7ffe420dd934"
+    },
+    {
+      "path": "results/census-20261002/evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed43.json",
+      "bytes": 5555,
+      "sha256": "b8cd4aa0c4cb8b69c032ddc30fb94e3a58837ceaf3c1922e4a6e3da6f5d4b556"
+    },
+    {
+      "path": "results/census-20261002/audits/census-stageII-time-direction-resume-protocol-20261002.json",
+      "bytes": 2771,
+      "sha256": "a1dccf06b21acd4f345545f089e4c6de78b680f51f9652a9bf78af847eddd5eb"
+    },
+    {
+      "path": "results/census-20261002/audits/census-disagreement-rank-review-20261002.json",
+      "bytes": 2566,
+      "sha256": "296071cf519b18a22f823fc32efbaa244be3cd8bdb69dcf45dc56465f117e751"
+    },
+    {
+      "path": "results/census-20261002/audits/time-reversal-collision-20261002.md",
+      "bytes": 12876,
+      "sha256": "fe1c4861fa99d1b930c4f87a8c6c651618c9d833de5042eae126628080d7e0cc"
+    },
+    {
+      "path": "results/census-20261002/audits/census-goal-scope-audit-20261002.md",
+      "bytes": 12803,
+      "sha256": "c0ff17ca66725ac69796a2219924e4ee3dc5c29d4b742a5e586c30296d327ac1"
+    },
+    {
+      "path": "results/census-20261002/audits/census-motion-controls-20261002.md",
+      "bytes": 11453,
+      "sha256": "bf64c52081fa1da3481dc22bdf1c372306dcbcfa820374f1ced2ac35648c478e"
+    },
+    {
+      "path": "results/census-20261002/audits/census-surface-v2-cache-20261002.md",
+      "bytes": 4702,
+      "sha256": "bd649450cc7359afa6d5b78680ed0f81e873f52f5f91b5b55448f1031788fb32"
+    },
+    {
+      "path": "results/census-20261002/audits/census-arap-qualification-child-plan-20261002.md",
+      "bytes": 7881,
+      "sha256": "0af7938413203a57a75e03700c4fd68378d1e6a7aa48164b90813f632a90ef75"
+    },
+    {
+      "path": "results/census-20261002/audits/census-disagreement-rank-protocol-20261002.json",
+      "bytes": 4159,
+      "sha256": "b0a6699b4b07ed767b055ebac536db6442b07ef565614534853b3091b2385595"
+    },
+    {
+      "path": "results/census-20261002/audits/source-anchor-cocycle-20261002.md",
+      "bytes": 14792,
+      "sha256": "921e4eaae42a51029dc5cc6c4f3dedb8f0e56234e0189fa068c3ee23cdc1f998"
+    },
+    {
+      "path": "results/census-20261002/audits/census-time-reversal-api-20261002.md",
+      "bytes": 8338,
+      "sha256": "d2663ee722b0c4bf308ce6606e5c57eecd889ff60f5a10c1d216242a32c6087b"
+    },
+    {
+      "path": "results/census-20261002/audits/census-observation-calibration-20261002.md",
+      "bytes": 5752,
+      "sha256": "291ae38ff915cc5441ac7de33ce9001454ea5afef32df72e501415e491c3bbb0"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/self-test.json",
+      "bytes": 841,
+      "sha256": "0e56d3e432e72091f13df9191cd57812ce68edc47700771082c5a41c310fec59"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/summary.json",
+      "bytes": 3470,
+      "sha256": "18d50113482af0f26c079d0df1051bf37ee2014de31df90bc09756a575408fce"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_time_direction.py",
+      "bytes": 21885,
+      "sha256": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_surface_query_check.py",
+      "bytes": 6981,
+      "sha256": "1307ea90a509a523be941cb28b7daed00b655a3fcc4d128e67f3c129db90a36b"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-baseline-launch-v1.json",
+      "bytes": 2265,
+      "sha256": "86f9814c5008bbbfd536902f1aadba3ca055bfdaef12090bf37299bb73bf50ac"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_motion_controls.py",
+      "bytes": 23882,
+      "sha256": "f5fdb10d3443a8c1f605e58b6d08c450cfb87d63d7e1031189a0cc4bd899d6aa"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/motion-controls-launch-v1.json",
+      "bytes": 2280,
+      "sha256": "10464ff0a0abf737a0d985f0e530066b822645a0beb330e7335aeb9380545df1"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/aggregate-final10.json",
+      "bytes": 43455,
+      "sha256": "b5fa159bba242f4910b2d92b6241b170d1fa52b20ab0d122ab4ad7c14a53a530"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-query-qualification-bat-v2.json",
+      "bytes": 20952,
+      "sha256": "bb110d06105fc160aa0a8047279a8ab945b50edd0a6f48396af3d96cefd632ec"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-eval-launch-v2.json",
+      "bytes": 2060,
+      "sha256": "f28d12b8db2f4af3a7ee93519cf671a498cd66939876586413f6336491bbe3fd"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-query-qualification-launch-v2.json",
+      "bytes": 1804,
+      "sha256": "f15c44f7e1db2ebc1a31d9183c5a50b047b7c46e2a8b68249f91a50ae56957e4"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_motion_readout.py",
+      "bytes": 22316,
+      "sha256": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/disagreement-batch-v1.json",
+      "bytes": 3167,
+      "sha256": "009b18d321217144c2a309e693b3637b4d1772cb10fba76b2cb56b70571d9679"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-motion-mannequin-v1.log",
+      "bytes": 178,
+      "sha256": "52042e4ad07664b924de98c0b663426b66bb368fc5bd1cbe7474eb888053190f"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_disagreement_rank.py",
+      "bytes": 25889,
+      "sha256": "b739db990f227a9dfff77d22024eae1231868f496686d4e0a6707d8331688557"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_time_direction_resume.py",
+      "bytes": 20833,
+      "sha256": "f5a0007aec3116241bfc251dbc4b489aff3eaebbce65764e31ba07f9d5d31c3b"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_surface_baseline.py",
+      "bytes": 26759,
+      "sha256": "6c64929d3a9380bbf3ecf4e130ddd7a4a1418628855eb05e6c5009ec3dd5b4ff"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/time-direction-launch-v1.json",
+      "bytes": 1314,
+      "sha256": "faa4708473a482a10e10b1be579f75f48bccda0736bd0f54c9034b3906c54481"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-v1-v2-completed-arm-equivalence.json",
+      "bytes": 1836,
+      "sha256": "d00ea407ecc438c0b15a39770e55ae5a55018618f796c776131516d573bf66ef"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_surface_eval.py",
+      "bytes": 24322,
+      "sha256": "f91cad5a665880fb80e8828e63aa88f21ff6dfa6b6ffef43387fc205bfceaf49"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_queue_v2.py",
+      "bytes": 18378,
+      "sha256": "0362db139f8b6c2fc23ea42b18d1e1ef964b2945a880b6a602d6d7c1bd34e02c"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-query-qualification-mannequin-v2.json",
+      "bytes": 21031,
+      "sha256": "9670d7d8f17535f5f630e50b9af90ae8d6c34fef6f434f57b196db082e43a6c0"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-after-census-v2.json",
+      "bytes": 5949,
+      "sha256": "fc7419a8481cf3522a674109643f317396da729c41e9fe92422f44e3f72fe8c2"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-after-census-v2-freeze.json",
+      "bytes": 1550,
+      "sha256": "fc54a8ce9ab90ec4f718c88b5e4cba278c69bfac432051ecb0066c0d6c52d78e"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/census-stageII-time-direction-protocol-20261002.json",
+      "bytes": 4992,
+      "sha256": "f1cd9a53c78ca33931efb024a9d3d836915f42c5d7692635b25895b59bcd9fd6"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-after-census-v2-launch.json",
+      "bytes": 297,
+      "sha256": "23065e737ce151e77ebb3ee0fdf13cbc9424c67abd5939b2da045a88e412349d"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/rtree-install-qualification.json",
+      "bytes": 333,
+      "sha256": "c9a6a2ce41711fb9a9bb53fb738238e71fc68277ad55277e9f5f2be46b710472"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/census-disagreement-rank-protocol-20261002.json",
+      "bytes": 4159,
+      "sha256": "b0a6699b4b07ed767b055ebac536db6442b07ef565614534853b3091b2385595"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-after-census-v2.py",
+      "bytes": 7125,
+      "sha256": "19f1da2f3872a69b04acdfdb4638677180c48aca90f13b1f6a88b790256f70d5"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_time_direction_eval.py",
+      "bytes": 31829,
+      "sha256": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/launch_disagreement_v1.py",
+      "bytes": 2267,
+      "sha256": "94ad8de5a5a5965f18fe12906083b5928ddf98480fa288fd5df885cc4a06b786"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_surface_baseline_v2.py",
+      "bytes": 32048,
+      "sha256": "10b0eaa4ef1fd3ab9e972e79db1e057c86894da4a33d079f6d0913d0f8fb86f2"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-eval-launch-v1.json",
+      "bytes": 2209,
+      "sha256": "743a0e0d4cc359bca17702525703764d6cd0ce57300166c741ad87f7cc9dc37d"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-motion-bat-v1.log",
+      "bytes": 173,
+      "sha256": "ca6f3dff6b6fc38e725c5ed8057326f2cc5f403340b79c255c7e846182274418"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/stage-census-remaining6-jobs-v1.json",
+      "bytes": 14497,
+      "sha256": "fa09175162348ac21e4f35f06dec89642b6460243aab33c72710ec5f9d814bbb"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-resume-actual-qualification-v2.json",
+      "bytes": 3088,
+      "sha256": "5b8dc827ffd70382b2db4273c835ab956d9e8a5f84eb228ed901c09167175080"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/surface-baseline-launch-v2.json",
+      "bytes": 2373,
+      "sha256": "1daf7eb316b43484c3d85bf40da267800c0aa2928a7c5755df02c087a6fb01e4"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/stage-census-remaining6-freeze-v1.json",
+      "bytes": 1765,
+      "sha256": "3cb5f007cc7cd5cce22e288709692a9a0de3b68749918a4e77d21a8dcdbecf0e"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/research_census_direction_motion.py",
+      "bytes": 10418,
+      "sha256": "29716caace8b3250ab88d3dc272a219b812229b9181d93847af32bb31459d657"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/direction-motion-batch-v1.json",
+      "bytes": 2780,
+      "sha256": "a381ccbc15e7eb73a95b2734334bfdb59a837190b234c744fcc3af4f8429cc6a"
+    },
+    {
+      "path": "results/census-20261002/source-and-receipts/stage-census-remaining6-launch-v1.json",
+      "bytes": 861,
+      "sha256": "946f57f371799208a245f565ec4243fdf42c0134f5ca9948d643f1c7ebd9dee3"
+    },
+    {
+      "path": "results/census-20261002/metadata/research-state-final-iteration.json",
+      "bytes": 550,
+      "sha256": "ebfe62c98869d8244c6caa2fea59682470ad1488ea052fbd6769174d751bea1c"
+    },
+    {
+      "path": "results/census-20261002/metadata/main-queue-final.json",
+      "bytes": 27072,
+      "sha256": "143c4961a9b10b3db313d38ad46e12cf42910eb4a16ebf441a42cb69e766b012"
+    },
+    {
+      "path": "results/census-20261002/metadata/shape-probe-report.json",
+      "bytes": 6757,
+      "sha256": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99"
+    },
+    {
+      "path": "results/census-20261002/metadata/shape-probe-gpu-memory.csv",
+      "bytes": 3569,
+      "sha256": "4bd7fde00e22886c938bd0d547ab573e5641d8b7e67a032283693cbd93a92a61"
+    },
+    {
+      "path": "results/census-20261002/metadata/local-package.json",
+      "bytes": 464,
+      "sha256": "a22ccd125ba3da6139122406d2d12dd8ad45338f285a1a51adba31174c5358a9"
+    },
+    {
+      "path": "results/census-20261002/metadata/shape-probe-command.json",
+      "bytes": 1107,
+      "sha256": "cd918f5177bc03e25d5aa8562d7ac82c1ac276abbe342ea7f2de7f6e0c256cf3"
+    },
+    {
+      "path": "results/census-20261002/metadata/aggregate-first2.json",
+      "bytes": 18432,
+      "sha256": "6085329a4c73adc9c436b1f074c0f94258301953828c3f4fc4fb88f9da9f3f16"
+    },
+    {
+      "path": "results/census-20261002/metadata/cohort-manifest-v2.json",
+      "bytes": 65461,
+      "sha256": "82dfc37a19fb925703ceef68b1962c9fd8fc5f73e5fd4d1ea4a1293ce817a48b"
+    },
+    {
+      "path": "results/census-20261002/metadata/shape-probe-provenance.json",
+      "bytes": 2339,
+      "sha256": "f805aa8f37d0032342d8941b9e62e9d9817780df4cd346754f6e779af817fa2a"
+    },
+    {
+      "path": "results/census-20261002/metadata/export-more-seed42-v1.json",
+      "bytes": 5544,
+      "sha256": "94b3f95e71c9816e36db0a3103277ad2e3d7e333febd9768455753f85a8a2d25"
+    },
+    {
+      "path": "results/census-20261002/metadata/aggregate-first8.json",
+      "bytes": 37390,
+      "sha256": "c890129ba9d7866727a2fde9d2bc98f60e72ceb62ef8fc7339f3dd3091043ae3"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/report.json",
+      "bytes": 6750,
+      "sha256": "4c0329fa9c6dda63ca74cf671f4741696c5d4c304a861e3002b542d4bf226afc"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/provenance.json",
+      "bytes": 2329,
+      "sha256": "84e022d9a5d5b159d045aec23af03b1bf2496373e28601ef3bf5999cb8f9a948"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/gpu-memory.csv",
+      "bytes": 3358,
+      "sha256": "1e5ef2165eb22c4deeae9f6d55ed3a8fde92363661feef5b14d6a1d56fdec21f"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/command.json",
+      "bytes": 1151,
+      "sha256": "28065482c894a3f37427fdfcf6fd0c3c8e2a88a08b58bc999038e616764abb41"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/progress.json",
+      "bytes": 6750,
+      "sha256": "4c0329fa9c6dda63ca74cf671f4741696c5d4c304a861e3002b542d4bf226afc"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/selected-source-latents.npy",
+      "bytes": 1572992,
+      "sha256": "bf3e8f30820eb6a3588a32287ddc6d25dd725cf014449723ca17cc21ab9de5ca"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/report.json",
+      "bytes": 6760,
+      "sha256": "66bdb423094dcaef91314209c83d0c47add1dce313887a16f05b1926ea00c2cd"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/provenance.json",
+      "bytes": 2329,
+      "sha256": "569fa5181cc0fe39e21ae9b60996ff1136f6f5674dfa8df6f19bd1bc3caab1fc"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/gpu-memory.csv",
+      "bytes": 2454,
+      "sha256": "bf43b57a63b67abaae3c7a37163c6578f4c0841f723c3e1bb137a64018e170f0"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/command.json",
+      "bytes": 1151,
+      "sha256": "221ce46beb5a9916e224ce7204da9b3b4e5a77f16ca730f95fbc4a85348b871c"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/progress.json",
+      "bytes": 6760,
+      "sha256": "66bdb423094dcaef91314209c83d0c47add1dce313887a16f05b1926ea00c2cd"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/selected-source-latents.npy",
+      "bytes": 1572992,
+      "sha256": "dcb144a5b5126b71deebb30c40afad6d5a2d4e3edbc5966fbb601109230b3467"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/report.json",
+      "bytes": 6761,
+      "sha256": "234b1b5926ba71f75dfc9dfc4af9b3d5d51859caa8973c0334f54564db52aa29"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/provenance.json",
+      "bytes": 2329,
+      "sha256": "8c4eaeed7f09cf6d1c89c47e67aec0ccb9755b27f7260607fb4f67aa47e1a72d"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/gpu-memory.csv",
+      "bytes": 3959,
+      "sha256": "780f1b4ed1a3c1770759a3b9a98dd492adc92e68444e7ce35978d8b18d60232f"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/command.json",
+      "bytes": 1151,
+      "sha256": "ff94dc9e6e58a234004316cfe149e3c00fe65b8e3f493ccce802543edc3c5b23"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/progress.json",
+      "bytes": 6761,
+      "sha256": "234b1b5926ba71f75dfc9dfc4af9b3d5d51859caa8973c0334f54564db52aa29"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/selected-source-latents.npy",
+      "bytes": 1572992,
+      "sha256": "81d27c49ebfcbf0d04e5fcfaf3f90588c0d661f1e7a5f0284cc18078f727865d"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/report.json",
+      "bytes": 6762,
+      "sha256": "26b5bdfc680f7be6e3239a21703866278bb90b2343ac5df9580df73f3d013430"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/provenance.json",
+      "bytes": 2329,
+      "sha256": "426109665a32ba0e2b204a9732019d6449b69daf94ed501a972da28612326904"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/gpu-memory.csv",
+      "bytes": 2794,
+      "sha256": "9527468578bf298f0b1f9b2494e4455c435947170f304f01ec7c99b20ad14076"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/command.json",
+      "bytes": 1151,
+      "sha256": "b941a110b102c0eb6c53a60c4cebef4a6959d1f45e01c37b5c623edec710cda5"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/progress.json",
+      "bytes": 6762,
+      "sha256": "26b5bdfc680f7be6e3239a21703866278bb90b2343ac5df9580df73f3d013430"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/selected-source-latents.npy",
+      "bytes": 1572992,
+      "sha256": "0c42ff20110b46fb264a2010e385441ad4b8fbbc4670008c45dae58d37a8b7f5"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json",
+      "bytes": 6770,
+      "sha256": "01cf5c0d50529308f7ddfb8d10c9d0de4089d47cc1c78e3a68661211a578c928"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/provenance.json",
+      "bytes": 2329,
+      "sha256": "a9f5ddc8037fe9a0ee20ccdd113fde9a3dde2cc8a7969d4f29433f3d8a223fe9"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/gpu-memory.csv",
+      "bytes": 2568,
+      "sha256": "9b680845dce359d11a3f21a06f5f76c637fbbb6a9a2464d8e6ced8f3390ac3f3"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/command.json",
+      "bytes": 1151,
+      "sha256": "d6e339a67aa8c5f1e2464899fe3a29e204658045414e26ea63f94882dd030bd6"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/progress.json",
+      "bytes": 6770,
+      "sha256": "01cf5c0d50529308f7ddfb8d10c9d0de4089d47cc1c78e3a68661211a578c928"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/selected-source-latents.npy",
+      "bytes": 1572992,
+      "sha256": "31b814ca03ea0288e526faa417ade3ba290fd63770d7d38681f093fe77a8c11a"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/report.json",
+      "bytes": 6764,
+      "sha256": "1715a9417a30bd5f4a56106611dc896ed121448e12e95dc45402422f6a2868e6"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/provenance.json",
+      "bytes": 2329,
+      "sha256": "8b7c43c490e2a51a9027a43b3c3a18005702d686b94b5a3444a9435ee878b051"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/gpu-memory.csv",
+      "bytes": 4754,
+      "sha256": "e6b2f402ff9af318b60639d352ff1f906f3062cbb1750ba106e0646d9936371a"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/command.json",
+      "bytes": 1151,
+      "sha256": "a03512a4b8c78a205e03ee70b183312f07a00a2769872045613d1be0c804bbc9"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/progress.json",
+      "bytes": 6764,
+      "sha256": "1715a9417a30bd5f4a56106611dc896ed121448e12e95dc45402422f6a2868e6"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/selected-source-latents.npy",
+      "bytes": 1572992,
+      "sha256": "6b85f29a36eb56cb32e82b71b0dd65d83f1da58d6577b40487c67ecbfab837d0"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/frame_00/measurement.json",
+      "bytes": 1655,
+      "sha256": "693965f68f67900fbcbed49a627d0acc81b8ac0533cfe8cbe96dbd9e8661d8e8"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/frame_08/measurement.json",
+      "bytes": 1655,
+      "sha256": "a15a0ba3851d7635f8044d819399e1e84cce6e52637b6ad9ad2f174f3b5c8ed0"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/frame_15/measurement.json",
+      "bytes": 1658,
+      "sha256": "98af2053048c155b24182cb1c59b3d4310b39acf64d69bc57924dd9977374e26"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_00/measurement.json",
+      "bytes": 1659,
+      "sha256": "31c1d6d7223bad4127f3a3d07b886c7ba819dd9b7ee1011a7361a7b8b3772e83"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_08/measurement.json",
+      "bytes": 1658,
+      "sha256": "d299802dc51de59c1139169c8557bcec2981ac20cb3554611cde6e7c2fbe729d"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_15/measurement.json",
+      "bytes": 1658,
+      "sha256": "eac3b11a20990df98e82d367c099cc0db07e7a5c4ba9b96bc0dbf2f5877cc142"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/frame_00/measurement.json",
+      "bytes": 1656,
+      "sha256": "fde37041b7f9363d8cfd0e629b3e0e29681f43a29ed2bcfefbdbfe0660eb54a5"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/frame_08/measurement.json",
+      "bytes": 1657,
+      "sha256": "73da373c6c14fd84d175bfb8f80d092dfd203ddd8259c9a243bfe9ee527a5392"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1/frame_15/measurement.json",
+      "bytes": 1657,
+      "sha256": "86bd74a2123782c7cb99781246d2a41fc15cc52f5c04ea96a4e71d33dbaa6bbd"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/frame_00/measurement.json",
+      "bytes": 1655,
+      "sha256": "f5c7e114fb2a07d711a9c01a86614f5c869194d4c547df3abaa299fc6692628c"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/frame_08/measurement.json",
+      "bytes": 1657,
+      "sha256": "1b9cc8f0a4d7ab117304812e728c022721bd4f6a0afa584a1aeb1f5d10da6139"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/frame_15/measurement.json",
+      "bytes": 1656,
+      "sha256": "745ec2c12999294857951d7889ea6936880a7bdee2f46fa07f3fd2e99437375a"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/frame_00/measurement.json",
+      "bytes": 1658,
+      "sha256": "410491b56c0d19a50f8b29d4d9ed736f787d19208fa6cff42c5a0dac27192410"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/frame_08/measurement.json",
+      "bytes": 1656,
+      "sha256": "cb3fb8183de8428adced75d27989b9b20b450530e93656a61aa9482eb57abb13"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/frame_15/measurement.json",
+      "bytes": 1654,
+      "sha256": "e75d687f83f391283962903db67e9fe1780643503c9f896ba3b9729815ef7ae7"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/frame_00/measurement.json",
+      "bytes": 1652,
+      "sha256": "2e2a9ad19284d871bc206ce8e1494687cfe1105df0b3b58af4accdd403292867"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/frame_08/measurement.json",
+      "bytes": 1654,
+      "sha256": "b76a99181f26a811e0b7650d8383cb200f7d9f250967314984bdb6514f18e266"
+    },
+    {
+      "path": "results/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/frame_15/measurement.json",
+      "bytes": 1651,
+      "sha256": "d04012321230c80ed53099236daed6f7eefa87f3707b8efae83a380bd3ed6948"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/report.json",
+      "bytes": 18591,
+      "sha256": "8ad28bb986e5db778e0ae9bf517d83b36f236ae88bc595d111aa452653b1c8a7"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/command.json",
+      "bytes": 900,
+      "sha256": "9447624558c1ee1efa46cbc23fbeeb1e3fedd045640888bb25802e12b9ec621f"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/protocol.json",
+      "bytes": 1740,
+      "sha256": "63b4a7701e38df65c53831d1881d5c680f1aad5adb0511f6d46e22aaff42772d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/source-provenance.json",
+      "bytes": 3556,
+      "sha256": "7054aad66b2da9422392a4637ba26493c8394335fe14a1160a9fc2b7330e627d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/progress.json",
+      "bytes": 18591,
+      "sha256": "8ad28bb986e5db778e0ae9bf517d83b36f236ae88bc595d111aa452653b1c8a7"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/report.json",
+      "bytes": 67810,
+      "sha256": "20fd180c3d52ba2e8ce2c2249fe160bc6e3678e29ed2f269ae186ed39542d9cb"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/command.json",
+      "bytes": 881,
+      "sha256": "486079f09cf71f180f53c0c3e1ccbd1d723910a56b7089e3814677bae8274eda"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/protocol.json",
+      "bytes": 2053,
+      "sha256": "5eea9c9b6a5c7eeef145a448e0673d7d2db1370f86fde0fb6c81ddef3c21c43b"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/source-provenance.json",
+      "bytes": 7128,
+      "sha256": "6b1502a54dcaf24d828d593fcf41bbd0177b96e482348da4db6df061fe635ed9"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/progress.json",
+      "bytes": 67810,
+      "sha256": "20fd180c3d52ba2e8ce2c2249fe160bc6e3678e29ed2f269ae186ed39542d9cb"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/report.json",
+      "bytes": 67867,
+      "sha256": "dad989beb6fc7149cb9ba19091fd0e27707ff89b2165e9432c8550c8a44bbc1d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/command.json",
+      "bytes": 903,
+      "sha256": "5d3e6d7293de3ed5f797686983423bb769a33db0fd007945998f63ee4ec6b175"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/protocol.json",
+      "bytes": 2053,
+      "sha256": "5eea9c9b6a5c7eeef145a448e0673d7d2db1370f86fde0fb6c81ddef3c21c43b"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/source-provenance.json",
+      "bytes": 7222,
+      "sha256": "a31a337b9b895cb6cdc60f3a77142e4d10f80af6f10136f66fe599f277b638a2"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/progress.json",
+      "bytes": 67867,
+      "sha256": "dad989beb6fc7149cb9ba19091fd0e27707ff89b2165e9432c8550c8a44bbc1d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/report.json",
+      "bytes": 18600,
+      "sha256": "eb3a8e1d568b778f43e861a7111771f4ab563f60ab83c09141eb55cf87d82781"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/command.json",
+      "bytes": 878,
+      "sha256": "83df31a00ce3f5cb11ce61b5c9a414b454ad731be68fd08a54f388cdb8e16df9"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/protocol.json",
+      "bytes": 1740,
+      "sha256": "63b4a7701e38df65c53831d1881d5c680f1aad5adb0511f6d46e22aaff42772d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/source-provenance.json",
+      "bytes": 3462,
+      "sha256": "1a10af116fc27a82534f053f53cc357cdea490c8d556a9321377012888520e93"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/progress.json",
+      "bytes": 18600,
+      "sha256": "eb3a8e1d568b778f43e861a7111771f4ab563f60ab83c09141eb55cf87d82781"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/normal_only/report.json",
+      "bytes": 3556,
+      "sha256": "5b1ed167ab1a6ab8f1493c7254aba2bc1916d5208dc2227e3e4b4108a09e5c49"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/normal_only/sequence.npz",
+      "bytes": 869043,
+      "sha256": "e2e51021e0881ef61331bc768a45e9ecf92c3d1e9bee59cbb546ffe68a6dcd8a"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/identity/report.json",
+      "bytes": 3366,
+      "sha256": "febb1c4f93988e4d63d6f61cc376d22091dfda40607dfec15828ebf370a20b49"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/identity/sequence.npz",
+      "bytes": 861712,
+      "sha256": "7ed1b007f216278fa2c4b3d2bc9446044ca8e3ca3afe663f34caf0870ed7bb46"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/closest_surface/report.json",
+      "bytes": 3486,
+      "sha256": "8610478376f002e162a100c1c6a197ba6558e7ca9c34327145e6737ecd70d6c8"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/closest_surface/sequence.npz",
+      "bytes": 846334,
+      "sha256": "c6db9b43e948630c975fb45f6761158f4edeaf89baa03f5d72c61b171837181d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v1/variants/arap/report.json",
+      "bytes": 2805,
+      "sha256": "39707f3c403375b0c420f69b4435c59f3178aef9b3e43ab7ce4682a3aaf0ce21"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/normal_only/report.json",
+      "bytes": 3522,
+      "sha256": "e1b2079e2eb8a206cffdd6afe114869f72e44250c06ae5c02a64039b88ec44da"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/normal_only/sequence.npz",
+      "bytes": 872521,
+      "sha256": "e176e969663c403c3758d719da2c8a97b43f9b193ebfce6ddfea98077b239d3f"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/identity/report.json",
+      "bytes": 3366,
+      "sha256": "ab73468bcd9593430cbc2d2518b1a8e2f3358ae4c044fcae15948308a6c07dee"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/identity/sequence.npz",
+      "bytes": 865429,
+      "sha256": "82810fa8a789e68786121b6b9b5432029b2964290ed152d808536996d140ab88"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/closest_surface/report.json",
+      "bytes": 3431,
+      "sha256": "b87be86213ca78cc5c0305ab68da40a876610fac9476dd82d05dc1104404b48a"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/closest_surface/sequence.npz",
+      "bytes": 871519,
+      "sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/arap/report.json",
+      "bytes": 40771,
+      "sha256": "9bc70a298c03573a55448bbef9979e1b14562536fdae43b6610b8d0d4585bae0"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v2/variants/arap/sequence.npz",
+      "bytes": 872545,
+      "sha256": "e26dafd322b0bc7adca3b9d9c8c7a4b080250b0a9c21056e81ca1fab1608234d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/normal_only/report.json",
+      "bytes": 3556,
+      "sha256": "70861260d63a014357f791b052cb8619d355a7f9e8a0d0413a7e870204b0d9d9"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/normal_only/sequence.npz",
+      "bytes": 869043,
+      "sha256": "e2e51021e0881ef61331bc768a45e9ecf92c3d1e9bee59cbb546ffe68a6dcd8a"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/identity/report.json",
+      "bytes": 3366,
+      "sha256": "b877d228a51f9753b08416964c3daf1aff7699672cecacaa43f3dee4523c77df"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/identity/sequence.npz",
+      "bytes": 861712,
+      "sha256": "7ed1b007f216278fa2c4b3d2bc9446044ca8e3ca3afe663f34caf0870ed7bb46"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/closest_surface/report.json",
+      "bytes": 3486,
+      "sha256": "40d55a209af87d3821ba42bbae5ad35be32ea4e10296501e6c60be0fc2c1b551"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/closest_surface/sequence.npz",
+      "bytes": 846334,
+      "sha256": "c6db9b43e948630c975fb45f6761158f4edeaf89baa03f5d72c61b171837181d"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/arap/report.json",
+      "bytes": 40721,
+      "sha256": "d0a0b7001097e27106687a5cd20c6c4af0b9cef4a9c3e7e2770ad13b6ccad70c"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/bat-seed42-v2/variants/arap/sequence.npz",
+      "bytes": 868896,
+      "sha256": "6bec69ad8657c84d542c88029a727962a4f351729b7f6bcc498c504d83f2ea42"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/normal_only/report.json",
+      "bytes": 3522,
+      "sha256": "a957869826633e948ab233e9e9d9ac0ed6f2ce7a9293fdb8dc9454524b2d1081"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/normal_only/sequence.npz",
+      "bytes": 872521,
+      "sha256": "e176e969663c403c3758d719da2c8a97b43f9b193ebfce6ddfea98077b239d3f"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/identity/report.json",
+      "bytes": 3365,
+      "sha256": "c2433a30cb4d2c4c2257c667a36a37fb14af8e4eda322e7ac2d429517386f20f"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/identity/sequence.npz",
+      "bytes": 865429,
+      "sha256": "82810fa8a789e68786121b6b9b5432029b2964290ed152d808536996d140ab88"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/closest_surface/report.json",
+      "bytes": 3431,
+      "sha256": "baa1dd3a733f8531aa7bd7b583977417c98ed79ea72b10fba20f8fe8bb0e5011"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/closest_surface/sequence.npz",
+      "bytes": 871519,
+      "sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db"
+    },
+    {
+      "path": "results/census-20261002/surface-baseline/mannequin-seed42-v1/variants/arap/report.json",
+      "bytes": 2803,
+      "sha256": "f17669dffdfaea79e0f329313abae51b5d95bc36c1f435f24149765515dfedba"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/controls.json",
+      "bytes": 22177,
+      "sha256": "dba4ffd3f41445d2c1ba3ef28b06ae58c8c06171de96de46addaf4d94da6a975"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/report.json",
+      "bytes": 4054,
+      "sha256": "18f84982f0696655569be6d6a1e8674e77e36ef69de750ef3478964c7bfeaad0"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/provenance.json",
+      "bytes": 3956,
+      "sha256": "522e532e0e3f711a0b2119f0fdd4226ed7545a77743ec1eb2b16bbad39486a1f"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/command.json",
+      "bytes": 884,
+      "sha256": "870dd5663fb41cf526d5c27a4ec04a4c6c11d68bd02c204e51ad15fb26303359"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/per-frame-shape.json",
+      "bytes": 8451,
+      "sha256": "a96108329aaa2f5ddfa9508486e961ec0f3867a702d2de1c2f64c934f089b0e0"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/pairing-lower-bound.json",
+      "bytes": 2617,
+      "sha256": "20fdc43f6f04ec8773f74bba3c6cda9cb631258230aa14d8127782b02b80126c"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/protocol.json",
+      "bytes": 2260,
+      "sha256": "bb6f98c91c457d005a79977aa467a84ab1f636aacaed1b940a2579c96b66b665"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/mannequin-seed42-v1/progress.json",
+      "bytes": 4054,
+      "sha256": "18f84982f0696655569be6d6a1e8674e77e36ef69de750ef3478964c7bfeaad0"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/controls.json",
+      "bytes": 22170,
+      "sha256": "78b272d3325189c078b9a36f423afa54510a21ea76d550a0dadb68bd332f448c"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/report.json",
+      "bytes": 4049,
+      "sha256": "998a6ccf95423de88cf1a91f2563d51082017f8ecd0a27e57bea83a40c950049"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/provenance.json",
+      "bytes": 3918,
+      "sha256": "8bd9e63c0a3fd9541bac6088c949f6a17ca0d0faa4592eec70dfa24821cbfd1b"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/command.json",
+      "bytes": 862,
+      "sha256": "670edfea320bd67aa55338ee5a5fab1e5a014bdc59d4f98d2fa47a6863420ab8"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/per-frame-shape.json",
+      "bytes": 8393,
+      "sha256": "938d79ce2a2259f9a89318717ca5cd646eb002e45e7095e6ed0b174a0da432b8"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/pairing-lower-bound.json",
+      "bytes": 2623,
+      "sha256": "e1d154c8b9f916331a308ef4e7241cc8f5bcaaac3599c3e1a81aeb378a366874"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/protocol.json",
+      "bytes": 2260,
+      "sha256": "bb6f98c91c457d005a79977aa467a84ab1f636aacaed1b940a2579c96b66b665"
+    },
+    {
+      "path": "results/census-20261002/motion-controls/bat-seed42-v1/progress.json",
+      "bytes": 4049,
+      "sha256": "998a6ccf95423de88cf1a91f2563d51082017f8ecd0a27e57bea83a40c950049"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/report.json",
+      "bytes": 12817,
+      "sha256": "3272ada5cfc386334ac8dbcd17da89a242ea4079164be762cb34215e633a6df1"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/gpu-memory.csv",
+      "bytes": 12857,
+      "sha256": "4c3deebe4914f4bfbfd9fc8fd62144abd494f9858bc76d72d5247837ead69adf"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/command.json",
+      "bytes": 581,
+      "sha256": "c7f092f01454e1d44eb2cb7a79c6bc79d69bbdebfdde2bd81f5502ed6509e855"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/source-provenance.json",
+      "bytes": 2020,
+      "sha256": "56fd9cdde15c37911c7535c28820824f0344841c80247a4da1065e7cb61267d3"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/progress.json",
+      "bytes": 15371,
+      "sha256": "7067246ce2aa8f0e3bd03a18dd893c78c190e2b6dbf9eb542315e7c4361253a3"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/report.json",
+      "bytes": 31466,
+      "sha256": "0c49e4972b7b693c1132cb1e28661eca694094a3c5ec10f018582c306c3e4657"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/gpu-memory.csv",
+      "bytes": 2214,
+      "sha256": "813c80c41245523303b7c99018fe69a923be95cab8ca0454eeee8f8b304bd1f6"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/reused-controls.json",
+      "bytes": 3219,
+      "sha256": "4c812e68f9ac057d1cdb7d513563e88a229405fb7a597e50787e39b3235c4374"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/control-verification.json",
+      "bytes": 8297,
+      "sha256": "4202f4c4b7a4f0024b2fabbeb2f43fd76ce5ad75e2c2f6482fe4e2472be7d84a"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/command.json",
+      "bytes": 840,
+      "sha256": "e3b96407be51984b2c0dbbfa8fd0bbc22cf8533061fda07d1ba7344f81b67783"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/progress.json",
+      "bytes": 31466,
+      "sha256": "0c49e4972b7b693c1132cb1e28661eca694094a3c5ec10f018582c306c3e4657"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/report.json",
+      "bytes": 18573,
+      "sha256": "566e46bab32c1b42bf82e7ebcaaa47707ae19dcfd41582c7f45bb5ab52556d86"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/gpu-memory.csv",
+      "bytes": 6379,
+      "sha256": "d6b010c75f4f6ccbf71a089dbd084b6a8000116ad59630207f9720e01c5797e2"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/command.json",
+      "bytes": 565,
+      "sha256": "6b834d94155da51f5d6d661c1ba26d4d94751d076cc57f5bded6d2ff8955c9cc"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/source-provenance.json",
+      "bytes": 2010,
+      "sha256": "ae51e70a67996d15737ec5c997be032b0516c90503ec2f3f87a46ee107c1ec35"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/progress.json",
+      "bytes": 18573,
+      "sha256": "566e46bab32c1b42bf82e7ebcaaa47707ae19dcfd41582c7f45bb5ab52556d86"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/variants/row_permutation/report.json",
+      "bytes": 4273,
+      "sha256": "cf02da99aac3fb02c1a77be34a4d183f7f2c772d1fd71ba3fe6a7af25806bef0"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/variants/row_permutation/sequence.npz",
+      "bytes": 3678446,
+      "sha256": "7f3c6d7e71b5eef8c2061c8d4aec5b1f740af97d829ceb03dd85bf33aecc218e"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/variants/time_reversal/report.json",
+      "bytes": 4425,
+      "sha256": "823d29a1aee4e3dd68ed7d1c43163d62984ff239164ec6819fe7c0381d181625"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/variants/time_reversal/sequence.npz",
+      "bytes": 3677369,
+      "sha256": "4225af08a1e778de92a8e57eef3234bed4692549083cd981c938630df333e57f"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/variants/forward/report.json",
+      "bytes": 3062,
+      "sha256": "91f6328890e5b4cfd51c04db400920c1ec8ebc245fc0e139236525fde68afe22"
+    },
+    {
+      "path": "results/census-20261002/time-direction/bat-seed42-v1/variants/forward/sequence.npz",
+      "bytes": 3677851,
+      "sha256": "12e1b64be734f59e36c1d68d9821a93a5ceefceca1f6e434e16558a7118b748e"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/variants/row_permutation/report.json",
+      "bytes": 4254,
+      "sha256": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/variants/row_permutation/sequence.npz",
+      "bytes": 3700432,
+      "sha256": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/variants/time_reversal/report.json",
+      "bytes": 4587,
+      "sha256": "675fdff12d4be3aa2f5f7d3337087d64478a742f54ee7950dfb40d568bc86718"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/variants/time_reversal/sequence.npz",
+      "bytes": 3700284,
+      "sha256": "30a9dca36e150c97274a25beef3a4f610f3e9e3b9be62d455df16475756d4513"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/variants/forward/report.json",
+      "bytes": 3063,
+      "sha256": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v2/variants/forward/sequence.npz",
+      "bytes": 3700227,
+      "sha256": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/report.json",
+      "bytes": 4254,
+      "sha256": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/sequence.npz",
+      "bytes": 3700432,
+      "sha256": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/variants/time_reversal/report.json",
+      "bytes": 2054,
+      "sha256": "7ed66b6a8d733f17330502c013fe8dc1fc7041df83c45752c375f63f32ef7fa3"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/report.json",
+      "bytes": 3063,
+      "sha256": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b"
+    },
+    {
+      "path": "results/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/sequence.npz",
+      "bytes": 3700227,
+      "sha256": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/report.json",
+      "bytes": 12335,
+      "sha256": "d9707d12c4a02e9ef201f307f77d32bec395087a4749f93b6996fe07f3e5f210"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/provenance.json",
+      "bytes": 4353,
+      "sha256": "06c310c0600940c551529ee0aed74a834952b2d8920ffb997f38f26b359e11da"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/gpu-memory.csv",
+      "bytes": 719,
+      "sha256": "d5fcc3191bec430cf7983e3d8944ec41473b20b10b4378018f0d8019b7634c16"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/command.json",
+      "bytes": 974,
+      "sha256": "63e39b02d217dbc304822a0075c356e7a5615994a173c826891ef7f9a11260cf"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/progress.json",
+      "bytes": 12335,
+      "sha256": "d9707d12c4a02e9ef201f307f77d32bec395087a4749f93b6996fe07f3e5f210"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "d10df467dfe4a4ecc19d9f55f4a60e10ed1bb59e6f8d060506293d2922fa9947"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/report.json",
+      "bytes": 12344,
+      "sha256": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/provenance.json",
+      "bytes": 4127,
+      "sha256": "be4ce687d1a697b65187a82e114dc5152740527eb0ef356d3172a81b9d4edb06"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/gpu-memory.csv",
+      "bytes": 1333,
+      "sha256": "9bc383747b8ede3afe7b61e44e470a881188d41f14b5a6d7b741a33cbf23aa5e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/command.json",
+      "bytes": 890,
+      "sha256": "7aaf93e3faca1a12a73935ceda3e1a3a504769bd79fd9e98d8dcde58deffdf2f"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/anchor-icp-samples.npz",
+      "bytes": 222689,
+      "sha256": "363d1cf166f6f71dfc46f95de1b7a874f5b71ce441d07886442b53a9d3b0405e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/progress.json",
+      "bytes": 12344,
+      "sha256": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "087faeccc3cddec510e984efe6895f11893497986fe65bf1f53d0befb31d2f65"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/report.json",
+      "bytes": 12354,
+      "sha256": "7eea08a9b8b5c2e50e4f87dc63553aee7c6f57208b403dd338db44eea9efb51e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/provenance.json",
+      "bytes": 4353,
+      "sha256": "c2de36ff5d0be8509a0fb0e335571ec02feda1a124b00a28a33673914ce9fd25"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/gpu-memory.csv",
+      "bytes": 948,
+      "sha256": "ec0b2733785c20bf2c2214e42f6ef5130692d0b2d5afd415cb1daac82f2b24ef"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/command.json",
+      "bytes": 974,
+      "sha256": "148270129c9db53137ea9c9a29788e3d3199dd36534b0fc446c3b951a346dd2e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/progress.json",
+      "bytes": 12354,
+      "sha256": "7eea08a9b8b5c2e50e4f87dc63553aee7c6f57208b403dd338db44eea9efb51e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "040e501bdc9f53287f7fbe197fb5c961b52db36a24b9446f4ebd8bcb2aa1692c"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/report.json",
+      "bytes": 12354,
+      "sha256": "0b8d5c7237c1f79c531693e62c9fd9b852769ae347b8474ab40db220eafe5a04"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/provenance.json",
+      "bytes": 4353,
+      "sha256": "4b9dd685d245afe6f2bb0adb64b1e8b8f6f4a1e85a7589d27aae679add3a903a"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/gpu-memory.csv",
+      "bytes": 791,
+      "sha256": "9f8f418bb60005a48a44ff18061ae76268a7b41d6826101ff7d92a44d3d8ae9d"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/command.json",
+      "bytes": 974,
+      "sha256": "d9f6b607e2a5a9a08ad085c12d22c2d7db6c39c7dff2fe596929690185ef72f0"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/progress.json",
+      "bytes": 12354,
+      "sha256": "0b8d5c7237c1f79c531693e62c9fd9b852769ae347b8474ab40db220eafe5a04"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "fef95c99e467668e7bf929ee75f13fb56ae39e7b5335af3fa292bbcfa0021917"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/report.json",
+      "bytes": 12387,
+      "sha256": "2ae0ea14e3c2b246381fe21eaccbd6662984c19d4e8803677ef8b0404c09d7ef"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/provenance.json",
+      "bytes": 4353,
+      "sha256": "72078831d22aa17dc992ed2156bc50b5da528a7d5207baca73b9b2f4cc1b201b"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/gpu-memory.csv",
+      "bytes": 603,
+      "sha256": "bab3923f848747f171ba977a1115978f9cd62570618fa28e0c06e98bc2dee29e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/command.json",
+      "bytes": 974,
+      "sha256": "34916e42044038a05e64ec9f067e471084dee93cce2fc855bd94d45e123605ba"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/progress.json",
+      "bytes": 12387,
+      "sha256": "2ae0ea14e3c2b246381fe21eaccbd6662984c19d4e8803677ef8b0404c09d7ef"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "f7e1eabb42367d1d409b6e54369e3bf41b15719290cd1831539af42fe478fbbe"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json",
+      "bytes": 12367,
+      "sha256": "797757577b505d9897046c2c7c6b96c9301956408f790c970e181997a9ec7200"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/provenance.json",
+      "bytes": 4353,
+      "sha256": "8323bcb62c0541dc5fd94b39eaa3e3bfa06739f8db6f9724437826dca8db663b"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/gpu-memory.csv",
+      "bytes": 855,
+      "sha256": "1cb3985f427fdc2fb4a38cec8c1c8787943aaba1701a79874aff15088ff12117"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/command.json",
+      "bytes": 974,
+      "sha256": "c739ea7e2ccc423242874230cb7e436e41cb950ea5003a022ca8d61ada2523d5"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/progress.json",
+      "bytes": 12367,
+      "sha256": "797757577b505d9897046c2c7c6b96c9301956408f790c970e181997a9ec7200"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "fd379783512f30fa5592a2b061387d6499f95ca14a0697ab2658605237bb5912"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/report.json",
+      "bytes": 12346,
+      "sha256": "7e0438a7ad489659e179fed6a05e911940d314ed23b1d48a4bacc1fc87131713"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/provenance.json",
+      "bytes": 4049,
+      "sha256": "6509bf05f6ad98614192980ad916fc5bf90d538c7dcc5826ab83c6302e7b09dd"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/gpu-memory.csv",
+      "bytes": 1161,
+      "sha256": "18118ed33a2b8385fe3c7b18f537284ccdb11c04229489ac9e7f1a47f9840cbc"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/command.json",
+      "bytes": 868,
+      "sha256": "27332c2e2e28c1b0769d6fa11e98a5442c86adfabbe4dfbc5aba754beb3028d1"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/progress.json",
+      "bytes": 12346,
+      "sha256": "7e0438a7ad489659e179fed6a05e911940d314ed23b1d48a4bacc1fc87131713"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/report.json",
+      "bytes": 12350,
+      "sha256": "c483d1864ea21b99e21dfffcc224224c5a5d1219ef17ee7df316b114fb294999"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/provenance.json",
+      "bytes": 4353,
+      "sha256": "1d8a6d9c4ec2fb03204ea5567306b476b32633b7d08ec85e1537c67d1b89bc66"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/gpu-memory.csv",
+      "bytes": 668,
+      "sha256": "11a692d7a7a228e680362bd085f5121ad7dca9fdc69ecba40ad17e74f91531b3"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/command.json",
+      "bytes": 974,
+      "sha256": "72a24a351c665adead3957b736bad5bb6b9f41403adc0390936cb9162bef356e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/protocol.json",
+      "bytes": 2150,
+      "sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/progress.json",
+      "bytes": 12350,
+      "sha256": "c483d1864ea21b99e21dfffcc224224c5a5d1219ef17ee7df316b114fb294999"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/shared-anchor-transform.npy",
+      "bytes": 192,
+      "sha256": "1a74cefdcce89a0f3518cd7e13c97d6a658bb89ed51159981a21045047d57476"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/frame_00/metrics.json",
+      "bytes": 3389,
+      "sha256": "d3f4c89450cf480f05980cb75bdb8f0d74481342ebf25c5c5cb3dd610b7f5ee3"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/frame_08/metrics.json",
+      "bytes": 3393,
+      "sha256": "db512a07adb7d87e07c731ff44c63e85ea994d978854972a8ea99add19b84f33"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/frame_15/metrics.json",
+      "bytes": 3395,
+      "sha256": "181586f4b58ab8dc55c534f8b97f244858f61a664993fe49a5fe1500dee87061"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/frame_00/metrics.json",
+      "bytes": 3399,
+      "sha256": "47477f3f54f119958a64f2a808ff5f9fe035cbf77d8c2605da4bb865050d450a"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/frame_08/metrics.json",
+      "bytes": 3389,
+      "sha256": "8bde751b054692509b56668355290efe0c9c76a4fd844b31dacb56f3f9c76549"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/bat-seed42-v1/frame_15/metrics.json",
+      "bytes": 3382,
+      "sha256": "1bca9dedcfeb10f971a4872b6be6cca26527b2bed48a97e02faaaa014a1a7eaf"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_00/metrics.json",
+      "bytes": 3402,
+      "sha256": "aa32da25076ecff9cde46c6ea7b3aef5d30979fa321228e74e0aa56f504e2580"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_08/metrics.json",
+      "bytes": 3391,
+      "sha256": "3ba1d61ae07f01a283dae90b2112f793ad7d61f0de425e502c02869d2c96fb91"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_15/metrics.json",
+      "bytes": 3397,
+      "sha256": "597cd304c058ea995857b5c67cdc1c002035cb94027ef87e58225cd892df89f2"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/frame_00/metrics.json",
+      "bytes": 3409,
+      "sha256": "d25579ec523d058f965fa3c0f8bf3f071c954926ba489040ce013c5fb67f87a4"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/frame_08/metrics.json",
+      "bytes": 3404,
+      "sha256": "8e1f8b851029e690916a299d9d009df2180a4fe70f5b66981eb2c05d4aee89be"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/frame_15/metrics.json",
+      "bytes": 3398,
+      "sha256": "cc9a3bc7220f69d5300b78c1417bc06c9c68430ce6fd4a3925a0130e616b81ef"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/frame_00/metrics.json",
+      "bytes": 3399,
+      "sha256": "06bbe7e9e9575b7a306f892f0d5291fa958a458feae0896e5d2fe964eb9432a8"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/frame_08/metrics.json",
+      "bytes": 3388,
+      "sha256": "46193089aa721c6b6de73b5a927f223fa69a30c38176f27797b4697b08df07b6"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/frame_15/metrics.json",
+      "bytes": 3392,
+      "sha256": "c9b75850c128f6ba221420b3d95b543208de40d32cf742b517e11211af84359e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/frame_00/metrics.json",
+      "bytes": 3398,
+      "sha256": "ce78a494379f28284d8e286b56bbbd40494ef4a5a3f8539cb9dfa0edca0b79ba"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/frame_08/metrics.json",
+      "bytes": 3390,
+      "sha256": "4fdca88328383adf8213b15b4cb8ae81a41d15fba182fa0357f1bd35659a2d1f"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/frame_15/metrics.json",
+      "bytes": 3390,
+      "sha256": "85613ecc9575828826edd859431271b96ace20fadfa5e3a626b2f6b19441e66d"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/frame_00/metrics.json",
+      "bytes": 3400,
+      "sha256": "3b181bc19059d8b7573a18bcbe977885766dfbe4fd6635fbe8d0bab17e20931b"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/frame_00/clouds.npz",
+      "bytes": 5553907,
+      "sha256": "4c628e0148186585ec49fecde9e71f29492a84157989af04eb8e1d5e4e1db75b"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/frame_08/metrics.json",
+      "bytes": 3386,
+      "sha256": "7247de984faae797b97ade3010d155d85f7b88f7178443bfb1e19b36e944df9e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/frame_08/clouds.npz",
+      "bytes": 5544906,
+      "sha256": "42e3c19ad718df46669836414630bb1743b9d7b2d45cc55091ef1a65259c354e"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/frame_15/metrics.json",
+      "bytes": 3381,
+      "sha256": "9240b55c8f0493913d133aeb94c2c6e58cbe97b1a3a244cc1dba3876fb322c56"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/mannequin-seed42-v1/frame_15/clouds.npz",
+      "bytes": 5524083,
+      "sha256": "c8b4c8c492a3742bbc03b99fba857e6020ad6aa3ddb5b61dc2aeb0932ce0a470"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/frame_00/metrics.json",
+      "bytes": 3393,
+      "sha256": "6e98c818ab0c9a2219249eab6a41bb79d1bf151df69b2ceaf9ecc507566a9ead"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/frame_08/metrics.json",
+      "bytes": 3382,
+      "sha256": "195012bb5e643481d8cc276f6742706ff8f1128a180ef9312b27a209abc6feb9"
+    },
+    {
+      "path": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/frame_15/metrics.json",
+      "bytes": 3383,
+      "sha256": "54fe595317d9ad5043d5e4435e0758df152643176c60cac7e194eb1029692a33"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/report.json",
+      "bytes": 62250,
+      "sha256": "bfd61320b6161c811bd585972669b6ada824ad074fb1f9fc71b33ad6dc03bd86"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/command.json",
+      "bytes": 1466,
+      "sha256": "36f6cfc14116a321c941761f363f9bf450e093171fb5a0fc939640b4f40e2978"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/report.json",
+      "bytes": 119842,
+      "sha256": "0f90c7081fe35ff725c218282795271c1c8a3370c066167cf76b5d79fe68ec8b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/command.json",
+      "bytes": 1410,
+      "sha256": "689bc9136275153ab077ca0ce39bf396bdb5c40acdc41a62c04c92b6d6f71d54"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/report.json",
+      "bytes": 120060,
+      "sha256": "a32083ecbfc2e50e442ada0788f86720bc558189aa00aacecf8ea87fc705f7c9"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/command.json",
+      "bytes": 1466,
+      "sha256": "0b05e368fd676330203ed0b7433c7d220074695ae9ff18e95392dec1cb178b6c"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/report.json",
+      "bytes": 62103,
+      "sha256": "0a5f3844b7dfc1e154488c94d60f87d62bdde5b0179bd5d52f9ad1658f2a1c1c"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/command.json",
+      "bytes": 1410,
+      "sha256": "a4a33491b425e83f42925511f546c38185186bf8ce3719aca6a2f8016693da56"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/closest_surface/frame_00/metrics.json",
+      "bytes": 3362,
+      "sha256": "8970657ca0cfe69daf6e3765f3c9e6f32c8dea8f5304876611d096c50efcd82b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/closest_surface/frame_08/metrics.json",
+      "bytes": 3707,
+      "sha256": "b8a4a3811b588f64e3135c533e249689d7ff50605d9acc9998aba653bf9b459b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/closest_surface/frame_15/metrics.json",
+      "bytes": 3699,
+      "sha256": "657c391ed656708f8418d2273b3f3e9a6f0e2904319f545727a9c3f71309ed66"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/identity/frame_00/metrics.json",
+      "bytes": 3307,
+      "sha256": "d6304389c9dcd45a666766c2db42e5bca8ff4918fb2e2fb10a6d1f742d944d0e"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/identity/frame_08/metrics.json",
+      "bytes": 3299,
+      "sha256": "4b8d442699d147109ba022eee18195907de3afd386bf32feb632febe1b1061a3"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/identity/frame_15/metrics.json",
+      "bytes": 3298,
+      "sha256": "7dc327e70bc3b17b9f8be3f08900ef977092e00520bf882df6823bc17fe2e673"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/normal_only/frame_00/metrics.json",
+      "bytes": 3362,
+      "sha256": "8970657ca0cfe69daf6e3765f3c9e6f32c8dea8f5304876611d096c50efcd82b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/normal_only/frame_08/metrics.json",
+      "bytes": 3762,
+      "sha256": "6452ab0ef166e0ff310676c57eaa88aae381e2600dfb081e32b249b722f94359"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v1/normal_only/frame_15/metrics.json",
+      "bytes": 3758,
+      "sha256": "6a3fe4f9ead6a6c9423afaa9e834d126f53a2359ab95f379dfcaee9fc3b3db6a"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/arap/frame_00/metrics.json",
+      "bytes": 3363,
+      "sha256": "b6291268a53691939687934d19325e3879352799da3f2977bcd84efca8f200ef"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/arap/frame_08/metrics.json",
+      "bytes": 3746,
+      "sha256": "07eb0de3d878e074af0e8ab301eddf72c0e75349e80f6a6b9fbbf94e6d887ede"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/arap/frame_15/metrics.json",
+      "bytes": 3746,
+      "sha256": "e0f91aaffef9e7840e1b1452d13e0d3dea1ee9c2033064b368e47e4a3b02075b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/closest_surface/frame_00/metrics.json",
+      "bytes": 3363,
+      "sha256": "b6291268a53691939687934d19325e3879352799da3f2977bcd84efca8f200ef"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/closest_surface/frame_08/metrics.json",
+      "bytes": 3715,
+      "sha256": "ef74e698f042d858d4f161c98e966d42cea5593cb01d1ea80930efc235cd38e6"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/closest_surface/frame_15/metrics.json",
+      "bytes": 3713,
+      "sha256": "2acdafa1945285a1d7bdde675ab9033812e31da4b817ca3c85f93b57f5498e24"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/identity/frame_00/metrics.json",
+      "bytes": 3308,
+      "sha256": "50a898be841165c152394745015e0211d781fd16660953dd807a5b8f43a8f352"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/identity/frame_08/metrics.json",
+      "bytes": 3301,
+      "sha256": "51a583306b36257c9843757864de899b391ba6ef9b2407c46cf39bc92f9f07c5"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/identity/frame_15/metrics.json",
+      "bytes": 3294,
+      "sha256": "481ceb1e5b1136aa2b987bf78675bf29b52ab140533a1fdd56b23240f7272f56"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/normal_only/frame_00/metrics.json",
+      "bytes": 3363,
+      "sha256": "b6291268a53691939687934d19325e3879352799da3f2977bcd84efca8f200ef"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/normal_only/frame_08/metrics.json",
+      "bytes": 3747,
+      "sha256": "ff7d5a727187660431d4dbe4312b59083024e5b9b9c46ceea49b838cc419dd47"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v2/normal_only/frame_15/metrics.json",
+      "bytes": 3766,
+      "sha256": "d863652326324dde5709dd5da197f2cc5ab2894e247d0c346d1d4945e6b3aa9b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/arap/frame_00/metrics.json",
+      "bytes": 3362,
+      "sha256": "8970657ca0cfe69daf6e3765f3c9e6f32c8dea8f5304876611d096c50efcd82b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/arap/frame_08/metrics.json",
+      "bytes": 3740,
+      "sha256": "9ff74c44bd843081e5d4f85997d46f8858ecc8ff864e1e1760c02072b38a4dd3"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/arap/frame_15/metrics.json",
+      "bytes": 3759,
+      "sha256": "af9024c4f295f22c129506831ffcb2df8d1794ecfd01c9177ab44a45331b4658"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/closest_surface/frame_00/metrics.json",
+      "bytes": 3362,
+      "sha256": "8970657ca0cfe69daf6e3765f3c9e6f32c8dea8f5304876611d096c50efcd82b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/closest_surface/frame_08/metrics.json",
+      "bytes": 3707,
+      "sha256": "b8a4a3811b588f64e3135c533e249689d7ff50605d9acc9998aba653bf9b459b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/closest_surface/frame_15/metrics.json",
+      "bytes": 3699,
+      "sha256": "657c391ed656708f8418d2273b3f3e9a6f0e2904319f545727a9c3f71309ed66"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/identity/frame_00/metrics.json",
+      "bytes": 3307,
+      "sha256": "d6304389c9dcd45a666766c2db42e5bca8ff4918fb2e2fb10a6d1f742d944d0e"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/identity/frame_08/metrics.json",
+      "bytes": 3299,
+      "sha256": "4b8d442699d147109ba022eee18195907de3afd386bf32feb632febe1b1061a3"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/identity/frame_15/metrics.json",
+      "bytes": 3298,
+      "sha256": "7dc327e70bc3b17b9f8be3f08900ef977092e00520bf882df6823bc17fe2e673"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/normal_only/frame_00/metrics.json",
+      "bytes": 3362,
+      "sha256": "8970657ca0cfe69daf6e3765f3c9e6f32c8dea8f5304876611d096c50efcd82b"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/normal_only/frame_08/metrics.json",
+      "bytes": 3762,
+      "sha256": "6452ab0ef166e0ff310676c57eaa88aae381e2600dfb081e32b249b722f94359"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/bat-seed42-v2/normal_only/frame_15/metrics.json",
+      "bytes": 3758,
+      "sha256": "6a3fe4f9ead6a6c9423afaa9e834d126f53a2359ab95f379dfcaee9fc3b3db6a"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/closest_surface/frame_00/metrics.json",
+      "bytes": 3363,
+      "sha256": "b6291268a53691939687934d19325e3879352799da3f2977bcd84efca8f200ef"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/closest_surface/frame_08/metrics.json",
+      "bytes": 3715,
+      "sha256": "ef74e698f042d858d4f161c98e966d42cea5593cb01d1ea80930efc235cd38e6"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/closest_surface/frame_15/metrics.json",
+      "bytes": 3713,
+      "sha256": "2acdafa1945285a1d7bdde675ab9033812e31da4b817ca3c85f93b57f5498e24"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/identity/frame_00/metrics.json",
+      "bytes": 3308,
+      "sha256": "50a898be841165c152394745015e0211d781fd16660953dd807a5b8f43a8f352"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/identity/frame_08/metrics.json",
+      "bytes": 3301,
+      "sha256": "51a583306b36257c9843757864de899b391ba6ef9b2407c46cf39bc92f9f07c5"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/identity/frame_15/metrics.json",
+      "bytes": 3294,
+      "sha256": "481ceb1e5b1136aa2b987bf78675bf29b52ab140533a1fdd56b23240f7272f56"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/normal_only/frame_00/metrics.json",
+      "bytes": 3363,
+      "sha256": "b6291268a53691939687934d19325e3879352799da3f2977bcd84efca8f200ef"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/normal_only/frame_08/metrics.json",
+      "bytes": 3747,
+      "sha256": "ff7d5a727187660431d4dbe4312b59083024e5b9b9c46ceea49b838cc419dd47"
+    },
+    {
+      "path": "results/census-20261002/surface-evaluation/mannequin-seed42-v1/normal_only/frame_15/metrics.json",
+      "bytes": 3766,
+      "sha256": "d863652326324dde5709dd5da197f2cc5ab2894e247d0c346d1d4945e6b3aa9b"
+    },
+    {
+      "path": "results/census-20261002/exports/000-037_1358c424008a43cbaa35eba5e58551ac__seed42/export.json",
+      "bytes": 2663,
+      "sha256": "2ef60a3025d9bb23489da456447ad6611815d0ec55c81fa40b9a412d4b56ee38"
+    },
+    {
+      "path": "results/census-20261002/exports/000-037_1358c424008a43cbaa35eba5e58551ac__seed42/export-coordinates.npy",
+      "bytes": 3838592,
+      "sha256": "6bed6e9ff38ae53e248c0d1bb9d069720bffedf4031b0b306ea470217f24abe8"
+    },
+    {
+      "path": "results/census-20261002/exports/000-037_1358c424008a43cbaa35eba5e58551ac__seed42/export-faces.npy",
+      "bytes": 959744,
+      "sha256": "577aee82b2b182de6c38a1ec18dc4cac430b2dcb060f1e60bf99b1402ceb013e"
+    },
+    {
+      "path": "results/census-20261002/exports/000-037_1358c424008a43cbaa35eba5e58551ac__seed42/export.log",
+      "bytes": 693,
+      "sha256": "f819da611a4d6a697db523fd04725d910401e5cae15f2b02a2a2f8077a5811ba"
+    },
+    {
+      "path": "results/census-20261002/exports/000-037_1358c424008a43cbaa35eba5e58551ac__seed42/animated_mesh.glb",
+      "bytes": 4169324,
+      "sha256": "2630c1bd8afcbe077d1fdf85862596904867af718950f25417ac12355d4adf83"
+    },
+    {
+      "path": "results/census-20261002/exports/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/export.json",
+      "bytes": 2654,
+      "sha256": "57239ac220ec7e54295e709b5154634a6f9cbf5366fae89b247553091e83d1dc"
+    },
+    {
+      "path": "results/census-20261002/exports/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/export.log",
+      "bytes": 693,
+      "sha256": "068a1119182769ea541a2833ae1ea45b55943bffc2371f8754e0729e15b36336"
+    },
+    {
+      "path": "results/census-20261002/exports/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/animated_mesh.glb",
+      "bytes": 4176920,
+      "sha256": "a33a31f49493bb56aae237cee82f44a75d7f9bdd4d951c888aae29fca34ac3c4"
+    },
+    {
+      "path": "results/census-20261002/exports/000-043_061697e330d44524bd11f8cf95772e2d__seed42/export.json",
+      "bytes": 2653,
+      "sha256": "940965af97e8c71f83181ba20da38b6594f5639b610923f641115bd8c87f5e7f"
+    },
+    {
+      "path": "results/census-20261002/exports/000-043_061697e330d44524bd11f8cf95772e2d__seed42/export-coordinates.npy",
+      "bytes": 3826304,
+      "sha256": "1336ba261af924397c5049d5fd1e3c5ab07fce264edf789750a48fe72ace5d1a"
+    },
+    {
+      "path": "results/census-20261002/exports/000-043_061697e330d44524bd11f8cf95772e2d__seed42/export-faces.npy",
+      "bytes": 958544,
+      "sha256": "4c6043e5e92ffc1b9fb0294f11dd3b7f487e56ed9622da7fa84486b6a16ee993"
+    },
+    {
+      "path": "results/census-20261002/exports/000-043_061697e330d44524bd11f8cf95772e2d__seed42/export.log",
+      "bytes": 692,
+      "sha256": "bfc39df2a7de2968e890d497421c38b70affe26b091d04a6dfca8fa5d5007c27"
+    },
+    {
+      "path": "results/census-20261002/exports/000-043_061697e330d44524bd11f8cf95772e2d__seed42/animated_mesh.glb",
+      "bytes": 4166192,
+      "sha256": "d3d0ae5eec940837846853c1af6cf21e3767eda49e606e747af57de5aa52a3f5"
+    },
+    {
+      "path": "results/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/export.json",
+      "bytes": 2653,
+      "sha256": "c2b7d9bf478656db9997e2601c4b94713ed2be8c1806fe6196b3484340c807ba"
+    },
+    {
+      "path": "results/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/export.log",
+      "bytes": 694,
+      "sha256": "8791429f499dca62ac33d896ea3febb21698c8203579eaf12c796ff34e0373af"
+    },
+    {
+      "path": "results/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/animated_mesh.glb",
+      "bytes": 4170868,
+      "sha256": "fa52c446127ec0ec17091c3307a5e0911b4e0be16e9467cee4f709ae0e6bd507"
+    },
+    {
+      "path": "results/census-20261002/exports/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/export.json",
+      "bytes": 2654,
+      "sha256": "8ddbda0f71043f2d93e027483ea527da88e3fc7953f061b869a45b1952bb9e7e"
+    },
+    {
+      "path": "results/census-20261002/exports/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/export.log",
+      "bytes": 694,
+      "sha256": "d5aecc8169c4604829acdb42d109f89d8c3a2ff85416243ea6211c178e0961d5"
+    },
+    {
+      "path": "results/census-20261002/exports/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/animated_mesh.glb",
+      "bytes": 4167692,
+      "sha256": "04927db443c00a5a05a936f2845ec0198e2359d41083540c07b5eb9f75dd1a21"
+    },
+    {
+      "path": "results/census-20261002/exports/000-067_09a05166420843fab423047a799c87da__seed42/export.json",
+      "bytes": 2654,
+      "sha256": "dea3754cfe44bb6ef731a53e0648856241baa1545e940ce3fc5ef4f5f019fe28"
+    },
+    {
+      "path": "results/census-20261002/exports/000-067_09a05166420843fab423047a799c87da__seed42/export.log",
+      "bytes": 693,
+      "sha256": "17427f07175360ab9d323fc46d20202a504df292adcc1b900e0335913d4d849c"
+    },
+    {
+      "path": "results/census-20261002/exports/000-067_09a05166420843fab423047a799c87da__seed42/animated_mesh.glb",
+      "bytes": 4176764,
+      "sha256": "9a28bd76a457cd2d4c151ca1b3d1e96a3086332e8b7801580d772bd9b2946c45"
+    },
+    {
+      "path": "results/census-20261002/exports/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/export.json",
+      "bytes": 2654,
+      "sha256": "74855b69d7b95ef851996646bf76be7f4c3403cd115e2a0cff7530db96d74b0f"
+    },
+    {
+      "path": "results/census-20261002/exports/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/export.log",
+      "bytes": 692,
+      "sha256": "19aec224d86c40f00cf119613d40764db4bdc08ebe88cc40c36df79a4eba25a4"
+    },
+    {
+      "path": "results/census-20261002/exports/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/animated_mesh.glb",
+      "bytes": 4179224,
+      "sha256": "5e32a9885590dc2505033e03604ab54f167171bfa36ad7fae91e61cbff266edf"
+    },
+    {
+      "path": "results/census-20261002/exports/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/export.json",
+      "bytes": 2654,
+      "sha256": "41ea5e3d487653004a4b7a867c098b635126480e827ce030251fd268c06fc69c"
+    },
+    {
+      "path": "results/census-20261002/exports/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/export.log",
+      "bytes": 693,
+      "sha256": "3a2044161b370bcb1cecd5446592a825f3f44559ea78399c70d0d191d79f76af"
+    },
+    {
+      "path": "results/census-20261002/exports/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/animated_mesh.glb",
+      "bytes": 4102568,
+      "sha256": "03f804bdfa71a80f6c705bde7a0a131e4dcbf4e7a84eee7349fb1d97ee22cc71"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/report.json",
+      "bytes": 101954,
+      "sha256": "ddfd26619ad1d3845a0204b3caa707b022a3e6d188a82655880e81373b78d1aa"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/provenance.json",
+      "bytes": 4963,
+      "sha256": "738dcb1131b5b1c52bbbe03e66761c509b1bc5a2e3221dc26240ba03aafe45e4"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/native-reference.json",
+      "bytes": 30774,
+      "sha256": "ed0fcbcb0355124ed40c105045d925c38d1e56ddb0593e9843c10cad778fcf60"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/command.json",
+      "bytes": 1170,
+      "sha256": "872a97b5054dc11d0052ccf69db4d1c4c7c61078b0575dfee910c31256bc24d2"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/protocol.json",
+      "bytes": 1717,
+      "sha256": "bfdab05762dd8d54f37d076dfe85582e2aeffec38528bbbf5d85445491d02a64"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/progress.json",
+      "bytes": 101954,
+      "sha256": "ddfd26619ad1d3845a0204b3caa707b022a3e6d188a82655880e81373b78d1aa"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/report.json",
+      "bytes": 101937,
+      "sha256": "a575181fecdc8049c451eaf261ec92603c153cbfe764bcdff2915caa4e268b4c"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/provenance.json",
+      "bytes": 4853,
+      "sha256": "5ef03f3fb2461a145fbc25f51ae78d5d0d49d0d1d89cd1e46c76331872001312"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/native-reference.json",
+      "bytes": 30737,
+      "sha256": "018d7a5d0175dc992dff7a9aa91de094985a07edfa04b624d1422dfec044fbb0"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/command.json",
+      "bytes": 1136,
+      "sha256": "a86d299eb64783f65792ef96f31a68c50d60c20699f7c5d7ce43f8a5127b7d48"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/protocol.json",
+      "bytes": 1717,
+      "sha256": "bfdab05762dd8d54f37d076dfe85582e2aeffec38528bbbf5d85445491d02a64"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/progress.json",
+      "bytes": 101937,
+      "sha256": "a575181fecdc8049c451eaf261ec92603c153cbfe764bcdff2915caa4e268b4c"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/row_permutation/metrics.json",
+      "bytes": 25107,
+      "sha256": "ec7373ca12d8f815320d2150a493905e53b47f0b6bfa2f9361d05143093dfacf"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/bat-seed42-v1/time_reversal/metrics.json",
+      "bytes": 25374,
+      "sha256": "311130d2f8db26243a3dc7ec3f90db6e7b64e66328d3d7a9b5a73a73cb17b2c8"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/row_permutation/metrics.json",
+      "bytes": 25090,
+      "sha256": "3f2a647b928f1d1ca3be9b4dd811ba072182ef4652c03f9b7f6425553eb1fea5"
+    },
+    {
+      "path": "results/census-20261002/time-direction-eval/mannequin-seed42-v2/time_reversal/metrics.json",
+      "bytes": 25357,
+      "sha256": "bc9170d781a4ad9a4b8dc65209560141a16ab1ae242fc65ba31aff9e3403eea4"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/report.json",
+      "bytes": 4192,
+      "sha256": "a27acc73f9a34620874367f74b079d1d7b7801dd221c74f6aa9a73b2ee1a2d6f"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/provenance.json",
+      "bytes": 5436,
+      "sha256": "d2b06685ecd2dd369139251b2abc7d859f141c068fd1c60d6315d7cf4f9851a3"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/motion-readouts.json",
+      "bytes": 40194,
+      "sha256": "775280ee411d0782edc5d834435fe5e2dc0977a5cbb25c87b902143360403f16"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/cached-reference.json",
+      "bytes": 403,
+      "sha256": "aeb83ad1e6718114bac0f34e468c1e26a3acaf06bc6aaea9002b29ccb35ac7ac"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/command.json",
+      "bytes": 1078,
+      "sha256": "12be4c914409ba7510296c60e1f10a1858ae56704226ead35bd795aa1cfb5dd3"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/protocol.json",
+      "bytes": 3796,
+      "sha256": "9b63e24e9c26059ad32c4d9efcf974912927a37bfc1148f7bbdfacef46eac751"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/progress.json",
+      "bytes": 4192,
+      "sha256": "a27acc73f9a34620874367f74b079d1d7b7801dd221c74f6aa9a73b2ee1a2d6f"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/mannequin-seed42-v1/query-ids.npz",
+      "bytes": 59694,
+      "sha256": "638390349bf6dc4e14a26f93a752ae65236934ab4ab41b57f84701a7bea0d521"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/report.json",
+      "bytes": 4189,
+      "sha256": "e3e06d0df5af7bd6822c0340286aa489c3fbbfe997d9591a273208b17d7ff901"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/provenance.json",
+      "bytes": 5368,
+      "sha256": "e7dd73b280922bdcc51d98f13996e10aaa30dee02f55ed29094e004fcd171b2d"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/motion-readouts.json",
+      "bytes": 40147,
+      "sha256": "b4b02bed634fb6f516330fad73a45fbf1fbe2200c9e2aebcda3eb38803f5b58e"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/cached-reference.json",
+      "bytes": 404,
+      "sha256": "0f8b46ce0f5ba6aa7e46067d8956b6dd695d9c388476faf6a1a14a1bb04eef73"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/command.json",
+      "bytes": 1054,
+      "sha256": "03dddc032a0d69dc0cf99daa5a5222be4d3047652c6bb6c5e684afdfd3818841"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/protocol.json",
+      "bytes": 3796,
+      "sha256": "9b63e24e9c26059ad32c4d9efcf974912927a37bfc1148f7bbdfacef46eac751"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/progress.json",
+      "bytes": 4189,
+      "sha256": "e3e06d0df5af7bd6822c0340286aa489c3fbbfe997d9591a273208b17d7ff901"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-local-v1/bat-seed42-v1/query-ids.npz",
+      "bytes": 59694,
+      "sha256": "638390349bf6dc4e14a26f93a752ae65236934ab4ab41b57f84701a7bea0d521"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-direction-v1/mannequin-seed42-v1/report.json",
+      "bytes": 19091,
+      "sha256": "ad5c26f6817e49d52f89c901737c62cdb921764f929c54a01b644c829821d721"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-direction-v1/bat-seed42-v1/report.json",
+      "bytes": 18931,
+      "sha256": "4796d0ca86e6ac3a95345dcd2e27b6da54e65c7fe036d83913c33479894c117b"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-direction-v1/bat-seed42-v1/row_permutation/motion-readouts.json",
+      "bytes": 40161,
+      "sha256": "b82d231f863b7ef601a6b45018cc4e47e462c45993af348ec9b8f9ea467c11e2"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-direction-v1/bat-seed42-v1/time_reversal/motion-readouts.json",
+      "bytes": 40154,
+      "sha256": "912e294f49d172524455fd916bdcd9d00d1853f5b58efefdbfa3c07e94e00c10"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-direction-v1/mannequin-seed42-v1/row_permutation/motion-readouts.json",
+      "bytes": 40189,
+      "sha256": "c889315fadf7154a8a39b247960603f9fec319b8784dc80dd160bcb0b0e17764"
+    },
+    {
+      "path": "results/census-20261002/motion-readouts-direction-v1/mannequin-seed42-v1/time_reversal/motion-readouts.json",
+      "bytes": 40190,
+      "sha256": "e0f51980da0d820ff63dc29a086010ec47eb1c4bd32d90410a80fccca6f13d2b"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/mannequin-seed42-v1/report.json",
+      "bytes": 65744,
+      "sha256": "e105cf463007b4ca6bec0366ca7e1a5a84daddf910d1582100ec14c8e3f7791a"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/mannequin-seed42-v1/provenance.json",
+      "bytes": 6584,
+      "sha256": "07c267c279f03bad6e40931109818abcedc98cd6c5f8464339929e2222fe8be9"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/mannequin-seed42-v1/command.json",
+      "bytes": 1281,
+      "sha256": "56730e5d8e9d40e7f00a231a71a03463e0556ba355571b3c22de233f60a72b33"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/mannequin-seed42-v1/protocol.json",
+      "bytes": 4233,
+      "sha256": "da5363fefb9182a0f2a93e317cbea025a2ddd4dc8973c482a1ab77811985f53c"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/mannequin-seed42-v1/progress.json",
+      "bytes": 65597,
+      "sha256": "f772f159945401ce3141e4ee66ff691f7dab2534be72789b99c1d39ed6a5052f"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/bat-seed42-v1/report.json",
+      "bytes": 65730,
+      "sha256": "32a7c5872e78d017f4759876de1f993d37ed6ff7aa67ac7ae6a8d7f57b940c87"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/bat-seed42-v1/provenance.json",
+      "bytes": 6406,
+      "sha256": "9e66316790d02e9c2db8354e66db727dcdfc1f13673c86717bcbe262feadc522"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/bat-seed42-v1/command.json",
+      "bytes": 1241,
+      "sha256": "8edef9402477a7a44b34e5486091dd2870296516fb52f9498f6b31cd2e0b67e3"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/bat-seed42-v1/protocol.json",
+      "bytes": 4233,
+      "sha256": "da5363fefb9182a0f2a93e317cbea025a2ddd4dc8973c482a1ab77811985f53c"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/bat-seed42-v1/progress.json",
+      "bytes": 65572,
+      "sha256": "4e5fe1329b5ee89a905ca39d962e570b94ff8ecc4161532733a08844f8695229"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/summary/report.json",
+      "bytes": 162274,
+      "sha256": "604b72b178b7d8e7ea92b88d473fe66b89616b4582172a67af1984c920226329"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/summary/command.json",
+      "bytes": 784,
+      "sha256": "836104102d2f2ecce74f356a878c82b734d0bdcc3f72139b943b1c023a8fb168"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/summary/protocol.json",
+      "bytes": 4233,
+      "sha256": "da5363fefb9182a0f2a93e317cbea025a2ddd4dc8973c482a1ab77811985f53c"
+    },
+    {
+      "path": "results/census-20261002/disagreement-rank-v1/summary/progress.json",
+      "bytes": 162116,
+      "sha256": "45381094baf02e821c88a46345c5e1229692cc33df1004a5213e9b48f73b7994"
+    },
+    {
+      "path": "actionmesh/research_census_time_direction.py",
+      "bytes": 21885,
+      "sha256": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d"
+    },
+    {
+      "path": "actionmesh/research_census_camera_check.py",
+      "bytes": 5389,
+      "sha256": "0b9346cebf6ab4c99ec2569fbbfdf97149597547cb50054692b1ccc8dcf032c8"
+    },
+    {
+      "path": "actionmesh/research_census_eval.py",
+      "bytes": 20172,
+      "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+    },
+    {
+      "path": "actionmesh/research_census_surface_query_check.py",
+      "bytes": 6981,
+      "sha256": "1307ea90a509a523be941cb28b7daed00b655a3fcc4d128e67f3c129db90a36b"
+    },
+    {
+      "path": "actionmesh/research_census_cdn_download.py",
+      "bytes": 3358,
+      "sha256": "ea22c16989e4850127a357c432415fcbf39459a336fc16c16c9b7bf94307e856"
+    },
+    {
+      "path": "actionmesh/research_census_stage_gt.py",
+      "bytes": 21075,
+      "sha256": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f"
+    },
+    {
+      "path": "actionmesh/research_census_motion_controls.py",
+      "bytes": 23882,
+      "sha256": "f5fdb10d3443a8c1f605e58b6d08c450cfb87d63d7e1031189a0cc4bd899d6aa"
+    },
+    {
+      "path": "actionmesh/research_census_aggregate.py",
+      "bytes": 31280,
+      "sha256": "9dccb934a4ba117962ed012ebeec55055c9a4ba8fe39fdd47897aed910f5b3ae"
+    },
+    {
+      "path": "actionmesh/research_census_motion_readout.py",
+      "bytes": 22316,
+      "sha256": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028"
+    },
+    {
+      "path": "actionmesh/research_census_queue.py",
+      "bytes": 15901,
+      "sha256": "d393c0d594accd6c8337742dcc5a301f61f4fe5f697a7ba574e4c1421189864d"
+    },
+    {
+      "path": "actionmesh/research_census_disagreement_rank.py",
+      "bytes": 25889,
+      "sha256": "b739db990f227a9dfff77d22024eae1231868f496686d4e0a6707d8331688557"
+    },
+    {
+      "path": "actionmesh/research_census_time_direction_resume.py",
+      "bytes": 20833,
+      "sha256": "f5a0007aec3116241bfc251dbc4b489aff3eaebbce65764e31ba07f9d5d31c3b"
+    },
+    {
+      "path": "actionmesh/research_census_shape_probe.py",
+      "bytes": 18580,
+      "sha256": "dc26a05ae4cfe05bc3774db53764f5a240cb8f17e26ce224ab429fa435034a49"
+    },
+    {
+      "path": "actionmesh/research_census_surface_baseline.py",
+      "bytes": 26759,
+      "sha256": "6c64929d3a9380bbf3ecf4e130ddd7a4a1418628855eb05e6c5009ec3dd5b4ff"
+    },
+    {
+      "path": "actionmesh/research_census_case.py",
+      "bytes": 20979,
+      "sha256": "77ac68c40ed81064c52531fc08f8133b13bb7590bd4c1b84885705cac98c9289"
+    },
+    {
+      "path": "actionmesh/research_census_surface_eval.py",
+      "bytes": 24322,
+      "sha256": "f91cad5a665880fb80e8828e63aa88f21ff6dfa6b6ffef43387fc205bfceaf49"
+    },
+    {
+      "path": "actionmesh/research_census_queue_v2.py",
+      "bytes": 18378,
+      "sha256": "0362db139f8b6c2fc23ea42b18d1e1ef964b2945a880b6a602d6d7c1bd34e02c"
+    },
+    {
+      "path": "actionmesh/research_census_download.py",
+      "bytes": 3004,
+      "sha256": "7da9115b8cf24deac5ca8b8c92c15890733a944b55ba381bce5b18f897627006"
+    },
+    {
+      "path": "actionmesh/research_census_time_direction_eval.py",
+      "bytes": 31829,
+      "sha256": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd"
+    },
+    {
+      "path": "actionmesh/research_census_export.py",
+      "bytes": 9308,
+      "sha256": "3312a099f4453d50fd57d962d050eb672d16318404c3090ed3c6574888f74920"
+    },
+    {
+      "path": "actionmesh/research_census_surface_baseline_v2.py",
+      "bytes": 32048,
+      "sha256": "10b0eaa4ef1fd3ab9e972e79db1e057c86894da4a33d079f6d0913d0f8fb86f2"
+    },
+    {
+      "path": "actionmesh/research_census_direction_motion.py",
+      "bytes": 10418,
+      "sha256": "29716caace8b3250ab88d3dc272a219b812229b9181d93847af32bb31459d657"
+    },
+    {
+      "path": "actionmesh/test_research_census_disagreement_rank.py",
+      "bytes": 3249,
+      "sha256": "b9675b0036898b9f2972e76276788d06972f5fbdbc4072a58ce971538beaccc9"
+    },
+    {
+      "path": "actionmesh/test_research_census_surface_eval.py",
+      "bytes": 2829,
+      "sha256": "8022511293cb218241edc5754b69d9602e3be408b513d2f0cfe828038beb0693"
+    },
+    {
+      "path": "actionmesh/test_research_census_queue_v2.py",
+      "bytes": 6489,
+      "sha256": "90f13bf4abc9a05035b5a55824f2d7d3a1a08435f8ef0295cda1d00295cd9a13"
+    },
+    {
+      "path": "actionmesh/test_research_census_export.py",
+      "bytes": 2472,
+      "sha256": "eb6fd30da07e8c0673f4bfc3be2bac725dd5dc5b19ba660c8547f953285f0b73"
+    },
+    {
+      "path": "actionmesh/test_research_census_time_direction_resume.py",
+      "bytes": 6135,
+      "sha256": "e78e1415033ddb626d64b7605b893ba7663ab1e3554f09c17409f2d12543e15e"
+    },
+    {
+      "path": "actionmesh/test_research_census_direction_motion.py",
+      "bytes": 6230,
+      "sha256": "94165ee50be867c9b71303a09cfb7a07616d833a6b7da156ee70392c22f6efe8"
+    },
+    {
+      "path": "actionmesh/test_research_census_time_direction.py",
+      "bytes": 1813,
+      "sha256": "db245f2463456b7566530e4c77c112d31ee5bbe21396420cccbe8825fa01a7be"
+    },
+    {
+      "path": "actionmesh/test_research_census_queue.py",
+      "bytes": 6757,
+      "sha256": "c28972ca39211ba34a2d3c3feda4c52e8ee024b2cf6e87d067a4ed2e4deb5f19"
+    }
+  ],
+  "all_sha256_verified": true,
+  "backed_up_changed_files": [
+    "results/census-20261002/README.md"
+  ],
+  "backup_directory": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/operations/user-delivery-backup-20261002T201412Z",
+  "git_push_performed": false
+}

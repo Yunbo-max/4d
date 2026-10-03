@@ -1,0 +1,30 @@
+{
+  "status": "exported_structure_verified",
+  "coordinate_transform": "official save_deformation (-z,x,y); raw pilot arrays unchanged",
+  "playback_fps": 8,
+  "frames": 16,
+  "morph_weight_channels": 1,
+  "primitive_target_counts": [
+    16
+  ],
+  "elapsed_seconds": 1.8235717799980193,
+  "sha256": "abf84f43d61975fd19bac797ef49fa3675216a82cc187387e1460c5f60f16ff7",
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/tools/blender-3.5.1-linux-x64/blender",
+    "-b",
+    "-t",
+    "2",
+    "-P",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/glb_export.py",
+    "--",
+    "--vertices_npy",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/cfg_global/export-coordinates.npy",
+    "--faces_npy",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/cfg_global/deformations_faces.npy",
+    "--output_glb",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/cfg_global/animated_mesh.glb",
+    "--fps",
+    "8"
+  ],
+  "verification_scope": "GLB parsing and animated morph structure; not a Blender re-import playback or quality test"
+}

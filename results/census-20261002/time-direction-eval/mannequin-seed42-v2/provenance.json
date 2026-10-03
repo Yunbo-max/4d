@@ -1,0 +1,45 @@
+{
+  "script_sha256": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd",
+  "official": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/shared-anchor-transform.npy": "087faeccc3cddec510e984efe6895f11893497986fe65bf1f53d0befb31d2f65",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/report.json": "0c49e4972b7b693c1132cb1e28661eca694094a3c5ec10f018582c306c3e4657",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/report.json": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/report.json": "18f84982f0696655569be6d6a1e8674e77e36ef69de750ef3478964c7bfeaad0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/provenance.json": "522e532e0e3f711a0b2119f0fdd4226ed7545a77743ec1eb2b16bbad39486a1f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/protocol.json": "bb6f98c91c457d005a79977aa467a84ab1f636aacaed1b940a2579c96b66b665",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/controls.json": "dba4ffd3f41445d2c1ba3ef28b06ae58c8c06171de96de46addaf4d94da6a975",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/per-frame-shape.json": "a96108329aaa2f5ddfa9508486e961ec0f3867a702d2de1c2f64c934f089b0e0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1/sampling-and-maps.npz": "483b25a06f701cf432ab6b54e6365770e1e6dd6f00d65fd5d7bc47dd210ac37a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/forward/report.json": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/forward/sequence.npz": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/row_permutation/report.json": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/row_permutation/sequence.npz": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/time_reversal/report.json": "675fdff12d4be3aa2f5f7d3337087d64478a742f54ee7950dfb40d568bc86718",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2/variants/time_reversal/sequence.npz": "30a9dca36e150c97274a25beef3a4f610f3e9e3b9be62d455df16475756d4513"
+  },
+  "same_matrix_sha256": "087faeccc3cddec510e984efe6895f11893497986fe65bf1f53d0befb31d2f65",
+  "native_core_metrics_recomputed": false,
+  "native_cache_qualified": true,
+  "torch_cuda_initialized": false
+}

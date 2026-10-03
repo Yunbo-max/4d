@@ -1,0 +1,46 @@
+{
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/denoised.npz": "07c096485ad49ecd4b93df0030508354b583cd752145f96819ae26b6a880ee0f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/sequence.npz": "4cd228b3c9da19113520abd0bb4da8d7fccc47b6f9b7c2270528b9c57c025050",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/report.json": "3560f3f2ecef4f031d7fd4b514c60be17bae8fbe8074129e8d2fb4873572fb2e",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/report.json": "189766777faf660d65ce2d90c37c6db6172076927212d0b02bceb2a64ace0c7c",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/provenance.json": "ce666b7fb4b33f18c78a4aedd506c5ec10beec6faa7346441c046f6bcc02596f",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-043_061697e330d44524bd11f8cf95772e2d/surfaces.npy": "d5d9ec579fcbbf29a59500892bcc13e4cba8073aa86b6b572d4859c4975c2d3a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/frame_00/stageI-raw-mesh.npz": "68df1ff4fa2a0ba8cea637ca72c478ff4799ccbbbbbdab32c0b9ab02d00960bf",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/frame_00/measurement.json": "e844292e12057eae30543d010a28213a58dbf70bbad68c3358bbc57e42dadbbb",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/frame_08/stageI-raw-mesh.npz": "7c912a589d2d36111a27071821874a7ee587ad65a51f43b552fe44d65916943f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/frame_08/measurement.json": "043a7257ffc13e1e771baace2b00fe273c7fc9698e613331dcf51ac58c796a0a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/frame_15/stageI-raw-mesh.npz": "a689852eee27cac68c5ba36e7c3dbbf1661759a24de991f2daeeb8517023f61b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1/frame_15/measurement.json": "7d18e0f16070ef399f45bb7125685d3a3f2110656200dfbe42774428a0820d00"
+  },
+  "official": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "diagnostic_script_sha256": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f",
+  "sampling_module_sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+  "shared_matrix_sha256": "3e92965f659e001c74cc3894a42ab6eceec3e85c57053085e56c166fc4db8acf",
+  "protocol_sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709",
+  "anchor_samples_sha256": "1a332fd0101e0318839bd752e0faa49f85ba2446d114ecd58174493f838ca1bd",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "pytorch3d": "0.7.9"
+  }
+}

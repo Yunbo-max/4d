@@ -1,0 +1,18 @@
+{
+  "archives": [
+    {
+      "path": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1.tar.gz",
+      "bytes": 588497346,
+      "sha256": "358870d22e2adf223fd9b1367ddc4dbd14ec76389def998030d48044a1d1b8c2",
+      "local_raw_directory": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-stage8-ranking-v1"
+    },
+    {
+      "path": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-motion-final-v1.tar.gz",
+      "bytes": 70926031,
+      "sha256": "b16da00fbc6f2a417829591556fbdccc831f1033dfa6b050dc9d9bd5beca06e3",
+      "local_raw_directory": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-motion-final-v1"
+    }
+  ],
+  "all_downloads_verified": true,
+  "raw_clouds_preserved": true
+}

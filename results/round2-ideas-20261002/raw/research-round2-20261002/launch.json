@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/rivermind-data/actionmesh-repro/research/round2-20261002/research_round2_run.py",
+    "--input-root",
+    "/root/rivermind-data/actionmesh-repro/outputs",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-round2-20261002/pilot",
+    "--actionbench-root",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-round2",
+    "--manifest",
+    "/root/rivermind-data/actionmesh-repro/research/round2-20261002/actionbench-subset-manifest.json",
+    "--protocol",
+    "/root/rivermind-data/actionmesh-repro/research/round2-20261002/round2-protocol-20261002.md"
+  ],
+  "source_sha256": {
+    "research_round2_summary.py": "fe76095c1c287f67dca92f5dd8872dad9af42fe7516c70bb7f3da64b25409b4e",
+    "research_round2_run.py": "bd9c9553367e989d89f1c7204e32009a91a78dc72218cbc390020084ad78ba06",
+    "round2-protocol-20261002.md": "948a04ae78a9fc127116309f5cf06627917e9ebe31ce949d9612bb87cb11fd58",
+    "research_round2_utility.py": "025d4be24b155a2eb8996cd04e7e1031571ac83c030bb705036c62df3b5a2f35",
+    "remote-selftests.json": "4e2b9a33ecfe7d67c16f7369827815091bca929a19d34644b1053546febb76c3",
+    "actionbench-subset-manifest.json": "01fc47b7d393ac8557c231223c41f7bb0b3459bc490dcbc9ff0443eddaf9f6d8",
+    "research_round2_geometry.py": "c279cc1e8d18ad2b8050f053975a7ea6f2b5629c3e7997c5fef6dd138e4e618c",
+    "research_round2_time.py": "9ff9fa0c068fdf07563ba7504083dd46ead22b975a26a4257082a5c9e2543ec3",
+    "research_round2_launch.py": "49a58d8eeaa3b9e998185a3691fb1f7e57bfa49299930652d9045ba8e058dc56",
+    "research_edit_probe.py": "f962252d8052bf3a65467dbe49aa4fc21183119ed525959b4a62d4b0c419d746"
+  },
+  "start_unix": 1790956499.8972437,
+  "training": false,
+  "subprocess_timeout_seconds": 650,
+  "exit_code": 1,
+  "elapsed_seconds": 13.694300859933719
+}

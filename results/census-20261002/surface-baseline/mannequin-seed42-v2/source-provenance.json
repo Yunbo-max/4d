@@ -1,0 +1,103 @@
+{
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/denoised.npz": "378c94754bfde49714012b0bccce38488f4cdb10b71b9439142c5a901ae31785",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/stageI-raw-mesh.npz": "b45aa9c7466de9948552b54d9a2d2a822f8f123154a7c1094fba747f13e77687",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/measurement.json": "e14ed52abfeb8c81a795f818828a9b31e992072c1231cbf9e1ed80d2d677c54f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/stageI-raw-mesh.npz": "fcd09d375903f6dfe6b6708775868186f8b63ab3a236eb2a13df0229865b3981",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/measurement.json": "306c7bd6549f7f3f05c9ef1057e5c760660a7d9557ac05ff988406ae5f9de07a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/stageI-raw-mesh.npz": "2aa9c6d9a9f57bef80b8599c9d183f4c75f4edb3b54cf9eac6b2668927902acd",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/measurement.json": "d7d7432ee4c989d6637678c40f68dc17b545821f36f8071617d587bd21243e91",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/report.json": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/provenance.json": "f805aa8f37d0032342d8941b9e62e9d9817780df4cd346754f6e779af817fa2a"
+  },
+  "source_case": {
+    "dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "sequence_sha256": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "report_sha256": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319"
+  },
+  "source_probe": {
+    "dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+    "report_sha256": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99"
+  },
+  "target_metadata": {
+    "0": {
+      "raw_vertices": 2079712,
+      "referenced_vertices": 305184,
+      "faces": 610364,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true,
+      "exact_query_cache": {
+        "trimesh_version": "5.1.0",
+        "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+        "closest_point_signature": "(mesh, points)",
+        "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+        "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+        "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+        "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+        "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+        "module_globals_mutated": false,
+        "tol_merge": 1e-08,
+        "kdtree_builds": 1,
+        "cached_constructor_calls": 0,
+        "closest_point_calls": 0,
+        "kdtree_referenced_vertices": 305184
+      }
+    },
+    "8": {
+      "raw_vertices": 2079938,
+      "referenced_vertices": 306922,
+      "faces": 613832,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true,
+      "exact_query_cache": {
+        "trimesh_version": "5.1.0",
+        "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+        "closest_point_signature": "(mesh, points)",
+        "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+        "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+        "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+        "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+        "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+        "module_globals_mutated": false,
+        "tol_merge": 1e-08,
+        "kdtree_builds": 1,
+        "cached_constructor_calls": 0,
+        "closest_point_calls": 0,
+        "kdtree_referenced_vertices": 306922
+      }
+    },
+    "15": {
+      "raw_vertices": 2081884,
+      "referenced_vertices": 308292,
+      "faces": 616568,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true,
+      "exact_query_cache": {
+        "trimesh_version": "5.1.0",
+        "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+        "closest_point_signature": "(mesh, points)",
+        "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+        "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+        "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+        "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+        "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+        "module_globals_mutated": false,
+        "tol_merge": 1e-08,
+        "kdtree_builds": 1,
+        "cached_constructor_calls": 0,
+        "closest_point_calls": 0,
+        "kdtree_referenced_vertices": 308292
+      }
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "trimesh": "5.1.0",
+    "rtree": "1.4.1"
+  }
+}

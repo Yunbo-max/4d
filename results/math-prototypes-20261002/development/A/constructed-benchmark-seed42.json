@@ -1,0 +1,1019 @@
+{
+  "schema_version": 1,
+  "seed": 42,
+  "status": "completed",
+  "scope": "Constructed affine residual surrogate; no 4D renderer/model or natural episodes",
+  "natural_efficacy_claim": false,
+  "novelty_pass": false,
+  "GT_used_by_solver": false,
+  "generated_view_blocks": 16,
+  "declared_bias_variance": 4.0,
+  "budget_fit_from_GT": false,
+  "cases": [
+    {
+      "name": "shared_hidden_bias",
+      "constructed": true,
+      "truth_for_evaluation": [
+        1.0030471707975444,
+        0.989600158937595
+      ],
+      "synthetic_bias_for_construction": [
+        0.0,
+        1.0
+      ],
+      "arms": {
+        "source_only": {
+          "correction": [
+            0.9118610643614039,
+            0.08996365081250865
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.5079483557953256,
+          "objective_after": 0.050183385195540386,
+          "group_errors_before": [
+            1.0061036268449581,
+            0.009793084745693134
+          ],
+          "group_errors_after": [
+            0.008314906006983135,
+            0.008093458467514988
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.9162881965658116,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.904245958110116
+        },
+        "equal_weight": {
+          "correction": [
+            0.9971813978689034,
+            1.9766293323768398
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 40.224847710111035,
+          "objective_after": 0.2515812465553324,
+          "group_errors_before": [
+            1.0061036268449581,
+            0.009793084745693134
+          ],
+          "group_errors_after": [
+            3.4407292050377484e-05,
+            0.009742265892201589
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 2.2139183042443755,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.9870466030093052
+        },
+        "inverse_count": {
+          "correction": [
+            0.9552830198071849,
+            1.8013478923666402
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 2.990254565440057,
+          "objective_after": 0.23116653783130214,
+          "group_errors_before": [
+            1.0061036268449581,
+            0.009793084745693134
+          ],
+          "group_errors_after": [
+            0.0022814141198298572,
+            0.006589343827271924
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 2.038975202709849,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0625,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.8131517674130838
+        },
+        "fixed_cap": {
+          "correction": [
+            0.9706908104492363,
+            1.8905669760495574
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 5.472560775084789,
+          "objective_after": 0.24126088544409452,
+          "group_errors_before": [
+            1.0061036268449581,
+            0.009793084745693134
+          ],
+          "group_errors_after": [
+            0.0010469340549895596,
+            0.008117412055368603
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 2.125202141072647,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.125,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.9015476357862905
+        },
+        "covariance": {
+          "correction": [
+            0.9971813978689034,
+            1.402887371330921
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 9.043978452702,
+          "objective_after": 0.19163668190576466,
+          "group_errors_before": [
+            1.0061036268449581,
+            0.009793084745693134
+          ],
+          "group_errors_after": [
+            3.4407292050377484e-05,
+            0.00170806319927846
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.7211809076606563,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [
+            4.0
+          ],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.41332883666627523
+        }
+      }
+    },
+    {
+      "name": "helpful_hidden_prior",
+      "constructed": true,
+      "truth_for_evaluation": [
+        1.0075045119580646,
+        1.0094056471639121
+      ],
+      "synthetic_bias_for_construction": [
+        0.0,
+        0.0
+      ],
+      "arms": {
+        "source_only": {
+          "correction": [
+            0.9159131926891495,
+            0.09176414974217383
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.512627169610561,
+          "objective_after": 0.05077069625765912,
+          "group_errors_before": [
+            1.015065341615858,
+            0.010188997605263964
+          ],
+          "group_errors_after": [
+            0.008388969765420331,
+            0.008420659177904103
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.9204985799662785,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.9222011101467132
+        },
+        "equal_weight": {
+          "correction": [
+            1.0016126727068477,
+            1.0031399386154087
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 16.784347986748593,
+          "objective_after": 0.1010852202960244,
+          "group_errors_before": [
+            1.015065341615858,
+            0.010188997605263964
+          ],
+          "group_errors_after": [
+            3.4713769762179356e-05,
+            3.9259103614788115e-07
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.4175745774287436,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.008600748419583486
+        },
+        "inverse_count": {
+          "correction": [
+            0.9595281066267282,
+            0.9184682014734697
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 1.5296097206816879,
+          "objective_after": 0.09469179430424024,
+          "group_errors_before": [
+            1.015065341615858,
+            0.010188997605263964
+          ],
+          "group_errors_after": [
+            0.002301735468516684,
+            8.269619028702166e-05
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.3282612787116035,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0625,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.10281709243709841
+        },
+        "fixed_cap": {
+          "correction": [
+            0.9750043664110303,
+            0.9615665169665705
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 2.546592271752815,
+          "objective_after": 0.09764659853438529,
+          "group_errors_before": [
+            1.015065341615858,
+            0.010188997605263964
+          ],
+          "group_errors_after": [
+            0.0010562594605784126,
+            2.2885823780382137e-05
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.3693953706186524,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.125,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.057834607620495
+        },
+        "covariance": {
+          "correction": [
+            1.0016126727068477,
+            0.7259872149148537
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 8.75855294998682,
+          "objective_after": 0.08709724407451702,
+          "group_errors_before": [
+            1.015065341615858,
+            0.010188997605263964
+          ],
+          "group_errors_after": [
+            3.4713769762179356e-05,
+            0.0008032600773851416
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.2370470412829015,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [
+            4.0
+          ],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.28347966683393055
+        }
+      }
+    },
+    {
+      "name": "misspecified_bias_subspace",
+      "constructed": true,
+      "truth_for_evaluation": [
+        0.9804896481134616,
+        0.9869782049313768
+      ],
+      "synthetic_bias_for_construction": [
+        0.0,
+        1.0
+      ],
+      "arms": {
+        "source_only": {
+          "correction": [
+            0.8913542255576923,
+            0.08972529135739789
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.48555060491387775,
+          "objective_after": 0.04812602489811901,
+          "group_errors_before": [
+            0.9613599500576598,
+            0.00974125977009563
+          ],
+          "group_errors_after": [
+            0.007945123554195554,
+            0.008050627909169942
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.8958587965347683,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.9016695151058338
+        },
+        "equal_weight": {
+          "correction": [
+            0.48737789526107744,
+            0.9870118268451685
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 1,
+          "step_scale": 0.5,
+          "objective_before": 39.76108930035368,
+          "objective_after": 10.1269017431943,
+          "group_errors_before": [
+            0.9613599500576598,
+            0.00974125977009563
+          ],
+          "group_errors_after": [
+            0.2431592008011508,
+            1.130433087016013e-11
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.1007858825045653,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.4931117539986082
+        },
+        "inverse_count": {
+          "correction": [
+            0.9337996648699635,
+            1.7989621504330542
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 2.9402717733788655,
+          "objective_after": 0.2285638941886976,
+          "group_errors_before": [
+            0.9613599500576598,
+            0.00974125977009563
+          ],
+          "group_errors_after": [
+            0.0021799545352781387,
+            0.006593179277524712
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 2.0268810110122337,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0625,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.8133252008192966
+        },
+        "fixed_cap": {
+          "correction": [
+            0.948860949787221,
+            1.8880692852663825
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 5.394992941843854,
+          "objective_after": 0.23860049830118246,
+          "group_errors_before": [
+            0.9613599500576598,
+            0.00974125977009563
+          ],
+          "group_errors_after": [
+            0.001000374557812335,
+            0.00811965135059308
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 2.1130884335487274,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.125,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.9016460001669836
+        },
+        "covariance": {
+          "correction": [
+            0.45382663712680094,
+            0.9870118268451685
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 1,
+          "step_scale": 0.5,
+          "objective_before": 32.18853092451489,
+          "objective_after": 8.231294899638474,
+          "group_errors_before": [
+            0.9613599500576598,
+            0.00974125977009563
+          ],
+          "group_errors_after": [
+            0.27737392714153547,
+            1.130433087016013e-11
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 1.0863475332038353,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [
+            4.0
+          ],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.5266630120598641
+        }
+      }
+    },
+    {
+      "name": "synthetic_self_render",
+      "constructed": true,
+      "truth_for_evaluation": [
+        1.001278404031673,
+        0.9968375740765641
+      ],
+      "synthetic_bias_for_construction": [
+        0.0,
+        0.0
+      ],
+      "arms": {
+        "source_only": {
+          "correction": [
+            0.910253094574248,
+            0.09062159764332402
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.5062476469355612,
+          "objective_after": 0.050087588967695496,
+          "group_errors_before": [
+            1.002558442380214,
+            0.009936851490908496
+          ],
+          "group_errors_after": [
+            0.008285606961819972,
+            0.00821227395942851
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.9147529557981342,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.9107760443186188
+        },
+        "equal_weight": {
+          "correction": [
+            0.058554292633431156,
+            0.0006187694438712379
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.5062476469355612,
+          "objective_after": 0.4769299885338018,
+          "group_errors_before": [
+            1.002558442380214,
+            0.009936851490908496
+          ],
+          "group_errors_after": [
+            0.8887287502116045,
+            0.009924519067037917
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.05855756194912967,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 1.3715613937827924
+        },
+        "inverse_count": {
+          "correction": [
+            0.47679924001508234,
+            0.008980518685374453
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.5062476469355612,
+          "objective_after": 0.26749849530035175,
+          "group_errors_before": [
+            1.002558442380214,
+            0.009936851490908496
+          ],
+          "group_errors_after": [
+            0.2750783934875417,
+            0.009758615618861521
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.47688380659739166,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0625,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 1.118454270577789
+        },
+        "fixed_cap": {
+          "correction": [
+            0.32299303355860415,
+            0.004724348692305993
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.5062476469355612,
+          "objective_after": 0.3445211253166597,
+          "group_errors_before": [
+            1.002558442380214,
+            0.009936851490908496
+          ],
+          "group_errors_after": [
+            0.46007104379778807,
+            0.00984288651982356
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.3230275827200459,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.125,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 1.2018151670619504
+        },
+        "covariance": {
+          "correction": [
+            0.058554292633431156,
+            0.027988959963272934
+          ],
+          "status": "accepted",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 1.0,
+          "objective_before": 0.5062476469355612,
+          "objective_after": 0.47679357036220493,
+          "group_errors_before": [
+            1.002558442380214,
+            0.009936851490908496
+          ],
+          "group_errors_after": [
+            0.8887287502116045,
+            0.00938667637069245
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.06489982330967617,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [
+            4.0
+          ],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 1.351812260367855
+        }
+      }
+    },
+    {
+      "name": "zero_residual",
+      "constructed": true,
+      "truth_for_evaluation": [
+        0.0,
+        0.0
+      ],
+      "synthetic_bias_for_construction": [
+        0.0,
+        0.0
+      ],
+      "arms": {
+        "source_only": {
+          "correction": [
+            0.0,
+            0.0
+          ],
+          "status": "unchanged_stationary",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 0.0,
+          "objective_before": 0.0,
+          "objective_after": 0.0,
+          "group_errors_before": [
+            0.0,
+            0.0
+          ],
+          "group_errors_after": [
+            0.0,
+            0.0
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.0,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.0
+        },
+        "equal_weight": {
+          "correction": [
+            0.0,
+            0.0
+          ],
+          "status": "unchanged_stationary",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 0.0,
+          "objective_before": 0.0,
+          "objective_after": 0.0,
+          "group_errors_before": [
+            0.0,
+            0.0
+          ],
+          "group_errors_after": [
+            0.0,
+            0.0
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.0,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.0
+        },
+        "inverse_count": {
+          "correction": [
+            0.0,
+            0.0
+          ],
+          "status": "unchanged_stationary",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 0.0,
+          "objective_before": 0.0,
+          "objective_after": 0.0,
+          "group_errors_before": [
+            0.0,
+            0.0
+          ],
+          "group_errors_after": [
+            0.0,
+            0.0
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.0,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.0625,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.0
+        },
+        "fixed_cap": {
+          "correction": [
+            0.0,
+            0.0
+          ],
+          "status": "unchanged_stationary",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 0.0,
+          "objective_before": 0.0,
+          "objective_after": 0.0,
+          "group_errors_before": [
+            0.0,
+            0.0
+          ],
+          "group_errors_after": [
+            0.0,
+            0.0
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.0,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 0.125,
+          "bias_variances": [],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.0
+        },
+        "covariance": {
+          "correction": [
+            0.0,
+            0.0
+          ],
+          "status": "unchanged_stationary",
+          "feasible": true,
+          "constrained_optimum_certified": false,
+          "solver": "unconstrained quadratic proposal; trust clip; feasible descent backtracking; zero fallback",
+          "backtracks": 0,
+          "step_scale": 0.0,
+          "objective_before": 0.0,
+          "objective_after": 0.0,
+          "group_errors_before": [
+            0.0,
+            0.0
+          ],
+          "group_errors_after": [
+            0.0,
+            0.0
+          ],
+          "group_caps": [
+            0.0,
+            0.0
+          ],
+          "correction_norm": 0.0,
+          "trust_radius": 3.0,
+          "sigma2": 1.0,
+          "synthetic_weight": 1.0,
+          "bias_variances": [
+            4.0
+          ],
+          "covariance_frozen": true,
+          "budget_source": "caller-declared; not estimated from GT or generator seeds",
+          "uncertainty_calibrated": false,
+          "nonlinear_feasibility_checked": false,
+          "interpretation": "model-based regularizer for dependent generated evidence; not an independent likelihood",
+          "parameter_error": 0.0
+        }
+      }
+    }
+  ]
+}

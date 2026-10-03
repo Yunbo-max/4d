@@ -1,0 +1,28 @@
+{
+  "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+  "seed": 42,
+  "source_hashes": {
+    "report.json": "3560f3f2ecef4f031d7fd4b514c60be17bae8fbe8074129e8d2fb4873572fb2e",
+    "prepared.npz": "ec9b6f52a3596d8cd6c9a90c090064234f609b5da13b48c941e42541c2de36a4",
+    "denoised.npz": "07c096485ad49ecd4b93df0030508354b583cd752145f96819ae26b6a880ee0f",
+    "sequence.npz": "4cd228b3c9da19113520abd0bb4da8d7fccc47b6f9b7c2270528b9c57c025050",
+    "code-provenance.json": "19e05a62168cb31b128faf0928882ac3927f5d0848332368909e5b3a3334b0c0"
+  },
+  "source_case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+  "checkpoint_directory": "/root/rivermind-data/actionmesh-repro/repo/pretrained_weights/ActionMesh/autoencoder",
+  "checkpoint_sha256": {
+    "README.md": "ec40d6b5978fe1ed22e92abe5f9033b5147fc474209dc245df3b4fb8d4dfbf4c",
+    "config.json": "54c31cfd5fae6c3ce4051f0fa05473fea7295ea1746a74d245da6900560e3e3b",
+    "model.safetensors": "fc9846ab877cc162788dceff2ee0170082bb48520e55346cb4777814cfb507bb"
+  },
+  "code_sha256": {
+    "actionmesh/pipeline.py": "0934b6801676a9e6f188e5b07450109e0c3359c10fa1230a9b9c69f056fd50f2",
+    "actionmesh/model/temporal_autoencoder.py": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2",
+    "actionmesh/configs/actionmesh.yaml": "2c1da517256133af1f986739e32ded0f00a2d58df82d5a338348f75595acccff",
+    "actionmesh/configs/actionmesh_lowram.yaml": "17a66d65110bda031534aea9e9ef9ff7a7eaf4e49cc3e26550661609f9a1067b",
+    "actionmesh/model/utils/embeddings.py": "9562bc50fecd6e2c9c2687fbf8df7277cf030f415525f0f178e771e214a89de6",
+    "actionmesh/model/utils/rotary_embedding.py": "f10cb494b028424f61237532e16912e84f05e5b5e7e23417fdfa4bebb8a7eaab",
+    "actionmesh/model/utils/block.py": "82c3e9a981b49f068ec6a9726491bb7304da19869ccfa6ead833b548c5b5be4f",
+    "actionmesh/preprocessing/mesh_processor.py": "0ce2c86f28cc84eb23beda5471c55b45f29420abb9c1d39d8b3aa69b81c6da65"
+  }
+}

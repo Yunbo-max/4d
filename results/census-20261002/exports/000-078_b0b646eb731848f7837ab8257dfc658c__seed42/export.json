@@ -1,0 +1,57 @@
+{
+  "status": "exported_structure_verified",
+  "source_case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+  "source_uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+  "source_seed": 42,
+  "source_hashes": {
+    "sequence.npz": "35ef373ed04801222a6444363bca9241bddf46596167fd808a463b544ab1959c",
+    "deformations_vertices.npy": "7722fa753ed39b6e346b26dfa3a909ee34ce834a7f428e9f30cdde7983fc1ba7",
+    "deformations_faces.npy": "830673de774a80a06eec9d0b8c52494d386bec7f8abadeea6c8755cec3cdc085",
+    "report.json": "82d6ec2e1aea254111fea5c41491ecc62f053200f0a926065845799fe7ff2a0a"
+  },
+  "exporter_sha256": "3312a099f4453d50fd57d962d050eb672d16318404c3090ed3c6574888f74920",
+  "official_exporter_sha256": "cdc59cf2a9d4a14f6386e69bb9bed0db27c755cbfa50ffeb7eca284919b22634",
+  "coordinate_transform": "official save_deformation (-z,x,y); source arrays unchanged",
+  "playback_fps": 8,
+  "frames": 16,
+  "device": "CPU",
+  "blender_threads": 2,
+  "playback_note": "8 FPS export timing; native inference and evaluation arrays are unchanged.",
+  "verification_scope": "Source hashes and arrays plus GLB binary parsing, 16 morph targets and 16 animation times; not a visual quality or Blender re-import playback test.",
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/tools/blender-3.5.1-linux-x64/blender",
+    "-b",
+    "-t",
+    "2",
+    "-P",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/glb_export.py",
+    "--",
+    "--vertices_npy",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/export-coordinates.npy",
+    "--faces_npy",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/export-faces.npy",
+    "--output_glb",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/animated_mesh.glb",
+    "--fps",
+    "8"
+  ],
+  "morph_weight_channels": [
+    {
+      "node": 0,
+      "primitive_target_counts": [
+        16
+      ],
+      "keyframes": 16,
+      "first_time_seconds": 0.0,
+      "last_time_seconds": 1.875,
+      "weight_count": 256
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "sha256": {
+    "animated_mesh.glb": "fa52c446127ec0ec17091c3307a5e0911b4e0be16e9467cee4f709ae0e6bd507",
+    "export-coordinates.npy": "ddcf56ca0fe1dc63f432bea7d7b14c9f742edf2d6838ac1c5a3d091bdd2914ba",
+    "export-faces.npy": "830673de774a80a06eec9d0b8c52494d386bec7f8abadeea6c8755cec3cdc085"
+  },
+  "elapsed_seconds": 1.987838378874585
+}

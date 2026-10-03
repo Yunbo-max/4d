@@ -1,0 +1,14 @@
+{
+  "observed_utc": "2026-10-02T19:29:17.053823+00:00",
+  "status": "waiting_for_census",
+  "pid": 41175,
+  "wait_limit_seconds": 1200,
+  "children": [
+    "mannequin reversal-only resume300s",
+    "bat fresh3armdiagnostic300s",
+    "mannequin CPUeval300s",
+    "bat CPUeval300s"
+  ],
+  "condition": "Allmaincensuschildrencompleted and GPUdrained; stopafterfailure",
+  "source_sha256": "19f1da2f3872a69b04acdfdb4638677180c48aca90f13b1f6a88b790256f70d5"
+}

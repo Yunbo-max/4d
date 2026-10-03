@@ -1,0 +1,41 @@
+test_contract_preserves_middle_frame_and_edit_targets_late_frame (research_math.tests.test_native_probe.NativeProbeTests.test_contract_preserves_middle_frame_and_edit_targets_late_frame) ... ERROR
+test_native_source_hash_mismatch_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_native_source_hash_mismatch_rejected) ... ERROR
+test_nonfinite_or_degenerate_controls_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_nonfinite_or_degenerate_controls_rejected) ... ERROR
+test_query_controls_keep_normals_unchanged (research_math.tests.test_native_probe.NativeProbeTests.test_query_controls_keep_normals_unchanged) ... ERROR
+
+======================================================================
+ERROR: test_contract_preserves_middle_frame_and_edit_targets_late_frame (research_math.tests.test_native_probe.NativeProbeTests.test_contract_preserves_middle_frame_and_edit_targets_late_frame)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_native_probe.py", line 8, in test_contract_preserves_middle_frame_and_edit_targets_late_frame
+    from research_math.native_probe import measurement_maps
+ModuleNotFoundError: No module named 'research_math.native_probe'
+
+======================================================================
+ERROR: test_native_source_hash_mismatch_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_native_source_hash_mismatch_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_native_probe.py", line 29, in test_native_source_hash_mismatch_rejected
+    from research_math.native_probe import verify_file
+ModuleNotFoundError: No module named 'research_math.native_probe'
+
+======================================================================
+ERROR: test_nonfinite_or_degenerate_controls_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_nonfinite_or_degenerate_controls_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_native_probe.py", line 24, in test_nonfinite_or_degenerate_controls_rejected
+    from research_math.native_probe import query_control_basis
+ModuleNotFoundError: No module named 'research_math.native_probe'
+
+======================================================================
+ERROR: test_query_controls_keep_normals_unchanged (research_math.tests.test_native_probe.NativeProbeTests.test_query_controls_keep_normals_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_native_probe.py", line 16, in test_query_controls_keep_normals_unchanged
+    from research_math.native_probe import query_control_basis
+ModuleNotFoundError: No module named 'research_math.native_probe'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=4)

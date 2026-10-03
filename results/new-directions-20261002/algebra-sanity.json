@@ -1,0 +1,46 @@
+{
+  "status": "CPU algebra sanity checks only, not a 4D/model experiment; elementary identities, no novelty claim",
+  "shared_error_model": {
+    "independent_noise_variance": 0.4,
+    "common_noise_variance": 0.6,
+    "asymptotic_precision": 1.6666666666666667,
+    "rows": [
+      {
+        "generated_views": 1,
+        "naive_independent_precision": 1.0,
+        "shared_error_precision": 1.0
+      },
+      {
+        "generated_views": 2,
+        "naive_independent_precision": 2.0,
+        "shared_error_precision": 1.25
+      },
+      {
+        "generated_views": 4,
+        "naive_independent_precision": 4.0,
+        "shared_error_precision": 1.4285714285714284
+      },
+      {
+        "generated_views": 8,
+        "naive_independent_precision": 8.0,
+        "shared_error_precision": 1.5384615384615385
+      },
+      {
+        "generated_views": 16,
+        "naive_independent_precision": 16.0,
+        "shared_error_precision": 1.6000000000000003
+      },
+      {
+        "generated_views": 64,
+        "naive_independent_precision": 64.0,
+        "shared_error_precision": 1.6494845360824746
+      }
+    ]
+  },
+  "orthogonal_projection": {
+    "constraint_first_order_norm": 1.1239813215859514e-14,
+    "edit_directional_derivative": -1.8439818470085332,
+    "negative_projected_gradient_norm_squared": -1.843981847008535,
+    "projector_idempotence_error": 2.0417222062186284e-15
+  }
+}

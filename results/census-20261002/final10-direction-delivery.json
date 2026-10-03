@@ -1,0 +1,244 @@
+{
+  "utc": "2026-10-02T20:00:39.823315+00:00",
+  "archive": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-final10-direction-complete.tar.gz",
+  "sha256": "bdc7e1d0e5558e57268e5fe7659635e46045f0342b08af421a01fccdfb3e0ab2",
+  "files": [
+    {
+      "path": "evaluations/000-014_6cf7de7d14064b23be17811d19a63f13__seed42.json",
+      "sha256": "6fc7d9f525d8a6c3017eac597761f8a94e9488056a647150348cd1fc812fe5b9"
+    },
+    {
+      "path": "evaluations/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42.json",
+      "sha256": "46d4733b186e2f9dd3276a23c77d703792f67da57e770ae726b0b1eb5d2ea528"
+    },
+    {
+      "path": "evaluations/000-078_b0b646eb731848f7837ab8257dfc658c__seed42.json",
+      "sha256": "04ad105ccd31f3b33edc4a985f5603f00d2552f5851f016f6b90787759b19b58"
+    },
+    {
+      "path": "evaluations/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42.json",
+      "sha256": "79867cbea64fb7fa4f4b9447638ebf3fbfca2c8fe5bdba9e3ae7c732f32e1872"
+    },
+    {
+      "path": "evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed42.json",
+      "sha256": "d11c89067fef3f98058f69a74aefb81414034a3041fa7a05f95a3a7f4fbcff4b"
+    },
+    {
+      "path": "evaluations/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42.json",
+      "sha256": "e0914a44f2e838cdde7476a9dd5a183c08fe8a226a2c2bfc04270ab44194acf6"
+    },
+    {
+      "path": "evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed42.json",
+      "sha256": "84c5b80ff93f1a3502aa187a6bc6bfaecd2c467477838cc50fde03cbc24fbc7d"
+    },
+    {
+      "path": "evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed43.json",
+      "sha256": "131f42ea9fb78f0fa657b4eda563e53f4165f97665baf9bcd81d27a43ab30d25"
+    },
+    {
+      "path": "evaluations/000-067_09a05166420843fab423047a799c87da__seed42.json",
+      "sha256": "1fb7b37433bd98f6eea1885273944cf4a1e45784e9c6f65bfb6a7ffe420dd934"
+    },
+    {
+      "path": "evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed43.json",
+      "sha256": "b8cd4aa0c4cb8b69c032ddc30fb94e3a58837ceaf3c1922e4a6e3da6f5d4b556"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/report.json",
+      "sha256": "0c49e4972b7b693c1132cb1e28661eca694094a3c5ec10f018582c306c3e4657"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/gpu-memory.csv",
+      "sha256": "813c80c41245523303b7c99018fe69a923be95cab8ca0454eeee8f8b304bd1f6"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/reused-controls.json",
+      "sha256": "4c812e68f9ac057d1cdb7d513563e88a229405fb7a597e50787e39b3235c4374"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/control-verification.json",
+      "sha256": "4202f4c4b7a4f0024b2fabbeb2f43fd76ce5ad75e2c2f6482fe4e2472be7d84a"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/command.json",
+      "sha256": "e3b96407be51984b2c0dbbfa8fd0bbc22cf8533061fda07d1ba7344f81b67783"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/progress.json",
+      "sha256": "0c49e4972b7b693c1132cb1e28661eca694094a3c5ec10f018582c306c3e4657"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/report.json",
+      "sha256": "566e46bab32c1b42bf82e7ebcaaa47707ae19dcfd41582c7f45bb5ab52556d86"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/gpu-memory.csv",
+      "sha256": "d6b010c75f4f6ccbf71a089dbd084b6a8000116ad59630207f9720e01c5797e2"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/command.json",
+      "sha256": "6b834d94155da51f5d6d661c1ba26d4d94751d076cc57f5bded6d2ff8955c9cc"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/source-provenance.json",
+      "sha256": "ae51e70a67996d15737ec5c997be032b0516c90503ec2f3f87a46ee107c1ec35"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/progress.json",
+      "sha256": "566e46bab32c1b42bf82e7ebcaaa47707ae19dcfd41582c7f45bb5ab52556d86"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/variants/row_permutation/report.json",
+      "sha256": "cf02da99aac3fb02c1a77be34a4d183f7f2c772d1fd71ba3fe6a7af25806bef0"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/variants/row_permutation/sequence.npz",
+      "sha256": "7f3c6d7e71b5eef8c2061c8d4aec5b1f740af97d829ceb03dd85bf33aecc218e"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/variants/time_reversal/report.json",
+      "sha256": "823d29a1aee4e3dd68ed7d1c43163d62984ff239164ec6819fe7c0381d181625"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/variants/time_reversal/sequence.npz",
+      "sha256": "4225af08a1e778de92a8e57eef3234bed4692549083cd981c938630df333e57f"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/variants/forward/report.json",
+      "sha256": "91f6328890e5b4cfd51c04db400920c1ec8ebc245fc0e139236525fde68afe22"
+    },
+    {
+      "path": "time-direction/bat-seed42-v1/variants/forward/sequence.npz",
+      "sha256": "12e1b64be734f59e36c1d68d9821a93a5ceefceca1f6e434e16558a7118b748e"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/variants/row_permutation/report.json",
+      "sha256": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/variants/row_permutation/sequence.npz",
+      "sha256": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/variants/time_reversal/report.json",
+      "sha256": "675fdff12d4be3aa2f5f7d3337087d64478a742f54ee7950dfb40d568bc86718"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/variants/time_reversal/sequence.npz",
+      "sha256": "30a9dca36e150c97274a25beef3a4f610f3e9e3b9be62d455df16475756d4513"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/variants/forward/report.json",
+      "sha256": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b"
+    },
+    {
+      "path": "time-direction/mannequin-seed42-v2/variants/forward/sequence.npz",
+      "sha256": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/report.json",
+      "sha256": "ddfd26619ad1d3845a0204b3caa707b022a3e6d188a82655880e81373b78d1aa"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/provenance.json",
+      "sha256": "738dcb1131b5b1c52bbbe03e66761c509b1bc5a2e3221dc26240ba03aafe45e4"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/native-reference.json",
+      "sha256": "ed0fcbcb0355124ed40c105045d925c38d1e56ddb0593e9843c10cad778fcf60"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/command.json",
+      "sha256": "872a97b5054dc11d0052ccf69db4d1c4c7c61078b0575dfee910c31256bc24d2"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/protocol.json",
+      "sha256": "bfdab05762dd8d54f37d076dfe85582e2aeffec38528bbbf5d85445491d02a64"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/progress.json",
+      "sha256": "ddfd26619ad1d3845a0204b3caa707b022a3e6d188a82655880e81373b78d1aa"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/report.json",
+      "sha256": "a575181fecdc8049c451eaf261ec92603c153cbfe764bcdff2915caa4e268b4c"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/provenance.json",
+      "sha256": "5ef03f3fb2461a145fbc25f51ae78d5d0d49d0d1d89cd1e46c76331872001312"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/native-reference.json",
+      "sha256": "018d7a5d0175dc992dff7a9aa91de094985a07edfa04b624d1422dfec044fbb0"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/command.json",
+      "sha256": "a86d299eb64783f65792ef96f31a68c50d60c20699f7c5d7ce43f8a5127b7d48"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/protocol.json",
+      "sha256": "bfdab05762dd8d54f37d076dfe85582e2aeffec38528bbbf5d85445491d02a64"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/progress.json",
+      "sha256": "a575181fecdc8049c451eaf261ec92603c153cbfe764bcdff2915caa4e268b4c"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/row_permutation/metrics.json",
+      "sha256": "ec7373ca12d8f815320d2150a493905e53b47f0b6bfa2f9361d05143093dfacf"
+    },
+    {
+      "path": "time-direction-eval/bat-seed42-v1/time_reversal/metrics.json",
+      "sha256": "311130d2f8db26243a3dc7ec3f90db6e7b64e66328d3d7a9b5a73a73cb17b2c8"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/row_permutation/metrics.json",
+      "sha256": "3f2a647b928f1d1ca3be9b4dd811ba072182ef4652c03f9b7f6425553eb1fea5"
+    },
+    {
+      "path": "time-direction-eval/mannequin-seed42-v2/time_reversal/metrics.json",
+      "sha256": "bc9170d781a4ad9a4b8dc65209560141a16ab1ae242fc65ba31aff9e3403eea4"
+    },
+    {
+      "path": "metadata/main-queue-final.json",
+      "sha256": "143c4961a9b10b3db313d38ad46e12cf42910eb4a16ebf441a42cb69e766b012"
+    },
+    {
+      "path": "source-and-receipts/research_census_time_direction.py",
+      "sha256": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d"
+    },
+    {
+      "path": "source-and-receipts/aggregate-final10.json",
+      "sha256": "b5fa159bba242f4910b2d92b6241b170d1fa52b20ab0d122ab4ad7c14a53a530"
+    },
+    {
+      "path": "source-and-receipts/research_census_time_direction_resume.py",
+      "sha256": "f5a0007aec3116241bfc251dbc4b489aff3eaebbce65764e31ba07f9d5d31c3b"
+    },
+    {
+      "path": "source-and-receipts/direction-after-census-v2.json",
+      "sha256": "fc7419a8481cf3522a674109643f317396da729c41e9fe92422f44e3f72fe8c2"
+    },
+    {
+      "path": "source-and-receipts/direction-after-census-v2-freeze.json",
+      "sha256": "fc54a8ce9ab90ec4f718c88b5e4cba278c69bfac432051ecb0066c0d6c52d78e"
+    },
+    {
+      "path": "source-and-receipts/direction-after-census-v2-launch.json",
+      "sha256": "23065e737ce151e77ebb3ee0fdf13cbc9424c67abd5939b2da045a88e412349d"
+    },
+    {
+      "path": "source-and-receipts/direction-after-census-v2.py",
+      "sha256": "19f1da2f3872a69b04acdfdb4638677180c48aca90f13b1f6a88b790256f70d5"
+    },
+    {
+      "path": "source-and-receipts/research_census_time_direction_eval.py",
+      "sha256": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd"
+    },
+    {
+      "path": "source-and-receipts/direction-resume-actual-qualification-v2.json",
+      "sha256": "5b8dc827ffd70382b2db4273c835ab956d9e8a5f84eb228ed901c09167175080"
+    }
+  ],
+  "raw_seed43_cases_preserved_in_archive": true
+}

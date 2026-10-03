@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-02T18:18:56.399785+00:00",
+  "status": "partial_live_research_checkpoint",
+  "archives": [
+    {
+      "name": "checkpoint-first2-full.tar.gz",
+      "bytes": 76381626,
+      "sha256": "023f58610613287a8a74e1d28513b4e4dfa4bfe660e06ac989714cc6aaa9bd2d"
+    },
+    {
+      "name": "checkpoint-stage-mannequin.tar.gz",
+      "bytes": 62412252,
+      "sha256": "e09b11cc8fba7611ee7971d3191a315538ac1e5bffa28a90dbb92cd2921bb21c"
+    }
+  ]
+}

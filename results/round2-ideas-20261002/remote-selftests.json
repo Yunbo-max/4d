@@ -1,0 +1,53 @@
+{
+  "utility": {
+    "status": "passed",
+    "device": "cpu",
+    "torch_version": "2.12.1+cu130",
+    "checks": [
+      "analytic_row_rotation_and_sign",
+      "direction_dependence",
+      "axis_sum_identity",
+      "antithetic_distance_response",
+      "edit_amplitude_and_coordinate_scale_invariance",
+      "zero_edit",
+      "identical_candidates",
+      "input_not_mutated",
+      "invalid_scale"
+    ],
+    "max_axis_identity_error": 3.122502256758253e-16
+  },
+  "geometry": {
+    "status": "passed",
+    "device": "cpu",
+    "checks": [
+      "line_direction",
+      "scalar_control",
+      "active_direction_roll",
+      "shuffle_preserves_norms_and_support",
+      "empty_and_single_active_shuffle",
+      "planar_valid",
+      "world_basis",
+      "frame_motion",
+      "no_future_leakage"
+    ]
+  },
+  "temporal": {
+    "status": "passed",
+    "device": "cpu",
+    "dtype": "torch.float64",
+    "rigid_max_abs": {
+      "temporal_action": 8.579964156038686e-16,
+      "temporal_matrix": 1.824105107469604e-15,
+      "spatial_action": 2.3942940239983235e-15
+    },
+    "checks": [
+      "noncommuting_rigid",
+      "m_equals_t_exclusion",
+      "two_path_median",
+      "spatial_support_median",
+      "edit_axis_sensitivity",
+      "zero_edit",
+      "frame_zero_exact"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "label": "mannequin",
+    "pid": 37352,
+    "status": "passed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_query_check.py",
+      "--extra-python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/extra-python",
+      "--actual-data",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+      "--probe-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+      "--points",
+      "256",
+      "--max-seconds",
+      "180",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/surface-query-qualification-mannequin-v2.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "bat",
+    "pid": 37353,
+    "status": "passed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_query_check.py",
+      "--extra-python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/extra-python",
+      "--actual-data",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+      "--probe-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1",
+      "--points",
+      "256",
+      "--max-seconds",
+      "180",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/surface-query-qualification-bat-v2.json"
+    ],
+    "exit_code": 0
+  }
+]

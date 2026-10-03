@@ -1,0 +1,59 @@
+{
+  "launcher_pid": 34344,
+  "cpu_only": true,
+  "threads_per_process": 1,
+  "outer_seconds_per_job": 600,
+  "updated_utc": "2026-10-02T18:54:21.791803+00:00",
+  "jobs": [
+    {
+      "label": "mannequin",
+      "status": "failed",
+      "pid": 34345,
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+        "--probe-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-baseline/mannequin-seed42-v1",
+        "--extra-python",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/extra-python",
+        "--max-seconds",
+        "600"
+      ],
+      "started_monotonic": 1692331.381145519,
+      "exit_code": 1,
+      "elapsed_seconds": 600.2518662719522
+    },
+    {
+      "label": "bat",
+      "status": "failed",
+      "pid": 34346,
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+        "--probe-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-baseline/bat-seed42-v1",
+        "--extra-python",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/extra-python",
+        "--max-seconds",
+        "600"
+      ],
+      "started_monotonic": 1692331.381948694,
+      "exit_code": 1,
+      "elapsed_seconds": 600.251114764018
+    }
+  ]
+}

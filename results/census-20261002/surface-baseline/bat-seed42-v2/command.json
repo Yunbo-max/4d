@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline_v2.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+    "--probe-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/bat-seed42-v1",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-baseline/bat-seed42-v2",
+    "--extra-python",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/extra-python",
+    "--max-seconds",
+    "600"
+  ],
+  "script_sha256": "10b0eaa4ef1fd3ab9e972e79db1e057c86894da4a33d079f6d0913d0f8fb86f2",
+  "started_utc": "2026-10-02T19:08:42.177175+00:00",
+  "max_seconds": 600.0,
+  "cpu_only": true
+}

@@ -1,0 +1,91 @@
+{
+  "utility": {
+    "status": "passed",
+    "device": "cpu",
+    "torch_version": "2.9.0",
+    "checks": [
+      "analytic_row_rotation_and_sign",
+      "direction_dependence",
+      "axis_sum_identity",
+      "antithetic_distance_response",
+      "edit_amplitude_and_coordinate_scale_invariance",
+      "zero_edit",
+      "identical_candidates",
+      "input_not_mutated",
+      "invalid_scale"
+    ],
+    "max_axis_identity_error": 2.220446049250313e-16
+  },
+  "geometry": {
+    "status": "passed",
+    "device": "cpu",
+    "checks": [
+      "line_direction",
+      "scalar_control",
+      "active_direction_roll",
+      "shuffle_preserves_norms_and_support",
+      "empty_and_single_active_shuffle",
+      "planar_valid",
+      "world_basis",
+      "frame_motion",
+      "no_future_leakage"
+    ]
+  },
+  "temporal": {
+    "status": "passed",
+    "device": "cpu",
+    "dtype": "torch.float64",
+    "rigid_max_abs": {
+      "temporal_action": 8.451005733723884e-16,
+      "temporal_matrix": 1.1089726030331839e-15,
+      "spatial_action": 2.265579765422004e-15
+    },
+    "checks": [
+      "noncommuting_rigid",
+      "m_equals_t_exclusion",
+      "two_path_median",
+      "spatial_support_median",
+      "edit_axis_sensitivity",
+      "zero_edit",
+      "frame_zero_exact"
+    ]
+  },
+  "cached_subset_parity": [
+    {
+      "asset": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+      "seeds": [
+        17,
+        29,
+        41
+      ],
+      "bitwise": true
+    },
+    {
+      "asset": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "seeds": [
+        17,
+        29,
+        41
+      ],
+      "bitwise": true
+    },
+    {
+      "asset": "000-001_095641b042f049c3aa86792836f8993d",
+      "seeds": [
+        17,
+        29,
+        41
+      ],
+      "bitwise": true
+    },
+    {
+      "asset": "000-003_90288386ca914411ab648f08db734fea",
+      "seeds": [
+        17,
+        29,
+        41
+      ],
+      "bitwise": true
+    }
+  ]
+}

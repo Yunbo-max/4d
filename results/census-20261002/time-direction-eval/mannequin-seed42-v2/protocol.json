@@ -1,0 +1,58 @@
+{
+  "scope": "Independent CPU evaluation of three retained Stage-II diagnostic arms on one asset; no new method claim",
+  "frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "samples": 100000,
+  "framewise_sampling_seeds": [
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "motion_sampling": "Reuse exact official synchronized frame0 face/barycentric seed44 sample from qualified native cache",
+  "shape_query_seeds": {
+    "predicted": 44,
+    "gt": 45
+  },
+  "alignment": "Exact saved Stage-GT matrix for all arms; no new fit",
+  "native_metrics": "CD4D/CD-M/per-frame motion/amplitude reused from hash-qualified cache; no native core metric recomputation",
+  "native_geometry": "Normal consistency and triangle degeneration were not cached; measured here for fair comparison",
+  "control_gates": {
+    "forward": "independent bitwise equality",
+    "permutation_rms_over_D_limit": 0.0001,
+    "permutation_max_over_D_limit": 0.001
+  },
+  "interpretation": "Changes are associated with decoder time coordinates; no claim of causal reconstruction error, useful uncertainty, or reverse-diffusion effect",
+  "normal_metric": "Auxiliary symmetric nearest-surface absolute normal cosine, 10k queries per direction, GTworld normals; predicted flatface normals computed after anisotropic alignment",
+  "degeneration": "Fixed face identities; area threshold scaled once by aligned anchor diagonal; normal opposition to native is not a self-intersection test",
+  "budget_seconds": 300.0,
+  "GT_use": "evaluation only; not used by the direction runner"
+}

@@ -1,0 +1,1674 @@
+{
+  "checked_at_utc": "20261003T071926Z",
+  "scope": "Read-only source/data/weight checks plus CPU sequence validation; no new GPU experiment or weight training launched",
+  "gpu": "NVIDIA GeForce RTX 2080 Ti, 22528 MiB, 0 MiB, 0 %",
+  "disk_free_bytes": 5080522752,
+  "weights": [
+    {
+      "path": "repo/pretrained_weights/ActionMesh/.cache/huggingface/trees/fb69228ba8a4df684907b5d259cff3c22fb722f1.json",
+      "bytes": 1486,
+      "sha256": "ca2dafd3b08f29fccaed2513c657bcc971fed60e44b8607d951a20b91dfde977"
+    },
+    {
+      "path": "repo/pretrained_weights/ActionMesh/autoencoder/config.json",
+      "bytes": 335,
+      "sha256": "54c31cfd5fae6c3ce4051f0fa05473fea7295ea1746a74d245da6900560e3e3b"
+    },
+    {
+      "path": "repo/pretrained_weights/ActionMesh/autoencoder/model.safetensors",
+      "bytes": 856877444,
+      "sha256": "fc9846ab877cc162788dceff2ee0170082bb48520e55346cb4777814cfb507bb"
+    },
+    {
+      "path": "repo/pretrained_weights/ActionMesh/config.json",
+      "bytes": 57,
+      "sha256": "ca21a6d401902ccda26ed58b1d332b1643da5670565322bd392944a96dc8ebe2"
+    },
+    {
+      "path": "repo/pretrained_weights/ActionMesh/denoiser/config.json",
+      "bytes": 248,
+      "sha256": "2cd1258ea721d4b34a27d25934f932f695ae201bee6adde187b746b9f7030ea8"
+    },
+    {
+      "path": "repo/pretrained_weights/ActionMesh/denoiser/model.safetensors",
+      "bytes": 5758281000,
+      "sha256": "04a3c74d8c38efa70e01c36ff08ef207af8e572e2b9c0eee715453c7934090fc"
+    }
+  ],
+  "code_sha256": {
+    "research/math-prototypes-20261002/research_math/__init__.py": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69",
+    "research/math-prototypes-20261002/research_math/contact_events.py": "dbb64f4817b17e695601de1d9f521a55ce038ae95be001d06368a40b45d1a073",
+    "research/math-prototypes-20261002/research_math/controllability.py": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc",
+    "research/math-prototypes-20261002/research_math/correlated.py": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395",
+    "research/math-prototypes-20261002/research_math/native_probe.py": "06641222f25fdf12e7a92f7765638a48aed5d68bac43f351f9b327b987f310b3",
+    "research/math-prototypes-20261002/research_math/run_controls.py": "cc9bf7579dd8bd24423e21149773cc23f88dd0e26ec41b416212fb5f2fa207e7"
+  },
+  "data_files": [
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/camera.json",
+      "exists": true,
+      "sha256": "f750d483bc4d505a3157cea2873a3d9a186014c14729d84745f327e148f974ea",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/00.png",
+      "exists": true,
+      "sha256": "41515db3d748bfa61ba5d0d7562aa94dedc07e5f1b808d98363fcf85157d5d27",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/01.png",
+      "exists": true,
+      "sha256": "49ed74c280db0d4eea395ce7a8c3af08ec8dd8414c152d6bb94dd7e60cbd2bc2",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/02.png",
+      "exists": true,
+      "sha256": "fb5efd5ad478c3e5ea2ee5ddca7f1526bda0f07aabb6fcb98fa1a1c09f5c2656",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/03.png",
+      "exists": true,
+      "sha256": "1089f736b97fa39a99646ab75002a7f15abec37f5f43dd784e96fa47044c2ee5",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/04.png",
+      "exists": true,
+      "sha256": "0d3c8b12a9057517b707f076c184ebb86d2827a44804dd49f4ec055f0332cdbe",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/05.png",
+      "exists": true,
+      "sha256": "29e941369e7d03130be340d9a7f27927fc100643dad323c429ceaff2414201e2",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/06.png",
+      "exists": true,
+      "sha256": "c51aa17c5bd0ffc8f418f6ad665074c4283d199dd06cf514a7b4a61f7706942e",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/07.png",
+      "exists": true,
+      "sha256": "b5a48251f7bab33f8b9b5761fdda27c6e1db76a7bee8780d2d3055a5d6abbb00",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/08.png",
+      "exists": true,
+      "sha256": "151b795d14ddef32dbabc980de3c96d0b9425aac26bb12098c33bfc3d56c8802",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/09.png",
+      "exists": true,
+      "sha256": "173169eb1b76465667a4b4521ed8d8448d86cc2c2d2db230395843d73fbb47a1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/10.png",
+      "exists": true,
+      "sha256": "30b8b85ae3c97b76b62e603bc36dd62e448831714196d18f1dd1a1f4a1e8f4b4",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/11.png",
+      "exists": true,
+      "sha256": "4afb771bc3f5c17acbc6f74fe6f8352e708284d8ba39063dcf7223417f7dff76",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/12.png",
+      "exists": true,
+      "sha256": "70930d18463aaf2d5eca51bb9fc26ffa88074fb6de6033ac367294ed497363de",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/13.png",
+      "exists": true,
+      "sha256": "aac514578492936c01c2a90444f475f4bd6d3e479c6d2879f461492990476a21",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/14.png",
+      "exists": true,
+      "sha256": "7cef1a1daf6e542c637f7755cf8f0dbbd15f18cbc890908e28495c641b81b204",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/imgs/15.png",
+      "exists": true,
+      "sha256": "e417d5ca8bfbf298587db6cf32e7830410bf3a2d1e53db121add7efe0909860f",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy",
+      "exists": true,
+      "sha256": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/camera.json",
+      "exists": true,
+      "sha256": "83665691bcae2168267927b1c785855779b259dc56f6c02613556146ceb416ca",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/00.png",
+      "exists": true,
+      "sha256": "c8b6c3a0a36f9b4377fc080fb94708dbd57124aecfe8a042323731ebe1e1b355",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/01.png",
+      "exists": true,
+      "sha256": "aaa851d222635038fcfd300a18953501c405128cf2ea3e4336e6eca8646c768d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/02.png",
+      "exists": true,
+      "sha256": "910ad3bbc85453fceb3c699fa48a2ea24751f44e1e2b360953db7408609cfd8b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/03.png",
+      "exists": true,
+      "sha256": "5100fdbb002e3b7fb98a468ae4a1f3c0f488f44e561f2da44ef55d5c31d6bfe5",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/04.png",
+      "exists": true,
+      "sha256": "f2e68aa3d4f413053a2fec0d89b4635079fd005f83c48f561c64850b22b093c1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/05.png",
+      "exists": true,
+      "sha256": "a7dc84ae7ce491ba21c9047d16b93feac364b432fa0d9d80162b9966f3af781b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/06.png",
+      "exists": true,
+      "sha256": "958809a4982da7c85db53c7b9e9f45d8fb10fd44379f0561e303fbc96e3c6255",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/07.png",
+      "exists": true,
+      "sha256": "fa9a073c1d65737c1ad2734204284f9dc3fe6f31f8f0f904e6cdfbb965a68b35",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/08.png",
+      "exists": true,
+      "sha256": "1ded2b7989b9e9482fa374be763a028e5be5cb5ec351f0148b52c473bb4bfac5",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/09.png",
+      "exists": true,
+      "sha256": "aff330c726c115a35aaff35444f77187ae59d27f3556b6984de986fa4f2774c6",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/10.png",
+      "exists": true,
+      "sha256": "9bc0f81cc4e98ac7d36e378a1804949d2cfe7e56d5526b9296d2a20c7995336e",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/11.png",
+      "exists": true,
+      "sha256": "0344a8f4238e0647bde3e8f7ba90bb24da4afe58963e4e2ddaefe59a95c64b85",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/12.png",
+      "exists": true,
+      "sha256": "7532ffffe663802e8fa1f8babf2e58575a692b92767073eb387f8316787baa7c",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/13.png",
+      "exists": true,
+      "sha256": "949fcb02bb245c3ff289a82c74afed004fd58713756bd162ad8249a9caf79900",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/14.png",
+      "exists": true,
+      "sha256": "a687cf50289b7bb0b67ff1646d91cc178551bdfd939343926f21e211f0696de6",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/imgs/15.png",
+      "exists": true,
+      "sha256": "485744013296184f8f557874b690fc1425f9dd4e2811dc85f0831e2a398f9688",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-043_061697e330d44524bd11f8cf95772e2d/surfaces.npy",
+      "exists": true,
+      "sha256": "d5d9ec579fcbbf29a59500892bcc13e4cba8073aa86b6b572d4859c4975c2d3a",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/camera.json",
+      "exists": true,
+      "sha256": "1d9acc227d8525a6bbfc57a4065d952ec2e9c06c875d06b59a795deff7e5142c",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/00.png",
+      "exists": true,
+      "sha256": "6442dd211a90f41d428f717d0cfcf2168bdb8106d12db6c89eeb4cc3f2dcfec2",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/01.png",
+      "exists": true,
+      "sha256": "1890c5a0e6f3cd3ec910c859d0f959eda370e19c10c0320c03483f6888676076",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/02.png",
+      "exists": true,
+      "sha256": "f8d18d0482dee8f33e14583341a584ef8755bba404d4d8df2341bdb377fd2bdb",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/03.png",
+      "exists": true,
+      "sha256": "6afade7e0d30a476155de087e05f173c28b3d771b551b276f1ee50bec95e9e8d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/04.png",
+      "exists": true,
+      "sha256": "44c8861f36ceb9fd0332d8bfa835d8a6ccb695e9679370dfa6db17643e3dd44c",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/05.png",
+      "exists": true,
+      "sha256": "5fd80991c519d298f10805b8a08739287f09e380440faac5eee32dd57503b6a1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/06.png",
+      "exists": true,
+      "sha256": "aec2c21c671e0146cbe786012a7f10df5f038dfc3420d9d75bbd4a0327b10f32",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/07.png",
+      "exists": true,
+      "sha256": "cfd3489cc3ff44620c755d4f0e2f3bce5d1c6efb3ebb759714aac00014c3956a",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/08.png",
+      "exists": true,
+      "sha256": "80252ddd7fe97f5dca61dd164e7723e9da8a452c5346d676a63853d8906e6998",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/09.png",
+      "exists": true,
+      "sha256": "bc60a6b4d22a6ce9364144b84334f01de504f5169b8dc84bc3ff8863ee59b685",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/10.png",
+      "exists": true,
+      "sha256": "adcaa698eba36bd7f06e0d616cc2b6312da09ec1cdbaf727a7898aaf0167cbe8",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/11.png",
+      "exists": true,
+      "sha256": "590fdb0d752643bc3affb76fd74aedab3266099034f7ec31c26de8152d7f7378",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/12.png",
+      "exists": true,
+      "sha256": "0265883a7558bbaac27ba913c2c8f88d53f3e20ed972744a2f197a46c6b78abb",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/13.png",
+      "exists": true,
+      "sha256": "cfc75ea732837df5d63f2f2d24683e3e1e8376fa9578d19208a21ca24a7f6bcc",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/14.png",
+      "exists": true,
+      "sha256": "4dc64b0c917d6166683e936a06a2986ef5343886aac26b94dec9489f3fd82a01",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/imgs/15.png",
+      "exists": true,
+      "sha256": "0b626b8d8f84d5031c08802d4eb16d0f15a6b5cc59d2947b98a49f2308233125",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-073_1008f82a1e4b4a5ea61e878803b997d0/surfaces.npy",
+      "exists": true,
+      "sha256": "eefb98517c56e663ad63f36089dcbd15c51181d514e4f0a3f99a82b10c194df3",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/camera.json",
+      "exists": true,
+      "sha256": "f0284e1b7c24f512559738f9c46d866212c325ae5709159fa13b737070601be2",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/00.png",
+      "exists": true,
+      "sha256": "ba854d80a1fbc3890bfca942fb11f628558375ab4fa5d9944916fec6eb6ebb33",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/01.png",
+      "exists": true,
+      "sha256": "f1f8e5804d4b4fe93817cd86719d11698b46bca70c438a05df16093c757bf2d9",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/02.png",
+      "exists": true,
+      "sha256": "43e46405c39862308de3dcd39f6fa1c4968ac31762ba378409f6671cbb577e77",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/03.png",
+      "exists": true,
+      "sha256": "2d88c29e39098b087161f37981ea34f83c8df9cbf491e3252f883722b96ec8b1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/04.png",
+      "exists": true,
+      "sha256": "33ca2254fda30f4c168da69d7569c27c697381b27eeab732636b50036a2c20cb",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/05.png",
+      "exists": true,
+      "sha256": "d434239db5c5e675fb49e3474676a7e0eb08288753db1723c792513b8894829d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/06.png",
+      "exists": true,
+      "sha256": "5fcd4f00bc616f9b204ed06add4652a160f5b9fafedc7cda9afbfaff08d263f9",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/07.png",
+      "exists": true,
+      "sha256": "2ef66ab72b264322fb151513a35cc94c9c77f6e76926512b6bf4c23456340cf7",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/08.png",
+      "exists": true,
+      "sha256": "b0e01222dfe303df2d16dec880ede2d8e675e9372bc438e62c589b3d12366808",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/09.png",
+      "exists": true,
+      "sha256": "2bb9131ed632fd31f84c2b91a8ff931d0d133a5f2d5dc75eb73fb2b2c093e3e9",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/10.png",
+      "exists": true,
+      "sha256": "5a32bef9bda437d65045d700ddf48d2f6c2b8138df7e4d5f553c9c214eff614d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/11.png",
+      "exists": true,
+      "sha256": "d6f86c255e2d92e449db6ce41eca84556d9dd735222ff33155897b8f875ccd36",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/12.png",
+      "exists": true,
+      "sha256": "c7761f088b3bf9bc4772bced6ee79a6fff505f6f25bd8a2fa47bfaac436f644a",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/13.png",
+      "exists": true,
+      "sha256": "0d95559ab05834c09dc5dbe8e78f3b63486f53b0bfabcc60c0e2fcad30b4f5a0",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/14.png",
+      "exists": true,
+      "sha256": "4b87a8ee8004e293f6c91d007cda7226af83424e93f0331ae23be9874e853845",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/imgs/15.png",
+      "exists": true,
+      "sha256": "b8d7aeaa7bebbb6c28331d6b27e26b8e02774681438ec5dcb72258344fa64a04",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/surfaces.npy",
+      "exists": true,
+      "sha256": "216cd6292d426e364f4bb1c424725682efb308a2a63e89b549535a87a1c44fba",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/camera.json",
+      "exists": true,
+      "sha256": "40823eeeaabccf4cd726a08cbaf11bba958294560221c65d32e75ea7ea09867e",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/00.png",
+      "exists": true,
+      "sha256": "89c724c7b262b9a4421a75b3575f39b6c698f88385e3e677cb9c1229e606b417",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/01.png",
+      "exists": true,
+      "sha256": "9a9e60a9cd622356cb4098e29e6368b5c14ecbfd3206079334b23b827aeccd20",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/02.png",
+      "exists": true,
+      "sha256": "9ce0cf46f8ed027054ecf8ce9c7136942e2de218f6a23c7c98f4184477b3de6c",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/03.png",
+      "exists": true,
+      "sha256": "45d9f9db05ad098c6fcc74e3fb96b40885c54ec58b8d7c1358a4919a84b252a9",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/04.png",
+      "exists": true,
+      "sha256": "bc503dfc80bbedcdf5f569e3dcce16f9c338cf198005cab7917eedf43eae7dd4",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/05.png",
+      "exists": true,
+      "sha256": "00c7bafc863dd7ac89d8c8254d9e91dac2d173f48b1e272a5cd9adf97a1cb841",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/06.png",
+      "exists": true,
+      "sha256": "11720828423d2b0ab9f0c5293c9e5ee7b9d0ad4dd406e540aac078420c89c7e9",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/07.png",
+      "exists": true,
+      "sha256": "8b2d4031d4c81049638106bd207989caa551a6c3cf6063de287154a6407e0e1e",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/08.png",
+      "exists": true,
+      "sha256": "d0d18c1b24f5f41b3971fccec1f1978acd438ba4ec3f5d49870eec8a613622f1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/09.png",
+      "exists": true,
+      "sha256": "96a007b5c0007905092217490f9a3d3246dbb816160d90f99565b1e954e7ac9a",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/10.png",
+      "exists": true,
+      "sha256": "0f53100705d05bb54d804ce3e8333dac685f4e838a8adcddc467acf2b25f7728",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/11.png",
+      "exists": true,
+      "sha256": "e1666888f4d91bfcbee8c9ca88ab65857c78a6635c4f5779dced47cbf043503b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/12.png",
+      "exists": true,
+      "sha256": "43afac9cca85c3def633fe66a8722279e9f85ce5f88041a4499b08c2a80ed90a",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/13.png",
+      "exists": true,
+      "sha256": "0d5d88e5c56a2e658f4f0032e179b01ce401d2aa16c02b174a6545e3b59abee7",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/14.png",
+      "exists": true,
+      "sha256": "1bb09251fae58a746c6c42ba9ac4bc77fd92190b3f4aaacdd0176b77625be738",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/imgs/15.png",
+      "exists": true,
+      "sha256": "edc77083a3e9553c957fc33ffa7803b02ea85092e7bd7626da217a23cc582318",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-078_b0b646eb731848f7837ab8257dfc658c/surfaces.npy",
+      "exists": true,
+      "sha256": "3950af976718719f21b6168f097905af0d7cb0fda711eaa3310cd1aa7a63a319",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/camera.json",
+      "exists": true,
+      "sha256": "929dce91045b558565415e57cc85770da7ce029b5e5dd7a0772c670bb399da84",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/00.png",
+      "exists": true,
+      "sha256": "1ef64bda330b52de0dc9c96e59889aa47c17bc2527de3b1dc09e967bf9fbbd12",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/01.png",
+      "exists": true,
+      "sha256": "0378d5236644f0da12a275c973ff88a266a7390dd8ae3757831b228753dae527",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/02.png",
+      "exists": true,
+      "sha256": "ce2aef4b8a22bedc6161d7b5906778386a0537311e2c42e37c87509d843cbc30",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/03.png",
+      "exists": true,
+      "sha256": "cfd9c727751fe79d141bef80d9a84920b57b0fdcccda19e2521e0f84fddc5e1d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/04.png",
+      "exists": true,
+      "sha256": "9c50715d8b508267d7ccb13063503a6830a29ac229f79b42b3e85c81f7ae90f4",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/05.png",
+      "exists": true,
+      "sha256": "cf836c09cbee4ec057b87be9b612b70dcd7c6e3b02097168a100cfaed26bbf3b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/06.png",
+      "exists": true,
+      "sha256": "964973b3a25854ae04d9a98d3cff3f72fa7e1877989d7b354b852b44e5f738d5",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/07.png",
+      "exists": true,
+      "sha256": "5a8e5fd72b7c5d62e25ff3c0c4defda98821d1d21b82ca0bca12c85a625bf639",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/08.png",
+      "exists": true,
+      "sha256": "91d41d0be2e8b1e816d742cf475eba66458145b4bb2776df41dc120976614533",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/09.png",
+      "exists": true,
+      "sha256": "52784a05892a5a91e6ecc86450d92781e7d26b3697ea76246951bf7408f2d9c4",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/10.png",
+      "exists": true,
+      "sha256": "801b079678a84ca93ce62a21b339694bc34c3b55f07828771a85291a310ae958",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/11.png",
+      "exists": true,
+      "sha256": "22610917099c9bc7b41501ab543b7170e92f974f9d78507b9027b791534b134d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/12.png",
+      "exists": true,
+      "sha256": "c85aaca94cb98fe812b0d9053a63a437e1b262878fbaf03fdc9870c00733707e",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/13.png",
+      "exists": true,
+      "sha256": "1f0c201f544f455db3f8c752f86517916867b22e94bb2835240d028cb1674b1f",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/14.png",
+      "exists": true,
+      "sha256": "f961d52a8bd7e5783a61b1b9b614fe5ca688851e60619a52ed8c574345194574",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/imgs/15.png",
+      "exists": true,
+      "sha256": "33b0f4dc737a9d437732349380cd2d80d23e731a4cdc85375c1d52851a5adad6",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-067_09a05166420843fab423047a799c87da/surfaces.npy",
+      "exists": true,
+      "sha256": "d1eb91e240da3c37db3f3796fccb2019eebc8d8be17b949a5819dcefc3280051",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/camera.json",
+      "exists": true,
+      "sha256": "8d8658a6cdfa161d7e14e9cafc8b6fd549f46301b97bdd3a3b589bd6d0c776c1",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/00.png",
+      "exists": true,
+      "sha256": "d4fe37a67724db8f61174f8c60042f232a8bbc1551be0f59e79e1784dc29c63e",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/01.png",
+      "exists": true,
+      "sha256": "70c0922fe206128408e0c546065a4f66413536ccd47e7666de87e6b1f4dd35d1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/02.png",
+      "exists": true,
+      "sha256": "c52d8385ad62e8bfdb95afef74631fb4680251146eeb0cd0ddd4db0724e447bc",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/03.png",
+      "exists": true,
+      "sha256": "6c79224c447eefd70630ea53dade7ef2f9a224a2588ecbaffdd53585d1391b7d",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/04.png",
+      "exists": true,
+      "sha256": "6346217dfe8f37e72660d400a5e574376aed8f7f93490a65cb6ac9d8963bb9f7",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/05.png",
+      "exists": true,
+      "sha256": "3495280517cf180ac79670ea9f4faa0a010d817188b5bf7e60cd6e9e69cdfaf2",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/06.png",
+      "exists": true,
+      "sha256": "f687cfd739bc89813b90d713d118658dbb1409d783d1414fe013d8341416f210",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/07.png",
+      "exists": true,
+      "sha256": "4ddff897d17cc315616a0b24b6debd4e8ced47ef0e555c2b2e4406dcbd9a306b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/08.png",
+      "exists": true,
+      "sha256": "7704fdc8a70a88d6a73c240ef21583759a0e5356877445d65aeefccf42c648ae",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/09.png",
+      "exists": true,
+      "sha256": "d4d9efbee56982f5a01957dba6e01bf107da9106d1b735b1849dc0365474cc3c",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/10.png",
+      "exists": true,
+      "sha256": "d536d9939daa3609f5a9f25862e7f8cb5e664d91be001fbbde0757ffbdec360b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/11.png",
+      "exists": true,
+      "sha256": "c4d5f06a5f0b3747fe5e5184bba65806ddf36c93a71c9ebc0453c6df07259baf",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/12.png",
+      "exists": true,
+      "sha256": "65e109a01ad20a369cda3ee691c1bf0475ee3e4edd4dd77fd24590171f8d4fed",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/13.png",
+      "exists": true,
+      "sha256": "847c68cda516bd6e1786aec33acb6a79d67264173bd619b10df31d705a0e785b",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/14.png",
+      "exists": true,
+      "sha256": "c0d031c56a79a1d10773ac95a0d4b84d6ef99c112d63e7b5f61e99f5e11d2880",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/imgs/15.png",
+      "exists": true,
+      "sha256": "82c3e860cfc039d2f35856d439b5bdffce6a554059512829fc9583d3e35728ce",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-046_3bb11febd0624d7f8b30f491fb317d58/surfaces.npy",
+      "exists": true,
+      "sha256": "fb6c2996027dd2d1a68aeb24dc4dd0aa24c5efa61c2185608492fb45d8076c4a",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/camera.json",
+      "exists": true,
+      "sha256": "49f15fdebb85f0810baf4cb6804dcdb8156b9d6232f5d56d555a771e961bdff3",
+      "size_matches": true,
+      "lfs_hash_matches": null
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/00.png",
+      "exists": true,
+      "sha256": "982c615a19bae1dbefa0fe124205fb1dc6577309fd8bd7eb539eb73a2349d807",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/01.png",
+      "exists": true,
+      "sha256": "6d0aacc02baf2d7e6cbe5acae7507cdad68c12fc2d9d24b000f25ea01c616bf1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/02.png",
+      "exists": true,
+      "sha256": "70dff40cd5661c6e9de5cfd83192036cfa99e8a145da7c28e37759c06283bedd",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/03.png",
+      "exists": true,
+      "sha256": "150cf6c831a3ad36b2aaffe903364d1db0fd986fa688d5cb1a0a981637e158fa",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/04.png",
+      "exists": true,
+      "sha256": "83c12c1de3ebb656983773e703c64f93aa235a16faa84aae18e873e43326adf1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/05.png",
+      "exists": true,
+      "sha256": "db994a2e713fee87063557cba8e39ce03c096570d69522dcd7844d69a88adebf",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/06.png",
+      "exists": true,
+      "sha256": "1e86ef5ca346f59391bda140733843a2fe88f128f078728df0e57c9310e9a7dc",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/07.png",
+      "exists": true,
+      "sha256": "1f0759ef640aa9b4d5e132582418b00313929729773ce562ae65f068707ffca1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/08.png",
+      "exists": true,
+      "sha256": "4f471249061a954ecbba93196a1652a0437b4b3d1379140a467b97b97dd82166",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/09.png",
+      "exists": true,
+      "sha256": "f50d3df82b5810bb16bfa336908685177b054fc40f837f6949c183c30f3b7706",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/10.png",
+      "exists": true,
+      "sha256": "a96e7956b661b509cbca3c8b7665e65d076afe14657a7b50a192ba158adf8da9",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/11.png",
+      "exists": true,
+      "sha256": "1c027588ac69234bcf48db380c4d3db6b8bb6aa0182045c73c829f5f82f7f059",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/12.png",
+      "exists": true,
+      "sha256": "e83fb8f6d782d16cc0f5f09f4a2103c69dd0d6252ef1883a3f6aa7c91dc30c60",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/13.png",
+      "exists": true,
+      "sha256": "e46394cd352ec6eed5b0f653cada076a939cc58b5ce1a0a9357747a56a5d7b7f",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/14.png",
+      "exists": true,
+      "sha256": "6c85b64d2fc36b0cb59c4feb08ed9690ca8228e922e809d45092febd3d0e7cc1",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/imgs/15.png",
+      "exists": true,
+      "sha256": "78ff495a1ad0327f9616b5f7931bb28ba3795df130218fba4b0d107ee4f30ce4",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    },
+    {
+      "path": "data/000-014_6cf7de7d14064b23be17811d19a63f13/surfaces.npy",
+      "exists": true,
+      "sha256": "d1b6672c6d7e32f58347919efcd4da131ecff17e588e90da1ea2546d14c8e572",
+      "size_matches": true,
+      "lfs_hash_matches": true
+    }
+  ],
+  "validation_command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_eval.py",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases",
+    "--gt-dir",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "--manifest",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/cohort-manifest-v2.json",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/preflight-20261003T071926Z/validation.json",
+    "--validate-only"
+  ],
+  "validation_exit_code": 0,
+  "validation_stderr": "",
+  "validation": {
+    "schema_version": 1,
+    "protocol": {
+      "n_pts_chamfer": 100000,
+      "n_pts_icp": 10000,
+      "icp_initial_rotations": 24,
+      "icp_iterations": 200,
+      "icp_learning_rate": 0.01,
+      "icp_transform": "rotation + translation + anisotropic scale (official)",
+      "cd_query_points_per_direction": 10000,
+      "cd_query_subsampling_seeds": {
+        "predicted": 44,
+        "ground_truth": 45
+      },
+      "cd_reference_tree_points": 100000,
+      "cd_distance": "unsquared Euclidean; sum of both directional means",
+      "cd_3d_alignment": "independent ICP each frame",
+      "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+      "cd_motion_alignment": "same first-frame ICP as CD4D",
+      "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+      "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+      "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+      "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+      "sampling_seed": 44
+    },
+    "denominator": {
+      "frozen": true,
+      "manifest": "/root/rivermind-data/actionmesh-repro/research/census-20261002/cohort-manifest-v2.json",
+      "manifest_sha256": "82dfc37a19fb925703ceef68b1962c9fd8fc5f73e5fd4d1ea4a1293ce817a48b",
+      "n_declared": 10
+    },
+    "cases": [
+      {
+        "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+        "manifest_entry": {
+          "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+          "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+          "case_dir": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+          "seed": 42,
+          "status": "planned",
+          "failed_attempt_dirs": [
+            "000-037_1358c424008a43cbaa35eba5e58551ac__seed42"
+          ]
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz",
+            "sha256": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy",
+            "sha256": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json",
+            "sha256": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19992,
+            3
+          ],
+          "faces": [
+            39984,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.28134136088192463
+      },
+      {
+        "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+        "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+        "manifest_entry": {
+          "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+          "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+          "case_dir": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/sequence.npz",
+            "sha256": "4cd228b3c9da19113520abd0bb4da8d7fccc47b6f9b7c2270528b9c57c025050"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-043_061697e330d44524bd11f8cf95772e2d/surfaces.npy",
+            "sha256": "d5d9ec579fcbbf29a59500892bcc13e4cba8073aa86b6b572d4859c4975c2d3a"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/report.json",
+            "sha256": "3560f3f2ecef4f031d7fd4b514c60be17bae8fbe8074129e8d2fb4873572fb2e"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19928,
+            3
+          ],
+          "faces": [
+            39934,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.27031565993092954
+      },
+      {
+        "case_id": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+        "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+        "manifest_entry": {
+          "case_id": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+          "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+          "case_dir": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/sequence.npz",
+            "sha256": "82c0796ae42a3caed7ccbb7b6fdbe37c9b5769d822116e20fef7281af4af0925"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-073_1008f82a1e4b4a5ea61e878803b997d0/surfaces.npy",
+            "sha256": "eefb98517c56e663ad63f36089dcbd15c51181d514e4f0a3f99a82b10c194df3"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/report.json",
+            "sha256": "8a312a96ac0a311d9580c704149b4af922a5894c81187b6a0476b539bb3c897e"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19997,
+            3
+          ],
+          "faces": [
+            39986,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.259932508924976
+      },
+      {
+        "case_id": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+        "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+        "manifest_entry": {
+          "case_id": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+          "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+          "case_dir": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/sequence.npz",
+            "sha256": "87992e609b2a3fc44c9d4f0de9f8c6a4b04b319e9071411c67e84ae5dcf21330"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/surfaces.npy",
+            "sha256": "216cd6292d426e364f4bb1c424725682efb308a2a63e89b549535a87a1c44fba"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/report.json",
+            "sha256": "4dc348bca1c7a7507c1cab9563f5a235adda9d0bbaa37fd9380325eae0b423e6"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19990,
+            3
+          ],
+          "faces": [
+            39976,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.26828913297504187
+      },
+      {
+        "case_id": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+        "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+        "manifest_entry": {
+          "case_id": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+          "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+          "case_dir": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/sequence.npz",
+            "sha256": "35ef373ed04801222a6444363bca9241bddf46596167fd808a463b544ab1959c"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-078_b0b646eb731848f7837ab8257dfc658c/surfaces.npy",
+            "sha256": "3950af976718719f21b6168f097905af0d7cb0fda711eaa3310cd1aa7a63a319"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/report.json",
+            "sha256": "82d6ec2e1aea254111fea5c41491ecc62f053200f0a926065845799fe7ff2a0a"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            20002,
+            3
+          ],
+          "faces": [
+            40000,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.2662846581079066
+      },
+      {
+        "case_id": "000-067_09a05166420843fab423047a799c87da__seed42",
+        "uid": "000-067_09a05166420843fab423047a799c87da",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42",
+        "manifest_entry": {
+          "case_id": "000-067_09a05166420843fab423047a799c87da__seed42",
+          "uid": "000-067_09a05166420843fab423047a799c87da",
+          "case_dir": "000-067_09a05166420843fab423047a799c87da__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/sequence.npz",
+            "sha256": "5de3b3fe8948e4d9e73a534a0a2661222f59c41a4bd84a2e6a95f383ec4ffe98"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-067_09a05166420843fab423047a799c87da/surfaces.npy",
+            "sha256": "d1eb91e240da3c37db3f3796fccb2019eebc8d8be17b949a5819dcefc3280051"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/report.json",
+            "sha256": "d437bd164fc4ad9d7ac18c7a929e610345c466669956aa28f7701c60598e98fe"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19992,
+            3
+          ],
+          "faces": [
+            39984,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.25943731516599655
+      },
+      {
+        "case_id": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+        "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+        "manifest_entry": {
+          "case_id": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+          "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+          "case_dir": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/sequence.npz",
+            "sha256": "53339b1cf64b082148c23a48ddb9e2ce3c4c8dae724647cc51a73ec079344205"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-046_3bb11febd0624d7f8b30f491fb317d58/surfaces.npy",
+            "sha256": "fb6c2996027dd2d1a68aeb24dc4dd0aa24c5efa61c2185608492fb45d8076c4a"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/report.json",
+            "sha256": "723019974d749a3b810b6f330fdffb8d035f87e2a8f40550a5aca94be89658c8"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19633,
+            3
+          ],
+          "faces": [
+            39412,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.2488610961008817
+      },
+      {
+        "case_id": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+        "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+        "manifest_entry": {
+          "case_id": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+          "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+          "case_dir": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+          "seed": 42,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/sequence.npz",
+            "sha256": "b97fac487df9bf74d3477358919c2e072d60696c93a56456c4dd3fcc68fbcd35"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-014_6cf7de7d14064b23be17811d19a63f13/surfaces.npy",
+            "sha256": "d1b6672c6d7e32f58347919efcd4da131ecff17e588e90da1ea2546d14c8e572"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/report.json",
+            "sha256": "3f1bd141da4fb4f95604115b7cd036aa7d064f4cf9472562205f2ee8e83f95dc"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            20001,
+            3
+          ],
+          "faces": [
+            39998,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.2552453950047493
+      },
+      {
+        "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+        "manifest_entry": {
+          "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+          "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+          "case_dir": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+          "seed": 43,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/sequence.npz",
+            "sha256": "e7a0c0722e5867890ec697c0f74ebe8d9e007be9954ce83905b2ca7df0c2e499"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy",
+            "sha256": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/report.json",
+            "sha256": "796d2478f4b10206264845b8d9f1832c4e240a190f84d0fa7d166e52e64291c2"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19996,
+            3
+          ],
+          "faces": [
+            39988,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.2727076078299433
+      },
+      {
+        "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+        "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+        "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+        "manifest_entry": {
+          "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+          "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+          "case_dir": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+          "seed": 43,
+          "status": "planned"
+        },
+        "status": "validated_only",
+        "generation_status": "completed",
+        "inputs": {
+          "sequence": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/sequence.npz",
+            "sha256": "4accb2b020a1edcfb81a6c217427342c969b7961b5b867c8945eee7a530c56e8"
+          },
+          "ground_truth": {
+            "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-043_061697e330d44524bd11f8cf95772e2d/surfaces.npy",
+            "sha256": "d5d9ec579fcbbf29a59500892bcc13e4cba8073aa86b6b572d4859c4975c2d3a"
+          },
+          "generation_report": {
+            "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/report.json",
+            "sha256": "7855c4cd88a21500466cf5632676e2c9789741984e01068b13e51acfdd9d652b"
+          }
+        },
+        "shapes": {
+          "vertices": [
+            16,
+            19828,
+            3
+          ],
+          "faces": [
+            39660,
+            3
+          ],
+          "gt_positions": [
+            16,
+            100000,
+            3
+          ]
+        },
+        "elapsed_seconds": 0.252751202089712
+      }
+    ],
+    "device": "cuda",
+    "python": "3.12.13",
+    "evaluator_sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+    "official_source": null,
+    "packages": {
+      "numpy": "1.26.4",
+      "torch": "2.12.1+cu130",
+      "trimesh": "5.1.0",
+      "scipy": "1.17.1",
+      "pytorch3d": "0.7.9"
+    },
+    "summary": {
+      "n_total": 10,
+      "n_success": 0,
+      "n_failed": 0,
+      "n_pending": 0,
+      "n_validated_only": 10,
+      "success_rate": 0.0,
+      "mean_scope": "successful cases only; never treat failures as zero",
+      "means_weighting": "case/run weighted; asset-balanced means also provided",
+      "n_unique_assets": 8,
+      "n_assets_with_success": 0,
+      "asset_results": [
+        {
+          "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+          "n_runs": 1,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+          "n_runs": 2,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+          "n_runs": 2,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+          "n_runs": 1,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+          "n_runs": 1,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-067_09a05166420843fab423047a799c87da",
+          "n_runs": 1,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+          "n_runs": 1,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        },
+        {
+          "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+          "n_runs": 1,
+          "n_success": 0,
+          "means": {
+            "cd_3d": null,
+            "cd_4d": null,
+            "cd_motion": null
+          }
+        }
+      ],
+      "asset_balanced_means": {
+        "cd_3d": null,
+        "cd_4d": null,
+        "cd_motion": null
+      },
+      "successful_case_ids": [],
+      "means": {
+        "cd_3d": null,
+        "cd_4d": null,
+        "cd_motion": null
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+test_contract_preserves_middle_frame_and_edit_targets_late_frame (research_math.tests.test_native_probe.NativeProbeTests.test_contract_preserves_middle_frame_and_edit_targets_late_frame) ... ok
+test_native_source_hash_mismatch_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_native_source_hash_mismatch_rejected) ... ok
+test_nonfinite_or_degenerate_controls_rejected (research_math.tests.test_native_probe.NativeProbeTests.test_nonfinite_or_degenerate_controls_rejected) ... ok
+test_query_controls_keep_normals_unchanged (research_math.tests.test_native_probe.NativeProbeTests.test_query_controls_keep_normals_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.108s
+
+OK

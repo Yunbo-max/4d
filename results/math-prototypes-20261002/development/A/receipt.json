@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "module": "research_math.correlated",
+  "source_sha256": {
+    "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/correlated.py": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395",
+    "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_correlated.py": "613c08e13fcb7909908d6db3fd3f73326e3e166264cdbd6084738eba9ab5b5a7"
+  },
+  "test_count": 9,
+  "test_exit_code": 0,
+  "benchmark_seed": 42,
+  "natural_efficacy_claim": false,
+  "GPU_used": false,
+  "torch_implementation": false,
+  "linear_surrogate_only": true,
+  "constrained_optimum_certified": false
+}

@@ -1,0 +1,8 @@
+{
+  "mirror": "hf-mirror.com connect timeout; no downloaded model weights",
+  "fallback": "same pinned official files downloaded on localcomputer, source hashesretained",
+  "full_scp": "cancelled beforeGPU due slowtransfer, partialremote file unused",
+  "subset_transfer": "lossless exact predeclaredindices andfullscale; all12asset-seed equalitychecks pass; tar overfreshSSH",
+  "credentials": "not saved in experiment files",
+  "generation": "no nativegenerator invoked inround2"
+}

@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "evidence_kind": "constructed_toy_controls",
+  "controls": {
+    "missing_event": {
+      "repair_feasible": true,
+      "repair_status": "feasible",
+      "retiming_feasible": false,
+      "retiming_status": "grid_residual",
+      "direct_solver_equal": true,
+      "max_displacement": 1.0,
+      "max_contact_error": 0.0,
+      "operations": [
+        "insert"
+      ],
+      "candidate_count": 1,
+      "native": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "repaired": [
+        [
+          0.0035587186190035943
+        ],
+        [
+          0.021352312972941784
+        ],
+        [
+          0.14590747320171235
+        ],
+        [
+          1.0
+        ],
+        [
+          0.14590747320171235
+        ],
+        [
+          0.02135231297294178
+        ],
+        [
+          0.0035587186190035947
+        ]
+      ],
+      "retimed": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    },
+    "wrong_partner": {
+      "repair_feasible": true,
+      "repair_status": "feasible",
+      "retiming_feasible": false,
+      "retiming_status": "grid_residual",
+      "direct_solver_equal": true,
+      "max_displacement": 1.0,
+      "max_contact_error": 0.0,
+      "operations": [
+        "replace"
+      ],
+      "candidate_count": 3,
+      "native": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "repaired": [
+        [
+          0.0035587186190035943
+        ],
+        [
+          0.021352312972941784
+        ],
+        [
+          0.14590747320171235
+        ],
+        [
+          1.0
+        ],
+        [
+          0.14590747320171235
+        ],
+        [
+          0.02135231297294178
+        ],
+        [
+          0.0035587186190035947
+        ]
+      ],
+      "retimed": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    },
+    "wrong_order": {
+      "repair_feasible": true,
+      "repair_status": "feasible",
+      "retiming_feasible": false,
+      "retiming_status": "grid_residual",
+      "direct_solver_equal": true,
+      "max_displacement": 1.6666666666666667,
+      "max_contact_error": 0.0,
+      "operations": [
+        "insert",
+        "match",
+        "null"
+      ],
+      "candidate_count": 8,
+      "native": [
+        [
+          -1.0
+        ],
+        [
+          -0.6666666666666667
+        ],
+        [
+          -0.33333333333333337
+        ],
+        [
+          0.0
+        ],
+        [
+          0.33333333333333326
+        ],
+        [
+          0.6666666666666665
+        ],
+        [
+          1.0
+        ]
+      ],
+      "repaired": [
+        [
+          -0.722222222417691
+        ],
+        [
+          1.0
+        ],
+        [
+          -0.09523809523831941
+        ],
+        [
+          6.938893903907228e-18
+        ],
+        [
+          0.09523809523831933
+        ],
+        [
+          -1.0
+        ],
+        [
+          0.722222222417691
+        ]
+      ],
+      "retimed": [
+        [
+          -1.0
+        ],
+        [
+          -0.015625
+        ],
+        [
+          -0.0078125
+        ],
+        [
+          0.0
+        ],
+        [
+          0.007812499999999998
+        ],
+        [
+          0.015624999999999997
+        ],
+        [
+          1.0
+        ]
+      ]
+    },
+    "timing_only": {
+      "repair_feasible": true,
+      "repair_status": "feasible",
+      "retiming_feasible": true,
+      "retiming_status": "feasible",
+      "direct_solver_equal": true,
+      "max_displacement": 1.0,
+      "max_contact_error": 0.0,
+      "operations": [
+        "match"
+      ],
+      "candidate_count": 3,
+      "native": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "repaired": [
+        [
+          0.1666666666591607
+        ],
+        [
+          1.0
+        ],
+        [
+          1.1459074732017123
+        ],
+        [
+          1.0213523129729418
+        ],
+        [
+          0.0035587186190035877
+        ]
+      ],
+      "retimed": [
+        [
+          0.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          1.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    },
+    "budget_impossible": {
+      "repair_feasible": false,
+      "repair_status": "certified_infeasible",
+      "retiming_feasible": false,
+      "retiming_status": "grid_residual",
+      "direct_solver_equal": true,
+      "max_displacement": 0.0,
+      "max_contact_error": 1.0,
+      "operations": [
+        "insert"
+      ],
+      "candidate_count": 1,
+      "native": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "repaired": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "retimed": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    },
+    "unknown": {
+      "repair_feasible": true,
+      "repair_status": "feasible",
+      "retiming_feasible": true,
+      "retiming_status": "feasible",
+      "direct_solver_equal": true,
+      "max_displacement": 0.0,
+      "max_contact_error": 0.0,
+      "operations": [
+        "null"
+      ],
+      "candidate_count": 1,
+      "native": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "repaired": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ],
+      "retimed": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  },
+  "direct_solver_matches_all_repairs": true,
+  "natural_dataset_evidence": false,
+  "global_joint_optimality_claim": false,
+  "gpu_used": false,
+  "units": "arbitrary endpoint coordinates and frames",
+  "limitations": [
+    "One endpoint actor; target points, not mesh surfaces or contact forces.",
+    "Modes are labels; no friction, support stability or physical simulator.",
+    "Event alignment is additive and separate from shared trajectory feasibility.",
+    "Exact contact evidence makes direct continuous optimization equally capable.",
+    "Finite-grid retiming failure alone is not a continuous impossibility proof.",
+    "No natural failure prevalence, cross-model result or novelty evidence."
+  ]
+}

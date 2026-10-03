@@ -1,0 +1,10 @@
+STAGE_GT validating_source_identity elapsed=2.69s
+STAGE_GT sampling_anchor_only elapsed=5.33s
+STAGE_GT fitting_frame0_only elapsed=5.41s
+STAGE_GT frame0_alignment_saved elapsed=14.04s
+STAGE_GT frame_00_sampling elapsed=14.04s
+STAGE_GT frame_00_completed elapsed=15.97s
+STAGE_GT frame_08_sampling elapsed=15.97s
+STAGE_GT frame_08_completed elapsed=18.00s
+STAGE_GT frame_15_sampling elapsed=18.00s
+STAGE_GT frame_15_completed elapsed=20.07s

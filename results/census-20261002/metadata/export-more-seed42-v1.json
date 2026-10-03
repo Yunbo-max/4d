@@ -1,0 +1,92 @@
+[
+  {
+    "case": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+    "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+    "status": "completed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_export.py",
+      "--root",
+      "/root/rivermind-data/actionmesh-repro",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42"
+    ],
+    "exit_code": 0,
+    "log": "{\"status\": \"exported_structure_verified\", \"output\": \"/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42\"}\n",
+    "elapsed_seconds": 2.267651661997661
+  },
+  {
+    "case": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+    "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+    "status": "completed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_export.py",
+      "--root",
+      "/root/rivermind-data/actionmesh-repro",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42"
+    ],
+    "exit_code": 0,
+    "log": "{\"status\": \"exported_structure_verified\", \"output\": \"/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42\"}\n",
+    "elapsed_seconds": 2.329209110001102
+  },
+  {
+    "case": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42",
+    "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-067_09a05166420843fab423047a799c87da__seed42",
+    "status": "completed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_export.py",
+      "--root",
+      "/root/rivermind-data/actionmesh-repro",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-067_09a05166420843fab423047a799c87da__seed42"
+    ],
+    "exit_code": 0,
+    "log": "{\"status\": \"exported_structure_verified\", \"output\": \"/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-067_09a05166420843fab423047a799c87da__seed42\"}\n",
+    "elapsed_seconds": 2.4287593730259687
+  },
+  {
+    "case": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+    "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+    "status": "completed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_export.py",
+      "--root",
+      "/root/rivermind-data/actionmesh-repro",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42"
+    ],
+    "exit_code": 0,
+    "log": "{\"status\": \"exported_structure_verified\", \"output\": \"/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42\"}\n",
+    "elapsed_seconds": 2.380759613122791
+  },
+  {
+    "case": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+    "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+    "status": "completed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_export.py",
+      "--root",
+      "/root/rivermind-data/actionmesh-repro",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42"
+    ],
+    "exit_code": 0,
+    "log": "{\"status\": \"exported_structure_verified\", \"output\": \"/root/rivermind-data/actionmesh-repro/outputs/census-20261002/exports/000-078_b0b646eb731848f7837ab8257dfc658c__seed42\"}\n",
+    "elapsed_seconds": 2.2268056499306113
+  }
+]

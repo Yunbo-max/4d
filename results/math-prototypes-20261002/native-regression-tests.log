@@ -1,0 +1,10 @@
+test_bitwise_control_and_zero_disagreement (test_research_census_time_direction.TimeDirectionMappingTests.test_bitwise_control_and_zero_disagreement) ... ok
+test_permutation_retains_every_physical_timestamp (test_research_census_time_direction.TimeDirectionMappingTests.test_permutation_retains_every_physical_timestamp) ... ok
+test_true_reversal_retains_physical_anchor_and_every_target (test_research_census_time_direction.TimeDirectionMappingTests.test_true_reversal_retains_physical_anchor_and_every_target) ... ok
+test_rejects_different_timeout_case (test_research_census_time_direction_resume.ResumeTests.test_rejects_different_timeout_case) ... ok
+test_reuses_exact_controls_and_rejects_tampered_sequence (test_research_census_time_direction_resume.ResumeTests.test_reuses_exact_controls_and_rejects_tampered_sequence) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.233s
+
+OK

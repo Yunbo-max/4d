@@ -1,0 +1,93 @@
+{
+  "scope": "constructed sparse motion edits through actual frozen decoder; no geometry-quality or semantic-edit claim",
+  "cases": [
+    {
+      "case": "native-bat-v1",
+      "status": "completed",
+      "elapsed_seconds": 18.373484753072262,
+      "peak_mib": 2779.0,
+      "native_rms_over_D": 4.445776111175674e-08,
+      "cache_replay_error": 0.0,
+      "derivative_relative_error": 0.004661715336449277,
+      "axes": [
+        {
+          "axis": 0,
+          "initial_edit_error": 0.005134500814172123,
+          "model_error": 0.0038059119099840646,
+          "reduction_percent": 25.875717080829364,
+          "contract_drift": 2.3034862832064647e-05,
+          "step_feasible": true,
+          "step_fraction": 0.5,
+          "reference_error": 0.0,
+          "solver_converged": true
+        },
+        {
+          "axis": 1,
+          "initial_edit_error": 0.005134500814172123,
+          "model_error": 0.0045828571752820416,
+          "reduction_percent": 10.743861163045265,
+          "contract_drift": 1.78695738022221e-05,
+          "step_feasible": true,
+          "step_fraction": 0.5,
+          "reference_error": 0.0,
+          "solver_converged": true
+        },
+        {
+          "axis": 2,
+          "initial_edit_error": 0.005134500814172123,
+          "model_error": 0.00410668217774808,
+          "reduction_percent": 20.017888274300855,
+          "contract_drift": 2.255300277657719e-05,
+          "step_feasible": true,
+          "step_fraction": 0.5,
+          "reference_error": 8.673617379884035e-19,
+          "solver_converged": true
+        }
+      ]
+    },
+    {
+      "case": "native-mannequin-v1",
+      "status": "completed",
+      "elapsed_seconds": 18.474899535998702,
+      "peak_mib": 2779.0,
+      "native_rms_over_D": 4.301208980174023e-08,
+      "cache_replay_error": 0.0,
+      "derivative_relative_error": 0.004426504557709472,
+      "axes": [
+        {
+          "axis": 0,
+          "initial_edit_error": 0.005360414344268327,
+          "model_error": 0.004392668780512842,
+          "reduction_percent": 18.053558952774917,
+          "contract_drift": 2.509014467063533e-05,
+          "step_feasible": true,
+          "step_fraction": 0.5,
+          "reference_error": 8.673617379884035e-19,
+          "solver_converged": true
+        },
+        {
+          "axis": 1,
+          "initial_edit_error": 0.005360414344268327,
+          "model_error": 0.003794441582358788,
+          "reduction_percent": 29.213651433195086,
+          "contract_drift": 3.0362984056018948e-05,
+          "step_feasible": true,
+          "step_fraction": 1.0,
+          "reference_error": 8.673617379884035e-19,
+          "solver_converged": true
+        },
+        {
+          "axis": 2,
+          "initial_edit_error": 0.005360414344268327,
+          "model_error": 0.00391844995308987,
+          "reduction_percent": 26.90024126064604,
+          "contract_drift": 1.8044584649180196e-05,
+          "step_feasible": true,
+          "step_fraction": 1.0,
+          "reference_error": 0.0,
+          "solver_converged": true
+        }
+      ]
+    }
+  ]
+}

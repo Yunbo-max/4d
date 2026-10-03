@@ -1,0 +1,62 @@
+{
+  "status": "exploratory mathematical hypotheses requested by user; not approved IdeaAtoms",
+  "date": "2026-10-02",
+  "constraints": {
+    "weights": "frozen",
+    "mode": "inference-time variables/output optimization",
+    "gpu_limit_gib": 22,
+    "full_pipeline_vram_qualified": false
+  },
+  "recommendation_order": [
+    "A_shared_bias_covariance",
+    "B_local_controllability",
+    "C_hybrid_contact_events"
+  ],
+  "candidates": [
+    {
+      "id": "A_shared_bias_covariance",
+      "question": "Does correlated generated evidence cause incorrect acceptance in 4D reconstruction/editing?",
+      "math": "shared geometric bias covariance + real-observation constrained energy",
+      "primary_falsifier": "No consequential natural effect, or fixed source weight cap is equally effective.",
+      "unknowns": [
+        "natural prevalence",
+        "artifact lineage and independent target availability",
+        "qualified second backend",
+        "covariance budget calibration"
+      ],
+      "next_step": "cached-episode availability and six-scene developmental audit"
+    },
+    {
+      "id": "B_local_controllability",
+      "question": "Can an action-preserving edit be feasible in output geometry but locally inaccessible through a supported frozen-model control interface?",
+      "math": "output-metric invariant comparison of constrained Jacobian ranges with bounded SQP verification",
+      "primary_falsifier": "Direct output optimization solves all requests or diagnostic does not predict useful solver choice.",
+      "unknowns": [
+        "supported edit interfaces",
+        "natural failure prevalence",
+        "finite nonlinear effects",
+        "common output measurement"
+      ]
+    },
+    {
+      "id": "C_hybrid_contact_events",
+      "question": "Do observed wrong-partner/missing/wrong-order contact episodes persist after strong continuous trajectory solvers?",
+      "math": "discrete episode editing coupled to constrained continuous trajectory optimization",
+      "primary_falsifier": "Same-input contact/IK, retiming or direct event-constrained solver resolves residual failures.",
+      "unknowns": [
+        "contact-truth dataset access",
+        "full scene output interface",
+        "Open-CHOIR full-text collision",
+        "two qualified backbones"
+      ]
+    }
+  ],
+  "validation": {
+    "performed": "CPU linear-algebra identities only",
+    "new_gpu_runs": 0,
+    "new_4d_effectiveness_results": false,
+    "novelty": "not established",
+    "formal_gate_pass": false
+  },
+  "report": "audits/2026-10-02-new-research-directions-math.md"
+}

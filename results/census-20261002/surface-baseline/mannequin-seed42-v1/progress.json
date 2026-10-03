@@ -1,0 +1,413 @@
+{
+  "status": "partial",
+  "started_utc": "2026-10-02T18:44:21.597684+00:00",
+  "variants": {
+    "identity": {
+      "status": "completed",
+      "variant": "identity",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": true,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.00815841694864878,
+            "p95_surface_distance": 0.019131946712376946,
+            "mean_squared_surface_distance_over_D2": 1.384954660807026e-05,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "b5b3a182d58a45d8c6a0c1d4b358c85fb5c11d7e6ddf74d10e03e300f3c6a8fd"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.012374246973373549,
+            "p95_surface_distance": 0.027233996664935974,
+            "mean_squared_surface_distance_over_D2": 3.1680664817156074e-05,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "8c826c86d5768b319d3dfc2c07f88263576e73e69060aae492897bd38f361613"
+        }
+      ],
+      "started_utc": "2026-10-02T18:44:39.801353+00:00",
+      "sequence_sha256": "82810fa8a789e68786121b6b9b5432029b2964290ed152d808536996d140ab88",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T18:45:46.145530+00:00",
+      "elapsed_seconds": 66.34393606497906
+    },
+    "closest_surface": {
+      "status": "completed",
+      "variant": "closest_surface",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": false,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "numerically_qualified": true
+          },
+          "geometry": {
+            "mean_surface_distance": 8.034844810358754e-09,
+            "p95_surface_distance": 2.1715814464566937e-08,
+            "mean_squared_surface_distance_over_D2": 1.9836297231029333e-17,
+            "max_displacement_over_D": 0.01141292027143904,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 28,
+            "new_degenerate_faces": 28,
+            "orientation_reversal_count_relative_native": 266,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.5413853411637037,
+              0.9951467169422286,
+              1.8333599752613055
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": false,
+          "frame_artifact_sha256": "0f6c7cac98a578cdccb432361b7c8c3ec5067fe340d7c112f4142599edcdecb3"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "numerically_qualified": true
+          },
+          "geometry": {
+            "mean_surface_distance": 8.823467682607726e-09,
+            "p95_surface_distance": 2.3316637200570867e-08,
+            "mean_squared_surface_distance_over_D2": 1.7674536149948872e-17,
+            "max_displacement_over_D": 0.01748506020002749,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 80,
+            "new_degenerate_faces": 80,
+            "orientation_reversal_count_relative_native": 563,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.34317112802583144,
+              0.9919831553628506,
+              2.6752036675597908
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": false,
+          "frame_artifact_sha256": "5147258ca980c5555fe9d95055e2760f460ba12a36c3a20049a57062731d0eb7"
+        }
+      ],
+      "started_utc": "2026-10-02T18:45:46.146898+00:00",
+      "sequence_sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T18:47:33.887292+00:00",
+      "elapsed_seconds": 107.74017935083248
+    },
+    "normal_only": {
+      "status": "completed",
+      "variant": "normal_only",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": true,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "numerically_qualified": true,
+            "zero_native_normals": 0
+          },
+          "geometry": {
+            "mean_surface_distance": 0.00013772302707167034,
+            "p95_surface_distance": 0.00017859612356172937,
+            "mean_squared_surface_distance_over_D2": 1.3584271599869267e-07,
+            "max_displacement_over_D": 0.015944705812554024,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 814,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.6722853465131502,
+              1.0031184636438655,
+              1.7247117825469314
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "bb134d5971bae1083c53671a5154decf3bc5275eb33a3a0af708586a5c021b4b"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "numerically_qualified": true,
+            "zero_native_normals": 0
+          },
+          "geometry": {
+            "mean_surface_distance": 0.00039557111390231954,
+            "p95_surface_distance": 0.0013996489454297038,
+            "mean_squared_surface_distance_over_D2": 6.57809125533672e-07,
+            "max_displacement_over_D": 0.02000000519524359,
+            "trust_violation_over_D": 5.195243589495302e-09,
+            "trust_boundary_fraction": 0.0002501000400160064,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 1614,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.5253171722463889,
+              1.0056298556353704,
+              2.692769388814153
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "0454ec3f005b54ba2bf76e8f3b833cbcca5bbf9f9687f88a3a81d65d6cb3ceb2"
+        }
+      ],
+      "started_utc": "2026-10-02T18:47:33.888494+00:00",
+      "sequence_sha256": "e176e969663c403c3758d719da2c8a97b43f9b193ebfce6ddfea98077b239d3f",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T18:52:07.238515+00:00",
+      "elapsed_seconds": 273.3495795989875
+    },
+    "arap": {
+      "status": "failed",
+      "variant": "arap",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": false,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        }
+      ],
+      "started_utc": "2026-10-02T18:52:07.240038+00:00",
+      "error_type": "TimeoutError",
+      "error": "CPU baseline exceeded 600.0s at closest_triangle_batch; no geometry/iteration fallback",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 366, in run\n    corrected, solver, debug = correct(arm, vertices[frame], faces, targets[frame], diagonal, check)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 230, in correct\n    return arap_correct(x, faces, target, diagonal, radius, check)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 191, in arap_correct\n    q_new, _, _ = closest(target, y, check)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 75, in closest\n    check('closest_triangle_batch')\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 336, in check\n    raise TimeoutError(f'CPU baseline exceeded {args.max_seconds}s at {stage}; no geometry/iteration fallback')\nTimeoutError: CPU baseline exceeded 600.0s at closest_triangle_batch; no geometry/iteration fallback\n",
+      "ended_utc": "2026-10-02T18:54:21.660842+00:00",
+      "elapsed_seconds": 134.4205794420559
+    }
+  },
+  "stage": "arap_projected_global",
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/denoised.npz": "378c94754bfde49714012b0bccce38488f4cdb10b71b9439142c5a901ae31785",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/stageI-raw-mesh.npz": "b45aa9c7466de9948552b54d9a2d2a822f8f123154a7c1094fba747f13e77687",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/measurement.json": "e14ed52abfeb8c81a795f818828a9b31e992072c1231cbf9e1ed80d2d677c54f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/stageI-raw-mesh.npz": "fcd09d375903f6dfe6b6708775868186f8b63ab3a236eb2a13df0229865b3981",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/measurement.json": "306c7bd6549f7f3f05c9ef1057e5c760660a7d9557ac05ff988406ae5f9de07a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/stageI-raw-mesh.npz": "2aa9c6d9a9f57bef80b8599c9d183f4c75f4edb3b54cf9eac6b2668927902acd",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/measurement.json": "d7d7432ee4c989d6637678c40f68dc17b545821f36f8071617d587bd21243e91",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/report.json": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/provenance.json": "f805aa8f37d0032342d8941b9e62e9d9817780df4cd346754f6e779af817fa2a"
+  },
+  "source_case": {
+    "dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "sequence_sha256": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "report_sha256": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319"
+  },
+  "source_probe": {
+    "dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+    "report_sha256": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99"
+  },
+  "anchor_bbox_diagonal": 2.6802071721341636,
+  "target_metadata": {
+    "0": {
+      "raw_vertices": 2079712,
+      "referenced_vertices": 305184,
+      "faces": 610364,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true
+    },
+    "8": {
+      "raw_vertices": 2079938,
+      "referenced_vertices": 306922,
+      "faces": 613832,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true
+    },
+    "15": {
+      "raw_vertices": 2081884,
+      "referenced_vertices": 308292,
+      "faces": 616568,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "trimesh": "5.1.0",
+    "rtree": "1.4.1"
+  },
+  "elapsed_seconds": 600.0635345201008,
+  "n_declared_arms": 4,
+  "n_completed_arms": 3,
+  "n_qualified_arms": 2,
+  "ended_utc": "2026-10-02T18:54:21.662223+00:00",
+  "resources": {
+    "cpu_user_seconds": 599.296079,
+    "cpu_system_seconds": 0.523982,
+    "peak_rss_bytes": 647725056,
+    "gpu_used": false
+  }
+}

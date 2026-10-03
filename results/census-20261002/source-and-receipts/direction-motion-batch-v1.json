@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "jobs": [
+    {
+      "name": "mannequin",
+      "status": "completed",
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_direction_motion.py",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+        "--direction-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2",
+        "--direction-eval-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction-eval/mannequin-seed42-v2",
+        "--native-cache-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1",
+        "--stage-gt-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1",
+        "--gt-dir",
+        "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-readouts-direction-v1/mannequin-seed42-v1"
+      ],
+      "pid": 44077,
+      "exit_code": 0,
+      "seconds": 7.130031690001488
+    },
+    {
+      "name": "bat",
+      "status": "completed",
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_direction_motion.py",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+        "--direction-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/bat-seed42-v1",
+        "--direction-eval-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction-eval/bat-seed42-v1",
+        "--native-cache-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/bat-seed42-v1",
+        "--stage-gt-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+        "--gt-dir",
+        "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-readouts-direction-v1/bat-seed42-v1"
+      ],
+      "pid": 44080,
+      "exit_code": 0,
+      "seconds": 7.731762901879847
+    }
+  ]
+}

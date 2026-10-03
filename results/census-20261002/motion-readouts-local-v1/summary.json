@@ -1,0 +1,90 @@
+{
+  "status": "completed",
+  "script_sha256": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028",
+  "independent_assets": 2,
+  "seed": 42,
+  "new_method_claim": false,
+  "no_population_significance": true,
+  "rows": [
+    {
+      "asset": "mannequin",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "report_sha256": "a27acc73f9a34620874367f74b079d1d7b7801dd221c74f6aa9a73b2ee1a2d6f",
+      "elapsed_seconds": 0.4028735830215737,
+      "peak_rss_MiB": 216.578125,
+      "errors_sum_directional": {
+        "displacement": 0.12588967053978237,
+        "velocity": 0.03113749565304992,
+        "acceleration": 0.02017233964289651
+      },
+      "ratios_pred_to_gt_and_gt_to_pred": {
+        "displacement": [
+          1.0305630046642595,
+          0.979965964154229
+        ],
+        "velocity": [
+          0.9995912491869569,
+          0.9645458492352487
+        ],
+        "acceleration": [
+          0.9867224893687679,
+          0.9382126674271217
+        ]
+      }
+    },
+    {
+      "asset": "bat",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "seed": 42,
+      "report_sha256": "e3e06d0df5af7bd6822c0340286aa489c3fbbfe997d9591a273208b17d7ff901",
+      "elapsed_seconds": 0.35801712502143346,
+      "peak_rss_MiB": 221.875,
+      "errors_sum_directional": {
+        "displacement": 0.23624061715777,
+        "velocity": 0.052907791314038236,
+        "acceleration": 0.031836588602196916
+      },
+      "ratios_pred_to_gt_and_gt_to_pred": {
+        "displacement": [
+          0.9065310801897641,
+          0.8921674586316429
+        ],
+        "velocity": [
+          0.793188719971761,
+          0.7849129049651199
+        ],
+        "acceleration": [
+          0.8462716369287333,
+          0.853036586725665
+        ]
+      }
+    }
+  ],
+  "interpretation": [
+    "The bat has lower matched motion magnitudes than GT on these conditional nearest pairs; this does not identify model causality or correct semantic material correspondence.",
+    "The mannequin has near-unity matched motion magnitude ratios with nonzero vector errors; amplitude alone does not establish motion direction/phase correctness.",
+    "No new model or official scalar metric run. All outputs derive from qualified existing point trajectories; all16frames retained.",
+    "Frame0 is excluded from primary displacement means; velocity has15 intervals and acceleration14 valid second differences.",
+    "Wrong first-frame nearest assignment and shared anisotropic alignment remain confounds; no geometry-independent claim."
+  ],
+  "fixtures": {
+    "status": "pass",
+    "checks": [
+      "constant anchor offset with matching motion gives zero errors",
+      "static prediction misses linear and accelerating GT",
+      "common constant translation leaves all readouts invariant",
+      "common time-dependent translation preserves errors, not ratios",
+      "crossing wrong-NN counterexample remains nonzero despite semantically matching motion",
+      "zero GT motion yields null ratios and explicit spurious-motion flags",
+      "each query subset acts on its own NN direction"
+    ],
+    "crossing_counterexample": {
+      "correct_map_displacement_error": 0.0,
+      "NN_map_displacement_error": 6.0,
+      "NN_map_velocity_error": 4.0
+    },
+    "scope": "Analytic NumPy fixtures; no model, GT file, CUDA or metric fit",
+    "script_sha256": "d221ab3a4fd807d743cec937baf669406bb01750d23f53984eadaade62569028"
+  }
+}

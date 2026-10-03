@@ -1,0 +1,46 @@
+{
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/denoised.npz": "378c94754bfde49714012b0bccce38488f4cdb10b71b9439142c5a901ae31785",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/report.json": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/provenance.json": "f805aa8f37d0032342d8941b9e62e9d9817780df4cd346754f6e779af817fa2a",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/stageI-raw-mesh.npz": "b45aa9c7466de9948552b54d9a2d2a822f8f123154a7c1094fba747f13e77687",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/measurement.json": "e14ed52abfeb8c81a795f818828a9b31e992072c1231cbf9e1ed80d2d677c54f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/stageI-raw-mesh.npz": "fcd09d375903f6dfe6b6708775868186f8b63ab3a236eb2a13df0229865b3981",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/measurement.json": "306c7bd6549f7f3f05c9ef1057e5c760660a7d9557ac05ff988406ae5f9de07a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/stageI-raw-mesh.npz": "2aa9c6d9a9f57bef80b8599c9d183f4c75f4edb3b54cf9eac6b2668927902acd",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/measurement.json": "d7d7432ee4c989d6637678c40f68dc17b545821f36f8071617d587bd21243e91"
+  },
+  "official": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "diagnostic_script_sha256": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f",
+  "sampling_module_sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+  "shared_matrix_sha256": "087faeccc3cddec510e984efe6895f11893497986fe65bf1f53d0befb31d2f65",
+  "protocol_sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709",
+  "anchor_samples_sha256": "363d1cf166f6f71dfc46f95de1b7a874f5b71ce441d07886442b53a9d3b0405e",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "pytorch3d": "0.7.9"
+  }
+}

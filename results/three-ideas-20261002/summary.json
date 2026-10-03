@@ -1,0 +1,38 @@
+{
+  "status": "all_declared_exploratory_tests_completed",
+  "training_performed": false,
+  "formal_gate_pass": false,
+  "natural_GT_quality_claim": false,
+  "cross_backbone_validated": false,
+  "backbones": 1,
+  "native_subjects": 1,
+  "native_seed": 42,
+  "native_variants": 5,
+  "native_frames_per_variant": 16,
+  "edit_subjects": 4,
+  "edit_seeds": [
+    0,
+    1,
+    2
+  ],
+  "max_native_physical_sampled_peak_mib": 10209.0,
+  "decisions": {
+    "idea1": "implementation_verified_scientific_inconclusive_keep_as_baseline",
+    "idea2": "implementation_verified_scientific_inconclusive_keep_as_baseline",
+    "idea3": "local_transport_baseline_useful_fixed_residual_gate_not_generally_supported"
+  },
+  "actual_step_weighted_correction_rms_sum": {
+    "baseline": 0.0,
+    "cfg_cap": 0.010393234292541756,
+    "cfg_global": 0.0035519959654460222,
+    "moment_energy": 0.06228563370430673,
+    "rms_energy": 0.0058254452869265505
+  },
+  "native_comparison": "comparison.json",
+  "edit_comparison": "edit-summary.json",
+  "report": "README.md",
+  "reviewed_visuals": [
+    "native-comparison.png",
+    "edit-controls.png"
+  ]
+}

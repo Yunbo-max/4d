@@ -1,0 +1,20 @@
+{
+  "frozen_utc": "2026-10-02T19:27:09.531435+00:00",
+  "scope": "One engineering resume plus second predeclared asset and GT-isolated evaluations; no new method or new diffusion",
+  "source_sha256": {
+    "research_census_time_direction.py": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d",
+    "research_census_time_direction_resume.py": "f5a0007aec3116241bfc251dbc4b489aff3eaebbce65764e31ba07f9d5d31c3b",
+    "research_census_time_direction_eval.py": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd",
+    "research_census_motion_controls.py": "f5fdb10d3443a8c1f605e58b6d08c450cfb87d63d7e1031189a0cc4bd899d6aa",
+    "research_census_stage_gt.py": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f",
+    "research_census_eval.py": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+    "research_three_ideas.py": "f0cfd328e15293ff0b83d3af88caeb63b61e1adf565c75a0887d4412cf1c2830",
+    "direction-after-census-v2.py": "19f1da2f3872a69b04acdfdb4638677180c48aca90f13b1f6a88b790256f70d5"
+  },
+  "wait_seconds": 1200,
+  "per_child_seconds": 300,
+  "children": 4,
+  "gpu_policy": "Wait all original census children completed and GPU compute process list empty; oneGPUchild at a time;6144MiBcap+2048MiBfree;stopafterfailure",
+  "controls": "Reuse firstasset immutable forward+permutation after actualCPUqualification; no tolerance change; secondasset all3armsfresh",
+  "later_evidence": "No quality claim until completedall16reversal and independentCPUeval; preserveoriginaldeadline"
+}

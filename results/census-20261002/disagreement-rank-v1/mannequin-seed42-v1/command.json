@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_disagreement_rank.py",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "--direction-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2",
+    "--probe-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+    "--native-cache-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1",
+    "--stage-gt-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1",
+    "--gt-dir",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "--protocol",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/census-disagreement-rank-protocol-20261002.json",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/disagreement-rank-v1/mannequin-seed42-v1",
+    "--max-seconds",
+    "240"
+  ],
+  "max_seconds": 240.0,
+  "script_sha256": "b739db990f227a9dfff77d22024eae1231868f496686d4e0a6707d8331688557"
+}

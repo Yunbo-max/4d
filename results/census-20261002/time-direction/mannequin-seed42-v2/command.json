@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_time_direction_resume.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "--source-attempt",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1",
+    "--timeout-receipt",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/time-direction-launch-v1.json",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v2",
+    "--max-seconds",
+    "300"
+  ],
+  "resume_script_sha256": "f5a0007aec3116241bfc251dbc4b489aff3eaebbce65764e31ba07f9d5d31c3b"
+}

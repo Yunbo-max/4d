@@ -1,0 +1,63 @@
+# Contact, interaction and timing: bounded direction audit
+
+Date/cutoff: 2026-10-02. Six queries; four primary papers read selectively at full-text depth (D2). Additional author/project abstracts are D1, except the inaccessible HOI-Retarget institutional entry (D0). Exact queries, captured responses and read sections accompany this note. No experiments or model runs. This branch does not establish novelty or prevalence.
+
+## Decision
+
+Keep **one parent question for a small falsification screen**, not a method proposal:
+
+> When an input video actually specifies an interaction episode, do frozen 4D outputs preserve its contact partner, onset/offset and event order after strong spatial repair and speed-retiming baselines?
+
+The potential scientific object is **interaction fidelity conditional on the observed task**, distinct from merely producing collision-free or visually plausible geometry. A cup being released before it reaches a supporting surface, a hand touching the wrong object, or an object reacting before the visible impact illustrates the consequence. These are proposed test cases, not failures already measured in our outputs. A single picture or vague text does not specify a unique approach/release timeline; temporal differences under those inputs must not automatically be called hallucinations.
+
+The nearest papers already cover much of the apparent solution. Do not propose a contact energy, contact graph, phase optimizer, physics projection, or retiming loss as a novelty on the evidence below. In particular, Open-CHOIR is an immediate collision for “phase-aware contact optimization from monocular video.” Its full paper still needs review before promoting any related technique.
+
+## Primary evidence and strongest collisions
+
+| Source, version and read depth | Evidence relevant to this question | What it prevents us claiming |
+|---|---|---|
+| [PhyGenHOI, arXiv 2605.30268v1](https://arxiv.org/html/2605.30268v1), D2: introduction, §3.3, App B.1–B.3, D | Combines kinematic human motion with simulated object dynamics and contact-triggered re-simulation for impulses. The limitations exclude sustained contacts and human reaction forces; complex contact regions remain difficult. App B.1 reports H200 and roughly 74 minutes per scene. | Impact timing and momentum correction are already addressed. Full pipeline ≤22GB is unverified; reported hardware is not a memory measurement. |
+| [IMAGIN-4D, arXiv 2606.23675v1](https://arxiv.org/html/2606.23675v1), D2: introduction, App A–C, J–N | App L/N reports wrong contact side, penetration and temporal drift. App A/B distinguishes exact-frame, ±10-frame and anywhere-in-sequence adherence. FBM/BEHAVE motion is rendered into conditioning images; the method learns specialized conditioning. | Contact semantics and timing metrics are not new. A snapshot underspecifies approach/release, so its drift alone is not evidence of an identifiable video-conditioned error. |
+| [GenMOJO, arXiv 2506.12716v1](https://arxiv.org/html/2506.12716v1), D2: §3.2, §4.1, §4.4–4.5, App B | Joint scene optimization already handles relationships between object reconstructions. MOSE-PTS has 20 real videos with annotated tracks, up to five objects and five points per object. It is not a 3D contact-label dataset. App B reports about 74 minutes for 32 frames/three objects on A6000; peak VRAM is not provided. | Joint multi-object optimization is established. Better render quality cannot be substituted for measured contact-event correctness, and MOSE-PTS cannot supply unobserved contact truth by assumption. |
+| [OVOW, arXiv 2606.31388v1](https://arxiv.org/html/2606.31388v1), D2: §3.4, §4, App F/G | Training-free assembly already applies ground/inter-object support correction. §3.4 uses vertical settling and proximity-based support; App G excludes articulated constraints and complex frictional/deformable interactions. Tables 1–2 report 26GB. Dynamic-benchmark baselines see individual frames while OVOW sees video. | Ground/contact projection is a mandatory existing baseline, not a new method. The published configuration exceeds 22GB; its comparison does not isolate an equal-input advantage. |
+| [Open-CHOIR official project](https://geometry.cs.ucl.ac.uk/projects/2026/openChoir/), D1 project only | Initializes isolated hand/object sequences, predicts relative ray-depth corrections, constructs barycentric contact correspondences, then jointly optimizes dynamically updated contact constraints across phases. Displays HO3D, TASTE-Rob and self-captured examples. Code/data are listed as forthcoming. | Very close to the proposed problem/repair family. Do not claim this paper was fully audited, that its model is training-free, or that its code is currently usable. The page lists SIGGRAPH Asia 2026; availability date and final publication were not independently verified. |
+
+The following strong alternatives also block an easy novelty claim:
+
+- [ReConForM, arXiv 2502.21207](https://arxiv.org/abs/2502.21207), D1 abstract: contact-aware motion retargeting across morphologies, including multi-character/terrain settings. Full technical collision review belongs to the parent branch; this branch cannot claim an uncovered contact formulation.
+- [Guided Time Warping for Motion Editing, SCA 2007](https://people.csail.mit.edu/ehsu/work/sca07gtw/), D1 author abstract: timing constraints with reference-guided local timing preservation. Speed retiming is a strong old baseline.
+- [Physics-Driven Data Generation for Contact-Rich Manipulation via Trajectory Optimization, arXiv 2502.20382](https://arxiv.org/abs/2502.20382), D1 abstract: kinematic retargeting followed by physics-based trajectory optimization across embodiments/physical parameters. A full physics solver must not be omitted simply because a lightweight penalty is easier to beat.
+- [HOI-Retarget, ETH institutional entry](https://www.research-collection.ethz.ch/entities/publication/bae7e96c-38df-4197-b64a-40f0a5562e8e), D0: search entry dated 2026-09-28 describes contact-centric windowed trajectory optimization. Direct page retrieval failed. This is a collision lead, not verified implementation evidence.
+
+## What could remain unresolved
+
+My inference, not a paper result: enforcing nonpenetration and feasible forces does not uniquely identify the intended partner, release event or ordering. Several mechanically valid sequences can fit the same local geometry. IK can satisfy selected targets, but it does not independently determine which targets the observation intended. A simulator can execute supplied contacts/forces, but it cannot recover their semantic correctness merely by making the output stable.
+
+That distinction does **not** make a new algorithm. If the intended contact constraints are supplied, existing IK, contact-aware retargeting, time warping and trajectory optimization may solve the whole issue. The remaining question is whether natural model errors survive these alternatives under the same information budget. A contact graph is optional notation for partners/events; changing that graph is not the same as changing surface-mesh topology.
+
+A secondary parent question, **defer rather than promote**, is whether an appearance/shape edit preserves the intended grasp region or support task. IMAGIN-4D and contact-preserving retargeting already substantially occupy it. A mug handle/body distinction is motivating, but no current evidence demonstrates an unsolved cross-model editing failure beyond existing contact targets and geometry adaptation. Do not spend GPU on this branch without a more specific residual failure.
+
+## Minimal falsification screen, with outputs frozen
+
+1. **Qualify the interface first.** Select two methods that genuinely output the relevant interacting entities, together with their input-camera registration and material/instance identities. Keep a fixed camera transform derived from inputs; no GT ICP for guidance. A single animated object without hands, partner objects or scene support is not a whole HOI reconstruction. Our eight ActionBench assets are not a contact population and establish no contact-failure prevalence. The four ActionMesh input modes are also not four independent models.
+
+2. **Freeze 12 natural clips before inspecting their generated quality**, from an existing interaction source whose actual files, permissions, timestamps and labels are verified. Include visible grasp/release, support changes and an impact episode; do not silently exclude failures or occluded intervals. BEHAVE/FBM are candidates based on the paper above, not datasets downloaded or qualified by this audit. MOSE-PTS can support observed 2D identity/trajectory checks, but not unobserved 3D contact truth. Mark ambiguous intervals unknown. Human annotations, if used, are input evidence supplied equally to every repair method, not a claim of automatic perception.
+
+3. **Export each model once and preserve raw outputs/hashes.** Compare raw output, input-only rigid alignment, collision/support projection, contact/IK repair where a rig is available, global and piecewise monotone retiming, and the combination of contact repair with retiming. Include an available contact-aware trajectory/physics solver on its supported representation. Either give all methods the same inferred contacts/camera/object geometry or report the richer-input oracle separately. A no-rig baseline must not be handicapped against a proposed method that receives a hidden rig.
+
+4. **Measure task fidelity separately from shape.** Record contact-partner identity; visible onset/offset absolute frame error; episode precision/recall and temporal overlap; and pairwise event order only for confidently ordered, non-overlapping events. Keep surface error, penetration, support/sliding and input reprojection alongside these measures. Do not collapse them into a tuned scalar. Use fixed unit-aware tolerances with a declared sensitivity range. Without FPS, use frames rather than invented seconds. Avoid defining contact solely by whichever distance threshold the repair minimizes.
+
+5. **Falsifiable prediction:** if there is a useful residual problem, at least one naturally occurring *missing/wrong-partner or reversed-order* episode should persist after the fair contact-repair-plus-retiming baseline on both qualified models, while simple onset/duration offsets should largely disappear under retiming. A monotone warp preserves the order of already-existing events; this is a mathematical diagnostic, not a claim that ordinary solvers cannot change the trajectory. If a strong solver with the same input resolves the residuals, terminate the “new contact correction method” branch. If failures appear only when the input cannot identify the event, redirect to ambiguity handling rather than asserting a repair target.
+
+No broad prevalence, generalization or ICML-level method claim follows from this small screen. Any later method would need to beat the strongest combined baseline on held-out assets, preserve observed action rather than merely slow it down, and demonstrate an actual reason that the remaining decisions cannot be solved by established methods.
+
+## Resource and feasibility boundary
+
+The cheap screen on saved meshes/poses can use CPU nearest-surface queries, sparse trajectory variables and per-frame measurements. Keeping, for example, 48 frames × 6 objects × 10,000 XYZ float32 samples is about 35MB before auxiliary structures; this is an engineering estimate, not a peak-memory qualification of a solver. IK, rigid corrections and low-dimensional monotone warps are plausible under the limit, subject to measured runtime/memory.
+
+The generation side is currently unqualified for this interaction task: OVOW reports 26GB; PhyGenHOI reports H200; GenMOJO reports A6000 without peak memory; Open-CHOIR code is forthcoming on its page; IMAGIN-4D inference memory was not located in the selected sections. Existing ActionMesh runs do not remove the multi-entity/camera mismatch. The honest next prerequisite is to establish one reproducible contact-relevant output interface and one strong cheap baseline, then a second compatible model—not to launch many energy variants.
+
+## Search limitations
+
+This bounded branch used six queries and selected four canonical deep texts. Four full-text reads do not mean every section/equation was audited. Open-CHOIR and HOI-Retarget were discovered late and remain important collision follow-ups. No new paper is classified novelty-PASS. Primary-paper statements about their own failure cases motivate an investigation; they do not prove that our current generated assets have those failures.
+

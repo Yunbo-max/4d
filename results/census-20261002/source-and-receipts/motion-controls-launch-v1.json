@@ -1,0 +1,60 @@
+{
+  "launcher_pid": 33317,
+  "cpu_only": true,
+  "outer_seconds_per_job": 300,
+  "updated_utc": "2026-10-02T18:38:46.116682+00:00",
+  "jobs": [
+    {
+      "label": "mannequin",
+      "status": "completed",
+      "pid": 33318,
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_motion_controls.py",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+        "--stage-gt-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1",
+        "--gt-dir",
+        "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/mannequin-seed42-v1",
+        "--max-seconds",
+        "300",
+        "--cache-clouds"
+      ],
+      "started_monotonic": 1691884.895424613,
+      "exit_code": 0,
+      "elapsed_seconds": 49.030379245989025
+    },
+    {
+      "label": "bat",
+      "status": "completed",
+      "pid": 33319,
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-u",
+        "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_motion_controls.py",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--case-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+        "--stage-gt-dir",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+        "--gt-dir",
+        "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/bat-seed42-v1",
+        "--max-seconds",
+        "300",
+        "--cache-clouds"
+      ],
+      "started_monotonic": 1691884.895969347,
+      "exit_code": 0,
+      "elapsed_seconds": 111.06196885299869
+    }
+  ]
+}

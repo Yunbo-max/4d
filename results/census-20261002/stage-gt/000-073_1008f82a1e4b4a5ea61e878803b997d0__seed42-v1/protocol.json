@@ -1,0 +1,31 @@
+{
+  "frames": [
+    0,
+    8,
+    15
+  ],
+  "surface_points": 100000,
+  "surface_seed": "44 + actual frame index",
+  "icp_points": 10000,
+  "icp_subset_seed": 44,
+  "icp_rotations": 24,
+  "icp_iterations": 200,
+  "icp_lr": 0.01,
+  "alignment": "One official ICP: Stage-II cleaned anchor frame0 to GT0; identical transform on BOTH stages and ALL selected frames",
+  "historical_evaluator_transform_reused": false,
+  "alignment_recomputation_reason": "Historical evaluator saved scalar metrics only; this diagnostic refits frame0 using the same official samples and optimizer, then saves its matrix. Bitwise identity with the unsaved historical fit is not claimed.",
+  "transform_convention": "PyTorch3D row-vector homogeneous matrix; [x,y,z,1] @ M",
+  "icp_allows_anisotropic_scale": true,
+  "future_frame_fit": false,
+  "normalization": "none beyond official shared anchor ICP; raw cross-stage distances also reported",
+  "metric": "Unsquared Euclidean directional mean sum, official 10k query subsets44/45 against full100k trees",
+  "units": "GT coordinate units for aligned metrics; native canonical units for raw cross-stage metrics",
+  "interpretation": "Surface geometry only. Stage-I independent topology has no valid material correspondence; no Stage-I CD-M. Frame0 includes cleanup/decimation/floater-removal differences. Selected-frame average is not the full16-frame benchmark average.",
+  "attribution": "StageI better than StageII suggests a geometry change associated with temporal decoding; does not identify its cause. Both shape scores good but CD-M poor is only suggestive of correspondence problems, since frame0 nearest matches can be wrong.",
+  "limits": "Anisotropic anchor fitting may mask scale errors. Shared anchor alignment can favor the cleaned anchor; report frame0 offset and all frame values, never fit stages independently.",
+  "memory_fraction": 0.08,
+  "device": "cuda:0",
+  "physical_monitor_gpu_index": "0",
+  "memory_cap_scope": "PyTorch caching allocator fraction, not a hard limit on all driver allocations",
+  "timeout_scope": "Stage checks only; external process timeout required for an in-flight CUDA call"
+}

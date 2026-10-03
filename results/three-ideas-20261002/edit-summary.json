@@ -1,0 +1,1477 @@
+{
+  "scope": "aggregate of output-space edit diagnostics; NO natural-ground-truth quality claim",
+  "primary_metric": "edit_offset_epe_over_scale",
+  "expected_seeds": [
+    0,
+    1,
+    2
+  ],
+  "runs": [
+    {
+      "path": "/Users/yunbo/Documents/Codex/4d/results/three-ideas-20261002/edit-seed0/results.json",
+      "seed": 0,
+      "status": "completed_diagnostic_only",
+      "elapsed_seconds": 3.494327428052202,
+      "device": "cuda",
+      "torch_peak_allocated_bytes": 12155392,
+      "torch_peak_reserved_bytes": 27262976
+    },
+    {
+      "path": "/Users/yunbo/Documents/Codex/4d/results/three-ideas-20261002/edit-seed1/results.json",
+      "seed": 1,
+      "status": "completed_diagnostic_only",
+      "elapsed_seconds": 2.6327029140666127,
+      "device": "cuda",
+      "torch_peak_allocated_bytes": 12158464,
+      "torch_peak_reserved_bytes": 27262976
+    },
+    {
+      "path": "/Users/yunbo/Documents/Codex/4d/results/three-ideas-20261002/edit-seed2/results.json",
+      "seed": 2,
+      "status": "completed_diagnostic_only",
+      "elapsed_seconds": 2.2932061939500272,
+      "device": "cuda",
+      "torch_peak_allocated_bytes": 12158464,
+      "torch_peak_reserved_bytes": 27262976
+    }
+  ],
+  "issues": [],
+  "synthetic": {
+    "global_rigid": {
+      "methods": {
+        "world_offset": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.009992553542057673,
+            "std_across_case_seed_rows_descriptive": 0.0010752024869036421,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011840041649217406,
+            "std_across_case_seed_rows_descriptive": 0.0019039351014429465,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.009294803603552282,
+            "std_across_case_seed_rows_descriptive": 0.001100935709714419,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.00999255400771896,
+            "std_across_case_seed_rows_descriptive": 0.001075202296384676,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005049896154863139,
+            "std_across_case_seed_rows_descriptive": 0.0014019164282222287,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.002858578499096135,
+            "std_across_case_seed_rows_descriptive": 0.0009607264820554465,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 2.7753508935468574e-09,
+            "std_across_case_seed_rows_descriptive": 3.350325130177845e-10,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0000000149011612,
+            "std_across_case_seed_rows_descriptive": 4.9421560620597e-08,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.010203741025179625,
+              "std_across_case_seed_rows_descriptive": 0.0009096044726968731,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.009963026037439704,
+              "std_across_case_seed_rows_descriptive": 0.0012021762591363238,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.009810893563553691,
+              "std_across_case_seed_rows_descriptive": 0.0010569298625754465,
+              "n": 4
+            }
+          }
+        },
+        "global_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 5.252070149156888e-09,
+            "std_across_case_seed_rows_descriptive": 1.2333687541995847e-09,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 6.234131174250497e-09,
+            "std_across_case_seed_rows_descriptive": 1.680906248410529e-09,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 4.88015069096311e-09,
+            "std_across_case_seed_rows_descriptive": 1.155504160648214e-09,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 8.764005558307511e-09,
+            "std_across_case_seed_rows_descriptive": 9.01515837637924e-10,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 9.450441466422413e-09,
+            "std_across_case_seed_rows_descriptive": 8.151951369150218e-10,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 6.198899430801911e-09,
+            "std_across_case_seed_rows_descriptive": 6.341025039002536e-10,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.00428570529523616,
+            "std_across_case_seed_rows_descriptive": 0.00046114342193056407,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0089799612760544,
+            "std_across_case_seed_rows_descriptive": 0.013209024951612863,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 2.084902139820599e-08,
+            "std_across_case_seed_rows_descriptive": 4.231495712987109e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 5.870811725650071e-09,
+              "std_across_case_seed_rows_descriptive": 6.179597506058177e-10,
+              "n": 4
+            },
+            "1": {
+              "mean": 5.202974939777505e-09,
+              "std_across_case_seed_rows_descriptive": 1.3060189889134532e-09,
+              "n": 4
+            },
+            "2": {
+              "mean": 4.682423782043088e-09,
+              "std_across_case_seed_rows_descriptive": 1.3290173577139454e-09,
+              "n": 4
+            }
+          }
+        },
+        "local_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 5.470521332225549e-09,
+            "std_across_case_seed_rows_descriptive": 5.298458445990847e-10,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 6.503939090999704e-09,
+            "std_across_case_seed_rows_descriptive": 1.0862468357987613e-09,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 5.082823458420667e-09,
+            "std_across_case_seed_rows_descriptive": 5.74920216971515e-10,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 8.951478669416701e-09,
+            "std_across_case_seed_rows_descriptive": 7.283597666363782e-10,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 1.2116391075641294e-08,
+            "std_across_case_seed_rows_descriptive": 8.904002745182092e-10,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 8.047799130809588e-09,
+            "std_across_case_seed_rows_descriptive": 7.464758868250849e-10,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.004285705411651482,
+            "std_across_case_seed_rows_descriptive": 0.00046114349750903827,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0089799811442692,
+            "std_across_case_seed_rows_descriptive": 0.013209036347675883,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.632329696282947e-08,
+            "std_across_case_seed_rows_descriptive": 2.3166221233815455e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 5.616462073199102e-09,
+              "std_across_case_seed_rows_descriptive": 4.237427105219804e-10,
+              "n": 4
+            },
+            "1": {
+              "mean": 5.423406834736966e-09,
+              "std_across_case_seed_rows_descriptive": 5.613799864218056e-10,
+              "n": 4
+            },
+            "2": {
+              "mean": 5.37169508874058e-09,
+              "std_across_case_seed_rows_descriptive": 5.605527460377203e-10,
+              "n": 4
+            }
+          }
+        },
+        "residual_gated_local_global": {
+          "edit_offset_epe_over_scale": {
+            "mean": 5.470521332225549e-09,
+            "std_across_case_seed_rows_descriptive": 5.298458445990847e-10,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 6.503939090999704e-09,
+            "std_across_case_seed_rows_descriptive": 1.0862468357987613e-09,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 5.082823458420667e-09,
+            "std_across_case_seed_rows_descriptive": 5.74920216971515e-10,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 8.951478669416701e-09,
+            "std_across_case_seed_rows_descriptive": 7.283597666363782e-10,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 1.2116391075641294e-08,
+            "std_across_case_seed_rows_descriptive": 8.904002745182092e-10,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 8.047799130809588e-09,
+            "std_across_case_seed_rows_descriptive": 7.464758868250849e-10,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.004285705411651482,
+            "std_across_case_seed_rows_descriptive": 0.00046114349750903827,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0089799811442692,
+            "std_across_case_seed_rows_descriptive": 0.013209036347675883,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.632329696282947e-08,
+            "std_across_case_seed_rows_descriptive": 2.3166221233815455e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 5.616462073199102e-09,
+              "std_across_case_seed_rows_descriptive": 4.237427105219804e-10,
+              "n": 4
+            },
+            "1": {
+              "mean": 5.423406834736966e-09,
+              "std_across_case_seed_rows_descriptive": 5.613799864218056e-10,
+              "n": 4
+            },
+            "2": {
+              "mean": 5.37169508874058e-09,
+              "std_across_case_seed_rows_descriptive": 5.605527460377203e-10,
+              "n": 4
+            }
+          }
+        }
+      },
+      "local_fit_risk_auc_descriptive": {
+        "mean": null,
+        "std_across_case_seed_rows_descriptive": null,
+        "n": 0
+      },
+      "local_vs_best_world_or_global": {
+        "candidate": "local_rigid_transport",
+        "best_aggregate_control": "global_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 5.470521332225549e-09,
+        "control_mean": 5.252070149156888e-09,
+        "absolute_gain_positive_is_better": -2.1845118306866067e-10,
+        "relative_gain_fraction": null,
+        "relative_gain_null_reason": "control is at numerical zero; percentage is unstable",
+        "paired_absolute_gains": {
+          "mean": -2.184511830686612e-10,
+          "std_across_case_seed_rows_descriptive": 9.354853837932827e-10,
+          "n": 12
+        },
+        "paired_wins": 0,
+        "paired_losses": 0,
+        "paired_ties": 12
+      },
+      "gated_vs_best_ungated": {
+        "candidate": "residual_gated_local_global",
+        "best_aggregate_control": "global_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 5.470521332225549e-09,
+        "control_mean": 5.252070149156888e-09,
+        "absolute_gain_positive_is_better": -2.1845118306866067e-10,
+        "relative_gain_fraction": null,
+        "relative_gain_null_reason": "control is at numerical zero; percentage is unstable",
+        "paired_absolute_gains": {
+          "mean": -2.184511830686612e-10,
+          "std_across_case_seed_rows_descriptive": 9.354853837932827e-10,
+          "n": 12
+        },
+        "paired_wins": 0,
+        "paired_losses": 0,
+        "paired_ties": 12
+      }
+    },
+    "two_region_articulation": {
+      "methods": {
+        "world_offset": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.00999255346444746,
+            "std_across_case_seed_rows_descriptive": 0.0010752026194629164,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011840041571607193,
+            "std_across_case_seed_rows_descriptive": 0.001903935067587328,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.009294803331916532,
+            "std_across_case_seed_rows_descriptive": 0.001100935827043669,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.009992553852498531,
+            "std_across_case_seed_rows_descriptive": 0.0010752024008500408,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005480544505796085,
+            "std_across_case_seed_rows_descriptive": 0.0015372321876282785,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.003036408820965638,
+            "std_across_case_seed_rows_descriptive": 0.001041836245230945,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 2.3401750537388466e-09,
+            "std_across_case_seed_rows_descriptive": 2.5883422661429014e-10,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0000000149011612,
+            "std_across_case_seed_rows_descriptive": 6.936113061392775e-08,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.010203741025179625,
+              "std_across_case_seed_rows_descriptive": 0.0009096044726968731,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.00996302580460906,
+              "std_across_case_seed_rows_descriptive": 0.0012021766090926803,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.009810893563553691,
+              "std_across_case_seed_rows_descriptive": 0.0010569298625754465,
+              "n": 4
+            }
+          }
+        },
+        "global_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.009846499849421283,
+            "std_across_case_seed_rows_descriptive": 0.0011822070228043225,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011866188452889522,
+            "std_across_case_seed_rows_descriptive": 0.002032533148223881,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.009076628678788742,
+            "std_across_case_seed_rows_descriptive": 0.0012274209255950142,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.009846500082251927,
+            "std_across_case_seed_rows_descriptive": 0.001182207156464378,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005416562547907233,
+            "std_across_case_seed_rows_descriptive": 0.0015575434262553433,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.003023772907909006,
+            "std_across_case_seed_rows_descriptive": 0.0010565034088217788,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.0004349044653887783,
+            "std_across_case_seed_rows_descriptive": 0.0002757991622709802,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0001815408468246,
+            "std_across_case_seed_rows_descriptive": 0.0021043285132831186,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 2.116047514988395e-08,
+            "std_across_case_seed_rows_descriptive": 4.480339243163244e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.010132504161447287,
+              "std_across_case_seed_rows_descriptive": 0.0009165261122677756,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.009668348939158022,
+              "std_across_case_seed_rows_descriptive": 0.0013715504991650244,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.009738646447658539,
+              "std_across_case_seed_rows_descriptive": 0.0011603882447173343,
+              "n": 4
+            }
+          }
+        },
+        "local_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.006250817871962984,
+            "std_across_case_seed_rows_descriptive": 0.003159824389133639,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.014604204256708423,
+            "std_across_case_seed_rows_descriptive": 0.004953418688978874,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.00323096476374,
+            "std_across_case_seed_rows_descriptive": 0.0025022779041000737,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.006250819521180044,
+            "std_across_case_seed_rows_descriptive": 0.00315982341026305,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.006411791895516217,
+            "std_across_case_seed_rows_descriptive": 0.001755504686690596,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.0025520991281761476,
+            "std_across_case_seed_rows_descriptive": 0.0008056921151213333,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.004534163822730382,
+            "std_across_case_seed_rows_descriptive": 0.0008285818432723249,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.022173672914505,
+            "std_across_case_seed_rows_descriptive": 0.009286508726148342,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.6754588705889546e-08,
+            "std_across_case_seed_rows_descriptive": 5.023776216758292e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.0064802891574800014,
+              "std_across_case_seed_rows_descriptive": 0.0028084079038103033,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.006180634256452322,
+              "std_across_case_seed_rows_descriptive": 0.0034862441768926415,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.00609153020195663,
+              "std_across_case_seed_rows_descriptive": 0.0031351972382627313,
+              "n": 4
+            }
+          }
+        },
+        "residual_gated_local_global": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.005913647861840825,
+            "std_across_case_seed_rows_descriptive": 0.0016706497563513732,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011829008425896367,
+            "std_across_case_seed_rows_descriptive": 0.0020384760477425807,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.003590587070599819,
+            "std_across_case_seed_rows_descriptive": 0.001716605717446778,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.005913649685680866,
+            "std_across_case_seed_rows_descriptive": 0.0016706492845120586,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005261047626845539,
+            "std_across_case_seed_rows_descriptive": 0.0010997072978594722,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.002206405052371944,
+            "std_across_case_seed_rows_descriptive": 0.000538805497289296,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.0019924504352578274,
+            "std_across_case_seed_rows_descriptive": 0.00047326084621852855,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0096301833788555,
+            "std_across_case_seed_rows_descriptive": 0.006264547624108763,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.261339553972675e-08,
+            "std_across_case_seed_rows_descriptive": 5.738932603067373e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.006243288982659578,
+              "std_across_case_seed_rows_descriptive": 0.0013368626896060143,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.005939656693954021,
+              "std_across_case_seed_rows_descriptive": 0.0018745168967864852,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.005557997908908874,
+              "std_across_case_seed_rows_descriptive": 0.0016841525349828058,
+              "n": 4
+            }
+          }
+        }
+      },
+      "local_fit_risk_auc_descriptive": {
+        "mean": 0.8591670256147735,
+        "std_across_case_seed_rows_descriptive": 0.03309752351198776,
+        "n": 12
+      },
+      "local_vs_best_world_or_global": {
+        "candidate": "local_rigid_transport",
+        "best_aggregate_control": "global_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 0.006250817871962984,
+        "control_mean": 0.009846499849421283,
+        "absolute_gain_positive_is_better": 0.003595681977458299,
+        "relative_gain_fraction": 0.3651736182852459,
+        "relative_gain_null_reason": null,
+        "paired_absolute_gains": {
+          "mean": 0.003595681977458298,
+          "std_across_case_seed_rows_descriptive": 0.0028965499951937933,
+          "n": 12
+        },
+        "paired_wins": 9,
+        "paired_losses": 3,
+        "paired_ties": 0
+      },
+      "gated_vs_best_ungated": {
+        "candidate": "residual_gated_local_global",
+        "best_aggregate_control": "local_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 0.005913647861840825,
+        "control_mean": 0.006250817871962984,
+        "absolute_gain_positive_is_better": 0.00033717001012215954,
+        "relative_gain_fraction": 0.05394014303863822,
+        "relative_gain_null_reason": null,
+        "paired_absolute_gains": {
+          "mean": 0.00033717001012216013,
+          "std_across_case_seed_rows_descriptive": 0.001593764850671378,
+          "n": 12
+        },
+        "paired_wins": 6,
+        "paired_losses": 6,
+        "paired_ties": 0
+      }
+    },
+    "fast_two_region_articulation": {
+      "methods": {
+        "world_offset": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.00999255400771896,
+            "std_across_case_seed_rows_descriptive": 0.0010752026075977867,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011840042270099124,
+            "std_across_case_seed_rows_descriptive": 0.00190393513717861,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.009294803991603354,
+            "std_across_case_seed_rows_descriptive": 0.0011009358146603543,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.009992554240549604,
+            "std_across_case_seed_rows_descriptive": 0.0010752024203703728,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005480544661016514,
+            "std_across_case_seed_rows_descriptive": 0.0015372322800786557,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.003036409024692451,
+            "std_across_case_seed_rows_descriptive": 0.001041836371418197,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 3.406635140645875e-09,
+            "std_across_case_seed_rows_descriptive": 2.5853736632454365e-10,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.010203741258010268,
+              "std_across_case_seed_rows_descriptive": 0.0009096045267705632,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.009963026503100991,
+              "std_across_case_seed_rows_descriptive": 0.001202176661822054,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.009810894262045622,
+              "std_across_case_seed_rows_descriptive": 0.0010569298128974569,
+              "n": 4
+            }
+          }
+        },
+        "global_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.00984650031508257,
+            "std_across_case_seed_rows_descriptive": 0.0011822072337443717,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011866189228991667,
+            "std_across_case_seed_rows_descriptive": 0.0020325332525906333,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.009076629028034707,
+            "std_across_case_seed_rows_descriptive": 0.001227421044947287,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.009846500470302999,
+            "std_across_case_seed_rows_descriptive": 0.0011822072890137901,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005416562741932769,
+            "std_across_case_seed_rows_descriptive": 0.0015575435531726906,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.003023773111635819,
+            "std_across_case_seed_rows_descriptive": 0.0010565034743226659,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.0008380746069936625,
+            "std_across_case_seed_rows_descriptive": 0.0005299821571022137,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.000279704729716,
+            "std_across_case_seed_rows_descriptive": 0.0020323836907864554,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 2.423773922307267e-08,
+            "std_across_case_seed_rows_descriptive": 6.492905620917144e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.01013250439427793,
+              "std_across_case_seed_rows_descriptive": 0.0009165261247856952,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.009668349637649953,
+              "std_across_case_seed_rows_descriptive": 0.0013715508493835368,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.009738646913319826,
+              "std_across_case_seed_rows_descriptive": 0.0011603885587316396,
+              "n": 4
+            }
+          }
+        },
+        "local_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.0062508186674676836,
+            "std_across_case_seed_rows_descriptive": 0.003159825287386621,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.014604205537276963,
+            "std_across_case_seed_rows_descriptive": 0.004953419502086032,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.0032309654113002275,
+            "std_across_case_seed_rows_descriptive": 0.0025022788577427515,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.006250820394294958,
+            "std_across_case_seed_rows_descriptive": 0.003159824551898265,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.006411792632813255,
+            "std_across_case_seed_rows_descriptive": 0.0017555048943332886,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.0025520995550323278,
+            "std_across_case_seed_rows_descriptive": 0.0008056923433807856,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.008528254460543394,
+            "std_across_case_seed_rows_descriptive": 0.0014645293084947452,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0210128525892894,
+            "std_across_case_seed_rows_descriptive": 0.009857562921176129,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.740181734694185e-08,
+            "std_across_case_seed_rows_descriptive": 4.221435078995479e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.006480290088802576,
+              "std_across_case_seed_rows_descriptive": 0.002808408944301654,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.006180635071359575,
+              "std_across_case_seed_rows_descriptive": 0.003486245149837962,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.0060915308422409,
+              "std_across_case_seed_rows_descriptive": 0.0031351979228724904,
+              "n": 4
+            }
+          }
+        },
+        "residual_gated_local_global": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.00591364821108679,
+            "std_across_case_seed_rows_descriptive": 0.001670649880369043,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011829008969167868,
+            "std_across_case_seed_rows_descriptive": 0.002038476412727347,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.0035905873567874855,
+            "std_across_case_seed_rows_descriptive": 0.0017166058474034932,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.005913649976719171,
+            "std_across_case_seed_rows_descriptive": 0.0016706493478028126,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005261047782065968,
+            "std_across_case_seed_rows_descriptive": 0.0010997076574247912,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.002206405314306418,
+            "std_across_case_seed_rows_descriptive": 0.0005388055966444788,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.003823255557411661,
+            "std_across_case_seed_rows_descriptive": 0.0009185352993481975,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0097154378890991,
+            "std_across_case_seed_rows_descriptive": 0.006200418724331106,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.282975239808176e-08,
+            "std_across_case_seed_rows_descriptive": 3.2770138639466357e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.006243289215490222,
+              "std_across_case_seed_rows_descriptive": 0.0013368625074259802,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.005939657101407647,
+              "std_across_case_seed_rows_descriptive": 0.0018745171658605536,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.0055579983163625,
+              "std_across_case_seed_rows_descriptive": 0.0016841527833563405,
+              "n": 4
+            }
+          }
+        }
+      },
+      "local_fit_risk_auc_descriptive": {
+        "mean": 0.8591667274771795,
+        "std_across_case_seed_rows_descriptive": 0.03309751351554554,
+        "n": 12
+      },
+      "local_vs_best_world_or_global": {
+        "candidate": "local_rigid_transport",
+        "best_aggregate_control": "global_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 0.0062508186674676836,
+        "control_mean": 0.00984650031508257,
+        "absolute_gain_positive_is_better": 0.003595681647614887,
+        "relative_gain_fraction": 0.36517356751689034,
+        "relative_gain_null_reason": null,
+        "paired_absolute_gains": {
+          "mean": 0.0035956816476148865,
+          "std_across_case_seed_rows_descriptive": 0.0028965510334316353,
+          "n": 12
+        },
+        "paired_wins": 9,
+        "paired_losses": 3,
+        "paired_ties": 0
+      },
+      "gated_vs_best_ungated": {
+        "candidate": "residual_gated_local_global",
+        "best_aggregate_control": "local_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 0.00591364821108679,
+        "control_mean": 0.0062508186674676836,
+        "absolute_gain_positive_is_better": 0.0003371704563808935,
+        "relative_gain_fraction": 0.053940207566041454,
+        "relative_gain_null_reason": null,
+        "paired_absolute_gains": {
+          "mean": 0.00033717045638089377,
+          "std_across_case_seed_rows_descriptive": 0.0015937655424937956,
+          "n": 12
+        },
+        "paired_wins": 6,
+        "paired_losses": 6,
+        "paired_ties": 0
+      }
+    },
+    "global_rigid_noisy_observations": {
+      "methods": {
+        "world_offset": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.009992553542057673,
+            "std_across_case_seed_rows_descriptive": 0.0010752024869036421,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.011840041649217406,
+            "std_across_case_seed_rows_descriptive": 0.0019039351014429465,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.009294803603552282,
+            "std_across_case_seed_rows_descriptive": 0.001100935709714419,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.013763243875776729,
+            "std_across_case_seed_rows_descriptive": 0.0007227659321412041,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.005060867425830414,
+            "std_across_case_seed_rows_descriptive": 0.001404616460553757,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.002879471362878879,
+            "std_across_case_seed_rows_descriptive": 0.0009651412908161772,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 3.2927186902990493e-09,
+            "std_across_case_seed_rows_descriptive": 4.6071056730379757e-10,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 0.9999999850988388,
+            "std_across_case_seed_rows_descriptive": 3.5471858722681055e-08,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.010203741025179625,
+              "std_across_case_seed_rows_descriptive": 0.0009096044726968731,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.009963026037439704,
+              "std_across_case_seed_rows_descriptive": 0.0012021762591363238,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.009810893563553691,
+              "std_across_case_seed_rows_descriptive": 0.0010569298625754465,
+              "n": 4
+            }
+          }
+        },
+        "global_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 2.5431805624975823e-05,
+            "std_across_case_seed_rows_descriptive": 5.787276482683471e-06,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 3.0272674545509897e-05,
+            "std_across_case_seed_rows_descriptive": 8.052804535650496e-06,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 2.3569277800561395e-05,
+            "std_across_case_seed_rows_descriptive": 5.144061433256164e-06,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.007959513459354639,
+            "std_across_case_seed_rows_descriptive": 4.729509088467295e-05,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.0005806388095758545,
+            "std_across_case_seed_rows_descriptive": 9.746367190284276e-05,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.0003261270649090875,
+            "std_across_case_seed_rows_descriptive": 7.293169923419985e-05,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.004285580206972857,
+            "std_across_case_seed_rows_descriptive": 0.0004622653855770252,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0085798154274623,
+            "std_across_case_seed_rows_descriptive": 0.012452497622674526,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 2.2063797011639963e-08,
+            "std_across_case_seed_rows_descriptive": 3.6270237539714994e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 2.5285102765337797e-05,
+              "std_across_case_seed_rows_descriptive": 5.5219653540213166e-06,
+              "n": 4
+            },
+            "1": {
+              "mean": 2.614908771647606e-05,
+              "std_across_case_seed_rows_descriptive": 6.368462890283271e-06,
+              "n": 4
+            },
+            "2": {
+              "mean": 2.486122639311361e-05,
+              "std_across_case_seed_rows_descriptive": 5.344783467783444e-06,
+              "n": 4
+            }
+          }
+        },
+        "local_rigid_transport": {
+          "edit_offset_epe_over_scale": {
+            "mean": 0.0003265712342302625,
+            "std_across_case_seed_rows_descriptive": 3.941320326879698e-05,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 0.00033943142140439403,
+            "std_across_case_seed_rows_descriptive": 5.895868268331027e-05,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 0.0003171285570715554,
+            "std_across_case_seed_rows_descriptive": 4.001107578968373e-05,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.007969224747891227,
+            "std_across_case_seed_rows_descriptive": 4.5665545799135465e-05,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.0006468283196833605,
+            "std_across_case_seed_rows_descriptive": 8.269636640220687e-05,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.0004032808550012608,
+            "std_across_case_seed_rows_descriptive": 6.1647819038703e-05,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.004312654200475663,
+            "std_across_case_seed_rows_descriptive": 0.0004617177850127226,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0086107502381008,
+            "std_across_case_seed_rows_descriptive": 0.012529028812865042,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 3.53196435061894e-08,
+            "std_across_case_seed_rows_descriptive": 3.3684078048039805e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 0.0003269659573561512,
+              "std_across_case_seed_rows_descriptive": 3.0770607307627654e-05,
+              "n": 4
+            },
+            "1": {
+              "mean": 0.0003310045649413951,
+              "std_across_case_seed_rows_descriptive": 5.0736275994647624e-05,
+              "n": 4
+            },
+            "2": {
+              "mean": 0.00032174318039324135,
+              "std_across_case_seed_rows_descriptive": 3.310712111379793e-05,
+              "n": 4
+            }
+          }
+        },
+        "residual_gated_local_global": {
+          "edit_offset_epe_over_scale": {
+            "mean": 2.5431805624975823e-05,
+            "std_across_case_seed_rows_descriptive": 5.787276482683471e-06,
+            "n": 12
+          },
+          "boundary_edit_offset_epe_over_scale": {
+            "mean": 3.0272674545509897e-05,
+            "std_across_case_seed_rows_descriptive": 8.052804535650496e-06,
+            "n": 12
+          },
+          "interior_edit_offset_epe_over_scale": {
+            "mean": 2.3569277800561395e-05,
+            "std_across_case_seed_rows_descriptive": 5.144061433256164e-06,
+            "n": 12
+          },
+          "edited_target_epe_over_scale": {
+            "mean": 0.007959513459354639,
+            "std_across_case_seed_rows_descriptive": 4.729509088467295e-05,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_rms": {
+            "mean": 0.0005806388095758545,
+            "std_across_case_seed_rows_descriptive": 9.746367264824813e-05,
+            "n": 12
+          },
+          "heldout_edge_effect_drift_mean_abs": {
+            "mean": 0.0003261276857908039,
+            "std_across_case_seed_rows_descriptive": 7.293150512575439e-05,
+            "n": 12
+          },
+          "edited_velocity_change_mean_over_scale_per_step": {
+            "mean": 0.004285580206972857,
+            "std_across_case_seed_rows_descriptive": 0.00046226531643353135,
+            "n": 12
+          },
+          "edited_speed_ratio": {
+            "mean": 1.0085798154274623,
+            "std_across_case_seed_rows_descriptive": 0.012452497622674526,
+            "n": 12
+          },
+          "edit_amplitude_error_max_over_scale_SANITY": {
+            "mean": 2.877106094108702e-08,
+            "std_across_case_seed_rows_descriptive": 3.400782083051597e-09,
+            "n": 12
+          },
+          "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+            "mean": 0.0,
+            "std_across_case_seed_rows_descriptive": 0.0,
+            "n": 12
+          },
+          "primary_mean_by_seed": {
+            "0": {
+              "mean": 2.5285102765337797e-05,
+              "std_across_case_seed_rows_descriptive": 5.5219653540213166e-06,
+              "n": 4
+            },
+            "1": {
+              "mean": 2.614908771647606e-05,
+              "std_across_case_seed_rows_descriptive": 6.368462890283271e-06,
+              "n": 4
+            },
+            "2": {
+              "mean": 2.486122639311361e-05,
+              "std_across_case_seed_rows_descriptive": 5.344783467783444e-06,
+              "n": 4
+            }
+          }
+        }
+      },
+      "local_fit_risk_auc_descriptive": {
+        "mean": 0.4939123966104549,
+        "std_across_case_seed_rows_descriptive": 0.09970860677696283,
+        "n": 12
+      },
+      "local_vs_best_world_or_global": {
+        "candidate": "local_rigid_transport",
+        "best_aggregate_control": "global_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 0.0003265712342302625,
+        "control_mean": 2.5431805624975823e-05,
+        "absolute_gain_positive_is_better": -0.0003011394286052867,
+        "relative_gain_fraction": -11.84105576481548,
+        "relative_gain_null_reason": null,
+        "paired_absolute_gains": {
+          "mean": -0.0003011394286052867,
+          "std_across_case_seed_rows_descriptive": 3.807576120115419e-05,
+          "n": 12
+        },
+        "paired_wins": 0,
+        "paired_losses": 12,
+        "paired_ties": 0
+      },
+      "gated_vs_best_ungated": {
+        "candidate": "residual_gated_local_global",
+        "best_aggregate_control": "global_rigid_transport",
+        "control_selection": "descriptive best of declared alternatives; not a validated deployable selector",
+        "candidate_mean": 2.5431805624975823e-05,
+        "control_mean": 2.5431805624975823e-05,
+        "absolute_gain_positive_is_better": 0.0,
+        "relative_gain_fraction": 0.0,
+        "relative_gain_null_reason": null,
+        "paired_absolute_gains": {
+          "mean": 0.0,
+          "std_across_case_seed_rows_descriptive": 0.0,
+          "n": 12
+        },
+        "paired_wins": 0,
+        "paired_losses": 0,
+        "paired_ties": 12
+      }
+    }
+  },
+  "natural_descriptive_only": {
+    "world_offset": {
+      "heldout_edge_effect_drift_rms": {
+        "mean": 0.0011240988387726247,
+        "std_across_case_seed_rows_descriptive": 0.0003998451944860345,
+        "n": 12
+      },
+      "heldout_edge_effect_drift_mean_abs": {
+        "mean": 0.0005571086536898898,
+        "std_across_case_seed_rows_descriptive": 0.00018321996439039475,
+        "n": 12
+      },
+      "edited_velocity_change_mean_over_scale_per_step": {
+        "mean": 1.3184599245708029e-09,
+        "std_across_case_seed_rows_descriptive": 4.3438410818654476e-10,
+        "n": 12
+      },
+      "edited_speed_ratio": {
+        "mean": 1.0,
+        "std_across_case_seed_rows_descriptive": 0.0,
+        "n": 12
+      },
+      "edit_amplitude_error_max_over_scale_SANITY": {
+        "mean": 0.0,
+        "std_across_case_seed_rows_descriptive": 0.0,
+        "n": 12
+      },
+      "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+        "mean": 0.0,
+        "std_across_case_seed_rows_descriptive": 0.0,
+        "n": 12
+      }
+    },
+    "global_rigid_transport": {
+      "heldout_edge_effect_drift_rms": {
+        "mean": 0.0011724966607289389,
+        "std_across_case_seed_rows_descriptive": 0.0008108653526668864,
+        "n": 12
+      },
+      "heldout_edge_effect_drift_mean_abs": {
+        "mean": 0.0004971774954659244,
+        "std_across_case_seed_rows_descriptive": 0.0002882160230264425,
+        "n": 12
+      },
+      "edited_velocity_change_mean_over_scale_per_step": {
+        "mean": 0.0006033976757559382,
+        "std_across_case_seed_rows_descriptive": 0.0006055222618577498,
+        "n": 12
+      },
+      "edited_speed_ratio": {
+        "mean": 0.9930989543596903,
+        "std_across_case_seed_rows_descriptive": 0.015403093193281793,
+        "n": 12
+      },
+      "edit_amplitude_error_max_over_scale_SANITY": {
+        "mean": 2.1678424388937856e-08,
+        "std_across_case_seed_rows_descriptive": 4.8663553427010066e-09,
+        "n": 12
+      },
+      "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+        "mean": 0.0,
+        "std_across_case_seed_rows_descriptive": 0.0,
+        "n": 12
+      }
+    },
+    "local_rigid_transport": {
+      "heldout_edge_effect_drift_rms": {
+        "mean": 0.0005992519769885499,
+        "std_across_case_seed_rows_descriptive": 0.0003751522237338929,
+        "n": 12
+      },
+      "heldout_edge_effect_drift_mean_abs": {
+        "mean": 0.0003291809164996569,
+        "std_across_case_seed_rows_descriptive": 0.00020069597062203078,
+        "n": 12
+      },
+      "edited_velocity_change_mean_over_scale_per_step": {
+        "mean": 0.0005080719668815922,
+        "std_across_case_seed_rows_descriptive": 0.0003373885626153145,
+        "n": 12
+      },
+      "edited_speed_ratio": {
+        "mean": 0.9958396454652151,
+        "std_across_case_seed_rows_descriptive": 0.007749628891327491,
+        "n": 12
+      },
+      "edit_amplitude_error_max_over_scale_SANITY": {
+        "mean": 3.709991632424211e-08,
+        "std_across_case_seed_rows_descriptive": 2.887662242023527e-09,
+        "n": 12
+      },
+      "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+        "mean": 0.0,
+        "std_across_case_seed_rows_descriptive": 0.0,
+        "n": 12
+      }
+    },
+    "residual_gated_local_global": {
+      "heldout_edge_effect_drift_rms": {
+        "mean": 0.0010472773325697442,
+        "std_across_case_seed_rows_descriptive": 0.0007060545588116713,
+        "n": 12
+      },
+      "heldout_edge_effect_drift_mean_abs": {
+        "mean": 0.00047147484777572873,
+        "std_across_case_seed_rows_descriptive": 0.00028025289743576046,
+        "n": 12
+      },
+      "edited_velocity_change_mean_over_scale_per_step": {
+        "mean": 0.0004944838880570993,
+        "std_across_case_seed_rows_descriptive": 0.00029395537882036363,
+        "n": 12
+      },
+      "edited_speed_ratio": {
+        "mean": 0.997971365849177,
+        "std_across_case_seed_rows_descriptive": 0.00741937192866008,
+        "n": 12
+      },
+      "edit_amplitude_error_max_over_scale_SANITY": {
+        "mean": 3.578141560822701e-08,
+        "std_across_case_seed_rows_descriptive": 3.746143804581617e-09,
+        "n": 12
+      },
+      "unedited_shift_max_over_scale_BY_CONSTRUCTION": {
+        "mean": 0.0,
+        "std_across_case_seed_rows_descriptive": 0.0,
+        "n": 12
+      }
+    }
+  },
+  "interpretation": [
+    "Synthetic target comes from analytical transforms of generated anchor points, not natural 4D ground truth.",
+    "Global-rigid recovery and norm preservation are algebraic sanity checks, not evidence of novelty.",
+    "Seeds resample the same four assets; case/vertex/time observations are correlated. No significance or calibration claim.",
+    "Natural heldout-edge drift and velocity changes do not establish natural edit correctness.",
+    "Best-control comparisons are descriptive selection among declared controls, with no post-hoc tuning of candidate parameters."
+  ],
+  "configuration": {
+    "points": 512,
+    "neighbors": 32,
+    "eval_neighbors": 8,
+    "edit_amplitude": 0.03,
+    "observation_noise": 0.005,
+    "risk_threshold": 0.005
+  },
+  "source_sha256": {
+    "kangaroo": "9dac55ac19b2980559e7a34b38a63aae6f4eae125cbfc91860ae078373af3188",
+    "octopus": "fb7ffbd1f7cd5ed37523bedcda23b47845f32b42ba04ef6330cea95321ad5789",
+    "mushroom": "371384f8c691c6afbadb03c0a278c6f46f66a2fca1bee01f27964303ad209a62",
+    "panda": "084cbb1f317011dd831ec6b5a0f61d14b1824787768043374423015299955703"
+  },
+  "status": "complete_descriptive_aggregation"
+}

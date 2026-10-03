@@ -1,0 +1,75 @@
+{
+  "status": "prepared",
+  "schema_version": 1,
+  "input": "/root/rivermind-data/actionmesh-repro/repo/assets/examples/kangaroo",
+  "seed": 42,
+  "stage0_steps": 100,
+  "stage1_steps_planned": 30,
+  "frames": 16,
+  "config": "actionmesh_lowram",
+  "dtype": "float16",
+  "cache": "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/prepare/prepared.npz",
+  "cache_sha256": "ceb81da7bb0b85f9da2c467803be0f6b2c55c61e28782487fef1cd2da48e3294",
+  "source_decoded_image_hashes": [
+    "751854f7453b915641bba304d71905f2ef5aa085f3b46e4f54aa5c518e5d7900",
+    "dc8e25edc140374d6bf3ac9b5fd21bbbd3a64d358572baf48b3e93b72d424e0f",
+    "6cbdaca5ff8980de029e180b44b01d15de398c6dc36b3b253eab277af6d8e9ce",
+    "cf9b0ddb2004b385181d67e1b854fc69bbfc9619fd7f55f9b745f36071e25d5c",
+    "0b6e0a19ec6892b6d0d6a0e33b22e5ec43324e86a0604610c27e3fdb229d3309",
+    "1199d72d1c4e398a55a84db4fcc15116ffce74866cb680b0bc6d10acea1f7a89",
+    "20b42587cea5f568d02126711c032dc5bbad8696fe0d5ca9713acca8464007bd",
+    "a086a3e2e1a06bc0f47e24dd16de1c9b2bd0a10058b409b0fb481f11a64ebf18",
+    "22c84b79743fb4ff6665a3cf874de931c74506a803b16ca0b277c866d9d40fb5",
+    "0eb18eb781f955012176d9fee31289319d363b51e97efc5f56a20227ac503461",
+    "9c95badbb9ef7da30d370d04c4006ceca2700469dd4bb391ed629e0fa9b5519e",
+    "03006b87f83860684344a4b29febb598c7481f52bd2f6b4c98d38d50bdcb5c06",
+    "419621bac54656235482b6ea8e4692a013cbd125bbbf40228946f8407f564dfb",
+    "490b72074ad159cba732d2a427b85f4b787bd7d3daf1ce9e2aefdf0dd8918ade",
+    "34c5d601c6acefc779a7e0548338b8a14dbc8c153c995256f23b4f1ac2c6a881",
+    "896f447b0bc263bec2c484b5e631799015021cabe3cdf05f9b98b7be76be3891"
+  ],
+  "shapes": {
+    "schema_version": [],
+    "timesteps": [
+      16
+    ],
+    "context": [
+      16,
+      257,
+      1024
+    ],
+    "anchor_latent": [
+      1,
+      2048,
+      64
+    ],
+    "anchor_timesteps": [
+      1
+    ],
+    "anchor_vertices": [
+      19999,
+      3
+    ],
+    "anchor_faces": [
+      39994,
+      3
+    ],
+    "seed": []
+  },
+  "scope": "Exploratory shared cache; no formal performance/quality gate",
+  "stage_seconds": {
+    "background_removal": 0.018144631991162896,
+    "stage0": 49.94726722291671,
+    "image_encoder": 0.34961853199638426
+  },
+  "resources": {
+    "elapsed_seconds": 63.16402812092565,
+    "peak_allocated_bytes": 5923305984,
+    "peak_reserved_bytes": 9942597632,
+    "physical_gpu_sampled_peak_mib": 9681.0,
+    "gpu_samples": 63,
+    "gpu_monitor_error": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+  }
+}

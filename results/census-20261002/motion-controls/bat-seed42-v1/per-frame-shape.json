@@ -1,0 +1,182 @@
+{
+  "frames": [
+    {
+      "frame": 0,
+      "independent_sample_seed": 44,
+      "official_framewise_cd_shared_alignment": 0.04262811503842853,
+      "material_cloud_query10k_cd_native": 0.04296465735118188,
+      "material_cloud_query10k_cd_negative": 0.04296465735118188,
+      "material_cloud_query10k_cd_positive": 0.04296465735118188,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.04312252641280872,
+      "fixed_assignment_minus_full_query_shape_gap": 0.0
+    },
+    {
+      "frame": 1,
+      "independent_sample_seed": 45,
+      "official_framewise_cd_shared_alignment": 0.04581982382866333,
+      "material_cloud_query10k_cd_native": 0.045965100290353784,
+      "material_cloud_query10k_cd_negative": 0.045965100290353784,
+      "material_cloud_query10k_cd_positive": 0.04596510029035378,
+      "max_control_shape_cd_difference": 6.938893903907228e-18,
+      "material_cloud_full100k_query_cd": 0.04595674534590004,
+      "fixed_assignment_minus_full_query_shape_gap": 0.0039293314127002155
+    },
+    {
+      "frame": 2,
+      "independent_sample_seed": 46,
+      "official_framewise_cd_shared_alignment": 0.05391627679352655,
+      "material_cloud_query10k_cd_native": 0.05404844729761264,
+      "material_cloud_query10k_cd_negative": 0.05404844729761265,
+      "material_cloud_query10k_cd_positive": 0.05404844729761264,
+      "max_control_shape_cd_difference": 6.938893903907228e-18,
+      "material_cloud_full100k_query_cd": 0.0537274257068083,
+      "fixed_assignment_minus_full_query_shape_gap": 0.026532186328873192
+    },
+    {
+      "frame": 3,
+      "independent_sample_seed": 47,
+      "official_framewise_cd_shared_alignment": 0.07939026164733104,
+      "material_cloud_query10k_cd_native": 0.08037970358704387,
+      "material_cloud_query10k_cd_negative": 0.08037970358704387,
+      "material_cloud_query10k_cd_positive": 0.08037970358704387,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.07978290182854669,
+      "fixed_assignment_minus_full_query_shape_gap": 0.06597644979235609
+    },
+    {
+      "frame": 4,
+      "independent_sample_seed": 48,
+      "official_framewise_cd_shared_alignment": 0.10572383400368432,
+      "material_cloud_query10k_cd_native": 0.11075257850617912,
+      "material_cloud_query10k_cd_negative": 0.11075257850617912,
+      "material_cloud_query10k_cd_positive": 0.11075257850617912,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.1094908351165984,
+      "fixed_assignment_minus_full_query_shape_gap": 0.10692810843092776
+    },
+    {
+      "frame": 5,
+      "independent_sample_seed": 49,
+      "official_framewise_cd_shared_alignment": 0.12519887034041413,
+      "material_cloud_query10k_cd_native": 0.1312198434884979,
+      "material_cloud_query10k_cd_negative": 0.1312198434884979,
+      "material_cloud_query10k_cd_positive": 0.1312198434884979,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.1292362085251169,
+      "fixed_assignment_minus_full_query_shape_gap": 0.13870127556143697
+    },
+    {
+      "frame": 6,
+      "independent_sample_seed": 50,
+      "official_framewise_cd_shared_alignment": 0.13598574901700988,
+      "material_cloud_query10k_cd_native": 0.14345877393873097,
+      "material_cloud_query10k_cd_negative": 0.14345877393873097,
+      "material_cloud_query10k_cd_positive": 0.14345877393873097,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.1413868379821165,
+      "fixed_assignment_minus_full_query_shape_gap": 0.16165274386376327
+    },
+    {
+      "frame": 7,
+      "independent_sample_seed": 51,
+      "official_framewise_cd_shared_alignment": 0.14710699153259976,
+      "material_cloud_query10k_cd_native": 0.15506787583205406,
+      "material_cloud_query10k_cd_negative": 0.15506787583205406,
+      "material_cloud_query10k_cd_positive": 0.15506787583205406,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.15331474390771904,
+      "fixed_assignment_minus_full_query_shape_gap": 0.16219987568761174
+    },
+    {
+      "frame": 8,
+      "independent_sample_seed": 52,
+      "official_framewise_cd_shared_alignment": 0.16165383606903136,
+      "material_cloud_query10k_cd_native": 0.1700321389712256,
+      "material_cloud_query10k_cd_negative": 0.1700321389712256,
+      "material_cloud_query10k_cd_positive": 0.1700321389712256,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.16858990906376087,
+      "fixed_assignment_minus_full_query_shape_gap": 0.14307880530084488
+    },
+    {
+      "frame": 9,
+      "independent_sample_seed": 53,
+      "official_framewise_cd_shared_alignment": 0.16078343823786595,
+      "material_cloud_query10k_cd_native": 0.16980590843223287,
+      "material_cloud_query10k_cd_negative": 0.16980590843223287,
+      "material_cloud_query10k_cd_positive": 0.16980590843223287,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.16844518175256423,
+      "fixed_assignment_minus_full_query_shape_gap": 0.13213880525741678
+    },
+    {
+      "frame": 10,
+      "independent_sample_seed": 54,
+      "official_framewise_cd_shared_alignment": 0.14946142339962742,
+      "material_cloud_query10k_cd_native": 0.1581290568155737,
+      "material_cloud_query10k_cd_negative": 0.1581290568155737,
+      "material_cloud_query10k_cd_positive": 0.1581290568155737,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.15696654486522016,
+      "fixed_assignment_minus_full_query_shape_gap": 0.13108495932304126
+    },
+    {
+      "frame": 11,
+      "independent_sample_seed": 55,
+      "official_framewise_cd_shared_alignment": 0.13394758992755823,
+      "material_cloud_query10k_cd_native": 0.14216006912770085,
+      "material_cloud_query10k_cd_negative": 0.14216006912770085,
+      "material_cloud_query10k_cd_positive": 0.14216006912770085,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.14128874198347077,
+      "fixed_assignment_minus_full_query_shape_gap": 0.13612754342868108
+    },
+    {
+      "frame": 12,
+      "independent_sample_seed": 56,
+      "official_framewise_cd_shared_alignment": 0.12202382947530863,
+      "material_cloud_query10k_cd_native": 0.13016855618927406,
+      "material_cloud_query10k_cd_negative": 0.13016855618927406,
+      "material_cloud_query10k_cd_positive": 0.13016855618927406,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.1294054031763031,
+      "fixed_assignment_minus_full_query_shape_gap": 0.13360376370581395
+    },
+    {
+      "frame": 13,
+      "independent_sample_seed": 57,
+      "official_framewise_cd_shared_alignment": 0.11850514959690879,
+      "material_cloud_query10k_cd_native": 0.12701501684698246,
+      "material_cloud_query10k_cd_negative": 0.12701501684698246,
+      "material_cloud_query10k_cd_positive": 0.12701501684698246,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.12624538131190205,
+      "fixed_assignment_minus_full_query_shape_gap": 0.1304118116046526
+    },
+    {
+      "frame": 14,
+      "independent_sample_seed": 58,
+      "official_framewise_cd_shared_alignment": 0.11886621315405822,
+      "material_cloud_query10k_cd_native": 0.12869649492804067,
+      "material_cloud_query10k_cd_negative": 0.12869649492804067,
+      "material_cloud_query10k_cd_positive": 0.12869649492804067,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.12784710837032626,
+      "fixed_assignment_minus_full_query_shape_gap": 0.124503487538076
+    },
+    {
+      "frame": 15,
+      "independent_sample_seed": 59,
+      "official_framewise_cd_shared_alignment": 0.1263106429023756,
+      "material_cloud_query10k_cd_native": 0.13716353459130937,
+      "material_cloud_query10k_cd_negative": 0.13716353459130937,
+      "material_cloud_query10k_cd_positive": 0.13716353459130937,
+      "max_control_shape_cd_difference": 0.0,
+      "material_cloud_full100k_query_cd": 0.13616448980603074,
+      "fixed_assignment_minus_full_query_shape_gap": 0.11292232908846125
+    }
+  ],
+  "shared_alignment_cd4d_16frame_mean": 0.11420762781027448,
+  "historical_evaluator_bitwise_identity_claimed": false
+}

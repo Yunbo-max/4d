@@ -1,0 +1,24 @@
+{
+  "status": "launched",
+  "pid": 43310,
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "-u",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_queue_v2.py",
+    "--manifest",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/stage-census-remaining6-jobs-v1.json",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-stage-remaining6-v1",
+    "--project-root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--max-concurrency",
+    "2",
+    "--reserve-mib",
+    "2048",
+    "--max-seconds",
+    "2400"
+  ],
+  "utc": "2026-10-02T19:56:55.224920+00:00",
+  "manifest_sha256": "fa09175162348ac21e4f35f06dec89642b6460243aab33c72710ec5f9d814bbb",
+  "source_sha256": "0362db139f8b6c2fc23ea42b18d1e1ef964b2945a880b6a602d6d7c1bd34e02c"
+}

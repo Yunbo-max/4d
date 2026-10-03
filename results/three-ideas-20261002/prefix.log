@@ -1,0 +1,29 @@
+/root/rivermind-data/actionmesh-repro/repo/actionmesh/utils.py:56: Hydra14MigrationWarning: 
+version_base="1.1" selects Hydra 1.1 compatibility behavior.
+Hydra 1.4 will remove this compatibility behavior.
+Before upgrading to Hydra 1.4, set version_base="1.3" and test your application.
+See https://hydra.cc/docs/upgrades/1.3_to_1.4/prepare_for_1_4/ for preparation instructions.
+  with initialize_config_dir(
+/root/rivermind-data/actionmesh-repro/inference-env/lib/python3.12/site-packages/hydra/_internal/defaults_list.py:251: UserWarning: In 'actionmesh_lowram': Defaults list is missing `_self_`. See https://hydra.cc/docs/1.2/upgrades/1.0_to_1.1/default_composition_order for more information
+  warnings.warn(msg, UserWarning)
+Loading weights from local directory
+PROBE step=1/30 mode=baseline change_rms=0
+PROBE step=2/30 mode=baseline change_rms=0
+PROBE step=3/30 mode=baseline change_rms=0
+PROBE step=4/30 mode=baseline change_rms=0
+PROBE step=5/30 mode=baseline change_rms=0
+PROBE step=6/30 mode=baseline change_rms=0
+PROBE step=7/30 mode=baseline change_rms=0
+PROBE step=8/30 mode=baseline change_rms=0
+PROBE step=9/30 mode=baseline change_rms=0
+PROBE step=10/30 mode=baseline change_rms=0
+PROBE step=11/30 mode=baseline change_rms=0
+PROBE step=12/30 mode=baseline change_rms=0
+PROBE step=13/30 mode=baseline change_rms=0
+PROBE step=14/30 mode=baseline change_rms=0
+PROBE step=15/30 mode=baseline change_rms=0
+PROBE step=16/30 mode=baseline change_rms=0
+PROBE step=17/30 mode=baseline change_rms=0
+PROBE step=18/30 mode=baseline change_rms=0
+PROBE step=19/30 mode=baseline change_rms=0
+PROBE step=20/30 mode=baseline change_rms=0

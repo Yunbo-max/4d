@@ -1,0 +1,829 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-02T19:41:06.206248+00:00",
+  "manifest": "/root/rivermind-data/actionmesh-repro/research/census-20261002/cohort-manifest-v2.json",
+  "manifest_sha256": "82dfc37a19fb925703ceef68b1962c9fd8fc5f73e5fd4d1ea4a1293ce817a48b",
+  "results_root": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002",
+  "aggregator_sha256": "9dccb934a4ba117962ed012ebeec55055c9a4ba8fe39fdd47897aed910f5b3ae",
+  "audit": {
+    "status": "passed_available_evidence",
+    "errors": [],
+    "n_case_audit_errors": 0,
+    "n_verified_artifact_bytes": 10,
+    "require_artifacts": true,
+    "scope": "Independent cached JSON/identity/hash/denominator audit; no numerical metric recomputation"
+  },
+  "n_planned_cases": 10,
+  "n_independent_assets": 8,
+  "all_planned_run_status_counts": {
+    "success": 10
+  },
+  "primary_baseline_seed42": {
+    "n_planned": 8,
+    "n_success": 8,
+    "n_assets": 8,
+    "status_counts": {
+      "success": 8
+    },
+    "success_case_ids": [
+      "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+      "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+      "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+      "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+      "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+      "000-067_09a05166420843fab423047a799c87da__seed42",
+      "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+      "000-014_6cf7de7d14064b23be17811d19a63f13__seed42"
+    ],
+    "means_success_only": {
+      "cd_3d": 0.0536761589277379,
+      "cd_4d": 0.07142324725920274,
+      "cd_motion": 0.13587308581918478
+    },
+    "missing_or_failed_are_not_zero": true
+  },
+  "seed_control": {
+    "n_planned_assets": 2,
+    "n_complete_pairs": 2,
+    "pairs": [
+      {
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "seed42": {
+          "cd_3d": 0.05927261386975176,
+          "cd_4d": 0.07004067110140907,
+          "cd_motion": 0.12774163484573364
+        },
+        "seed43": {
+          "cd_3d": 0.0682106231745098,
+          "cd_4d": 0.07780679675206051,
+          "cd_motion": 0.1374140977859497
+        },
+        "delta_seed43_minus_seed42": {
+          "cd_3d": 0.008938009304758035,
+          "cd_4d": 0.007766125650651434,
+          "cd_motion": 0.009672462940216064
+        }
+      },
+      {
+        "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+        "seed42": {
+          "cd_3d": 0.049732306717208914,
+          "cd_4d": 0.11420647260966355,
+          "cd_motion": 0.22630086541175842
+        },
+        "seed43": {
+          "cd_3d": 0.04415392489978508,
+          "cd_4d": 0.106072209698493,
+          "cd_motion": 0.22297857701778412
+        },
+        "delta_seed43_minus_seed42": {
+          "cd_3d": -0.005578381817423837,
+          "cd_4d": -0.008134262911170545,
+          "cd_motion": -0.003322288393974304
+        }
+      }
+    ],
+    "interpretation": "Two-asset paired seed sensitivity only; no population significance or best-of-N claim"
+  },
+  "case_results": [
+    {
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "case_dir": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [
+        {
+          "directory": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+          "report_present": true,
+          "report_sha256": "347683fc4b14d4cdd592ca4ba38fd283229482d8eff8ad89e14bdfd6b33d698b",
+          "status": "failed",
+          "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+          "seed": 42,
+          "error_type": "TypeError",
+          "error": "'dict' object is not callable",
+          "resources": {
+            "elapsed_seconds": 11.131156934890896,
+            "peak_allocated_bytes": 3973381120,
+            "peak_reserved_bytes": 3974103040,
+            "physical_gpu_sampled_peak_mib": 969.0,
+            "gpu_samples": 11,
+            "gpu_monitor_error": null,
+            "gpu": "NVIDIA GeForce RTX 2080 Ti",
+            "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+          }
+        }
+      ],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T17:37:46.898608+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 651.9805516100023,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 10255.0,
+        "gpu_samples": 651,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.2783309209626168,
+        "stage0": 47.15860564005561,
+        "image_encoder": 0.3374486130196601,
+        "stage1": 527.5611599159893,
+        "stage2": 47.85039403592236
+      },
+      "generation_started_utc": "2026-10-02T17:26:53.520555+00:00",
+      "generation_ended_utc": "2026-10-02T17:37:46.990343+00:00",
+      "evaluation_sha256": "d11c89067fef3f98058f69a74aefb81414034a3041fa7a05f95a3a7f4fbcff4b",
+      "evaluation_status": "success",
+      "evaluation_seconds": 61.34477720106952,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.05927261386975176,
+      "cd_4d": 0.07004067110140907,
+      "cd_motion": 0.12774163484573364,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "seed": 42,
+      "case_dir": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T17:54:53.938140+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 653.941038280027,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 10255.0,
+        "gpu_samples": 653,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.25885624811053276,
+        "stage0": 49.73676365218125,
+        "image_encoder": 0.32669871696271,
+        "stage1": 527.7080911451485,
+        "stage2": 47.97077130805701
+      },
+      "generation_started_utc": "2026-10-02T17:43:57.758221+00:00",
+      "generation_ended_utc": "2026-10-02T17:54:54.027355+00:00",
+      "evaluation_sha256": "84c5b80ff93f1a3502aa187a6bc6bfaecd2c467477838cc50fde03cbc24fbc7d",
+      "evaluation_status": "success",
+      "evaluation_seconds": 117.33126207790338,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.049732306717208914,
+      "cd_4d": 0.11420647260966355,
+      "cd_motion": 0.22630086541175842,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+      "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+      "seed": 42,
+      "case_dir": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T18:06:36.429510+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 698.1612270129845,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 11101.0,
+        "gpu_samples": 697,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.28054334595799446,
+        "stage0": 91.32458163890988,
+        "image_encoder": 0.5424665689934045,
+        "stage1": 528.8587179409806,
+        "stage2": 47.90652808989398
+      },
+      "generation_started_utc": "2026-10-02T17:54:56.723623+00:00",
+      "generation_ended_utc": "2026-10-02T18:06:36.518394+00:00",
+      "evaluation_sha256": "79867cbea64fb7fa4f4b9447638ebf3fbfca2c8fe5bdba9e3ae7c732f32e1872",
+      "evaluation_status": "success",
+      "evaluation_seconds": 111.88192792003974,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.07832213843918318,
+      "cd_4d": 0.10251351500423125,
+      "cd_motion": 0.18063192069530487,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+      "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+      "seed": 42,
+      "case_dir": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T18:18:49.686161+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 729.1832768518943,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 16569.0,
+        "gpu_samples": 728,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.2629056868609041,
+        "stage0": 84.78458097111434,
+        "image_encoder": 0.5485600309912115,
+        "stage1": 566.9655167812016,
+        "stage2": 47.845364867011085
+      },
+      "generation_started_utc": "2026-10-02T18:06:39.185360+00:00",
+      "generation_ended_utc": "2026-10-02T18:18:49.773530+00:00",
+      "evaluation_sha256": "46d4733b186e2f9dd3276a23c77d703792f67da57e770ae726b0b1eb5d2ea528",
+      "evaluation_status": "success",
+      "evaluation_seconds": 108.88382732006721,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.03683127211435189,
+      "cd_4d": 0.04481386841249212,
+      "cd_motion": 0.08438079059123993,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+      "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+      "seed": 42,
+      "case_dir": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T18:31:16.272408+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 741.1178501218092,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 15657.0,
+        "gpu_samples": 740,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.30250469502061605,
+        "stage0": 90.24214275297709,
+        "image_encoder": 0.3581096238922328,
+        "stage1": 574.1090298781637,
+        "stage2": 47.782002727966756
+      },
+      "generation_started_utc": "2026-10-02T18:18:53.069459+00:00",
+      "generation_ended_utc": "2026-10-02T18:31:16.360355+00:00",
+      "evaluation_sha256": "04ad105ccd31f3b33edc4a985f5603f00d2552f5851f016f6b90787759b19b58",
+      "evaluation_status": "success",
+      "evaluation_seconds": 109.33619642583653,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.044262306875074264,
+      "cd_4d": 0.05833390951183867,
+      "cd_motion": 0.10740475356578827,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-067_09a05166420843fab423047a799c87da__seed42",
+      "uid": "000-067_09a05166420843fab423047a799c87da",
+      "seed": 42,
+      "case_dir": "000-067_09a05166420843fab423047a799c87da__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T18:42:56.636904+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 697.0057306180242,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 10255.0,
+        "gpu_samples": 696,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.34811908612027764,
+        "stage0": 92.88743244600482,
+        "image_encoder": 0.3479013890028,
+        "stage1": 526.9612324479967,
+        "stage2": 47.74787521897815
+      },
+      "generation_started_utc": "2026-10-02T18:31:18.129010+00:00",
+      "generation_ended_utc": "2026-10-02T18:42:56.728588+00:00",
+      "evaluation_sha256": "1fb7b37433bd98f6eea1885273944cf4a1e45784e9c6f65bfb6a7ffe420dd934",
+      "evaluation_status": "success",
+      "evaluation_seconds": 110.60650892695412,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.03142444498711987,
+      "cd_4d": 0.03135834714327284,
+      "cd_motion": 0.04818332940340042,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+      "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+      "seed": 42,
+      "case_dir": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T18:54:44.344254+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 702.0293298731558,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 10255.0,
+        "gpu_samples": 701,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.3818878720048815,
+        "stage0": 97.01341043412685,
+        "image_encoder": 0.36996891000308096,
+        "stage1": 526.8372430028394,
+        "stage2": 47.66971760708839
+      },
+      "generation_started_utc": "2026-10-02T18:43:00.272576+00:00",
+      "generation_ended_utc": "2026-10-02T18:54:44.432440+00:00",
+      "evaluation_sha256": "e0914a44f2e838cdde7476a9dd5a183c08fe8a226a2c2bfc04270ab44194acf6",
+      "evaluation_status": "success",
+      "evaluation_seconds": 114.74622070416808,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.0668792028865893,
+      "cd_4d": 0.07809889646071369,
+      "cd_motion": 0.18654504418373108,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+      "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+      "seed": 42,
+      "case_dir": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T19:06:36.745298+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 708.0305021780077,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 10255.0,
+        "gpu_samples": 707,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.2956453219521791,
+        "stage0": 103.3249507280998,
+        "image_encoder": 0.342295132111758,
+        "stage1": 526.8515209979378,
+        "stage2": 47.799092726781964
+      },
+      "generation_started_utc": "2026-10-02T18:54:47.327754+00:00",
+      "generation_ended_utc": "2026-10-02T19:06:36.834568+00:00",
+      "evaluation_sha256": "6fc7d9f525d8a6c3017eac597761f8a94e9488056a647150348cd1fc812fe5b9",
+      "evaluation_status": "success",
+      "evaluation_seconds": 107.53750033909455,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.06268498553262403,
+      "cd_4d": 0.07202029783000069,
+      "cd_motion": 0.1257963478565216,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 43,
+      "case_dir": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T19:20:55.005102+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 852.2185195090715,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 13659.0,
+        "gpu_samples": 851,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.293928048806265,
+        "stage0": 88.32661748095416,
+        "image_encoder": 0.5789205189794302,
+        "stage1": 686.6114516281523,
+        "stage2": 47.76753944903612
+      },
+      "generation_started_utc": "2026-10-02T19:06:40.846861+00:00",
+      "generation_ended_utc": "2026-10-02T19:20:55.095380+00:00",
+      "evaluation_sha256": "b8cd4aa0c4cb8b69c032ddc30fb94e3a58837ceaf3c1922e4a6e3da6f5d4b556",
+      "evaluation_status": "success",
+      "evaluation_seconds": 113.20004467805848,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.0682106231745098,
+      "cd_4d": 0.07780679675206051,
+      "cd_motion": 0.1374140977859497,
+      "audit_status": "artifact_and_metadata_verified"
+    },
+    {
+      "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "seed": 43,
+      "case_dir": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+      "status": "success",
+      "audit_errors": [],
+      "audit_warnings": [
+        "evaluator source not included in checkpoint"
+      ],
+      "artifact_bytes_verified": true,
+      "failed_attempts": [],
+      "queue_generation_status": "completed",
+      "queue_evaluation_status": "completed",
+      "last_progress": {
+        "stage": "outputs_saved",
+        "utc": "2026-10-02T19:32:33.114425+00:00"
+      },
+      "generation_status": "completed",
+      "resources": {
+        "elapsed_seconds": 694.0574936738703,
+        "peak_allocated_bytes": 9959758848,
+        "peak_reserved_bytes": 10542383104,
+        "physical_gpu_sampled_peak_mib": 10255.0,
+        "gpu_samples": 693,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "stage_seconds": {
+        "background_removal": 0.0,
+        "image_preprocessing": 0.2752680410631001,
+        "stage0": 88.79599195718765,
+        "image_encoder": 0.535219119861722,
+        "stage1": 527.2014047179837,
+        "stage2": 47.7654349450022
+      },
+      "generation_started_utc": "2026-10-02T19:20:57.777240+00:00",
+      "generation_ended_utc": "2026-10-02T19:32:33.202364+00:00",
+      "evaluation_sha256": "131f42ea9fb78f0fa657b4eda563e53f4165f97665baf9bcd81d27a43ab30d25",
+      "evaluation_status": "success",
+      "evaluation_seconds": 63.352213216014206,
+      "evaluation_contract_hash": "12426b96c894e886d060215c95b0d0138c6eb31a4960cb883b4314d368d7cebe",
+      "cd_3d": 0.04415392489978508,
+      "cd_4d": 0.106072209698493,
+      "cd_motion": 0.22297857701778412,
+      "audit_status": "artifact_and_metadata_verified"
+    }
+  ],
+  "failed_attempts": [
+    {
+      "directory": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+      "report_present": true,
+      "report_sha256": "347683fc4b14d4cdd592ca4ba38fd283229482d8eff8ad89e14bdfd6b33d698b",
+      "status": "failed",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "error_type": "TypeError",
+      "error": "'dict' object is not callable",
+      "resources": {
+        "elapsed_seconds": 11.131156934890896,
+        "peak_allocated_bytes": 3973381120,
+        "peak_reserved_bytes": 3974103040,
+        "physical_gpu_sampled_peak_mib": 969.0,
+        "gpu_samples": 11,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42"
+    }
+  ],
+  "failed_attempt_count_not_extra_assets": 1,
+  "resources": {
+    "n_completed_generation_reports": 10,
+    "sum_generation_process_seconds_completed": 7127.725519728847,
+    "mean_generation_process_seconds_completed": 712.7725519728847,
+    "sum_evaluation_function_seconds_completed": 1018.2204788092058,
+    "max_torch_allocated_bytes": 9959758848,
+    "max_torch_reserved_bytes": 10542383104,
+    "process_seconds_not_wall_time": true
+  },
+  "queues": [
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-canary/queue.json",
+      "status": "completed_with_failures",
+      "started_utc": "2026-10-02T17:21:45Z",
+      "finished_utc": "2026-10-02T17:22:00Z",
+      "max_concurrency": 1,
+      "elapsed_seconds": 14.941102935001254
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-canary-v2/queue.json",
+      "status": "completed",
+      "started_utc": "2026-10-02T17:26:53Z",
+      "finished_utc": "2026-10-02T17:37:50Z",
+      "max_concurrency": 1,
+      "elapsed_seconds": 657.0133044889662
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-eval-canary/queue.json",
+      "status": "completed",
+      "started_utc": "2026-10-02T17:39:05Z",
+      "finished_utc": "2026-10-02T17:40:13Z",
+      "max_concurrency": 1,
+      "elapsed_seconds": 67.37448246008717
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-main/queue.json",
+      "status": "completed",
+      "started_utc": "2026-10-02T17:43:57Z",
+      "finished_utc": "2026-10-02T19:33:42Z",
+      "max_concurrency": 2,
+      "elapsed_seconds": 6585.499291787855
+    }
+  ],
+  "telemetry": {
+    "raw_samples": 3500,
+    "deduplicated_timestamp_gpu_samples": 3497,
+    "sampled_physical_peak_mib": 16569,
+    "max_observed_owned_gpu_jobs": 2,
+    "observed_bracket_seconds": 7317.0,
+    "concurrent_bracket_seconds": 826.0,
+    "concurrent_intervals": [
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T17:55:07Z",
+        "end_utc": "2026-10-02T17:56:56Z",
+        "seconds": 109.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T18:06:49Z",
+        "end_utc": "2026-10-02T18:08:32Z",
+        "seconds": 103.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T18:19:03Z",
+        "end_utc": "2026-10-02T18:20:44Z",
+        "seconds": 101.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T18:31:28Z",
+        "end_utc": "2026-10-02T18:33:09Z",
+        "seconds": 101.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T18:43:10Z",
+        "end_utc": "2026-10-02T18:44:53Z",
+        "seconds": 103.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T18:54:59Z",
+        "end_utc": "2026-10-02T18:56:44Z",
+        "seconds": 105.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T19:06:51Z",
+        "end_utc": "2026-10-02T19:08:30Z",
+        "seconds": 99.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      },
+      {
+        "gpu": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "start_utc": "2026-10-02T19:21:08Z",
+        "end_utc": "2026-10-02T19:22:53Z",
+        "seconds": 105.0,
+        "minimum_generation_evaluation_counts": [
+          1,
+          1
+        ]
+      }
+    ],
+    "malformed_lines": [],
+    "measurement_scope": "Distinct owned job IDs with GPU-resident processes at telemetry samples; bracket gaps >10s excluded; not proof of simultaneous kernels or throughput improvement"
+  },
+  "limitations": [
+    "Development census: eight selected assets, no population significance",
+    "Primary seed42 metrics condition on audited successful cases; denominator and missing cases remain visible",
+    "Repeated seeds and failed retries do not increase independent asset count",
+    "No method quality claim, intervention result, or downstream causal attribution follows from baseline metrics"
+  ],
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/cohort-manifest-v2.json": "82dfc37a19fb925703ceef68b1962c9fd8fc5f73e5fd4d1ea4a1293ce817a48b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-canary/queue.json": "6f96b26f516f51a98cf2874ab6d73a0f63c83f5f5d0ad779574c071b116f3d5c",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-canary-v2/queue.json": "62d5fda9ca8581b914ffb644a68ba4f92aeb679b24e6ea5dd1d9c8b728f70c11",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-eval-canary/queue.json": "2167d33afbdbe38130bb840c08f6020b4d5e1179b229d230998f9eeec916ab10",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-main/queue.json": "143c4961a9b10b3db313d38ad46e12cf42910eb4a16ebf441a42cb69e766b012",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42/report.json": "347683fc4b14d4cdd592ca4ba38fd283229482d8eff8ad89e14bdfd6b33d698b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/command.json": "66d03109e92449fc0142ab4ee1113fb9bbc7e09d500523ff6d838456422fb3a0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/progress.json": "6002a739fbd5455729109b283c70820629d9a9becdc52dec1162e373d97316b2",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/inputs.json": "23476d8e46a2d0b86ecc9ebdb844d15fbd1c6843603e7296f8937d598366dbe0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed42.json": "d11c89067fef3f98058f69a74aefb81414034a3041fa7a05f95a3a7f4fbcff4b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/report.json": "3560f3f2ecef4f031d7fd4b514c60be17bae8fbe8074129e8d2fb4873572fb2e",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/command.json": "addda3dbde7fa7fad1a1cc59b24aadbcc4554db8577ac5d27150f2c2e33dedc7",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/progress.json": "caf938380906125e237300de5e22ee902af0af22c581d6737ed831ba0d87eb00",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/inputs.json": "20a95cc78e9b78e26dafa0a61d16cfcc48ac11b44f7fac1212a92a3af532ff69",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed42.json": "84c5b80ff93f1a3502aa187a6bc6bfaecd2c467477838cc50fde03cbc24fbc7d",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42/sequence.npz": "4cd228b3c9da19113520abd0bb4da8d7fccc47b6f9b7c2270528b9c57c025050",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/report.json": "8a312a96ac0a311d9580c704149b4af922a5894c81187b6a0476b539bb3c897e",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/command.json": "29cec934a1f7989296137e65e2ada26d1ef964d284b086861a47e03337240ecc",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/progress.json": "7c8cc48f90fce7b7fa67392a91defff5a974d1d2b240159e3d658d3d0600f0c2",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/inputs.json": "115a15e8acf7835d55c057bd362a196b0403e391833cd67394b74105cd54c87e",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42.json": "79867cbea64fb7fa4f4b9447638ebf3fbfca2c8fe5bdba9e3ae7c732f32e1872",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42/sequence.npz": "82c0796ae42a3caed7ccbb7b6fdbe37c9b5769d822116e20fef7281af4af0925",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/report.json": "4dc348bca1c7a7507c1cab9563f5a235adda9d0bbaa37fd9380325eae0b423e6",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/command.json": "3d4e211e7f75d338281f0c77f12a0433130498b7eb395dbfe3c31e7d43427390",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/progress.json": "3a419cd6661bd7dd59a171f906cf8802d6e9dc68643d9aad7a3512feb935260a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/inputs.json": "d637fd6baf6263f6ab97b75efc5e0f5fb615377a7b050fb95362ccf59d224116",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42.json": "46d4733b186e2f9dd3276a23c77d703792f67da57e770ae726b0b1eb5d2ea528",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/sequence.npz": "87992e609b2a3fc44c9d4f0de9f8c6a4b04b319e9071411c67e84ae5dcf21330",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/report.json": "82d6ec2e1aea254111fea5c41491ecc62f053200f0a926065845799fe7ff2a0a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/command.json": "d8476a84e90f35e5566b2757f90df1d1e2b656129d4d1febfe788b8e444143aa",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/progress.json": "26576419df437ddedf841250f6e61230661b0bb0b80720c10a02faaf5238fc41",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/inputs.json": "7f9213923345d1925faf83e3446d98b6c624630e077f3c97ce05bfe25233f1d4",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-078_b0b646eb731848f7837ab8257dfc658c__seed42.json": "04ad105ccd31f3b33edc4a985f5603f00d2552f5851f016f6b90787759b19b58",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-078_b0b646eb731848f7837ab8257dfc658c__seed42/sequence.npz": "35ef373ed04801222a6444363bca9241bddf46596167fd808a463b544ab1959c",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/report.json": "d437bd164fc4ad9d7ac18c7a929e610345c466669956aa28f7701c60598e98fe",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/command.json": "16e99722bd27a713ea437e52ca1039c1ee9f476f9507900e9232dc998c332e59",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/progress.json": "6fc0250f4f8905801d0faae1d2325c4922169a5e7177407696783bfb0141393f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/inputs.json": "95561a0bda6b85d4b2bf39ca614a94574df9dbe420bdf06bf15c709ccd644ef7",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-067_09a05166420843fab423047a799c87da__seed42.json": "1fb7b37433bd98f6eea1885273944cf4a1e45784e9c6f65bfb6a7ffe420dd934",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42/sequence.npz": "5de3b3fe8948e4d9e73a534a0a2661222f59c41a4bd84a2e6a95f383ec4ffe98",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/report.json": "723019974d749a3b810b6f330fdffb8d035f87e2a8f40550a5aca94be89658c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/command.json": "c38cb2cd30804a1c3e921387b56fd94435063814c16056b226ec52f37dff6896",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/progress.json": "66a2df444ffb0526547c287aec96627ba6cf544608272db660162b440f809f67",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/inputs.json": "6e5f0d456c2f87097a3d35869fa7e6f46e79098f882488cba6b149e70be0b796",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42.json": "e0914a44f2e838cdde7476a9dd5a183c08fe8a226a2c2bfc04270ab44194acf6",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42/sequence.npz": "53339b1cf64b082148c23a48ddb9e2ce3c4c8dae724647cc51a73ec079344205",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/report.json": "3f1bd141da4fb4f95604115b7cd036aa7d064f4cf9472562205f2ee8e83f95dc",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/command.json": "d41bf039affe6c44517302cf7feb6cc1c12b833712ebd4da949d9f3d34fd3d6a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/progress.json": "6659940471d429477d0985ae281de778dc30abcc5c4b65f221e11420b5cfe6b3",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/inputs.json": "35b17c130f4ea9a3fd58c58ac468bdb0ff953d4eacd963f131fae4f2679e2cc9",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-014_6cf7de7d14064b23be17811d19a63f13__seed42.json": "6fc7d9f525d8a6c3017eac597761f8a94e9488056a647150348cd1fc812fe5b9",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-014_6cf7de7d14064b23be17811d19a63f13__seed42/sequence.npz": "b97fac487df9bf74d3477358919c2e072d60696c93a56456c4dd3fcc68fbcd35",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/report.json": "796d2478f4b10206264845b8d9f1832c4e240a190f84d0fa7d166e52e64291c2",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/command.json": "1d5aaf9d00a633ea7ecaebe619cedb12bfb117dba12d69b816b2599495704e07",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/progress.json": "18f810b20a6af3ba7e95faeffd9b79f840e3a31f1d720fd31aca6c2db8f3afac",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/inputs.json": "23476d8e46a2d0b86ecc9ebdb844d15fbd1c6843603e7296f8937d598366dbe0",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed43.json": "b8cd4aa0c4cb8b69c032ddc30fb94e3a58837ceaf3c1922e4a6e3da6f5d4b556",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed43/sequence.npz": "e7a0c0722e5867890ec697c0f74ebe8d9e007be9954ce83905b2ca7df0c2e499",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/report.json": "7855c4cd88a21500466cf5632676e2c9789741984e01068b13e51acfdd9d652b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/command.json": "e431d4410b8ab3e0dfc9b5b7bbe61ff89934b5d9817d0a16186078aa9be3f6fb",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/progress.json": "000aa45377a34abfad0979c94eefd896e7c10d478b17c49abcd6b499c6791b9b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/inputs.json": "20a95cc78e9b78e26dafa0a61d16cfcc48ac11b44f7fac1212a92a3af532ff69",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed43.json": "131f42ea9fb78f0fa657b4eda563e53f4165f97665baf9bcd81d27a43ab30d25",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed43/sequence.npz": "4accb2b020a1edcfb81a6c217427342c969b7961b5b867c8945eee7a530c56e8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-canary/gpu-samples.jsonl": "34fd86f92eb77bd3ab7a05354478871d4b4b64a5199e78e89fc84ec19e6c907a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-canary-v2/gpu-samples.jsonl": "e9fe9bf052b9b278645479014119cc8eea3b1e589109e4f7c3b47c69cfc1ef15",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-eval-canary/gpu-samples.jsonl": "7c71026b5c3d785e6f4a9e9dfecf6bd12526cc95365c0006bf22381c181e21ec",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/queue-main/gpu-samples.jsonl": "d0a6e7473d79be91eef69f5606c7ce27104254b59c62b36c33b39842575da02f"
+  },
+  "source_snapshot_sha256": "668275745772778837419263b94942802cfee44fac4ed37d1e2f78dde8eaedd5"
+}

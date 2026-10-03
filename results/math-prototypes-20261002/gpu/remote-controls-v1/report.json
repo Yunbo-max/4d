@@ -1,0 +1,33 @@
+{
+  "status": "completed",
+  "evidence": "constructed numerical controls only",
+  "natural_4d_effectiveness_tested": false,
+  "gpu_used": false,
+  "seed": 42,
+  "python": "3.12.13",
+  "numpy": "1.26.4",
+  "ended_utc": "2026-10-02T22:31:18.381329+00:00",
+  "elapsed_seconds": 0.04328612610697746,
+  "results": [
+    {
+      "path": "A.json",
+      "sha256": "39cb2c7e4b97a09153b0580b29a2aa0e4c951eab3c1438b9e00809b2d0e4a43c"
+    },
+    {
+      "path": "B.json",
+      "sha256": "dddf3e3c97590c033e7e7d3b682b07b2b460ffbd43037a1c42ba39a5fc02bcc8"
+    },
+    {
+      "path": "C.json",
+      "sha256": "255ac8bc388eec32b7c76bb57ea394fe3df26c15c2374a632f23ab098424d6ee"
+    }
+  ],
+  "code_sha256": {
+    "__init__.py": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69",
+    "contact_events.py": "11207842fdf5bc94654cf2af9a7ad48eeb6783485e3eb9aa6a70f1bf5c47b72d",
+    "controllability.py": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc",
+    "correlated.py": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395",
+    "native_probe.py": "06641222f25fdf12e7a92f7765638a48aed5d68bac43f351f9b327b987f310b3",
+    "run_controls.py": "cc9bf7579dd8bd24423e21149773cc23f88dd0e26ec41b416212fb5f2fa207e7"
+  }
+}

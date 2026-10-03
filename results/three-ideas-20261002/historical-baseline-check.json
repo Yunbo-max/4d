@@ -1,0 +1,12 @@
+{
+  "scope": "Historical full output consistency, same official kangaroo/seed42; no new GT quality validation",
+  "historical_file": "../kangaroo/deformations.npz",
+  "coordinate_transform": "Official actionmesh/io/mesh_io.py save_deformation: vertices[:,:, [2,0,1]], then first coordinate *= -1",
+  "raw_arrays_retained": true,
+  "faces_equal": true,
+  "anchor_bitwise_equal": true,
+  "max_absolute_component_error": 1.9669532775878906e-06,
+  "mean_vertex_distance": 7.68157235597755e-08,
+  "allclose_atol_1e6_rtol_1e5": false,
+  "caveat": "An initial direct comparison without export-axis conversion was invalid and is not a method result."
+}

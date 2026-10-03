@@ -1,0 +1,14 @@
+test_retiming_prioritizes_exact_contact_over_smaller_displacement (research_math.tests.test_contact_events.ContactEventControls.test_retiming_prioritizes_exact_contact_over_smaller_displacement) ... FAIL
+
+======================================================================
+FAIL: test_retiming_prioritizes_exact_contact_over_smaller_displacement (research_math.tests.test_contact_events.ContactEventControls.test_retiming_prioritizes_exact_contact_over_smaller_displacement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_contact_events.py", line 119, in test_retiming_prioritizes_exact_contact_over_smaller_displacement
+    self.assertTrue(result["feasible"])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+FAILED (failures=1)

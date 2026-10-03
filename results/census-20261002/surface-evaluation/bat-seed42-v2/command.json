@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_eval.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+    "--baseline-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-baseline/bat-seed42-v2",
+    "--stage-gt-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+    "--gt-dir",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-evaluation/bat-seed42-v2"
+  ],
+  "paths": {
+    "root": "/root/rivermind-data/actionmesh-repro",
+    "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+    "baseline_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-baseline/bat-seed42-v2",
+    "stage_gt_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+    "gt_dir": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/surface-evaluation/bat-seed42-v2"
+  }
+}

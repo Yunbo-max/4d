@@ -1,0 +1,67 @@
+{
+  "decisions": {
+    "utility": {
+      "gain_vs_heldout": 0.044759284373975916,
+      "asset_wins_vs_heldout": 3,
+      "gain_vs_best_fixed": 0.12862585167572738,
+      "best_fixed": "local",
+      "global_noisy_regression_vs_heldout": 0.09424498571058693,
+      "survives_declared_pilot": false
+    },
+    "geometry": {
+      "gain_vs_best_scalar": 0.0008504391079767748,
+      "best_scalar": "scalar_covariance_q50",
+      "asset_wins_vs_best_scalar": 3,
+      "clean_articulation_regression": -0.0009012577149893897,
+      "weak_edited_counts_by_asset": {
+        "kangaroo": [
+          0,
+          0,
+          0
+        ],
+        "octopus": [
+          0,
+          0,
+          0
+        ],
+        "mushroom": [
+          0,
+          0,
+          0
+        ],
+        "panda": [
+          0,
+          0,
+          0
+        ]
+      },
+      "weak_eligible_assets": 0,
+      "gain_vs_spatial": 0.01960818220878857,
+      "survives_declared_pilot": false
+    },
+    "temporal": {
+      "gain_vs_fit_residual": -0.03902010187083116,
+      "gain_vs_matrix": -0.02482098680859668,
+      "asset_wins_vs_fit_residual": 1,
+      "asset_wins_vs_matrix": 0,
+      "gain_vs_spatial": -0.04149083025603062,
+      "noisy_strongest_baseline": "global",
+      "global_noisy_regression": 6.565168106854993,
+      "survives_declared_pilot": false
+    }
+  },
+  "gpu": {
+    "device": "NVIDIA GeForce RTX 2080 Ti",
+    "peak_allocated_bytes": 2246323712,
+    "peak_reserved_bytes": 2680160256,
+    "elapsed_seconds": 103.50929839489982
+  },
+  "checks": {
+    "all_finite": true,
+    "anchor_error_max": 0.0,
+    "unedited_shift_max": 0.0,
+    "axis_identity_error_max": 6.593763828277588e-07,
+    "global_rigid_worst_transport_epe": 5.0857218103494975e-09
+  },
+  "cells": 384
+}

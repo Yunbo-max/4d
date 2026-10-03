@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "protocol": {
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "denominator": {
+    "frozen": false,
+    "warning": "Discovered attempts only; not a preregistered cohort denominator",
+    "n_declared": 1
+  },
+  "cases": [
+    {
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+      "manifest_entry": {
+        "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "case_dir": "."
+      },
+      "status": "success",
+      "generation_status": "completed",
+      "inputs": {
+        "sequence": {
+          "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz",
+          "sha256": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8"
+        },
+        "ground_truth": {
+          "path": "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy",
+          "sha256": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1"
+        },
+        "generation_report": {
+          "path": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json",
+          "sha256": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319"
+        }
+      },
+      "shapes": {
+        "vertices": [
+          16,
+          19992,
+          3
+        ],
+        "faces": [
+          39984,
+          3
+        ],
+        "gt_positions": [
+          16,
+          100000,
+          3
+        ]
+      },
+      "cd_3d": 0.05927261386975176,
+      "cd_4d": 0.07004067110140907,
+      "cd_motion": 0.12774163484573364,
+      "elapsed_seconds": 61.34477720106952
+    }
+  ],
+  "device": "cuda",
+  "python": "3.12.13",
+  "evaluator_sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+  "official_source": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "scipy": "1.17.1",
+    "pytorch3d": "0.7.9"
+  },
+  "summary": {
+    "n_total": 1,
+    "n_success": 1,
+    "n_failed": 0,
+    "n_pending": 0,
+    "n_validated_only": 0,
+    "success_rate": 1.0,
+    "mean_scope": "successful cases only; never treat failures as zero",
+    "means_weighting": "case/run weighted; asset-balanced means also provided",
+    "n_unique_assets": 1,
+    "n_assets_with_success": 1,
+    "asset_results": [
+      {
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "n_runs": 1,
+        "n_success": 1,
+        "means": {
+          "cd_3d": 0.05927261386975176,
+          "cd_4d": 0.07004067110140907,
+          "cd_motion": 0.12774163484573364
+        }
+      }
+    ],
+    "asset_balanced_means": {
+      "cd_3d": 0.05927261386975176,
+      "cd_4d": 0.07004067110140907,
+      "cd_motion": 0.12774163484573364
+    },
+    "successful_case_ids": [
+      "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2"
+    ],
+    "means": {
+      "cd_3d": 0.05927261386975176,
+      "cd_4d": 0.07004067110140907,
+      "cd_motion": 0.12774163484573364
+    }
+  }
+}

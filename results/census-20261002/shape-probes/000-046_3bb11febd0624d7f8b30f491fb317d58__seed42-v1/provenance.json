@@ -1,0 +1,49 @@
+{
+  "source_case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+  "source_uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+  "source_seed": 42,
+  "source_hashes": {
+    "denoised.npz": "aa62162d7948e6a7e0ee72f18a5779c2bf738388e386ea46708227cc969696d7",
+    "sequence.npz": "53339b1cf64b082148c23a48ddb9e2ce3c4c8dae724647cc51a73ec079344205",
+    "report.json": "723019974d749a3b810b6f330fdffb8d035f87e2a8f40550a5aca94be89658c8"
+  },
+  "code_sha256": {
+    "actionmesh/external/triposg.py": "ccf16c5720358096d632be9a7d2bc7ce1f609e88f24513c97f050ffd3eaaaecc",
+    "actionmesh/model/temporal_autoencoder.py": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2",
+    "actionmesh/preprocessing/mesh_processor.py": "0ce2c86f28cc84eb23beda5471c55b45f29420abb9c1d39d8b3aa69b81c6da65",
+    "third_party/TripoSG/triposg/inference_utils.py": "6ff6ed1fa064389913bf55b188f152ad8aae4f5bd15dfff6027ade7515dc8dca",
+    "third_party/TripoSG/triposg/models/autoencoders/autoencoder_kl_triposg.py": "ce038158925c87bd8f5b33919458d72a32299e031d2e43b99437e678edd03547",
+    "third_party/TripoSG/triposg/pipelines/pipeline_triposg.py": "b4d7db44d9a91491babda665ce7bf4fe0f0343242fdf51c836d2405b752521d0"
+  },
+  "checkpoint_directory": "/root/rivermind-data/actionmesh-repro/repo/pretrained_weights/TripoSG/vae",
+  "checkpoint_config_sha256": "2fb6ba9b364d42c9681879dca0f7edcb978f2db974a1ca4b15d28f9b15a5baed",
+  "versions": {
+    "torch": "2.12.1+cu130",
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "trimesh": "5.1.0"
+  },
+  "frozen_parameter_count": 242662017,
+  "source_latent_dtype": "float32",
+  "decode_latent_dtype": "float16",
+  "latent_rescaling": false,
+  "decode_autocast": "cuda float16",
+  "floating_buffer_dtypes": {
+    "embedder.frequencies": "torch.float16"
+  },
+  "vae_training": false,
+  "decoder_training": false,
+  "bounds": [
+    -1.005,
+    -1.005,
+    -1.005,
+    1.005,
+    1.005,
+    1.005
+  ],
+  "octree_depth": 9,
+  "num_chunks": 10000,
+  "memory_fraction": 0.3,
+  "memory_cap_scope": "PyTorch caching allocator fraction of physical GPU memory; not a hard cap on all CUDA/driver allocations",
+  "timeout_scope": "Checks between stages; cannot interrupt a single CUDA call. Caller must also impose an external wall timeout."
+}

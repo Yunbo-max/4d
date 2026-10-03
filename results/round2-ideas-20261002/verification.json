@@ -1,0 +1,17 @@
+{
+  "completed_cells": 384,
+  "unique_cells": 384,
+  "expected_cells": 384,
+  "all_four_original_inputs_match_previous_round": true,
+  "attempt1_source_and_protocol_hashes_match": true,
+  "resolved_path_failures_retained": 4,
+  "completed_normal_cells_reused": 24,
+  "completed_generated_cells": 360,
+  "summary_checks": {
+    "all_finite": true,
+    "anchor_error_max": 0.0,
+    "unedited_shift_max": 0.0,
+    "axis_identity_error_max": 6.593763828277588e-07,
+    "global_rigid_worst_transport_epe": 5.0857218103494975e-09
+  }
+}

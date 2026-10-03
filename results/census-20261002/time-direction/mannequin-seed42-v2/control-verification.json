@@ -1,0 +1,123 @@
+{
+  "controls": {
+    "forward": {
+      "source_report": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/report.json",
+      "source_report_sha256": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b",
+      "source_sequence": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/sequence.npz",
+      "source_sequence_sha256": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe",
+      "status": "verified_reused_control",
+      "gpu_recomputed": false,
+      "independent_discrepancy_recalculation": {
+        "bitwise_equal": true,
+        "max_abs_coordinate": 0.0,
+        "moving_rms_xyz_over_anchor_diagonal": 0.0,
+        "moving_max_abs_coordinate_over_anchor_diagonal": 0.0,
+        "per_frame_mean_vertex_distance_over_anchor_diagonal": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interpretation": "Matched-query prediction disagreement; not ground-truth error."
+      }
+    },
+    "row_permutation": {
+      "source_report": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/report.json",
+      "source_report_sha256": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62",
+      "source_sequence": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/sequence.npz",
+      "source_sequence_sha256": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e",
+      "status": "verified_reused_control",
+      "gpu_recomputed": false,
+      "independent_discrepancy_recalculation": {
+        "bitwise_equal": false,
+        "max_abs_coordinate": 0.00038492679595947266,
+        "moving_rms_xyz_over_anchor_diagonal": 5.50931094961733e-06,
+        "moving_max_abs_coordinate_over_anchor_diagonal": 0.00014361829934697462,
+        "per_frame_mean_vertex_distance_over_anchor_diagonal": [
+          0.0,
+          5.214908980246509e-06,
+          4.342950026364078e-06,
+          4.601762559537313e-06,
+          7.380544700963666e-06,
+          6.443706305688043e-06,
+          6.184175928936939e-06,
+          7.929662374924932e-06,
+          5.761711212281247e-06,
+          7.37145854267603e-06,
+          5.692942907421626e-06,
+          7.950639116042031e-06,
+          8.256847933078886e-06,
+          1.0141677431391834e-05,
+          9.530893531124537e-06,
+          8.243700914987138e-06
+        ],
+        "interpretation": "Matched-query prediction disagreement; not ground-truth error."
+      }
+    }
+  },
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/report.json": "3272ada5cfc386334ac8dbcd17da89a242ea4079164be762cb34215e633a6df1",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/source-provenance.json": "56fd9cdde15c37911c7535c28820824f0344841c80247a4da1065e7cb61267d3",
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/time-direction-launch-v1.json": "faa4708473a482a10e10b1be579f75f48bccda0736bd0f54c9034b3906c54481",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/prepared.npz": "6e4bdcee50dde10cc3261a621b888a127012b16eadbab89ad7fdd32ed4fab12d",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/denoised.npz": "378c94754bfde49714012b0bccce38488f4cdb10b71b9439142c5a901ae31785",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/code-provenance.json": "19e05a62168cb31b128faf0928882ac3927f5d0848332368909e5b3a3334b0c0",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/pipeline.py": "0934b6801676a9e6f188e5b07450109e0c3359c10fa1230a9b9c69f056fd50f2",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/temporal_autoencoder.py": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/configs/actionmesh.yaml": "2c1da517256133af1f986739e32ded0f00a2d58df82d5a338348f75595acccff",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/configs/actionmesh_lowram.yaml": "17a66d65110bda031534aea9e9ef9ff7a7eaf4e49cc3e26550661609f9a1067b",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/embeddings.py": "9562bc50fecd6e2c9c2687fbf8df7277cf030f415525f0f178e771e214a89de6",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/rotary_embedding.py": "f10cb494b028424f61237532e16912e84f05e5b5e7e23417fdfa4bebb8a7eaab",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/block.py": "82c3e9a981b49f068ec6a9726491bb7304da19869ccfa6ead833b548c5b5be4f",
+    "/root/rivermind-data/actionmesh-repro/repo/actionmesh/preprocessing/mesh_processor.py": "0ce2c86f28cc84eb23beda5471c55b45f29420abb9c1d39d8b3aa69b81c6da65",
+    "/root/rivermind-data/actionmesh-repro/repo/pretrained_weights/ActionMesh/autoencoder/README.md": "ec40d6b5978fe1ed22e92abe5f9033b5147fc474209dc245df3b4fb8d4dfbf4c",
+    "/root/rivermind-data/actionmesh-repro/repo/pretrained_weights/ActionMesh/autoencoder/config.json": "54c31cfd5fae6c3ce4051f0fa05473fea7295ea1746a74d245da6900560e3e3b",
+    "/root/rivermind-data/actionmesh-repro/repo/pretrained_weights/ActionMesh/autoencoder/model.safetensors": "fc9846ab877cc162788dceff2ee0170082bb48520e55346cb4777814cfb507bb",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/report.json": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/sequence.npz": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/report.json": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/sequence.npz": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e"
+  },
+  "preserved_timeout_job": {
+    "label": "mannequin",
+    "pid": 37796,
+    "status": "failed",
+    "argv": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "-u",
+      "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_time_direction.py",
+      "--root",
+      "/root/rivermind-data/actionmesh-repro",
+      "--case-dir",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+      "--output",
+      "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1",
+      "--max-seconds",
+      "300"
+    ],
+    "started_utc": "2026-10-02T19:10:38.172232+00:00",
+    "observed_process_peak_mib": 3404,
+    "observed_card_peak_mib": 13659,
+    "admission_reserved_mib": 10752,
+    "termination_reason": "deadline",
+    "exit_code": -15,
+    "elapsed_seconds": 300.6978715520818
+  },
+  "source_attempt_status": "running",
+  "source_script_sha256": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d",
+  "source_protocol_sha256": "f1cd9a53c78ca33931efb024a9d3d836915f42c5d7692635b25895b59bcd9fd6"
+}

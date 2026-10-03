@@ -1,0 +1,29 @@
+{
+  "status": "prefix_prepared",
+  "cache_sha256": "ceb81da7bb0b85f9da2c467803be0f6b2c55c61e28782487fef1cd2da48e3294",
+  "prefix_sha256": "3d60341e3ed3a9646675b96736ae64666642552002a392fddd46f35ab8f26ad4",
+  "seed": 42,
+  "native_schedule_steps": 30,
+  "executed_steps": 20,
+  "next_step": 20,
+  "native_first_step_parity": {
+    "bitwise_equal": true,
+    "max_abs_error": 0.0,
+    "allclose_rtol_1e5_atol_1e6": true
+  },
+  "parity_scope": "One real-model step compared to native sampler; exact saved schedule. No full official 30-step parity run.",
+  "stage_seconds": {
+    "native_first_step_canary": 17.150478548835963,
+    "prefix20": 351.68673287006095
+  },
+  "resources": {
+    "elapsed_seconds": 392.57840899191797,
+    "peak_allocated_bytes": 9950976000,
+    "peak_reserved_bytes": 10500440064,
+    "physical_gpu_sampled_peak_mib": 10209.0,
+    "gpu_samples": 392,
+    "gpu_monitor_error": null,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+  }
+}

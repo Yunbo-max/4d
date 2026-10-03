@@ -1,0 +1,46 @@
+{
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/denoised.npz": "e64621b3314611f5f0cff96fcc7953afeecdf9a0851079552416bdc9b2bdc524",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/sequence.npz": "87992e609b2a3fc44c9d4f0de9f8c6a4b04b319e9071411c67e84ae5dcf21330",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42/report.json": "4dc348bca1c7a7507c1cab9563f5a235adda9d0bbaa37fd9380325eae0b423e6",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json": "01cf5c0d50529308f7ddfb8d10c9d0de4089d47cc1c78e3a68661211a578c928",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/provenance.json": "a9f5ddc8037fe9a0ee20ccdd113fde9a3dde2cc8a7969d4f29433f3d8a223fe9",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-049_f50b8e5f13e2498c907cbbe20bf7cf95/surfaces.npy": "216cd6292d426e364f4bb1c424725682efb308a2a63e89b549535a87a1c44fba",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_00/stageI-raw-mesh.npz": "c3a659f2ce7cfe2b8664e0a3bd4b59dafe39bb65c50647de8feae2afaec1cb94",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_00/measurement.json": "31c1d6d7223bad4127f3a3d07b886c7ba819dd9b7ee1011a7361a7b8b3772e83",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_08/stageI-raw-mesh.npz": "d9ff48ec23d6cf65c0197bbeb94341738e7f605668711e86554d47095f4317f6",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_08/measurement.json": "d299802dc51de59c1139169c8557bcec2981ac20cb3554611cde6e7c2fbe729d",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_15/stageI-raw-mesh.npz": "52e6a3296f35f2e9cb00987d9326cc1920c99e9c87ba301000bf9c3517905df9",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/frame_15/measurement.json": "eac3b11a20990df98e82d367c099cc0db07e7a5c4ba9b96bc0dbf2f5877cc142"
+  },
+  "official": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "diagnostic_script_sha256": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f",
+  "sampling_module_sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+  "shared_matrix_sha256": "fd379783512f30fa5592a2b061387d6499f95ca14a0697ab2658605237bb5912",
+  "protocol_sha256": "4daeaf5d0e0ae87b31d97ca221ea04e8d13a78a5664320413497b25330090709",
+  "anchor_samples_sha256": "cce0fc89e23724a2a405fc8a421c3fb7f0134b16669c5177cd6e5c729762ca94",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "pytorch3d": "0.7.9"
+  }
+}

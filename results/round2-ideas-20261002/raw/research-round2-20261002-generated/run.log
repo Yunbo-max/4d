@@ -1,0 +1,13 @@
+{"asset": "kangaroo", "seed": 17, "cells": 30, "elapsed": 7.456834180047736}
+{"asset": "kangaroo", "seed": 29, "cells": 60, "elapsed": 14.316315583884716}
+{"asset": "kangaroo", "seed": 41, "cells": 90, "elapsed": 21.414879282936454}
+{"asset": "octopus", "seed": 17, "cells": 120, "elapsed": 28.786293124081567}
+{"asset": "octopus", "seed": 29, "cells": 150, "elapsed": 36.06389305810444}
+{"asset": "octopus", "seed": 41, "cells": 180, "elapsed": 43.526304088998586}
+{"asset": "mushroom", "seed": 17, "cells": 210, "elapsed": 51.22848125710152}
+{"asset": "mushroom", "seed": 29, "cells": 240, "elapsed": 58.904491792898625}
+{"asset": "mushroom", "seed": 41, "cells": 270, "elapsed": 66.83420343697071}
+{"asset": "panda", "seed": 17, "cells": 300, "elapsed": 74.98181353509426}
+{"asset": "panda", "seed": 29, "cells": 330, "elapsed": 83.34779835795052}
+{"asset": "panda", "seed": 41, "cells": 360, "elapsed": 91.95093816891313}
+{"status": "completed_exploratory", "elapsed_seconds": 92.28045798209496, "peak_allocated_bytes": 294283776, "failures": []}

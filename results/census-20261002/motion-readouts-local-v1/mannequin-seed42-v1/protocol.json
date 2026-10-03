@@ -1,0 +1,117 @@
+{
+  "name": "Conditional fixed-anchor-NN motion readout; auxiliary, not official CD-M",
+  "frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "tracked_surface_points": 100000,
+  "query_count_each_direction": 10000,
+  "query_rng": "numpy.random.RandomState(seed).permutation(100000)[:10000]",
+  "query_seeds": {
+    "predicted": 44,
+    "gt": 45
+  },
+  "sampling": "Exact cached synchronized seed44 faces/barycentric trajectories, all16frames; no independent framewise sample used here",
+  "alignment": "Exact saved Stage-GT frame0 matrix already applied in cached native cloud; no transformation refit or normalization",
+  "maps": "nu[i]=NN_GT0(P0[i]); mu[j]=NN_P0(G0[j]); reuse exact original full100k maps without rematching",
+  "displacement": {
+    "pred_to_gt": "mean_i_in_I norm((Pt[i]-P0[i])-(Gt[nu[i]]-G0[nu[i]]))",
+    "gt_to_pred": "mean_j_in_J norm((Pt[mu[j]]-P0[mu[j]])-(Gt[j]-G0[j]))",
+    "primary_frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "units": "aligned dataset coordinate units"
+  },
+  "velocity": {
+    "operator": "X[t]-X[t-1]",
+    "primary_frames": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "units": "coordinate units per frame"
+  },
+  "acceleration": {
+    "operator": "X[t]-2*X[t-1]+X[t-2]",
+    "primary_frames": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "units": "coordinate units per frame squared"
+  },
+  "aggregation": "Unsquared Euclidean vector error, mean queries in each direction, then sum two direction means; temporal mean over valid frames only",
+  "amplitude_ratio": "Mean predicted vector magnitude divided by matched GT mean vector magnitude, separately by direction and order. Sequence ratio divides aggregate means, never averages pointwise/per-frame ratios",
+  "zero_gt_epsilon": 1e-12,
+  "zero_gt_policy": "Ratio is null at GT mean <= epsilon; report zero-GT and spurious-prediction flags; never substitute zero error or infinity",
+  "precision": "float32 cached source clouds; selected trajectories promoted to float64 before all differences, norms and means",
+  "interpretation": [
+    "Subtracting each paired trajectory's initial position removes constant positional offsets only conditional on the fixed pairing",
+    "Wrong first-frame NN/material pairing, anisotropic alignment, sampling and occlusion remain confounds; this is not geometry-independent ground-truth motion",
+    "Official CD-M uses absolute tracked point positions and full100k queries; this auxiliary readout uses differences and10k queries. Do not subtract or compare their scalar summaries as an algebraic decomposition",
+    "Velocity and acceleration use frame indices; unknown physical frame rate prevents claims in units per second",
+    "Magnitude agreement does not establish direction, phase or material correctness; inspect vector errors alongside ratios",
+    "GT is used only for evaluation. No GT-guided steering, oracle generation, model inference or training is performed",
+    "Two frozen seed42 assets only; frames, derivatives and query samples are not extra independent assets"
+  ],
+  "future_arm_comparison": "Qualify arm completion/source hashes and exact native frame0/topology/query identity first. Use identical saved material sampling, shared matrix, maps and query IDs; do not fit a new map for the arm",
+  "not_recomputed": [
+    "CD3D",
+    "CD4D",
+    "CD-M",
+    "nearest-neighbour maps",
+    "ICP",
+    "surface sampling"
+  ]
+}

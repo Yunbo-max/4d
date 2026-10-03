@@ -1,0 +1,51 @@
+{
+  "script_sha256": "f5fdb10d3443a8c1f605e58b6d08c450cfb87d63d7e1031189a0cc4bd899d6aa",
+  "official": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data/000-037_1358c424008a43cbaa35eba5e58551ac/surfaces.npy": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/shared-anchor-transform.npy": "087faeccc3cddec510e984efe6895f11893497986fe65bf1f53d0befb31d2f65",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/report.json": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/mannequin-seed42-v1/provenance.json": "be4ce687d1a697b65187a82e114dc5152740527eb0ef356d3172a81b9d4edb06"
+  },
+  "sampling_and_maps_sha256": "483b25a06f701cf432ab6b54e6365770e1e6dd6f00d65fd5d7bc47dd210ac37a",
+  "negative_permutation_sha256_by_frame": {
+    "1": "47a13bce7f01a3dc3ad8eba3810949fa7d14504cdbdbe4588a83540a4e97fa60",
+    "2": "ee496a27e7790a2fb07a0741b39d9a2e90634418d992e34a523d6003cfb97d40",
+    "3": "4f67aa282fb6945881f4d3073b0c5b1bb41b63855a7445f829cd04eab33c3a78",
+    "4": "cf8c146773e09627e14b2ec134b04abd8091456730430993e80ef66e104bc305",
+    "5": "26327814e64165829efb61c0c1936f740582ec1cf6e281542f843d20b26b7c5b",
+    "6": "b54eead1c45a030b0fa5d21154315cd04ee201dc2509d54fc1bae93b821adad4",
+    "7": "9e4ae243ee1fa9a25f245758a572b8fa36b9e0d3b70add0448c09caa20473909",
+    "8": "1eca6ee4ba9dfe3f241aa58b3702863910adc9488492059637e78f70c02f2a1d",
+    "9": "69fbabdc2ca2460a3a071a6863a5932d645a6618728a87093038d7e80b364564",
+    "10": "9f57f84f4dbbe1860b2ba9220e77e1529b359cc104912cb3a6f5c32bea0a7a82",
+    "11": "5ee07f899e2e4cbac0c1dcda1761dbac9898b12b3c397402229fb0dd292d35d8",
+    "12": "6828068c285f2d058b60e11a1b2879db7a86e443cfe4c8a50f4a6cff0c1298fc",
+    "13": "b13be07e55bf8162fbae385619e8433f63204b0c69eafda82a1935dd0be3d1a6",
+    "14": "e4b492fc6475e9cba786d203681b08a2e1110b1e5450e15586b420058575ffc8",
+    "15": "5ae6aecd5b4fbade95e50ba4e37ac28e8b6a295e3af6ecf69ec6663a25a10f00"
+  },
+  "native_material_cloud_sha256": "1ab0c85bd7207134d0b504a9473824311189dadf21003dab6a579126ffbd7927",
+  "common_permutation_sha256": "f4a4784773186a52a7a869076cbdbba1cc42b3831e8f41951293d4d7e6f756a0",
+  "torch_cuda_initialized": false,
+  "CUDA_VISIBLE_DEVICES": ""
+}

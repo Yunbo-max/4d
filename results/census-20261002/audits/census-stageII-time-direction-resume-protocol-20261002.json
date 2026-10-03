@@ -1,0 +1,26 @@
+{
+  "status": "prepared_not_launched_by_implementer",
+  "scope": "Engineering resume of one deadline-interrupted Stage-II reversal, not a new method or changed hypothesis",
+  "parent_reported_v1_evidence": {
+    "case": "mannequin seed42",
+    "forward_control": "exact native bitwise PASS",
+    "permutation_control": "PASS under original frozen tolerances",
+    "permutation_rms_over_anchor_diagonal": 5.50931094961733e-06,
+    "reversal_last_observed_progress": "target9 at267s",
+    "termination": "external300s deadline; exit_code=-15; elapsed300.69787s",
+    "scientific_interpretation": "No completed reversal result; no scientific failure inferred from resource timeout. Original cost and failure receipt remain preserved."
+  },
+  "required_receipt": "/root/rivermind-data/actionmesh-repro/research/census-20261002/time-direction-launch-v1.json",
+  "receipt_checks": "Require stopped_after_failure, original source hash, exactly one job with matching --case-dir and --output argv, failed/deadline/-15. Hash and retain the original receipt and source report.",
+  "pre_gpu_checks": "Revalidate all native source caches, current checkpoint and source-code bytes, cached query/vertex IDs, exact completed control sequences, all16 identities, unchanged faces/anchor, and original physical/time mappings. Independently recalculate forward bitwise equality and permutation RMS/max discrepancies from arrays. No relaxed tolerances.",
+  "reuse": "Copy completed forward/permutation report.json and sequence.npz bytes exactly into NEW output. Record reused-controls.json and original timings; zero repeat GPU passes for passed controls. Refuse if original reversal sequence already exists.",
+  "new_execution": "Exactly one frozen temporal-decoder reversal pass with unchanged cached latent/query tensors, FP32 weights and CUDA FP16 autocast. Retain all16 physical frames and original anchor. No StageI, GT, steering, training, averaging or extra random seeds.",
+  "new_attempt_budget_seconds": 300,
+  "required_external_process_group_deadline_seconds": 300,
+  "gpu_reservation_mib": 6144,
+  "torch_allocator_cap_mib": 5120,
+  "scheduling": "Parent intends to wait for the main native GPU queue to drain, avoiding the contention associated with the first deadline. Bat remains eligible for a fresh unchanged three-arm diagnostic later; no bat result is assumed.",
+  "v1_source_sha256": "b917f3b75ca25b15a2aac7def87898fabcefaa62d323f7f55dd13fdd9f675f0d",
+  "resume_source_sha256": "f5a0007aec3116241bfc251dbc4b489aff3eaebbce65764e31ba07f9d5d31c3b",
+  "validation": "Two CPU-only provenance fixtures passed: verified reuse, tampered control sequence rejection and mismatched timeout-case rejection. No SSH, GPU, model load or real resume execution in implementation task."
+}

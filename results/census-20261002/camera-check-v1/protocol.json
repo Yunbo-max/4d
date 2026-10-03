@@ -1,0 +1,18 @@
+{
+  "frames": [
+    0,
+    8,
+    15
+  ],
+  "alpha_threshold": 127,
+  "boundary_tolerance_pixels": 2,
+  "dilation": "5x5 square Chebyshev pixel tolerance",
+  "min_inside_dilated_fraction": 0.99,
+  "require_all_depths_positive": true,
+  "min_in_bounds_fraction": 0.999,
+  "sampling": "all100000GTsurfacepoints; no resampling",
+  "guidance": false,
+  "camera_fit": false,
+  "image_coordinate": "nearest integer pixel",
+  "limits": "Projection containment, not exact mesh IoU or full calibration of an inference camera; hidden GT points also project inside silhouette."
+}

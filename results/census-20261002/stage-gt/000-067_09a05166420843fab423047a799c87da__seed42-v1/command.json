@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_stage_gt.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-067_09a05166420843fab423047a799c87da__seed42",
+    "--probe-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-067_09a05166420843fab423047a799c87da__seed42-v1",
+    "--gt-dir",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1",
+    "--device",
+    "cuda:0",
+    "--memory-fraction",
+    ".08",
+    "--max-seconds",
+    "300"
+  ],
+  "script_sha256": "d60c5a6cf986e0bf26bbeeedfd0a66ad05462c02cf6337744e75ae5425ff571f",
+  "device": "cuda:0",
+  "memory_fraction": 0.08,
+  "max_seconds": 300.0
+}

@@ -1,0 +1,1528 @@
+{
+  "status": "completed",
+  "started_utc": "2026-10-02T19:08:42.183941+00:00",
+  "variants": {
+    "identity": {
+      "status": "completed",
+      "variant": "identity",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": true,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.00815841694864878,
+            "p95_surface_distance": 0.019131946712376946,
+            "mean_squared_surface_distance_over_D2": 1.384954660807026e-05,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "b5b3a182d58a45d8c6a0c1d4b358c85fb5c11d7e6ddf74d10e03e300f3c6a8fd"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.012374246973373549,
+            "p95_surface_distance": 0.027233996664935974,
+            "mean_squared_surface_distance_over_D2": 3.1680664817156074e-05,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "8c826c86d5768b319d3dfc2c07f88263576e73e69060aae492897bd38f361613"
+        }
+      ],
+      "started_utc": "2026-10-02T19:09:00.950840+00:00",
+      "sequence_sha256": "82810fa8a789e68786121b6b9b5432029b2964290ed152d808536996d140ab88",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T19:09:22.945304+00:00",
+      "elapsed_seconds": 21.994141852948815
+    },
+    "closest_surface": {
+      "status": "completed",
+      "variant": "closest_surface",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": false,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "numerically_qualified": true
+          },
+          "geometry": {
+            "mean_surface_distance": 8.034844810358754e-09,
+            "p95_surface_distance": 2.1715814464566937e-08,
+            "mean_squared_surface_distance_over_D2": 1.9836297231029333e-17,
+            "max_displacement_over_D": 0.01141292027143904,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 28,
+            "new_degenerate_faces": 28,
+            "orientation_reversal_count_relative_native": 266,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.5413853411637037,
+              0.9951467169422286,
+              1.8333599752613055
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": false,
+          "frame_artifact_sha256": "0f6c7cac98a578cdccb432361b7c8c3ec5067fe340d7c112f4142599edcdecb3"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "numerically_qualified": true
+          },
+          "geometry": {
+            "mean_surface_distance": 8.823467682607726e-09,
+            "p95_surface_distance": 2.3316637200570867e-08,
+            "mean_squared_surface_distance_over_D2": 1.7674536149948872e-17,
+            "max_displacement_over_D": 0.01748506020002749,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 80,
+            "new_degenerate_faces": 80,
+            "orientation_reversal_count_relative_native": 563,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.34317112802583144,
+              0.9919831553628506,
+              2.6752036675597908
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": false,
+          "frame_artifact_sha256": "5147258ca980c5555fe9d95055e2760f460ba12a36c3a20049a57062731d0eb7"
+        }
+      ],
+      "started_utc": "2026-10-02T19:09:22.946732+00:00",
+      "sequence_sha256": "2aa274cd1973be15b1440d7a20498bac4b7359bc81631032c2c75b0c982f43db",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T19:09:55.928005+00:00",
+      "elapsed_seconds": 32.981070164823905
+    },
+    "normal_only": {
+      "status": "completed",
+      "variant": "normal_only",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": true,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "numerically_qualified": true,
+            "zero_native_normals": 0
+          },
+          "geometry": {
+            "mean_surface_distance": 0.00013772302707167034,
+            "p95_surface_distance": 0.00017859612356172937,
+            "mean_squared_surface_distance_over_D2": 1.3584271599869267e-07,
+            "max_displacement_over_D": 0.015944705812554024,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 814,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.6722853465131502,
+              1.0031184636438655,
+              1.7247117825469314
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "bb134d5971bae1083c53671a5154decf3bc5275eb33a3a0af708586a5c021b4b"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "numerically_qualified": true,
+            "zero_native_normals": 0
+          },
+          "geometry": {
+            "mean_surface_distance": 0.00039557111390231954,
+            "p95_surface_distance": 0.0013996489454297038,
+            "mean_squared_surface_distance_over_D2": 6.57809125533672e-07,
+            "max_displacement_over_D": 0.02000000519524359,
+            "trust_violation_over_D": 5.195243589495302e-09,
+            "trust_boundary_fraction": 0.0002501000400160064,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 1614,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.5253171722463889,
+              1.0056298556353704,
+              2.692769388814153
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "0454ec3f005b54ba2bf76e8f3b833cbcca5bbf9f9687f88a3a81d65d6cb3ceb2"
+        }
+      ],
+      "started_utc": "2026-10-02T19:09:55.929456+00:00",
+      "sequence_sha256": "e176e969663c403c3758d719da2c8a97b43f9b193ebfce6ddfea98077b239d3f",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T19:11:12.971223+00:00",
+      "elapsed_seconds": 77.04125666688196
+    },
+    "arap": {
+      "status": "completed",
+      "variant": "arap",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "solver_qualified": false,
+      "frame_reports": [
+        {
+          "frame": 0,
+          "solver": {
+            "numerically_qualified": true,
+            "bypass": "exact original bytes"
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0001648408226135574,
+            "p95_surface_distance": 0.0005551476423657407,
+            "mean_squared_surface_distance_over_D2": 9.570142893564325e-09,
+            "max_displacement_over_D": 0.0,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 0,
+            "edge_length_ratio_quantiles_01_50_99": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": true,
+          "frame_artifact_sha256": "ffa360e9e1fadcb03879761c0d151fcce98e5b530d6b6b27410e55cc72759aa2"
+        },
+        {
+          "frame": 8,
+          "solver": {
+            "global_solves": [
+              {
+                "iterations": 79,
+                "converged": true,
+                "projected_step_rms_over_D": 9.015886925594085e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.384954660807026e-05,
+                "energy_after": 1.08000099100514e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 0,
+                "energy_before_local": 1.384954660807026e-05,
+                "energy_after_local": 1.384954660807026e-05,
+                "local_descent": true
+              },
+              {
+                "iterations": 42,
+                "converged": true,
+                "projected_step_rms_over_D": 8.454033897163665e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 7.928889997698095e-07,
+                "energy_after": 7.403354074575637e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 1,
+                "energy_before_local": 1.08000099100514e-06,
+                "energy_after_local": 7.928889997698095e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 28,
+                "converged": true,
+                "projected_step_rms_over_D": 8.382074757103323e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 7.252692327244617e-07,
+                "energy_after": 7.200215426025533e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 2,
+                "energy_before_local": 7.403354074575637e-07,
+                "energy_after_local": 7.252692327244617e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 20,
+                "converged": true,
+                "projected_step_rms_over_D": 8.123290833424837e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 7.180429692631974e-07,
+                "energy_after": 7.172230922413034e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 3,
+                "energy_before_local": 7.200215426025533e-07,
+                "energy_after_local": 7.180429692631974e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 14,
+                "converged": true,
+                "projected_step_rms_over_D": 8.326139602818294e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 7.168823662234759e-07,
+                "energy_after": 7.167244618058662e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 4,
+                "energy_before_local": 7.172230922413034e-07,
+                "energy_after_local": 7.168823662234759e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 48,
+                "converged": true,
+                "projected_step_rms_over_D": 8.777613757525525e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 5.892584006516978e-07,
+                "energy_after": 5.240527388295219e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 0,
+                "energy_before_local": 5.892584006516978e-07,
+                "energy_after_local": 5.892584006516978e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 22,
+                "converged": true,
+                "projected_step_rms_over_D": 7.628296822976158e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 5.204934687486366e-07,
+                "energy_after": 5.19580945517716e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 1,
+                "energy_before_local": 5.240527388295219e-07,
+                "energy_after_local": 5.204934687486366e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 14,
+                "converged": true,
+                "projected_step_rms_over_D": 7.745650369371415e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 5.192848587615461e-07,
+                "energy_after": 5.191661487084292e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 2,
+                "energy_before_local": 5.19580945517716e-07,
+                "energy_after_local": 5.192848587615461e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 9,
+                "converged": true,
+                "projected_step_rms_over_D": 8.221637330968961e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 5.191198119357298e-07,
+                "energy_after": 5.190961293425461e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 3,
+                "energy_before_local": 5.191661487084292e-07,
+                "energy_after_local": 5.191198119357298e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 7,
+                "converged": true,
+                "projected_step_rms_over_D": 6.800947131551482e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 5.190867949915308e-07,
+                "energy_after": 5.190803508153491e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 4,
+                "energy_before_local": 5.190961293425461e-07,
+                "energy_after_local": 5.190867949915308e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 46,
+                "converged": true,
+                "projected_step_rms_over_D": 8.10105685362843e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.777478986934021e-07,
+                "energy_after": 4.490990356013866e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 0,
+                "energy_before_local": 4.777478986934021e-07,
+                "energy_after_local": 4.777478986934021e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 19,
+                "converged": true,
+                "projected_step_rms_over_D": 7.960508111862722e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.476049005756462e-07,
+                "energy_after": 4.472098010593766e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 1,
+                "energy_before_local": 4.490990356013866e-07,
+                "energy_after_local": 4.476049005756462e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 12,
+                "converged": true,
+                "projected_step_rms_over_D": 7.693690460953348e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.4707773354819764e-07,
+                "energy_after": 4.470197330326001e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 2,
+                "energy_before_local": 4.472098010593766e-07,
+                "energy_after_local": 4.4707773354819764e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 8,
+                "converged": true,
+                "projected_step_rms_over_D": 7.533091356589795e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.469960865923979e-07,
+                "energy_after": 4.469823124110826e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 3,
+                "energy_before_local": 4.470197330326001e-07,
+                "energy_after_local": 4.469960865923979e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 6,
+                "converged": true,
+                "projected_step_rms_over_D": 6.673711599957695e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.469765639011116e-07,
+                "energy_after": 4.4697212278175535e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 4,
+                "energy_before_local": 4.469823124110826e-07,
+                "energy_after_local": 4.469765639011116e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 44,
+                "converged": true,
+                "projected_step_rms_over_D": 8.380854222242331e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.2593185790646604e-07,
+                "energy_after": 4.089204086873852e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 0,
+                "energy_before_local": 4.2593185790646604e-07,
+                "energy_after_local": 4.2593185790646604e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 17,
+                "converged": true,
+                "projected_step_rms_over_D": 7.97310882949978e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.0813723168566106e-07,
+                "energy_after": 4.079387709872157e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 1,
+                "energy_before_local": 4.089204086873852e-07,
+                "energy_after_local": 4.0813723168566106e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 10,
+                "converged": true,
+                "projected_step_rms_over_D": 7.902190091330157e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.0787589417631304e-07,
+                "energy_after": 4.078481606221718e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 2,
+                "energy_before_local": 4.079387709872157e-07,
+                "energy_after_local": 4.0787589417631304e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 7,
+                "converged": true,
+                "projected_step_rms_over_D": 6.749547348154191e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.0783790998701416e-07,
+                "energy_after": 4.0783145345285404e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 3,
+                "energy_before_local": 4.078481606221718e-07,
+                "energy_after_local": 4.0783790998701416e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 4,
+                "converged": true,
+                "projected_step_rms_over_D": 7.372960054719288e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 4.0782909524957944e-07,
+                "energy_after": 4.0782719280784486e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 4,
+                "energy_before_local": 4.0783145345285404e-07,
+                "energy_after_local": 4.0782909524957944e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 43,
+                "converged": true,
+                "projected_step_rms_over_D": 8.190257725470825e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 3.944140507388242e-07,
+                "energy_after": 3.8341516818023397e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 0,
+                "energy_before_local": 3.944140507388242e-07,
+                "energy_after_local": 3.944140507388242e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 15,
+                "converged": true,
+                "projected_step_rms_over_D": 8.502231155256706e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 3.8294934516623215e-07,
+                "energy_after": 3.82833152224945e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 1,
+                "energy_before_local": 3.8341516818023397e-07,
+                "energy_after_local": 3.8294934516623215e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 9,
+                "converged": true,
+                "projected_step_rms_over_D": 7.550850525508208e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 3.827980086965546e-07,
+                "energy_after": 3.827819472505776e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 2,
+                "energy_before_local": 3.82833152224945e-07,
+                "energy_after_local": 3.827980086965546e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 5,
+                "converged": true,
+                "projected_step_rms_over_D": 8.017123160136565e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 3.827764312642648e-07,
+                "energy_after": 3.8277280945683023e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 3,
+                "energy_before_local": 3.827819472505776e-07,
+                "energy_after_local": 3.827764312642648e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 4,
+                "converged": true,
+                "projected_step_rms_over_D": 6.573953745030938e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 3.827717033163969e-07,
+                "energy_after": 3.827703514531446e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 4,
+                "energy_before_local": 3.8277280945683023e-07,
+                "energy_after_local": 3.827717033163969e-07,
+                "local_descent": true
+              }
+            ],
+            "outer_iterations": [
+              {
+                "outer": 0,
+                "energy_before": {
+                  "data": 1.384954660807026e-05,
+                  "arap": 4.6730545553064264e-35,
+                  "total": 1.384954660807026e-05
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 1.599275410848407e-07,
+                  "arap": 4.293308595668571e-07,
+                  "total": 5.892584006516978e-07
+                },
+                "relative_energy_change": 0.957452874283384,
+                "descent": true
+              },
+              {
+                "outer": 1,
+                "energy_before": {
+                  "data": 1.599275410848407e-07,
+                  "arap": 4.293308595668571e-07,
+                  "total": 5.892584006516978e-07
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 1.2120039915940603e-07,
+                  "arap": 3.565474995339961e-07,
+                  "total": 4.777478986934021e-07
+                },
+                "relative_energy_change": 0.1892387140089462,
+                "descent": true
+              },
+              {
+                "outer": 2,
+                "energy_before": {
+                  "data": 1.2120039915940603e-07,
+                  "arap": 3.565474995339961e-07,
+                  "total": 4.777478986934021e-07
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 1.0196548225556453e-07,
+                  "arap": 3.239663756509015e-07,
+                  "total": 4.2593185790646604e-07
+                },
+                "relative_energy_change": 0.10845896115639303,
+                "descent": true
+              },
+              {
+                "outer": 3,
+                "energy_before": {
+                  "data": 1.0196548225556453e-07,
+                  "arap": 3.239663756509015e-07,
+                  "total": 4.2593185790646604e-07
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 9.09114768054043e-08,
+                  "arap": 3.035025739334199e-07,
+                  "total": 3.944140507388242e-07
+                },
+                "relative_energy_change": 0.07399729929232741,
+                "descent": true
+              },
+              {
+                "outer": 4,
+                "energy_before": {
+                  "data": 9.09114768054043e-08,
+                  "arap": 3.035025739334199e-07,
+                  "total": 3.944140507388242e-07
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 8.444960881265335e-08,
+                  "arap": 2.88919617566986e-07,
+                  "total": 3.733692263796394e-07
+                },
+                "relative_energy_change": 0.053357187249701746,
+                "descent": true
+              }
+            ],
+            "numerically_qualified": false,
+            "final_outer_change_tolerance": 0.001,
+            "qualification_scope": "Projected convex subproblems converge with descent; final outer change small. Global nonconvex optimum is not certified."
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0004087788865137415,
+            "p95_surface_distance": 0.0014888300932088523,
+            "mean_squared_surface_distance_over_D2": 8.4449662420207e-08,
+            "max_displacement_over_D": 0.010934390196452249,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 111,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.800709446388087,
+              0.9996797797041369,
+              1.3362163216017335
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": false,
+          "frame_artifact_sha256": "732151296576995eb0230593070c68641555fb122f9cb99cdfbbed972b16b882"
+        },
+        {
+          "frame": 15,
+          "solver": {
+            "global_solves": [
+              {
+                "iterations": 83,
+                "converged": true,
+                "projected_step_rms_over_D": 8.882397513152173e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 3.168066481715608e-05,
+                "energy_after": 2.908219179909779e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 0,
+                "energy_before_local": 3.168066481715608e-05,
+                "energy_after_local": 3.168066481715608e-05,
+                "local_descent": true
+              },
+              {
+                "iterations": 45,
+                "converged": true,
+                "projected_step_rms_over_D": 8.646192302162373e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 2.2844028868092576e-06,
+                "energy_after": 2.1701280682192904e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 1,
+                "energy_before_local": 2.908219179909779e-06,
+                "energy_after_local": 2.2844028868092576e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 31,
+                "converged": true,
+                "projected_step_rms_over_D": 8.306949256295525e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 2.1377537063472616e-06,
+                "energy_after": 2.126317955466063e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 2,
+                "energy_before_local": 2.1701280682192904e-06,
+                "energy_after_local": 2.1377537063472616e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 23,
+                "converged": true,
+                "projected_step_rms_over_D": 7.989327732395374e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 2.1218373984452303e-06,
+                "energy_after": 2.119892426992506e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 3,
+                "energy_before_local": 2.126317955466063e-06,
+                "energy_after_local": 2.1218373984452303e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 17,
+                "converged": true,
+                "projected_step_rms_over_D": 8.306785947924874e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 2.11901620851705e-06,
+                "energy_after": 2.118581238724645e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 0,
+                "local_global": 4,
+                "energy_before_local": 2.119892426992506e-06,
+                "energy_after_local": 2.11901620851705e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 54,
+                "converged": true,
+                "projected_step_rms_over_D": 8.843827082003245e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.6856049987192107e-06,
+                "energy_after": 1.463918833703031e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 0,
+                "energy_before_local": 1.6856049987192107e-06,
+                "energy_after_local": 1.6856049987192107e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 25,
+                "converged": true,
+                "projected_step_rms_over_D": 8.584232441276596e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.452664287959921e-06,
+                "energy_after": 1.4497894229735554e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 1,
+                "energy_before_local": 1.463918833703031e-06,
+                "energy_after_local": 1.452664287959921e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 17,
+                "converged": true,
+                "projected_step_rms_over_D": 8.561338178823457e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.4488199688610783e-06,
+                "energy_after": 1.448418755721215e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 2,
+                "energy_before_local": 1.4497894229735554e-06,
+                "energy_after_local": 1.4488199688610783e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 13,
+                "converged": true,
+                "projected_step_rms_over_D": 7.497899365356573e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.4482459418682124e-06,
+                "energy_after": 1.4481553807587296e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 3,
+                "energy_before_local": 1.448418755721215e-06,
+                "energy_after_local": 1.4482459418682124e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 10,
+                "converged": true,
+                "projected_step_rms_over_D": 6.996300257219567e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.4481118862195658e-06,
+                "energy_after": 1.448084784328176e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 1,
+                "local_global": 4,
+                "energy_before_local": 1.4481553807587296e-06,
+                "energy_after_local": 1.4481118862195658e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 51,
+                "converged": true,
+                "projected_step_rms_over_D": 8.922924077516131e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.305579884881471e-06,
+                "energy_after": 1.2011040818906949e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 0,
+                "energy_before_local": 1.305579884881471e-06,
+                "energy_after_local": 1.305579884881471e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 23,
+                "converged": true,
+                "projected_step_rms_over_D": 7.992308678530673e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.1954114288125938e-06,
+                "energy_after": 1.193995143180119e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 1,
+                "energy_before_local": 1.2011040818906949e-06,
+                "energy_after_local": 1.1954114288125938e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 15,
+                "converged": true,
+                "projected_step_rms_over_D": 7.97525805475692e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.1935397230869747e-06,
+                "energy_after": 1.1933562904236157e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 2,
+                "energy_before_local": 1.193995143180119e-06,
+                "energy_after_local": 1.1935397230869747e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 11,
+                "converged": true,
+                "projected_step_rms_over_D": 7.066536102794566e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.1932813860237753e-06,
+                "energy_after": 1.1932421744584932e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 3,
+                "energy_before_local": 1.1933562904236157e-06,
+                "energy_after_local": 1.1932813860237753e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 8,
+                "converged": true,
+                "projected_step_rms_over_D": 6.759021846689375e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.1932246938518549e-06,
+                "energy_after": 1.1932135431886143e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 2,
+                "local_global": 4,
+                "energy_before_local": 1.1932421744584932e-06,
+                "energy_after_local": 1.1932246938518549e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 49,
+                "converged": true,
+                "projected_step_rms_over_D": 8.750259843457932e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.1223969946375451e-06,
+                "energy_after": 1.069153315584974e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 0,
+                "energy_before_local": 1.1223969946375451e-06,
+                "energy_after_local": 1.1223969946375451e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 20,
+                "converged": true,
+                "projected_step_rms_over_D": 8.374481828370682e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.0668023625486863e-06,
+                "energy_after": 1.066250355146722e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 1,
+                "energy_before_local": 1.069153315584974e-06,
+                "energy_after_local": 1.0668023625486863e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 13,
+                "converged": true,
+                "projected_step_rms_over_D": 7.28065671889809e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.06608532494106e-06,
+                "energy_after": 1.0660204114122737e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 2,
+                "energy_before_local": 1.066250355146722e-06,
+                "energy_after_local": 1.06608532494106e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 8,
+                "converged": true,
+                "projected_step_rms_over_D": 7.628139532289066e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.0659966125596224e-06,
+                "energy_after": 1.0659840707115291e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 3,
+                "energy_before_local": 1.0660204114122737e-06,
+                "energy_after_local": 1.0659966125596224e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 5,
+                "converged": true,
+                "projected_step_rms_over_D": 7.966117367956925e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.0659794127571942e-06,
+                "energy_after": 1.0659759131356437e-06,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 3,
+                "local_global": 4,
+                "energy_before_local": 1.0659840707115291e-06,
+                "energy_after_local": 1.0659794127571942e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 48,
+                "converged": true,
+                "projected_step_rms_over_D": 8.441198280311358e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 1.023914676040561e-06,
+                "energy_after": 9.881835533694765e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 0,
+                "energy_before_local": 1.023914676040561e-06,
+                "energy_after_local": 1.023914676040561e-06,
+                "local_descent": true
+              },
+              {
+                "iterations": 19,
+                "converged": true,
+                "projected_step_rms_over_D": 8.0345227446947e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 9.86696386897976e-07,
+                "energy_after": 9.863512322564698e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 1,
+                "energy_before_local": 9.881835533694765e-07,
+                "energy_after_local": 9.86696386897976e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 11,
+                "converged": true,
+                "projected_step_rms_over_D": 8.279490832923585e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 9.862494538874694e-07,
+                "energy_after": 9.862086921880184e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 2,
+                "energy_before_local": 9.863512322564698e-07,
+                "energy_after_local": 9.862494538874694e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 7,
+                "converged": true,
+                "projected_step_rms_over_D": 7.984354985509623e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 9.861942495261629e-07,
+                "energy_after": 9.861857681643782e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 3,
+                "energy_before_local": 9.862086921880184e-07,
+                "energy_after_local": 9.861942495261629e-07,
+                "local_descent": true
+              },
+              {
+                "iterations": 5,
+                "converged": true,
+                "projected_step_rms_over_D": 7.156045998519582e-08,
+                "tolerance": 1e-07,
+                "lipschitz_bound_unnormalized_energy": 0.0010337468320661598,
+                "energy_before": 9.861827791292357e-07,
+                "energy_after": 9.861801275953752e-07,
+                "max_energy_increase": 0.0,
+                "descent": true,
+                "outer": 4,
+                "local_global": 4,
+                "energy_before_local": 9.861857681643782e-07,
+                "energy_after_local": 9.861827791292357e-07,
+                "local_descent": true
+              }
+            ],
+            "outer_iterations": [
+              {
+                "outer": 0,
+                "energy_before": {
+                  "data": 3.168066481715608e-05,
+                  "arap": 5.994841876270264e-35,
+                  "total": 3.168066481715608e-05
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 4.693762424698419e-07,
+                  "arap": 1.2162287562493688e-06,
+                  "total": 1.6856049987192107e-06
+                },
+                "relative_energy_change": 0.9467938880560864,
+                "descent": true
+              },
+              {
+                "outer": 1,
+                "energy_before": {
+                  "data": 4.693762424698419e-07,
+                  "arap": 1.2162287562493688e-06,
+                  "total": 1.6856049987192107e-06
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 3.3360130476827793e-07,
+                  "arap": 9.71978580113193e-07,
+                  "total": 1.305579884881471e-06
+                },
+                "relative_energy_change": 0.22545324327259228,
+                "descent": true
+              },
+              {
+                "outer": 2,
+                "energy_before": {
+                  "data": 3.3360130476827793e-07,
+                  "arap": 9.71978580113193e-07,
+                  "total": 1.305579884881471e-06
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 2.621389645228823e-07,
+                  "arap": 8.602580301146627e-07,
+                  "total": 1.1223969946375451e-06
+                },
+                "relative_energy_change": 0.14030768424450435,
+                "descent": true
+              },
+              {
+                "outer": 3,
+                "energy_before": {
+                  "data": 2.621389645228823e-07,
+                  "arap": 8.602580301146627e-07,
+                  "total": 1.1223969946375451e-06
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 2.2962054181208857e-07,
+                  "arap": 7.942941342284723e-07,
+                  "total": 1.023914676040561e-06
+                },
+                "relative_energy_change": 0.0877428566429715,
+                "descent": true
+              },
+              {
+                "outer": 4,
+                "energy_before": {
+                  "data": 2.2962054181208857e-07,
+                  "arap": 7.942941342284723e-07,
+                  "total": 1.023914676040561e-06
+                },
+                "energy_after_refreshed_targets": {
+                  "data": 2.0887335526083512e-07,
+                  "arap": 7.475542627363861e-07,
+                  "total": 9.564276179972212e-07
+                },
+                "relative_energy_change": 0.06591082208559569,
+                "descent": true
+              }
+            ],
+            "numerically_qualified": false,
+            "final_outer_change_tolerance": 0.001,
+            "qualification_scope": "Projected convex subproblems converge with descent; final outer change small. Global nonconvex optimum is not certified."
+          },
+          "geometry": {
+            "mean_surface_distance": 0.0006114853255133052,
+            "p95_surface_distance": 0.0022255160401764523,
+            "mean_squared_surface_distance_over_D2": 2.0887350263586095e-07,
+            "max_displacement_over_D": 0.016040917362331982,
+            "trust_violation_over_D": 0.0,
+            "trust_boundary_fraction": 0.0,
+            "baseline_degenerate_faces": 0,
+            "result_degenerate_faces": 0,
+            "new_degenerate_faces": 0,
+            "orientation_reversal_count_relative_native": 291,
+            "edge_length_ratio_quantiles_01_50_99": [
+              0.6985069223332874,
+              0.9968222509477098,
+              1.6052093062704695
+            ],
+            "finite": true,
+            "surface_query": "exact closest triangle via Trimesh/Rtree"
+          },
+          "qualified": false,
+          "frame_artifact_sha256": "00977c2c9cde66f1f2ef8fabee5e891fff111123993db0fa61f43451d0e244a7"
+        }
+      ],
+      "started_utc": "2026-10-02T19:11:12.972869+00:00",
+      "sequence_sha256": "e26dafd322b0bc7adca3b9d9c8c7a4b080250b0a9c21056e81ca1fab1608234d",
+      "anchor_bitwise_held": true,
+      "vertex_dtype": "float32",
+      "geometry_only": true,
+      "ended_utc": "2026-10-02T19:13:38.921903+00:00",
+      "elapsed_seconds": 145.94880842696875
+    }
+  },
+  "stage": "closest_triangle_batch",
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "source_files_sha256": {
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/sequence.npz": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/denoised.npz": "378c94754bfde49714012b0bccce38488f4cdb10b71b9439142c5a901ae31785",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2/report.json": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/stageI-raw-mesh.npz": "b45aa9c7466de9948552b54d9a2d2a822f8f123154a7c1094fba747f13e77687",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_00/measurement.json": "e14ed52abfeb8c81a795f818828a9b31e992072c1231cbf9e1ed80d2d677c54f",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/stageI-raw-mesh.npz": "fcd09d375903f6dfe6b6708775868186f8b63ab3a236eb2a13df0229865b3981",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_08/measurement.json": "306c7bd6549f7f3f05c9ef1057e5c760660a7d9557ac05ff988406ae5f9de07a",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/stageI-raw-mesh.npz": "2aa9c6d9a9f57bef80b8599c9d183f4c75f4edb3b54cf9eac6b2668927902acd",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/frame_15/measurement.json": "d7d7432ee4c989d6637678c40f68dc17b545821f36f8071617d587bd21243e91",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/report.json": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3/provenance.json": "f805aa8f37d0032342d8941b9e62e9d9817780df4cd346754f6e779af817fa2a"
+  },
+  "source_case": {
+    "dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "sequence_sha256": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+    "report_sha256": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319"
+  },
+  "source_probe": {
+    "dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/mannequin-seed42-v3",
+    "report_sha256": "38b947a5fadd42e4c1294ec1d6f6b226d977707aaccdf53bad9445e78eab2f99"
+  },
+  "anchor_bbox_diagonal": 2.6802071721341636,
+  "target_metadata": {
+    "0": {
+      "raw_vertices": 2079712,
+      "referenced_vertices": 305184,
+      "faces": 610364,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true,
+      "exact_query_cache": {
+        "trimesh_version": "5.1.0",
+        "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+        "closest_point_signature": "(mesh, points)",
+        "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+        "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+        "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+        "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+        "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+        "module_globals_mutated": false,
+        "tol_merge": 1e-08,
+        "kdtree_builds": 1,
+        "cached_constructor_calls": 0,
+        "closest_point_calls": 0,
+        "kdtree_referenced_vertices": 305184
+      }
+    },
+    "8": {
+      "raw_vertices": 2079938,
+      "referenced_vertices": 306922,
+      "faces": 613832,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true,
+      "exact_query_cache": {
+        "trimesh_version": "5.1.0",
+        "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+        "closest_point_signature": "(mesh, points)",
+        "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+        "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+        "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+        "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+        "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+        "module_globals_mutated": false,
+        "tol_merge": 1e-08,
+        "kdtree_builds": 1,
+        "cached_constructor_calls": 0,
+        "closest_point_calls": 0,
+        "kdtree_referenced_vertices": 306922
+      }
+    },
+    "15": {
+      "raw_vertices": 2081884,
+      "referenced_vertices": 308292,
+      "faces": 616568,
+      "geometry_cleanup": false,
+      "only_unused_indices_removed": true,
+      "exact_query_cache": {
+        "trimesh_version": "5.1.0",
+        "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+        "closest_point_signature": "(mesh, points)",
+        "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+        "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+        "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+        "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+        "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+        "module_globals_mutated": false,
+        "tol_merge": 1e-08,
+        "kdtree_builds": 1,
+        "cached_constructor_calls": 0,
+        "closest_point_calls": 0,
+        "kdtree_referenced_vertices": 308292
+      }
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "trimesh": "5.1.0",
+    "rtree": "1.4.1"
+  },
+  "elapsed_seconds": 296.74257043306716,
+  "n_declared_arms": 4,
+  "n_completed_arms": 4,
+  "n_qualified_arms": 2,
+  "exact_query_caches": {
+    "0": {
+      "trimesh_version": "5.1.0",
+      "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+      "closest_point_signature": "(mesh, points)",
+      "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+      "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+      "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+      "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+      "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+      "module_globals_mutated": false,
+      "tol_merge": 1e-08,
+      "kdtree_builds": 1,
+      "cached_constructor_calls": 628,
+      "closest_point_calls": 628,
+      "kdtree_referenced_vertices": 305184
+    },
+    "8": {
+      "trimesh_version": "5.1.0",
+      "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+      "closest_point_signature": "(mesh, points)",
+      "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+      "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+      "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+      "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+      "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+      "module_globals_mutated": false,
+      "tol_merge": 1e-08,
+      "kdtree_builds": 1,
+      "cached_constructor_calls": 3140,
+      "closest_point_calls": 3140,
+      "kdtree_referenced_vertices": 306922
+    },
+    "15": {
+      "trimesh_version": "5.1.0",
+      "nearby_faces_signature": "(mesh, points: Union[collections.abc.Buffer, numpy._typing._array_like._SupportsArray[numpy.dtype[Any]], numpy._typing._nested_sequence._NestedSequence[numpy._typing._array_like._SupportsArray[numpy.dtype[Any]]], bool, int, float, complex, str, bytes, numpy._typing._nested_sequence._NestedSequence[Union[bool, int, float, complex, str, bytes]]])",
+      "closest_point_signature": "(mesh, points)",
+      "nearby_faces_source_sha256": "b06fef50fea2fc7f19bb7e2d02350ad749ee721488c19e1d73967cf34f2115fe",
+      "closest_point_source_sha256": "00385985a5cdea7b16ae6b428a0370e8b0ec3c513f3b8ed8ed3e856816b5600d",
+      "candidate_search": "Original nearby_faces bytecode with owned cached cKDTree constructor",
+      "narrow_phase_and_tie_resolution": "Original closest_point bytecode, unchanged",
+      "referenced_vertex_order": "mesh.vertices[mesh.referenced_vertices], original order",
+      "module_globals_mutated": false,
+      "tol_merge": 1e-08,
+      "kdtree_builds": 1,
+      "cached_constructor_calls": 3140,
+      "closest_point_calls": 3140,
+      "kdtree_referenced_vertices": 308292
+    }
+  },
+  "ended_utc": "2026-10-02T19:13:38.927483+00:00",
+  "resources": {
+    "cpu_user_seconds": 296.164848,
+    "cpu_system_seconds": 0.479994,
+    "peak_rss_bytes": 707219456,
+    "gpu_used": false
+  }
+}

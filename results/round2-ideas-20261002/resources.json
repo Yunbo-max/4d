@@ -1,0 +1,23 @@
+{
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "peak_allocated_bytes": 2246323712,
+  "peak_reserved_bytes": 2680160256,
+  "elapsed_seconds": 103.50929839489982,
+  "per_run_physical_monitor": [
+    {
+      "run": "research-round2-20261002",
+      "sample_count": 13,
+      "peak_sampled_gpu_mib": 2763
+    },
+    {
+      "run": "research-round2-20261002-generated",
+      "sample_count": 90,
+      "peak_sampled_gpu_mib": 641
+    }
+  ],
+  "peak_sampled_gpu_mib": 2763,
+  "final_gpu_used_mib": 0,
+  "final_gpu_utilization_percent": 0,
+  "remote_disk_free_gib_rounded": 8.4,
+  "native_generator_run_this_round": false
+}

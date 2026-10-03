@@ -1,0 +1,37 @@
+{
+  "local_repo": "/Users/yunbo/Documents/4d",
+  "working_repo": "/Users/yunbo/Documents/Codex/4d",
+  "pull_result": "Already up to date.",
+  "head": "fc501b6a042988b1d850c517495a95a00224d420",
+  "tracked_changes": "",
+  "untracked_research_files_preserved": true,
+  "remote_math_code_comparison": [
+    {
+      "file": "__init__.py",
+      "match": true
+    },
+    {
+      "file": "contact_events.py",
+      "match": true
+    },
+    {
+      "file": "controllability.py",
+      "match": true
+    },
+    {
+      "file": "correlated.py",
+      "match": true
+    },
+    {
+      "file": "native_probe.py",
+      "match": true
+    },
+    {
+      "file": "run_controls.py",
+      "match": true
+    }
+  ],
+  "new_gpu_job_started": false,
+  "weight_training_started": false,
+  "pending_user_clarification": "Full frozen-model inference/evaluation or model-weight training/fine-tuning?"
+}

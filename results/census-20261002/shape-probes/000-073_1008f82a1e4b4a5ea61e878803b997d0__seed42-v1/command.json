@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_shape_probe.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+    "--frames",
+    "0",
+    "8",
+    "15",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1",
+    "--memory-fraction",
+    ".30",
+    "--max-seconds",
+    "300"
+  ],
+  "script_sha256": "dc26a05ae4cfe05bc3774db53764f5a240cb8f17e26ce224ab429fa435034a49",
+  "started_utc": "2026-10-02T19:56:55.529597+00:00",
+  "offline": true,
+  "case_dir": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+  "output": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/shape-probes/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1",
+  "memory_fraction": 0.3,
+  "max_seconds": 300.0,
+  "frames": [
+    0,
+    8,
+    15
+  ],
+  "no_resolution_or_frame_fallback": true
+}

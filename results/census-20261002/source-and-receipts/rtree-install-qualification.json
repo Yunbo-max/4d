@@ -1,0 +1,7 @@
+{
+  "rtree_version": "1.4.1",
+  "path": "/root/rivermind-data/actionmesh-repro/research/census-20261002/extra-python/rtree/__init__.py",
+  "closest_triangle_test": "passed; unusedvertex excluded",
+  "source": "https://pypi.org/project/rtree/1.4.1/",
+  "install_scope": "isolated extra-python, --no-deps; globalenvironmentunchanged"
+}

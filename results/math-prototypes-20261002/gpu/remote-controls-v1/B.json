@@ -1,0 +1,16 @@
+{
+  "evidence_scope": "constructed numerical controls; not 4D efficacy",
+  "missing_direction": {
+    "model_residual_squared": 1.0,
+    "output_residual_squared": 0.0,
+    "nested_gap": 1.0,
+    "explanation": "model exposes e1 only; action permits e1 and e2; requested edit is e2"
+  },
+  "trust_budget": {
+    "unbounded_residual_squared": 0.0,
+    "bounded_residual_squared": 0.9980010000000014,
+    "unbounded_output_step_norm": 1000.0,
+    "bounded_output_step_norm": 0.9999999999992946,
+    "explanation": "gain .001 needs displacement 1000 for unit edit; budget is 1"
+  }
+}

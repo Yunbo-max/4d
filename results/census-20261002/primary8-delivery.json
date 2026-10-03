@@ -1,0 +1,8 @@
+{
+  "source_archive": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-primary8.tar.gz",
+  "sha256": "7f60b5da4ef0d491ba7796cdcac049c80b6ac811780df83023f960be4ae8f739",
+  "bytes": 228581744,
+  "source_extracted": "/Users/yunbo/Documents/Codex/2026-09-29/nihao/work/autoresearch-4d/evidence/local/census-20261002/checkpoint-primary8",
+  "delivered_files": 35,
+  "scope": "All8 seed42 exports and metrics; extra6 raw cases in extracted archive, first2 rawcases in earlier packet"
+}

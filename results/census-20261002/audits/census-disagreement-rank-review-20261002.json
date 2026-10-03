@@ -1,0 +1,34 @@
+{
+  "status": "read_only_review_complete",
+  "reviewed_at_utc": "2026-10-02T19:56:24.318010+00:00",
+  "reviewed_source_sha256": {
+    "research_census_disagreement_rank.py": "ad86285fb71a6e301977949ac0c0d1476b496fbcf27ce00a4e5001dc1a77ff2a",
+    "test_research_census_disagreement_rank.py": "b9675b0036898b9f2972e76276788d06972f5fbdbc4072a58ce971538beaccc9",
+    "research_census_shape_probe.py": "dc26a05ae4cfe05bc3774db53764f5a240cb8f17e26ce224ab429fa435034a49"
+  },
+  "blocking_findings": [],
+  "verified": [
+    "model_only_scores accepts canonical prediction/surface arrays only; no GT alignment or normalization argument",
+    "model-only score artifact is saved before GT/matrix array loading",
+    "raw Stage-I point lineage verified against shape-probe implementation and file hashes",
+    "fixed cached faces/barycentric sample IDs are reused for native/reversal, with10k query seed44 shared with locked forward GT NN targets",
+    "source/frame0/topology/query/clock controls require complete successful arms before evaluation",
+    "average-rank exact ties; arbitrary material-ID cutoff tie policy explicit; constants undefined",
+    "GT anchor NN distance explicitly ORACLE and absent from eligible SCORES/baseline comparisons",
+    "each asset is evaluated separately; aggregation requires exactly two distinct frozen UIDs and same protocol; no pointwise p-values or population inference",
+    "target is clearly labelled forward-only frames8/15 conditional displacement EPE, not CD-M/full16 bidirectional readout"
+  ],
+  "nonblocking_provenance_suggestions": [
+    "Record imported helper script SHA256 values for validation/transform functions",
+    "Revalidate source hashes at completion; current source hashes can be taken after a read",
+    "Retain external240-second deadline because stage checkpoints alone do not strictly bound individual operations"
+  ],
+  "additional_tests_run": false,
+  "actual_ranking_run_by_reviewer": false,
+  "static_reference_from_existing_motion_readout": {
+    "formula": "For each order, static_prediction_EPE_sum = primary_summary.pred_to_gt.gt_mean_magnitude + primary_summary.gt_to_pred.gt_mean_magnitude",
+    "reason": "A static predicted trajectory has zero displacement/velocity/acceleration, so its vector error is the norm of each matched GT vector. Frozen NN maps/query weights remain unchanged.",
+    "extra_model_or_metric_run_required": false,
+    "limitation": "Conditional on existing anchor matches and anisotropic shared alignment; not a semantic material-motion oracle or calibrated risk."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "protocol_sha256": "38c84862769d4a021100c26a00d0bd2ec0096e6734aeb692955424dac82b6255",
+  "scope": "implementation feasibility; no formal natural efficacy gate",
+  "cohort": [
+    {
+      "name": "mannequin",
+      "case": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2"
+    },
+    {
+      "name": "bat",
+      "case": "000-043_061697e330d44524bd11f8cf95772e2d__seed42"
+    }
+  ],
+  "gpu_jobs_max": 2,
+  "gpu_seconds_cap_per_asset": 600,
+  "targets": [
+    1,
+    8,
+    15
+  ],
+  "queries": 24,
+  "allocator_cap_gib": 12,
+  "full_context_frames": 16,
+  "prohibited_claims": [
+    "natural failure prevalence",
+    "improved official benchmark",
+    "fullsemantic4Dediting",
+    "crossmodel efficacy",
+    "new mathematical theorem"
+  ]
+}

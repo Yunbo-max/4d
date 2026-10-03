@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research_three_ideas.py",
+    "prefix",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--cache",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/prepare/prepared.npz",
+    "--seed",
+    "42",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/research-three-20261002/prefix"
+  ],
+  "root": "/root/rivermind-data/actionmesh-repro",
+  "script_sha256": "f0cfd328e15293ff0b83d3af88caeb63b61e1adf565c75a0887d4412cf1c2830",
+  "offline": true,
+  "scope": "Exploratory pilot; no formal NaturalGate0 or quality claim"
+}

@@ -1,0 +1,43 @@
+{
+  "status": "failed",
+  "variant": "arap",
+  "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+  "seed": 42,
+  "solver_qualified": false,
+  "frame_reports": [
+    {
+      "frame": 0,
+      "solver": {
+        "numerically_qualified": true,
+        "bypass": "exact original bytes"
+      },
+      "geometry": {
+        "mean_surface_distance": 0.00018340989975072872,
+        "p95_surface_distance": 0.0008387897452582941,
+        "mean_squared_surface_distance_over_D2": 1.9995216081814364e-08,
+        "max_displacement_over_D": 0.0,
+        "trust_violation_over_D": 0.0,
+        "trust_boundary_fraction": 0.0,
+        "baseline_degenerate_faces": 0,
+        "result_degenerate_faces": 0,
+        "new_degenerate_faces": 0,
+        "orientation_reversal_count_relative_native": 0,
+        "edge_length_ratio_quantiles_01_50_99": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "finite": true,
+        "surface_query": "exact closest triangle via Trimesh/Rtree"
+      },
+      "qualified": true,
+      "frame_artifact_sha256": "818fe5a08c5896b04b995200eaaa5f225964d02f6bd64289dd18377296bb2ecc"
+    }
+  ],
+  "started_utc": "2026-10-02T18:53:09.170991+00:00",
+  "error_type": "TimeoutError",
+  "error": "CPU baseline exceeded 600.0s at closest_triangle_batch; no geometry/iteration fallback",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 366, in run\n    corrected, solver, debug = correct(arm, vertices[frame], faces, targets[frame], diagonal, check)\n                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 230, in correct\n    return arap_correct(x, faces, target, diagonal, radius, check)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 191, in arap_correct\n    q_new, _, _ = closest(target, y, check)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 75, in closest\n    check('closest_triangle_batch')\n  File \"/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_surface_baseline.py\", line 336, in check\n    raise TimeoutError(f'CPU baseline exceeded {args.max_seconds}s at {stage}; no geometry/iteration fallback')\nTimeoutError: CPU baseline exceeded 600.0s at closest_triangle_batch; no geometry/iteration fallback\n",
+  "ended_utc": "2026-10-02T18:54:21.640281+00:00",
+  "elapsed_seconds": 72.46874802187085
+}

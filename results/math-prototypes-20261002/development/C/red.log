@@ -1,0 +1,25 @@
+test_bounded_search_reports_candidate_cap (research_math.tests.test_contact_events.ContactEventControls.test_bounded_search_reports_candidate_cap) ... skipped 'implementation pending'
+test_demo_has_success_failure_and_no_natural_evidence_claim (research_math.tests.test_contact_events.ContactEventControls.test_demo_has_success_failure_and_no_natural_evidence_claim) ... skipped 'implementation pending'
+test_event_repair_does_not_claim_advantage_over_same_information_solver (research_math.tests.test_contact_events.ContactEventControls.test_event_repair_does_not_claim_advantage_over_same_information_solver) ... skipped 'implementation pending'
+test_feasible_timing_error_is_solved_by_retiming_baseline (research_math.tests.test_contact_events.ContactEventControls.test_feasible_timing_error_is_solved_by_retiming_baseline) ... skipped 'implementation pending'
+test_insert_delete_and_unknown_are_separate_operations (research_math.tests.test_contact_events.ContactEventControls.test_insert_delete_and_unknown_are_separate_operations) ... skipped 'implementation pending'
+test_invalid_or_nonfinite_inputs_are_rejected (research_math.tests.test_contact_events.ContactEventControls.test_invalid_or_nonfinite_inputs_are_rejected) ... skipped 'implementation pending'
+test_missing_contact_is_repaired_within_actual_l2_budget (research_math.tests.test_contact_events.ContactEventControls.test_missing_contact_is_repaired_within_actual_l2_budget) ... skipped 'implementation pending'
+test_partner_and_contact_mode_are_not_interchangeable (research_math.tests.test_contact_events.ContactEventControls.test_partner_and_contact_mode_are_not_interchangeable) ... skipped 'implementation pending'
+test_simultaneous_incompatible_contacts_are_infeasible (research_math.tests.test_contact_events.ContactEventControls.test_simultaneous_incompatible_contacts_are_infeasible) ... skipped 'implementation pending'
+test_strict_monotone_retiming_preserves_event_order (research_math.tests.test_contact_events.ContactEventControls.test_strict_monotone_retiming_preserves_event_order) ... skipped 'implementation pending'
+test_unknown_observation_does_not_become_noncontact (research_math.tests.test_contact_events.ContactEventControls.test_unknown_observation_does_not_become_noncontact) ... skipped 'implementation pending'
+test_contact_module_is_implemented (research_math.tests.test_contact_events.ImplementationExists.test_contact_module_is_implemented) ... FAIL
+
+======================================================================
+FAIL: test_contact_module_is_implemented (research_math.tests.test_contact_events.ImplementationExists.test_contact_module_is_implemented)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d/actionmesh/research_math/tests/test_contact_events.py", line 18, in test_contact_module_is_implemented
+    self.assertTrue(MODULE_AVAILABLE, "contact event prototype is not implemented yet")
+AssertionError: False is not true : contact event prototype is not implemented yet
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+FAILED (failures=1, skipped=11)

@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "started_utc": "2026-10-02T19:43:40.316400+00:00",
+  "stage": "final_source_revalidation",
+  "elapsed_seconds": 0.4028735830215737,
+  "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+  "seed": 42,
+  "independent_assets": 1,
+  "summaries": {
+    "displacement": {
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "frame_count": 15,
+      "pred_to_gt": {
+        "mean_endpoint_error": 0.061007303774097056,
+        "predicted_mean_magnitude": 0.17381999076115887,
+        "gt_mean_magnitude": 0.1686650791600913,
+        "predicted_to_gt_magnitude_ratio": 1.0305630046642595,
+        "zero_gt_motion": false,
+        "spurious_prediction_motion_when_gt_zero": false
+      },
+      "gt_to_pred": {
+        "mean_endpoint_error": 0.0648823667656853,
+        "predicted_mean_magnitude": 0.1736735109819087,
+        "gt_mean_magnitude": 0.1772240234198334,
+        "predicted_to_gt_magnitude_ratio": 0.979965964154229,
+        "zero_gt_motion": false,
+        "spurious_prediction_motion_when_gt_zero": false
+      },
+      "sum_directional_mean_endpoint_error": 0.12588967053978237
+    },
+    "velocity": {
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "frame_count": 15,
+      "pred_to_gt": {
+        "mean_endpoint_error": 0.015380009628621323,
+        "predicted_mean_magnitude": 0.033179303082864126,
+        "gt_mean_magnitude": 0.03319287069574825,
+        "predicted_to_gt_magnitude_ratio": 0.9995912491869569,
+        "zero_gt_motion": false,
+        "spurious_prediction_motion_when_gt_zero": false
+      },
+      "gt_to_pred": {
+        "mean_endpoint_error": 0.0157574860244286,
+        "predicted_mean_magnitude": 0.03341331178252793,
+        "gt_mean_magnitude": 0.03464149662664565,
+        "predicted_to_gt_magnitude_ratio": 0.9645458492352487,
+        "zero_gt_motion": false,
+        "spurious_prediction_motion_when_gt_zero": false
+      },
+      "sum_directional_mean_endpoint_error": 0.03113749565304992
+    },
+    "acceleration": {
+      "frames": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "frame_count": 14,
+      "pred_to_gt": {
+        "mean_endpoint_error": 0.010016501019216108,
+        "predicted_mean_magnitude": 0.012720990897418882,
+        "gt_mean_magnitude": 0.012892166778885146,
+        "predicted_to_gt_magnitude_ratio": 0.9867224893687679,
+        "zero_gt_motion": false,
+        "spurious_prediction_motion_when_gt_zero": false
+      },
+      "gt_to_pred": {
+        "mean_endpoint_error": 0.010155838623680405,
+        "predicted_mean_magnitude": 0.012663128168148621,
+        "gt_mean_magnitude": 0.01349707652410509,
+        "predicted_to_gt_magnitude_ratio": 0.9382126674271217,
+        "zero_gt_motion": false,
+        "spurious_prediction_motion_when_gt_zero": false
+      },
+      "sum_directional_mean_endpoint_error": 0.02017233964289651
+    }
+  },
+  "cached_reference": {
+    "official_formula_CD_M_cached": 0.12774424254894257,
+    "shared_alignment_CD4D_cached": 0.0700466637999096,
+    "first_frame_NN_ties_cached": {
+      "pred_to_gt_first_second_distance_ties": 0,
+      "gt_to_pred_first_second_distance_ties": 0,
+      "absolute_tie_tolerance": 1e-12
+    },
+    "scope": "Unchanged cached reference metrics; no recomputation and no algebraic subtraction from auxiliary readouts"
+  },
+  "native_cache_qualified": true,
+  "all16frames_retained": true,
+  "core_metrics_recomputed": false,
+  "cuda_used": false,
+  "ICP_run": false,
+  "GT_use": "evaluation only",
+  "scientific_scope": "Auxiliary motion readout conditional on original nearest pairing and shared alignment; not a new method or geometry-independent error",
+  "ended_utc": "2026-10-02T19:43:40.720654+00:00",
+  "peak_process_rss": 227098624,
+  "peak_process_rss_units": "bytes"
+}

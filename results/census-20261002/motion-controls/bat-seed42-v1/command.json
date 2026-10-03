@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_motion_controls.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+    "--stage-gt-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+    "--gt-dir",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/bat-seed42-v1",
+    "--max-seconds",
+    "300",
+    "--cache-clouds"
+  ],
+  "script_sha256": "f5fdb10d3443a8c1f605e58b6d08c450cfb87d63d7e1031189a0cc4bd899d6aa",
+  "CPU_only": true,
+  "max_seconds": 300.0,
+  "cache_clouds": true
+}

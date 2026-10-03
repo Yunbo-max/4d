@@ -1,0 +1,38 @@
+PROBE step=1/30 mode=baseline change_rms=0
+PROBE step=2/30 mode=baseline change_rms=0
+PROBE step=3/30 mode=baseline change_rms=0
+PROBE step=4/30 mode=baseline change_rms=0
+PROBE step=5/30 mode=baseline change_rms=0
+PROBE step=6/30 mode=baseline change_rms=0
+PROBE step=7/30 mode=baseline change_rms=0
+PROBE step=8/30 mode=baseline change_rms=0
+PROBE step=9/30 mode=baseline change_rms=0
+PROBE step=10/30 mode=baseline change_rms=0
+PROBE step=11/30 mode=baseline change_rms=0
+PROBE step=12/30 mode=baseline change_rms=0
+PROBE step=13/30 mode=baseline change_rms=0
+PROBE step=14/30 mode=baseline change_rms=0
+PROBE step=15/30 mode=baseline change_rms=0
+PROBE step=16/30 mode=baseline change_rms=0
+PROBE step=17/30 mode=baseline change_rms=0
+PROBE step=18/30 mode=baseline change_rms=0
+PROBE step=19/30 mode=baseline change_rms=0
+PROBE step=20/30 mode=baseline change_rms=0
+PROBE step=21/30 mode=baseline change_rms=0
+PROBE step=22/30 mode=baseline change_rms=0
+PROBE step=23/30 mode=baseline change_rms=0
+PROBE step=24/30 mode=baseline change_rms=0
+PROBE step=25/30 mode=baseline change_rms=0
+PROBE step=26/30 mode=baseline change_rms=0
+PROBE step=27/30 mode=baseline change_rms=0
+PROBE step=28/30 mode=baseline change_rms=0
+PROBE step=29/30 mode=baseline change_rms=0
+PROBE step=30/30 mode=baseline change_rms=0
+{
+  "status": "passed",
+  "device": "cpu",
+  "toy_native_30_vs_shared_20_10_bitwise_equal": true,
+  "anchor_held": true,
+  "global_selective_norm_matched": true,
+  "scope": "Real scheduler with toy velocity field; not real-model GPU parity"
+}

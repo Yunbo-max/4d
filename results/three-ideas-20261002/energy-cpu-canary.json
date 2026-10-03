@@ -1,0 +1,32 @@
+{
+  "moment_energy": {
+    "directional_relative_error": 7.0430473841831155e-09,
+    "mode": "moment_energy",
+    "s": 0.2,
+    "energy_before": 24.5072021484375,
+    "energy_probed_after": 24.224287033081055,
+    "grad_rms": 0.08311023563146591,
+    "grad_norm": 2.659527540206909,
+    "correction_rms": 0.017150264233350754,
+    "correction_norm": 0.5488084554672241,
+    "max_relative_correction_rms": 0.0990000069141388,
+    "active_fraction": 1.0,
+    "backtracks": 0,
+    "finite": true
+  },
+  "rms_energy": {
+    "directional_relative_error": 3.559843703853093e-09,
+    "mode": "rms_energy",
+    "s": 0.2,
+    "energy_before": 1.4445610046386719,
+    "energy_probed_after": 1.4325717687606812,
+    "grad_rms": 0.0034431125968694687,
+    "grad_norm": 0.110179603099823,
+    "correction_rms": 0.017150262370705605,
+    "correction_norm": 0.5488084554672241,
+    "max_relative_correction_rms": 0.0990000069141388,
+    "active_fraction": 1.0,
+    "backtracks": 0,
+    "finite": true
+  }
+}

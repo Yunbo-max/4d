@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/research/census-20261002/research_census_time_direction_eval.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+    "--direction-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/bat-seed42-v1",
+    "--stage-gt-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/stage-gt/bat-seed42-v1",
+    "--native-cache-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/motion-controls/bat-seed42-v1",
+    "--gt-dir",
+    "/root/rivermind-data/actionmesh-repro/data/actionbench-census-20261002/data",
+    "--output",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction-eval/bat-seed42-v1",
+    "--max-seconds",
+    "300"
+  ],
+  "script_sha256": "026c72361eb712f70cf08fcd49516aa1b1a88f78a6f43deb014e973da4a773dd",
+  "CPU_only": true,
+  "max_seconds": 300.0,
+  "timeout_scope": "Stage checks; external deadline recommended"
+}

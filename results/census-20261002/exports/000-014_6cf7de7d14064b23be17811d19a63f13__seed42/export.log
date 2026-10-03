@@ -1,0 +1,12 @@
+19:12:12 | INFO: Draco mesh compression is available, use library at /root/rivermind-data/actionmesh-repro/tools/blender-3.5.1-linux-x64/3.5/python/lib/python3.10/site-packages/libextern_draco.so
+19:12:12 | INFO: Starting glTF 2.0 export
+19:12:12 | INFO: Extracting primitive: AnimatedMesh
+19:12:12 | INFO: Primitives created: 1
+19:12:12 | INFO: Draco encoder: Encoding mesh AnimatedMesh.
+19:12:13 | INFO: Finished glTF 2.0 export in 0.274838924407959 s
+
+Blender 3.5.1 (hash e1ccd9d4a1d3 built 2023-04-24 23:31:15)
+DracoEncoder | Preserve triangle order: yes
+DracoEncoder | Encoded 20001 vertices, 119994 indices, raw size: 480000, encoded size: 331708, compression ratio: 1.45
+
+Blender quit

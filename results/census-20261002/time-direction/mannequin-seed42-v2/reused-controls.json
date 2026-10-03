@@ -1,0 +1,73 @@
+{
+  "controls": {
+    "forward": {
+      "source_report": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/report.json",
+      "source_report_sha256": "c16b43ae8865fb4fff467c99a3e742fc311f51d9263174039b10658894cbd45b",
+      "source_sequence": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/forward/sequence.npz",
+      "source_sequence_sha256": "55e990dffe2978c441c50ef4c856fe9c9b865827b74df821f39ea1d75fb65fbe",
+      "status": "verified_reused_control",
+      "gpu_recomputed": false,
+      "independent_discrepancy_recalculation": {
+        "bitwise_equal": true,
+        "max_abs_coordinate": 0.0,
+        "moving_rms_xyz_over_anchor_diagonal": 0.0,
+        "moving_max_abs_coordinate_over_anchor_diagonal": 0.0,
+        "per_frame_mean_vertex_distance_over_anchor_diagonal": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "interpretation": "Matched-query prediction disagreement; not ground-truth error."
+      }
+    },
+    "row_permutation": {
+      "source_report": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/report.json",
+      "source_report_sha256": "7b29fc032bee3a4febbb814f05929ab864f6e08840c9853811960e7bfa93be62",
+      "source_sequence": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1/variants/row_permutation/sequence.npz",
+      "source_sequence_sha256": "4eb0b3e7a456a5dd293d9511cc33ece19b902c34ff48630bcb6744d14b6b7f3e",
+      "status": "verified_reused_control",
+      "gpu_recomputed": false,
+      "independent_discrepancy_recalculation": {
+        "bitwise_equal": false,
+        "max_abs_coordinate": 0.00038492679595947266,
+        "moving_rms_xyz_over_anchor_diagonal": 5.50931094961733e-06,
+        "moving_max_abs_coordinate_over_anchor_diagonal": 0.00014361829934697462,
+        "per_frame_mean_vertex_distance_over_anchor_diagonal": [
+          0.0,
+          5.214908980246509e-06,
+          4.342950026364078e-06,
+          4.601762559537313e-06,
+          7.380544700963666e-06,
+          6.443706305688043e-06,
+          6.184175928936939e-06,
+          7.929662374924932e-06,
+          5.761711212281247e-06,
+          7.37145854267603e-06,
+          5.692942907421626e-06,
+          7.950639116042031e-06,
+          8.256847933078886e-06,
+          1.0141677431391834e-05,
+          9.530893531124537e-06,
+          8.243700914987138e-06
+        ],
+        "interpretation": "Matched-query prediction disagreement; not ground-truth error."
+      }
+    }
+  },
+  "copy_policy": "Original sequence/report bytes copied exactly; original timings retained; zero additional control GPU passes.",
+  "source_attempt": "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/time-direction/mannequin-seed42-v1",
+  "source_attempt_report_sha256": "3272ada5cfc386334ac8dbcd17da89a242ea4079164be762cb34215e633a6df1"
+}
