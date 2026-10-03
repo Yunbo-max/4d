@@ -1,0 +1,7 @@
+test_controls_write_finite_results_and_preserve_existing_output (test_cli.CommandLineTests.test_controls_write_finite_results_and_preserve_existing_output) ... ok
+test_list_reports_external_input_requirements (test_cli.CommandLineTests.test_list_reports_external_input_requirements) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.232s
+
+OK

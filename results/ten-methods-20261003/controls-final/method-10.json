@@ -1,0 +1,53 @@
+{
+  "method": 10,
+  "evidence": "constructed four-window callback rollout",
+  "forward_rollouts": 4,
+  "backward_rollouts": 4,
+  "source_anchor_indices": [
+    0
+  ],
+  "source_anchors_exact": true,
+  "forward": [
+    0.0,
+    0.1,
+    0.1,
+    0.1,
+    0.2,
+    0.2,
+    0.2,
+    0.30000000000000004,
+    0.30000000000000004,
+    0.30000000000000004,
+    0.4,
+    0.4,
+    0.4
+  ],
+  "backward": [
+    0.0,
+    0.3333333333333333,
+    0.5666666666666667,
+    0.7,
+    0.7,
+    0.7,
+    0.6,
+    0.6,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.4
+  ],
+  "calls": [
+    "forward",
+    "forward",
+    "forward",
+    "forward",
+    "backward",
+    "backward",
+    "backward",
+    "backward"
+  ],
+  "unaligned_averaging": false,
+  "natural_long_video_validated": false,
+  "evidence_type": "constructed_control"
+}

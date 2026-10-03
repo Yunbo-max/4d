@@ -1,0 +1,25 @@
+test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor (test_m01_elasticity.ElasticityTests.test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor) ... ok
+test_face_edges_and_fixed_vertices_are_respected (test_m01_elasticity.ElasticityTests.test_face_edges_and_fixed_vertices_are_respected) ... ok
+test_invalid_time_and_edges_are_rejected (test_m01_elasticity.ElasticityTests.test_invalid_time_and_edges_are_rejected) ... ok
+test_local_elasticity_retains_supported_action_and_regularizes_noise (test_m01_elasticity.ElasticityTests.test_local_elasticity_retains_supported_action_and_regularizes_noise) ... ok
+test_observed_evidence_selects_strain_not_motion_amplitude (test_m01_elasticity.ElasticityTests.test_observed_evidence_selects_strain_not_motion_amplitude) ... ok
+test_shuffled_control_preserves_weight_distribution (test_m01_elasticity.ElasticityTests.test_shuffled_control_preserves_weight_distribution) ... ok
+test_bbox_and_global_controls_are_executable (test_m05_scale.ScaleTests.test_bbox_and_global_controls_are_executable) ... ok
+test_fractional_masks_and_degenerate_region_are_rejected (test_m05_scale.ScaleTests.test_fractional_masks_and_degenerate_region_are_rejected) ... ok
+test_rigid_sequence_is_identity_and_missing_stability_abstains (test_m05_scale.ScaleTests.test_rigid_sequence_is_identity_and_missing_stability_abstains) ... ok
+test_scale_fix_keeps_translation_rotation_and_articulation (test_m05_scale.ScaleTests.test_scale_fix_keeps_translation_rotation_and_articulation) ... ok
+test_similarity_recovers_known_transform_despite_stable_region_outlier (test_m05_scale.ScaleTests.test_similarity_recovers_known_transform_despite_stable_region_outlier) ... ok
+test_contact_projection_moves_only_normal_and_preserves_other_vertices (test_m08_contact.ContactTests.test_contact_projection_moves_only_normal_and_preserves_other_vertices) ... ok
+test_coupled_halfspaces_converge_and_standard_control_is_feasible (test_m08_contact.ContactTests.test_coupled_halfspaces_converge_and_standard_control_is_feasible) ... ok
+test_dykstra_minimizes_change_when_plain_projection_overshoots (test_m08_contact.ContactTests.test_dykstra_minimizes_change_when_plain_projection_overshoots) ... ok
+test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices (test_m08_contact.ContactTests.test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices) ... ok
+test_infeasible_displacement_bound_is_reported_and_pins_hold (test_m08_contact.ContactTests.test_infeasible_displacement_bound_is_reported_and_pins_hold) ... ok
+test_invalid_constraint_and_fractional_pin_ids_are_rejected (test_m08_contact.ContactTests.test_invalid_constraint_and_fractional_pin_ids_are_rejected) ... ok
+test_large_hash_box_falls_back_without_cartesian_enumeration (test_m08_contact.ContactTests.test_large_hash_box_falls_back_without_cartesian_enumeration) ... ok
+test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact (test_m08_contact.ContactTests.test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact) ... ok
+test_unrepresentable_hash_coordinates_use_finite_aabb_scan (test_m08_contact.ContactTests.test_unrepresentable_hash_coordinates_use_finite_aabb_scan) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.120s
+
+OK

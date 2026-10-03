@@ -1,0 +1,117 @@
+[
+  {
+    "method": 1,
+    "validation": "constructed numerical controls only",
+    "scores": {
+      "uniform_0.001": {
+        "constructed_error": 0.5976143426103577,
+        "anchor_max_error": 0.0,
+        "converged": true
+      },
+      "uniform_1": {
+        "constructed_error": 0.49477267507411943,
+        "anchor_max_error": 0.0,
+        "converged": true
+      },
+      "uniform_100": {
+        "constructed_error": 0.5985056109696467,
+        "anchor_max_error": 0.0,
+        "converged": true
+      },
+      "uniform_mean": {
+        "constructed_error": 0.5722099794656346,
+        "anchor_max_error": 0.0,
+        "converged": true
+      },
+      "motion": {
+        "constructed_error": 0.46970934282567933,
+        "anchor_max_error": 0.0,
+        "converged": true
+      },
+      "shuffled": {
+        "constructed_error": 0.5400154500144261,
+        "anchor_max_error": 0.0,
+        "converged": false
+      },
+      "observed": {
+        "constructed_error": 0.05878995728492887,
+        "anchor_max_error": 0.0,
+        "converged": true
+      }
+    },
+    "elapsed_seconds": 0.023156374983955175,
+    "missing_for_natural_validation": [
+      "measured image tracks/confidence",
+      "camera calibration",
+      "natural failure census"
+    ]
+  },
+  {
+    "method": 5,
+    "validation": "constructed numerical controls only",
+    "estimated_scales": [
+      1.0,
+      1.4000000000000001
+    ],
+    "scores": {
+      "original": {
+        "constructed_error": 1.8761663039293714,
+        "anchor_max_error": 0.0
+      },
+      "bbox": {
+        "constructed_error": 0.85918730661064,
+        "anchor_max_error": 0.0
+      },
+      "global_sim3": {
+        "constructed_error": 0.720262003512891,
+        "anchor_max_error": 0.0
+      },
+      "stable_region": {
+        "constructed_error": 8.005932084973442e-16,
+        "anchor_max_error": 0.0
+      }
+    },
+    "elapsed_seconds": 0.008394624979700893,
+    "missing_for_natural_validation": [
+      "verified size-stable region",
+      "metric camera convention",
+      "natural scale-drift census"
+    ]
+  },
+  {
+    "method": 8,
+    "validation": "constructed sampled-contact controls only",
+    "detected_contacts": 1,
+    "converged": true,
+    "scores": {
+      "original": {
+        "sampled_violation": 0.029999999999999992,
+        "tangential_change": 0.0,
+        "max_displacement": 0.0
+      },
+      "bounded_normal": {
+        "sampled_violation": 0.0,
+        "tangential_change": 0.0,
+        "max_displacement": 0.029999999999999992
+      },
+      "standard_contact_projection": {
+        "sampled_violation": 0.0,
+        "tangential_change": 0.0,
+        "max_displacement": 0.029999999999999992
+      },
+      "uniform_arap_disconnected_weak_control": {
+        "sampled_violation": 0.029999999999999992,
+        "tangential_change": 0.0,
+        "max_displacement": 0.0
+      }
+    },
+    "elapsed_seconds": 0.000607750000199303,
+    "limitations": [
+      "supplied sampled linear constraints only; no CCD or IPC guarantee",
+      "nearby nonadjacent vertex-triangle samples only; edge-edge and swept collisions not covered",
+      "ARAP demo has an isolated contact probe and is a weak disconnected control, not a qualified collision baseline",
+      "IPC baseline not implemented",
+      "natural failure census required"
+    ]
+  }
+]

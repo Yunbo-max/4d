@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-10-03T08:02:04.910542+00:00",
+  "scope": "Constructed software controls; no natural-data efficacy or model training claimed",
+  "python": "3.14.6 (main, Jun 10 2026, 10:03:53) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "methods": {
+    "1": {
+      "name": "Observation-supported local elasticity",
+      "status": "completed",
+      "module_sha256": "c0302664748f58efe7ba275115ddd7e0e62aac34ff914aaaed7f0037c7a458a0",
+      "elapsed_seconds": 0.12656154099386185
+    },
+    "2": {
+      "name": "Cycle-consistent frozen decoding",
+      "status": "completed",
+      "module_sha256": "caad4be6bba6d5bdcc07e570017f80a7eea804ed5e238793eb89a954aafdcefb",
+      "elapsed_seconds": 0.001783792016794905
+    },
+    "3": {
+      "name": "Temporal multi-hypothesis correspondence",
+      "status": "completed",
+      "module_sha256": "13d862687e344eef76b76aabc01f5075f86678610d9364da6487e047d8a90656",
+      "elapsed_seconds": 0.0020434169855434448
+    },
+    "4": {
+      "name": "Reappearance-constrained occlusion repair",
+      "status": "completed",
+      "module_sha256": "96a5e1111374b63bfe9441efbf21d49a2342df31608f2c3ef20dd9b754ca3a1e",
+      "elapsed_seconds": 0.001386707997880876
+    },
+    "5": {
+      "name": "Stable-region scale/deformation separation",
+      "status": "completed",
+      "module_sha256": "121fd146149e7706a5822f6957470ff575af454d07ef3b6fdce70c923264af09",
+      "elapsed_seconds": 0.01000170799670741
+    },
+    "6": {
+      "name": "Action-gated 3D-feasibility video selection",
+      "status": "completed",
+      "module_sha256": "c76650d40927c13e48d3e53b77ddf73ce399eee1306cc50cc4a9d7674a3bc2bf",
+      "elapsed_seconds": 0.0017185840115416795
+    },
+    "7": {
+      "name": "Budgeted motion-residual control allocation",
+      "status": "completed",
+      "module_sha256": "242449448d475c3036fc6911cbaf0e8d93779462f0cdb1b8862b1cd38d34c08b",
+      "elapsed_seconds": 0.010623291978845373
+    },
+    "8": {
+      "name": "Contact-normal trajectory repair",
+      "status": "completed",
+      "module_sha256": "dc5e9437e83f01fd9c9f3c5ffab7aaadd0d1318513969afdeded1058e3fafc14",
+      "elapsed_seconds": 0.002562167006544769
+    },
+    "9": {
+      "name": "Mesh/video conflict projection",
+      "status": "completed",
+      "module_sha256": "4966840e5da77a927d9a1fca61d1978be9eef18126fb64d9dfc7884d9bdb394b",
+      "elapsed_seconds": 0.0008349590061698109
+    },
+    "10": {
+      "name": "Bidirectional overlapping-window conditioning",
+      "status": "completed",
+      "module_sha256": "2df90da58fcd6ae06d4dcf76120e314b8d280aebcd5f8b7a84807d090207d7ff",
+      "elapsed_seconds": 0.0010161669924855232
+    }
+  }
+}

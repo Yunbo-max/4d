@@ -1,0 +1,27 @@
+test_controls_write_finite_results_and_preserve_existing_output (test_cli.CommandLineTests.test_controls_write_finite_results_and_preserve_existing_output) ... FAIL
+test_list_reports_external_input_requirements (test_cli.CommandLineTests.test_list_reports_external_input_requirements) ... FAIL
+
+======================================================================
+FAIL: test_controls_write_finite_results_and_preserve_existing_output (test_cli.CommandLineTests.test_controls_write_finite_results_and_preserve_existing_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_cli.py", line 16, in test_controls_write_finite_results_and_preserve_existing_output
+    self.assertEqual(result.returncode, 0, result.stderr+result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /opt/homebrew/opt/python@3.14/bin/python3.14: No module named research_ten.__main__; 'research_ten' is a package and cannot be directly executed
+
+
+======================================================================
+FAIL: test_list_reports_external_input_requirements (test_cli.CommandLineTests.test_list_reports_external_input_requirements)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_cli.py", line 29, in test_list_reports_external_input_requirements
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /opt/homebrew/opt/python@3.14/bin/python3.14: No module named research_ten.__main__; 'research_ten' is a package and cannot be directly executed
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.045s
+
+FAILED (failures=2)

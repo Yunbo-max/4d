@@ -1,0 +1,193 @@
+{
+  "method": 7,
+  "evidence": "constructed_control_only",
+  "quality_cost_curve": [
+    {
+      "strategy": "fps",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04271303544464241,
+      "local_region_rmse": 0.07225448552105221,
+      "timing_seconds": {
+        "total": 0.0009805690497159958,
+        "query": 4.274584352970123e-05,
+        "interpolation": 0.0005530959460884333,
+        "allocation": 0.0003847272600978613
+      }
+    },
+    {
+      "strategy": "curvature",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04271303544464241,
+      "local_region_rmse": 0.07225448552105221,
+      "timing_seconds": {
+        "total": 0.0009399380069226027,
+        "query": 4.186434671282768e-05,
+        "interpolation": 0.0004931900184601545,
+        "allocation": 0.00040488364174962044
+      }
+    },
+    {
+      "strategy": "motion",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.026933494838371572,
+      "local_region_rmse": 0.04006479081327159,
+      "timing_seconds": {
+        "total": 0.00127490796148777,
+        "query": 4.337192513048649e-05,
+        "interpolation": 0.00047872099094092846,
+        "allocation": 0.0007528150454163551
+      }
+    },
+    {
+      "strategy": "residual",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04271303544464241,
+      "local_region_rmse": 0.07225448552105221,
+      "timing_seconds": {
+        "total": 0.0025059599429368973,
+        "query": 4.296307452023029e-05,
+        "interpolation": 0.0004573829937726259,
+        "allocation": 0.002005613874644041
+      }
+    },
+    {
+      "strategy": "fps",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.02437537448842365,
+      "local_region_rmse": 0.03472733246188955,
+      "timing_seconds": {
+        "total": 0.001216040924191475,
+        "query": 7.712002843618393e-05,
+        "interpolation": 0.0004946948029100895,
+        "allocation": 0.0006442260928452015
+      }
+    },
+    {
+      "strategy": "curvature",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.03017290102512718,
+      "local_region_rmse": 0.03004946390297987,
+      "timing_seconds": {
+        "total": 0.0013086269609630108,
+        "query": 8.3110760897398e-05,
+        "interpolation": 0.0004734031390398741,
+        "allocation": 0.0007521130610257387
+      }
+    },
+    {
+      "strategy": "motion",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04455004161428497,
+      "local_region_rmse": 0.060617747022585725,
+      "timing_seconds": {
+        "total": 0.0024657228495925665,
+        "query": 9.795138612389565e-05,
+        "interpolation": 0.000472337007522583,
+        "allocation": 0.0018954344559460878
+      }
+    },
+    {
+      "strategy": "residual",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.02437537448842365,
+      "local_region_rmse": 0.03472733246188955,
+      "timing_seconds": {
+        "total": 0.007899817079305649,
+        "query": 0.00010014534927904606,
+        "interpolation": 0.00047626602463424206,
+        "allocation": 0.007323405705392361
+      }
+    },
+    {
+      "strategy": "fps",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.022102921736957826,
+      "local_region_rmse": 0.0396609284389935,
+      "timing_seconds": {
+        "total": 0.0015741598326712847,
+        "query": 0.00010589649900794029,
+        "interpolation": 0.0004225899465382099,
+        "allocation": 0.0010456733871251345
+      }
+    },
+    {
+      "strategy": "curvature",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.014179242293713342,
+      "local_region_rmse": 0.025102452557541042,
+      "timing_seconds": {
+        "total": 0.001631482969969511,
+        "query": 0.00011125695891678333,
+        "interpolation": 0.0004185158759355545,
+        "allocation": 0.0011017101351171732
+      }
+    },
+    {
+      "strategy": "motion",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.016034189271322743,
+      "local_region_rmse": 0.024779020530302148,
+      "timing_seconds": {
+        "total": 0.003991320030763745,
+        "query": 0.0001530926674604416,
+        "interpolation": 0.0004870679695159197,
+        "allocation": 0.003351159393787384
+      }
+    },
+    {
+      "strategy": "residual",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.012944139668938332,
+      "local_region_rmse": 0.022645814366331726,
+      "timing_seconds": {
+        "total": 0.018831562949344516,
+        "query": 0.0001548419240862131,
+        "interpolation": 0.0005058280657976866,
+        "allocation": 0.018170892959460616
+      }
+    }
+  ],
+  "limitations": [
+    "Spatial inverse-distance interpolation is not Fast4DMesh geodesic rigid skinning.",
+    "Only unique vertex queries are counted; real decoder batching and wall time must be measured separately.",
+    "All full trajectories in this demo belong to the evaluation oracle, never to allocation inputs.",
+    "No natural failure census, mesh CD metrics or GPU memory benchmark is claimed."
+  ],
+  "evidence_type": "constructed_control"
+}

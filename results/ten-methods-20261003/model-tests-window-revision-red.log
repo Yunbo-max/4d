@@ -1,0 +1,28 @@
+test_budget_and_short_input_reject_before_rollout (research_ten.tests.test_model_methods.WindowTests.test_budget_and_short_input_reject_before_rollout) ... ok
+test_four_windows_rerun_backward_and_preserve_original_source_anchors (research_ten.tests.test_model_methods.WindowTests.test_four_windows_rerun_backward_and_preserve_original_source_anchors) ... FAIL
+test_later_context_updates_earlier_overlap_instead_of_self_conditioning (research_ten.tests.test_model_methods.WindowTests.test_later_context_updates_earlier_overlap_instead_of_self_conditioning) ... FAIL
+test_representation_mismatch_and_mutated_anchors_fail (research_ten.tests.test_model_methods.WindowTests.test_representation_mismatch_and_mutated_anchors_fail) ... ok
+test_unreliable_future_is_not_used_as_backward_evidence (research_ten.tests.test_model_methods.WindowTests.test_unreliable_future_is_not_used_as_backward_evidence) ... ok
+
+======================================================================
+FAIL: test_four_windows_rerun_backward_and_preserve_original_source_anchors (research_ten.tests.test_model_methods.WindowTests.test_four_windows_rerun_backward_and_preserve_original_source_anchors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_model_methods.py", line 128, in test_four_windows_rerun_backward_and_preserve_original_source_anchors
+    self.assertEqual(len(records),8)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+AssertionError: 7 != 8
+
+======================================================================
+FAIL: test_later_context_updates_earlier_overlap_instead_of_self_conditioning (research_ten.tests.test_model_methods.WindowTests.test_later_context_updates_earlier_overlap_instead_of_self_conditioning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_model_methods.py", line 151, in test_later_context_updates_earlier_overlap_instead_of_self_conditioning
+    self.assertGreater(b["latents"][3,0],a["latents"][3,0])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: np.float64(0.0) not greater than np.float64(0.0)
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.038s
+
+FAILED (failures=2)

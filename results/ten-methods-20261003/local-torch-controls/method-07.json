@@ -1,0 +1,193 @@
+{
+  "method": 7,
+  "evidence": "constructed_control_only",
+  "quality_cost_curve": [
+    {
+      "strategy": "fps",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04271303544464241,
+      "local_region_rmse": 0.07225448552105221,
+      "timing_seconds": {
+        "total": 0.0005195839912630618,
+        "query": 1.1791998986154795e-05,
+        "interpolation": 0.0004057500045746565,
+        "allocation": 0.00010204198770225048
+      }
+    },
+    {
+      "strategy": "curvature",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04271303544464241,
+      "local_region_rmse": 0.07225448552105221,
+      "timing_seconds": {
+        "total": 0.00027420901460573077,
+        "query": 1.0082992957904935e-05,
+        "interpolation": 0.00016741701983846724,
+        "allocation": 9.67090018093586e-05
+      }
+    },
+    {
+      "strategy": "motion",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.02693349483837157,
+      "local_region_rmse": 0.04006479081327159,
+      "timing_seconds": {
+        "total": 0.00031312499777413905,
+        "query": 9.376031812280416e-06,
+        "interpolation": 0.0001231660135090351,
+        "allocation": 0.00018058295245282352
+      }
+    },
+    {
+      "strategy": "residual",
+      "budget": 5,
+      "unique_queries": 5,
+      "total_queried_points": 5,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04271303544464241,
+      "local_region_rmse": 0.07225448552105221,
+      "timing_seconds": {
+        "total": 0.00048083398723974824,
+        "query": 7.791997632011771e-06,
+        "interpolation": 0.00010879200999625027,
+        "allocation": 0.0003642499796114862
+      }
+    },
+    {
+      "strategy": "fps",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.02437537448842365,
+      "local_region_rmse": 0.03472733246188955,
+      "timing_seconds": {
+        "total": 0.00024841699632816017,
+        "query": 1.5041965525597334e-05,
+        "interpolation": 0.00010641600238159299,
+        "allocation": 0.00012695902842096984
+      }
+    },
+    {
+      "strategy": "curvature",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.03017290102512718,
+      "local_region_rmse": 0.030049463902979873,
+      "timing_seconds": {
+        "total": 0.0002488330064807087,
+        "query": 1.4041026588529348e-05,
+        "interpolation": 0.00010329199722036719,
+        "allocation": 0.00013149998267181218
+      }
+    },
+    {
+      "strategy": "motion",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.04455004161428497,
+      "local_region_rmse": 0.06061774702258573,
+      "timing_seconds": {
+        "total": 0.00045391698949970305,
+        "query": 1.4419027138501406e-05,
+        "interpolation": 0.00010429200483486056,
+        "allocation": 0.0003352059575263411
+      }
+    },
+    {
+      "strategy": "residual",
+      "budget": 9,
+      "unique_queries": 9,
+      "total_queried_points": 9,
+      "probe_queries": 3,
+      "trajectory_rmse": 0.02437537448842365,
+      "local_region_rmse": 0.03472733246188955,
+      "timing_seconds": {
+        "total": 0.0014755830052308738,
+        "query": 1.7663987819105387e-05,
+        "interpolation": 0.00011566700413823128,
+        "allocation": 0.0013422520132735372
+      }
+    },
+    {
+      "strategy": "fps",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.022102921736957826,
+      "local_region_rmse": 0.0396609284389935,
+      "timing_seconds": {
+        "total": 0.0003574160218704492,
+        "query": 2.191803650930524e-05,
+        "interpolation": 0.00011312501737847924,
+        "allocation": 0.0002223729679826647
+      }
+    },
+    {
+      "strategy": "curvature",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.014179242293713345,
+      "local_region_rmse": 0.025102452557541045,
+      "timing_seconds": {
+        "total": 0.00035687501076608896,
+        "query": 2.1000916603952646e-05,
+        "interpolation": 0.00010887501412071288,
+        "allocation": 0.00022699908004142344
+      }
+    },
+    {
+      "strategy": "motion",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.016034189271322743,
+      "local_region_rmse": 0.024779020530302145,
+      "timing_seconds": {
+        "total": 0.0007248329930007458,
+        "query": 2.2583029931411147e-05,
+        "interpolation": 0.00010824998025782406,
+        "allocation": 0.0005939999828115106
+      }
+    },
+    {
+      "strategy": "residual",
+      "budget": 15,
+      "unique_queries": 15,
+      "total_queried_points": 15,
+      "probe_queries": 5,
+      "trajectory_rmse": 0.012944139668938334,
+      "local_region_rmse": 0.02264581436633173,
+      "timing_seconds": {
+        "total": 0.0033085000177379698,
+        "query": 2.3625936591997743e-05,
+        "interpolation": 0.00011133399675600231,
+        "allocation": 0.0031735400843899697
+      }
+    }
+  ],
+  "limitations": [
+    "Spatial inverse-distance interpolation is not Fast4DMesh geodesic rigid skinning.",
+    "Only unique vertex queries are counted; real decoder batching and wall time must be measured separately.",
+    "All full trajectories in this demo belong to the evaluation oracle, never to allocation inputs.",
+    "No natural failure census, mesh CD metrics or GPU memory benchmark is claimed."
+  ],
+  "evidence_type": "constructed_control"
+}

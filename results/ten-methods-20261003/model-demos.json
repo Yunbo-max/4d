@@ -1,0 +1,98 @@
+{
+  "2": {
+    "method": 2,
+    "evidence": "constructed callback flows, not native quality",
+    "rigid_cycle_residual": 0.0,
+    "inconsistent_cycle_residual": 1.4433756729740645,
+    "inconsistent_composition_residual": 0.8660254037844386,
+    "query_points_per_arm": 16,
+    "decoder_calls_per_arm": 3,
+    "anchor_exact": true,
+    "native_validation_required": true
+  },
+  "9": {
+    "method": 9,
+    "evidence": "constructed live flow, not native benchmark",
+    "state_norms_seen_by_predictor": [
+      3.605551275463989,
+      3.741657386773808
+    ],
+    "fresh_branches": 6,
+    "anchor_exact": true,
+    "final": [
+      [
+        [
+          [
+            2.0,
+            3.0
+          ]
+        ],
+        [
+          [
+            0.9999999999989999,
+            1.25
+          ]
+        ],
+        [
+          [
+            0.9999999999989999,
+            1.25
+          ]
+        ]
+      ]
+    ],
+    "native_sampler_hook_available": true
+  },
+  "10": {
+    "method": 10,
+    "evidence": "constructed four-window callback rollout",
+    "forward_rollouts": 4,
+    "backward_rollouts": 4,
+    "source_anchor_indices": [
+      0
+    ],
+    "source_anchors_exact": true,
+    "forward": [
+      0.0,
+      0.1,
+      0.1,
+      0.1,
+      0.2,
+      0.2,
+      0.2,
+      0.30000000000000004,
+      0.30000000000000004,
+      0.30000000000000004,
+      0.4,
+      0.4,
+      0.4
+    ],
+    "backward": [
+      0.0,
+      0.3333333333333333,
+      0.5666666666666667,
+      0.7,
+      0.7,
+      0.7,
+      0.6,
+      0.6,
+      0.6,
+      0.5,
+      0.5,
+      0.5,
+      0.4
+    ],
+    "calls": [
+      "forward",
+      "forward",
+      "forward",
+      "forward",
+      "backward",
+      "backward",
+      "backward",
+      "backward"
+    ],
+    "unaligned_averaging": false,
+    "natural_long_video_validated": false
+  }
+}

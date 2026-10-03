@@ -1,0 +1,33 @@
+{
+  "method": 5,
+  "validation": "constructed numerical controls only",
+  "estimated_scales": [
+    1.0,
+    1.4000000000000001
+  ],
+  "scores": {
+    "original": {
+      "constructed_error": 1.8761663039293714,
+      "anchor_max_error": 0.0
+    },
+    "bbox": {
+      "constructed_error": 0.8591873066106399,
+      "anchor_max_error": 0.0
+    },
+    "global_sim3": {
+      "constructed_error": 0.720262003512891,
+      "anchor_max_error": 0.0
+    },
+    "stable_region": {
+      "constructed_error": 1.041481514324134e-15,
+      "anchor_max_error": 0.0
+    }
+  },
+  "elapsed_seconds": 0.050419352017343044,
+  "missing_for_natural_validation": [
+    "verified size-stable region",
+    "metric camera convention",
+    "natural scale-drift census"
+  ],
+  "evidence_type": "constructed_control"
+}

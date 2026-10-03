@@ -1,0 +1,95 @@
+{
+  "evidence_type": "constructed_control",
+  "policies": {
+    "feasibility": {
+      "status": "selected",
+      "selected_index": 2,
+      "selected_id": "usable",
+      "eligible_indices": [
+        1,
+        2
+      ],
+      "policy": "feasibility",
+      "action_threshold": 0.5,
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "feasibility_scores": [
+        1.0,
+        0.31748021039364,
+        0.865349742184445
+      ],
+      "backend_calls_used_by_selector": 0
+    },
+    "text": {
+      "status": "selected",
+      "selected_index": 1,
+      "selected_id": "distorted",
+      "eligible_indices": [
+        1,
+        2
+      ],
+      "policy": "text",
+      "action_threshold": 0.5,
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "feasibility_scores": [
+        1.0,
+        0.31748021039364,
+        0.865349742184445
+      ],
+      "backend_calls_used_by_selector": 0
+    },
+    "appearance": {
+      "status": "selected",
+      "selected_index": 2,
+      "selected_id": "usable",
+      "eligible_indices": [
+        1,
+        2
+      ],
+      "policy": "appearance",
+      "action_threshold": 0.5,
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "feasibility_scores": [
+        1.0,
+        0.31748021039364,
+        0.865349742184445
+      ],
+      "backend_calls_used_by_selector": 0
+    },
+    "random": {
+      "status": "selected",
+      "selected_index": 1,
+      "selected_id": "distorted",
+      "eligible_indices": [
+        1,
+        2
+      ],
+      "policy": "random",
+      "action_threshold": 0.5,
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "feasibility_scores": [
+        1.0,
+        0.31748021039364,
+        0.865349742184445
+      ],
+      "backend_calls_used_by_selector": 0
+    }
+  },
+  "claim": "Common action gate prevents static candidate selection; no natural video ranking tested",
+  "method": 6
+}

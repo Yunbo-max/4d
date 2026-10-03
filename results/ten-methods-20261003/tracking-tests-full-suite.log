@@ -1,0 +1,482 @@
+test_controls_write_finite_results_and_preserve_existing_output (test_cli.CommandLineTests.test_controls_write_finite_results_and_preserve_existing_output) ... FAIL
+test_list_reports_external_input_requirements (test_cli.CommandLineTests.test_list_reports_external_input_requirements) ... FAIL
+test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor (test_m01_elasticity.ElasticityTests.test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor) ... FAIL
+test_invalid_time_and_edges_are_rejected (test_m01_elasticity.ElasticityTests.test_invalid_time_and_edges_are_rejected) ... FAIL
+test_local_elasticity_retains_supported_action_and_regularizes_noise (test_m01_elasticity.ElasticityTests.test_local_elasticity_retains_supported_action_and_regularizes_noise) ... FAIL
+test_observed_evidence_selects_strain_not_motion_amplitude (test_m01_elasticity.ElasticityTests.test_observed_evidence_selects_strain_not_motion_amplitude) ... FAIL
+test_shuffled_control_preserves_weight_distribution (test_m01_elasticity.ElasticityTests.test_shuffled_control_preserves_weight_distribution) ... FAIL
+test_acceleration_preserves_identity_through_ambiguous_crossing (test_m03_correspondence.CorrespondenceTests.test_acceleration_preserves_identity_through_ambiguous_crossing) ... ok
+test_candidate_slot_reordering_does_not_change_selected_physical_track (test_m03_correspondence.CorrespondenceTests.test_candidate_slot_reordering_does_not_change_selected_physical_track) ... ok
+test_dp_matches_exhaustive_temporal_objective (test_m03_correspondence.CorrespondenceTests.test_dp_matches_exhaustive_temporal_objective) ... ok
+test_mask_is_respected_and_all_invalid_is_explicit (test_m03_correspondence.CorrespondenceTests.test_mask_is_respected_and_all_invalid_is_explicit) ... ok
+test_nonfinite_rejected (test_m03_correspondence.CorrespondenceTests.test_nonfinite_rejected) ... ok
+test_surface_evidence_keeps_adjacent_points_together (test_m03_correspondence.CorrespondenceTests.test_surface_evidence_keeps_adjacent_points_together) ... ok
+test_unidentifiable_and_oversized_components_are_not_silent (test_m03_correspondence.CorrespondenceTests.test_unidentifiable_and_oversized_components_are_not_silent) ... ok
+test_bad_visibility_and_nonfinite_rejected (test_m04_occlusion.OcclusionTests.test_bad_visibility_and_nonfinite_rejected) ... ok
+test_irregular_timestamps_and_multiple_gaps (test_m04_occlusion.OcclusionTests.test_irregular_timestamps_and_multiple_gaps) ... ok
+test_one_sided_gap_abstains (test_m04_occlusion.OcclusionTests.test_one_sided_gap_abstains) ... ok
+test_plain_temporal_baseline_matches_linear_for_affine_motion (test_m04_occlusion.OcclusionTests.test_plain_temporal_baseline_matches_linear_for_affine_motion) ... ok
+test_visible_samples_exact_and_neighbor_recovers_nonlinear_gap (test_m04_occlusion.OcclusionTests.test_visible_samples_exact_and_neighbor_recovers_nonlinear_gap) ... ok
+test_bbox_and_global_controls_are_executable (test_m05_scale.ScaleTests.test_bbox_and_global_controls_are_executable) ... FAIL
+test_rigid_sequence_is_identity_and_missing_stability_abstains (test_m05_scale.ScaleTests.test_rigid_sequence_is_identity_and_missing_stability_abstains) ... FAIL
+test_scale_fix_keeps_translation_rotation_and_articulation (test_m05_scale.ScaleTests.test_scale_fix_keeps_translation_rotation_and_articulation) ... FAIL
+test_similarity_recovers_known_transform_despite_stable_region_outlier (test_m05_scale.ScaleTests.test_similarity_recovers_known_transform_despite_stable_region_outlier) ... FAIL
+test_m06_selection (unittest.loader._FailedTest.test_m06_selection) ... ERROR
+test_all_strategies_charge_unique_probes_and_use_exact_budget (test_m07_sampling.SamplingTests.test_all_strategies_charge_unique_probes_and_use_exact_budget) ... ok
+test_global_translation_reproduced_from_one_paid_query (test_m07_sampling.SamplingTests.test_global_translation_reproduced_from_one_paid_query) ... ok
+test_invalid_budget_geometry_and_decoder_shape_are_rejected (test_m07_sampling.SamplingTests.test_invalid_budget_geometry_and_decoder_shape_are_rejected) ... ok
+test_no_full_trajectory_argument_and_callback_receives_only_budgeted_indices (test_m07_sampling.SamplingTests.test_no_full_trajectory_argument_and_callback_receives_only_budgeted_indices) ... ok
+test_residual_score_changes_allocation_after_observed_nonuniform_motion (test_m07_sampling.SamplingTests.test_residual_score_changes_allocation_after_observed_nonuniform_motion) ... ok
+test_contact_projection_moves_only_normal_and_preserves_other_vertices (test_m08_contact.ContactTests.test_contact_projection_moves_only_normal_and_preserves_other_vertices) ... FAIL
+test_coupled_halfspaces_converge_and_standard_control_is_feasible (test_m08_contact.ContactTests.test_coupled_halfspaces_converge_and_standard_control_is_feasible) ... FAIL
+test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices (test_m08_contact.ContactTests.test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices) ... FAIL
+test_infeasible_displacement_bound_is_reported_and_pins_hold (test_m08_contact.ContactTests.test_infeasible_displacement_bound_is_reported_and_pins_hold) ... FAIL
+test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact (test_m08_contact.ContactTests.test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact) ... FAIL
+test_model_methods (unittest.loader._FailedTest.test_model_methods) ... ERROR
+
+======================================================================
+ERROR: test_m06_selection (unittest.loader._FailedTest.test_m06_selection)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_m06_selection
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m06_selection.py", line 4, in <module>
+    from research_ten import m06_selection as selection
+ModuleNotFoundError: No module named 'research_ten'
+
+
+======================================================================
+ERROR: test_model_methods (unittest.loader._FailedTest.test_model_methods)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_model_methods
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 426, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/loader.py", line 367, in _get_module_from_name
+    __import__(name)
+    ~~~~~~~~~~^^^^^^
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_model_methods.py", line 5, in <module>
+    from research_ten.m02_cycles import vertex_normals, anchored_consensus, probe_cycles
+ModuleNotFoundError: No module named 'research_ten'
+
+
+======================================================================
+FAIL: test_controls_write_finite_results_and_preserve_existing_output (test_cli.CommandLineTests.test_controls_write_finite_results_and_preserve_existing_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_cli.py", line 16, in test_controls_write_finite_results_and_preserve_existing_output
+    self.assertEqual(result.returncode, 0, result.stderr+result.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /opt/homebrew/opt/python@3.14/bin/python3.14: No module named research_ten
+
+
+======================================================================
+FAIL: test_list_reports_external_input_requirements (test_cli.CommandLineTests.test_list_reports_external_input_requirements)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_cli.py", line 29, in test_list_reports_external_input_requirements
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : /opt/homebrew/opt/python@3.14/bin/python3.14: No module named research_ten
+
+
+======================================================================
+FAIL: test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor (test_m01_elasticity.ElasticityTests.test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 10, in api
+    return importlib.import_module("research_ten.m01_elasticity")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 46, in test_arap_preserves_rigid_motion_nonuniform_time_and_exact_anchor
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 12, in api
+    raise AssertionError("observation-supported ARAP implementation is missing")
+AssertionError: observation-supported ARAP implementation is missing
+
+======================================================================
+FAIL: test_invalid_time_and_edges_are_rejected (test_m01_elasticity.ElasticityTests.test_invalid_time_and_edges_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 10, in api
+    return importlib.import_module("research_ten.m01_elasticity")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 78, in test_invalid_time_and_edges_are_rejected
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 12, in api
+    raise AssertionError("observation-supported ARAP implementation is missing")
+AssertionError: observation-supported ARAP implementation is missing
+
+======================================================================
+FAIL: test_local_elasticity_retains_supported_action_and_regularizes_noise (test_m01_elasticity.ElasticityTests.test_local_elasticity_retains_supported_action_and_regularizes_noise)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 10, in api
+    return importlib.import_module("research_ten.m01_elasticity")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 56, in test_local_elasticity_retains_supported_action_and_regularizes_noise
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 12, in api
+    raise AssertionError("observation-supported ARAP implementation is missing")
+AssertionError: observation-supported ARAP implementation is missing
+
+======================================================================
+FAIL: test_observed_evidence_selects_strain_not_motion_amplitude (test_m01_elasticity.ElasticityTests.test_observed_evidence_selects_strain_not_motion_amplitude)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 10, in api
+    return importlib.import_module("research_ten.m01_elasticity")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 29, in test_observed_evidence_selects_strain_not_motion_amplitude
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 12, in api
+    raise AssertionError("observation-supported ARAP implementation is missing")
+AssertionError: observation-supported ARAP implementation is missing
+
+======================================================================
+FAIL: test_shuffled_control_preserves_weight_distribution (test_m01_elasticity.ElasticityTests.test_shuffled_control_preserves_weight_distribution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 10, in api
+    return importlib.import_module("research_ten.m01_elasticity")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 68, in test_shuffled_control_preserves_weight_distribution
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m01_elasticity.py", line 12, in api
+    raise AssertionError("observation-supported ARAP implementation is missing")
+AssertionError: observation-supported ARAP implementation is missing
+
+======================================================================
+FAIL: test_bbox_and_global_controls_are_executable (test_m05_scale.ScaleTests.test_bbox_and_global_controls_are_executable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 10, in api
+    return importlib.import_module("research_ten.m05_scale")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 57, in test_bbox_and_global_controls_are_executable
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 12, in api
+    raise AssertionError("stable-region scale decomposition is missing")
+AssertionError: stable-region scale decomposition is missing
+
+======================================================================
+FAIL: test_rigid_sequence_is_identity_and_missing_stability_abstains (test_m05_scale.ScaleTests.test_rigid_sequence_is_identity_and_missing_stability_abstains)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 10, in api
+    return importlib.import_module("research_ten.m05_scale")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 44, in test_rigid_sequence_is_identity_and_missing_stability_abstains
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 12, in api
+    raise AssertionError("stable-region scale decomposition is missing")
+AssertionError: stable-region scale decomposition is missing
+
+======================================================================
+FAIL: test_scale_fix_keeps_translation_rotation_and_articulation (test_m05_scale.ScaleTests.test_scale_fix_keeps_translation_rotation_and_articulation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 10, in api
+    return importlib.import_module("research_ten.m05_scale")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 29, in test_scale_fix_keeps_translation_rotation_and_articulation
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 12, in api
+    raise AssertionError("stable-region scale decomposition is missing")
+AssertionError: stable-region scale decomposition is missing
+
+======================================================================
+FAIL: test_similarity_recovers_known_transform_despite_stable_region_outlier (test_m05_scale.ScaleTests.test_similarity_recovers_known_transform_despite_stable_region_outlier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 10, in api
+    return importlib.import_module("research_ten.m05_scale")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 17, in test_similarity_recovers_known_transform_despite_stable_region_outlier
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m05_scale.py", line 12, in api
+    raise AssertionError("stable-region scale decomposition is missing")
+AssertionError: stable-region scale decomposition is missing
+
+======================================================================
+FAIL: test_contact_projection_moves_only_normal_and_preserves_other_vertices (test_m08_contact.ContactTests.test_contact_projection_moves_only_normal_and_preserves_other_vertices)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 10, in api
+    return importlib.import_module("research_ten.m08_contact")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 17, in test_contact_projection_moves_only_normal_and_preserves_other_vertices
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 12, in api
+    raise AssertionError("bounded contact repair is missing")
+AssertionError: bounded contact repair is missing
+
+======================================================================
+FAIL: test_coupled_halfspaces_converge_and_standard_control_is_feasible (test_m08_contact.ContactTests.test_coupled_halfspaces_converge_and_standard_control_is_feasible)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 10, in api
+    return importlib.import_module("research_ten.m08_contact")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 38, in test_coupled_halfspaces_converge_and_standard_control_is_feasible
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 12, in api
+    raise AssertionError("bounded contact repair is missing")
+AssertionError: bounded contact repair is missing
+
+======================================================================
+FAIL: test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices (test_m08_contact.ContactTests.test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 10, in api
+    return importlib.import_module("research_ten.m08_contact")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 60, in test_geometry_detection_uses_reference_side_and_excludes_adjacent_vertices
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 12, in api
+    raise AssertionError("bounded contact repair is missing")
+AssertionError: bounded contact repair is missing
+
+======================================================================
+FAIL: test_infeasible_displacement_bound_is_reported_and_pins_hold (test_m08_contact.ContactTests.test_infeasible_displacement_bound_is_reported_and_pins_hold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 10, in api
+    return importlib.import_module("research_ten.m08_contact")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 28, in test_infeasible_displacement_bound_is_reported_and_pins_hold
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 12, in api
+    raise AssertionError("bounded contact repair is missing")
+AssertionError: bounded contact repair is missing
+
+======================================================================
+FAIL: test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact (test_m08_contact.ContactTests.test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 10, in api
+    return importlib.import_module("research_ten.m08_contact")
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1314, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1335, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'research_ten'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 49, in test_no_contacts_is_exact_identity_and_trajectory_anchor_is_exact
+    m = api()
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m08_contact.py", line 12, in api
+    raise AssertionError("bounded contact repair is missing")
+AssertionError: bounded contact repair is missing
+
+----------------------------------------------------------------------
+Ran 35 tests in 0.092s
+
+FAILED (failures=16, errors=2)

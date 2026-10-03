@@ -1,0 +1,48 @@
+{
+  "method": 1,
+  "validation": "constructed numerical controls only",
+  "scores": {
+    "uniform_0.001": {
+      "constructed_error": 0.5976143426103577,
+      "anchor_max_error": 0.0,
+      "converged": true
+    },
+    "uniform_1": {
+      "constructed_error": 0.49477267507411915,
+      "anchor_max_error": 0.0,
+      "converged": true
+    },
+    "uniform_100": {
+      "constructed_error": 0.5985056109696463,
+      "anchor_max_error": 0.0,
+      "converged": true
+    },
+    "uniform_mean": {
+      "constructed_error": 0.5722099794656345,
+      "anchor_max_error": 0.0,
+      "converged": true
+    },
+    "motion": {
+      "constructed_error": 0.46970934282567917,
+      "anchor_max_error": 0.0,
+      "converged": true
+    },
+    "shuffled": {
+      "constructed_error": 0.540015450014426,
+      "anchor_max_error": 0.0,
+      "converged": false
+    },
+    "observed": {
+      "constructed_error": 0.058789957284928876,
+      "anchor_max_error": 0.0,
+      "converged": true
+    }
+  },
+  "elapsed_seconds": 0.04978612391278148,
+  "missing_for_natural_validation": [
+    "measured image tracks/confidence",
+    "camera calibration",
+    "natural failure census"
+  ],
+  "evidence_type": "constructed_control"
+}

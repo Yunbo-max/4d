@@ -1,0 +1,158 @@
+FFFFFFFFFFFFFFFFF
+======================================================================
+FAIL: test_acceleration_preserves_identity_through_ambiguous_crossing (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_acceleration_preserves_identity_through_ambiguous_crossing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_candidate_slot_reordering_does_not_change_selected_physical_track (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_candidate_slot_reordering_does_not_change_selected_physical_track)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_dp_matches_exhaustive_temporal_objective (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_dp_matches_exhaustive_temporal_objective)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_mask_is_respected_and_all_invalid_is_explicit (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_mask_is_respected_and_all_invalid_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_nonfinite_rejected (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_nonfinite_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_surface_evidence_keeps_adjacent_points_together (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_surface_evidence_keeps_adjacent_points_together)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_unidentifiable_and_oversized_components_are_not_silent (actionmesh.research_ten.tests.test_m03_correspondence.CorrespondenceTests.test_unidentifiable_and_oversized_components_are_not_silent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m03_correspondence.py", line 16, in setUp
+    self.assertIsNotNone(method, "The explicit-candidate correspondence solver is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The explicit-candidate correspondence solver is not implemented
+
+======================================================================
+FAIL: test_bad_visibility_and_nonfinite_rejected (actionmesh.research_ten.tests.test_m04_occlusion.OcclusionTests.test_bad_visibility_and_nonfinite_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m04_occlusion.py", line 14, in setUp
+    self.assertIsNotNone(method, "The constrained occlusion repair is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The constrained occlusion repair is not implemented
+
+======================================================================
+FAIL: test_irregular_timestamps_and_multiple_gaps (actionmesh.research_ten.tests.test_m04_occlusion.OcclusionTests.test_irregular_timestamps_and_multiple_gaps)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m04_occlusion.py", line 14, in setUp
+    self.assertIsNotNone(method, "The constrained occlusion repair is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The constrained occlusion repair is not implemented
+
+======================================================================
+FAIL: test_one_sided_gap_abstains (actionmesh.research_ten.tests.test_m04_occlusion.OcclusionTests.test_one_sided_gap_abstains)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m04_occlusion.py", line 14, in setUp
+    self.assertIsNotNone(method, "The constrained occlusion repair is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The constrained occlusion repair is not implemented
+
+======================================================================
+FAIL: test_plain_temporal_baseline_matches_linear_for_affine_motion (actionmesh.research_ten.tests.test_m04_occlusion.OcclusionTests.test_plain_temporal_baseline_matches_linear_for_affine_motion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m04_occlusion.py", line 14, in setUp
+    self.assertIsNotNone(method, "The constrained occlusion repair is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The constrained occlusion repair is not implemented
+
+======================================================================
+FAIL: test_visible_samples_exact_and_neighbor_recovers_nonlinear_gap (actionmesh.research_ten.tests.test_m04_occlusion.OcclusionTests.test_visible_samples_exact_and_neighbor_recovers_nonlinear_gap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m04_occlusion.py", line 14, in setUp
+    self.assertIsNotNone(method, "The constrained occlusion repair is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The constrained occlusion repair is not implemented
+
+======================================================================
+FAIL: test_all_strategies_charge_unique_probes_and_use_exact_budget (actionmesh.research_ten.tests.test_m07_sampling.SamplingTests.test_all_strategies_charge_unique_probes_and_use_exact_budget)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m07_sampling.py", line 14, in setUp
+    self.assertIsNotNone(method, "The budgeted sparse query allocator is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The budgeted sparse query allocator is not implemented
+
+======================================================================
+FAIL: test_global_translation_reproduced_from_one_paid_query (actionmesh.research_ten.tests.test_m07_sampling.SamplingTests.test_global_translation_reproduced_from_one_paid_query)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m07_sampling.py", line 14, in setUp
+    self.assertIsNotNone(method, "The budgeted sparse query allocator is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The budgeted sparse query allocator is not implemented
+
+======================================================================
+FAIL: test_invalid_budget_geometry_and_decoder_shape_are_rejected (actionmesh.research_ten.tests.test_m07_sampling.SamplingTests.test_invalid_budget_geometry_and_decoder_shape_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m07_sampling.py", line 14, in setUp
+    self.assertIsNotNone(method, "The budgeted sparse query allocator is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The budgeted sparse query allocator is not implemented
+
+======================================================================
+FAIL: test_no_full_trajectory_argument_and_callback_receives_only_budgeted_indices (actionmesh.research_ten.tests.test_m07_sampling.SamplingTests.test_no_full_trajectory_argument_and_callback_receives_only_budgeted_indices)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m07_sampling.py", line 14, in setUp
+    self.assertIsNotNone(method, "The budgeted sparse query allocator is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The budgeted sparse query allocator is not implemented
+
+======================================================================
+FAIL: test_residual_score_changes_allocation_after_observed_nonuniform_motion (actionmesh.research_ten.tests.test_m07_sampling.SamplingTests.test_residual_score_changes_allocation_after_observed_nonuniform_motion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m07_sampling.py", line 14, in setUp
+    self.assertIsNotNone(method, "The budgeted sparse query allocator is not implemented")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: unexpectedly None : The budgeted sparse query allocator is not implemented
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.002s
+
+FAILED (failures=17)

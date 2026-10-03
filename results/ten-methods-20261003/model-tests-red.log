@@ -1,0 +1,19 @@
+test_model_methods (unittest.loader._FailedTest.test_model_methods) ... ERROR
+
+======================================================================
+ERROR: test_model_methods (unittest.loader._FailedTest.test_model_methods)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_model_methods
+Traceback (most recent call last):
+  File "/Users/yunbo/miniforge3/lib/python3.12/unittest/loader.py", line 137, in loadTestsFromName
+    module = __import__(module_name)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_model_methods.py", line 5, in <module>
+    from research_ten.m02_cycles import vertex_normals, anchored_consensus, probe_cycles
+ModuleNotFoundError: No module named 'research_ten.m02_cycles'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)

@@ -1,0 +1,16 @@
+{
+  "python": "3.12.6 | packaged by conda-forge | (main, Sep 22 2024, 14:07:06) [Clang 17.0.6 ]",
+  "executable": "/Users/yunbo/Documents/4d/.venv-research/bin/python",
+  "torch": "2.14.1",
+  "numpy": "2.5.3",
+  "machine": "arm64",
+  "macos": "14.2",
+  "mps_built": true,
+  "mps_available": false,
+  "cpu_tensor_check": [
+    2.0,
+    3.0
+  ],
+  "installation_source": "https://pypi.org/simple",
+  "official_installation_documentation": "https://pytorch.org/get-started/locally/"
+}

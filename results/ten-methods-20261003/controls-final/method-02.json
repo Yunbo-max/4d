@@ -1,0 +1,12 @@
+{
+  "method": 2,
+  "evidence": "constructed callback flows, not native quality",
+  "rigid_cycle_residual": 0.0,
+  "inconsistent_cycle_residual": 1.4433756729740645,
+  "inconsistent_composition_residual": 0.8660254037844386,
+  "query_points_per_arm": 16,
+  "decoder_calls_per_arm": 3,
+  "anchor_exact": true,
+  "native_validation_required": true,
+  "evidence_type": "constructed_control"
+}

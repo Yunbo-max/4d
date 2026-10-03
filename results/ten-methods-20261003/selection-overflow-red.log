@@ -1,0 +1,31 @@
+test_action_gate_blocks_static_and_feasibility_differs_from_text (test_m06_selection.SelectionTests.test_action_gate_blocks_static_and_feasibility_differs_from_text) ... ok
+test_all_ineligible_abstains_instead_of_selecting_static (test_m06_selection.SelectionTests.test_all_ineligible_abstains_instead_of_selecting_static) ... ok
+test_duplicate_ids_rejected (test_m06_selection.SelectionTests.test_duplicate_ids_rejected) ... ok
+test_invalid_selection_seed_fails_before_expensive_generation (test_m06_selection.SelectionTests.test_invalid_selection_seed_fails_before_expensive_generation) ... ok
+test_large_finite_weights_keep_ranking_and_normalization (test_m06_selection.SelectionTests.test_large_finite_weights_keep_ranking_and_normalization) ... ERROR
+test_missing_and_invalid_scores_rejected (test_m06_selection.SelectionTests.test_missing_and_invalid_scores_rejected) ... ok
+test_no_tracks_are_invalid_not_perfectly_stable (test_m06_selection.SelectionTests.test_no_tracks_are_invalid_not_perfectly_stable) ... ok
+test_nonuniform_distortion_lowers_shape_score (test_m06_selection.SelectionTests.test_nonuniform_distortion_lowers_shape_score) ... ok
+test_pipeline_never_calls_backend_when_action_gate_fails (test_m06_selection.SelectionTests.test_pipeline_never_calls_backend_when_action_gate_fails) ... ok
+test_pipeline_scores_every_candidate_but_reconstructs_selected_one_only (test_m06_selection.SelectionTests.test_pipeline_scores_every_candidate_but_reconstructs_selected_one_only) ... ok
+test_random_control_respects_same_action_gate (test_m06_selection.SelectionTests.test_random_control_respects_same_action_gate) ... ok
+test_translation_and_uniform_camera_scale_do_not_change_proportion (test_m06_selection.SelectionTests.test_translation_and_uniform_camera_scale_do_not_change_proportion) ... ok
+test_validity_gate_applies_to_all_policies (test_m06_selection.SelectionTests.test_validity_gate_applies_to_all_policies) ... ok
+
+======================================================================
+ERROR: test_large_finite_weights_keep_ranking_and_normalization (test_m06_selection.SelectionTests.test_large_finite_weights_keep_ranking_and_normalization)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m06_selection.py", line 55, in test_large_finite_weights_keep_ranking_and_normalization
+    got = selection.select_video(f, weights=[1e308, 1e308, 1.])
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/m06_selection.py", line 65, in select_video
+    if w.shape != (3,) or not np.isfinite(w).all() or np.any(w < 0) or w.sum() <= 0:
+                                                                       ~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/numpy/_core/_methods.py", line 49, in _sum
+    return umr_sum(a, axis, dtype, out, keepdims, initial, where)
+FloatingPointError: overflow encountered in reduce
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.063s
+
+FAILED (errors=1)

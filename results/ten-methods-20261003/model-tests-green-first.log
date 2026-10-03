@@ -1,0 +1,19 @@
+test_budget_is_checked_before_decoder_work (research_ten.tests.test_model_methods.CycleTests.test_budget_is_checked_before_decoder_work) ... ok
+test_consensus_solves_anchored_graph_not_just_averaging (research_ten.tests.test_model_methods.CycleTests.test_consensus_solves_anchored_graph_not_just_averaging) ... ok
+test_degenerate_normals_are_not_silently_invented (research_ten.tests.test_model_methods.CycleTests.test_degenerate_normals_are_not_silently_invented) ... ok
+test_inconsistent_path_is_detected_without_claiming_quality_gain (research_ten.tests.test_model_methods.CycleTests.test_inconsistent_path_is_detected_without_claiming_quality_gain) ... ok
+test_rigid_flow_composes_and_recomputes_intermediate_normals (research_ten.tests.test_model_methods.CycleTests.test_rigid_flow_composes_and_recomputes_intermediate_normals) ... ok
+test_invalid_shapes_and_nonfinite_are_rejected (research_ten.tests.test_model_methods.GuidanceTests.test_invalid_shapes_and_nonfinite_are_rejected) ... ok
+test_live_flow_requeries_changed_state_and_never_changes_known_latent (research_ten.tests.test_model_methods.GuidanceTests.test_live_flow_requeries_changed_state_and_never_changes_known_latent) ... ok
+test_normmatched_and_random_controls_have_declared_budgets (research_ten.tests.test_model_methods.GuidanceTests.test_normmatched_and_random_controls_have_declared_budgets) ... ok
+test_projection_removes_only_conflicting_component_and_respects_anchor (research_ten.tests.test_model_methods.GuidanceTests.test_projection_removes_only_conflicting_component_and_respects_anchor) ... ok
+test_zero_mesh_and_nonconflict_are_unchanged (research_ten.tests.test_model_methods.GuidanceTests.test_zero_mesh_and_nonconflict_are_unchanged) ... ok
+test_budget_and_short_input_reject_before_rollout (research_ten.tests.test_model_methods.WindowTests.test_budget_and_short_input_reject_before_rollout) ... ok
+test_four_windows_rerun_backward_and_preserve_all_source_anchors (research_ten.tests.test_model_methods.WindowTests.test_four_windows_rerun_backward_and_preserve_all_source_anchors) ... ok
+test_representation_mismatch_and_mutated_anchors_fail (research_ten.tests.test_model_methods.WindowTests.test_representation_mismatch_and_mutated_anchors_fail) ... ok
+test_unreliable_future_is_not_used_as_backward_evidence (research_ten.tests.test_model_methods.WindowTests.test_unreliable_future_is_not_used_as_backward_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.031s
+
+OK

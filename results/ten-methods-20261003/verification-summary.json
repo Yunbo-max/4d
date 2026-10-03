@@ -1,0 +1,45 @@
+{
+  "local_tests": {
+    "run": 71,
+    "pass": 71,
+    "fail": 0,
+    "skip": 0,
+    "environment": "local-environment.json",
+    "log": "local-torch-tests-final.log"
+  },
+  "remote_tests": {
+    "run": 71,
+    "pass": 71,
+    "fail": 0,
+    "skip": 0,
+    "log": "remote/research/ten-methods-20261003/remote-tests-final.log"
+  },
+  "constructed_controls": {
+    "local": 10,
+    "remote": 10,
+    "evidence_scope": "software controls only"
+  },
+  "native_gpu": {
+    "status": "completed",
+    "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+    "elapsed_seconds": 170.31150748790242,
+    "decoder_parity_rms_over_diagonal": 3.7433510041671155e-08,
+    "decoder_frozen": true,
+    "denoiser_frozen": true,
+    "decoder_gradients_absent": true,
+    "denoiser_gradients_absent": true,
+    "source_hashes_unchanged": true,
+    "resources": {
+      "elapsed_seconds": 163.3323117729742,
+      "peak_allocated_bytes": 9968082432,
+      "peak_reserved_bytes": 10519314432,
+      "physical_gpu_sampled_peak_mib": 10229.0,
+      "gpu_samples": 163,
+      "gpu_monitor_error": null,
+      "gpu": "NVIDIA GeForce RTX 2080 Ti",
+      "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+    }
+  },
+  "native_tested_source_matches_delivery": true,
+  "natural_benchmark_completed": false
+}

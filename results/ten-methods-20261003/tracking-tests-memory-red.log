@@ -1,0 +1,53 @@
+FE
+======================================================================
+ERROR: test_distance_chunk_partition_preserves_queries_and_interpolation (research_ten.tests.test_m07_sampling.SamplingTests.test_distance_chunk_partition_preserves_queries_and_interpolation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m07_sampling.py", line 75, in test_distance_chunk_partition_preserves_queries_and_interpolation
+    results = [method.allocate_controls(points, lambda ids: truth[:, ids], 9,
+               ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                strategy=strategy, curvature=np.linspace(0., 1., len(points)),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                distance_chunk_size=chunk) for chunk in [1, 7, 256]]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: allocate_controls() got an unexpected keyword argument 'distance_chunk_size'
+
+======================================================================
+FAIL: test_long_closed_gap_abstains_before_dense_solve (research_ten.tests.test_m04_occlusion.OcclusionTests.test_long_closed_gap_abstains_before_dense_solve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/4d-ten-methods/actionmesh/research_ten/tests/test_m04_occlusion.py", line 65, in test_long_closed_gap_abstains_before_dense_solve
+    np.testing.assert_array_equal(r["trajectories"], tracks)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/numpy/testing/_private/utils.py", line 1128, in assert_array_equal
+    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         verbose=verbose, header='Arrays are not equal',
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                         strict=strict)
+                         ^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/numpy/testing/_private/utils.py", line 988, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+Mismatched elements: 894 / 900 (99.3%)
+First 5 mismatches are at indices:
+ [1, 0, 0]: 3.000000000000614 (ACTUAL), 3.0 (DESIRED)
+ [1, 0, 1]: 4.000000000000931 (ACTUAL), 4.0 (DESIRED)
+ [1, 0, 2]: 5.000000000000291 (ACTUAL), 5.0 (DESIRED)
+ [2, 0, 0]: 6.000000000001165 (ACTUAL), 6.0 (DESIRED)
+ [2, 0, 1]: 7.000000000001813 (ACTUAL), 7.0 (DESIRED)
+Max absolute difference among violations: 3.77099241e-10
+Max relative difference among violations: 7.54104982e-13
+ ACTUAL: array([[[  0.,   1.,   2.]],
+
+       [[  3.,   4.,   5.]],...
+ DESIRED: array([[[  0.,   1.,   2.]],
+
+       [[  3.,   4.,   5.]],...
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.070s
+
+FAILED (failures=1, errors=1)

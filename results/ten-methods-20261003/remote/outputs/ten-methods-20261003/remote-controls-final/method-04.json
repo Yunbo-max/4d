@@ -1,0 +1,33 @@
+{
+  "method": 4,
+  "evidence": "constructed_control_only",
+  "metrics": {
+    "raw": {
+      "occluded_rmse": 2.516611478423583,
+      "visible_max_change": 0.0,
+      "reappearance_step_error": 4.358898943540674
+    },
+    "linear": {
+      "occluded_rmse": 1.1254628677422756,
+      "visible_max_change": 0.0,
+      "reappearance_step_error": 1.0
+    },
+    "plain_temporal": {
+      "occluded_rmse": 1.1254628677422756,
+      "visible_max_change": 0.0,
+      "reappearance_step_error": 1.0
+    },
+    "surface_repair": {
+      "occluded_rmse": 0.0635555172887945,
+      "visible_max_change": 0.0,
+      "reappearance_step_error": 0.03438055720213473
+    }
+  },
+  "one_sided_repaired_count": 0,
+  "limitations": [
+    "Visibility and reliable point correspondences must be supplied.",
+    "Visible-neighbor offset transport is not a full surface deformation solver.",
+    "No image-based bidirectional tracker or natural-occlusion benchmark has been implemented."
+  ],
+  "evidence_type": "constructed_control"
+}

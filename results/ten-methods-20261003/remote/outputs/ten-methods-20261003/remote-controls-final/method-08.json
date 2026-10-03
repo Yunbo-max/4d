@@ -1,0 +1,37 @@
+{
+  "method": 8,
+  "validation": "constructed sampled-contact controls only",
+  "detected_contacts": 1,
+  "converged": true,
+  "scores": {
+    "original": {
+      "sampled_violation": 0.029999999999999992,
+      "tangential_change": 0.0,
+      "max_displacement": 0.0
+    },
+    "bounded_normal": {
+      "sampled_violation": 0.0,
+      "tangential_change": 0.0,
+      "max_displacement": 0.029999999999999992
+    },
+    "standard_contact_projection": {
+      "sampled_violation": 0.0,
+      "tangential_change": 0.0,
+      "max_displacement": 0.029999999999999992
+    },
+    "uniform_arap_disconnected_weak_control": {
+      "sampled_violation": 0.029999999999999992,
+      "tangential_change": 0.0,
+      "max_displacement": 0.0
+    }
+  },
+  "elapsed_seconds": 0.0024942990858107805,
+  "limitations": [
+    "supplied sampled linear constraints only; no CCD or IPC guarantee",
+    "nearby nonadjacent vertex-triangle samples only; edge-edge and swept collisions not covered",
+    "ARAP demo has an isolated contact probe and is a weak disconnected control, not a qualified collision baseline",
+    "IPC baseline not implemented",
+    "natural failure census required"
+  ],
+  "evidence_type": "constructed_control"
+}

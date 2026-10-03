@@ -1,0 +1,30 @@
+{
+  "method": 3,
+  "evidence": "constructed_control_only",
+  "metrics": {
+    "top1": {
+      "trajectory_rmse": 1.632993161855452,
+      "wrong_identity_frames_excluding_crossing": 3
+    },
+    "shortest_motion": {
+      "trajectory_rmse": 1.632993161855452,
+      "wrong_identity_frames_excluding_crossing": 3
+    },
+    "temporal_joint": {
+      "trajectory_rmse": 0.0,
+      "wrong_identity_frames_excluding_crossing": 0
+    },
+    "time_shuffled": {
+      "trajectory_rmse": 1.0690449676496976,
+      "wrong_identity_frames_excluding_crossing": 3
+    }
+  },
+  "candidate_entries_per_method": 14,
+  "candidate_acquisition": "not_implemented",
+  "limitations": [
+    "Caller must supply independently obtained feasible candidates and visible evidence.",
+    "Small connected neighborhoods only; exact joint state space grows exponentially.",
+    "Ties are ambiguous, and candidate coverage is not guaranteed."
+  ],
+  "evidence_type": "constructed_control"
+}
