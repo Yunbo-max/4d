@@ -1,0 +1,37 @@
+{
+  "scope": "Engineering verification and retained-report audit; no natural GPU scoring",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "new_engineering_tests": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  },
+  "existing_research_ten_tests": {
+    "total": 85,
+    "passed": 83,
+    "skipped": 2,
+    "failed": 0,
+    "skip_reason": "Torch is not installed in this environment"
+  },
+  "compile_and_cli_help": "passed",
+  "missing_natural_source_io_and_full_denominator": "passed",
+  "existing_output_overwrite_guard": "passed",
+  "independent_review": {
+    "remaining_critical": 0,
+    "remaining_important": 0,
+    "actual_sigterm_cleanup_checked": true,
+    "review_scope": "Read-only static/native-source checks plus engineering faults; no CUDA"
+  },
+  "native_cuda_scoring_executed": false,
+  "resource_capacity_qualified": false,
+  "scientific_status": "INCONCLUSIVE",
+  "source_sha256": {
+    "actionmesh/research_failure_diagnosis.py": "00c38721e24c36758a42041da5fed75a44922841b4e9d6aca72e7d74b89363d0",
+    "actionmesh/research_failure_trace.py": "fa7696a40c56a4fd85bf3f1164ba7c3c8fc61363af9e3766eeaf7831f6aabab0",
+    "actionmesh/test_research_failure_diagnosis.py": "20d15737c6bbfc107f3a208418775915887567d2db5b46a87d0ad46ed9e4d533",
+    "docs/failure-diagnosis/manifest-20261004.json": "edcacd334c63ee764d41b7ee1bf3943d4d0e604e772ee4e16ceed17732f961f1",
+    "docs/failure-diagnosis/protocol-20261004.md": "1a7ab1682280477816ab8575f76c5266fb1d5a92879d21f9c3f9b91eb5628443",
+    "docs/failure-diagnosis/historical-observation-20261004.json": "4a883f4efd760db90951c5e4ce0744bdf1f1d4f6d630b9dffac8fb3a140ef8e3",
+    "docs/research-ten/latest-update-review-20261003.md": "b2d876bb1585764ccdb4346806ab463542fdddd320ac81c93c3b8d512d52ad60"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "historical_stage_observation": {
+    "n_planned_assets": 8,
+    "n_assets_with_stage_report": 8,
+    "measured_frames": [
+      0,
+      8,
+      15
+    ],
+    "stageI_future_mean_above_anchor": 7,
+    "stageII_future_mean_above_anchor": 8,
+    "stageII_sampled_monotonic_increase": 3,
+    "stageII_future_mean_above_stageI": 5,
+    "meaningful_failure_threshold_established": false,
+    "rows": [
+      {
+        "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "stageI_cd": [
+          0.056579451195736666,
+          0.06773852293177887,
+          0.08094620084612728
+        ],
+        "stageII_cd": [
+          0.05667908281266629,
+          0.07010537720774633,
+          0.0869963922732912
+        ],
+        "stageI_future_mean_minus_anchor": 0.017762910693216408,
+        "stageII_future_mean_minus_anchor": 0.021871801927852486,
+        "stageII_future_mean_minus_stageI": 0.004208522851565699,
+        "sampled_monotonic_increase": true,
+        "source": "results/census-20261002/stage-gt/mannequin-seed42-v1/report.json",
+        "source_sha256": "307f4da762a15a83b540082177d4c1b4dd2428db115fbf1ffd304442f5c1104c"
+      },
+      {
+        "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+        "stageI_cd": [
+          0.0432344212540335,
+          0.15574910485485413,
+          0.13790493379196572
+        ],
+        "stageII_cd": [
+          0.04262811503842853,
+          0.16165383606903136,
+          0.1263106429023756
+        ],
+        "stageI_future_mean_minus_anchor": 0.10359259806937642,
+        "stageII_future_mean_minus_anchor": 0.10135412444727496,
+        "stageII_future_mean_minus_stageI": -0.0028447798377064237,
+        "sampled_monotonic_increase": false,
+        "source": "results/census-20261002/stage-gt/bat-seed42-v1/report.json",
+        "source_sha256": "7e0438a7ad489659e179fed6a05e911940d314ed23b1d48a4bacc1fc87131713"
+      },
+      {
+        "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+        "stageI_cd": [
+          0.08546691196003783,
+          0.10703670816353203,
+          0.1030214713803608
+        ],
+        "stageII_cd": [
+          0.08666329706392385,
+          0.1167571523587389,
+          0.11632427672043856
+        ],
+        "stageI_future_mean_minus_anchor": 0.019562177811908582,
+        "stageII_future_mean_minus_anchor": 0.029877417475664872,
+        "stageII_future_mean_minus_stageI": 0.011511624767642309,
+        "sampled_monotonic_increase": false,
+        "source": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/report.json",
+        "source_sha256": "d9707d12c4a02e9ef201f307f77d32bec395087a4749f93b6996fe07f3e5f210"
+      },
+      {
+        "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+        "stageI_cd": [
+          0.04346250214628676,
+          0.0535543711936149,
+          0.04184786996800513
+        ],
+        "stageII_cd": [
+          0.043733343014622617,
+          0.048303661582942005,
+          0.04202862738273941
+        ],
+        "stageI_future_mean_minus_anchor": 0.00423861843452325,
+        "stageII_future_mean_minus_anchor": 0.0014328014682180867,
+        "stageII_future_mean_minus_stageI": -0.0025349760979693076,
+        "sampled_monotonic_increase": false,
+        "source": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json",
+        "source_sha256": "797757577b505d9897046c2c7c6b96c9301956408f790c970e181997a9ec7200"
+      },
+      {
+        "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+        "stageI_cd": [
+          0.06071677786820144,
+          0.06342540382940676,
+          0.05663517338964898
+        ],
+        "stageII_cd": [
+          0.06095992831236502,
+          0.062124929434629377,
+          0.061665598934613514
+        ],
+        "stageI_future_mean_minus_anchor": -0.0006864892586735741,
+        "stageII_future_mean_minus_anchor": 0.0009353358722564292,
+        "stageII_future_mean_minus_stageI": 0.0018649755750935817,
+        "sampled_monotonic_increase": false,
+        "source": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/report.json",
+        "source_sha256": "7eea08a9b8b5c2e50e4f87dc63553aee7c6f57208b403dd338db44eea9efb51e"
+      },
+      {
+        "uid": "000-067_09a05166420843fab423047a799c87da",
+        "stageI_cd": [
+          0.028794304117213725,
+          0.030641825581961733,
+          0.04204484262606831
+        ],
+        "stageII_cd": [
+          0.028848368418474962,
+          0.029951380918020354,
+          0.04012557856091695
+        ],
+        "stageI_future_mean_minus_anchor": 0.007549029986801299,
+        "stageII_future_mean_minus_anchor": 0.006190111320993688,
+        "stageII_future_mean_minus_stageI": -0.0013048543645463734,
+        "sampled_monotonic_increase": true,
+        "source": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/report.json",
+        "source_sha256": "2ae0ea14e3c2b246381fe21eaccbd6662984c19d4e8803677ef8b0404c09d7ef"
+      },
+      {
+        "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+        "stageI_cd": [
+          0.05880978420915625,
+          0.07594405811076409,
+          0.09983126550970259
+        ],
+        "stageII_cd": [
+          0.059302480299950874,
+          0.07723821952596266,
+          0.1008878295380819
+        ],
+        "stageI_future_mean_minus_anchor": 0.02907787760107708,
+        "stageII_future_mean_minus_anchor": 0.029760544232071404,
+        "stageII_future_mean_minus_stageI": 0.0011753627217889473,
+        "sampled_monotonic_increase": true,
+        "source": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/report.json",
+        "source_sha256": "0b8d5c7237c1f79c531693e62c9fd9b852769ae347b8474ab40db220eafe5a04"
+      },
+      {
+        "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+        "stageI_cd": [
+          0.06450284548878568,
+          0.08052733569981316,
+          0.07526942832441152
+        ],
+        "stageII_cd": [
+          0.06407574399857352,
+          0.08123176663316903,
+          0.07759059982289236
+        ],
+        "stageI_future_mean_minus_anchor": 0.01339553652332666,
+        "stageII_future_mean_minus_anchor": 0.015335439229457182,
+        "stageII_future_mean_minus_stageI": 0.0015128012159183607,
+        "sampled_monotonic_increase": false,
+        "source": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/report.json",
+        "source_sha256": "c483d1864ea21b99e21dfffcc224224c5a5d1219ef17ee7df316b114fb294999"
+      }
+    ],
+    "errors": [],
+    "scope": "Three-frame shared-anchor geometry observation; not full16 native score or causal decomposition"
+  },
+  "historical_failed_attempts": [
+    {
+      "directory": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+      "report_present": true,
+      "report_sha256": "347683fc4b14d4cdd592ca4ba38fd283229482d8eff8ad89e14bdfd6b33d698b",
+      "status": "failed",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "error_type": "TypeError",
+      "error": "'dict' object is not callable",
+      "resources": {
+        "elapsed_seconds": 11.131156934890896,
+        "peak_allocated_bytes": 3973381120,
+        "peak_reserved_bytes": 3974103040,
+        "physical_gpu_sampled_peak_mib": 969.0,
+        "gpu_samples": 11,
+        "gpu_monitor_error": null,
+        "gpu": "NVIDIA GeForce RTX 2080 Ti",
+        "memory_scope": "torch: this process; nvidia-smi: physical GPU total, sampled each second"
+      },
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42"
+    }
+  ],
+  "natural_gate_0": "UNRESOLVED",
+  "gate_a": "NOT_FROZEN",
+  "limitations": [
+    "Inspected eight-asset development set; repeats are not independent assets.",
+    "No established task-relevant success/failure cutoff or population prevalence.",
+    "Frame correlations do not establish causal mechanism; ICP allows anisotropic scale.",
+    "Static and one smoothing baseline do not qualify strongest guidance/output-fitting alternatives.",
+    "New hypotheses, closest-work collision and fresh confirmation remain outstanding."
+  ],
+  "evidence_commit": "81f4f48330aef6d0c00dce9826335a3b1287850e",
+  "scope": "Derived audit of retained native reports; no fresh GPU scoring",
+  "native_scoring_executed": false
+}

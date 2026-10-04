@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "round_id": "failure-diagnosis-20261004-v1",
+  "scope": "Retrospective natural development diagnostic; prospective controls on previously inspected assets; no Gate A or population failure-rate claim",
+  "parent_commit": "655b55108bb309758a08efa5358e3ad44fd40b6c",
+  "evidence_commit": "81f4f48330aef6d0c00dce9826335a3b1287850e",
+  "dataset": "facebook/actionbench",
+  "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "population_count": 128,
+  "selection": "First8 by ascending sha256(salt+colon+UID) among all128 officialUIDs, before viewing images or new generation outputs; developmental census not population estimate",
+  "arms": [
+    "native",
+    "static_anchor",
+    "temporal_smooth"
+  ],
+  "frames": 16,
+  "protocol": {
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "official_sha256": {
+    "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+    "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+    "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+    "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+    "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+    "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+  },
+  "budgets": {
+    "case_seconds": 600,
+    "round_seconds": 5400,
+    "allocator_mib": 2048,
+    "free_reserve_mib": 2048,
+    "serial": true
+  },
+  "replay_tolerance": {
+    "atol": 0.000001,
+    "rtol": 0.0001,
+    "scope": "Numerical reproduction engineering tolerance, not a scientific improvement threshold"
+  },
+  "cases": [
+    {
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 42,
+      "case_dir": "000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+      "sequence_sha256": "16286f07f922493947e9a18b12c0bb39485c06ba518b8212dfef8deaa6a804c8",
+      "generation_report_sha256": "99653fa0a1f09aae1c52de5fd64f051039b2b06ae8ebf6e53c33fd173f4bc319",
+      "gt_sha256": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+      "reference_evaluation": "results/census-20261002/evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed42.json",
+      "reference_evaluation_git_blob": "09b58bd9340213421423763b2c319d2c82c9b300",
+      "reference_metrics": {
+        "cd_3d": 0.05927261386975176,
+        "cd_4d": 0.07004067110140907,
+        "cd_motion": 0.12774163484573364
+      },
+      "stage_report": "results/census-20261002/stage-gt/mannequin-seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "seed": 42,
+      "case_dir": "000-043_061697e330d44524bd11f8cf95772e2d__seed42",
+      "sequence_sha256": "4cd228b3c9da19113520abd0bb4da8d7fccc47b6f9b7c2270528b9c57c025050",
+      "generation_report_sha256": "3560f3f2ecef4f031d7fd4b514c60be17bae8fbe8074129e8d2fb4873572fb2e",
+      "gt_sha256": "d5d9ec579fcbbf29a59500892bcc13e4cba8073aa86b6b572d4859c4975c2d3a",
+      "reference_evaluation": "results/census-20261002/evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed42.json",
+      "reference_evaluation_git_blob": "1f7ac26d0b5030d7a2fe3dbc469c8db4b45904ef",
+      "reference_metrics": {
+        "cd_3d": 0.049732306717208914,
+        "cd_4d": 0.11420647260966355,
+        "cd_motion": 0.22630086541175842
+      },
+      "stage_report": "results/census-20261002/stage-gt/bat-seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+      "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+      "seed": 42,
+      "case_dir": "000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42",
+      "sequence_sha256": "82c0796ae42a3caed7ccbb7b6fdbe37c9b5769d822116e20fef7281af4af0925",
+      "generation_report_sha256": "8a312a96ac0a311d9580c704149b4af922a5894c81187b6a0476b539bb3c897e",
+      "gt_sha256": "eefb98517c56e663ad63f36089dcbd15c51181d514e4f0a3f99a82b10c194df3",
+      "reference_evaluation": "results/census-20261002/evaluations/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42.json",
+      "reference_evaluation_git_blob": "34bcc3691fcc7f2ba78e6a16de42aa3186386f11",
+      "reference_metrics": {
+        "cd_3d": 0.07832213843918318,
+        "cd_4d": 0.10251351500423125,
+        "cd_motion": 0.18063192069530487
+      },
+      "stage_report": "results/census-20261002/stage-gt/000-073_1008f82a1e4b4a5ea61e878803b997d0__seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+      "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+      "seed": 42,
+      "case_dir": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42",
+      "sequence_sha256": "87992e609b2a3fc44c9d4f0de9f8c6a4b04b319e9071411c67e84ae5dcf21330",
+      "generation_report_sha256": "4dc348bca1c7a7507c1cab9563f5a235adda9d0bbaa37fd9380325eae0b423e6",
+      "gt_sha256": "216cd6292d426e364f4bb1c424725682efb308a2a63e89b549535a87a1c44fba",
+      "reference_evaluation": "results/census-20261002/evaluations/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42.json",
+      "reference_evaluation_git_blob": "162de7c60d891eaaec9d188c5edb687537b067ae",
+      "reference_metrics": {
+        "cd_3d": 0.03683127211435189,
+        "cd_4d": 0.04481386841249212,
+        "cd_motion": 0.08438079059123993
+      },
+      "stage_report": "results/census-20261002/stage-gt/000-049_f50b8e5f13e2498c907cbbe20bf7cf95__seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+      "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+      "seed": 42,
+      "case_dir": "000-078_b0b646eb731848f7837ab8257dfc658c__seed42",
+      "sequence_sha256": "35ef373ed04801222a6444363bca9241bddf46596167fd808a463b544ab1959c",
+      "generation_report_sha256": "82d6ec2e1aea254111fea5c41491ecc62f053200f0a926065845799fe7ff2a0a",
+      "gt_sha256": "3950af976718719f21b6168f097905af0d7cb0fda711eaa3310cd1aa7a63a319",
+      "reference_evaluation": "results/census-20261002/evaluations/000-078_b0b646eb731848f7837ab8257dfc658c__seed42.json",
+      "reference_evaluation_git_blob": "b0df4d90efe945a41fa4e4e9b9e0d90f902c942d",
+      "reference_metrics": {
+        "cd_3d": 0.044262306875074264,
+        "cd_4d": 0.05833390951183867,
+        "cd_motion": 0.10740475356578827
+      },
+      "stage_report": "results/census-20261002/stage-gt/000-078_b0b646eb731848f7837ab8257dfc658c__seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-067_09a05166420843fab423047a799c87da__seed42",
+      "uid": "000-067_09a05166420843fab423047a799c87da",
+      "seed": 42,
+      "case_dir": "000-067_09a05166420843fab423047a799c87da__seed42",
+      "sequence_sha256": "5de3b3fe8948e4d9e73a534a0a2661222f59c41a4bd84a2e6a95f383ec4ffe98",
+      "generation_report_sha256": "d437bd164fc4ad9d7ac18c7a929e610345c466669956aa28f7701c60598e98fe",
+      "gt_sha256": "d1eb91e240da3c37db3f3796fccb2019eebc8d8be17b949a5819dcefc3280051",
+      "reference_evaluation": "results/census-20261002/evaluations/000-067_09a05166420843fab423047a799c87da__seed42.json",
+      "reference_evaluation_git_blob": "2af123d6dfda7320ebd759330f19496f1dc5f0f4",
+      "reference_metrics": {
+        "cd_3d": 0.03142444498711987,
+        "cd_4d": 0.03135834714327284,
+        "cd_motion": 0.04818332940340042
+      },
+      "stage_report": "results/census-20261002/stage-gt/000-067_09a05166420843fab423047a799c87da__seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+      "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+      "seed": 42,
+      "case_dir": "000-046_3bb11febd0624d7f8b30f491fb317d58__seed42",
+      "sequence_sha256": "53339b1cf64b082148c23a48ddb9e2ce3c4c8dae724647cc51a73ec079344205",
+      "generation_report_sha256": "723019974d749a3b810b6f330fdffb8d035f87e2a8f40550a5aca94be89658c8",
+      "gt_sha256": "fb6c2996027dd2d1a68aeb24dc4dd0aa24c5efa61c2185608492fb45d8076c4a",
+      "reference_evaluation": "results/census-20261002/evaluations/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42.json",
+      "reference_evaluation_git_blob": "6b7072d6c95b5999334fbd5a0da4edfc75bf1d1c",
+      "reference_metrics": {
+        "cd_3d": 0.0668792028865893,
+        "cd_4d": 0.07809889646071369,
+        "cd_motion": 0.18654504418373108
+      },
+      "stage_report": "results/census-20261002/stage-gt/000-046_3bb11febd0624d7f8b30f491fb317d58__seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+      "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+      "seed": 42,
+      "case_dir": "000-014_6cf7de7d14064b23be17811d19a63f13__seed42",
+      "sequence_sha256": "b97fac487df9bf74d3477358919c2e072d60696c93a56456c4dd3fcc68fbcd35",
+      "generation_report_sha256": "3f1bd141da4fb4f95604115b7cd036aa7d064f4cf9472562205f2ee8e83f95dc",
+      "gt_sha256": "d1b6672c6d7e32f58347919efcd4da131ecff17e588e90da1ea2546d14c8e572",
+      "reference_evaluation": "results/census-20261002/evaluations/000-014_6cf7de7d14064b23be17811d19a63f13__seed42.json",
+      "reference_evaluation_git_blob": "4fb9c6f2792345e902de2f4828f3e843a7bb55d2",
+      "reference_metrics": {
+        "cd_3d": 0.06268498553262403,
+        "cd_4d": 0.07202029783000069,
+        "cd_motion": 0.1257963478565216
+      },
+      "stage_report": "results/census-20261002/stage-gt/000-014_6cf7de7d14064b23be17811d19a63f13__seed42-v1/report.json"
+    },
+    {
+      "case_id": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "seed": 43,
+      "case_dir": "000-037_1358c424008a43cbaa35eba5e58551ac__seed43",
+      "sequence_sha256": "e7a0c0722e5867890ec697c0f74ebe8d9e007be9954ce83905b2ca7df0c2e499",
+      "generation_report_sha256": "796d2478f4b10206264845b8d9f1832c4e240a190f84d0fa7d166e52e64291c2",
+      "gt_sha256": "5af2983123584d926a0169030959ac35a33775fc4bf0cb5a578d5a6a5501d8a1",
+      "reference_evaluation": "results/census-20261002/evaluations/000-037_1358c424008a43cbaa35eba5e58551ac__seed43.json",
+      "reference_evaluation_git_blob": "63dabc3548bf3b90968f85b45a86a469833f0737",
+      "reference_metrics": {
+        "cd_3d": 0.0682106231745098,
+        "cd_4d": 0.07780679675206051,
+        "cd_motion": 0.1374140977859497
+      },
+      "stage_report": null
+    },
+    {
+      "case_id": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "seed": 43,
+      "case_dir": "000-043_061697e330d44524bd11f8cf95772e2d__seed43",
+      "sequence_sha256": "4accb2b020a1edcfb81a6c217427342c969b7961b5b867c8945eee7a530c56e8",
+      "generation_report_sha256": "7855c4cd88a21500466cf5632676e2c9789741984e01068b13e51acfdd9d652b",
+      "gt_sha256": "d5d9ec579fcbbf29a59500892bcc13e4cba8073aa86b6b572d4859c4975c2d3a",
+      "reference_evaluation": "results/census-20261002/evaluations/000-043_061697e330d44524bd11f8cf95772e2d__seed43.json",
+      "reference_evaluation_git_blob": "0063d08dcdb8c70212c26b67b8c47ada89ab4937",
+      "reference_metrics": {
+        "cd_3d": 0.04415392489978508,
+        "cd_4d": 0.106072209698493,
+        "cd_motion": 0.22297857701778412
+      },
+      "stage_report": null
+    }
+  ]
+}
+
