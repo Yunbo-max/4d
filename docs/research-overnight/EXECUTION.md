@@ -26,7 +26,8 @@
   in the delivery container and must be verified by the GPU worker's new receipts.
 - Ruling: actual launch time includes preflight; prepare/run share the same output
   lock. SIGTERM cleanup applies to preflight and execution, not only model units.
-- Task 4 review complete; GitHub delivery follows the final verified tree.
+- Task 4 complete: independent review, material fixes, final software verification,
+  GitHub fast-forward and delivered-file readback.
 - Fresh independent reviewer found three Important issues: generation weights
   absent from the resume binding, per-asset evaluation errors misclassified as
   missing backend, and partial QA objects counted as complete. Each finding was
@@ -49,3 +50,8 @@
   tree and upload only the 23 intended new/modified code/document paths.
 - Final scientific status: preparation/execution awaiting the user's GPU server;
   no Gate 0/IPCG/Gate A pass, candidate efficacy or novelty claim is established.
+- Delivered code commit: faac390acc17fe64f7b24f0109ed4e50cd199475, parent
+  81f4f48330aef6d0c00dce9826335a3b1287850e. All 23 intended files were read
+  back from GitHub and matched their local Git blob SHA and complete contents.
+  Main resolved to that commit; the original results subtree SHA was unchanged.
+  This closing ledger update changes documentation only; reviewed code is unchanged.
