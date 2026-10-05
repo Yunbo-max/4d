@@ -1,0 +1,226 @@
+{
+  "source_repository": "Yunbo-max/4d",
+  "source_commit": "81f4f48330aef6d0c00dce9826335a3b1287850e",
+  "files": [
+    {
+      "path": "actionbench/README.md",
+      "source_path": "actionmesh/repo/actionbench/README.md",
+      "git_blob_sha": "83b4d7c08c0cded4fa6eca74512a5db512f669d2"
+    },
+    {
+      "path": "actionbench/benchmark.py",
+      "source_path": "actionmesh/repo/actionbench/benchmark.py",
+      "git_blob_sha": "8d252b40d09189a92e4415a1dbeb4da2e4300646"
+    },
+    {
+      "path": "actionbench/chamfer.py",
+      "source_path": "actionmesh/repo/actionbench/chamfer.py",
+      "git_blob_sha": "dd1ef0f1c71faabda0ecade33d0b9f22a91d22f5"
+    },
+    {
+      "path": "actionbench/evaluate_dataset.py",
+      "source_path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+      "git_blob_sha": "2c9f1f02b8bd5486ee178754761a93532adb6de8"
+    },
+    {
+      "path": "actionbench/icp.py",
+      "source_path": "actionmesh/repo/actionbench/icp.py",
+      "git_blob_sha": "b2de6f0b98a024991a5d740a9e0f008e0b809448"
+    },
+    {
+      "path": "actionbench/sample_mesh.py",
+      "source_path": "actionmesh/repo/actionbench/sample_mesh.py",
+      "git_blob_sha": "b46ae6e6e1d588b907e8168fce5542dfaf9d8663"
+    },
+    {
+      "path": "actionbench/sample_point_cloud.py",
+      "source_path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+      "git_blob_sha": "7b2c553aa0e7e445773559a3246b79d5f0015a39"
+    },
+    {
+      "path": "actionmesh/configs/actionmesh.yaml",
+      "source_path": "actionmesh/repo/actionmesh/configs/actionmesh.yaml",
+      "git_blob_sha": "0bcf2cfda4b0680f6182f5961800a256f7ae210c"
+    },
+    {
+      "path": "actionmesh/configs/actionmesh_fast.yaml",
+      "source_path": "actionmesh/repo/actionmesh/configs/actionmesh_fast.yaml",
+      "git_blob_sha": "b1e17ef545db73d53bebcf1c547cee98d49ecb54"
+    },
+    {
+      "path": "actionmesh/configs/actionmesh_fast_lowram.yaml",
+      "source_path": "actionmesh/repo/actionmesh/configs/actionmesh_fast_lowram.yaml",
+      "git_blob_sha": "245888d5807e3a52083b0c8f798ee895231f7617"
+    },
+    {
+      "path": "actionmesh/configs/actionmesh_lowram.yaml",
+      "source_path": "actionmesh/repo/actionmesh/configs/actionmesh_lowram.yaml",
+      "git_blob_sha": "b7de1d38b49152208f6379d1d7e13043b431ebc1"
+    },
+    {
+      "path": "actionmesh/external/__init__.py",
+      "source_path": "actionmesh/repo/actionmesh/external/__init__.py",
+      "git_blob_sha": "6d00d4471b219424c615b6c58a5fce3e2eaea24f"
+    },
+    {
+      "path": "actionmesh/external/triposg.py",
+      "source_path": "actionmesh/repo/actionmesh/external/triposg.py",
+      "git_blob_sha": "bf7f6038f25573e6fd788367f6c820df1d1a1a3b"
+    },
+    {
+      "path": "actionmesh/io/__init__.py",
+      "source_path": "actionmesh/repo/actionmesh/io/__init__.py",
+      "git_blob_sha": "36d52a7d0c02357b588b83061b7e2464ae88ece0"
+    },
+    {
+      "path": "actionmesh/io/glb_export.py",
+      "source_path": "actionmesh/repo/actionmesh/io/glb_export.py",
+      "git_blob_sha": "cd3e266939b6f07e5610fa12835d0e25d7f00d99"
+    },
+    {
+      "path": "actionmesh/io/mesh_io.py",
+      "source_path": "actionmesh/repo/actionmesh/io/mesh_io.py",
+      "git_blob_sha": "54d8d9e2a155500b5a743166e060f4f031db63d4"
+    },
+    {
+      "path": "actionmesh/io/video_input.py",
+      "source_path": "actionmesh/repo/actionmesh/io/video_input.py",
+      "git_blob_sha": "e6bd99d120fb9b858d7a068a60fc05e406088129"
+    },
+    {
+      "path": "actionmesh/model/image_encoder.py",
+      "source_path": "actionmesh/repo/actionmesh/model/image_encoder.py",
+      "git_blob_sha": "bff6ced580f53f139f614bb5466ca91e16b91a1f"
+    },
+    {
+      "path": "actionmesh/model/temporal_autoencoder.py",
+      "source_path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "git_blob_sha": "e54197672b0eb20584fab692857fc7ad6b7fafdd"
+    },
+    {
+      "path": "actionmesh/model/temporal_denoiser.py",
+      "source_path": "actionmesh/repo/actionmesh/model/temporal_denoiser.py",
+      "git_blob_sha": "4e6e61821b5b67e56f5544c2017f3ed433a015c6"
+    },
+    {
+      "path": "actionmesh/model/utils/attention_processor.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/attention_processor.py",
+      "git_blob_sha": "de940e225656cc280506214a884941f621127f31"
+    },
+    {
+      "path": "actionmesh/model/utils/block.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/block.py",
+      "git_blob_sha": "2aabf0c8d93dd5931ebece92e8590c0a2463385c"
+    },
+    {
+      "path": "actionmesh/model/utils/embeddings.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/embeddings.py",
+      "git_blob_sha": "8287361bb0b40575a24eba6cffa608f8990774e9"
+    },
+    {
+      "path": "actionmesh/model/utils/pointcloud_sampling.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/pointcloud_sampling.py",
+      "git_blob_sha": "263d4dc4fe8c6b797e6093558db296e2c51ddd26"
+    },
+    {
+      "path": "actionmesh/model/utils/rotary_embedding.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/rotary_embedding.py",
+      "git_blob_sha": "1871bdfa3681f853b51a8c645c6a42ddba04edc6"
+    },
+    {
+      "path": "actionmesh/model/utils/storage.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/storage.py",
+      "git_blob_sha": "6f411112ee4a4efcd2f221e6d155ddbf7550a5ed"
+    },
+    {
+      "path": "actionmesh/model/utils/tensor_ops.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/tensor_ops.py",
+      "git_blob_sha": "061089952d12c2273efc85527cf48e80689103f1"
+    },
+    {
+      "path": "actionmesh/model/utils/timesteps.py",
+      "source_path": "actionmesh/repo/actionmesh/model/utils/timesteps.py",
+      "git_blob_sha": "5cc05aa6506352f0048030309e0e4c9548e6b20a"
+    },
+    {
+      "path": "actionmesh/pipeline.py",
+      "source_path": "actionmesh/repo/actionmesh/pipeline.py",
+      "git_blob_sha": "be0153d7e085f431368dfa6cdbc8052c00300dbf"
+    },
+    {
+      "path": "actionmesh/pipeline_with_3d.py",
+      "source_path": "actionmesh/repo/actionmesh/pipeline_with_3d.py",
+      "git_blob_sha": "2d30e4f438480f0cdf534bf69e46d2283a172e6c"
+    },
+    {
+      "path": "actionmesh/preprocessing/__init__.py",
+      "source_path": "actionmesh/repo/actionmesh/preprocessing/__init__.py",
+      "git_blob_sha": "3c0b9f80cb81892bd97f2a5788d82f9883b368c0"
+    },
+    {
+      "path": "actionmesh/preprocessing/background_removal.py",
+      "source_path": "actionmesh/repo/actionmesh/preprocessing/background_removal.py",
+      "git_blob_sha": "73bdf5331bdc875b3f05c45dd8f7383a46c8940f"
+    },
+    {
+      "path": "actionmesh/preprocessing/image_processor.py",
+      "source_path": "actionmesh/repo/actionmesh/preprocessing/image_processor.py",
+      "git_blob_sha": "aa4084f758d4cd538439a3bc55343317b98c1b95"
+    },
+    {
+      "path": "actionmesh/preprocessing/mesh_processor.py",
+      "source_path": "actionmesh/repo/actionmesh/preprocessing/mesh_processor.py",
+      "git_blob_sha": "35df6909265a16af9d36d729367a2c8333533589"
+    },
+    {
+      "path": "actionmesh/render/cameras.py",
+      "source_path": "actionmesh/repo/actionmesh/render/cameras.py",
+      "git_blob_sha": "efcffd0a5d4949c8304d207458ba5194e5e880d7"
+    },
+    {
+      "path": "actionmesh/render/renderer.py",
+      "source_path": "actionmesh/repo/actionmesh/render/renderer.py",
+      "git_blob_sha": "09cb3024d5ddfc264ba0c2c1ff0730ffe9ae1c07"
+    },
+    {
+      "path": "actionmesh/render/utils.py",
+      "source_path": "actionmesh/repo/actionmesh/render/utils.py",
+      "git_blob_sha": "d1430ff51f268b51fde97c3f72dd130faa9b4be7"
+    },
+    {
+      "path": "actionmesh/render/visualizer.py",
+      "source_path": "actionmesh/repo/actionmesh/render/visualizer.py",
+      "git_blob_sha": "3acc46a8d8c8ac3c6ef25169e6d7e68c568f5899"
+    },
+    {
+      "path": "actionmesh/scheduler/guidance.py",
+      "source_path": "actionmesh/repo/actionmesh/scheduler/guidance.py",
+      "git_blob_sha": "663fcbe8b76a74b2cfafe0b769a90b1278796f04"
+    },
+    {
+      "path": "actionmesh/scheduler/scheduler.py",
+      "source_path": "actionmesh/repo/actionmesh/scheduler/scheduler.py",
+      "git_blob_sha": "89dda62950f0feb179d44d28fea2141b4ecfb2d4"
+    },
+    {
+      "path": "actionmesh/utils.py",
+      "source_path": "actionmesh/repo/actionmesh/utils.py",
+      "git_blob_sha": "6d3eee51bc6eeaf3e14757a376b478b95a76f17c"
+    },
+    {
+      "path": "research_census_case.py",
+      "source_path": "actionmesh/research_census_case.py",
+      "git_blob_sha": "7e568382cda32bf071e45f99be15afa2f263246c"
+    },
+    {
+      "path": "research_census_eval.py",
+      "source_path": "actionmesh/research_census_eval.py",
+      "git_blob_sha": "bd58fbf10014abca5b275b96d4237d63a262fb06"
+    },
+    {
+      "path": "research_three_ideas.py",
+      "source_path": "actionmesh/research_three_ideas.py",
+      "git_blob_sha": "97f22158e7eeb0853a23d7286c106a9e58e1b8dc"
+    }
+  ]
+}

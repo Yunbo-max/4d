@@ -14,3 +14,6 @@
 **/.env.*
 .superpowers/
 **/.venv*/
+/results/overnight-*/
+/actionmesh/data/actionbench-overnight-*/
+/overnight-console.log

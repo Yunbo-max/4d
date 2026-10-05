@@ -2,6 +2,20 @@
 
 当前项目：**ActionMesh（CVPR 2026）官方预训练权重推理**，使用 RTX 2080 Ti 22 GiB，没有训练。
 
+## 今晚的 8 小时单卡队列（2026-10-05）
+
+[准备、启动、恢复和结果说明](docs/research-overnight/README.md)。默认复用已有
+ActionMesh 环境，检查实际显存，按冻结顺序运行新的 ActionBench 样本和原生评分。
+启动后最多 8 小时，重启沿用原截止时间。当前是基线和真实失败调查，尚未验证新方法。
+
+```bash
+git pull --ff-only
+bash scripts/run_8h_2080ti.sh prepare
+bash scripts/run_8h_2080ti.sh doctor
+# 晚上 23:00 在 GPU 服务器运行：
+nohup bash scripts/run_8h_2080ti.sh run --hours 8 > overnight-console.log 2>&1 &
+```
+
 ## 研究结果总览（2026-10-03）
 
 [全部十批实验结果](results/README.md) · [十项方法与71项测试](results/ten-methods-20261003/README.md) · [自然样本基线与负面结果](results/census-20261002/README.md) · [原始大归档下载](https://github.com/Yunbo-max/4d/releases/tag/results-2026-10-03)
