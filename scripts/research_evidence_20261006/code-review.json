@@ -1,0 +1,49 @@
+{
+  "kind": "independent-engineering-code-review",
+  "recorded_at": "2026-10-06T12:22:16.301268+00:00",
+  "reviewer": "Codex subagent /root/evidence_export_review_r1, separate read-only review context",
+  "outcome": "ready_to_submit_engineering_tool",
+  "remaining_critical": 0,
+  "remaining_important": 0,
+  "reviewed_code_refs": [
+    {
+      "path": "scripts/research_evidence_20261006/export_feedback.py",
+      "sha256": "331882b6ec20f8086344ea18cdbfacc6b595c0bee98b0d6e37ff578f540e902d"
+    },
+    {
+      "path": "scripts/research_evidence_20261006/tests/test_export_feedback.py",
+      "sha256": "e2cd5fc2994a909c6e648bb2f027196554a2cf53e0831b0e4658e10a699c0055"
+    }
+  ],
+  "test_log_ref": {
+    "path": "scripts/research_evidence_20261006/validation-logs/export-final-tests.log",
+    "sha256": "812afde3c7fc679a95ce1d0937175e2ace25b254ca2b11fe818dcdb8d1f58bb8"
+  },
+  "published_metadata_compatibility_ref": {
+    "path": "scripts/research_evidence_20261006/published-metadata-compatibility.json",
+    "sha256": "970fc42e7df9a05490719b28e27ec2a57d3879d34ed364fd62f2f79202419c9c"
+  },
+  "reviewer_report": "Engineering tool may be submitted. Independently reran 34 tests, all passing. Reproduced the prior five Important issue classes and transient seed999/seed42 JSON snapshot rewrite: all blocked without leftover destination. Original case/eval/generation/engine source SHA identities match frozen protocol; complete scorer PROTOCOL, manifest and input fields conform to historical schema. Aggregation means, bootstrap CI and order match the real 16/16 published summary. First snapshot state is preserved and parsed bytes are bound to the checked digest. No remaining Critical/Important issue found.",
+  "resolved_important": [
+    "first-snapshot replacement / independently parsed JSON byte race",
+    "partial scorer protocol / full-timeline metadata omission",
+    "missing nested cached image / denominator manifest accepted",
+    "inconsistent summary aggregates or pending state accepted",
+    "unreconciled preflight process/log/time trail"
+  ],
+  "minor_documentation_fixes": {
+    "observed_by_reviewer": [
+      "Python minimum should be 3.9+",
+      "test count should be 34"
+    ],
+    "corrected_by_root": true,
+    "documentation_ref": {
+      "path": "scripts/research_evidence_20261006/README.md",
+      "sha256": "6e1e4d73868723e00ffcd73a9b9d63c008567445c4640c468967753c16500c39"
+    }
+  },
+  "scope": "Independent software review only; mathematical derivations remain self-reviewed. No mesh/latent/pixel/material semantics checked, no native scorer or GPU executed, no GPU-host final raw closure certified, no independent authenticity of unsigned receipts established.",
+  "scientific_method_code_verified": false,
+  "math_independently_verified": false,
+  "native_replay_performed": false
+}

@@ -1,0 +1,6 @@
+test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint (test_export_feedback.ReceiptTransport.test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.010s
+
+OK

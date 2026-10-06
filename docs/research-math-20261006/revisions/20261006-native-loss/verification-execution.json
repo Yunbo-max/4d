@@ -1,0 +1,39 @@
+{
+  "kind": "verification-execution-record",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T12:22:38.167386+00:00",
+  "observed_exit_code": 0,
+  "command": [
+    "python3",
+    "/root/.codex/skills/remote-skills/skill-6abe2370f2f8819180de6c6e8d45e3b8/scripts/verify_methods.py",
+    "--root",
+    "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006",
+    "--batch",
+    "docs/research-math-20261006/revisions/20261006-native-loss/batch.json",
+    "--through",
+    "code",
+    "--require",
+    "selection_verified"
+  ],
+  "verifier_source_sha256": "78a60be34c465d0bda52c1e8839817dab3750e3902f5db6841a8040440aa7172",
+  "input_batch_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/batch.json",
+    "sha256": "684f3ab541d284510bd5d5376d7dd7b0d4c43b05f3a8e417231fec8969e5d12e"
+  },
+  "retained_stdout_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/verification-report.json",
+    "sha256": "2ae23a98ae973ce5c63120bc9fed4fcc1d96136f1fada86d860fdff6a3f85fab"
+  },
+  "derived_counts": {
+    "candidates": 20,
+    "code_verified": 0,
+    "design_verified": 0,
+    "failed": 0,
+    "math_verified": 20,
+    "results_verified": 0,
+    "selected": 15,
+    "succeeded": 0,
+    "verdict_verified": 0
+  },
+  "scope": "Pinned evidence and documented semantic reviews; not an automated proof of mathematics. Empirical verdicts require existing native evaluation with trusted live replay and full comparison. This report does not replace Natural Gate 0, IPCG, Gate A, G01 or E04."
+}

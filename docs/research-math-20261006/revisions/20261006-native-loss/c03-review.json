@@ -1,0 +1,146 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c03",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+    "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T11:54:50.761039+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Conditional mathematical self-review only, including a refuted objective implication. No correspondence/calibration, originality, native interface, experiment or method verdict verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Separate centered squared pointwise population risk from fixed-design smoothed unsquared development risk. Neither is declared the official native mesh metric.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "E03 and D05 expansions retain their original conditions. Tangent majorization adds explicit tau>0, lambda>0, positive total weight, qualified labels/features and unconstrained affine-solve conditions; all science conditions remain unobserved.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "Exact four-atom arithmetic gives squared 10 -> 45/17 and unsquared 1 -> 27/17. The square-root tangent inequality, gradient Theta H-K, Gram positive definiteness, MM sandwich and tau-smoothing bound are derived separately. Forty finite descent checks illustrate the formula without replacing proof. No ICP operator is silently folded into a 4x4 plain-coordinate solve.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Development GT tracking does not establish decoded-vertex material labels. Legal mapping/lift, alignment, family-separated calibration and transfer remain blockers. Data-calibrated coefficients are not claimed zero-shot. Zero ordinary cross-covariance is not a sufficient unsquared stationarity condition.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Both squared and smoothed-unsquared affine estimators stay within C03; the intercept absorbs mean correction once. Exact common anchor override is preserved. MM/ridge/smoothing variants are not extra pool entries; native implementation is pending.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "Compare native scores of squared/unsquared fits under identical legal labels, features and costs. Loss descent is not an efficacy prediction by itself. Matched simpler unsquared estimators may refute matrix necessity; unqualified mapping or insufficient precision yields inconclusive.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Classical matrix control variates, robust affine regression, IRLS/MM, the historical correlated prototype and C01 are named. Reading notes attribute classical MM and state limited reading scope; originality and functional-collision review remain open.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra-audit.json",
+          "sha256": "a88ed523927fec05dce4f0450af3a81806150ebf08e39e6d59efa0b34060362a"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/algebra_audit.py",
+          "sha256": "7b0fc12c71d1f200846ece668df5cf311bbe450800f431983c91a8e75ec70a49"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/primary-source-notes.json",
+          "sha256": "b973f94011c89be8a3e51ec51c4602f6ec6694330049a4070d36793db346d59a"
+        }
+      ]
+    }
+  }
+}

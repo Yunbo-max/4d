@@ -1,5 +1,11 @@
 # 4D 研究复现
 
+## 2026-10-06：数学指标审查与最终证据回传
+
+当前研究入口：[native-loss 修订与完整 20→15 排序](docs/research-math-20261006/revisions/20261006-native-loss/README.md)。C03 的平方风险收益不能保证原生非平方距离收益；已补精确反例、条件非平方标定推导和15份当前规格。`math_verified=20`、`selection_verified=true`；新候选 code/design/results_verified 仍为0。
+
+[最终原始证据导出工具](scripts/research_evidence_20261006/README.md) 已通过34项文件/回执工程测试，可在原运行主机校验并打包final receipt的mesh/latents和逐臂scorer，保留旧快照与失败日志；这是证据工程，不是方法效果验证，原主机尚未执行此次导出。[下一窗口资格计划](docs/research-math-20261006/revisions/20261006-native-loss/QUALIFICATION.md) 写明强简单对照、完整原生预算和准入条件。
+
 当前项目：**ActionMesh（CVPR 2026）官方预训练权重推理**，使用 RTX 2080 Ti 22 GiB，没有训练。
 
 ## 八小时实验反馈（2026-10-06）

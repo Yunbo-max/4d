@@ -1,0 +1,127 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c01",
+  "name_zh": "同时间自映射偏差消除",
+  "priority_rank": 4,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T11:54:50.761039+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
+    "sha256": "6df45ce3122df46c583231602a41f92eb0f32cea06e81dd2b1d6c02eb762a93e"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c01-math.json",
+    "sha256": "013a9c561c0e194aa2171f69f6bad95f610822a2756c30ec6ec9054ad9267ac0"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    }
+  ],
+  "prior_art_and_role": "Uncorrected ActionMesh; simple mean-bias correction; SFG already anchors latent sampling trajectories by initial shape plus differences (Eq.2). Historical m02 checks decoder cycles, not this shared-bias risk criterion. The decoded-coordinate variant is a diagnostic/baseline until a material functional delta is established.",
+  "planned_interface": {
+    "inputs": [
+      "anchor X and same query normals",
+      "F_a and F_t under identical complete native context",
+      "coordinate bounds policy without hidden clipping"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Define H_t(x)=x+F_t(x)-F_a(x); H_a(x)=x.",
+      "planned_function": "4d_math_20261006_c01.query_and_anchor_identity",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Replacing every F_t by F_t+b leaves H_t unchanged.",
+      "planned_function": "4d_math_20261006_c01.cancel_shared_bias",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "E||e_t-e_a||^2-E||e_t||^2=E||e_a||^2-2E[e_t^T e_a].",
+      "planned_function": "4d_math_20261006_c01.retain_error_cross_term",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "mean_bias",
+      "self_map_subtraction"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "The correction should help when self-map error positively predicts downstream error strongly enough to exceed half its own squared magnitude; zero self-map residual gives no change.",
+    "falsifier": "Reject the common-bias explanation if actual self-map residuals do not predict the downstream error and the method loses to equal-call uncorrected/bias-fit controls on fresh native cases.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "same-context self-query qualification and latent availability",
+    "natural reference/downstream shared-error evidence",
+    "SFG/old correlated functional delta; currently diagnostic baseline",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/specs/4d-math-20261006-c01.json",
+    "sha256": "9f607ecf4c6ca70484bc95333bbfa610eab82057ebd0dca13513da44d37d7a8d"
+  }
+}

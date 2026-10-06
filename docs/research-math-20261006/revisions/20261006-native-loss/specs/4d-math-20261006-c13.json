@@ -1,0 +1,128 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c13",
+  "name_zh": "稀疏加速度的事件保留修复",
+  "priority_rank": 9,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T11:54:50.761039+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+    "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
+    "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    }
+  ],
+  "prior_art_and_role": "Classical trend filtering and STAC Gaussian temporal smoothing.",
+  "planned_interface": {
+    "inputs": [
+      "full native coordinates Yhat",
+      "SPD observation metric M and explicit anchor affine term",
+      "second differences D2 at actual native timestep units"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Solve min_y .5||y-yhat||_M^2 + lambda sum_(t,v)||D2 y||_2, with A y=X.",
+      "planned_function": "4d_math_20261006_c13.form_anchored_group_trend_problem",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "lambda||a||_2=sup_{||p||_2<=lambda} p^T a.",
+      "planned_function": "4d_math_20261006_c13.form_group_dual_balls",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "Write y=y_p+S z, A y_p=X, A S=0. Stationarity is S^T M(y_p+S z-yhat)+(D2 S)^T p=0.",
+      "planned_function": "4d_math_20261006_c13.solve_affine_anchor_stationarity",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "gaussian",
+      "quadratic_acceleration",
+      "group_acceleration"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Sparse abrupt changes should survive better than equal-strength Gaussian smoothing; smooth high-frequency real motion can be a failure boundary.",
+    "falsifier": "Reject if Gaussian/second-order quadratic smoothing at equal tuning/compute matches official CD-M and geometry, or if event-like true motion is suppressed.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "native gap not closed by Gaussian/quadratic baselines",
+    "event-preservation prediction supported on natural development cases",
+    "group primal/dual gap and parameter/time-unit freeze",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/specs/4d-math-20261006-c13.json",
+    "sha256": "31e2436310c0b2f8cba833b240bbb57e8df310a582ee50b4498b7bb5f2d92bdf"
+  }
+}

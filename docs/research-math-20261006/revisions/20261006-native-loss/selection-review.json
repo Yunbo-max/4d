@@ -1,0 +1,87 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-native-loss-r1",
+  "scope": "selection",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T11:54:50.761039+00:00",
+  "outcome": "verified",
+  "checks": {
+    "structural_distinctness": {
+      "status": "verified",
+      "rationale": "All 20 constructions were compared by object, admissible set, estimator and output. The nested and shared-mechanism families are recorded explicitly, including C01/C03 and C06/C07. Learned matrix estimation versus fixed subtraction is an estimator/information change, not another gain value. These are conditional research branches, not certified novel or statistically independent methods; coverage may still force merger.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+          "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+          "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+        }
+      ]
+    },
+    "all_candidates_compared": {
+      "status": "verified",
+      "rationale": "Reassess all 20 stable constructions using the revised C03 card and the unchanged 19 content-bound cards/reviews. All rows retain five substantive ranking reasons; no parameters, seeds, objective variants or algebra witnesses are counted as new ideas.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+          "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+          "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+        }
+      ]
+    },
+    "ranking_basis": {
+      "status": "verified",
+      "rationale": "C03 moves from 2 to 7 because the unsquared objective boundary and unavailable material calibration weaken near-term feasibility; C02,C05,C20,C01,C04,C08 now precede it. The remaining relative order is unchanged after reviewing the whole pool. No native scores inform this rank.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+          "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+          "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+        }
+      ]
+    },
+    "top_selection": {
+      "status": "verified",
+      "rationale": "The current selected prefix is c02,c05,c20,c01,c04,c08,c03,c10,c13,c14,c06,c07,c15,c11,c12. The five reserve identities are unchanged. Selection verifies a conditional research shortlist, not method admission.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+          "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+          "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+          "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+        }
+      ]
+    }
+  }
+}

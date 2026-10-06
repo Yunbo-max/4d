@@ -1,0 +1,269 @@
+test_absolute_or_parent_paths_in_receipts_are_rejected (test_export_feedback.ReceiptTransport.test_absolute_or_parent_paths_in_receipts_are_rejected) ... FAIL
+test_archive_parts_obey_the_transport_limit (test_export_feedback.ReceiptTransport.test_archive_parts_obey_the_transport_limit) ... FAIL
+test_bound_protocol_cannot_be_changed (test_export_feedback.ReceiptTransport.test_bound_protocol_cannot_be_changed) ... FAIL
+test_changed_raw_bytes_are_rejected (test_export_feedback.ReceiptTransport.test_changed_raw_bytes_are_rejected) ... FAIL
+test_destination_inside_run_is_rejected_without_mutation (test_export_feedback.ReceiptTransport.test_destination_inside_run_is_rejected_without_mutation) ... FAIL
+test_duplicate_json_keys_and_nonfinite_metrics_are_rejected (test_export_feedback.ReceiptTransport.test_duplicate_json_keys_and_nonfinite_metrics_are_rejected) ... FAIL
+test_existing_destination_is_preserved (test_export_feedback.ReceiptTransport.test_existing_destination_is_preserved) ... ERROR
+test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint (test_export_feedback.ReceiptTransport.test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint) ... ok
+test_failed_attempt_logs_remain_in_the_bundle (test_export_feedback.ReceiptTransport.test_failed_attempt_logs_remain_in_the_bundle) ... ok
+test_final_receipt_must_include_nested_phase_products (test_export_feedback.ReceiptTransport.test_final_receipt_must_include_nested_phase_products) ... FAIL
+test_incomplete_inventory_cannot_be_exported_as_final (test_export_feedback.ReceiptTransport.test_incomplete_inventory_cannot_be_exported_as_final) ... FAIL
+test_live_worker_is_rejected (test_export_feedback.ReceiptTransport.test_live_worker_is_rejected) ... FAIL
+test_missing_raw_product_is_not_replaced_by_its_hash (test_export_feedback.ReceiptTransport.test_missing_raw_product_is_not_replaced_by_its_hash) ... FAIL
+test_native_sampling_budget_cannot_be_reduced (test_export_feedback.ReceiptTransport.test_native_sampling_budget_cannot_be_reduced) ... FAIL
+test_pair_cannot_disagree_with_hash_valid_score_report (test_export_feedback.ReceiptTransport.test_pair_cannot_disagree_with_hash_valid_score_report) ... FAIL
+test_relocated_project_retains_original_path_and_fingerprint (test_export_feedback.ReceiptTransport.test_relocated_project_retains_original_path_and_fingerprint) ... ERROR
+test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) ... 
+  test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) (name='runner.py') ... FAIL
+  test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) (name='input.dat') ... ERROR
+  test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) (name='weight.dat') ... ERROR
+test_summary_cannot_hide_a_pair (test_export_feedback.ReceiptTransport.test_summary_cannot_hide_a_pair) ... FAIL
+test_symlink_is_rejected_even_when_it_points_inside_the_run (test_export_feedback.ReceiptTransport.test_symlink_is_rejected_even_when_it_points_inside_the_run) ... FAIL
+test_unreconciled_remote_supervisor_is_rejected (test_export_feedback.ReceiptTransport.test_unreconciled_remote_supervisor_is_rejected) ... FAIL
+
+======================================================================
+ERROR: test_existing_destination_is_preserved (test_export_feedback.ReceiptTransport.test_existing_destination_is_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 227, in test_existing_destination_is_preserved
+    self.export()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 112, in export
+    return module.export_feedback(self.root, self.run, self.dest, self.signature, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/export_feedback.py", line 16, in export_feedback
+    destination.mkdir(parents=True, exist_ok=False)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/tmp7_b0vd5v/project/outputs/export'
+
+======================================================================
+ERROR: test_relocated_project_retains_original_path_and_fingerprint (test_export_feedback.ReceiptTransport.test_relocated_project_retains_original_path_and_fingerprint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 257, in test_relocated_project_retains_original_path_and_fingerprint
+    result = self.export()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 112, in export
+    return module.export_feedback(self.root, self.run, self.dest, self.signature, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/export_feedback.py", line 20, in export_feedback
+    members.extend((Path(path), "source/" + Path(path).relative_to(project_root).as_posix()) for path in records)
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/export_feedback.py", line 20, in <genexpr>
+    members.extend((Path(path), "source/" + Path(path).relative_to(project_root).as_posix()) for path in records)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/tmp/tmpatyimcco/project/runner.py' is not in the subpath of '/tmp/tmpatyimcco/relocated'
+
+======================================================================
+ERROR: test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) (name='input.dat')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 180, in test_source_and_input_and_weight_hashes_are_all_checked
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 135, in rejected
+    self.export()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 112, in export
+    return module.export_feedback(self.root, self.run, self.dest, self.signature, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/export_feedback.py", line 16, in export_feedback
+    destination.mkdir(parents=True, exist_ok=False)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/tmpv93o101e/project/outputs/export'
+
+======================================================================
+ERROR: test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) (name='weight.dat')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 180, in test_source_and_input_and_weight_hashes_are_all_checked
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 135, in rejected
+    self.export()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 112, in export
+    return module.export_feedback(self.root, self.run, self.dest, self.signature, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/export_feedback.py", line 16, in export_feedback
+    destination.mkdir(parents=True, exist_ok=False)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [Errno 17] File exists: '/tmp/tmpv93o101e/project/outputs/export'
+
+======================================================================
+FAIL: test_absolute_or_parent_paths_in_receipts_are_rejected (test_export_feedback.ReceiptTransport.test_absolute_or_parent_paths_in_receipts_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 163, in test_absolute_or_parent_paths_in_receipts_are_rejected
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_archive_parts_obey_the_transport_limit (test_export_feedback.ReceiptTransport.test_archive_parts_obey_the_transport_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 244, in test_archive_parts_obey_the_transport_limit
+    self.assertGreater(len(result["archives"]), 1)
+AssertionError: 1 not greater than 1
+
+======================================================================
+FAIL: test_bound_protocol_cannot_be_changed (test_export_feedback.ReceiptTransport.test_bound_protocol_cannot_be_changed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 172, in test_bound_protocol_cannot_be_changed
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_changed_raw_bytes_are_rejected (test_export_feedback.ReceiptTransport.test_changed_raw_bytes_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 156, in test_changed_raw_bytes_are_rejected
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_destination_inside_run_is_rejected_without_mutation (test_export_feedback.ReceiptTransport.test_destination_inside_run_is_rejected_without_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 232, in test_destination_inside_run_is_rejected_without_mutation
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_duplicate_json_keys_and_nonfinite_metrics_are_rejected (test_export_feedback.ReceiptTransport.test_duplicate_json_keys_and_nonfinite_metrics_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 211, in test_duplicate_json_keys_and_nonfinite_metrics_are_rejected
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_final_receipt_must_include_nested_phase_products (test_export_feedback.ReceiptTransport.test_final_receipt_must_include_nested_phase_products)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 148, in test_final_receipt_must_include_nested_phase_products
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_incomplete_inventory_cannot_be_exported_as_final (test_export_feedback.ReceiptTransport.test_incomplete_inventory_cannot_be_exported_as_final)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 141, in test_incomplete_inventory_cannot_be_exported_as_final
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_live_worker_is_rejected (test_export_feedback.ReceiptTransport.test_live_worker_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 216, in test_live_worker_is_rejected
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_missing_raw_product_is_not_replaced_by_its_hash (test_export_feedback.ReceiptTransport.test_missing_raw_product_is_not_replaced_by_its_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 152, in test_missing_raw_product_is_not_replaced_by_its_hash
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_native_sampling_budget_cannot_be_reduced (test_export_feedback.ReceiptTransport.test_native_sampling_budget_cannot_be_reduced)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 203, in test_native_sampling_budget_cannot_be_reduced
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_pair_cannot_disagree_with_hash_valid_score_report (test_export_feedback.ReceiptTransport.test_pair_cannot_disagree_with_hash_valid_score_report)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 192, in test_pair_cannot_disagree_with_hash_valid_score_report
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_source_and_input_and_weight_hashes_are_all_checked (test_export_feedback.ReceiptTransport.test_source_and_input_and_weight_hashes_are_all_checked) (name='runner.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 180, in test_source_and_input_and_weight_hashes_are_all_checked
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_summary_cannot_hide_a_pair (test_export_feedback.ReceiptTransport.test_summary_cannot_hide_a_pair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 207, in test_summary_cannot_hide_a_pair
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_symlink_is_rejected_even_when_it_points_inside_the_run (test_export_feedback.ReceiptTransport.test_symlink_is_rejected_even_when_it_points_inside_the_run)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 167, in test_symlink_is_rejected_even_when_it_points_inside_the_run
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+======================================================================
+FAIL: test_unreconciled_remote_supervisor_is_rejected (test_export_feedback.ReceiptTransport.test_unreconciled_remote_supervisor_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 221, in test_unreconciled_remote_supervisor_is_rejected
+    self.rejected()
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 134, in rejected
+    with self.assertRaises(module.EvidenceError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: EvidenceError not raised
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.154s
+
+FAILED (failures=16, errors=4)

@@ -1,0 +1,128 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c14",
+  "name_zh": "共转坐标中的时间修复",
+  "priority_rank": 10,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T11:54:50.761039+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
+    "sha256": "4e8eabce07534f07382ddbd0b4433d4ad9d9589abf3cd1690187de72b1bcffbb"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c14-math.json",
+    "sha256": "52fbceeb3ffdd8230274c0154c4aea9f57921ba90ead1d8275bb3fb137ee81a8"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    }
+  ],
+  "prior_art_and_role": "Classical corotational deformation and pose-factored smoothing; STAC local rigid fitting; SFG root-space local/global decomposition. Treat basic pose factoring as a strong simple baseline, not a new contribution.",
+  "planned_interface": {
+    "inputs": [
+      "full native coordinates and anchor",
+      "input/model-derived frozen R_t in SO(3),c_t",
+      "declared zero-preserving anchored residual repair"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "For a rigid sequence Y_t=c_t+R_t X, u_t=0 at every t.",
+      "planned_function": "4d_math_20261006_c14.fit_frozen_rigid_factors",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Solve a declared anchored temporal repair for u, then reconstruct Y'_t=c_t+R_t(X+u'_t).",
+      "planned_function": "4d_math_20261006_c14.repair_body_residual",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "An operator mapping zero to zero leaves the exact rigid sequence unchanged, even for time-varying rotations.",
+      "planned_function": "4d_math_20261006_c14.reconstruct_with_fixed_pose",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "world_smoothing",
+      "simple_rigid_aligned_smoothing",
+      "declared_body_residual_repair"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Pure rigid rotation/translation should be preserved by construction; improvement versus world smoothing should depend on pose variation rather than merely noise magnitude.",
+    "falsifier": "Reject if inferred rigid factors are unstable or a equal-cost rigid-aligned Gaussian baseline gives the same native performance.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "qualified pose fit without GT or evaluator ICP",
+    "rigid/articulated regime of applicability",
+    "SFG/STAC/basic rigid-aligned smoothing collision; baseline role unless extra delta",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/specs/4d-math-20261006-c14.json",
+    "sha256": "66801e6f759c97369cb69339f0d9926b30d09d19892446b2ebc1a0e6d54250f0"
+  }
+}

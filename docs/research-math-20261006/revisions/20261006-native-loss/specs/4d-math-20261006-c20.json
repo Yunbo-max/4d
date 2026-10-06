@@ -1,0 +1,135 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c20",
+  "name_zh": "相位与动作幅度的可识别分解",
+  "priority_rank": 3,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T11:54:50.761039+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+    "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c20-math.json",
+    "sha256": "c967717ebac9a7c02646511fe78257c508a67b42029f06575c0f4e2d0239db57"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    }
+  ],
+  "prior_art_and_role": "Classical phase-amplitude registration and Schur projection; simple lag correction, smoothing and displacement scaling.",
+  "planned_interface": {
+    "inputs": [
+      "legal input/model motion target r",
+      "fixed endpoint-preserving phase and amplitude bases",
+      "original time IDs, derivative bounds, positive amplitude ridge"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Linearize the repair as r approximately P xi+B gamma, with phase endpoint offsets zero.",
+      "planned_function": "4d_math_20261006_c20.linearize_phase_amplitude",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Let M=I-P(P^T W P)^dagger P^T W; after unconstrained phase elimination, gamma*=(B^T W M B+lambda I)^-1 B^T W M r.",
+      "planned_function": "4d_math_20261006_c20.solve_inactive_profiled_block",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "For monotone time, impose 1+tau'(t)>0; if the bound is active, solve the full constrained block problem instead of the unconstrained formula.",
+      "planned_function": "4d_math_20261006_c20.solve_active_monotone_qp",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s4",
+      "statement": "Overlapping phase/amplitude directions are unidentifiable without extra constraints; residual second-order error is O(||tau||^2).",
+      "planned_function": "4d_math_20261006_c20.check_identifiability_and_remainder",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "phase_only",
+      "amplitude_only",
+      "simple_lag",
+      "joint_monotone_phase_amplitude"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Timing-dominated errors should respond to phase correction while amplitude-only shrinkage loses motion; amplitude-dominated errors should show the opposite pattern.",
+    "falsifier": "Reject if ordinary lag/alignment with equal evidence/budget is sufficient, or phase/amplitude remains unidentifiable on the native task.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "qualified legal motion target and camera/information permission",
+    "phase/amplitude identifiability",
+    "small-warp regime, monotonicity and nonlinear residual check",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/specs/4d-math-20261006-c20.json",
+    "sha256": "685309b5c5e68352705512f552d932acff877ec82e715b881fcb4a821f87b764"
+  }
+}

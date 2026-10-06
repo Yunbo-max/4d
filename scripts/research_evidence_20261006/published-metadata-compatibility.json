@@ -1,0 +1,34 @@
+{
+  "kind": "published-metadata-compatibility-check",
+  "summary_path": "results/overnight-2080ti-20261005/summary.json",
+  "summary_sha256": "1e4b1569b9b167a94622b2d72386d80ea838214495d7515d3495fd7f52b2a49d",
+  "published_pairs": 16,
+  "exact_aggregate_equality": true,
+  "native_protocol_fields": 18,
+  "evaluator_path": "actionmesh/research_census_eval.py",
+  "evaluator_sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+  "native_protocol_literal": {
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "scope": "Read-only reproduction of published descriptive summary and AST constant inspection; no arrays, native scorer or GPU executed."
+}

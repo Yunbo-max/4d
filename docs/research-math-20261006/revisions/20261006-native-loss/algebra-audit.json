@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scope": "Finite mathematical witnesses, not general proof, candidate code, benchmark, scorer execution or efficacy",
+  "counterexample": {
+    "zero_means": true,
+    "reference_variance": "17/5",
+    "cross_covariance": "5",
+    "squared_optimum": "25/17",
+    "squared_risk_before": "10",
+    "squared_risk_after": "45/17",
+    "unsquared_risk_before": "1",
+    "unsquared_risk_after": "27/17",
+    "full_rank_3d_embedding_checked": true,
+    "positive_reference_covariance_diagonal": [
+      "17/5",
+      "1",
+      "1"
+    ],
+    "bounded_rescaling": {
+      "scale": "1/10",
+      "errors_and_features_within": [
+        -1,
+        1
+      ],
+      "squared_risk_before": "1/10",
+      "squared_risk_after": "9/340",
+      "unsquared_risk_before": "1/10",
+      "unsquared_risk_after": "27/170"
+    }
+  },
+  "mm_witness": {
+    "iterations": 40,
+    "initial_objective": 1.8680809720785774,
+    "final_objective": 0.7824370019533018,
+    "minimum_gram_determinant": 2.0724828091150744,
+    "maximum_majorizer_gap": 0.32705874163224924,
+    "descent_inequality_checked": true,
+    "smoothing_bound_checked": true
+  },
+  "native_metric_gain_implied": false
+}

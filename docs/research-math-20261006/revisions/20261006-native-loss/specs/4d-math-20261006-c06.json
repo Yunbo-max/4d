@@ -1,0 +1,128 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c06",
+  "name_zh": "面积边际约束的对应运输",
+  "priority_rank": 11,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T11:54:50.761039+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
+    "sha256": "4b38b4752d81535725f96f513b5d4fb585d52308efda44a331fc90c14c8d03f9"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c06-math.json",
+    "sha256": "791e03d35227cb16c50dd2c68552bb59d34c312d0d7460d8334f2bd6e03db656"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    }
+  ],
+  "prior_art_and_role": "Classical Sinkhorn OT; STAC row-normalized correspondence; Catalyst4D's OT anchors need full collision inspection.",
+  "planned_interface": {
+    "inputs": [
+      "same permitted feature cost matrix and sparse support",
+      "source/target model surface areas with equal total mass",
+      "positive entropy epsilon and original vertex mapping"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Minimize sum Pi_ij c_ij + epsilon sum Pi_ij(log Pi_ij-1), with Pi1=a and Pi^T1=b.",
+      "planned_function": "4d_math_20261006_c06.form_area_transport_objective",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Stationarity gives Pi_ij=exp(-(c_ij+alpha_i+beta_j)/epsilon)=u_i K_ij v_j.",
+      "planned_function": "4d_math_20261006_c06.derive_log_scaling",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "u=a/(Kv), v=b/(K^T u) enforce the two marginals when converged.",
+      "planned_function": "4d_math_20261006_c06.close_both_marginals",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "row_softmax",
+      "vertex_density_transport",
+      "area_marginal_transport"
+    ],
+    "primary_metric": "cd_3d",
+    "guardrail_metrics": [
+      "cd_4d",
+      "cd_motion"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Area constraints should prevent many source regions collapsing onto the same favored target; they can hurt when the target mass model is wrong.",
+    "falsifier": "Reject if balancing consistently harms native motion under realistic area change, or row-only matching plus the same geometric lift is adequate.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "qualified legal surface features and feasible support",
+    "area-marginal assumption versus real stretch",
+    "fair sparse-bank/lift and area-zero handling",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/specs/4d-math-20261006-c06.json",
+    "sha256": "71f75439866c8ee88a6e63365b93e8dc77a29ec5693e59b6873d470e9f1315f3"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "primary-source-reading-notes",
+  "recorded_at": "2026-10-06T11:54:50.761039+00:00",
+  "sources": [
+    {
+      "url": "https://pure.psu.edu/en/publications/quantile-regression-via-an-mm-algorithm/",
+      "authors": "David R. Hunter and Kenneth Lange",
+      "year": 2000,
+      "read_scope": "Institutional publication record and abstract, lines 19-22; full article not read.",
+      "bounded_note": "The authors describe a classical quadratic-majorization approach to quantile regression. This supports attribution of the MM idea; it does not establish the specific multivariate smoothing formula below."
+    },
+    {
+      "url": "https://epubs.siam.org/doi/10.1137/1.9781611976175.ch9",
+      "authors": "Kenneth Lange",
+      "year": 2020,
+      "read_scope": "Chapter 9 introductory text exposed by publisher, section 9.1 lines 80-85; full chapter not read.",
+      "bounded_note": "The chapter states domination and tangency conditions and the resulting descent argument. Our square-root majorizer is derived explicitly, without a novelty claim."
+    }
+  ],
+  "native_metric_basis": {
+    "path": "docs/research-math-20261006/evidence/source-capture.json",
+    "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+  },
+  "native_metric_scope": "Existing pinned author-source capture and local census evaluator describe unsquared Euclidean distances and first-frame ICP/correspondence for CD-M. No new scorer or benchmark was created."
+}

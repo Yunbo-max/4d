@@ -1,0 +1,20 @@
+test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint (test_export_feedback.ReceiptTransport.test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint) ... ERROR
+
+======================================================================
+ERROR: test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint (test_export_feedback.ReceiptTransport.test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 114, in test_exports_the_full_referenced_raw_closure_and_preserves_old_checkpoint
+    result = self.export()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/tests/test_export_feedback.py", line 110, in export
+    return module.export_feedback(self.root, self.run, self.dest, self.signature, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ec1b0c6b9ea9/4d-continuation-20261006/scripts/research_evidence_20261006/export_feedback.py", line 9, in export_feedback
+    raise EvidenceError("Evidence export has not been implemented")
+export_feedback.EvidenceError: Evidence export has not been implemented
+
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+FAILED (errors=1)

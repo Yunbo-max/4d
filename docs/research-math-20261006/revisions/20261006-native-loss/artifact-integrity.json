@@ -1,0 +1,12 @@
+{
+  "kind": "artifact-integrity-check",
+  "recorded_at": "2026-10-06T12:23:34.835187+00:00",
+  "json_files_checked": 96,
+  "content_bound_references_checked": 875,
+  "reference_errors": [],
+  "candidate_ids": 20,
+  "selected_current_specs": 15,
+  "all_spec_derivation_steps_covered": true,
+  "all_spec_operations_not_implemented": true,
+  "scope": "Path/hash, cardinality and planned-step binding only; not an automated mathematical proof or empirical qualification."
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "baseline-source-read-audit",
+  "recorded_at": "2026-10-06T12:00:33.066Z",
+  "parent_commit": "e383e7850f4cf5205b23310e654fc755a2c16888",
+  "records": [
+    {
+      "path": "actionmesh/research_math/run_controls.py",
+      "git_blob_sha": "e09f224ebddf98359bb8bfb2c5397de2b3cb71ca",
+      "read_scope": "Full 60-line module",
+      "finding": "Imports constructed_benchmark/constructed_demo/run_demo, reports constructed numerical controls and natural_4d_effectiveness_tested=false. It cannot qualify the current native methods."
+    },
+    {
+      "path": "actionmesh/research_census_motion_controls.py",
+      "git_blob_sha": "5facbba666faa7a11e5181ecede37cf4467e5593",
+      "read_scope": "Module header, constants and functions through first validation stage; not whole module",
+      "finding": "Header describes point-trajectory controls on two old UIDs, a reused saved Stage-GT transform and diagnostic native recomputations without historical bitwise identity. This cannot replace full mesh native inference/scoring or a fresh cohort."
+    }
+  ],
+  "primary_arap": {
+    "url": "https://igl.ethz.ch/projects/ARAP/arap_web.pdf",
+    "authors": "Olga Sorkine and Marc Alexa",
+    "year": 2007,
+    "read_scope": "Author PDF, Sections 2.1/2.2 and beginning of Section 3, Eq. (3)/(7), pp. 3-4; not the complete paper",
+    "bounded_note": "The ARAP term uses differences of deformed endpoints and rotated reference edges. Translation invariance follows from those differences. The centroid result for an added soft fidelity below is our conditional deduction, not an unconditional claim about the paper's handle-constrained solver."
+  }
+}

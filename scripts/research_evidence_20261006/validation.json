@@ -1,0 +1,80 @@
+{
+  "kind": "engineering-validation-record",
+  "recorded_at": "2026-10-06T12:22:16.301690+00:00",
+  "tested_code_refs": [
+    {
+      "path": "scripts/research_evidence_20261006/export_feedback.py",
+      "sha256": "331882b6ec20f8086344ea18cdbfacc6b595c0bee98b0d6e37ff578f540e902d"
+    },
+    {
+      "path": "scripts/research_evidence_20261006/tests/test_export_feedback.py",
+      "sha256": "e2cd5fc2994a909c6e648bb2f027196554a2cf53e0831b0e4658e10a699c0055"
+    }
+  ],
+  "tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/research_evidence_20261006/tests",
+      "-v"
+    ],
+    "observed_exit_code": 0,
+    "test_methods": 34,
+    "log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-final-tests.log",
+      "sha256": "812afde3c7fc679a95ce1d0937175e2ace25b254ca2b11fe818dcdb8d1f58bb8"
+    }
+  },
+  "tdd_record": {
+    "feature_stub_observed_exit_code": 1,
+    "stub_log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-red.log",
+      "sha256": "de3ef6ce83549530113c008e906286a1041ecb0e920f85a335c186275a63fd28"
+    },
+    "integrity_behaviors_observed_exit_code": 1,
+    "integrity_log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-red-integrity.log",
+      "sha256": "0c949a1155546af902bf75413f4a8368f38d89ec7a32fff4566f9f8250bb6266"
+    },
+    "phase_report_binding_observed_exit_code": 1,
+    "phase_binding_log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-red-review.log",
+      "sha256": "93595fd2b4f46113ffc9a6f75de23e1cf77fe4fdcb6751ee8a629d4135464f15"
+    },
+    "runner_lock_behavior_observed_exit_code": 1,
+    "runner_lock_log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-red-lock.log",
+      "sha256": "eb2c17e044c566d3629ef7b060f1f9b31f5483baaeb6ee00e55ed59bdd0661d3"
+    },
+    "scope": "Retained observed red/green outputs; historical intermediate test/code revisions are not asserted to match the final source.",
+    "independent_review_regressions_observed_exit_code": 1,
+    "independent_review_regressions_log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-red-independent-review.log",
+      "sha256": "69cf888cb82d0843cb3f18c7d0ea2fe035a7b58f93edb33036c3a5804ff7f8e9"
+    }
+  },
+  "actual_historical_snapshot": {
+    "observed_exit_code": 2,
+    "status": "blocked",
+    "log_ref": {
+      "path": "scripts/research_evidence_20261006/validation-logs/export-historical-blocked.log",
+      "sha256": "98be68a493e1a38b082beb3f3ae4da37f8505d4cd4cc66448ce6cb308c77285d"
+    },
+    "observation": "The available published summary copy lacks original frozen source/raw artifacts. Export correctly declines to certify final16/16. No destination created."
+  },
+  "scope": "Filesystem/metadata/receipt/archive/CLI engineering checks only; opaque fixture bytes are not native benchmark inputs.",
+  "scientific_method_code_verified": false,
+  "native_scorer_executed": false,
+  "gpu_side_export_performed": false,
+  "published_metadata_compatibility_ref": {
+    "path": "scripts/research_evidence_20261006/published-metadata-compatibility.json",
+    "sha256": "970fc42e7df9a05490719b28e27ec2a57d3879d34ed364fd62f2f79202419c9c"
+  },
+  "independent_engineering_review_ref": {
+    "path": "scripts/research_evidence_20261006/code-review.json",
+    "sha256": "2036561426d7deb397cbfe830675e091f6a1941d51312ede163ed5e40a16e24f"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c03",
+  "name_zh": "相关参考误差的矩阵校正：原生指标边界与非平方标定",
+  "priority_rank": 7,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T11:54:50.761039+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+    "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+    "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    }
+  ],
+  "prior_art_and_role": "Classical matrix control variates and generalized least squares; historical research_math.correlated is related provenance, not math-first evidence for this new batch.",
+  "planned_interface": {
+    "inputs": [
+      "same-context self residual r0[T_anchor,V,3]",
+      "development-only labeled error policy",
+      "frozen means, B_t estimator and regularization",
+      "qualified legal development correspondence/lift and coordinate/alignment policy",
+      "fixed weights, tau, lambda and stop conditions; no confirmation fitting"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "R(B)=tr C_tt-2 tr(B C_at)+tr(B C_aa B^T).",
+      "planned_function": "c03.s1_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "dR/dB=2B C_aa-2C_ta, hence B*=C_ta C_aa^-1.",
+      "planned_function": "c03.s2_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "R(0)-R(B*)=tr(C_ta C_aa^-1 C_at)>=0 under the stipulated true moments.",
+      "planned_function": "c03.s3_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s4",
+      "statement": "For fitted B=B*+E, centered excess risk is tr(E C_aa E^T).",
+      "planned_function": "c03.s4_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s5",
+      "statement": "Using fitted means adds squared bias ||mu_t-muhat_t+B(muhat_a-mu_a)||^2 to centered risk.",
+      "planned_function": "c03.s5_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s6",
+      "statement": "For centered law P(e=0,r=+/-1)=9/20 each and P(e=+/-10,r=+/-5)=1/20 each, C_aa=17/5,C_ta=5,B*=25/17. Squared risk falls 10 -> 45/17 while E|e-Br| rises 1 -> 27/17.",
+      "planned_function": "c03.s6_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s7",
+      "statement": "Away from zero residuals, the unpenalized centered unsquared stationarity equation is E[(e-Br)r^T/||e-Br||]=0. At zero use a norm subgradient with magnitude <=1.",
+      "planned_function": "c03.s7_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s8",
+      "statement": "L_tau(Theta)=sum_i w_i sqrt(||E_i-Theta phi_i||^2+tau^2)+(lambda/2)||B||_F^2; output F_t-b_t-B_t r0 with exact native anchor override.",
+      "planned_function": "c03.s8_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s9",
+      "statement": "For s,s_k>=0, sqrt(s+tau^2)<=sqrt(s_k+tau^2)+(s-s_k)/(2sqrt(s_k+tau^2)), with equality at s=s_k.",
+      "planned_function": "c03.s9_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s10",
+      "statement": "Let q_i=w_i/sqrt(||E_i-Theta_k phi_i||^2+tau^2), H=sum_i q_i phi_i phi_i^T+lambda diag(0,I), K=sum_i q_i E_i phi_i^T. Then Theta_(k+1)=K H^-1.",
+      "planned_function": "c03.s10_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s11",
+      "statement": "H is positive definite for positive total q and lambda>0 even if all r0_i lie in a singular subspace.",
+      "planned_function": "c03.s11_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s12",
+      "statement": "An exact unconstrained surrogate solve implies L_tau(Theta_(k+1))<=Q(Theta_(k+1)|Theta_k)<=Q(Theta_k|Theta_k)=L_tau(Theta_k). Also 0<=L_tau(Theta)-L_0(Theta)<=tau sum_i w_i for the same slope penalty.",
+      "planned_function": "c03.s12_reviewed_operation",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s13",
+      "statement": "Neither the quadratic identity nor smoothed development descent establishes lower native CD3D, CD4D or CD-M.",
+      "planned_function": "c03.s13_reviewed_operation",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "intercept_squared",
+      "intercept_unsquared",
+      "unit_C01",
+      "diagonal_squared",
+      "diagonal_unsquared",
+      "full_squared",
+      "full_smoothed_unsquared"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "If error tails make squared fitting spend capacity on rare large residuals, a legally fitted unsquared-surrogate estimator may improve held-out native CD-M relative to squared fitting at equal labels and budget. This is a conditional prediction; neither descent nor a large ordinary covariance guarantees native improvement. The centered quadratic operator vanishes at C_ta=0 only for its own risk.",
+    "falsifier": "Reject the necessity of C03 if calibrated mean/intercept-only or fixed-unit/diagonal correction matches the full matrix under frozen native criteria. Reject the robust-estimator mechanism if the loss-order reversal or transfer pattern is absent, or if any gain disappears against matched unsquared simple estimators. Unqualified correspondence/calibration or insufficient precision is INCONCLUSIVE, not method failure.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "legal development error/moment calibration and family-split transfer",
+    "fitted means and covariance conditioning",
+    "no confirmation label access",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+    "explicit pointwise-to-native metric bridge or stated surrogate limitation",
+    "matched unsquared intercept/diagonal comparators",
+    "data-calibrated versus zero-shot claim boundary"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/specs/4d-math-20261006-c03.json",
+    "sha256": "9aab72674c3770e4906183032765b8e364b6912b11d222c76cf2d2cdc2a6bcbc"
+  }
+}
