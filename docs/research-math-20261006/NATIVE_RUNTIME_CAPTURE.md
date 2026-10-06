@@ -30,12 +30,21 @@ Inspect the generated plan and use its printed digest:
 
 The outer plan reserves one CPU, 1,024 MiB RAM, zero GPUs, and at most 180 seconds. The inner task has a 120-second limit, one attempt, no retry. Its foreground command is `python -m research_math.native_runtime` in the staged attempt's `actionmesh` directory. It initializes no CUDA device and imports no native scorer or torch module.
 
+Set `python_bin` to the interpreter the project actually uses. If that is a
+virtual environment created from Conda with system site packages enabled, use
+that environment's `bin/python`, not the bare Conda interpreter and not a
+manually extended `PYTHONPATH`. The capture records the Python environment
+prefix separately from the Conda base prefix. When the same distribution is
+visible in both prefixes, it records the version selected by Python's
+`sys.path` order; duplicates with ambiguous locations or precedence still
+fail closed.
+
 Locate the completed attempt via the actual harness/native receipts. Verify its declared output hashes. Copy the attempt workspace's `inputs/native-runtime/` directory, preserving relative paths, into the clean project checkout using controller file transfer. Refuse to overwrite an existing different capture; record both source and destination paths and hashes. The dependency reference already uses the final project-relative path, so do not rewrite the JSON after transfer.
 
 Outputs:
 
 - `inputs/native-runtime/dependencies.json`: installed Python distribution names/versions and Conda name/version/build/subdir records, with no channel or download URL export.
-- `inputs/native-runtime/environment.json`: actual interpreter/prefix, five required package versions, supplied GPU UUID, UTC capture time, and the SHA-256 of the dependency inventory.
+- `inputs/native-runtime/environment.json`: actual interpreter and Python/Conda prefixes, five required package versions, supplied GPU UUID, UTC capture time, and the SHA-256 of the dependency inventory.
 
 Pass `--environment "$project_dir/inputs/native-runtime/environment.json"` to the existing scoring-plan builder. That builder rechecks current interpreter, package versions, supplied UUID and every dependency reference before admission.
 

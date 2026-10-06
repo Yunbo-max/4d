@@ -18,7 +18,14 @@ REQUIRED_PACKAGES = ('numpy', 'torch', 'trimesh', 'scipy', 'pytorch3d')
 
 
 def package_inventory():
+    search_order = {}
+    for index, entry in enumerate(sys.path):
+        try:
+            search_order.setdefault(Path(entry or '.').resolve(), index)
+        except OSError:
+            continue
     packages = {}
+    locations = {}
     for distribution in metadata.distributions():
         name = distribution.metadata.get('Name')
         version = distribution.version
@@ -27,19 +34,41 @@ def package_inventory():
         name = re.sub(r'[-_.]+', '-', name).lower()
         if not re.fullmatch(r'[a-z0-9][a-z0-9-]*', name) or any(c in version for c in '\n\r'):
             raise ValueError('Invalid installed package identity')
-        if name in packages and packages[name] != version:
+        try:
+            location = Path(distribution.locate_file('')).resolve()
+        except (AttributeError, OSError, TypeError):
+            location = None
+        order = search_order.get(location)
+        if name not in packages:
+            packages[name], locations[name] = version, (location, order)
+            continue
+        if packages[name] == version:
+            continue
+        previous_location, previous_order = locations[name]
+        # A system-site-packages venv can intentionally shadow a Conda package.
+        # Record the version Python resolves first, but reject ambiguous duplicates.
+        if (location is None or previous_location is None or order is None or
+                previous_order is None or order == previous_order):
             raise ValueError('Conflicting installed package versions: '+name)
-        packages[name] = version
+        if order < previous_order:
+            packages[name], locations[name] = version, (location, order)
     missing = set(REQUIRED_PACKAGES)-packages.keys()
     if missing:
         raise ValueError('Required native dependencies absent: '+', '.join(sorted(missing)))
     return dict(sorted(packages.items()))
 
 
+def conda_prefix():
+    for candidate in (Path(sys.prefix), Path(sys.base_prefix)):
+        if (candidate/'conda-meta').is_dir():
+            return candidate.resolve()
+    raise ValueError('Use the existing Conda interpreter with retained conda-meta records')
+
+
 def conda_inventory():
-    directory = Path(sys.prefix)/'conda-meta'
+    directory = conda_prefix()/'conda-meta'
     records = sorted(directory.glob('*.json'))
-    if not directory.is_dir() or not records:
+    if not records:
         raise ValueError('Use the existing Conda interpreter with retained conda-meta records')
     packages = []
     for path in records:
@@ -65,12 +94,14 @@ def capture(root: Path, output: Path, gpu_uuid: str):
     conda_packages = conda_inventory()
     lock = {'kind': 'installed-native-dependency-inventory', 'version': '1.0.0',
             'python_executable': sys.executable, 'python_version': sys.version,
-            'conda_prefix': sys.prefix, 'packages': packages, 'conda_packages': conda_packages,
+            'python_prefix': sys.prefix, 'conda_prefix': str(conda_prefix()),
+            'packages': packages, 'conda_packages': conda_packages,
             'scope': 'Observed package identities; not an upstream artifact checksum or reproducible solver lock'}
     lock_bytes = (json.dumps(lock, indent=2, sort_keys=True, allow_nan=False)+'\n').encode()
     lock_path = relative/'dependencies.json'
     environment = {'execution_mode': 'native_host', 'python_executable': sys.executable,
-        'python_version': sys.version, 'conda_prefix': sys.prefix, 'gpu_uuid': gpu_uuid,
+        'python_version': sys.version, 'python_prefix': sys.prefix,
+        'conda_prefix': str(conda_prefix()), 'gpu_uuid': gpu_uuid,
         'packages': {name: packages[name] for name in REQUIRED_PACKAGES},
         'dependency_lock_refs': [{'path': lock_path.as_posix(),
                                  'sha256': hashlib.sha256(lock_bytes).hexdigest()}],

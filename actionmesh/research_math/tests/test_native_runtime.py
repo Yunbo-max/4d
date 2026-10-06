@@ -20,6 +20,11 @@ class RuntimeTests(unittest.TestCase):
         (self.prefix/'conda-meta/python.json').write_text(json.dumps(
             {'name': 'python', 'version': '3.11.9', 'build': 'fixture',
              'subdir': 'linux-64', 'url': 'https://secret.invalid/token'}))
+        (self.prefix/'conda-meta/numpy.json').write_text(json.dumps(
+            {'name': 'numpy', 'version': '2.4.4', 'build': 'base', 'subdir': 'linux-64'}))
+        self.venv_prefix = self.root/'venv'
+        self.venv_site = self.venv_prefix/'lib/python3.11/site-packages'
+        self.base_site = self.prefix/'lib/python3.11/site-packages'
 
     def distributions(self):
         return [SimpleNamespace(metadata={'Name': name}, version='1.0')
@@ -27,7 +32,8 @@ class RuntimeTests(unittest.TestCase):
 
     def capture(self, output='inputs/native-runtime', uuid='GPU-fixture'):
         with patch.object(native_runtime.metadata, 'distributions', return_value=self.distributions()), \
-             patch.object(native_runtime.sys, 'prefix', str(self.prefix)):
+             patch.object(native_runtime.sys, 'prefix', str(self.venv_prefix)), \
+             patch.object(native_runtime.sys, 'base_prefix', str(self.prefix)):
             return native_runtime.capture(self.root, self.root/output, uuid)
 
     def test_capture_binds_lock_bytes_at_the_final_project_relative_path(self):
@@ -55,16 +61,45 @@ class RuntimeTests(unittest.TestCase):
         with patch.object(native_runtime.metadata, 'distributions', return_value=values):
             with self.assertRaises(ValueError): native_runtime.package_inventory()
 
+    def test_system_site_overlay_uses_active_venv_package_and_base_conda_records(self):
+        def distribution(name, version, location):
+            return SimpleNamespace(metadata={'Name': name}, version=version,
+                                   locate_file=lambda _: location)
+
+        values = [distribution(name, '1.0', self.venv_site)
+                  for name in native_runtime.REQUIRED_PACKAGES if name != 'torch']
+        values += [distribution('numpy', '2.4.4', self.base_site),
+                   distribution('torch', '2.12.1', self.base_site)]
+        # Metadata enumeration order must not override Python's sys.path precedence.
+        values.reverse()
+        with patch.object(native_runtime.metadata, 'distributions', return_value=values), \
+             patch.object(native_runtime.sys, 'path', [str(self.venv_site), str(self.base_site)]), \
+             patch.object(native_runtime.sys, 'prefix', str(self.venv_prefix)), \
+             patch.object(native_runtime.sys, 'base_prefix', str(self.prefix)):
+            packages = native_runtime.package_inventory()
+            conda_packages = native_runtime.conda_inventory()
+
+        self.assertEqual(packages['numpy'], '1.0')
+        self.assertEqual(packages['torch'], '2.12.1')
+        self.assertEqual([p['version'] for p in conda_packages if p['name'] == 'numpy'], ['2.4.4'])
+
+    def test_capture_records_venv_and_base_conda_prefixes(self):
+        env = self.capture()
+        self.assertEqual(env['python_prefix'], str(self.venv_prefix))
+        self.assertEqual(env['conda_prefix'], str(self.prefix.resolve()))
+
     def test_conda_capture_excludes_urls_channels_and_credentials(self):
         self.capture()
         lock = json.loads((self.root/'inputs/native-runtime/dependencies.json').read_text())
-        self.assertEqual(lock['conda_packages'], [{'name': 'python', 'version': '3.11.9',
-                                                  'build': 'fixture', 'subdir': 'linux-64'}])
+        self.assertEqual(lock['conda_packages'], [
+            {'name': 'numpy', 'version': '2.4.4', 'build': 'base', 'subdir': 'linux-64'},
+            {'name': 'python', 'version': '3.11.9', 'build': 'fixture', 'subdir': 'linux-64'}])
         self.assertNotIn('secret.invalid', json.dumps(lock))
         self.assertNotIn('url', lock['conda_packages'][0])
 
     def test_nonconda_interpreter_is_rejected(self):
-        with patch.object(native_runtime.sys, 'prefix', str(self.root/'not-conda')):
+        with patch.object(native_runtime.sys, 'prefix', str(self.root/'not-conda')), \
+             patch.object(native_runtime.sys, 'base_prefix', str(self.root/'not-conda')):
             with self.assertRaises(ValueError): native_runtime.conda_inventory()
 
     def test_escaping_output_directory_is_rejected_before_write(self):
