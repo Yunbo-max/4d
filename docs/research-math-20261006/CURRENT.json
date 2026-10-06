@@ -24,5 +24,23 @@
       "sha256": "77a7dd15450e52168ba192ba26b520ec04ef36e45492fa058d32c15ef8d16f29"
     },
     "candidate_designs_verified": 0
+  },
+  "scoring_output_integrity_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-06T20:02:35.643299+00:00",
+    "base_commit": "5d05e9c9cb652d7110fc1a909f6dc634350a3820",
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-scoring-output-integrity.json",
+      "sha256": "d920e0a05a430389f48120a9eb32e031e7c4d65008a8aeed91dbd564d461af2e"
+    },
+    "entry_ref": {
+      "path": "docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md",
+      "sha256": "4d4059c813cef6623029b2ea395d5736528462cc9ba88a6a16ae8b79e107f0c9"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/scoring-output-integrity-source-review.json",
+      "sha256": "834eef360a06b1c2ee808a7efac76875e1e4d7822fe1d94a78a19b0d92f1e026"
+    },
+    "candidate_designs_verified": 0
   }
 }

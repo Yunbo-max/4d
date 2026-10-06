@@ -1,0 +1,109 @@
+{
+  "kind": "baseline-scoring-output-integrity-handoff",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T20:02:35.643299+00:00",
+  "base_commit": "5d05e9c9cb652d7110fc1a909f6dc634350a3820",
+  "role": "web_supervisor",
+  "role_source": "Owner standing Web/Local split and saved baseline-scoring checkpoint; unchanged scheduled continuation",
+  "status": "generated_unexecuted",
+  "entry_ref": {
+    "path": "docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md",
+    "sha256": "4d4059c813cef6623029b2ea395d5736528462cc9ba88a6a16ae8b79e107f0c9"
+  },
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/control_scoring.py",
+      "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_control_scoring.py",
+      "sha256": "7cfbeccb99afac2ef96ef3ae38da9086ad4c1dea2c42761294d960f1fec83d3d"
+    }
+  ],
+  "source_review_ref": {
+    "path": "docs/research-math-20261006/scoring-output-integrity-source-review.json",
+    "sha256": "834eef360a06b1c2ee808a7efac76875e1e4d7822fe1d94a78a19b0d92f1e026"
+  },
+  "skill_revision_sha256": "c07a0627240b6973faceb8e46b8b0bedb2b8f7a1f03477c4b42744fe6f80678c",
+  "skill_module_sha256": {
+    "workflow-harness.md": "f3b1da1b3f5a092cdca3774d4ce6e8cde19aa1e2ae7546374a320ba0f211fdc3",
+    "local-execution-harness.md": "eea154f9d1f8fc0ae44f4b19ccff4050c02a7da41934b9e80f01579bb337eee3",
+    "method-verification.md": "0ceeccd5c69a32416a5b0ad40ad6a6d277440e0e3dfe33a16585f0acfb89e4da",
+    "full-validation-and-review.md": "f705d04a7b836ec8eaa6121d8da708c76b903c5342a834a0a2d6a9e1835afe14",
+    "native-evaluation.md": "6262d90670f1ca667669f4b208a44df6aab748956b2360527e94f80b500c9a80",
+    "research-quality-bar.md": "cb4e4522337f6815f3c53f5e0c193783ada6a492e652c6531e90b30cb580c409",
+    "gpu-host-runtime.md": "a50a6614cb22b67615d3e5b73233f3a4be636385477d26fb61b2b28b8182bd1c",
+    "repository-round-trips.md": "1bc9cd582c9876b800d21719a45a63e3e7b6a0a7a95b963b828df320661fb6c5"
+  },
+  "skill_revision_resolution": "Read installed entry/modules directly to resolve differing skill reader snapshots; retain historical checkpoints at original identities.",
+  "scope": "Baseline/evaluator acceptance repair; does not generate candidate code, alter native computation/budgets or change mathematical selection.",
+  "source_reads_at_base_commit": [
+    "docs/research-math-20261006/CURRENT.json",
+    "docs/research-math-20261006/STEPWISE_PROGRESS.md",
+    "docs/research-math-20261006/BASELINE_SCORING.md",
+    "docs/research-math-20261006/workflow-checkpoint-baseline-scoring.json",
+    "actionmesh/research_math/control_scoring.py",
+    "actionmesh/research_math/tests/test_control_scoring.py",
+    "actionmesh/research_census_eval.py",
+    "actionmesh/prepare_control_scoring.py",
+    "actionmesh/prepare_control_scoring_checks.py",
+    "actionmesh/repo/actionbench/README.md",
+    "actionmesh/repo/actionbench/benchmark.py",
+    "actionmesh/repo/actionbench/sample_mesh.py",
+    "actionmesh/repo/actionbench/evaluate_dataset.py",
+    "docs/research-overnight/FEEDBACK-20261006.md",
+    "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/w0-feedback-review.json"
+  ],
+  "completed_this_round": [
+    "Generated complete raw-score provenance binding and linked it before success extraction",
+    "Authored 18 additional parser-only engineering checks",
+    "Independent source review and narrow repairs",
+    "Read-only AST syntax/source identity inspection",
+    "Prepared Local whole-suite acceptance/request regeneration and coherent return obligations"
+  ],
+  "not_executed_this_round": [
+    "Generated software checks",
+    "Native scorer",
+    "GPU experiment",
+    "Trusted scorer replay"
+  ],
+  "observed_status": {
+    "new_test_methods_authored": 18,
+    "test_methods_authored_in_module": 51,
+    "new_tests_executed": 0,
+    "candidate_designs_verified": 0,
+    "complete_new_candidate_comparisons": 0,
+    "formal_candidate_successes": 0,
+    "formal_candidate_failures": 0,
+    "native_baseline_qualified": false,
+    "complete_multi_arm_cost_measured": false,
+    "gpu_connected": false
+  },
+  "preserved": {
+    "math_revision_id": "mechanism-boundaries-r2",
+    "math_constructs": 20,
+    "selected_candidates": 15,
+    "historical_software_evidence_unchanged": true,
+    "old_scoring_handoff_retained": true,
+    "no_dirty_worktree_reset": true
+  },
+  "runtime": {
+    "user_gpu_count": 1,
+    "user_gpu_model": "2080 Ti",
+    "execution_mode": "native_host/conda",
+    "containers_allowed": false,
+    "current_gpu_uuid": null,
+    "current_gpu_vram_mib": null,
+    "window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "cached_scoring_cost_eligible_for_full_queue": false
+  },
+  "execution_blockers": [
+    "Local software/semantic acceptance pending for changed bytes",
+    "Original complete native sequences/receipts and same-UID released GT not available on Web",
+    "No connected GPU/SSH executor",
+    "Source-backed frozen native qualification protocol/official-harness replay pending",
+    "Complete multi-arm end-to-end timing/VRAM not measured"
+  ],
+  "next_action": "Local runs existing whole-suite harness on delivered revision, retains exact test evidence, then regenerates requests/plans and continues baseline-only source-backed native qualification and replay. Web can continue official source/adapter preparation without candidate admission."
+}

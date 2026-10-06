@@ -1,0 +1,47 @@
+{
+  "kind": "baseline-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T20:02:35.643299+00:00",
+  "base_commit": "5d05e9c9cb652d7110fc1a909f6dc634350a3820",
+  "reviewer": "/root/scoring_source_review",
+  "role": "web_supervisor",
+  "scope": "Independent source-only review of raw-score parser binding, unchanged census writer and authored engineering fixtures",
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/control_scoring.py",
+      "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_control_scoring.py",
+      "sha256": "7cfbeccb99afac2ef96ef3ae38da9086ad4c1dea2c42761294d960f1fec83d3d"
+    }
+  ],
+  "root_cause": "The score_request subprocess boundary extracted metrics after only case-ID/denominator and exit-status checks; returned UID/protocol/evaluator/source/input provenance was not bound.",
+  "findings_and_repairs": [
+    {
+      "finding": "Raw native score provenance not checked before success readout",
+      "repair": "Require exact UID/arm, frozen per-pass manifest and native sampling/device, evaluator/official source hashes and mesh/GT/report identities; failed rows cannot complete a pair."
+    },
+    {
+      "finding": "Canonical symlink references can differ from literal expected paths",
+      "severity": "minor",
+      "repair": "Resolve expected paths consistently with scorer_command; add nonescaping-symlink parser fixture."
+    },
+    {
+      "finding": "Missing schema/denominator/path/identity parser edge cases",
+      "severity": "minor",
+      "repair": "Add parameterized structured/path mismatch rejection fixture with 11 mutations."
+    }
+  ],
+  "review_initial": "No critical/important integration blocker for make_request-generated requests; two minor findings.",
+  "review_after_repairs": "No remaining material issue found in narrow source reread.",
+  "verification": {
+    "syntax_parsed_read_only": true,
+    "software_executed": false,
+    "native_executed": false,
+    "gpu_executed": false,
+    "native_contract_qualified": false
+  },
+  "authored_new_test_methods": 18,
+  "authored_control_scoring_test_methods_total": 51
+}

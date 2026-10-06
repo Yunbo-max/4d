@@ -274,6 +274,62 @@ def valid_score(row: dict) -> bool:
         and math.isfinite(row[key]) and row[key] >= 0 for key in METRICS)
 
 
+def validate_native_output(root: Path, request: dict, arm: str, stage: Path,
+                           device: str, raw: dict, exit_code: int) -> dict:
+    """Bind a fresh census output to this pass; no scoring or qualification.
+
+    The caller has verified/staged the request and started the pinned scorer.
+    Errors retain the declared asset without fabricating absent metric/input
+    provenance. A successful row must bind the exact current input and source
+    bytes. This parser check is necessary, never a trusted live replay receipt.
+    """
+    root, stage = Path(root).resolve(), Path(stage).resolve()
+    if not isinstance(raw, dict) or type(raw.get('schema_version')) is not int or raw['schema_version'] != 1:
+        raise ValueError('Unknown native scorer output schema')
+    if raw.get('protocol') != request['native_protocol'] or raw.get('device') != device:
+        raise ValueError('Scorer output protocol/device mismatch')
+    if raw.get('evaluator_sha256') != census.digest(Path(census.__file__).resolve()):
+        raise ValueError('Scorer output evaluator hash mismatch')
+    denominator = raw.get('denominator')
+    manifest_path = stage/'manifest.json'
+    if not isinstance(denominator, dict) or denominator.get('frozen') is not True or type(denominator.get('n_declared')) is not int or denominator['n_declared'] != 1:
+        raise ValueError('Scorer output must retain one declared frozen asset')
+    if denominator.get('manifest') != str(manifest_path) or denominator.get('manifest_sha256') != census.digest(manifest_path):
+        raise ValueError('Scorer output pass manifest mismatch')
+    rows = raw.get('cases')
+    if not isinstance(rows, list) or len(rows) != 1 or not isinstance(rows[0], dict):
+        raise ValueError('Scorer output must retain exactly one case')
+    row = rows[0]
+    control_root = (root/request['manifest_ref']['path']).resolve().parent
+    if row.get('case_id') != request['uid']+'-'+arm or row.get('uid') != request['uid'] or row.get('case_dir') != str(control_root/arm):
+        raise ValueError('Scorer output case/UID/arm identity mismatch')
+    if row.get('status') == 'error':
+        return row
+    if row.get('status') != 'success' or exit_code != 0 or not valid_score(row):
+        raise ValueError('Scorer output is not a successful finite native score')
+    entry = next((a for a in request['arms'] if a['arm'] == arm), None)
+    if not entry or entry['preparation_status'] != 'completed' or not entry['sequence_ref']:
+        raise ValueError('Failed preparation cannot produce a successful native score')
+    expected_inputs = {'sequence': entry['sequence_ref'], 'ground_truth': request['ground_truth_ref'],
+                       'generation_report': entry['report_ref']}
+    actual_inputs = row.get('inputs')
+    if not isinstance(actual_inputs, dict): raise ValueError('Scorer output input provenance missing')
+    for name, ref in expected_inputs.items():
+        if actual_inputs.get(name) != {'path': str((root/ref['path']).resolve()), 'sha256': ref['sha256']}:
+            raise ValueError('Scorer output input mismatch: '+name)
+    repo = (root/request['repo_root']).resolve()
+    declared_code = {ref['path']: ref for ref in request['code_refs']}
+    expected_hashes = {}
+    for name in census.OFFICIAL_FILES:
+        relative = (repo/'actionbench'/name).relative_to(root).as_posix()
+        if relative not in declared_code: raise ValueError('Official scorer dependency not pinned: '+name)
+        expected_hashes[name] = declared_code[relative]['sha256']
+    source = raw.get('official_source')
+    if not isinstance(source, dict) or source.get('source_root') != str(repo) or source.get('sha256') != expected_hashes:
+        raise ValueError('Scorer output official source identity mismatch')
+    return row
+
+
 def replay_comparison(first: dict, repeated: dict) -> dict:
     ok = valid_score(first) and valid_score(repeated)
     return {'status': ('identical' if all(first[k] == repeated[k] for k in METRICS) else 'mismatch') if ok else 'unscored',
@@ -464,11 +520,7 @@ def score_request(root: Path, request_path: Path, output: Path, device: str, gpu
                     torch.cuda.synchronize()
                     if not (stage/'scores.json').is_file(): raise ValueError('Native scorer exited without a score file')
                     raw = census.read_json(stage/'scores.json')
-                    if len(raw.get('cases', [])) != 1 or raw['cases'][0].get('case_id') != request['uid']+'-'+arm or raw.get('denominator', {}).get('n_declared') != 1:
-                        raise ValueError('Scorer output denominator/identity mismatch')
-                    row = raw['cases'][0]
-                    if exit_code != 0 and row.get('status') == 'success':
-                        raise ValueError('Nonzero native scorer exit')
+                    row = validate_native_output(root, request, arm, stage, device, raw, exit_code)
                     row_record = {key: row.get(key) for key in ('status', *METRICS, 'error')}
                 except Exception as exc:
                     row_record = {'status': 'error', 'error': f'{type(exc).__name__}: {exc}', 'traceback': traceback.format_exc()}
