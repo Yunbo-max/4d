@@ -1,0 +1,121 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c04",
+  "name_zh": "不确定动作约束下的稳健修复",
+  "priority_rank": 6,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T10:34:56.803939+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
+    "sha256": "d22fa4a56610b3abaee5ba863729431bf06b59386c67fe9948c8061bc07d98fa"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c04-math.json",
+    "sha256": "2578c6f63c4eb7cff70921301cdd4325785aa8d79530a0fe2214f391d476987d"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/evidence/selection.json",
+    "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    }
+  ],
+  "prior_art_and_role": "Classical robust conic optimization; deterministic constrained repair and C02 are direct controls.",
+  "planned_interface": {
+    "inputs": [
+      "common desired geometry repair d",
+      "legal motion-surrogate gradient g0",
+      "PSD set shape S, radius r and epsilon",
+      "anchor pins and Hessian/trust-region obligation"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "sup_{||u||<=r}|(g0+S^(1/2)u)^T delta|=|g0^T delta|+r||S^(1/2)delta||.",
+      "planned_function": "4d_math_20261006_c04.ellipsoid_support",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Impose |g0^T delta|+r||S^(1/2)delta||<=epsilon and A delta=0.",
+      "planned_function": "4d_math_20261006_c04.solve_anchored_conic_projection",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "For a smooth protected surrogate with Hessian norm <=L, finite-step change is bounded by epsilon+L||delta||^2/2.",
+      "planned_function": "4d_math_20261006_c04.check_finite_step_surrogate",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "deterministic_protection",
+      "strength_matched_repair",
+      "robust_conic_protection"
+    ],
+    "primary_metric": "cd_3d",
+    "guardrail_metrics": [
+      "cd_4d",
+      "cd_motion"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "As uncertainty radius grows, admissible updates contract in uncertain directions; fixed-equality C02 cannot model this confidence-dependent tradeoff.",
+    "falsifier": "Reject if the uncertainty set fails its held-out coverage/semantic check or if strength-matched deterministic repair reaches the same native frontier.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "legal motion surrogate and meaningful uncertainty set",
+    "held-out semantic/coverage check if probability coverage claimed",
+    "nonlinear remainder bounds and fair solver budget",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ]
+}

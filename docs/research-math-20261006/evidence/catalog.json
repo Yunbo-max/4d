@@ -1,0 +1,182 @@
+[
+  {
+    "candidate_id": "4d-math-20261006-c01",
+    "name_zh": "同时间自映射偏差消除",
+    "structural_signature": "Pointwise deterministic self-map quotient, no covariance estimate, transport or temporal regularizer.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
+      "sha256": "6df45ce3122df46c583231602a41f92eb0f32cea06e81dd2b1d6c02eb762a93e"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c02",
+    "name_zh": "保留动作特征的几何近端更新",
+    "structural_signature": "Deterministic equality-constrained repair in output trajectory space.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+      "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c03",
+    "name_zh": "相关参考误差的矩阵校正",
+    "structural_signature": "Statistical matrix estimator learned from error cross-moments, with explicit estimation penalty.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+      "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c04",
+    "name_zh": "不确定动作约束下的稳健修复",
+    "structural_signature": "Robust inequality-constrained repair, distinct from an exact nullspace projection.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
+      "sha256": "d22fa4a56610b3abaee5ba863729431bf06b59386c67fe9948c8061bc07d98fa"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c05",
+    "name_zh": "保留对应多解的空间联合分支",
+    "structural_signature": "Discrete spatial mode assignment before deformation, as opposed to continuous averaging or mass balancing.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+      "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c06",
+    "name_zh": "面积边际约束的对应运输",
+    "structural_signature": "Continuous globally mass-balanced correspondence coupling.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
+      "sha256": "4b38b4752d81535725f96f513b5d4fb585d52308efda44a331fc90c14c8d03f9"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c07",
+    "name_zh": "允许不匹配质量的部分运输",
+    "structural_signature": "Mass rejection with complete-output fallback.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+      "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c08",
+    "name_zh": "端点约束的轨迹分布桥",
+    "structural_signature": "Path-distribution KL projection with two endpoint marginals.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+      "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c09",
+    "name_zh": "局部旋转的图同步",
+    "structural_signature": "SO(3) graph-gauge synchronization, not coordinate smoothing.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+      "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c10",
+    "name_zh": "形变梯度的可积投影",
+    "structural_signature": "Pinned weighted range projection of a differential field.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
+      "sha256": "a92d7331b59e1e9c78e3d8811d3240c1ab1137dfac97da142acd63ee1f72d173"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c11",
+    "name_zh": "保留旋转的应变约束修复",
+    "structural_signature": "Nonlinear polar-coordinate stretch projection followed by reconstruction.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c11.json",
+      "sha256": "fa863defd6620c99aa0767b1df2dde8f57e50dc1b54385b7b2dba05d7026f3b3"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c12",
+    "name_zh": "最大可行的三角面安全修正",
+    "structural_signature": "Exact line-feasibility root calculation on triangle geometry.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
+      "sha256": "893238c0e767ccff25dd1b82c4770b6373c0e8a71c62d3c3a1fefe34ad354500"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c13",
+    "name_zh": "稀疏加速度的事件保留修复",
+    "structural_signature": "Nonsmooth group acceleration sparsity rather than quadratic smoothing or low-rank estimation.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+      "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c14",
+    "name_zh": "共转坐标中的时间修复",
+    "structural_signature": "Time filtering after factoring pose, not spatial rotation synchronization.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
+      "sha256": "4e8eabce07534f07382ddbd0b4433d4ad9d9589abf3cd1690187de72b1bcffbb"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c15",
+    "name_zh": "保护动作分量的低秩轨迹修复",
+    "structural_signature": "Protected-component nuclear-norm trajectory estimator.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c15.json",
+      "sha256": "b57035b5d65e922d0c0f6b1fd7f7734a2fc622841fb83337099fee122fce8241"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c16",
+    "name_zh": "参考帧的误差传播选择",
+    "structural_signature": "Finite anchor-design decision using a propagated error/cost model.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+      "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c17",
+    "name_zh": "曲率误差驱动的查询预算",
+    "structural_signature": "Continuous curvature/error budget allocation for decoder interpolation.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+      "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c18",
+    "name_zh": "消去相机干扰的形变优化",
+    "structural_signature": "Weighted elimination of a nuisance parameter block.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+      "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c19",
+    "name_zh": "输出度量中的双路引导",
+    "structural_signature": "Reachable output-metric least squares over two latent guidance columns.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+      "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+    }
+  },
+  {
+    "candidate_id": "4d-math-20261006-c20",
+    "name_zh": "相位与动作幅度的可识别分解",
+    "structural_signature": "Endpoint-preserving monotone phase/amplitude block inference.",
+    "math_card_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+      "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+    }
+  }
+]

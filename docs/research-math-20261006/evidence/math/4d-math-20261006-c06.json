@@ -1,0 +1,86 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c06",
+  "name_zh": "面积边际约束的对应运输",
+  "formal_object": "Source and target surface areas a_i,b_j>0, equal total mass; correspondence costs c_ij from permitted features; epsilon>0.",
+  "operations": [
+    {
+      "id": "A03",
+      "input": "Counting vertices versus integrating surface area",
+      "condition": "Areas are computed from released/model meshes, not hidden labels",
+      "condition_status": "conditional",
+      "output": "Use physical surface mass instead of vertex density"
+    },
+    {
+      "id": "D01",
+      "input": "Entropic transport with row and column constraints",
+      "condition": "Finite costs and compatible positive marginals",
+      "condition_status": "conditional",
+      "output": "KKT scaling form"
+    },
+    {
+      "id": "D02",
+      "input": "Distributional transport optimum",
+      "condition": "Positive kernel and feasible support",
+      "condition_status": "conditional",
+      "output": "Normalized coupled assignment"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Minimize sum Pi_ij c_ij + epsilon sum Pi_ij(log Pi_ij-1), with Pi1=a and Pi^T1=b.",
+      "justification": "The entropy-regularized objective is strictly convex on positive feasible support."
+    },
+    {
+      "id": "s2",
+      "statement": "Stationarity gives Pi_ij=exp(-(c_ij+alpha_i+beta_j)/epsilon)=u_i K_ij v_j.",
+      "justification": "Differentiate the Lagrangian; K_ij=exp(-c_ij/epsilon)."
+    },
+    {
+      "id": "s3",
+      "statement": "u=a/(Kv), v=b/(K^T u) enforce the two marginals when converged.",
+      "justification": "Alternating positive matrix scaling; log-domain arithmetic and residuals are required."
+    }
+  ],
+  "assumptions": [
+    "True correspondence does not necessarily preserve model-surface area; this assumption can fail under real stretch or shape error.",
+    "Source/target surface samples and legal features must actually be available.",
+    "Zero-area elements are removed with a retained mapping, not hidden from evaluation.",
+    "Sparse support must admit a feasible transport plan."
+  ],
+  "method_expression": "Use area-marginal entropic assignment, obtain per-source targets from normalized transported mass, and use the same lift as controls.",
+  "distinguishing_prediction": "Area constraints should prevent many source regions collapsing onto the same favored target; they can hurt when the target mass model is wrong.",
+  "falsifier": "Reject if balancing consistently harms native motion under realistic area change, or row-only matching plus the same geometric lift is adequate.",
+  "closest_alternative": "Classical Sinkhorn OT; STAC row-normalized correspondence; Catalyst4D's OT anchors need full collision inspection.",
+  "decisive_comparison": "Same support/cost/lift: row softmax versus equal-count OT versus area OT; complete native scoring and matched correspondence budget.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "The global column mass constraint differs structurally from C05's discrete mode coherence; OT itself is existing work.",
+  "feasibility_and_cost": "Chunked/sparse matrix scaling; support connectivity and target-mesh extraction remain prerequisites.",
+  "structural_signature": "Continuous globally mass-balanced correspondence coupling.",
+  "algebra_review_basis": "Derived entropy KKT signs and both marginal updates; positivity and support caveats retained.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

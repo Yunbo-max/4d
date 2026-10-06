@@ -1,0 +1,79 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c12",
+  "name_zh": "最大可行的三角面安全修正",
+  "formal_object": "A fixed full-mesh proposed correction d; original face edges e1,e2, changes d1,d2, original unit normal n0; area floor beta in (0,1).",
+  "operations": [
+    {
+      "id": "C05",
+      "input": "Edges e_k(alpha)=e_k+alpha d_k",
+      "condition": "Edges vary affinely along one proposed update",
+      "condition_status": "conditional",
+      "output": "Exact quadratic oriented-area polynomial"
+    },
+    {
+      "id": "D01",
+      "input": "Largest feasible alpha connected to alpha=0",
+      "condition": "Original faces have positive oriented area",
+      "condition_status": "conditional",
+      "output": "Constraint-determined step admission"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "a(alpha)=n0 dot ((e1+alpha d1) cross (e2+alpha d2))=a0+a1 alpha+a2 alpha^2.",
+      "justification": "Expand bilinearity of the cross product; this is exact along the line."
+    },
+    {
+      "id": "s2",
+      "statement": "Require a_f(alpha)>=beta a_f(0) for every face and alpha in [0,1].",
+      "justification": "Use a positive original-area reference for every constraint."
+    },
+    {
+      "id": "s3",
+      "statement": "Choose the first positive crossing among all face polynomials, or 1 if none, with an inward numerical margin.",
+      "justification": "The connected feasible interval from zero ends at the earliest constraint violation."
+    }
+  ],
+  "assumptions": [
+    "This bounds projected oriented area relative to original normals, a conservative condition that may reject legitimate large rotations.",
+    "Originally degenerate faces are errors requiring a declared fallback.",
+    "Positive face area does not imply global injectivity, no self-intersection or correct geometry.",
+    "The desired correction d is from the same qualified generator in all arms."
+  ],
+  "method_expression": "Find the maximal connected feasible step toward d using exact face-area quadratics; apply it or retain the baseline with the reason.",
+  "distinguishing_prediction": "Compared with arbitrary damping, correction size should depend on the first geometric feasibility boundary; already safe updates should be unchanged.",
+  "falsifier": "Reject necessity if fixed damping/backtracking with the same checks and full cost attains the same native frontier, or if conservative area limits block useful genuine rotation.",
+  "closest_alternative": "Classical mesh-flip line search and fixed-step damping, not an invented physical simulator.",
+  "decisive_comparison": "Common desired update with fixed damping, generic backtracking and exact quadratic admission; native scores on the complete denominator and all rejected attempts.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "A geometric admissibility algorithm rather than another tuning value; originality and usefulness remain unresolved.",
+  "feasibility_and_cost": "Linear face traversal plus scalar roots; cannot solve all global mesh validity issues.",
+  "structural_signature": "Exact line-feasibility root calculation on triangle geometry.",
+  "algebra_review_basis": "Expanded polynomial and connected-interval logic checked; large-rotation and self-intersection limitations retained.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

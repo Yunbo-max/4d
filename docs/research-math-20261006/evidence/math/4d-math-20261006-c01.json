@@ -1,0 +1,79 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c01",
+  "name_zh": "同时间自映射偏差消除",
+  "formal_object": "Frozen direct-coordinate decoder F_t(x)=F(z,x,a,t) in R^3; anchor x in R^3. F_a need not equal x.",
+  "operations": [
+    {
+      "id": "H01",
+      "input": "F_t(x)+b(x) for all t",
+      "condition": "The nuisance field b is shared over target times",
+      "condition_status": "conditional",
+      "output": "Differences F_t-F_a are invariant to b"
+    },
+    {
+      "id": "C04",
+      "input": "Errors e_t=F_t-Y_t and e_a=F_a-x",
+      "condition": "Finite second moments; shared vertex identity",
+      "condition_status": "conditional",
+      "output": "Correction error is e_t-e_a"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Define H_t(x)=x+F_t(x)-F_a(x); H_a(x)=x.",
+      "justification": "Substitute t=a; no assumption of decoder self-consistency."
+    },
+    {
+      "id": "s2",
+      "statement": "Replacing every F_t by F_t+b leaves H_t unchanged.",
+      "justification": "The same additive nuisance cancels, pointwise."
+    },
+    {
+      "id": "s3",
+      "statement": "E||e_t-e_a||^2-E||e_t||^2=E||e_a||^2-2E[e_t^T e_a].",
+      "justification": "Expand the squared norm; do not discard the cross term."
+    }
+  ],
+  "assumptions": [
+    "The decoder is evaluated on the same anchor query and context.",
+    "The common-bias explanation is conditional, not diagnosed by the 16 published scores.",
+    "A boundary identity is not a bound on CD-M; corrected points may leave [-1,1].",
+    "Do not silently clip the correction: clipping changes its algebra and requires a separate constraint/record."
+  ],
+  "method_expression": "Query F_a once and F_t for each original t; output H_t=x+F_t-F_a. Preserve faces and all time IDs.",
+  "distinguishing_prediction": "The correction should help when self-map error positively predicts downstream error strongly enough to exceed half its own squared magnitude; zero self-map residual gives no change.",
+  "falsifier": "Reject the common-bias explanation if actual self-map residuals do not predict the downstream error and the method loses to equal-call uncorrected/bias-fit controls on fresh native cases.",
+  "closest_alternative": "Uncorrected ActionMesh; simple mean-bias correction; SFG already anchors latent sampling trajectories by initial shape plus differences (Eq.2). Historical m02 checks decoder cycles, not this shared-bias risk criterion. The decoded-coordinate variant is a diagnostic/baseline until a material functional delta is established.",
+  "decisive_comparison": "Same latent/context/seed, full native ActionBench scoring; F_t versus H_t versus mean-bias fit; all arms pay the self-query cost or receive equal total budget.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Exact boundary and nuisance-invariance consequence; novelty beyond existing boundary correction remains pending.",
+  "feasibility_and_cost": "One additional decoder target-time query per cached context; no training. Cache/replay and full-mesh timing must be qualified.",
+  "structural_signature": "Pointwise deterministic self-map quotient, no covariance estimate, transport or temporal regularizer.",
+  "algebra_review_basis": "Checked by substitution, additive-offset invariance and the full error expansion. No universal error-reduction assertion.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c07",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+    "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Nonnegative plan Pi and unmatched masses s,t with Pi1+s=a, Pi^T1+t=b; costs c, unmatched cost gamma>0. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "H02: Forced full correspondence despite incompatible surfaces -> Allow unexplained mass without inventing a target; condition: The two generated surfaces need not match everywhere; D01: Partial transport with explicit rejection cost -> Convex partial assignment with fallback; condition: Nonnegative slack and preserved output denominator All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "Each added matched unit removes one unit from both slacks, so the unregularized marginal cost is c-2gamma. Entropy changes that sharp limiting decision and coupled capacities also matter. Every unmatched vertex receives a native fallback; this never licenses dropping a mesh vertex or scoring denominator.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Finite cost model and rejection threshold are fixed on development data.; The sharp 2gamma threshold describes the unregularized limit; entropy smooths it.; Rejection is for unsupported surface matching, not a new occlusion benchmark or supplied failure label.; A fallback is required for every source vertex and frame. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Solve partial transport; lift matched corrections and retain native decoder motion for unmatched mass. Evaluate all original vertices/times. The reviewed construction is Mass rejection with complete-output fallback.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Compared with C06, rejection should help under source/target mismatch but has no reason to help when full matching is correct. It can be rejected by: Reject if gains arise only by dropping scoring points or if a confidence-threshold native fallback with the same budget performs equally well. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical partial/unbalanced transport and threshold-and-fallback matching. Claimed operational difference: Adds a no-match decision and native fallback, rather than imposing another marginal or lowering confidence temperature. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

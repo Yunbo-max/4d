@@ -1,0 +1,79 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c14",
+  "name_zh": "共转坐标中的时间修复",
+  "formal_object": "Native predicted mesh Y_t; model/geometry-derived rotations R_t in SO(3), translations c_t; anchor X; body-frame residual u_t=R_t^T(Y_t-c_t)-X.",
+  "operations": [
+    {
+      "id": "H01",
+      "input": "Rigid motion gauge",
+      "condition": "R_t,c_t are estimated from permitted inputs and geometry",
+      "condition_status": "conditional",
+      "output": "Factor out rigid motion before smoothing"
+    },
+    {
+      "id": "A06",
+      "input": "World coordinates to body-frame residuals",
+      "condition": "Rotations are orthogonal; transform is invertible at fixed R,c",
+      "condition_status": "conditional",
+      "output": "Temporal repair acts on deformation, not pose"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "For a rigid sequence Y_t=c_t+R_t X, u_t=0 at every t.",
+      "justification": "Substitute the exact rigid factorization."
+    },
+    {
+      "id": "s2",
+      "statement": "Solve a declared anchored temporal repair for u, then reconstruct Y'_t=c_t+R_t(X+u'_t).",
+      "justification": "The coordinate transformation is invertible while R,c are fixed."
+    },
+    {
+      "id": "s3",
+      "statement": "An operator mapping zero to zero leaves the exact rigid sequence unchanged, even for time-varying rotations.",
+      "justification": "This invariance is absent from smoothing world coordinates across different R_t."
+    }
+  ],
+  "assumptions": [
+    "Rigid factors may be wrong or insufficient for articulated objects.",
+    "Factor estimation and downstream repair share the same tuning/cost budget as controls.",
+    "Differentiating through refitted R,c defines a different algorithm; the present subproblem freezes them.",
+    "No GT pose, cameras or evaluation ICP transforms enter inference."
+  ],
+  "method_expression": "Fit a legal rigid/body-frame decomposition, temporally repair only u, and reconstruct using the unchanged estimated pose.",
+  "distinguishing_prediction": "Pure rigid rotation/translation should be preserved by construction; improvement versus world smoothing should depend on pose variation rather than merely noise magnitude.",
+  "falsifier": "Reject if inferred rigid factors are unstable or a equal-cost rigid-aligned Gaussian baseline gives the same native performance.",
+  "closest_alternative": "Classical corotational deformation and pose-factored smoothing; STAC local rigid fitting; SFG root-space local/global decomposition. Treat basic pose factoring as a strong simple baseline, not a new contribution.",
+  "decisive_comparison": "World-coordinate smoothing, rigid-aligned simple smoothing and the declared body-residual operator under the same fitting/repair budget; full native metrics.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "An invariance-preserving coordinate choice; a basic rigid-aligned smoother may already close the gap.",
+  "feasibility_and_cost": "Rigid fits and banded temporal solve; native pose-estimation reliability is unknown.",
+  "structural_signature": "Time filtering after factoring pose, not spatial rotation synchronization.",
+  "algebra_review_basis": "Exact rigid substitution checked and the frozen-coordinate condition stated. No guarantee for incorrectly fitted articulated motion.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

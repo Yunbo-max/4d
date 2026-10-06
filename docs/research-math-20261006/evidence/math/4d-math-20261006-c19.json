@@ -1,0 +1,91 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c19",
+  "name_zh": "输出度量中的双路引导",
+  "formal_object": "Latent guidance columns U=[u_mesh,u_video]; frozen decoder Jacobian J; desired legal output change b; coefficient ridge lambda>0.",
+  "operations": [
+    {
+      "id": "A06",
+      "input": "Latent-coordinate changes versus decoded geometry changes",
+      "condition": "Local decoder derivative exists",
+      "condition_status": "conditional",
+      "output": "Pull back the output metric to guidance coefficients"
+    },
+    {
+      "id": "D05",
+      "input": "Output least squares .5||J U a-b||^2",
+      "condition": "J is a genuine decoder sensitivity, not latent Euclidean distance",
+      "condition_status": "conditional",
+      "output": "Output-metric Gram operator"
+    },
+    {
+      "id": "D01",
+      "input": "Solve coefficients with ridge and optional fixed linear protections",
+      "condition": "Positive ridge; active constraints handled by KKT",
+      "condition_status": "conditional",
+      "output": "Bounded reachable guidance"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Let K=J U; the objective is .5||K a-b||^2+lambda||a||^2/2.",
+      "justification": "First-order decoder expansion."
+    },
+    {
+      "id": "s2",
+      "statement": "a*=(K^T K+lambda I)^-1 K^T b.",
+      "justification": "Differentiate the strictly convex coefficient problem."
+    },
+    {
+      "id": "s3",
+      "statement": "If K is rank deficient, unattainable b remains in the orthogonal residual.",
+      "justification": "Solving coefficients cannot invent output directions absent from the decoder interface."
+    },
+    {
+      "id": "s4",
+      "statement": "Latent-space projection agrees only in restricted metrics such as J^T J being a scalar identity on span U.",
+      "justification": "Equal norms in latent and decoded spaces require the stated pullback condition."
+    }
+  ],
+  "assumptions": [
+    "b and protections are from legal inputs/model outputs, never native evaluation labels.",
+    "Finite steps incur nonlinear remainder and require trust bounds/redecoding.",
+    "Ridge/latent-coordinate scaling changes coefficient regularization unless transformed consistently.",
+    "Historical research_math.controllability and m09 guidance overlap must be adjudicated before reuse."
+  ],
+  "method_expression": "Probe J u_mesh and J u_video at the same state, solve a bounded output-metric coefficient problem, and re-decode the actual result.",
+  "distinguishing_prediction": "Benefit relative to Euclidean conflict projection should grow with decoder anisotropy; scalar-isotropic interfaces should show no metric advantage.",
+  "falsifier": "Reject novelty if existing output-metric controllability already covers the function, or if matched Euclidean/simple guidance achieves the native frontier.",
+  "closest_alternative": "Historical m09 conflict projection, APG-related guidance and research_math.controllability; classical Jacobian least squares.",
+  "decisive_comparison": "Same noise, context, 30-step native schedule and full mesh scoring: ordinary guidance, Euclidean projection and output-metric coefficients with identical probe budget.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Changes the space in which guidance is optimized, but existing prototype overlap is substantial; reserve.",
+  "feasibility_and_cost": "Native Jacobian-vector/finite-difference probes and full Stage-I replay can be expensive; no 2-step smoke result qualifies the full method.",
+  "structural_signature": "Reachable output-metric least squares over two latent guidance columns.",
+  "algebra_review_basis": "Verified ridge normal equations and rank limit; finite-step and coordinate-regularization obligations remain explicit.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

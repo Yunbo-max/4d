@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c02",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+    "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Flattened trajectory y in R^(3TV); desired geometry repair d; fixed positive definite metric W; linear protected-feature operator C including anchor rows. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "D01: min_delta .5(delta-d)^T W(delta-d), C delta=0 -> KKT metric projection; condition: W positive definite; C fixed before repair; H02: ker C and row space C -> Only directions in ker C remain editable; condition: Protected features are explicitly chosen; not all velocities All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "Differentiating the strictly convex W-quadratic yields the KKT system. The Gram pseudoinverse is legitimate because Cd lies in its range, including redundant C rows. An independently parameterized nullspace least-squares witness agrees. Full column rank C eliminates all repair freedom, so protecting every velocity is not proposed.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: W is symmetric positive definite and is frozen while the subproblem is solved.; C protects specified coarse motion moments inferred from permitted inputs/model outputs, not ground-truth motion.; Preserving C y does not preserve every motion or the official CD-M.; d comes from a declared geometry surrogate; no evaluation labels enter inference. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Compute a geometry-only desired step d, then apply its W-orthogonal projection into ker C; retain exact anchor constraints. The reviewed construction is Deterministic equality-constrained repair in output trajectory space.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Protected linear motion moments stay unchanged while unprotected geometry directions move; benefit should vanish when ker C is trivial. It can be rejected by: Reject necessity if the same native geometry/motion frontier is achieved by an equal-cost unconstrained/strength-matched repair, or if protected moments have no relationship to the native motion endpoint. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical equality-constrained proximal projection; geometry-only repair and simple displacement blend; SFG local/global motion decoupling means separation alone cannot be the contribution. Claimed operational difference: Changes the admissible update subspace rather than adjusting a global regularization strength; classical projection is attributed. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c13",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+    "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "A full coordinate trajectory y; anchored free coordinates z; second time-difference D2 with actual timestep units; positive observation metric M. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "A01: Second differences at physical/native timesteps -> Acceleration-scaled temporal operator; condition: Timestamps and time units are retained; C02: Group norm lambda sum ||(D2 y)_t,v||_2 -> Dual balls preserve sparse dynamic events; condition: Convex group-norm domain; D04: Quadratic data fit plus acceleration sparsity -> Convex group-trend repair; condition: Positive definite observation metric and exact anchor constraints All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "The vector group norm has a Euclidean dual ball, changing the prior from uniform quadratic acceleration. On y=y_p+Sz, stationarity keeps S^T M(y_p+Sz-yhat), including anchor and off-diagonal metric contributions. Physical timestep scaling is explicit. No event recovery or real-motion preservation is proved.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Real motion need not be piecewise velocity; sinusoidal or rapidly articulated motion can be biased.; Groups are 3D vectors, avoiding an arbitrary axis-wise L1 convention.; Tuning and timestamp scaling are frozen before confirmation.; Acceleration sparsity is an inference prior, not a new benchmark metric or event label. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Apply anchored group trend filtering to native coordinates with the same original timestamps; preserve all motion events the optimizer retains. The reviewed construction is Nonsmooth group acceleration sparsity rather than quadratic smoothing or low-rank estimation.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Sparse abrupt changes should survive better than equal-strength Gaussian smoothing; smooth high-frequency real motion can be a failure boundary. It can be rejected by: Reject if Gaussian/second-order quadratic smoothing at equal tuning/compute matches official CD-M and geometry, or if event-like true motion is suppressed. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical trend filtering and STAC Gaussian temporal smoothing. Claimed operational difference: Changes the temporal regularity prior and dual constraint, not the Gaussian bandwidth; existing trend filtering is attributed. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

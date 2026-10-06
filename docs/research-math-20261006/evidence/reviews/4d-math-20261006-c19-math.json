@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c19",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+    "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Latent guidance columns U=[u_mesh,u_video]; frozen decoder Jacobian J; desired legal output change b; coefficient ridge lambda>0. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "A06: Latent-coordinate changes versus decoded geometry changes -> Pull back the output metric to guidance coefficients; condition: Local decoder derivative exists; D05: Output least squares .5||J U a-b||^2 -> Output-metric Gram operator; condition: J is a genuine decoder sensitivity, not latent Euclidean distance; D01: Solve coefficients with ridge and optional fixed linear protections -> Bounded reachable guidance; condition: Positive ridge; active constraints handled by KKT All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "The output Jacobian gives K=JU and a positive-ridge two-column solve. Augmented least squares agrees and unreachable components remain orthogonal to span K. Decoder anisotropy, trust bounds and consistent ridge rescaling are necessary when comparing with latent Euclidean projection.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: b and protections are from legal inputs/model outputs, never native evaluation labels.; Finite steps incur nonlinear remainder and require trust bounds/redecoding.; Ridge/latent-coordinate scaling changes coefficient regularization unless transformed consistently.; Historical research_math.controllability and m09 guidance overlap must be adjudicated before reuse. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Probe J u_mesh and J u_video at the same state, solve a bounded output-metric coefficient problem, and re-decode the actual result. The reviewed construction is Reachable output-metric least squares over two latent guidance columns.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Benefit relative to Euclidean conflict projection should grow with decoder anisotropy; scalar-isotropic interfaces should show no metric advantage. It can be rejected by: Reject novelty if existing output-metric controllability already covers the function, or if matched Euclidean/simple guidance achieves the native frontier. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Historical m09 conflict projection, APG-related guidance and research_math.controllability; classical Jacobian least squares. Claimed operational difference: Changes the space in which guidance is optimized, but existing prototype overlap is substantial; reserve. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

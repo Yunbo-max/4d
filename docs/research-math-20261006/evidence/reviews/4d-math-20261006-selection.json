@@ -1,0 +1,143 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006",
+  "scope": "selection",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/selection.json",
+    "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "checks": {
+    "structural_distinctness": {
+      "status": "verified",
+      "rationale": "All 20 constructions were compared by object, admissible set, estimator and output. The nested and shared-mechanism families are recorded explicitly, including C01/C03 and C06/C07. Learned matrix estimation versus fixed subtraction is an estimator/information change, not another gain value. These are conditional research branches, not certified novel or statistically independent methods; coverage may still force merger.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/selection.json",
+          "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
+          "sha256": "6df45ce3122df46c583231602a41f92eb0f32cea06e81dd2b1d6c02eb762a93e"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+          "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
+          "sha256": "d22fa4a56610b3abaee5ba863729431bf06b59386c67fe9948c8061bc07d98fa"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
+          "sha256": "4b38b4752d81535725f96f513b5d4fb585d52308efda44a331fc90c14c8d03f9"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+          "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
+          "sha256": "a92d7331b59e1e9c78e3d8811d3240c1ab1137dfac97da142acd63ee1f72d173"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c11.json",
+          "sha256": "fa863defd6620c99aa0767b1df2dde8f57e50dc1b54385b7b2dba05d7026f3b3"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
+          "sha256": "893238c0e767ccff25dd1b82c4770b6373c0e8a71c62d3c3a1fefe34ad354500"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+          "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
+          "sha256": "4e8eabce07534f07382ddbd0b4433d4ad9d9589abf3cd1690187de72b1bcffbb"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c15.json",
+          "sha256": "b57035b5d65e922d0c0f6b1fd7f7734a2fc622841fb83337099fee122fce8241"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+          "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        }
+      ]
+    },
+    "all_candidates_compared": {
+      "status": "verified",
+      "rationale": "The ranking contains every stable C01-C20 ID exactly once, including the five excluded reserve branches; every row has all five required reasons and current mathematical bindings.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/selection.json",
+          "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+        }
+      ]
+    },
+    "ranking_basis": {
+      "status": "verified",
+      "rationale": "C02 leads for an identifiable repair subspace and fair same-generator comparisons. C03/C05/C20 follow for conditional correlated-error, mode-averaging and timing explanations. C01 is their inexpensive reference-error discriminator. Existing-tool coverage, inaccessible targets and GPU costs lower the reserve branches. This is prospective qualitative research priority, not a ranking inferred from method scores.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/selection.json",
+          "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "top_selection": {
+      "status": "verified",
+      "rationale": "The selected prefix is C02,C03,C05,C20,C01,C04,C08,C10,C13,C14,C06,C07,C15,C11,C12. Reserves are C09,C16,C17,C18,C19. The explicit user 20-to-15 sequence is satisfied for conditional mathematical selection; code/design/results admission remains separate.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/selection.json",
+          "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+        }
+      ]
+    }
+  }
+}

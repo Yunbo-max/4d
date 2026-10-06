@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c20",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+    "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "A smooth legal trajectory Y(t), small phase offsets tau in a fixed endpoint-preserving basis, amplitude basis B; desired model/input-derived residual r; P is the phase Jacobian. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "C05: Y(t+tau)=Y(t)+Ydot(t) tau+O(tau^2) -> First-order phase direction; condition: Smooth trajectory and small monotone time warp; F06: Weighted least squares in phase and amplitude blocks -> Profiled amplitude equation; condition: Unconstrained phase elimination only when no phase inequality is active; H02: Overlap of phase and amplitude spans -> Separate identifiable amplitude from timing; condition: Jacobian rank and gauge are checked All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "Weighted phase elimination gives the Schur projection M and the positive-ridge amplitude solve; a full unconstrained block solve agrees. The formula is invalid when time monotonicity constraints are active. Overlapping phase/amplitude spans are unidentifiable and a second-order remainder remains. Native reference timestamps stay fixed.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Time warp is internal to the method; output is still evaluated at every original benchmark timestamp, with untouched references.; Phase targets use legal input/model evidence and no confirmation labels.; Endpoints, monotonicity, derivative regularity and interpolation error are checked; positive amplitude ridge lambda>0 ensures the profiled inverse is defined.; Input evidence may not distinguish timing from amplitude; then this is an identifiability boundary rather than a successful repair. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Jointly infer a small anchored monotone phase correction and amplitude correction; use the profiled formula only in the unconstrained phase regime; render outputs at original times. The reviewed construction is Endpoint-preserving monotone phase/amplitude block inference.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Timing-dominated errors should respond to phase correction while amplitude-only shrinkage loses motion; amplitude-dominated errors should show the opposite pattern. It can be rejected by: Reject if ordinary lag/alignment with equal evidence/budget is sufficient, or phase/amplitude remains unidentifiable on the native task. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical phase-amplitude registration and Schur projection; simple lag correction, smoothing and displacement scaling. Claimed operational difference: Separates two competing mechanisms instead of interpreting every motion mismatch as coordinate noise; classical registration remains prior art. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+          "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

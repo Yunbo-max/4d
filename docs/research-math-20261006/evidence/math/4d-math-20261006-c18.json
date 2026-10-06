@@ -1,0 +1,86 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c18",
+  "name_zh": "消去相机干扰的形变优化",
+  "formal_object": "Legal image residual r=r0+J_g delta_g+J_c delta_c in R^m; W positive definite; geometry and camera increments with a fixed gauge.",
+  "operations": [
+    {
+      "id": "H01",
+      "input": "Camera/shape observational ambiguities",
+      "condition": "Allowed image correspondences and an identified gauge",
+      "condition_status": "conditional",
+      "output": "Separate nuisance and scientifically relevant directions"
+    },
+    {
+      "id": "F06",
+      "input": "Linearized camera/geometry least squares",
+      "condition": "Weighted camera Gram rank is checked",
+      "condition_status": "conditional",
+      "output": "Schur elimination of nuisance camera"
+    },
+    {
+      "id": "H02",
+      "input": "Projected image operator",
+      "condition": "Observation nullspaces may remain after elimination",
+      "condition_status": "conditional",
+      "output": "State what deformation is unidentifiable"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "For fixed delta_g, delta_c*=-(J_c^T W J_c)^dagger J_c^T W(r0+J_g delta_g).",
+      "justification": "Weighted least squares in nuisance coordinates."
+    },
+    {
+      "id": "s2",
+      "statement": "P=I-J_c(J_c^T W J_c)^dagger J_c^T W leaves a residual P(r0+J_g delta_g).",
+      "justification": "Substitute the nuisance solution."
+    },
+    {
+      "id": "s3",
+      "statement": "Geometry curvature becomes J_g^T W P J_g; WP is symmetric positive semidefinite.",
+      "justification": "Weighted projection is self-adjoint in W; use the Schur complement."
+    }
+  ],
+  "assumptions": [
+    "Input-derived pixel correspondences and camera estimates are required; evaluation ICP transforms and GT camera labels are forbidden inference shortcuts.",
+    "A camera gauge and a local linearization region must be specified.",
+    "Image fitting alone need not identify depth or material correspondence.",
+    "The ordinary benchmark does not automatically license extra camera metadata as inference input."
+  ],
+  "method_expression": "Jointly fit legal input-camera nuisance and shape corrections; use the profiled geometry subproblem and validate the nonlinear residual after each bounded step.",
+  "distinguishing_prediction": "Geometry updates should avoid chasing residual directions explained by camera; no improvement is expected if those nuisance directions are absent.",
+  "falsifier": "Reject if ordinary PnP/camera fitting plus an identical geometry solver is adequate or the central claim cannot be tested without GT leakage.",
+  "closest_alternative": "Classical bundle adjustment/Schur elimination; STAC camera recovery.",
+  "decisive_comparison": "Qualified input-only PnP plus geometry, joint optimization and profiled optimization under identical inputs/budget; native ActionBench scores remain unchanged.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "A profiled geometry metric, not simply camera alignment; benchmark permissions and functional novelty remain unresolved.",
+  "feasibility_and_cost": "Qualified video-to-mesh correspondences and camera estimation are missing, so reserve rather than presenting runnable geometry fitting.",
+  "structural_signature": "Weighted elimination of a nuisance parameter block.",
+  "algebra_review_basis": "Re-derived weighted projection and PSD Schur metric; gauge/rank and allowed-information constraints retained.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

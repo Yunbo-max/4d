@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c17",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+    "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Shape-regular source patches j with area A_j; bounded second derivative kappa_j of the frozen decoder field; n_j interpolation controls with total N. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "C05: Linear interpolation of a twice-differentiable field -> Local O(kappa h^2) error bound; condition: Known derivative bound and shape-regular cells; A01: Cell area and control density -> h_j^2 proportional to A_j/n_j; condition: Two-dimensional surface cells of comparable aspect ratio; D01: Minimize sum a_j/n_j^2 at fixed sum n_j=N -> n_j proportional to A_j kappa_j^(2/3); condition: Positive bounds and continuous allocation; rounding separately All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "On shape-regular 2D patches, the squared interpolation bound scales as kappa^2 A^3/n^2. Convex interior KKT gives n proportional to A kappa^(2/3); equal marginal derivatives and total allocation are checked. Positive coefficients are required, and zero curvature, integer rounding, coverage and probe cost need separate constrained treatment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Decoder curvature bounds are not supplied by the model; finite differences are estimates. The stated interior allocation uses strictly positive A and kappa; zero-curvature patches and coverage floors require a separate constrained allocation.; Shape regularity and coverage must be verified on the actual anchor mesh.; Sparse interpolation can miss thin parts and correct detailed motion.; Evaluation still emits and scores the full original mesh and times. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Allocate a fixed query budget using area and declared curvature estimates, then reconstruct the dense field with a qualified interpolant. The reviewed construction is Continuous curvature/error budget allocation for decoder interpolation.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: At matched full query/probe budget, interpolation error should follow local curvature and area, not vertex count alone. It can be rejected by: Reject new-method investment if historical m07/curvature-aware FPS already implements the same allocation or if uniform/geodesic FPS has the same native cost-quality frontier. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical adaptive finite-element sampling; historical m07 query allocation and STAC curvature-boosted landmarks. Claimed operational difference: A derived allocation exponent and error model; strong functional collision risk makes this reserve, not a claimed new contribution. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+          "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

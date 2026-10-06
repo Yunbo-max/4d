@@ -1,0 +1,65 @@
+{
+  "kind": "historical-exposure-and-native-contract",
+  "version": "1.0.0",
+  "source_repository": "Yunbo-max/4d",
+  "source_commit": "078bfa636d53c7e0a7258166400007ee16a7a597",
+  "source_path": "results/overnight-2080ti-20261005/protocol.json",
+  "source_blob_sha": "50fda6f20b81833ee496a6edb5ccb0104234381e",
+  "dataset": "facebook/actionbench",
+  "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "overnight_development_uids": [
+    "000-059_0f142eaa4ab94740ba9e5d074f306a15",
+    "000-108_8560f555469a46e085952a890ce9785b",
+    "000-094_5b203279ff3d46a6b152e2b064774e67",
+    "000-126_0211a7f80bdc48f784af6796913af96b",
+    "000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+    "000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+    "000-136_1d5f546cd4454e2d921dc15594921524",
+    "000-063_2f305a7ad6784a3b9c5db480362ebc02",
+    "000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+    "000-059_ee85486b41c1442aaf35fc2563381ad0",
+    "000-076_6ef94285eb3e467ebc3128110b325a1d",
+    "000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+    "000-066_d97aa2a9b82b4284a6a560287f422772",
+    "000-130_94be397f8db74f7c9c06263aaf988532",
+    "000-048_45e57349f062416aaf11f2c31587da16",
+    "000-144_0c7abbb8b0e34a34bf1fb783da518664"
+  ],
+  "earlier_inspected_uids": [
+    "000-037_1358c424008a43cbaa35eba5e58551ac",
+    "000-043_061697e330d44524bd11f8cf95772e2d",
+    "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+    "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+    "000-078_b0b646eb731848f7837ab8257dfc658c",
+    "000-067_09a05166420843fab423047a799c87da",
+    "000-046_3bb11febd0624d7f8b30f491fb317d58",
+    "000-014_6cf7de7d14064b23be17811d19a63f13"
+  ],
+  "native_inference": {
+    "frames": 16,
+    "stage0_steps": 100,
+    "stageI_steps": 30,
+    "cfg": 7.5,
+    "seed": 42,
+    "low_ram": true,
+    "dtype": "float16",
+    "weights_frozen": true
+  },
+  "native_evaluation": {
+    "scorer": "official ActionBench compute_chamfer_3d_4d",
+    "frames": 16,
+    "sampling_seed": 44,
+    "surface_samples": 100000,
+    "icp_samples": 10000,
+    "icp_rotations": 24,
+    "icp_iterations": 200,
+    "metrics": [
+      "cd_3d",
+      "cd_4d",
+      "cd_motion"
+    ]
+  },
+  "scope": "24 known historically exposed UIDs are development only; complete prior exposure and shared-asset-family audit remains pending.",
+  "confirmation_split_frozen": false,
+  "remote_gpu_workspace_available": false
+}

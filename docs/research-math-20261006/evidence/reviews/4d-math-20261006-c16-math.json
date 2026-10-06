@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c16",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+    "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Eligible anchor a, anchor-error covariance Sigma_a, local output sensitivities J_ta and later error eta_t; actual per-anchor cost k_a. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "C04: e_t=J_ta e_a+eta_t+remainder -> Separate propagated common error from later errors; condition: Local linearization with controlled remainder; C05: Frozen decoder around each legal anchor -> Local anchor sensitivity; condition: Differentiability holds in the chosen neighborhood; D03: Choose among finite anchors under declared cost -> Finite resource-constrained design; condition: Risk/cost surrogate is actually estimated on allowed evidence All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "The propagation expansion requires centered later noise uncorrelated with anchor error. The cross-time covariance formula is only for t!=s; at equal times later-noise covariance remains. Cauchy-Schwarz bounds the omitted remainder contribution by 2 sqrt(R_linear) r+r^2. Actual covariances, sensitivities and costs are unmeasured.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: True Sigma and remainder bounds are not automatically calibrated by decoder perturbations.; If later noise correlates with anchor error, its cross terms must be retained.; Every selected anchor must still generate all original frame IDs and eligible temporal context.; Additional anchor reconstructions are paid in total compute; baseline gets the same search allowance. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Estimate a bounded anchor-risk proxy from allowed model/input evidence, choose one anchor prospectively and generate the complete animation. The reviewed construction is Finite anchor-design decision using a propagated error/cost model.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Sensitivity-weighted risk should predict downstream degradation better than reference-frame confidence alone; benefit should diminish when anchor sensitivities are alike. It can be rejected by: Reject if an equal-budget simple image-quality/visibility selector or fixed anchor matches the native result, or estimated anchor risk does not transfer. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical optimal experimental design and anchor selection; first-frame ActionMesh and a simple legal image-quality selector. Claimed operational difference: Explicit propagation and correlated-time error, rather than arbitrary changing of anchor index; real costs and calibration remain unknown. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+          "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

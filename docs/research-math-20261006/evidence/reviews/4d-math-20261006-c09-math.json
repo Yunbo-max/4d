@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c09",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+    "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Observed local relative rotations R_ij in SO(3), anchor graph weights w_ij>=0; unknown patch rotations R_i. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "H01: R_i -> R_i Q for common Q -> Global rotation gauge; condition: Only relative rotations are observed; D05: sum w_ij||R_i-R_ij R_j||_F^2 -> Connection-Laplacian quadratic; condition: Relative-rotation directions and weights are explicit; D06: Relax SO(3) blocks to a global orthogonality constraint -> Spectral candidate followed by SO(3) projection; condition: Relaxation and block projection are tracked separately All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "A common right rotation preserves ||Ri-RijRj||_F. The edge block connection Laplacian reproduces the energy. The bottom eigenvectors solve only the relaxed Stiefel problem; block SO(3) projection does not inherit a global optimum. This is an established synchronization tool and a reserve branch.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: The observation graph must connect each synchronized component.; No global optimum or exact recovery is claimed after projecting spectral blocks.; Relative rotations inferred from wrong correspondences can still synchronize coherently to a wrong motion.; An anchored gauge and common reconstruction backend are required. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Synchronize model-derived patch rotations, fix one gauge and reconstruct with a qualified common lift. The reviewed construction is SO(3) graph-gauge synchronization, not coordinate smoothing.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Loop-inconsistent local rotations should improve more than already consistent graphs; independent local fitting should suffice in the latter case. It can be rejected by: Reject as a new method if ordinary rotation synchronization already covers the whole claim or if matched local-rigid fitting resolves the native residual. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical group synchronization and STAC geodesic local rigid fitting. Claimed operational difference: Global relative-rotation consistency is distinct from C10's integrability, but prior-art coverage is strong; reserve. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+          "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

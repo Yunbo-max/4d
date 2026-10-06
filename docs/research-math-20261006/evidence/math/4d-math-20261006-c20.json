@@ -1,0 +1,91 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c20",
+  "name_zh": "相位与动作幅度的可识别分解",
+  "formal_object": "A smooth legal trajectory Y(t), small phase offsets tau in a fixed endpoint-preserving basis, amplitude basis B; desired model/input-derived residual r; P is the phase Jacobian.",
+  "operations": [
+    {
+      "id": "C05",
+      "input": "Y(t+tau)=Y(t)+Ydot(t) tau+O(tau^2)",
+      "condition": "Smooth trajectory and small monotone time warp",
+      "condition_status": "conditional",
+      "output": "First-order phase direction"
+    },
+    {
+      "id": "F06",
+      "input": "Weighted least squares in phase and amplitude blocks",
+      "condition": "Unconstrained phase elimination only when no phase inequality is active",
+      "condition_status": "conditional",
+      "output": "Profiled amplitude equation"
+    },
+    {
+      "id": "H02",
+      "input": "Overlap of phase and amplitude spans",
+      "condition": "Jacobian rank and gauge are checked",
+      "condition_status": "conditional",
+      "output": "Separate identifiable amplitude from timing"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Linearize the repair as r approximately P xi+B gamma, with phase endpoint offsets zero.",
+      "justification": "Taylor expansion in a declared small phase basis."
+    },
+    {
+      "id": "s2",
+      "statement": "Let M=I-P(P^T W P)^dagger P^T W; after unconstrained phase elimination, gamma*=(B^T W M B+lambda I)^-1 B^T W M r.",
+      "justification": "Weighted Schur elimination and ridge least squares."
+    },
+    {
+      "id": "s3",
+      "statement": "For monotone time, impose 1+tau'(t)>0; if the bound is active, solve the full constrained block problem instead of the unconstrained formula.",
+      "justification": "Elimination formula does not silently enforce inequality constraints."
+    },
+    {
+      "id": "s4",
+      "statement": "Overlapping phase/amplitude directions are unidentifiable without extra constraints; residual second-order error is O(||tau||^2).",
+      "justification": "Rank deficiency and the retained Taylor remainder limit the claim."
+    }
+  ],
+  "assumptions": [
+    "Time warp is internal to the method; output is still evaluated at every original benchmark timestamp, with untouched references.",
+    "Phase targets use legal input/model evidence and no confirmation labels.",
+    "Endpoints, monotonicity, derivative regularity and interpolation error are checked; positive amplitude ridge lambda>0 ensures the profiled inverse is defined.",
+    "Input evidence may not distinguish timing from amplitude; then this is an identifiability boundary rather than a successful repair."
+  ],
+  "method_expression": "Jointly infer a small anchored monotone phase correction and amplitude correction; use the profiled formula only in the unconstrained phase regime; render outputs at original times.",
+  "distinguishing_prediction": "Timing-dominated errors should respond to phase correction while amplitude-only shrinkage loses motion; amplitude-dominated errors should show the opposite pattern.",
+  "falsifier": "Reject if ordinary lag/alignment with equal evidence/budget is sufficient, or phase/amplitude remains unidentifiable on the native task.",
+  "closest_alternative": "Classical phase-amplitude registration and Schur projection; simple lag correction, smoothing and displacement scaling.",
+  "decisive_comparison": "Base, phase-only, amplitude-only and joint constrained repair with equal fitting/call budget; native CD-M/3D/4D at untouched timestamps and fresh confirmation.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Separates two competing mechanisms instead of interpreting every motion mismatch as coordinate noise; classical registration remains prior art.",
+  "feasibility_and_cost": "Requires a qualified input/model motion target and a bounded nonlinear solve; target access and native method timing remain unresolved.",
+  "structural_signature": "Endpoint-preserving monotone phase/amplitude block inference.",
+  "algebra_review_basis": "Checked the Schur formula, active-inequality exception, nonidentifiability and second-order remainder. No relabeling of evaluation time.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

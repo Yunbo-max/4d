@@ -1,0 +1,79 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c07",
+  "name_zh": "允许不匹配质量的部分运输",
+  "formal_object": "Nonnegative plan Pi and unmatched masses s,t with Pi1+s=a, Pi^T1+t=b; costs c, unmatched cost gamma>0.",
+  "operations": [
+    {
+      "id": "H02",
+      "input": "Forced full correspondence despite incompatible surfaces",
+      "condition": "The two generated surfaces need not match everywhere",
+      "condition_status": "conditional",
+      "output": "Allow unexplained mass without inventing a target"
+    },
+    {
+      "id": "D01",
+      "input": "Partial transport with explicit rejection cost",
+      "condition": "Nonnegative slack and preserved output denominator",
+      "condition_status": "conditional",
+      "output": "Convex partial assignment with fallback"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Minimize <c,Pi>+gamma(1^T s+1^T t)+epsilon sum Pi(log Pi-1).",
+      "justification": "The slack formulation permits infeasible full matches to remain unmatched."
+    },
+    {
+      "id": "s2",
+      "statement": "At epsilon=0, adding a small transport mass removes the same mass from each slack, changing cost by (c_ij-2gamma) times mass.",
+      "justification": "Differentiate the linear local tradeoff on available slack."
+    },
+    {
+      "id": "s3",
+      "statement": "Every unmatched source vertex still receives the frozen native decoder prediction.",
+      "justification": "Rejection changes the construction, never the benchmark denominator."
+    }
+  ],
+  "assumptions": [
+    "Finite cost model and rejection threshold are fixed on development data.",
+    "The sharp 2gamma threshold describes the unregularized limit; entropy smooths it.",
+    "Rejection is for unsupported surface matching, not a new occlusion benchmark or supplied failure label.",
+    "A fallback is required for every source vertex and frame."
+  ],
+  "method_expression": "Solve partial transport; lift matched corrections and retain native decoder motion for unmatched mass. Evaluate all original vertices/times.",
+  "distinguishing_prediction": "Compared with C06, rejection should help under source/target mismatch but has no reason to help when full matching is correct.",
+  "falsifier": "Reject if gains arise only by dropping scoring points or if a confidence-threshold native fallback with the same budget performs equally well.",
+  "closest_alternative": "Classical partial/unbalanced transport and threshold-and-fallback matching.",
+  "decisive_comparison": "Full versus partial assignment versus confidence-threshold fallback, identical outputs and official scoring denominator; retain rejected mass.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Adds a no-match decision and native fallback, rather than imposing another marginal or lowering confidence temperature.",
+  "feasibility_and_cost": "Partial convex solve and common lift; target support and threshold calibration are unresolved.",
+  "structural_signature": "Mass rejection with complete-output fallback.",
+  "algebra_review_basis": "Marginal/slack accounting and the 2gamma limiting tradeoff checked. No entropy-case hard cutoff or reduced-denominator claim.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

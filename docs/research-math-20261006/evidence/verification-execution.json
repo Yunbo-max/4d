@@ -1,0 +1,41 @@
+{
+  "kind": "verification-execution-record",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T10:34:56.808561+00:00",
+  "command": [
+    "python3",
+    "/root/.codex/skills/remote-skills/skill-6abe2370f2f8819180de6c6e8d45e3b8/scripts/verify_methods.py",
+    "--root",
+    "/workspace/scratch/ec1b0c6b9ea9/4d-math-20261006",
+    "--batch",
+    "docs/research-math-20261006/evidence/batch.json",
+    "--through",
+    "code",
+    "--require",
+    "selection_verified"
+  ],
+  "observed_exit_code": 0,
+  "observation": "Host exec completed with exit code 0; stdout retained verbatim.",
+  "verifier_source_sha256": "78a60be34c465d0bda52c1e8839817dab3750e3902f5db6841a8040440aa7172",
+  "autoresearch_helper_sha256": "7838317a645d22c97342e76dce3f4915df72a20b9d77b46503f0eb065abf6eba",
+  "retained_stdout_ref": {
+    "path": "docs/research-math-20261006/evidence/verification-report.json",
+    "sha256": "933170ab5891061c9b3dee9973a207b4d225c3483500dd93f4912ae8aa3e82bf"
+  },
+  "input_batch_ref": {
+    "path": "docs/research-math-20261006/evidence/batch.json",
+    "sha256": "51dd461f488d055ad86384a9be29a4eb155f1099e3479be8d938101cc58456f5"
+  },
+  "derived_counts": {
+    "candidates": 20,
+    "code_verified": 0,
+    "design_verified": 0,
+    "failed": 0,
+    "math_verified": 20,
+    "results_verified": 0,
+    "selected": 15,
+    "succeeded": 0,
+    "verdict_verified": 0
+  },
+  "scope": "Pinned evidence and documented semantic reviews; not an automated proof of mathematics. Empirical verdicts require existing native evaluation with trusted live replay and full comparison. This report does not replace Natural Gate 0, IPCG, Gate A, G01 or E04."
+}

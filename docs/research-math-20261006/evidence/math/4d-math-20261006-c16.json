@@ -1,0 +1,91 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c16",
+  "name_zh": "参考帧的误差传播选择",
+  "formal_object": "Eligible anchor a, anchor-error covariance Sigma_a, local output sensitivities J_ta and later error eta_t; actual per-anchor cost k_a.",
+  "operations": [
+    {
+      "id": "C04",
+      "input": "e_t=J_ta e_a+eta_t+remainder",
+      "condition": "Local linearization with controlled remainder",
+      "condition_status": "conditional",
+      "output": "Separate propagated common error from later errors"
+    },
+    {
+      "id": "C05",
+      "input": "Frozen decoder around each legal anchor",
+      "condition": "Differentiability holds in the chosen neighborhood",
+      "condition_status": "conditional",
+      "output": "Local anchor sensitivity"
+    },
+    {
+      "id": "D03",
+      "input": "Choose among finite anchors under declared cost",
+      "condition": "Risk/cost surrogate is actually estimated on allowed evidence",
+      "condition_status": "conditional",
+      "output": "Finite resource-constrained design"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "For uncorrelated centered eta and e_a, E||e_t||^2=tr(J_ta Sigma_a J_ta^T)+E||eta_t||^2 plus controlled remainder.",
+      "justification": "Expand the local model; independence/cross-covariance cannot be omitted without the stipulated condition."
+    },
+    {
+      "id": "s2",
+      "statement": "For distinct times t!=s, shared anchor error induces Cov(e_t,e_s)=J_ta Sigma_a J_sa^T when later noises are mutually independent and uncorrelated with the anchor.",
+      "justification": "Propagate the same random anchor term through both times; at t=s retain the later-noise covariance."
+    },
+    {
+      "id": "s3",
+      "statement": "If E||rho_t||^2<=r_t^2 for the omitted remainder, |R_actual-R_linear|<=2 sqrt(R_linear) r_t+r_t^2.",
+      "justification": "Expand the additional cross term and use Cauchy-Schwarz; a numerical bound is not supplied by the model."
+    },
+    {
+      "id": "s4",
+      "statement": "Select a minimizing the declared sum of local risk proxies plus lambda k_a, subject to the same finite generation budget.",
+      "justification": "The optimum is over a finite declared anchor set, not an unobserved population."
+    }
+  ],
+  "assumptions": [
+    "True Sigma and remainder bounds are not automatically calibrated by decoder perturbations.",
+    "If later noise correlates with anchor error, its cross terms must be retained.",
+    "Every selected anchor must still generate all original frame IDs and eligible temporal context.",
+    "Additional anchor reconstructions are paid in total compute; baseline gets the same search allowance."
+  ],
+  "method_expression": "Estimate a bounded anchor-risk proxy from allowed model/input evidence, choose one anchor prospectively and generate the complete animation.",
+  "distinguishing_prediction": "Sensitivity-weighted risk should predict downstream degradation better than reference-frame confidence alone; benefit should diminish when anchor sensitivities are alike.",
+  "falsifier": "Reject if an equal-budget simple image-quality/visibility selector or fixed anchor matches the native result, or estimated anchor risk does not transfer.",
+  "closest_alternative": "Classical optimal experimental design and anchor selection; first-frame ActionMesh and a simple legal image-quality selector.",
+  "decisive_comparison": "Fixed anchor versus simple selector versus sensitivity-risk selector with identical finite anchor/search budget and full native scoring.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Explicit propagation and correlated-time error, rather than arbitrary changing of anchor index; real costs and calibration remain unknown.",
+  "feasibility_and_cost": "Multiple Stage-0 reconstructions/Jacobian probes are expensive on 2080 Ti; reserve until cheaper selected mechanisms are resolved.",
+  "structural_signature": "Finite anchor-design decision using a propagated error/cost model.",
+  "algebra_review_basis": "Retained the uncorrelated-noise condition and remainder. No claim that reference quality alone proves downstream quality.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

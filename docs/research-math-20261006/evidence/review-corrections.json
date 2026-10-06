@@ -1,0 +1,58 @@
+{
+  "kind": "math-review-corrections",
+  "version": "1.0.0",
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "corrections": [
+    {
+      "candidate": "C03",
+      "correction": "Made centering and deployment means explicit; added fitted-mean squared bias and distinguished unrestricted optimum from low-rank/ridge estimation."
+    },
+    {
+      "candidate": "C11",
+      "correction": "Surface triangles do not automatically provide full-rank 3D maps; frame completion must be qualified and shared by controls."
+    },
+    {
+      "candidate": "C13",
+      "correction": "Kept the affine anchor and off-diagonal observation metric terms in free-coordinate stationarity."
+    },
+    {
+      "candidate": "C16",
+      "correction": "Restricted cross-time noise formula to distinct times; kept equal-time later noise and bounded Taylor-remainder risk conditionally."
+    },
+    {
+      "candidate": "C17",
+      "correction": "Restricted interior allocation to strictly positive coefficients; zero curvature and mandatory coverage use a separate constrained rule."
+    },
+    {
+      "candidate": "C20",
+      "correction": "Made positive amplitude ridge explicit; active monotonicity constraints require the full constrained solve."
+    }
+  ],
+  "evidence_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+      "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c11.json",
+      "sha256": "fa863defd6620c99aa0767b1df2dde8f57e50dc1b54385b7b2dba05d7026f3b3"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+      "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+      "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+      "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c20.json",
+      "sha256": "a3611bd1d3b28485d980ad7e4a9ca157c7467ceed92f38d85dddd367e1a1d1ee"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c17",
+  "name_zh": "曲率误差驱动的查询预算",
+  "formal_object": "Shape-regular source patches j with area A_j; bounded second derivative kappa_j of the frozen decoder field; n_j interpolation controls with total N.",
+  "operations": [
+    {
+      "id": "C05",
+      "input": "Linear interpolation of a twice-differentiable field",
+      "condition": "Known derivative bound and shape-regular cells",
+      "condition_status": "conditional",
+      "output": "Local O(kappa h^2) error bound"
+    },
+    {
+      "id": "A01",
+      "input": "Cell area and control density",
+      "condition": "Two-dimensional surface cells of comparable aspect ratio",
+      "condition_status": "conditional",
+      "output": "h_j^2 proportional to A_j/n_j"
+    },
+    {
+      "id": "D01",
+      "input": "Minimize sum a_j/n_j^2 at fixed sum n_j=N",
+      "condition": "Positive bounds and continuous allocation; rounding separately",
+      "condition_status": "conditional",
+      "output": "n_j proportional to A_j kappa_j^(2/3)"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Linear interpolation error <=c kappa_j h_j^2 under the stated regularity.",
+      "justification": "Taylor's second-order remainder with barycentric linear interpolation."
+    },
+    {
+      "id": "s2",
+      "statement": "Integrated squared bound is <=c' sum kappa_j^2 A_j^3/n_j^2.",
+      "justification": "Multiply the pointwise squared bound by area and use h_j^2 proportional to A_j/n_j."
+    },
+    {
+      "id": "s3",
+      "statement": "KKT gives -2 a_j/n_j^3+mu=0, hence n_j=N a_j^(1/3)/sum a^(1/3).",
+      "justification": "Convex allocation on n_j>0; a_j=kappa_j^2 A_j^3."
+    },
+    {
+      "id": "s4",
+      "statement": "Integer allocation, mandatory coverage and probe cost change the continuous optimum and require separate accounting.",
+      "justification": "No exact bound for rounded controls is implied without checking their cell geometry."
+    }
+  ],
+  "assumptions": [
+    "Decoder curvature bounds are not supplied by the model; finite differences are estimates. The stated interior allocation uses strictly positive A and kappa; zero-curvature patches and coverage floors require a separate constrained allocation.",
+    "Shape regularity and coverage must be verified on the actual anchor mesh.",
+    "Sparse interpolation can miss thin parts and correct detailed motion.",
+    "Evaluation still emits and scores the full original mesh and times."
+  ],
+  "method_expression": "Allocate a fixed query budget using area and declared curvature estimates, then reconstruct the dense field with a qualified interpolant.",
+  "distinguishing_prediction": "At matched full query/probe budget, interpolation error should follow local curvature and area, not vertex count alone.",
+  "falsifier": "Reject new-method investment if historical m07/curvature-aware FPS already implements the same allocation or if uniform/geodesic FPS has the same native cost-quality frontier.",
+  "closest_alternative": "Classical adaptive finite-element sampling; historical m07 query allocation and STAC curvature-boosted landmarks.",
+  "decisive_comparison": "Uniform/FPS/curvature-FPS versus the derived allocation, same full cost and native outputs; no dropping scoring points.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "A derived allocation exponent and error model; strong functional collision risk makes this reserve, not a claimed new contribution.",
+  "feasibility_and_cost": "Sparse queries plus derivative probes can cost more than dense native decoding; no speed guarantee without measurement.",
+  "structural_signature": "Continuous curvature/error budget allocation for decoder interpolation.",
+  "algebra_review_basis": "Checked surface dimension, squared-error exponent and KKT allocation; approximation, rounding and collision caveats retained.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

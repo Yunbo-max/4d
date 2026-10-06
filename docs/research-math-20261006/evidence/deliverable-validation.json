@@ -1,0 +1,13 @@
+{
+  "kind": "research-deliverable-validation",
+  "version": "1.0.0",
+  "checked_at": "2026-10-06T10:39:09.129990+00:00",
+  "json_evidence_refs_checked": 607,
+  "distinct_referenced_files": 54,
+  "markdown_local_links_checked": 33,
+  "conditional_method_specs": 15,
+  "planned_step_coverage": "all steps mapped for selected candidates",
+  "known_exposed_uid_count": 24,
+  "checks": "passed",
+  "scope": "Artifact integrity, links and planned coverage only. Not code, native protocol, novelty or efficacy verification."
+}

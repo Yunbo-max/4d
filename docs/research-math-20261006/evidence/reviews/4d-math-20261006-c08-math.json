@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c08",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+    "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Finite model-derived correspondence states; reference Markov path law Q(i_1:T)=q_1(i_1) product K_t(i_t,i_t+1); specified endpoint marginals r_1,r_T. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "B04: Joint trajectory probability -> Factorized path probability; condition: Reference law is normalized with adequate endpoint support; D01: min_P KL(P||Q) subject to endpoint marginals -> Path-level information projection; condition: Endpoint constraints are feasible under Q support; D02: Functional stationarity over path probabilities -> Endpoint-scaled Markov bridge; condition: Finite positive reference support All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "KL stationarity with endpoint multipliers gives u(i1)Q(path)v(iT); Markov factorization permits messages. A positive two-state witness agrees with exact path enumeration. Structural support and legal endpoint evidence remain conditions. Endpoint marginal closure is not an identity or geometric correctness guarantee.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Endpoint distributions come from declared allowed model observations and are not GT labels.; Structural zeros can make the bridge infeasible; support cannot be repaired by huge weights.; A Markov approximation may omit relevant long-range dependence.; Marginal closure does not imply correct point identity or geometry. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Construct the sparse reference chain, apply endpoint KL projection by forward/backward messages, and derive a coherent path decision with the common output lift. The reviewed construction is Path-distribution KL projection with two endpoint marginals.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Future endpoint evidence can change intermediate correspondence paths without only smoothing coordinates; benefit should disappear when endpoint evidence is uninformative. It can be rejected by: Reject if a local transition smoother or historical decoder-cycle repair with equal inference budget supplies the same native benefit. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical Schrödinger/IPF bridge; local Markov tracking; historical m02 decoder cycle consistency acts on a different object. Claimed operational difference: Constrains an entire path probability law rather than adding pairwise cycle penalties or per-frame temperature. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+          "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

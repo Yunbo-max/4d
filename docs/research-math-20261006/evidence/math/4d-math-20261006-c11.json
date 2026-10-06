@@ -1,0 +1,79 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c11",
+  "name_zh": "保留旋转的应变约束修复",
+  "formal_object": "Per-face nonsingular positively oriented deformation F=R S, R in SO(3), S symmetric positive definite; declared stretch bounds 0<l<=u.",
+  "operations": [
+    {
+      "id": "A06",
+      "input": "Deformation matrix F",
+      "condition": "det F>0 and a well-defined polar decomposition",
+      "condition_status": "conditional",
+      "output": "Separate rotational and stretch coordinates"
+    },
+    {
+      "id": "D01",
+      "input": "min_{lI<=S'<=uI}||S'-S||_F^2",
+      "condition": "Symmetric PSD spectral constraints",
+      "condition_status": "conditional",
+      "output": "Clip stretch eigenvalues while preserving R"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Take the polar decomposition F=R S with S=(F^T F)^(1/2).",
+      "justification": "Nonsingular orientation-preserving F has a proper orthogonal polar factor."
+    },
+    {
+      "id": "s2",
+      "statement": "For S=Q diag(s_j)Q^T, the Frobenius-nearest bounded S' is Q diag(clip(s_j,l,u))Q^T.",
+      "justification": "Orthogonal invariance and separable scalar projection on the eigenvalue interval."
+    },
+    {
+      "id": "s3",
+      "statement": "Set F'=R S' and re-integrate the resulting differential targets.",
+      "justification": "Local rotations are retained; global reconstruction introduces an integrability projection."
+    }
+  ],
+  "assumptions": [
+    "A nonsingular local square deformation map must first be qualified. A surface triangle alone does not supply a full-rank 3D map; any frame completion must be explicit and shared by controls. det F>0 is required; reflected/degenerate cases are not silently treated as valid polar states.",
+    "Real motion may include legitimate stretching outside [l,u].",
+    "The common integration backend must be fixed; local R preservation does not guarantee global motion preservation.",
+    "Bounds are learned/frozen on development evidence with no label leakage."
+  ],
+  "method_expression": "Project only the stretch spectrum of each local deformation, preserve its rotation, and reconstruct an anchored mesh from those targets.",
+  "distinguishing_prediction": "Stretch-heavy artifacts should respond more than nearly rigid motion; excessive strain limits should visibly remove legitimate deformations and lose CD-M.",
+  "falsifier": "Reject if ordinary ARAP/elasticity regularization matches the native frontier or if genuine stretch is consistently damaged.",
+  "closest_alternative": "Classical polar strain limiting; historical m01 elasticity; STAC local rigidity.",
+  "decisive_comparison": "Native base, ARAP/elastic repair and rotation-preserving stretch projection with identical lift/tuning budgets; inspect all scores and retain invalid-face cases.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Selectively changes strain instead of all displacements; strong classical/old-module collision risk remains.",
+  "feasibility_and_cost": "Per-face 3x3 decomposition plus a common sparse solve; safe handling of degenerate geometry is required.",
+  "structural_signature": "Nonlinear polar-coordinate stretch projection followed by reconstruction.",
+  "algebra_review_basis": "Checked positive orientation assumptions and spectral projection. No global volume, collision or native-motion guarantee.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

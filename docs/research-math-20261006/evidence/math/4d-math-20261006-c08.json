@@ -1,0 +1,86 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c08",
+  "name_zh": "端点约束的轨迹分布桥",
+  "formal_object": "Finite model-derived correspondence states; reference Markov path law Q(i_1:T)=q_1(i_1) product K_t(i_t,i_t+1); specified endpoint marginals r_1,r_T.",
+  "operations": [
+    {
+      "id": "B04",
+      "input": "Joint trajectory probability",
+      "condition": "Reference law is normalized with adequate endpoint support",
+      "condition_status": "conditional",
+      "output": "Factorized path probability"
+    },
+    {
+      "id": "D01",
+      "input": "min_P KL(P||Q) subject to endpoint marginals",
+      "condition": "Endpoint constraints are feasible under Q support",
+      "condition_status": "conditional",
+      "output": "Path-level information projection"
+    },
+    {
+      "id": "D02",
+      "input": "Functional stationarity over path probabilities",
+      "condition": "Finite positive reference support",
+      "condition_status": "conditional",
+      "output": "Endpoint-scaled Markov bridge"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Stationarity of KL plus endpoint multipliers yields P*(path)=u(i_1) Q(path) v(i_T).",
+      "justification": "Differentiate over normalized path masses; scaling factors absorb normalization."
+    },
+    {
+      "id": "s2",
+      "statement": "Forward/backward messages compute endpoint marginals without enumerating all paths.",
+      "justification": "Sum the factorized law through the finite state chain."
+    },
+    {
+      "id": "s3",
+      "statement": "Alternate endpoint scaling until both marginal residuals close.",
+      "justification": "This is a KL bridge, not proof that the chosen endpoints identify true surface motion."
+    }
+  ],
+  "assumptions": [
+    "Endpoint distributions come from declared allowed model observations and are not GT labels.",
+    "Structural zeros can make the bridge infeasible; support cannot be repaired by huge weights.",
+    "A Markov approximation may omit relevant long-range dependence.",
+    "Marginal closure does not imply correct point identity or geometry."
+  ],
+  "method_expression": "Construct the sparse reference chain, apply endpoint KL projection by forward/backward messages, and derive a coherent path decision with the common output lift.",
+  "distinguishing_prediction": "Future endpoint evidence can change intermediate correspondence paths without only smoothing coordinates; benefit should disappear when endpoint evidence is uninformative.",
+  "falsifier": "Reject if a local transition smoother or historical decoder-cycle repair with equal inference budget supplies the same native benefit.",
+  "closest_alternative": "Classical Schrödinger/IPF bridge; local Markov tracking; historical m02 decoder cycle consistency acts on a different object.",
+  "decisive_comparison": "Reference chain, local smoothing and endpoint bridge under the same candidates/calls; native task and scorer unchanged; endpoint evidence frozen before confirmation.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Constrains an entire path probability law rather than adding pairwise cycle penalties or per-frame temperature.",
+  "feasibility_and_cost": "Sparse forward/backward messages; reliable endpoint likelihoods and attention/candidate interfaces remain unqualified.",
+  "structural_signature": "Path-distribution KL projection with two endpoint marginals.",
+  "algebra_review_basis": "Verified multiplier factorization and support/normalization obligations. Neither forward-backward inference nor a bridge establishes correct semantic identity.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

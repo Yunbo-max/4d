@@ -1,0 +1,398 @@
+{
+  "kind": "finite-algebra-audit",
+  "version": "1.0.0",
+  "executed_at": "2026-10-06T10:20:44.919323+00:00",
+  "seed": 20261006,
+  "numpy_version": "2.3.5",
+  "scipy_version": "1.17.0",
+  "candidate_count": 20,
+  "passed_checks": 48,
+  "script_sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752",
+  "scope": "Deterministic finite algebra witnesses only. No native benchmark, candidate implementation, performance result, mathematical theorem certification or independent review.",
+  "checks": [
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "claim": "anchor substitution",
+      "status": "passed",
+      "max_absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "claim": "shared additive bias cancellation",
+      "status": "passed",
+      "max_absolute_error": 8.881784197001252e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "claim": "risk expansion including cross moment",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c02",
+      "claim": "redundant constraint feasibility",
+      "status": "passed",
+      "max_absolute_error": 2.3592239273284576e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c02",
+      "claim": "KKT versus nullspace solve",
+      "status": "passed",
+      "max_absolute_error": 1.7208456881689926e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c02",
+      "claim": "full column rank protection forbids all changes",
+      "status": "passed",
+      "max_absolute_error": 3.219646771412954e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "claim": "optimal correction reduction",
+      "status": "passed",
+      "max_absolute_error": 8.881784197001252e-16,
+      "tolerance": 1e-09,
+      "scope": "true-moment finite covariance identity"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "claim": "fitted matrix excess-risk square",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "does not establish availability/calibration of these moments"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "claim": "fitted means add their squared offset to centered risk",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite centered sample identity; calibration and distribution transfer remain unknown"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c04",
+      "claim": "ellipsoid support attained",
+      "status": "passed",
+      "max_absolute_error": 1.7763568394002505e-15,
+      "tolerance": 1e-09,
+      "scope": "set support only; no probabilistic coverage"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "claim": "weighted variance identity",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "claim": "opposite rotation mean contracts",
+      "status": "passed",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "scope": "counterexample to universal shape preservation by averaging; no prevalence claim"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c06",
+      "claim": "two transport marginals",
+      "status": "passed",
+      "max_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c06",
+      "claim": "stationarity scaling identity",
+      "status": "passed",
+      "max_absolute_error": 1.5265566588595902e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "claim": "unregularized scalar optimum cost=0.5",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "epsilon=0 scalar limit only; coupled capacities/entropy alter allocation"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "claim": "unregularized scalar optimum cost=2.0",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "epsilon=0 scalar limit only; coupled capacities/entropy alter allocation"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "claim": "forward message versus enumerated final marginal",
+      "status": "passed",
+      "max_absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "claim": "endpoint scaling closure",
+      "status": "passed",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c09",
+      "claim": "connection Laplacian energy",
+      "status": "passed",
+      "max_absolute_error": 1.7763568394002505e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c09",
+      "claim": "common right rotation gauge",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c10",
+      "claim": "anchored normal equations versus QR/LS",
+      "status": "passed",
+      "max_absolute_error": 3.3306690738754696e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c10",
+      "claim": "weighted projection orthogonality",
+      "status": "passed",
+      "max_absolute_error": 3.3306690738754696e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c11",
+      "claim": "polar stretch projection retains proper rotation",
+      "status": "passed",
+      "max_absolute_error": 1.4432899320127035e-15,
+      "tolerance": 1e-09,
+      "scope": "local square-map property only; integration and real stretch can change conclusions"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c11",
+      "claim": "stretch spectral clipping",
+      "status": "passed",
+      "max_absolute_error": 1.1102230246251565e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "claim": "oriented area exact quadratic",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "claim": "oriented area exact quadratic",
+      "status": "passed",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "claim": "oriented area exact quadratic",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "claim": "oriented area exact quadratic",
+      "status": "passed",
+      "max_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "claim": "first positive crossing of 1-2alpha floor",
+      "status": "passed",
+      "max_absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-09,
+      "scope": "projected area only; not a global injectivity certificate"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c13",
+      "claim": "group norm support",
+      "status": "passed",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c13",
+      "claim": "physical second differences of quadratic",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c13",
+      "claim": "anchored effective center keeps metric cross terms",
+      "status": "passed",
+      "max_absolute_error": 3.552713678800501e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c14",
+      "claim": "exact varying rigid pose has zero body residual",
+      "status": "passed",
+      "max_absolute_error": 6.661338147750939e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c14",
+      "claim": "zero-preserving body repair reconstructs rigid sequence",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c15",
+      "claim": "SVT remains in complement of protected subspace",
+      "status": "passed",
+      "max_absolute_error": 4.2133349392649653e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c15",
+      "claim": "protected components and anchor preserved",
+      "status": "passed",
+      "max_absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c15",
+      "claim": "anchor row preserved",
+      "status": "passed",
+      "max_absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c16",
+      "claim": "cross-time shared covariance block",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c16",
+      "claim": "risk trace propagation",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "specified independent linear-noise model only; actual decoder covariance unmeasured"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c17",
+      "claim": "fixed total continuous budget",
+      "status": "passed",
+      "max_absolute_error": 0.0,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c17",
+      "claim": "KKT equal marginal derivatives",
+      "status": "passed",
+      "max_absolute_error": 8.131516293641283e-20,
+      "tolerance": 1e-09,
+      "scope": "continuous allocation only; bounds, rounding, curvature probes and coverage still owed"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c18",
+      "claim": "weighted nuisance residual versus elimination",
+      "status": "passed",
+      "max_absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c18",
+      "claim": "weighted projector idempotence",
+      "status": "passed",
+      "max_absolute_error": 2.7755575615628914e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c18",
+      "claim": "weighted self adjointness",
+      "status": "passed",
+      "max_absolute_error": 2.6645352591003757e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c19",
+      "claim": "output ridge solution versus augmented least squares",
+      "status": "passed",
+      "max_absolute_error": 1.6653345369377348e-16,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c19",
+      "claim": "unreachable output component orthogonal to guidance span",
+      "status": "passed",
+      "max_absolute_error": 1.3309491393662185e-15,
+      "tolerance": 1e-09,
+      "scope": "linear reachability only; real decoder Jacobian and finite-step remainder unmeasured"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c20",
+      "claim": "profiled amplitude versus unconstrained joint solve",
+      "status": "passed",
+      "max_absolute_error": 2.4424906541753444e-15,
+      "tolerance": 1e-09,
+      "scope": "inactive phase inequalities only; actual timewarp needs monotonicity and remainder checks"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c20",
+      "claim": "complete overlap removes amplitude identification",
+      "status": "passed",
+      "max_absolute_error": 1.2472163368222123e-15,
+      "tolerance": 1e-09,
+      "scope": "finite identity only"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c10",
+  "name_zh": "形变梯度的可积投影",
+  "formal_object": "Mesh incidence/gradient G, positive edge/face weights W; desired model-derived differential correction h; delta=S z, with S enforcing anchor/boundary pins.",
+  "operations": [
+    {
+      "id": "F06",
+      "input": "Linear differential field with boundary constraints",
+      "condition": "S parameterizes exactly the permitted free coordinates",
+      "condition_status": "conditional",
+      "output": "Reduced Poisson solve"
+    },
+    {
+      "id": "H02",
+      "input": "Range of G S",
+      "condition": "Pinned connected components remove translational nullspaces",
+      "condition_status": "conditional",
+      "output": "Separate integrable and cycle components"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Minimize .5||G S z-h||_W^2.",
+      "justification": "The desired local differential field need not integrate to a global mesh."
+    },
+    {
+      "id": "s2",
+      "statement": "(S^T G^T W G S)z=S^T G^T W h.",
+      "justification": "Differentiate the quadratic on free coordinates."
+    },
+    {
+      "id": "s3",
+      "statement": "(G S)^T W(G S z-h)=0 at the solution.",
+      "justification": "The remaining differential error is W-orthogonal to all integrable free fields."
+    },
+    {
+      "id": "s4",
+      "statement": "Uniqueness requires a positive definite reduced operator or an explicitly fixed gauge/pseudoinverse.",
+      "justification": "Disconnected or unpinned components retain nullspaces."
+    }
+  ],
+  "assumptions": [
+    "All h and W are generated from inference-available geometry; no ground-truth field is used.",
+    "Pinned components and positive weights must be checked.",
+    "Integrability does not prevent triangle inversions or self-intersection.",
+    "An inconsistent field is projected, not exactly realized."
+  ],
+  "method_expression": "Generate a local geometry correction field h, solve the pinned sparse Poisson system, and update the full mesh by S z.",
+  "distinguishing_prediction": "Benefit should track the inconsistent component of h; already integrable fields should require no projection change apart from numerical error.",
+  "falsifier": "Reject necessity if direct landmark/geodesic rigid lifting matches the native geometry/motion frontier at equal cost.",
+  "closest_alternative": "Classical gradient-domain/ARAP deformation and direct rigid-skinning lift.",
+  "decisive_comparison": "Common h: direct lift, qualified ARAP and integrable-field solve; all original times/vertices and native scores, plus solver residual retained as an internal check.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "A global differential compatibility constraint differs from independent local rotations; the solver class is not new.",
+  "feasibility_and_cost": "Sparse CPU/GPU Laplacian solve with one factorization reused across times; native template and safe update constraints require qualification.",
+  "structural_signature": "Pinned weighted range projection of a differential field.",
+  "algebra_review_basis": "Re-derived reduced normal equations and orthogonality; uniqueness and topology limits stated.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

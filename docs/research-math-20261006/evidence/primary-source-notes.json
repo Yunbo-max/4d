@@ -1,0 +1,68 @@
+{
+  "kind": "primary-reading-notes",
+  "version": "1.0.0",
+  "scope": "Selected primary scientific passages and pinned implementation reads. No exhaustive novelty clearance.",
+  "sources": [
+    {
+      "id": "P01",
+      "title": "ActionMesh",
+      "url": "https://arxiv.org/html/2601.16148v2",
+      "locators": "Sections 3-4; official temporal_autoencoder.py forward/apply_displacement; pipeline.generate_mesh_animation",
+      "note": "The topology-preserving animation stage consumes temporal shape latents and anchor queries. The inspected implementation predicts bounded absolute coordinates in direct mode. A proposed displacement correction must use F_t(x)-x rather than assume the tensor is an additive displacement. Learned temporal animation is already prior work."
+    },
+    {
+      "id": "P02",
+      "title": "Fast 4D Mesh Generation by Spatio-Temporal Attention Chains",
+      "url": "https://arxiv.org/html/2605.19786v1",
+      "locators": "Sections 3, 4.1-4.4; Appendix B and C; equations 2-5",
+      "note": "Attention-chain matching, landmark filtering, confidence-weighted Gaussian smoothing and geodesic rigid skinning are covered. Appendix B reports a small motion-metric disadvantage relative to the learned ActionMesh animator at matched denoising steps, despite geometric gains. That motivates investigating a geometry/motion tradeoff; it does not prove a common cause. The long-sequence stress extension uses artificial forward/reverse looping, which will not be used as our natural long-video evidence. No released implementation link was located on the inspected project page. The printed confidence normalization needs implementation clarification; a row-constant factor mathematically cancels."
+    },
+    {
+      "id": "P03",
+      "title": "Mesh4D",
+      "url": "https://arxiv.org/html/2601.05251v1",
+      "locators": "Section 3.1-3.2, especially deformation representation and skeleton information",
+      "note": "A compact whole-animation deformation representation and skeleton-informed training are established alternatives. A low-rank repair is not the invention of an animation latent, and training with privileged skeletons is outside our frozen-weight budget. Its released-model/evaluator compatibility remains unqualified here."
+    },
+    {
+      "id": "P04",
+      "title": "Optimizing Mesh Animation from Video via Shape Flow Guidance",
+      "url": "https://media.eventhosts.cc/Conferences/ECCV2026/pdfs/8876.pdf",
+      "locators": "Pages 4-9, task and Sections 4.1-4.2; equations 2-12; experimental setup and limitations passages",
+      "note": "The method already uses initial-shape plus latent-trajectory difference, coupled temporal transport, root-space local/global decomposition, post-skinning correction, and ARAP regularization. Thus anchor subtraction and motion/shape separation alone are not original contributions. C01 acts on decoded coordinates rather than sampling trajectories; C02 needs a specific protected observation operator beyond this decomposition; C14 is a strong baseline with overlap. The evaluation uses rendered-video/shape metrics on a different dataset, so its scores cannot be substituted for native ActionBench geometry/motion evidence. Released-code and full function-level qualification remain pending."
+    },
+    {
+      "id": "P05",
+      "title": "Sinkhorn Distances",
+      "url": "https://arxiv.org/abs/1306.0895",
+      "locators": "Primary abstract located; derivations below independently written",
+      "note": "Entropic optimal transport and matrix scaling are existing mathematical tools. Area balancing and KL scaling will be attributed, not presented as new inventions."
+    },
+    {
+      "id": "P06",
+      "title": "As-Rigid-As-Possible Surface Modeling",
+      "url": "https://igl.ethz.ch/projects/ARAP/",
+      "locators": "Author project and primary paper located; broader collision audit pending",
+      "note": "Local rigid fitting and geometry-preserving deformation are established. The selected constructions must be compared with a qualified ARAP alternative before new-method investment."
+    },
+    {
+      "id": "P07",
+      "title": "Angular Synchronization by Eigenvectors and Semidefinite Programming",
+      "url": "https://web.math.princeton.edu/~amits/publications/angular_synchronization.pdf",
+      "locators": "Primary paper located; SO(3) construction below is our scoped algebra",
+      "note": "Spectral synchronization is established. Extending the group or using it on a mesh alone does not establish originality."
+    },
+    {
+      "id": "P08",
+      "title": "Convex Optimization: equality constrained quadratic minimization",
+      "url": "https://web.stanford.edu/class/ee364a/lectures/equality.pdf",
+      "locators": "Author lecture located; KKT and Schur algebra independently checked below",
+      "note": "Quadratic KKT projection, Schur elimination and robust conic constraints are classical tools, not novel by being used in this application."
+    }
+  ],
+  "reading_limits": [
+    "Full R-DMesh, Catalyst4D and concurrent-paper collision coverage remains pending.",
+    "Raw GPU outputs and final replay receipts are unavailable in the pinned repository.",
+    "Native ActionBench geometry/motion scores do not certify arbitrary semantic editing or agent reasoning."
+  ]
+}

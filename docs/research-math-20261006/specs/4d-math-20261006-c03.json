@@ -1,0 +1,133 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c03",
+  "name_zh": "相关参考误差的矩阵校正",
+  "priority_rank": 2,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T10:34:56.802182+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+    "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c03-math.json",
+    "sha256": "28579be1151e327c1baf6771a961168410cd2efb005a80d3dac2f7efc5046b14"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/evidence/selection.json",
+    "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    }
+  ],
+  "prior_art_and_role": "Classical matrix control variates and generalized least squares; historical research_math.correlated is related provenance, not math-first evidence for this new batch.",
+  "planned_interface": {
+    "inputs": [
+      "same-context self residual r0[T_anchor,V,3]",
+      "development-only labeled error policy",
+      "frozen means, B_t estimator and regularization"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "R(B)=tr C_tt-2 tr(B C_at)+tr(B C_aa B^T).",
+      "planned_function": "4d_math_20261006_c03.centered_risk",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "dR/dB=2B C_aa-2C_ta, hence B*=C_ta C_aa^-1.",
+      "planned_function": "4d_math_20261006_c03.fit_transfer_operator",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "R(0)-R(B*)=tr(C_ta C_aa^-1 C_at)>=0 under the stipulated true moments.",
+      "planned_function": "4d_math_20261006_c03.true_moment_gain_identity",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s4",
+      "statement": "For fitted B=B*+E, centered excess risk is tr(E C_aa E^T).",
+      "planned_function": "4d_math_20261006_c03.estimated_transfer_penalty",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s5",
+      "statement": "Using fitted means adds squared bias ||mu_t-muhat_t+B(muhat_a-mu_a)||^2 to centered risk.",
+      "planned_function": "4d_math_20261006_c03.fitted_mean_bias_penalty",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "mean_only",
+      "unit_C01",
+      "diagonal_transfer",
+      "matrix_transfer"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "A matrix correction should beat unit subtraction specifically when reference/downstream errors are anisotropic and correlated; its matrix component should switch off for zero cross-covariance, while any separately fitted mean correction remains.",
+    "falsifier": "Reject if legal moment estimates are unstable across assets or any improvement disappears against fixed subtraction/diagonal correction at matched calibration budget.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "legal development error/moment calibration and family-split transfer",
+    "fitted means and covariance conditioning",
+    "no confirmation label access",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ]
+}

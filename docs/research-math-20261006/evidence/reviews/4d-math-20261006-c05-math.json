@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c05",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+    "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Each anchor vertex i has finite target modes y_i,k and model scores p_i,k>0; connected anchor graph E; no GT target coordinates. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "B05: Mixture over candidate correspondences -> Separate within-mode and between-mode variation; condition: Candidate support and probabilities come from the same permitted model; H06: Posterior-mean coordinate as a universal safe correspondence -> Averaging can create an unsupported interior point; condition: Two separated valid modes are possible; D01: Finite coherent-label objective -> Construct a discrete assignment, not a temperature change; condition: Modes and pairwise geometry terms are declared All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "The weighted variance identity holds for normalized weights without interpreting attention as a calibrated posterior. Two separated rotation modes provide a valid contraction counterexample. The proposed object is a joint spatial discrete labeling, whose general optimizer is approximate. The counterexample shows possibility, not real failure prevalence.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Separated modes must be exposed by an actual inspected model interface; attention confidence alone is not calibrated probability.; Spatial coherence may choose the wrong symmetric part; no unique identity is guaranteed.; Rotation hints R_ij must use legal model/anchor information and identical availability for comparators.; No full dense 32768-token attention tensor is presumed feasible on this GPU. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Extract a bounded candidate set per landmark, perform spatially coherent discrete label search, and lift selected targets with a qualified common deformation backend. The reviewed construction is Discrete spatial mode assignment before deformation, as opposed to continuous averaging or mass balancing.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Benefit should concentrate on separated correspondence modes; a mean blend can improve an average score while compressing the predicted shape. It can be rejected by: Reject if naturally sourced modes are unimodal, or independent top-1/temperature-matched means match the same native performance at equal search cost. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: STAC's localized sharp blend; independent top-1; classical discrete labeling. Historical m03 also selects candidates over time, so spatial joint mode preservation needs explicit collision review. Claimed operational difference: Changes posterior reduction and joint spatial decision, not just top-k or temperature; functional originality is unresolved. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+          "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c03",
+  "name_zh": "相关参考误差的矩阵校正",
+  "formal_object": "Raw error E_t=F_t-Y_t and observable r0=F_a-x; centered e_t=E_t-mu_t, r=r0-mu_a; C_aa=E[rr^T] positive definite; C_ta=E[e_t r^T].",
+  "operations": [
+    {
+      "id": "E03",
+      "input": "e_t-B_t r",
+      "condition": "Residual moments are finite and centered; B fitted outside confirmation",
+      "condition_status": "conditional",
+      "output": "Keep cross-covariance in control-variate risk"
+    },
+    {
+      "id": "D05",
+      "input": "Quadratic risk in matrix B_t",
+      "condition": "C_aa is positive definite on retained directions",
+      "condition_status": "conditional",
+      "output": "Covariance-directed correction"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "R(B)=tr C_tt-2 tr(B C_at)+tr(B C_aa B^T).",
+      "justification": "Expand E||e_t-B r||^2; C_at=C_ta^T."
+    },
+    {
+      "id": "s2",
+      "statement": "dR/dB=2B C_aa-2C_ta, hence B*=C_ta C_aa^-1.",
+      "justification": "Set the convex quadratic derivative to zero."
+    },
+    {
+      "id": "s3",
+      "statement": "R(0)-R(B*)=tr(C_ta C_aa^-1 C_at)>=0 under the stipulated true moments.",
+      "justification": "The Schur-complement term is positive semidefinite."
+    },
+    {
+      "id": "s4",
+      "statement": "For fitted B=B*+E, centered excess risk is tr(E C_aa E^T).",
+      "justification": "Complete the square; estimated moments can erase any ideal benefit."
+    },
+    {
+      "id": "s5",
+      "statement": "Using fitted means adds squared bias ||mu_t-muhat_t+B(muhat_a-mu_a)||^2 to centered risk.",
+      "justification": "After output F_t-muhat_t-B(r0-muhat_a), separate its deterministic mean from the zero-mean centered error."
+    }
+  ],
+  "assumptions": [
+    "Centering and cross-covariance have to be calibrated from legal development information, not confirmation labels at inference.",
+    "Self-residual r is observable; true C_ta is not automatically observable or calibrated by model perturbations.",
+    "If moments cannot be estimated credibly, this stays a mathematical hypothesis with a calibration blocker.",
+    "Singular directions are restricted or regularized; ridge changes the exact optimum and must be recorded."
+  ],
+  "method_expression": "Fit means and a declared B_t estimator on legal development/replay evidence, freeze them, and output F_t-muhat_t-B_t((F_a-x)-muhat_a); use an exact anchor override. Low-rank/ridge estimates are approximations to the unrestricted ideal formula. Compare with mean-only and fixed-unit subtraction.",
+  "distinguishing_prediction": "A matrix correction should beat unit subtraction specifically when reference/downstream errors are anisotropic and correlated; its matrix component should switch off for zero cross-covariance, while any separately fitted mean correction remains.",
+  "falsifier": "Reject if legal moment estimates are unstable across assets or any improvement disappears against fixed subtraction/diagonal correction at matched calibration budget.",
+  "closest_alternative": "Classical matrix control variates and generalized least squares; historical research_math.correlated is related provenance, not math-first evidence for this new batch.",
+  "decisive_comparison": "Full native scoring of uncorrected, unit subtraction, diagonal B and low-rank cross-covariance B; development-only fitting and fresh paired confirmation.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "An estimated error-transfer operator and its estimation-risk term differ from C01's parameter-free boundary guarantee; this nesting is not causal independence.",
+  "feasibility_and_cost": "Observed self-map residual plus development calibration; no new training, but several native redecodes/perturbations may be needed. Cost and moment access remain unmeasured.",
+  "structural_signature": "Statistical matrix estimator learned from error cross-moments, with explicit estimation penalty.",
+  "algebra_review_basis": "Completed the risk square and checked B=0, B=I and zero cross-covariance limits. Ideal risk reduction is only under true centered moments.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

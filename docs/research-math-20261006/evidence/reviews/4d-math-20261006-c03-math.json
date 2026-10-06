@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c03",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+    "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Raw error E_t=F_t-Y_t and observable r0=F_a-x; centered e_t=E_t-mu_t, r=r0-mu_a; C_aa=E[rr^T] positive definite; C_ta=E[e_t r^T]. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "E03: e_t-B_t r -> Keep cross-covariance in control-variate risk; condition: Residual moments are finite and centered; B fitted outside confirmation; D05: Quadratic risk in matrix B_t -> Covariance-directed correction; condition: C_aa is positive definite on retained directions All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "The centered matrix risk differentiates to B*=C_ta C_aa^-1. Completing the square gives the estimation penalty; fitted means add their explicit squared offset. The formula is for true moments and unrestricted B. Low-rank/ridge and finite development estimates must retain excess risk, rather than inherit an unconditional improvement claim.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Centering and cross-covariance have to be calibrated from legal development information, not confirmation labels at inference.; Self-residual r is observable; true C_ta is not automatically observable or calibrated by model perturbations.; If moments cannot be estimated credibly, this stays a mathematical hypothesis with a calibration blocker.; Singular directions are restricted or regularized; ridge changes the exact optimum and must be recorded. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Fit means and a declared B_t estimator on legal development/replay evidence, freeze them, and output F_t-muhat_t-B_t((F_a-x)-muhat_a); use an exact anchor override. Low-rank/ridge estimates are approximations to the unrestricted ideal formula. Compare with mean-only and fixed-unit subtraction. The reviewed construction is Statistical matrix estimator learned from error cross-moments, with explicit estimation penalty.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: A matrix correction should beat unit subtraction specifically when reference/downstream errors are anisotropic and correlated; its matrix component should switch off for zero cross-covariance, while any separately fitted mean correction remains. It can be rejected by: Reject if legal moment estimates are unstable across assets or any improvement disappears against fixed subtraction/diagonal correction at matched calibration budget. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical matrix control variates and generalized least squares; historical research_math.correlated is related provenance, not math-first evidence for this new batch. Claimed operational difference: An estimated error-transfer operator and its estimation-risk term differ from C01's parameter-free boundary guarantee; this nesting is not causal independence. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c03.json",
+          "sha256": "6f05774a43aa82db36bae9d49d49256a9fd86071d37f2c9fdd464489070d62d0"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

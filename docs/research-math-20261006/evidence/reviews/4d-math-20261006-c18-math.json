@@ -1,0 +1,110 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c18",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+    "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T10:26:11.521081+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Formula/specification review only; no empirical assumption, originality, GPU interface or efficacy verified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Legal image residual r=r0+J_g delta_g+J_c delta_c in R^m; W positive definite; geometry and camera increments with a fixed gauge. The stated object/domain, rather than the official unsquared Chamfer, is the object of this conditional derivation.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "H01: Camera/shape observational ambiguities -> Separate nuisance and scientifically relevant directions; condition: Allowed image correspondences and an identified gauge; F06: Linearized camera/geometry least squares -> Schur elimination of nuisance camera; condition: Weighted camera Gram rank is checked; H02: Projected image operator -> State what deformation is unidentifiable; condition: Observation nullspaces may remain after elimination All current edges remain conditional where model/data availability is not established.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "The weighted nuisance pseudoinverse leaves P=I-Jc(Jc^T W Jc)^dagger Jc^T W, which is idempotent and W-self-adjoint. Therefore WP and the geometry Schur metric are PSD. Eliminating camera does not recover hidden depth or establish legal access to camera metadata.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra-audit.json",
+          "sha256": "0369fc3babcf1f82157d6620f1b9d4f63fff21b3fd531b32c96a2f9c54fc7ff7"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/algebra_audit.py",
+          "sha256": "1a08e4e622e3b5043ae1d34863a64e04bffe2eb41d55f356d50b471ed6a68752"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Conditional validity requires: Input-derived pixel correspondences and camera estimates are required; evaluation ICP transforms and GT camera labels are forbidden inference shortcuts.; A camera gauge and a local linearization region must be specified.; Image fitting alone need not identify depth or material correspondence.; The ordinary benchmark does not automatically license extra camera metadata as inference input. These are obligations, not observations about ActionBench.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Jointly fit legal input-camera nuisance and shape corrections; use the profiled geometry subproblem and validate the nonlinear residual after each bounded step. The reviewed construction is Weighted elimination of a nuisance parameter block.. This is a specification, not an implemented method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "The construction predicts: Geometry updates should avoid chasing residual directions explained by camera; no improvement is expected if those nuisance directions are absent. It can be rejected by: Reject if ordinary PnP/camera fitting plus an identical geometry solver is adequate or the central claim cannot be tested without GT leakage. This contrast is specified before any new-method experiment.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Named alternatives: Classical bundle adjustment/Schur elimination; STAC camera recovery. Claimed operational difference: A profiled geometry metric, not simply camera alignment; benchmark permissions and functional novelty remain unresolved. This check verifies an explicit comparator and conditional delta, not completed novelty clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+          "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+          "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+        },
+        {
+          "path": "docs/research-math-20261006/evidence/source-capture.json",
+          "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+        }
+      ]
+    }
+  }
+}

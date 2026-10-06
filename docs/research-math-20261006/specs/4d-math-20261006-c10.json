@@ -1,0 +1,126 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c10",
+  "name_zh": "形变梯度的可积投影",
+  "priority_rank": 8,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T10:34:56.804777+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
+    "sha256": "a92d7331b59e1e9c78e3d8811d3240c1ab1137dfac97da142acd63ee1f72d173"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c10-math.json",
+    "sha256": "e64132a47b3331ae5b701a01eff9bd94fe319b07b1853d7db43f94ae32c1a54f"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/evidence/selection.json",
+    "sha256": "ce065956699e41acb25c09296b4a124117959aedaeaa2741caa5f6a1580d0f14"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    }
+  ],
+  "prior_art_and_role": "Classical gradient-domain/ARAP deformation and direct rigid-skinning lift.",
+  "planned_interface": {
+    "inputs": [
+      "legal independently estimated differential targets h",
+      "mesh gradient/incidence operator G",
+      "positive W and per-component pins"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Minimize .5||G S z-h||_W^2.",
+      "planned_function": "4d_math_20261006_c10.form_pinned_integrability_objective",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "(S^T G^T W G S)z=S^T G^T W h.",
+      "planned_function": "4d_math_20261006_c10.solve_reduced_poisson",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "(G S)^T W(G S z-h)=0 at the solution.",
+      "planned_function": "4d_math_20261006_c10.check_weighted_projection",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s4",
+      "statement": "Uniqueness requires a positive definite reduced operator or an explicitly fixed gauge/pseudoinverse.",
+      "planned_function": "4d_math_20261006_c10.fix_component_gauges",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "direct_common_lift",
+      "independent_local_repair",
+      "pinned_integrable_solve"
+    ],
+    "primary_metric": "cd_3d",
+    "guardrail_metrics": [
+      "cd_4d",
+      "cd_motion"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Benefit should track the inconsistent component of h; already integrable fields should require no projection change apart from numerical error.",
+    "falsifier": "Reject necessity if direct landmark/geodesic rigid lifting matches the native geometry/motion frontier at equal cost.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "task-relevant natural nonintegrable field",
+    "qualified common target generator and reconstruction comparators",
+    "gauge/connectivity and sparse solver qualification",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "captured_at": "2026-10-06T09:50:48.370Z",
+  "repository": "Yunbo-max/4d",
+  "commit": "078bfa636d53c7e0a7258166400007ee16a7a597",
+  "files": [
+    {
+      "path": "README.md",
+      "git_blob_sha": "b7bd0dde733084c6e8e0fd860aa7ebe9d4034167"
+    },
+    {
+      "path": "docs/research-overnight/FEEDBACK-20261006.md",
+      "git_blob_sha": "62490c072d1dca0c013ffc6726a603cb06ef13c3"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/pipeline.py",
+      "git_blob_sha": "be0153d7e085f431368dfa6cdbc8052c00300dbf"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "git_blob_sha": "e54197672b0eb20584fab692857fc7ad6b7fafdd"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/README.md",
+      "git_blob_sha": "83b4d7c08c0cded4fa6eca74512a5db512f669d2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "git_blob_sha": "8d252b40d09189a92e4415a1dbeb4da2e4300646"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "git_blob_sha": "dd1ef0f1c71faabda0ecade33d0b9f22a91d22f5"
+    },
+    {
+      "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+      "git_blob_sha": "82c298f78f86b3cc8ab688f501a5f68df471c9fb"
+    },
+    {
+      "path": "actionmesh/research_ten/README.md",
+      "git_blob_sha": "490c9da94319621b738f71d0fb070a22d767c51b"
+    },
+    {
+      "path": "actionmesh/research_math/README.md",
+      "git_blob_sha": "145ab60894e801ec5332be9eec128c222389980a"
+    },
+    {
+      "path": "actionmesh/research_ten/m02_cycles.py",
+      "git_blob_sha": "f7ba1eb68649f4d48ff8f605dff61fbbf87773b2"
+    },
+    {
+      "path": "actionmesh/research_ten/m09_guidance.py",
+      "git_blob_sha": "1169f4c96cdc473cd413809a9615c2dfb5abbd2b"
+    }
+  ],
+  "read_scope": "Pinned primary source and returned metadata, not raw GPU receipt replay",
+  "gpu_basis": {
+    "user_choice": "one RTX 2080 Ti",
+    "historical_observation": "22528 MiB; current allocation not remotely observed"
+  },
+  "missing": [
+    "final 16-pair native receipts and referenced output hashes",
+    "strong simple deformation comparator qualification",
+    "current resource lease and peak telemetry",
+    "function-level collision saturation"
+  ]
+}

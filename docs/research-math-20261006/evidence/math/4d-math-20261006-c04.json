@@ -1,0 +1,79 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c04",
+  "name_zh": "不确定动作约束下的稳健修复",
+  "formal_object": "Output repair delta, desired geometry step d, uncertain motion-gradient g=g0+S^(1/2)u with ||u||<=r; S positive semidefinite.",
+  "operations": [
+    {
+      "id": "C04",
+      "input": "g0 plus bounded uncertainty",
+      "condition": "A declared ellipsoidal set covers the intended local gradients",
+      "condition_status": "conditional",
+      "output": "Separate central direction and uncertainty"
+    },
+    {
+      "id": "D01",
+      "input": "min .5||delta-d||^2 subject to a worst-case budget",
+      "condition": "The fixed uncertainty set and anchor constraints are convex",
+      "condition_status": "conditional",
+      "output": "Second-order cone repair"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "sup_{||u||<=r}|(g0+S^(1/2)u)^T delta|=|g0^T delta|+r||S^(1/2)delta||.",
+      "justification": "Cauchy-Schwarz gives the upper bound and a collinear u attains it."
+    },
+    {
+      "id": "s2",
+      "statement": "Impose |g0^T delta|+r||S^(1/2)delta||<=epsilon and A delta=0.",
+      "justification": "This is convex and has delta=0 feasible for epsilon>=0."
+    },
+    {
+      "id": "s3",
+      "statement": "For a smooth protected surrogate with Hessian norm <=L, finite-step change is bounded by epsilon+L||delta||^2/2.",
+      "justification": "Taylor remainder; first-order protection alone is insufficient."
+    }
+  ],
+  "assumptions": [
+    "S is a PSD uncertainty-set shape, not a calibrated probability distribution unless separately justified.",
+    "g0 refers to a declared inference-available motion surrogate, not the unknown native metric gradient.",
+    "The finite-step Hessian bound is conditional and can fail near topology changes.",
+    "A positive uncertainty budget is frozen on development evidence."
+  ],
+  "method_expression": "Solve the anchored conic projection of d into the local worst-case motion budget; backtrack under the declared surrogate, retaining rejected steps.",
+  "distinguishing_prediction": "As uncertainty radius grows, admissible updates contract in uncertain directions; fixed-equality C02 cannot model this confidence-dependent tradeoff.",
+  "falsifier": "Reject if the uncertainty set fails its held-out coverage/semantic check or if strength-matched deterministic repair reaches the same native frontier.",
+  "closest_alternative": "Classical robust conic optimization; deterministic constrained repair and C02 are direct controls.",
+  "decisive_comparison": "Same native assets, deterministic budget versus ellipsoidal budget, and shrinkage replacement; compare official scores and complete cost under frozen uncertainty calibration.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Adds a worst-case uncertainty set with an attainable support-function bound; this is not an automatic native safety guarantee.",
+  "feasibility_and_cost": "Small structured conic solve after cached output repair. Reliable uncertainty and smoothness bounds are unresolved.",
+  "structural_signature": "Robust inequality-constrained repair, distinct from an exact nullspace projection.",
+  "algebra_review_basis": "Support-function bound checked with its attaining direction; finite-step second-order term retained.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}

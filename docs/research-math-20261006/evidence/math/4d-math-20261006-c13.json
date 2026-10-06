@@ -1,0 +1,86 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c13",
+  "name_zh": "稀疏加速度的事件保留修复",
+  "formal_object": "A full coordinate trajectory y; anchored free coordinates z; second time-difference D2 with actual timestep units; positive observation metric M.",
+  "operations": [
+    {
+      "id": "A01",
+      "input": "Second differences at physical/native timesteps",
+      "condition": "Timestamps and time units are retained",
+      "condition_status": "conditional",
+      "output": "Acceleration-scaled temporal operator"
+    },
+    {
+      "id": "C02",
+      "input": "Group norm lambda sum ||(D2 y)_t,v||_2",
+      "condition": "Convex group-norm domain",
+      "condition_status": "conditional",
+      "output": "Dual balls preserve sparse dynamic events"
+    },
+    {
+      "id": "D04",
+      "input": "Quadratic data fit plus acceleration sparsity",
+      "condition": "Positive definite observation metric and exact anchor constraints",
+      "condition_status": "conditional",
+      "output": "Convex group-trend repair"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Solve min_y .5||y-yhat||_M^2 + lambda sum_(t,v)||D2 y||_2, with A y=X.",
+      "justification": "This encodes piecewise velocity rather than uniformly small acceleration."
+    },
+    {
+      "id": "s2",
+      "statement": "lambda||a||_2=sup_{||p||_2<=lambda} p^T a.",
+      "justification": "Cauchy-Schwarz gives equality with p along a."
+    },
+    {
+      "id": "s3",
+      "statement": "Write y=y_p+S z, A y_p=X, A S=0. Stationarity is S^T M(y_p+S z-yhat)+(D2 S)^T p=0.",
+      "justification": "Retain anchor and off-diagonal metric terms; if M_free=S^T M S, the effective center is M_free^-1 S^T M(yhat-y_p), not automatically the free entries of yhat."
+    }
+  ],
+  "assumptions": [
+    "Real motion need not be piecewise velocity; sinusoidal or rapidly articulated motion can be biased.",
+    "Groups are 3D vectors, avoiding an arbitrary axis-wise L1 convention.",
+    "Tuning and timestamp scaling are frozen before confirmation.",
+    "Acceleration sparsity is an inference prior, not a new benchmark metric or event label."
+  ],
+  "method_expression": "Apply anchored group trend filtering to native coordinates with the same original timestamps; preserve all motion events the optimizer retains.",
+  "distinguishing_prediction": "Sparse abrupt changes should survive better than equal-strength Gaussian smoothing; smooth high-frequency real motion can be a failure boundary.",
+  "falsifier": "Reject if Gaussian/second-order quadratic smoothing at equal tuning/compute matches official CD-M and geometry, or if event-like true motion is suppressed.",
+  "closest_alternative": "Classical trend filtering and STAC Gaussian temporal smoothing.",
+  "decisive_comparison": "Base, confidence-weighted Gaussian smoothing, quadratic acceleration repair and group-trend repair; native scoring only, matched development tuning.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    }
+  ],
+  "operational_delta": "Changes the temporal regularity prior and dual constraint, not the Gaussian bandwidth; existing trend filtering is attributed.",
+  "feasibility_and_cost": "Banded temporal optimization per coordinate group; likely cheaper than re-generation, but full mesh/scoring time is unmeasured.",
+  "structural_signature": "Nonsmooth group acceleration sparsity rather than quadratic smoothing or low-rank estimation.",
+  "algebra_review_basis": "Verified norm conjugacy, affine anchor handling and dimensional time scaling. No promise of correct event recovery.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed."
+}
