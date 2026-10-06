@@ -47,7 +47,7 @@ The historical software-test receipts are engineering evidence only. They do not
 | Unit tests | `actionmesh/tests/test_research_math.py` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_original_run.py` | historical helper; not admitted for raw execution in this handoff |
 
-All executable tasks must go through the installed skill's `scripts/run_harness.py`. Controller-only Git, SSH, and file transfer remain outside the project harness.
+All test, control-construction, native-evaluation, and integrity workloads must go through the installed skill's `scripts/run_harness.py`. A committed plan builder may be invoked directly only to emit/check its plan. Controller-only Git, SSH, and file transfer remain outside the project harness.
 
 ## Work units and gates
 

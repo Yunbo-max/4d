@@ -19,7 +19,7 @@ Do not infer current status from older receipts. Mathematical construction, a ge
 - Use a fresh checkout/worktree at the exact delivered commit. Record `git rev-parse HEAD`, `git status --short`, and any applied patch.
 - The target is one RTX 2080 Ti, native/Conda, without Docker. Inspect the actual device and environment before launch; historical telemetry is not current telemetry.
 - Keep controller Git/SSH/file-transfer commands separate from executable project tasks.
-- Run every executable project task through the installed `research-autopilot` `scripts/run_harness.py`, using the committed plan builder and its printed approved-plan digest.
+- Run every test, experiment, evaluation, or other scientific workload through the installed `research-autopilot` `scripts/run_harness.py`, using the committed plan builder and its printed approved-plan digest. A plan builder may be invoked directly only to emit and validate the plan; it must not perform the workload itself.
 - Do not dispatch a candidate merely because it is mathematically selected. Candidate execution requires baseline/native-scoring qualification, Natural Gate 0, IPCG, code/design verification, a simple baseline, and an ablation.
 - Do not convert missing results into zeroes or successes. Record `generated_unexecuted`, `insufficient_evidence`, or the observed failure.
 

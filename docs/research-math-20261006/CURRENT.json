@@ -50,15 +50,15 @@
     "round_id": "20261006-baseline-qualification",
     "root_rules_ref": {
       "path": "AGENTS.md",
-      "sha256": "2cbb30ce6592fb097cd29322ab5f4f7ba34edd3caf4cec0b121b6d730eee68cf"
+      "sha256": "a42aee66725c8d1ff9a4ddfc0692a2bac67d7ae191825594f44d229f0833f32d"
     },
     "runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "5c318e11b20f6d0c1af457e59cf3a298cf279ffbc6269cdaff3f213a2d153b4d"
+      "sha256": "f6b4d375ddb8c144ab416adb6882c45244149d805a9a2fe93d0dd9c214eec7dc"
     },
     "round_handoff_ref": {
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
-      "sha256": "b30e8b31c0fc6751ce9f200e1a79cfbd347058d0b9a4dd72ca075b8650c60073"
+      "sha256": "0a580bc7a30b67424d57ec5e940dd93738a9bc25cd5f7c5363245c9e25f06158"
     },
     "checkpoint_ref": {
       "path": "docs/research-math-20261006/workflow-checkpoint-local-agent-handoff.json",

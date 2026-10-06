@@ -62,6 +62,8 @@ Before approving any plan, source-inspect:
 
 Confirm GPU count, timeout, device visibility, output directories, stop behavior, and that all writes stay inside the intended project/attempt roots.
 
+The committed `prepare_*.py` builders below may be invoked directly only to emit/check their plans. Every test, control construction, native evaluation, and integrity workload represented by those plans must be launched by `run_harness.py`; a builder that performs its own scientific workload is not acceptable.
+
 ### 3. Run the parser-only acceptance suite through the harness
 
 On the GPU host, from a clean delivered checkout:
