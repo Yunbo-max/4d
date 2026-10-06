@@ -1,0 +1,685 @@
+{
+  "unit_ids": [
+    "gen-000-059_0f142eaa4ab94740ba9e5d074f306a15",
+    "gen-000-108_8560f555469a46e085952a890ce9785b",
+    "gen-000-094_5b203279ff3d46a6b152e2b064774e67",
+    "gen-000-126_0211a7f80bdc48f784af6796913af96b",
+    "gen-000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+    "gen-000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+    "gen-000-136_1d5f546cd4454e2d921dc15594921524",
+    "gen-000-063_2f305a7ad6784a3b9c5db480362ebc02",
+    "gen-000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+    "gen-000-059_ee85486b41c1442aaf35fc2563381ad0",
+    "gen-000-076_6ef94285eb3e467ebc3128110b325a1d",
+    "gen-000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+    "gen-000-066_d97aa2a9b82b4284a6a560287f422772",
+    "gen-000-130_94be397f8db74f7c9c06263aaf988532",
+    "gen-000-048_45e57349f062416aaf11f2c31587da16",
+    "gen-000-144_0c7abbb8b0e34a34bf1fb783da518664"
+  ],
+  "units": {
+    "gen-000-059_0f142eaa4ab94740ba9e5d074f306a15": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-059_0f142eaa4ab94740ba9e5d074f306a15",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T22:02:01.639608+00:00",
+          "process": {
+            "pid": 596,
+            "start_ticks": "196339148",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 909.0721416480374,
+          "ended_utc": "2026-10-05T22:17:10.711768+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 909.0721416480374
+    },
+    "gen-000-108_8560f555469a46e085952a890ce9785b": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-108_8560f555469a46e085952a890ce9785b__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-108_8560f555469a46e085952a890ce9785b",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-108_8560f555469a46e085952a890ce9785b",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T22:17:10.884329+00:00",
+          "process": {
+            "pid": 1558,
+            "start_ticks": "196430072",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 893.4314791979268,
+          "ended_utc": "2026-10-05T22:32:04.315812+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 893.4314791979268
+    },
+    "gen-000-094_5b203279ff3d46a6b152e2b064774e67": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-094_5b203279ff3d46a6b152e2b064774e67__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-094_5b203279ff3d46a6b152e2b064774e67",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-094_5b203279ff3d46a6b152e2b064774e67",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T22:32:04.461682+00:00",
+          "process": {
+            "pid": 2539,
+            "start_ticks": "196519430",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 894.074135055067,
+          "ended_utc": "2026-10-05T22:46:58.535820+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 894.074135055067
+    },
+    "gen-000-126_0211a7f80bdc48f784af6796913af96b": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-126_0211a7f80bdc48f784af6796913af96b__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-126_0211a7f80bdc48f784af6796913af96b",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-126_0211a7f80bdc48f784af6796913af96b",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T22:46:58.687521+00:00",
+          "process": {
+            "pid": 4751,
+            "start_ticks": "196608852",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 895.7980258248281,
+          "ended_utc": "2026-10-05T23:01:54.485549+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 895.7980258248281
+    },
+    "gen-000-094_2066afa87c7240d3b74b2ee6116fe0d7": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-094_2066afa87c7240d3b74b2ee6116fe0d7__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T23:01:54.622490+00:00",
+          "process": {
+            "pid": 8429,
+            "start_ticks": "196698446",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 898.7820640010759,
+          "ended_utc": "2026-10-05T23:16:53.404559+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 898.7820640010759
+    },
+    "gen-000-102_7806e18e09ed4dd4a87c611bde4b96bc": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-102_7806e18e09ed4dd4a87c611bde4b96bc__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T23:16:53.553455+00:00",
+          "process": {
+            "pid": 11317,
+            "start_ticks": "196788339",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 896.6269927481189,
+          "ended_utc": "2026-10-05T23:31:50.180450+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 896.6269927481189
+    },
+    "gen-000-136_1d5f546cd4454e2d921dc15594921524": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-136_1d5f546cd4454e2d921dc15594921524__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-136_1d5f546cd4454e2d921dc15594921524",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-136_1d5f546cd4454e2d921dc15594921524",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T23:31:50.317077+00:00",
+          "process": {
+            "pid": 13559,
+            "start_ticks": "196878015",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 903.5541555399541,
+          "ended_utc": "2026-10-05T23:46:53.871238+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 903.5541555399541
+    },
+    "gen-000-063_2f305a7ad6784a3b9c5db480362ebc02": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-063_2f305a7ad6784a3b9c5db480362ebc02__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-063_2f305a7ad6784a3b9c5db480362ebc02",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-063_2f305a7ad6784a3b9c5db480362ebc02",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-05T23:46:54.025550+00:00",
+          "process": {
+            "pid": 14519,
+            "start_ticks": "196968386",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 899.1818643270526,
+          "ended_utc": "2026-10-06T00:01:53.207417+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 899.1818643270526
+    },
+    "gen-000-035_0ec701a445b84eb6bd0ea16a20e0fa4a": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-035_0ec701a445b84eb6bd0ea16a20e0fa4a__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T00:01:53.356774+00:00",
+          "process": {
+            "pid": 17981,
+            "start_ticks": "197058319",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 910.2362775199581,
+          "ended_utc": "2026-10-06T00:17:03.593056+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 910.2362775199581
+    },
+    "gen-000-059_ee85486b41c1442aaf35fc2563381ad0": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-059_ee85486b41c1442aaf35fc2563381ad0__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-059_ee85486b41c1442aaf35fc2563381ad0",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-059_ee85486b41c1442aaf35fc2563381ad0",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T00:17:03.750445+00:00",
+          "process": {
+            "pid": 20053,
+            "start_ticks": "197149359",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 902.8100464160088,
+          "ended_utc": "2026-10-06T00:32:06.560495+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 902.8100464160088
+    },
+    "gen-000-076_6ef94285eb3e467ebc3128110b325a1d": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-076_6ef94285eb3e467ebc3128110b325a1d__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-076_6ef94285eb3e467ebc3128110b325a1d",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-076_6ef94285eb3e467ebc3128110b325a1d",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T00:32:06.720697+00:00",
+          "process": {
+            "pid": 21003,
+            "start_ticks": "197239656",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 890.716836120002,
+          "ended_utc": "2026-10-06T00:46:57.437536+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 890.716836120002
+    },
+    "gen-000-065_bc982b8da22a4a2ba8097b1e424ae38b": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-065_bc982b8da22a4a2ba8097b1e424ae38b__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T00:46:57.603927+00:00",
+          "process": {
+            "pid": 21949,
+            "start_ticks": "197328744",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 901.3943238749634,
+          "ended_utc": "2026-10-06T01:01:58.998254+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 901.3943238749634
+    },
+    "gen-000-066_d97aa2a9b82b4284a6a560287f422772": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-066_d97aa2a9b82b4284a6a560287f422772__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-066_d97aa2a9b82b4284a6a560287f422772",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-066_d97aa2a9b82b4284a6a560287f422772",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T01:01:59.156999+00:00",
+          "process": {
+            "pid": 23721,
+            "start_ticks": "197418899",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 897.0420934518334,
+          "ended_utc": "2026-10-06T01:16:56.199097+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 897.0420934518334
+    },
+    "gen-000-130_94be397f8db74f7c9c06263aaf988532": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-130_94be397f8db74f7c9c06263aaf988532__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-130_94be397f8db74f7c9c06263aaf988532",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-130_94be397f8db74f7c9c06263aaf988532",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T01:16:56.345635+00:00",
+          "process": {
+            "pid": 25703,
+            "start_ticks": "197508618",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 898.7539183970075,
+          "ended_utc": "2026-10-06T01:31:55.099557+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 898.7539183970075
+    },
+    "gen-000-048_45e57349f062416aaf11f2c31587da16": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-048_45e57349f062416aaf11f2c31587da16__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-048_45e57349f062416aaf11f2c31587da16",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-048_45e57349f062416aaf11f2c31587da16",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T01:31:55.235196+00:00",
+          "process": {
+            "pid": 29141,
+            "start_ticks": "197598507",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 894.1932504940778,
+          "ended_utc": "2026-10-06T01:46:49.428451+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 894.1932504940778
+    },
+    "gen-000-144_0c7abbb8b0e34a34bf1fb783da518664": {
+      "family": "generation",
+      "status": "complete",
+      "attempts": [
+        {
+          "attempt": 1,
+          "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/gen-000-144_0c7abbb8b0e34a34bf1fb783da518664__attempt1.log",
+          "status": "completed",
+          "argv": [
+            "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+            "-u",
+            "-m",
+            "research_overnight.generation",
+            "--protocol",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/protocol.json",
+            "--uid",
+            "000-144_0c7abbb8b0e34a34bf1fb783da518664",
+            "--output",
+            "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/units/gen-000-144_0c7abbb8b0e34a34bf1fb783da518664",
+            "--fingerprint",
+            "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+            "--gpu-index",
+            "0"
+          ],
+          "started_utc": "2026-10-06T01:46:49.581449+00:00",
+          "process": {
+            "pid": 32243,
+            "start_ticks": "197687942",
+            "host": "jupyter-55p0lroqabt855y1",
+            "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+          },
+          "returncode": 0,
+          "elapsed_seconds": 901.68041748018,
+          "ended_utc": "2026-10-06T02:01:51.261871+00:00"
+        }
+      ],
+      "admission_estimate_seconds": 2400,
+      "elapsed_seconds": 901.68041748018
+    }
+  },
+  "status": "inventory_complete",
+  "active_process": null,
+  "preflight_attempts": [
+    {
+      "argv": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-m",
+        "research_overnight",
+        "doctor",
+        "--root",
+        "/root/rivermind-data/actionmesh-repro",
+        "--suite",
+        "generation",
+        "--gpu-index",
+        "0",
+        "--output",
+        "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005"
+      ],
+      "started_utc": "2026-10-05T22:00:40.158105+00:00",
+      "status": "completed",
+      "process": {
+        "pid": 462,
+        "start_ticks": "196330999",
+        "host": "jupyter-55p0lroqabt855y1",
+        "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+      },
+      "returncode": 0,
+      "elapsed_seconds": 81.43359743896872,
+      "ended_utc": "2026-10-05T22:02:01.591721+00:00",
+      "log": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/logs/preflight__attempt1.log"
+    }
+  ],
+  "active_unit": null,
+  "ended_or_saved_utc": "2026-10-06T02:02:07.869385+00:00",
+  "counts": {
+    "declared": 16,
+    "complete": 16
+  },
+  "completion_mode": "until_inventory_complete"
+}

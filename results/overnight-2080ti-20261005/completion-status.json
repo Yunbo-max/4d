@@ -1,0 +1,20 @@
+{
+  "process": {
+    "pid": 1912,
+    "start_ticks": "196452210",
+    "host": "jupyter-55p0lroqabt855y1",
+    "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+  },
+  "started_utc": "2026-10-05T22:20:52.332590+00:00",
+  "fingerprint": "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+  "mode": "until_inventory_complete",
+  "authorization_sha256": "010cdea56f845816f572ab30b7c7e2c1a4108c11538d7966fe743e2da40dad0b",
+  "wrapper_sha256": "8f6dd5a5db9c6e01bed16570b3e1911180d91d093858a86b8073b450b1ec38ee",
+  "declared_assets": 16,
+  "total_time_limit_seconds": null,
+  "status": "complete",
+  "heartbeat_utc": "2026-10-06T02:02:09.641523+00:00",
+  "handoff": "/root/rivermind-data/actionmesh-repro/outputs/overnight-2080ti-20261005/completion-handoffs/20261006T020204305918Z",
+  "complete": 16,
+  "finished_utc": "2026-10-06T02:02:09.641503+00:00"
+}

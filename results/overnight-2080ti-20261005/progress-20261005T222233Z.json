@@ -1,0 +1,61 @@
+{
+  "checked_utc": "2026-10-05T22:22:33.037871+00:00",
+  "declared_assets": 16,
+  "verified_complete_pairs": 1,
+  "queue_status": "running",
+  "active_unit": "gen-000-108_8560f555469a46e085952a890ce9785b",
+  "active_worker_alive": true,
+  "completion_supervisor_alive": true,
+  "completion_supervisor_status": "waiting_for_original_runner",
+  "fingerprint": "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+  "frozen_runner_sources_verified": true,
+  "gpu": {
+    "physical_index": "0",
+    "uuid": "GPU-e9d01956-88db-b317-ea53-be3fb6cf7190",
+    "name": "NVIDIA GeForce RTX 2080 Ti",
+    "total_mib": 22528,
+    "free_mib": 11747,
+    "used_mib": 10255,
+    "utilization_percent": 100,
+    "applications": [
+      {
+        "pid": 1638,
+        "name": "/root/rivermind-data/actionmesh-repro/inference-env/bin/python"
+      }
+    ],
+    "utc": "2026-10-05T22:22:33.133735+00:00"
+  },
+  "completed_pairs": [
+    {
+      "uid": "000-059_0f142eaa4ab94740ba9e5d074f306a15",
+      "pair": {
+        "uid": "000-059_0f142eaa4ab94740ba9e5d074f306a15",
+        "independent_unit": "asset",
+        "scope": "native baseline/stationary comparison",
+        "native": {
+          "cd_3d": 0.06899147396609723,
+          "cd_4d": 0.07462949195179946,
+          "cd_motion": 0.09510377049446106
+        },
+        "stationary": {
+          "cd_3d": 0.10291428696632951,
+          "cd_4d": 0.10969561741923378,
+          "cd_motion": 0.200363427400589
+        },
+        "native_minus_stationary": {
+          "cd_3d": -0.03392281300023228,
+          "cd_4d": -0.03506612546743432,
+          "cd_motion": -0.10525965690612793
+        },
+        "verification": {
+          "full_native_scoring": true,
+          "same_anchor": true,
+          "input/source_hashes_checked": true,
+          "candidate_method_tested": false,
+          "formal_gate_pass": false
+        },
+        "elapsed_this_attempt_seconds": 868.7799494022038
+      }
+    }
+  ]
+}

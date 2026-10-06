@@ -1,0 +1,44 @@
+{
+  "recorded_utc": "2026-10-05T22:20:52.252162+00:00",
+  "mode": "until_inventory_complete",
+  "user_instructions": [
+    "\u6211\u6ca1\u8bf4\u505c\u5c31\u4e0d\u505c\u54ea\u6015\u662f\u8fc7\u4e868\u5c0f\u65f6",
+    "\u8dd1\u5b8c\u5168\u90e8\u5427"
+  ],
+  "scope": "same 16 assets, native generation and both official scoring arms; scheduling only",
+  "fingerprint": "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+  "unit_ids": [
+    "gen-000-059_0f142eaa4ab94740ba9e5d074f306a15",
+    "gen-000-108_8560f555469a46e085952a890ce9785b",
+    "gen-000-094_5b203279ff3d46a6b152e2b064774e67",
+    "gen-000-126_0211a7f80bdc48f784af6796913af96b",
+    "gen-000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+    "gen-000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+    "gen-000-136_1d5f546cd4454e2d921dc15594921524",
+    "gen-000-063_2f305a7ad6784a3b9c5db480362ebc02",
+    "gen-000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+    "gen-000-059_ee85486b41c1442aaf35fc2563381ad0",
+    "gen-000-076_6ef94285eb3e467ebc3128110b325a1d",
+    "gen-000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+    "gen-000-066_d97aa2a9b82b4284a6a560287f422772",
+    "gen-000-130_94be397f8db74f7c9c06263aaf988532",
+    "gen-000-048_45e57349f062416aaf11f2c31587da16",
+    "gen-000-144_0c7abbb8b0e34a34bf1fb783da518664"
+  ],
+  "wrapper_sha256": "8f6dd5a5db9c6e01bed16570b3e1911180d91d093858a86b8073b450b1ec38ee",
+  "supersedes": {
+    "original_total_hours": 8.0,
+    "original_deadline_utc": "2026-10-06T06:00:00.089627+00:00"
+  },
+  "total_time_limit_seconds": null,
+  "gpu_workers": 1,
+  "maximum_attempts_per_asset": 2,
+  "exception_handling": "failed receipts/resource faults remain incomplete and require debugging",
+  "scientific_protocol_changed": false,
+  "candidate_methods_enabled": false,
+  "software_tests": {
+    "local_passed": 9,
+    "remote_passed": 9,
+    "skipped": 0
+  }
+}

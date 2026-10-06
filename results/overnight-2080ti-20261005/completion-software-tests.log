@@ -1,0 +1,14 @@
+test_authorization_is_bound_to_original_protocol_and_inventory (test_completion.CompletionTests.test_authorization_is_bound_to_original_protocol_and_inventory) ... ok
+test_corrupt_receipt_cannot_be_overwritten_or_counted (test_completion.CompletionTests.test_corrupt_receipt_cannot_be_overwritten_or_counted) ... ok
+test_failure_is_not_completion_and_other_assets_still_finish (test_completion.CompletionTests.test_failure_is_not_completion_and_other_assets_still_finish) ... ok
+test_finishes_after_expired_window_and_preserves_it_and_failed_attempt (test_completion.CompletionTests.test_finishes_after_expired_window_and_preserves_it_and_failed_attempt) ... ok
+test_interruption_kills_worker_and_records_incomplete_attempt (test_completion.CompletionTests.test_interruption_kills_worker_and_records_incomplete_attempt) ... ok
+test_refuses_overlapping_live_previous_worker (test_completion.CompletionTests.test_refuses_overlapping_live_previous_worker) ... ok
+test_resource_failure_is_saved_and_does_not_launch_next_asset (test_completion.CompletionTests.test_resource_failure_is_saved_and_does_not_launch_next_asset) ... ok
+test_skips_verified_completed_outputs_but_runs_pending (test_completion.CompletionTests.test_skips_verified_completed_outputs_but_runs_pending) ... ok
+test_waits_for_predecessor_lock_without_changing_its_records (test_completion.CompletionTests.test_waits_for_predecessor_lock_without_changing_its_records) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.548s
+
+OK

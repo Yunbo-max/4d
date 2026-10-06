@@ -1,0 +1,1479 @@
+{
+  "schema_version": 1,
+  "suite": "generation",
+  "generation": {
+    "cohort": {
+      "schema_version": 1,
+      "dataset": "facebook/actionbench",
+      "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+      "uids": [
+        "000-059_0f142eaa4ab94740ba9e5d074f306a15",
+        "000-108_8560f555469a46e085952a890ce9785b",
+        "000-094_5b203279ff3d46a6b152e2b064774e67",
+        "000-126_0211a7f80bdc48f784af6796913af96b",
+        "000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+        "000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+        "000-136_1d5f546cd4454e2d921dc15594921524",
+        "000-063_2f305a7ad6784a3b9c5db480362ebc02",
+        "000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+        "000-059_ee85486b41c1442aaf35fc2563381ad0",
+        "000-076_6ef94285eb3e467ebc3128110b325a1d",
+        "000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+        "000-066_d97aa2a9b82b4284a6a560287f422772",
+        "000-130_94be397f8db74f7c9c06263aaf988532",
+        "000-048_45e57349f062416aaf11f2c31587da16",
+        "000-144_0c7abbb8b0e34a34bf1fb783da518664"
+      ],
+      "excluded_inspected_uids": [
+        "000-037_1358c424008a43cbaa35eba5e58551ac",
+        "000-043_061697e330d44524bd11f8cf95772e2d",
+        "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+        "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+        "000-078_b0b646eb731848f7837ab8257dfc658c",
+        "000-067_09a05166420843fab423047a799c87da",
+        "000-046_3bb11febd0624d7f8b30f491fb317d58",
+        "000-014_6cf7de7d14064b23be17811d19a63f13"
+      ],
+      "selection": "salted sha256 order before outputs; fixed finite development census",
+      "salt": "4d-native-census-20261005-v1",
+      "source_population_sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190",
+      "native_inference": {
+        "frames": 16,
+        "stage0_steps": 100,
+        "stageI_steps": 30,
+        "cfg": 7.5,
+        "seed": 42,
+        "low_ram": true,
+        "dtype": "float16",
+        "weights_frozen": true
+      },
+      "native_evaluation": {
+        "scorer": "official ActionBench compute_chamfer_3d_4d",
+        "frames": 16,
+        "sampling_seed": 44,
+        "surface_samples": 100000,
+        "icp_samples": 10000,
+        "icp_rotations": 24,
+        "icp_iterations": 200,
+        "metrics": [
+          "cd_3d",
+          "cd_4d",
+          "cd_motion"
+        ]
+      },
+      "scope": "baseline/evaluator qualification and development census",
+      "formal_gate_pass": false,
+      "new_candidate_methods_enabled": false,
+      "pending_gates": [
+        "Natural Gate 0",
+        "functional collision audit",
+        "IPCG",
+        "Gate A"
+      ]
+    },
+    "data_root": "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005",
+    "data_records": {
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/camera.json": {
+        "sha256": "20fc5c431f04c58c9d61edd74830e054f1d2c27f7f21d765001a4562cce39d7e",
+        "bytes": 485
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/surfaces.npy": {
+        "sha256": "75dfa71a38cbb96f5fa1823fba9c47b0f3040858ded721d3f9f0d54b8f8b8e5c",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/00.png": {
+        "sha256": "cf388a95139e9e6fd61236650c419dbaf23fa4b1bfc7458cb0b5f347c3086f9b",
+        "bytes": 169268
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/01.png": {
+        "sha256": "cf8f2da78aacff493eb877ac9db602c9720cd5973149b788ae301221af8bf5ae",
+        "bytes": 170736
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/02.png": {
+        "sha256": "001b1b145113b24f19004b4edce221e2b9e2b6b0befd3e666db0eedd65fc5c52",
+        "bytes": 171602
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/03.png": {
+        "sha256": "d6da4f987c1467da0afa279dd575edfe4053434e7e1da006f5d096675e7b5400",
+        "bytes": 171509
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/04.png": {
+        "sha256": "31d2e6bed392433ffddbf518feb51c902348acb931cd54a01a142d808b1b2ad0",
+        "bytes": 171948
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/05.png": {
+        "sha256": "b97f79b50d4316913cd2561c1cbebc84192f91dfecb45f9630627103ffb07a1e",
+        "bytes": 171838
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/06.png": {
+        "sha256": "d52333477842fd463437d0f9443f822f992fc35bcb49686adcf7f6bd09938100",
+        "bytes": 171977
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/07.png": {
+        "sha256": "9e2b50cbfc4aac5e203ac96b2e6cd591e3f7165ffc60ee01ec9da5a2c8361996",
+        "bytes": 172686
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/08.png": {
+        "sha256": "2f34d9bb622a601040fb0c7b4aa43e1dd489ec7fc2b7f33c315d97e00ce5f079",
+        "bytes": 173212
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/09.png": {
+        "sha256": "889366a38c82ba5b6544077987fa9d49b3e079baa15ac27c0ad5ac510938c81a",
+        "bytes": 171721
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/10.png": {
+        "sha256": "05224f90115c6bf2231dbcde49bdf8f1fd2a2998d6ce1efc9d2418616ca8693e",
+        "bytes": 170159
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/11.png": {
+        "sha256": "162d03819c547dd306f356a3e0c7e5ecd2adcfc52eee0a03b4f84dbe3fa54f45",
+        "bytes": 171351
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/12.png": {
+        "sha256": "2a0a6858e9a6fcb09368ff4132b04126107a7497bf86854670cecb74eb62513c",
+        "bytes": 171598
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/13.png": {
+        "sha256": "1c2dc5b9973356186d36809d9e1ef1563a1045df54766782a18472293e14ca7e",
+        "bytes": 171044
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/14.png": {
+        "sha256": "ec73859300bd7c6bc6446689e632978d1c6f369a79f087e21ebb886514133fe9",
+        "bytes": 172116
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_0f142eaa4ab94740ba9e5d074f306a15/imgs/15.png": {
+        "sha256": "4f91e5de199c4e420af5323a52bc832cd443f152236cbe13acc1dd76fe7c095d",
+        "bytes": 171926
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/camera.json": {
+        "sha256": "719a4f7e02ba0bcc4548739bed98c9d0a45c1feaf5ab8a51ca2cec782bc1c348",
+        "bytes": 485
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/surfaces.npy": {
+        "sha256": "0ed6fe50c4c47461eb3ff5f6dc151e8f6a2f751a0622f0c55ce6bcc9b74a1bf3",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/00.png": {
+        "sha256": "21938b019963e70cd4f7ed610c7907a7ef75d69918ee55ca65e811a517acec1d",
+        "bytes": 175215
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/01.png": {
+        "sha256": "203fa73f5a8095906b48e315e87c6f572e60c2e663e285759ac6edfd95be700d",
+        "bytes": 175250
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/02.png": {
+        "sha256": "d23ff64233b356da5d16e56c165f86bb7ae641f5a0eeec70b91cea6ea631994f",
+        "bytes": 175438
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/03.png": {
+        "sha256": "7854e5e58302f65550e33a954b24846af4976aa7f6dd9a7ac4bfe57bfb342b14",
+        "bytes": 175643
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/04.png": {
+        "sha256": "6f846368e8a69039bb93228454edb637db469c07218fc108cb36b08b6182a7b4",
+        "bytes": 175961
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/05.png": {
+        "sha256": "dc85cad57de3427d5f4cb6225ba9c0e7986f20a78cbbe18aff275be95f05482a",
+        "bytes": 176339
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/06.png": {
+        "sha256": "8f34ed17703a68ad9cf6356bb79ba0ed4078465f8c44973af755de640f6d87aa",
+        "bytes": 176416
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/07.png": {
+        "sha256": "079c7076a97c8baee692b1c067da6421e1889929893c203ae0b9e5aa0217ac89",
+        "bytes": 175777
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/08.png": {
+        "sha256": "805c790ab3d559432ad7d2395c282e82e9c9668e1b1fc685d58c33fe599413ac",
+        "bytes": 175968
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/09.png": {
+        "sha256": "4b8f9565ee8b9bfbf62837207e5b8f3f13290e4b608fc0761fa7e98d3410e5b1",
+        "bytes": 175136
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/10.png": {
+        "sha256": "910a8b14dcbf8f97d31f87c4cf355f20d71326d06cf028e5f65d32bf52011c3b",
+        "bytes": 175020
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/11.png": {
+        "sha256": "dd7cd15d64cd39514e13ed1de81c73b8489addc0c9c1e83180b86ac787d9bcb2",
+        "bytes": 173626
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/12.png": {
+        "sha256": "e22aea67a5aa0a54c24c07bd76067f5f7ef47f268b7769844c834d0fa8abd3d5",
+        "bytes": 172095
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/13.png": {
+        "sha256": "0d9429344d9ca6e99939bd233a0756a9ff8f9fa4b371ab97dbf48d4db34ce911",
+        "bytes": 171588
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/14.png": {
+        "sha256": "866718c12200cbc97a4446fc171f92e53010711ecd1dc3a4def272555f2493de",
+        "bytes": 171449
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-108_8560f555469a46e085952a890ce9785b/imgs/15.png": {
+        "sha256": "0a7cb67940265d0f5fd11369ba79d4af0fb35d1db790845d9b4e0321c90f8a64",
+        "bytes": 171118
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/camera.json": {
+        "sha256": "a239f343fda1d6ac35246a6160f6707c8bed9ed50cfc572410c5efaee395c986",
+        "bytes": 485
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/surfaces.npy": {
+        "sha256": "0e1853d097d76a113be95b7b7f63f8d65dc39a5bb57b96062382cfb282609393",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/00.png": {
+        "sha256": "e99f9d78d2a33da9d1b25d93bbb5c3c755287fe1326f30975e40665a3bd3a82d",
+        "bytes": 182533
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/01.png": {
+        "sha256": "3bad6ecd75571fc385b54ece576884198b77cbe50e4131ad5c234d9bd1a6bfff",
+        "bytes": 182795
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/02.png": {
+        "sha256": "83fca8f8f0bb0d5a1055b46060d9c3e1e65628a2370668abfb0a751dcf6e884f",
+        "bytes": 182914
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/03.png": {
+        "sha256": "e373c505605880e30c451ea8c9b8c004ff8a49f04b700e2e68966a43e6405075",
+        "bytes": 183599
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/04.png": {
+        "sha256": "0ee04b4c8fb5da967b7030a41d0efcedc80ad73231d4541421988a8c1ca4f534",
+        "bytes": 183479
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/05.png": {
+        "sha256": "4c1efd501f52e3646b8b739c8193d53755454373d0ab629727813495135e35aa",
+        "bytes": 184139
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/06.png": {
+        "sha256": "9d3f8cce6e33617c7f4eefa58c8ef07a991fbab3004c6afde96c827be95be5a9",
+        "bytes": 184298
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/07.png": {
+        "sha256": "e5c1c26e7a96eb65a9a793cb0a9bba0aa75da92e12e04413bd51436cf4dfbab2",
+        "bytes": 184437
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/08.png": {
+        "sha256": "66d5222cfc1ed730a07b74a7b8e976d1a95ef92e400b43cdc3094bfcb102478b",
+        "bytes": 184806
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/09.png": {
+        "sha256": "7e3f19371cfb969adb70f1975fc94dad2cde62e43e9c29c9452db437cf13ed68",
+        "bytes": 185187
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/10.png": {
+        "sha256": "9c015b7edea2d2e6b9ea91429f7578ac7f333ccb90797a6df6969620076f872a",
+        "bytes": 186372
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/11.png": {
+        "sha256": "691b4a7100216973dd267c3d5434143526dc1773270f3a6f8591c968d971a191",
+        "bytes": 186450
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/12.png": {
+        "sha256": "4c3b4be253beee057cc042ac6f0651920d0843569d3f977cd61cfb4bb33fc1ee",
+        "bytes": 185736
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/13.png": {
+        "sha256": "ab10ce449c80ea3a1b8fe6e59e0f2d0bc11d62c4254288e7fa51c837c6ff5f34",
+        "bytes": 185830
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/14.png": {
+        "sha256": "123dd777cba87c20415b8682a94435f7c5c83993547344ca9e2e4df70cb0160c",
+        "bytes": 186171
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_5b203279ff3d46a6b152e2b064774e67/imgs/15.png": {
+        "sha256": "dd97d94f6a6f8476e2070de1ef1e8fe3bd2c71a9eb6662131d30a5ca2bdc09a0",
+        "bytes": 185609
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/camera.json": {
+        "sha256": "af0507514ab02a7da18ce99cdad16f6ee67a0692cfb5fbdf84ef6646e18db6d9",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/surfaces.npy": {
+        "sha256": "5d363f795503db36584a16f6f6c53872a819c642f2dc09243df8f1891ab121e2",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/00.png": {
+        "sha256": "de9f23d8b691a1ff6d9e414baabdf1fad3c17ded1820629c4904df200b4ea033",
+        "bytes": 191513
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/01.png": {
+        "sha256": "2e6b608aed3ef404accb5305d0b5486698d57c25be7ade8cf72ea1235157c37a",
+        "bytes": 191466
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/02.png": {
+        "sha256": "8f879a8cbb3fb8572093efb80337b2f46b70645b8ac23ded5bddebd0c8df3f26",
+        "bytes": 191427
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/03.png": {
+        "sha256": "6df20fe45a743dd1a5831208a301ede234682d99b7216fbd5408383b6e9a8a44",
+        "bytes": 191353
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/04.png": {
+        "sha256": "2b4590c1ec1eb43d594f9816f36e7c3f1558d0748b6d34bc3643e9d4c03198cc",
+        "bytes": 191295
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/05.png": {
+        "sha256": "90146b5a6243c84fa895a1babbba74033d3892991ed3810fd56f79943b3ae8e0",
+        "bytes": 191280
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/06.png": {
+        "sha256": "89d540387c8788e4c08e41ac9046922a24dd82a895d0164add9c5b573c0c0ad9",
+        "bytes": 190707
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/07.png": {
+        "sha256": "a7780594cf89cd2936857c1be8b430dcf2ea1582139bcb1fde7438503ca2c1fe",
+        "bytes": 190143
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/08.png": {
+        "sha256": "173a9bee6fb44087e02549223ed28d341c4c4327fe390dd0b7d60f4254417bf2",
+        "bytes": 188750
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/09.png": {
+        "sha256": "d3736e9a7c2851482e50c6463410cc1b3f14be61a27e8c95a71af19bb9a6e7e5",
+        "bytes": 188611
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/10.png": {
+        "sha256": "8cdf1581777ee4484da9a7bb18657ea23f0ab6b5ba8e2d1d97c9d554070b9b26",
+        "bytes": 188495
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/11.png": {
+        "sha256": "9527ae28a8cf4a82e494fba247d6941adc990b579f7fe578046cc7fd80d59a0c",
+        "bytes": 188476
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/12.png": {
+        "sha256": "da47bb96526930f3dfb08ed3c9734036c5fbf5a66734fa5076923e36b4125366",
+        "bytes": 188550
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/13.png": {
+        "sha256": "082f28db61e25fcdb1330ef38c56cc0b0da2ca8490a5eb8ac70af9d4f5cbd4e9",
+        "bytes": 188296
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/14.png": {
+        "sha256": "e586a1a94e6b7bf38070ccdef5ea1c23e2f2688bfc8d9bd0620dac6c9df03834",
+        "bytes": 187319
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-126_0211a7f80bdc48f784af6796913af96b/imgs/15.png": {
+        "sha256": "4bb0ec8010840bc2d52c9e4cb2472c580e0679ab601d53563ae69b7b6f68850c",
+        "bytes": 186389
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/camera.json": {
+        "sha256": "c1813f2a12a849f34ad95f5d78efd99878723a8c034683231ab3526d06308312",
+        "bytes": 485
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/surfaces.npy": {
+        "sha256": "a87837a50be473ff05df22f57dba1a8f5819e4004e8d4a3c5846504c167b3bc3",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/00.png": {
+        "sha256": "fe20ea1c9ae6ea73bd5b0dff9169cb88b3a39f0e4489bd416c5aeba9fed8abac",
+        "bytes": 173090
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/01.png": {
+        "sha256": "05ff3c8c7ce6ec5d702e72b14827f3b4c4bc4610fb1479d41f16a0be756fc014",
+        "bytes": 173021
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/02.png": {
+        "sha256": "ca9b96f84920100ce56cda184094e3376b0b409e89061d9abd7506eab1dce8e8",
+        "bytes": 173329
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/03.png": {
+        "sha256": "f64def0774616b0536703900dff86ec6a9300e5988e010308ad818d037aae503",
+        "bytes": 173516
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/04.png": {
+        "sha256": "8044711db0f18aefee39a1857f95c924096a8d42e3e2d4c7651b82dde91f5d6c",
+        "bytes": 173152
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/05.png": {
+        "sha256": "f7f1c61ed46784424638ee394ff8cdb9fd56dd13e73dc42a2ff91cdcec925eed",
+        "bytes": 173109
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/06.png": {
+        "sha256": "2e221578b352ee396ef8a995f3b1c91e92ddf31d01af62527d0502f422326430",
+        "bytes": 172923
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/07.png": {
+        "sha256": "18d53042b0360efb7b0c5ce5deff324943b55f3bd3be2541848739a651f34e13",
+        "bytes": 172915
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/08.png": {
+        "sha256": "4fd31e04ac356edc287fe511904cd5e556603fb376d1e0c79362465edc57eb80",
+        "bytes": 172684
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/09.png": {
+        "sha256": "e947caafae19ac43cb41db1fb6e7856daac3eb731723ea914998d1d252a15e55",
+        "bytes": 172185
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/10.png": {
+        "sha256": "b81e8b1d52023bc5f3ff72483b9de96a5b9f80a8ed754644c985de1ebb05a0cb",
+        "bytes": 172273
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/11.png": {
+        "sha256": "cc456d72e5e3ca0357adb4c1828ae15b349141a49b8e4709083d24604f953f47",
+        "bytes": 172098
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/12.png": {
+        "sha256": "954588bb5b601e5289d02187810b943547b8165b1e6826ee5b1725f84791e7cb",
+        "bytes": 171376
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/13.png": {
+        "sha256": "43242973a794024b52334c064acdcd4c17eda89e0c5290c9228ed0f5182029f6",
+        "bytes": 171190
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/14.png": {
+        "sha256": "2f6809992882c1ba7d80f29f598a48ae686fe59779b42aff87a7cc4c441d5668",
+        "bytes": 171005
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/imgs/15.png": {
+        "sha256": "c2a4964f16601f6d69f20bcc904065027739b2fad8674a9cffbc457b897c7d49",
+        "bytes": 170844
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/camera.json": {
+        "sha256": "b69a27adc56241773a9f930bba9c37c7c1ee4fcd97a34cd7f6e4cb376d77e779",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/surfaces.npy": {
+        "sha256": "8edc861c080f77b6591bb58d50585c4408496428f98605647a421b11cd97ce2b",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/00.png": {
+        "sha256": "1386af5c814d1453c9b1c6274986656909a17c44a126fe7e26536eff8776e35d",
+        "bytes": 192997
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/01.png": {
+        "sha256": "44805276e036036fe6b2d6b27473b6cd7d714bc59589cbc56200705b8349d381",
+        "bytes": 193511
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/02.png": {
+        "sha256": "2c97b9a07de3ffb36a781bd161534affe8c6f9caa007d1530f182280dcb03d6c",
+        "bytes": 195099
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/03.png": {
+        "sha256": "75f13b0671b386f07323ababc0307ed0de7685153b1d1fde149d8044cca4d34b",
+        "bytes": 196412
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/04.png": {
+        "sha256": "01d2d070b1dea029d6488364f637db9349d474b6060bad378ed924b85d96646b",
+        "bytes": 197418
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/05.png": {
+        "sha256": "9a19d7c098f0565fd92804a0851ebf7a1d6e56a431eb2593b3e9ab013a058261",
+        "bytes": 198228
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/06.png": {
+        "sha256": "cf0a647dd75cd1ba7225dd5f4c3ac32f428d759ae1253b21d3d4533eca3f36cc",
+        "bytes": 199007
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/07.png": {
+        "sha256": "b413952b2cd634e1870d32675bbd59773ce28b41705fe4b0073a4440a9668188",
+        "bytes": 198353
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/08.png": {
+        "sha256": "20ee6deda4db5f68bbc30c3aae1e32529d5595423e0e1ee7aa67fffed4aa2555",
+        "bytes": 197831
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/09.png": {
+        "sha256": "715784cbd971cf416b4a9823ef699c5b28d868f82af6fbaca5fafeacf368e386",
+        "bytes": 196888
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/10.png": {
+        "sha256": "567d6dfd18cd31def4f6e15a6affc582f50df9d7a4e2516b9f1e6b35fd6ab9fe",
+        "bytes": 196332
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/11.png": {
+        "sha256": "9937bdf57ecbd9dcba9ddaa21cd24ca1d8fe1be3b763685651eeb1dd172b4b6b",
+        "bytes": 195598
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/12.png": {
+        "sha256": "23b4ea11b8f48ff988a60f195b5b1da3babbc818836f61ccebfd55fe21a996e0",
+        "bytes": 195312
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/13.png": {
+        "sha256": "f4abf89e67e9d782574af9c9b632e584ebe74b69dc97c13558356c580819116c",
+        "bytes": 195976
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/14.png": {
+        "sha256": "fd19a18d48656449c70fe145f2babc8edd76fc602b3aef9a45e0cedfd9bf3871",
+        "bytes": 196111
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/imgs/15.png": {
+        "sha256": "d7e8a83d4052a58e6556039283176440286b58215d9579166584b5b0ffd73594",
+        "bytes": 195723
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/camera.json": {
+        "sha256": "f238adbc09f35d02a86acb5366733a65829f5dbe17531e631a74e931d4d0f16a",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/surfaces.npy": {
+        "sha256": "56a9a9dd71fb3bbe1df4b58da27eaf9d0e0c6ed53f981961d8d6aae262ef33c5",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/00.png": {
+        "sha256": "1581d6371e2f363c5be12afe0568f2b434036e6ae8a1ace5806d4c9eece984ea",
+        "bytes": 216003
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/01.png": {
+        "sha256": "097bc7e83e0983f9e9cb417ecb87da6995f70af7fdc2900664dd5c7d36781304",
+        "bytes": 216099
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/02.png": {
+        "sha256": "057a00d679e6798dd00cd8fa060fe7d6a197f548b843bd0dee1ab95fd0bb0337",
+        "bytes": 216298
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/03.png": {
+        "sha256": "954f0dd53f8fd1bc024dcc89b90defe98dde77f7d244a98a2c2d765327632285",
+        "bytes": 216326
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/04.png": {
+        "sha256": "6cfa60b634e926ee04ef0dfd758a04c4a555600a169f8d769c351268d21d086a",
+        "bytes": 216164
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/05.png": {
+        "sha256": "aaf86ada593552d3b9efe18baf8f05be7d7265caf7894ebb1bb733ae188e901b",
+        "bytes": 216152
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/06.png": {
+        "sha256": "6abb38e883743dd7ae437052dea2da036ed20404458383fece8f4a08a5dbe45b",
+        "bytes": 216090
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/07.png": {
+        "sha256": "345f57bc2c34a8cdf1ded87baf055979b47556437e1b19dbe8bb3d9bc38086b8",
+        "bytes": 216325
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/08.png": {
+        "sha256": "63e4d17913fbedde24ce17c02f19d7c7602c4bf6ff2105f00afbb36d93449826",
+        "bytes": 216139
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/09.png": {
+        "sha256": "d9b574c285d97be1accce7fb0ec532d7bede600f6a6b5faea94d0d3d9ace1219",
+        "bytes": 216787
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/10.png": {
+        "sha256": "ff4584329c6e226c4297adbabf51988b812442ed1fe4914951391b5196e1761e",
+        "bytes": 218640
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/11.png": {
+        "sha256": "a63dec013d8c9c8c1ce2d8abfbfc65e7a5c635f9d462129875e7459048e3ca93",
+        "bytes": 218544
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/12.png": {
+        "sha256": "10025001a415d4e85d66023fe07946f4aceb392f3537fbce1907d040baca379a",
+        "bytes": 215324
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/13.png": {
+        "sha256": "d766cecd9c29f7560749b04e97ffd7f66de183259b7220934693fd935b65e244",
+        "bytes": 206416
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/14.png": {
+        "sha256": "75009de527e32403331a076c58328263fd2791b895efabd7dbfc8fe797a05626",
+        "bytes": 199474
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-136_1d5f546cd4454e2d921dc15594921524/imgs/15.png": {
+        "sha256": "6500fc082a5a5878220f7e8975ed58df7e77a18a28e45a98eb79ea84801ddf3f",
+        "bytes": 198993
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/camera.json": {
+        "sha256": "763a91e270e3df69b2ca31b68c35b33d91030452b0d25455d87b9b4b274aef24",
+        "bytes": 485
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/surfaces.npy": {
+        "sha256": "18fe4da9dde53eef61c5e133f449e02fe16bc35c7d744e22c5b970c95888ca80",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/00.png": {
+        "sha256": "f425f375d1cc26c009d4ec6ae325fcef7fe0b2b0992485e3cce4863b44de724c",
+        "bytes": 190006
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/01.png": {
+        "sha256": "7e18ff18b7de9613ebd8b0420f3da7ebab678a0f7599a3411c8e1eb93b27d5f4",
+        "bytes": 190572
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/02.png": {
+        "sha256": "09389a498030dc88dfe697b8545a0a29f6e1e50f90666a5e584d995e0e779494",
+        "bytes": 190372
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/03.png": {
+        "sha256": "618e0adda9504add8fa34ef5875dcbf0a6325ce8726069d596dc6c40607c2361",
+        "bytes": 189779
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/04.png": {
+        "sha256": "039ad234ec17daaf6df9e0b2dd673db6c725ea59dc3f4fecd54ee62c89f7b54e",
+        "bytes": 189488
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/05.png": {
+        "sha256": "acdbe65ab0cc5d35046efe8111a8e4234c5b30d6af57d750fea57316e0042969",
+        "bytes": 185933
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/06.png": {
+        "sha256": "4ecd06396e9c8a4cabb55b06b0bccba3ad7810e1283a722a9767bbb3975db293",
+        "bytes": 182329
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/07.png": {
+        "sha256": "566d04ef574faf36425e01d7587565730ee99a33bab064d06050c84173bcfa53",
+        "bytes": 181876
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/08.png": {
+        "sha256": "82fdc2f549500d04375b8f3948700cbe1651f68f0128a4add10e39c6bdefaecf",
+        "bytes": 187007
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/09.png": {
+        "sha256": "679d0d273a347e0e42b765a7d4f8da5a00b6dc9d7b2f35689829941f865ddb66",
+        "bytes": 186316
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/10.png": {
+        "sha256": "46dcebd542cf1c85152fd6aa45c143a6dc43574136cd8e541ac156c715c186d6",
+        "bytes": 183227
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/11.png": {
+        "sha256": "feb709f706cfd4df4799f17c2e4e5ec9682db1fbc01cfedbc7b28ccc661e6965",
+        "bytes": 178865
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/12.png": {
+        "sha256": "55154396fa7a75676c170fed49c8f61d7a0351fc751ab27ab7c0e1fe8d5c78f2",
+        "bytes": 177684
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/13.png": {
+        "sha256": "d9f39ac1c424dd1a6e0b5218e2668336f101d1a20cb05d7a5b3a9143baf28d80",
+        "bytes": 179303
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/14.png": {
+        "sha256": "b218b7ad9ba16997b95695af20c34d8d62e191ec46715f96e251b9c0c150294c",
+        "bytes": 179498
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-063_2f305a7ad6784a3b9c5db480362ebc02/imgs/15.png": {
+        "sha256": "041aedf5eab5e606aa2685fc29188394642f9d2d098a5027523747db84a1e4c2",
+        "bytes": 178595
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/camera.json": {
+        "sha256": "f108240787f30744f3b1f8dd4577d467e7b926e5fca12026e1f9931a477c9edc",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/surfaces.npy": {
+        "sha256": "ce794828e30459768b67eb9e3455fb4175c18f838d7438382336d9022fb8d804",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/00.png": {
+        "sha256": "68a77ad79314e5adb0eefd4f8a125919f7deaa67f142a030a76bff911338c3ba",
+        "bytes": 232957
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/01.png": {
+        "sha256": "0d5d5802f3da91100c72473e070ea2484c0fccf2256468a0a9ccf5a5ce389c8c",
+        "bytes": 232621
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/02.png": {
+        "sha256": "bcefddcb99dafb37ed03c4f8a54a7d335597cb219ed58602a73b3641b634e8df",
+        "bytes": 232097
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/03.png": {
+        "sha256": "700779669863ff4d2f1a8e2553a954ea1208ada929a0836c1b5703230e50dfb6",
+        "bytes": 231304
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/04.png": {
+        "sha256": "d11a497cb994d4ec4e2cf61b6e51f9d7782a4998e7881d099cbeb942fed9816d",
+        "bytes": 230543
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/05.png": {
+        "sha256": "ad4d48c3c47a60b328b6c92ec9d565516b4697cb3ec97bbcf65f1d5969b70d50",
+        "bytes": 229759
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/06.png": {
+        "sha256": "b001c432de29ab33fe9b45eeb8903c8f99b43a18ab0562a16a3ff01ed12e8dc9",
+        "bytes": 228925
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/07.png": {
+        "sha256": "991ad1dbf3f873d6edc184a0a4c5a4c1bf6c06c3bef3e8e8ed7f223dc12eb2e2",
+        "bytes": 228598
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/08.png": {
+        "sha256": "d3d5d75c33c831fd179858dc97f031ae23b0b95e7bcbbbdadfbf8883633ccb3a",
+        "bytes": 228849
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/09.png": {
+        "sha256": "071b14fd191486753ca309c34be5f8046e0c3b7966c26ed3c87c7877fd30a2a4",
+        "bytes": 228991
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/10.png": {
+        "sha256": "84aec8cabcb50738d7c774f97d63bd072f58736851ebbf840c82e86055d581dd",
+        "bytes": 229066
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/11.png": {
+        "sha256": "0ab3ed354ead3816dec33fa46942eb29ca51a9807810195529d27ad3eff510a5",
+        "bytes": 230125
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/12.png": {
+        "sha256": "68e34b6f7e47f6b563cb57efca9c1b9d0f48a9bc749454389f9440a3ef3abb74",
+        "bytes": 230904
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/13.png": {
+        "sha256": "411ba742aa0356d451757cb1eec5e8f6ccd229cbbd0dfb48f3c1fa4951efc648",
+        "bytes": 231597
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/14.png": {
+        "sha256": "df506286566adbafa2bbee3a490b4f3546b2881df83a4f06dbe22078c36cde34",
+        "bytes": 231744
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/imgs/15.png": {
+        "sha256": "e5c25717949c3b5474e9454bc4fc0bf9870df555dfae2521922d195f29079308",
+        "bytes": 232489
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/camera.json": {
+        "sha256": "acf545db420e902718ae6bb70c2c63640aae8c479e4ee5b04a4262d11c0a9915",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/surfaces.npy": {
+        "sha256": "aa094bad6d79b01297d6e0c49a1aabf2b1d39044c310ff5ec204deaf20f588fa",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/00.png": {
+        "sha256": "91f68d794ef8865e047b820f5a7ed4b858d688578ccc3d13bc7c7bd1321e99ad",
+        "bytes": 184626
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/01.png": {
+        "sha256": "1dbf3d01a633454dfc114f0a5192fe51f59a75d15f4aeb625771c571970c941d",
+        "bytes": 183884
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/02.png": {
+        "sha256": "05aa863ea2606d5788eae6decc9ad3565c7d15c4f3a677c5ad6fca1f7508eb27",
+        "bytes": 183194
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/03.png": {
+        "sha256": "3b87734a4af271c7c1c63ab24f90835b34d47be01e05d745750b3f8cb10f5da0",
+        "bytes": 182741
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/04.png": {
+        "sha256": "0b596b0dde4202af1a213fd348ad8b93dd8e70912813e74cf1f09aaa97048599",
+        "bytes": 183352
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/05.png": {
+        "sha256": "14a5daf9f83c13db0b2ecfff6729bcf556042e790d864e69b6d2212831bc311a",
+        "bytes": 183771
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/06.png": {
+        "sha256": "58d594d2eed74579d0b29de0eb6adcc05c92825f08f087fb2997246a9dc82e88",
+        "bytes": 182840
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/07.png": {
+        "sha256": "333cc3d94a409a6586d28b415341737bad7e054645181555491b0d54c7d7f8b2",
+        "bytes": 182048
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/08.png": {
+        "sha256": "bc52144c7e282cb444265e32b9680a96c2d4e3f3488b1de829106d173dca819f",
+        "bytes": 179971
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/09.png": {
+        "sha256": "3f0cd33acd95b47b7a80999accf28ac61a44e4744ae9eebafd808767d09f6de6",
+        "bytes": 178060
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/10.png": {
+        "sha256": "a01ce9a198459c1bb48c0294f274b40dfc7c6baf4fab72f088e4939d049654f4",
+        "bytes": 177521
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/11.png": {
+        "sha256": "07fbbfecc04a000464fe971b5c9032a199a13dc0d3d7e0b4d1b4e3ac9437cd2d",
+        "bytes": 177402
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/12.png": {
+        "sha256": "2dd8cadba14555cce0f727b95e063e2190a417f96fd8df4a057a13e318002c32",
+        "bytes": 176279
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/13.png": {
+        "sha256": "bf4a6a5fb8cee4ea7f71e8554559891803b3d4df67f1442d95d9218a94e5d8ca",
+        "bytes": 172765
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/14.png": {
+        "sha256": "7c3b044fe1a5205ab73bf5b08b5c2fa245a027fd2866b63d857b5e7a3e01fd95",
+        "bytes": 172142
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-059_ee85486b41c1442aaf35fc2563381ad0/imgs/15.png": {
+        "sha256": "5eae9d5f2439410f90c005089d759e86b8e3d688a1256430a8554e9e46494df3",
+        "bytes": 172338
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/camera.json": {
+        "sha256": "071ae84e071901987193cc65fafae66b91c717ef356c98760a01d1e5f4cf8836",
+        "bytes": 484
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/surfaces.npy": {
+        "sha256": "947a775381d780a39822a661d6a9144eaf786548eedf5b54c2b1658eaf1a68e8",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/00.png": {
+        "sha256": "86e68034d4838a12b72a159b42d7e9ba7bbe5b1412ec507c0bdfc735ccc9eff8",
+        "bytes": 175320
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/01.png": {
+        "sha256": "2c73cd5c2e888dc0f4d91fa7c39bba1919a84b4449e15bb5f27222263032eaa6",
+        "bytes": 175330
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/02.png": {
+        "sha256": "78ed9a7a653b4e9ec3428da292c10fa8382ab5cd70c090b774490d0b6a26e61a",
+        "bytes": 175222
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/03.png": {
+        "sha256": "75fafa35bff0857bf46ff42f90b815fa8e459f4571125b67929a88dffdcbc8a8",
+        "bytes": 175166
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/04.png": {
+        "sha256": "a32f014bb8039efe4ee27e5eb1325a9c17e9e902d7c5b523529104c6a47f6f68",
+        "bytes": 175288
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/05.png": {
+        "sha256": "95869c336f29bee25cd017f6f3950b0724dca058904abfdb42a9f9873e29d685",
+        "bytes": 174913
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/06.png": {
+        "sha256": "96bc397fc6ebece3ec6603f9904b5cf06385270c8337335c2939cda4000995a3",
+        "bytes": 174212
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/07.png": {
+        "sha256": "c9d6a7ec45e26ceeb5023b9892a0e5917c3a571212ebb9bf24997245a460a238",
+        "bytes": 173914
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/08.png": {
+        "sha256": "11ff8275d06783086367bd381de1ca27b73d5de8122371dd086e4e1caed551f1",
+        "bytes": 173245
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/09.png": {
+        "sha256": "a9801e357b50ec560bf35b9dc7e1a6fd71bc968126efff7c9d0a962130bff05a",
+        "bytes": 173204
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/10.png": {
+        "sha256": "741ce9f1344c6792b37f79ba47a0e646f9a957f57df0b940a9084dba450037bd",
+        "bytes": 173317
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/11.png": {
+        "sha256": "9fb74c72cc188347060b1fa9831fa5c553b272efb5a1b8ed4b20d823b53a73ee",
+        "bytes": 173661
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/12.png": {
+        "sha256": "f8d3bd4187a0c0015bebd6529f5f26bcb967204a990d909d83d14e48831b6607",
+        "bytes": 173785
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/13.png": {
+        "sha256": "3e44ec0cd4bd7ddf7bad1d3f9cda12133399203bc3fc5564e7d384572b5c7b53",
+        "bytes": 174270
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/14.png": {
+        "sha256": "b8748d51c113f5e84def5cb6ee76eb8a1c935a2fa320403caab9dc9fcc339a55",
+        "bytes": 173668
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-076_6ef94285eb3e467ebc3128110b325a1d/imgs/15.png": {
+        "sha256": "bdcf605df2510aa3c06bcd06576ed3b7979755a4687e93d73d55077ef869967a",
+        "bytes": 172978
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/camera.json": {
+        "sha256": "8709e79945e3fd076752dfe5f5a9c26047d0323a6be8ea5626fd1b5e9cabc71d",
+        "bytes": 484
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/surfaces.npy": {
+        "sha256": "4a77ee064f2f04fa8dda6a6c7fb2b48a0e4c479ee7bcf35e594026252f97be6c",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/00.png": {
+        "sha256": "945fc673969e676b0d9c5a647aed0a604e52fb28e6f559c6bee9304d93feba55",
+        "bytes": 178132
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/01.png": {
+        "sha256": "9de246a76cdfa7a3fb9f06489bab60546013319fab7ebf8e0c995f049962c021",
+        "bytes": 178657
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/02.png": {
+        "sha256": "6157d52273400f609b533beca0a257a67a306af6b74bd0c741c7003bd13d5ee0",
+        "bytes": 178234
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/03.png": {
+        "sha256": "17d1a9a0c4d58bad094faec86d02518ed53c126ca81ea48e4f814d2ebad50c91",
+        "bytes": 177725
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/04.png": {
+        "sha256": "de214dc2b7876febf3229775bee2be957219978038e0bcaf97e9966cfcb77e54",
+        "bytes": 176744
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/05.png": {
+        "sha256": "93fc00517dc4495c78a58c1c6fd5f8b2fc865bba78762d1ad511c4ba66e59252",
+        "bytes": 175252
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/06.png": {
+        "sha256": "ec735a5763f9c1d5bc743df4be30d263577769ed2f7e71b9d7dedf68515b734c",
+        "bytes": 171954
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/07.png": {
+        "sha256": "c2b69aa07a8a32109f5258e775a69b712dde79fd1b4d9ce4b11a8db007e8b005",
+        "bytes": 167489
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/08.png": {
+        "sha256": "a22f00653ae9436feca1098df451be80cc664f0205badd676972f6c03689fa66",
+        "bytes": 162937
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/09.png": {
+        "sha256": "0fe51113d3c528b0f796553e88db496fe0026367521e0c90c8810e6b56f9a56a",
+        "bytes": 155423
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/10.png": {
+        "sha256": "85265fa15abd009c137ca7d758df74826dc7cf72942766f3582a1b5ac40cd568",
+        "bytes": 144808
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/11.png": {
+        "sha256": "4c8e7c0b1e1d37b63547d18f5a5956af7a040c5f72fc1ecfbc9b6e9b76a4dd79",
+        "bytes": 141942
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/12.png": {
+        "sha256": "5b5793df834eb944b5e8fcdf129ad633454f8bb31c641c448051ca5bb9719112",
+        "bytes": 146329
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/13.png": {
+        "sha256": "f6d3b14fac147cadbf75f3324b460a0820ffb046b9550468b956de4e3302f01d",
+        "bytes": 153285
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/14.png": {
+        "sha256": "dcecd5fa4e0e3a494af7b08ea6c34f86f439ebab9c61e8891e47853d959af9b0",
+        "bytes": 158089
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/imgs/15.png": {
+        "sha256": "1fd46e8ba4055134631be31f8b59295d638fdada836d5f32763875071f5a4fa2",
+        "bytes": 160717
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/camera.json": {
+        "sha256": "d8860093ea293e61a2bbbaea1dd0b2537a69864b6762113427a979a87c273dde",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/surfaces.npy": {
+        "sha256": "949ee8b4176574a0a5de585eb1cd3f4fb73dc26dfd88944bed92739917d3c6b2",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/00.png": {
+        "sha256": "a283a4d917575dce89a401031a809afcd32babd439cc4eae7ec385b4c21faa8c",
+        "bytes": 194461
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/01.png": {
+        "sha256": "7b102cb7cc709c14ef79665fa300d0ac2130250e8ce6b868d5c664d30fa30d74",
+        "bytes": 195775
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/02.png": {
+        "sha256": "4d9d3af88057259914154b4fc6c685fe838c35cc1793826c5914b01d120ccc81",
+        "bytes": 197688
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/03.png": {
+        "sha256": "21ece91e2dcd514c60755d1c05514f3b71373df41d2fd805b6918bb53e881ff7",
+        "bytes": 198853
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/04.png": {
+        "sha256": "44cfdae7af4944ee065683176883981b9046a1bd257dceccf88c0215546f9744",
+        "bytes": 200052
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/05.png": {
+        "sha256": "84c709c055660987333fc0fc3d605af81813e419aa96ca2608dc8484ffdfd724",
+        "bytes": 199387
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/06.png": {
+        "sha256": "397e66e9459667725f1c8962dd616bceb98281939e3b0bfafc23a8d19deec02e",
+        "bytes": 197540
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/07.png": {
+        "sha256": "78cfeef9ddddaa06ac8435b9f25ef8eb7c24fb47c8bdb65f3a32eff752d4238c",
+        "bytes": 198133
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/08.png": {
+        "sha256": "b137d48bdfb2d9f6e72e7ce47dd5a66fa368f1d2227b69e133425173ab85209b",
+        "bytes": 199175
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/09.png": {
+        "sha256": "999957a090faffdb1950ed011180c3e9dfbf7933669dd919fec292ef94b51b44",
+        "bytes": 201221
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/10.png": {
+        "sha256": "c86df8d51925788b972da6aa0ec287e0f49cd96d4fd16883fc61172b0678e3e2",
+        "bytes": 201285
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/11.png": {
+        "sha256": "adff94425382cf3790d42f31b36649f767f885c384c090b4cafb1953efd6eab0",
+        "bytes": 199129
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/12.png": {
+        "sha256": "79a5f43f0661e6f0130842b2b51bb12e99743dfc5189791ff2942b21b146a88a",
+        "bytes": 195878
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/13.png": {
+        "sha256": "1b744c40104e30db3a2b59c136cf2e5b43c7bae8fb2f56e679359c405f2c75ac",
+        "bytes": 193668
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/14.png": {
+        "sha256": "a1764689dd813004a797f22594c9639fc82f84ec00e3efefdcd29054c26af06b",
+        "bytes": 190898
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-066_d97aa2a9b82b4284a6a560287f422772/imgs/15.png": {
+        "sha256": "d70cb270b3592d3a768df35d27f9e93a86437c4ed65ba30873b9004c2d283047",
+        "bytes": 190957
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/camera.json": {
+        "sha256": "86a719a2230d94a97a1844ec612e531d39b04a3cf679e087bad8d080caa04d69",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/surfaces.npy": {
+        "sha256": "c1ee42e9a496a206f1686d20bb83d7fcc040aa0a5a9b4259a6c7f84ab0609b8c",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/00.png": {
+        "sha256": "d2d48aeadbcae3805b69fdd1e0f6c0377a8a6c3bf170249783bd61f5a4dea05d",
+        "bytes": 166522
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/01.png": {
+        "sha256": "28a9068306185199b46408ec315a7648e6e08a124a6f55709bbbca22658d64f6",
+        "bytes": 166083
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/02.png": {
+        "sha256": "2e7ff0d87aade00b8c266a8ac5e48e3fb58d6c93f1dad4571fb2b04702d58286",
+        "bytes": 164886
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/03.png": {
+        "sha256": "1fd3c5858becd4d865d9336ac9e6ad8b6b6e96634d826a8910063ff998318887",
+        "bytes": 163363
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/04.png": {
+        "sha256": "6ceda7be4619bbaf1ab2a3a55cc94a3261201ca17744054a36c41cb0caed8940",
+        "bytes": 162451
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/05.png": {
+        "sha256": "5f577ad7a0fb9f27533c407fd3651715c853a7e9a840761f7ca71c4758f30a3c",
+        "bytes": 162620
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/06.png": {
+        "sha256": "4c0ea906a06e930efeddd4531e853c57d8b801df72201585bf18cbf8999d7771",
+        "bytes": 160692
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/07.png": {
+        "sha256": "44e0e5e82f42ff8966d9e9aa1e6c80497d9171104e240846ae8ea91c8a83aca7",
+        "bytes": 158580
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/08.png": {
+        "sha256": "4a1d9d1eec6c32e0b8c4c94126426ec6fd60e370b09be4960f9ec9075e0eadc1",
+        "bytes": 158257
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/09.png": {
+        "sha256": "4f2bdc3bf2ebf6a33aa583cbe08b84fc6e9314451e4a90828348adfbd4f38b9d",
+        "bytes": 157060
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/10.png": {
+        "sha256": "c80e195a4dd697a0ed65380d875fbbf4e0d3f5ec3fc07b7ac593da55ed0f7892",
+        "bytes": 157536
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/11.png": {
+        "sha256": "66b92f3a74e425964117f755e6d3fd70f2dbeaa1190241d6f0af5ab3dfdae053",
+        "bytes": 159230
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/12.png": {
+        "sha256": "4f4c0612c2a2eaa39008ae32f667268c2f6aba50d7d6c017974ac48182dcb76f",
+        "bytes": 161168
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/13.png": {
+        "sha256": "c626827be1ca65b4ed0b19700b5cb8bc5d5a56eba64d2875f26b5e58b386a1a9",
+        "bytes": 161929
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/14.png": {
+        "sha256": "8a46c440a91032ffad539eb9dc1e43558ab4b1ff7b1116f9ae300df3e8208592",
+        "bytes": 162474
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-130_94be397f8db74f7c9c06263aaf988532/imgs/15.png": {
+        "sha256": "198aaafa213a427d71745d34745db6f98d6739f45da8cdc157d874d7ee3cdfa7",
+        "bytes": 162600
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/camera.json": {
+        "sha256": "d37a9f27cea096ab80a8bdbf13fe710b6e4145d5cb41f976394630e25ef215f2",
+        "bytes": 485
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/surfaces.npy": {
+        "sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/00.png": {
+        "sha256": "993281b18d135a8b10ead7f32a9bdfcb2c85f1bf511b8f7e64285b400898c471",
+        "bytes": 213873
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/01.png": {
+        "sha256": "d3969ee51c68ff2909a282b4c0a5460e083c8c15c11b4400152c848552e0bcee",
+        "bytes": 213936
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/02.png": {
+        "sha256": "5163f50d7c246d06feff9b9d6f7cefc1a6436ca3dca03b5950aa1e8e546e135f",
+        "bytes": 213580
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/03.png": {
+        "sha256": "0a5c15ebe159a66be79efc145525d3825d1a02e8f495372be01fb12bbebea563",
+        "bytes": 213720
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/04.png": {
+        "sha256": "dfbf6f9e9df908a1330c2a28c99c68106616d816cf60d79feaf354d2c26fd4c3",
+        "bytes": 213809
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/05.png": {
+        "sha256": "cf41de36550e9fdecf203f77a4d44fbe09e71dee2b0c9832d661d0642cf0bef0",
+        "bytes": 214328
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/06.png": {
+        "sha256": "549239c0e2ec8de0c0c306c522b4117404a9e6627d393f500ca7cc3fb1632d73",
+        "bytes": 213518
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/07.png": {
+        "sha256": "f35cd4b553a8a36bac5cf9fd4af2ceeb8120e5f19a2fac7bd47510b857bdfd36",
+        "bytes": 213971
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/08.png": {
+        "sha256": "1df3a6fd06b76d22cfd1ff2e1eb83f8b5f1d41ddf7b535fd14b9d6cd3c0bcc27",
+        "bytes": 213618
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/09.png": {
+        "sha256": "7fd0e9d5145c1762e22c40ff9897f2aa2a169dcbead09b713bcedab750fa4b49",
+        "bytes": 213837
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/10.png": {
+        "sha256": "5217c284af65b2c75a49487b20cab48e1d575fc6ed74fea5df4125c412ac2a1c",
+        "bytes": 213832
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/11.png": {
+        "sha256": "f6443940ff8b3655004067c74731cbd8bf48b43cd77e2bf7ccddb7c9bf95c8ad",
+        "bytes": 213917
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/12.png": {
+        "sha256": "f861bbee929d3d20af00b7d16e4e2bc35d7288942914cc59a8aa90a5e0375c0a",
+        "bytes": 213761
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/13.png": {
+        "sha256": "6e38017d131f109697624cc23eb9aa76508f999ca3da0bd53f080473108700af",
+        "bytes": 213825
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/14.png": {
+        "sha256": "a220cde7cbba982970708eef36391e0a89a1e9f4baad5565ffc118371dc85f6a",
+        "bytes": 213685
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-048_45e57349f062416aaf11f2c31587da16/imgs/15.png": {
+        "sha256": "815df4bfce33089418e0a2650d8390418c75c5664c34dad1422e179a70aaa829",
+        "bytes": 213624
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/camera.json": {
+        "sha256": "cecee004b9a28f8c9ef2eebb554f5f6135524aa8af4719ce265d3353fe3ad73c",
+        "bytes": 486
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/surfaces.npy": {
+        "sha256": "3a84edc237bf76cedd614fec039bc4a9b22439228fd304f0fc5cdbb8b7ff482a",
+        "bytes": 38400128
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/00.png": {
+        "sha256": "fc3935696e50ba3f3feeb377c655584349be8ec889373662c7ca107ef801cda6",
+        "bytes": 181903
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/01.png": {
+        "sha256": "714e6f2fd3e66025fdedc3c595d6dcc0d8aa52e03d027663524ea32fd64db059",
+        "bytes": 182138
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/02.png": {
+        "sha256": "3f7f3cba65b35e39774d0f4b20c5eec0dd064f2a13094c251820d2318f37f274",
+        "bytes": 181832
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/03.png": {
+        "sha256": "d8efc975f161efebe691681e8cca2e385d27ca09930d6c48115c63d08b7681d6",
+        "bytes": 182601
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/04.png": {
+        "sha256": "0eef44eb4f5996c88201f3b996be54b1b434c98dc0d35977d4c6d785712c2f45",
+        "bytes": 183076
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/05.png": {
+        "sha256": "9ac5d0224ef84544550e9dc5d5d399f1a3b1ae527046347f0f5738fd3f285966",
+        "bytes": 185064
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/06.png": {
+        "sha256": "4581f5b8b1633006328e533b6ac36b5a575c4a56a5d2e958f792654efac84486",
+        "bytes": 187211
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/07.png": {
+        "sha256": "d9b0ed6c45d8d96b47cffd98abd5ffb0d042fd19f72928f5aa88b85cf6aab05f",
+        "bytes": 189130
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/08.png": {
+        "sha256": "1438eab3897d5249d4a2f6635c9c1a051bb080ac6f0c91001dd122bc612dad67",
+        "bytes": 190833
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/09.png": {
+        "sha256": "bb78dc44e58bb7c24b588240c81ed6b4f826b1c59fc7c1a96ee3d9a1034c4ac5",
+        "bytes": 192799
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/10.png": {
+        "sha256": "0fec80f1b95b8693042b939a85896d56785ada59da7da3173221583d889a4b52",
+        "bytes": 195709
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/11.png": {
+        "sha256": "f4b4579854ae2c59bc301edc995d362bf7b7aa6216768e7d88b12d435c5a89ad",
+        "bytes": 201787
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/12.png": {
+        "sha256": "1ab00a058b775bbbcb422b47a4d2fb6c5ca6855cc3532ce90283a848e0a7ba72",
+        "bytes": 208470
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/13.png": {
+        "sha256": "5f45d5663e5e3b9905abe9f7ad810774ce40f91172a38e9c401b34e8b6c0656b",
+        "bytes": 213097
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/14.png": {
+        "sha256": "eb3506de4102d63d12f31a1c25093b30defad7e901a1c6a6eea343d691a056fb",
+        "bytes": 214492
+      },
+      "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005/data/000-144_0c7abbb8b0e34a34bf1fb783da518664/imgs/15.png": {
+        "sha256": "6df9750179d93923e57cd4a0726dc4dae0ad905a178f6c0234fe236e028e0223",
+        "bytes": 215287
+      }
+    },
+    "weight_records": {
+      "/root/rivermind-data/actionmesh-repro/manifests/weights.json": {
+        "sha256": "225c6d2f64bcf3036c5dbcccfde4c3ad86eb3dea85762e250b97e3146387c513",
+        "bytes": 7280
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/LICENSE.txt": {
+        "sha256": "d6b41838fa748a1d88481a3d0ef476c87f5538747f54057f9324066606af32a7",
+        "bytes": 12675
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/README.md": {
+        "sha256": "70e3b125975c34cbf227e4ba1d0bad25081d495a964e61627881b9149a96429a",
+        "bytes": 2117
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/autoencoder/config.json": {
+        "sha256": "54c31cfd5fae6c3ce4051f0fa05473fea7295ea1746a74d245da6900560e3e3b",
+        "bytes": 335
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/autoencoder/model.safetensors": {
+        "sha256": "fc9846ab877cc162788dceff2ee0170082bb48520e55346cb4777814cfb507bb",
+        "bytes": 856877444
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/config.json": {
+        "sha256": "ca21a6d401902ccda26ed58b1d332b1643da5670565322bd392944a96dc8ebe2",
+        "bytes": 57
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/denoiser/config.json": {
+        "sha256": "2cd1258ea721d4b34a27d25934f932f695ae201bee6adde187b746b9f7030ea8",
+        "bytes": 248
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/ActionMesh/denoiser/model.safetensors": {
+        "sha256": "04a3c74d8c38efa70e01c36ff08ef207af8e572e2b9c0eee715453c7934090fc",
+        "bytes": 5758281000
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/README.md": {
+        "sha256": "0f4c34a1a17acdbcff02c259d7f4f7b5df1b8956395c625c28da97930eb82ef3",
+        "bytes": 1465
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/feature_extractor_dinov2/preprocessor_config.json": {
+        "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+        "bytes": 436
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/image_encoder_dinov2/config.json": {
+        "sha256": "8ed81b0d5ffd2c8b2cecd7dc1326d3eefa409bc9d525537b6b2a3c70a992fd02",
+        "bytes": 1104
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/image_encoder_dinov2/model.safetensors": {
+        "sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+        "bytes": 1217522888
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/model_index.json": {
+        "sha256": "750af638d10fc67a5f43d19ef0a0d1d3d446174e24b73bddd0a49226016c80c2",
+        "bytes": 525
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/scheduler/scheduler_config.json": {
+        "sha256": "ea7c9b4d502dcaba97cd85291cfd7dbd3c6c82cbc4c775af5c6d9224864279c9",
+        "bytes": 158
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/transformer/config.json": {
+        "sha256": "54ad779e68f9bc7303122cdf291f6db48dec7c67e41d28c05ac359daf914128a",
+        "bytes": 191
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/transformer/diffusion_pytorch_model.safetensors": {
+        "sha256": "9192b5923f7b605b394192809aa2ceb73bf0f4009674d8e3b999b45bb97d4bf2",
+        "bytes": 5758280104
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/vae/config.json": {
+        "sha256": "2fb6ba9b364d42c9681879dca0f7edcb978f2db974a1ca4b15d28f9b15a5baed",
+        "bytes": 335
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/TripoSG/vae/diffusion_pytorch_model.safetensors": {
+        "sha256": "a2e667c24927a5a35e5f19fcb4c75890e9399aa966b6db8131d7df733a750c8b",
+        "bytes": 970685468
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/dinov2/README.md": {
+        "sha256": "0be39948cdb4f4c364c505c039cffe26ba8097b7300bf55f361952c8b17a5fee",
+        "bytes": 3033
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/dinov2/config.json": {
+        "sha256": "12df51c069a2dc1305e34ba71ef58bc2407ea553b75f4722a1715c1bce3bbed0",
+        "bytes": 549
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/dinov2/model.safetensors": {
+        "sha256": "399fba97a95f22c36834418bc69373364a99af3a1153da1c0fb31db567c92e23",
+        "bytes": 1217522888
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/dinov2/preprocessor_config.json": {
+        "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+        "bytes": 436
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/MyConfig.py": {
+        "sha256": "6ed4bf30d736b4fac18ca044e719a8cfc76bee7e71f022aa6f9e8853aa580d0b",
+        "bytes": 326
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/MyPipe.py": {
+        "sha256": "ab93d1432f145082f631c58291a1b977785d1e2ae7f80fc5d76126c4113d1594",
+        "bytes": 2887
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/README.md": {
+        "sha256": "24e08231e4a1f467f69fd9a5f279c259544212dbeb581c710700f27effd07875",
+        "bytes": 6395
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/briarmbg.py": {
+        "sha256": "1dbefbca5c1a3ec1afde2a2164b05274e7f62c861fa62e62a84525ff603a955d",
+        "bytes": 13101
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/config.json": {
+        "sha256": "d774e7d35151efb2479a83f132a57048334adf722e6e354309e30c56e3b35fbe",
+        "bytes": 548
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/example_inference.py": {
+        "sha256": "02f466374258ac228e00a372ff6d379f25c948bce57ff1288f780bf7de395e1a",
+        "bytes": 1090
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/model.safetensors": {
+        "sha256": "46ef7fe46f2ae284d8f1aaa24bfa5fca5ef25a34e2c7caa890a0029eb100e87f",
+        "bytes": 176381984
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/preprocessor_config.json": {
+        "sha256": "6f9c2cfdb87edd9b83c1314629657d5b320a6a89f8481c872a36253132e33afa",
+        "bytes": 345
+      },
+      "/root/rivermind-data/actionmesh-repro/weights/RMBG/utilities.py": {
+        "sha256": "c9e358b02d6687a752e45cb71730e3a6b8a251a50c66e8cc17ba25e3d7b0603f",
+        "bytes": 980
+      }
+    },
+    "download_records": [
+      {
+        "endpoint": "https://hf-mirror.com",
+        "argv": [
+          "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+          "-u",
+          "-c",
+          "from huggingface_hub import snapshot_download;import json,sys;snapshot_download(repo_id=sys.argv[1],repo_type='dataset',revision=sys.argv[2],local_dir=sys.argv[3],allow_patterns=json.loads(sys.argv[4]),max_workers=2)",
+          "facebook/actionbench",
+          "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+          "/root/rivermind-data/actionmesh-repro/data/actionbench-overnight-20261005",
+          "[\"data/000-059_0f142eaa4ab94740ba9e5d074f306a15/*\", \"data/000-108_8560f555469a46e085952a890ce9785b/*\", \"data/000-094_5b203279ff3d46a6b152e2b064774e67/*\", \"data/000-126_0211a7f80bdc48f784af6796913af96b/*\", \"data/000-094_2066afa87c7240d3b74b2ee6116fe0d7/*\", \"data/000-102_7806e18e09ed4dd4a87c611bde4b96bc/*\", \"data/000-136_1d5f546cd4454e2d921dc15594921524/*\", \"data/000-063_2f305a7ad6784a3b9c5db480362ebc02/*\", \"data/000-035_0ec701a445b84eb6bd0ea16a20e0fa4a/*\", \"data/000-059_ee85486b41c1442aaf35fc2563381ad0/*\", \"data/000-076_6ef94285eb3e467ebc3128110b325a1d/*\", \"data/000-065_bc982b8da22a4a2ba8097b1e424ae38b/*\", \"data/000-066_d97aa2a9b82b4284a6a560287f422772/*\", \"data/000-130_94be397f8db74f7c9c06263aaf988532/*\", \"data/000-048_45e57349f062416aaf11f2c31587da16/*\", \"data/000-144_0c7abbb8b0e34a34bf1fb783da518664/*\"]"
+        ],
+        "started_utc": "2026-10-05T21:23:35.862681+00:00",
+        "status": "completed",
+        "process": {
+          "pid": 235,
+          "start_ticks": "196108570",
+          "host": "jupyter-55p0lroqabt855y1",
+          "boot_id": "211df0c2-b85a-4d87-a8c9-fbbac2e54961"
+        },
+        "returncode": 0,
+        "elapsed_seconds": 149.0198978020344,
+        "ended_utc": "2026-10-05T21:26:04.882557+00:00"
+      }
+    ],
+    "prepared_at_utc": "2026-10-05T21:26:06.816728+00:00"
+  },
+  "root": "/root/rivermind-data/actionmesh-repro",
+  "perception": null,
+  "runner_sources": {
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_census_case.py": "77ac68c40ed81064c52531fc08f8133b13bb7590bd4c1b84885705cac98c9289",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_census_eval.py": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/__init__.py": "afcf03e293e5f7d358d9e9a49d36e34488850a1c62ab00d1aaf4552f98066df8",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/__main__.py": "e0d5bd700cee94b1fa6d7d5a71a1ac698b7a9b16f4b4345b9fa94b58ea98cbf3",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/assets/4dbench_qwen2_reference.py": "70a5f1d981e62e4b7c2d11c51381f1dff23d5469507547bdd201da9c8aec5591",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/assets/actionbench_population.json": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/assets/source_manifest.json": "a6a0f8b2a5b7e799e8a6ddb520eb7d79cf00aa63f5b9fa651060175e9c70beb2",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/engine.py": "65a2bb1667ea4e63ecb5be73a9aff76962b09e1e7d6ef47edb1bf4c2fb8a68db",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/generation.py": "6ad7978509a32c732746a56a9c936c243f9bcc7f1341f8bb6f2364842a282099",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/perception.py": "d286885851fb58622863d37792735810a22252b0364e5a8a2f7eeeb5880057fc",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/preparation.py": "2e00d32b0d0ebc0ab29f1ae204e6fcc7291a95b14ee64d66a0bf8f9a5e3d7404",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/protocol.py": "efd8d3a7ec5a2db24437120e8ae4a3baccb216992bbafae51d53c8f25e1cd73d",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/reporting.py": "bff25f05e866c7b19e93b12444dfadeefaa034c88cab14ab5fb58ea5221b458b",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_overnight/resources.py": "13216f1288d69439594a181780e5e984c2f5f72e50425938418af0a171608d1e",
+    "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_three_ideas.py": "f0cfd328e15293ff0b83d3af88caeb63b61e1adf565c75a0887d4412cf1c2830"
+  },
+  "native_source": {
+    "repository": "Yunbo-max/4d",
+    "commit": "81f4f48330aef6d0c00dce9826335a3b1287850e",
+    "native_files_sha256": {
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/README.md": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a",
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195",
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "/root/rivermind-data/actionmesh-repro/repo/actionbench/sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/configs/actionmesh.yaml": "2c1da517256133af1f986739e32ded0f00a2d58df82d5a338348f75595acccff",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/configs/actionmesh_fast.yaml": "30cb106e6212963e27fab60d308b3404384a92a24e42be56e161f7dc85d5c2e3",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/configs/actionmesh_fast_lowram.yaml": "c3b94db3560a2a55933b1b4eb58ed372bd8eefa35bca4b4897e245f129cafd8e",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/configs/actionmesh_lowram.yaml": "17a66d65110bda031534aea9e9ef9ff7a7eaf4e49cc3e26550661609f9a1067b",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/external/__init__.py": "421f256e01920b041113c54792c7b25b2b8072a66e326072af0d04d4240f154f",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/external/triposg.py": "ccf16c5720358096d632be9a7d2bc7ce1f609e88f24513c97f050ffd3eaaaecc",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/__init__.py": "2d12228721e223de301615069e2847353e51e51964e5ce55b9df2333fc4e4ebd",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/glb_export.py": "cdc59cf2a9d4a14f6386e69bb9bed0db27c755cbfa50ffeb7eca284919b22634",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/mesh_io.py": "7188e46e8bf6ee27314498966653e9985cefbb8a91276d368e95f2989669987f",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/io/video_input.py": "c39bb3a7ae6438e2c4a8ec6ec4eee8803d5fe543bc0bc70b7c07797ee2c4f8a6",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/image_encoder.py": "43671a209d3efd9a5e2c5e59d3070c2c14ae097aa3baf427830788de4c1c6dd4",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/temporal_autoencoder.py": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/temporal_denoiser.py": "0a9984767009135c7b579c2a139e0585eae67a77629379c3d15f3cb0fa82a444",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/attention_processor.py": "e4faaba7611144b60e1474759638b097c8a4b8ade85a3c6fa3cdfcefbd1d9362",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/block.py": "82c3e9a981b49f068ec6a9726491bb7304da19869ccfa6ead833b548c5b5be4f",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/embeddings.py": "9562bc50fecd6e2c9c2687fbf8df7277cf030f415525f0f178e771e214a89de6",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/pointcloud_sampling.py": "7fa6610fc2249d7bd9257fc98a67085462058be70772d19cdf01b23458510426",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/rotary_embedding.py": "f10cb494b028424f61237532e16912e84f05e5b5e7e23417fdfa4bebb8a7eaab",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/storage.py": "486b2c69c1f15b4cc1f3a379a4bbf57130196962e37fea0532bee8cd0e10dada",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/tensor_ops.py": "d2eebd03e814969f3b1d6de9bfd652bccd6f4eccb38234e971de5a376872a523",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/model/utils/timesteps.py": "c238439b8c5767a7871f3172620375841de127e6a58ec587b691a3292bc4276e",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/pipeline.py": "0934b6801676a9e6f188e5b07450109e0c3359c10fa1230a9b9c69f056fd50f2",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/pipeline_with_3d.py": "aaff5d928647921ac3e6d6a7ddc73414f89f7307fc55b533435a2749226360d6",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/preprocessing/__init__.py": "38530ac43a94268006083339442a2ee3c3be167b4d238f308d8c3bca0dd4bfe7",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/preprocessing/background_removal.py": "4a5aba61333002147b489c1febf56e658badc802ca57abcec61ed34baf451ce0",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/preprocessing/image_processor.py": "2d9aee33600530fe05670a2c23da69e3843ba55c324b921ac81eb6f6e7a0acfb",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/preprocessing/mesh_processor.py": "0ce2c86f28cc84eb23beda5471c55b45f29420abb9c1d39d8b3aa69b81c6da65",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/render/cameras.py": "4c247e1f3f11956f8c7ec87c3a04546d4228b216044a43533390253e3a440c83",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/render/renderer.py": "f96fd33868ece433a9dfbfb572759314ba2e40eaffef11431fb91c90fde4a402",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/render/utils.py": "1953e1979dad57d58dd7a187b1aa320f60abc2e2ac407e5fadff25902fe36526",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/render/visualizer.py": "161e1363bac9747303210a73fbdc897247da35fc82e0171e995f71e772a7b54b",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/scheduler/guidance.py": "f164ec67b8c02334e5193ab13998e29cae02f834c88f3df1aedab52e88ee8c87",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/scheduler/scheduler.py": "a881535cb0c1e155aa8572208f83aa034d31d5e4e3e487d51db9c35f27f1b1ae",
+      "/root/rivermind-data/actionmesh-repro/repo/actionmesh/utils.py": "50220b25becc39ce5bf3daa9507421766d0474d6ca7500b560c36c21cb3468e5",
+      "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_census_case.py": "77ac68c40ed81064c52531fc08f8133b13bb7590bd4c1b84885705cac98c9289",
+      "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_census_eval.py": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+      "/root/rivermind-data/actionmesh-repro/research/overnight-20261005-3fef350/actionmesh/research_three_ideas.py": "f0cfd328e15293ff0b83d3af88caeb63b61e1adf565c75a0887d4412cf1c2830"
+    }
+  },
+  "resources": {
+    "gpu_count": 1,
+    "gpu_workers": 1,
+    "hours_max": 8,
+    "initial_generation_pair_estimate_seconds": 2400,
+    "estimate_update": "max(initial,1.35*largest_observed_complete_unit)",
+    "saving_reserve_seconds": 120
+  },
+  "resource_admission": {
+    "minimum_total_mib": 11000,
+    "minimum_free_mib": 10769,
+    "generation_historical_peak_mib": 10257,
+    "generation_margin_mib": 512,
+    "basis": "single historical native case; first complete unit is still required for capacity calibration",
+    "fit_guaranteed": false
+  },
+  "claims": {
+    "candidate_efficacy": false,
+    "novelty_pass": false,
+    "Gate_A_pass": false
+  },
+  "selected_gpu": {
+    "uuid": "GPU-e9d01956-88db-b317-ea53-be3fb6cf7190",
+    "physical_index": "0",
+    "name": "NVIDIA GeForce RTX 2080 Ti",
+    "total_mib": 22528
+  }
+}

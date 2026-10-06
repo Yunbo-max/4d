@@ -14,6 +14,7 @@
 | [applications-20261002](applications-20261002/README.md) | 文字、图片+文字、3D+文字的端到端样例、动画与限制 |
 | [input-modes](input-modes/README.md) | 视频输入格式实测及应用入口诊断 |
 | [kangaroo](kangaroo/) | 最初的视频→4D袋鼠基线；[预览](kangaroo/preview.gif)，详情见[项目首页](../README.md) |
+| [overnight-2080ti-20261005](overnight-2080ti-20261005/README.md) | 新冻结的16个 ActionBench 资产；native 与 stationary control 均完成官方 CD-3D/CD-4D/CD-motion 评估，16/16 完整收据 |
 
 ## 大体积原始归档
 
