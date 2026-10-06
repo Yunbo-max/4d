@@ -44,8 +44,8 @@ The historical software-test receipts are engineering evidence only. They do not
 | Scoring/integrity core | `actionmesh/research_math/control_scoring.py` | request validation, arm/score checks, per-pass output binding |
 | Acceptance plan builder | `actionmesh/prepare_control_scoring_checks.py` | emits parser-only unit-test plan |
 | Scoring plan builder | `actionmesh/prepare_control_scoring.py` | emits native-scoring request/integrity plan |
-| Unit tests | `actionmesh/tests/test_research_math.py` | software acceptance only |
-| Evidence exporter | `scripts/research_evidence_20261006/export_original_run.py` | historical helper; not admitted for raw execution in this handoff |
+| Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
+| Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
 All test, control-construction, native-evaluation, and integrity workloads must go through the installed skill's `scripts/run_harness.py`. A committed plan builder may be invoked directly only to emit/check its plan. Controller-only Git, SSH, and file transfer remain outside the project harness.
 
@@ -61,7 +61,7 @@ All test, control-construction, native-evaluation, and integrity workloads must 
 | Integrity replay | all native outputs and frozen inputs | strict per-pass binding passes without mismatch | required for qualification |
 | Qualification review | valid paired metrics | narrow decision plus natural-failure/applicability analysis | closes this round only |
 
-If the original asset cannot be staged through an admitted plan, return `blocked_missing_harnessed_asset_stage`. If the official native runner has no admitted harness plan, return `blocked_missing_harnessed_native_runner`. Do not improvise a surrogate.
+Controller file transfer may copy receipt-bound original bytes into the clean checkout; it is not a scientific workload. If those bytes cannot be restored and verified, return `blocked_missing_original_asset_bytes`. The admitted scoring plan already wraps `research_math.control_scoring score` and the pinned `research_census_eval.py`; remaining blockers are a source-backed frozen native protocol, matching native runtime/device evidence, and trusted official/harness replay—not a missing runner. Do not improvise a surrogate.
 
 ## Frozen constraints
 

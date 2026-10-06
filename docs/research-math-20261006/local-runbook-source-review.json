@@ -1,0 +1,62 @@
+{
+  "kind": "local-runbook-source-review",
+  "recorded_at": "2026-10-06T21:57:21Z",
+  "reviewed_commit": "3cd9a2d3aac63032b9ce642f45da17766c2cfef0",
+  "status": "documentation_repaired_generated_unexecuted",
+  "reviewed_paths": [
+    "actionmesh/prepare_control_scoring_checks.py",
+    "actionmesh/prepare_mesh_controls.py",
+    "actionmesh/prepare_control_scoring.py",
+    "actionmesh/research_math/control_scoring.py",
+    "actionmesh/research_census_eval.py",
+    "actionmesh/repo/actionbench/evaluate_dataset.py",
+    "actionmesh/repo/actionbench/benchmark.py",
+    "docs/research-math-20261006/BASELINE_SCORING.md"
+  ],
+  "reviewed_blob_refs": [
+    {"path": "actionmesh/prepare_control_scoring_checks.py", "git_blob_sha": "fc1cd78dfe13cc7228768021794513e1ff9fae34", "bytes": 3606},
+    {"path": "actionmesh/prepare_mesh_controls.py", "git_blob_sha": "b96d53739125fe323582a89dcc7a91b0f524a8aa", "bytes": 6039},
+    {"path": "actionmesh/prepare_control_scoring.py", "git_blob_sha": "3c94167af6a3ddc1665784fbd1338a91a1fa7fea", "bytes": 10800},
+    {"path": "actionmesh/research_math/control_scoring.py", "git_blob_sha": "5c3f96e951f33572ccb8ccc3a2738d024069bfbc", "bytes": 36963},
+    {"path": "actionmesh/research_census_eval.py", "git_blob_sha": "bd58fbf10014abca5b275b96d4237d63a262fb06", "bytes": 20172},
+    {"path": "actionmesh/repo/actionbench/evaluate_dataset.py", "git_blob_sha": "2c9f1f02b8bd5486ee178754761a93532adb6de8", "bytes": 15219},
+    {"path": "actionmesh/repo/actionbench/benchmark.py", "git_blob_sha": "8d252b40d09189a92e4415a1dbeb4da2e4300646", "bytes": 4672},
+    {"path": "docs/research-math-20261006/BASELINE_SCORING.md", "git_blob_sha": "75d82f38f3d3423ed91b0f1a20ef9661a60cb71d", "bytes": 11596}
+  ],
+  "findings": [
+    {
+      "severity": "blocking_documentation_error",
+      "old_statement": "prepare_mesh_controls.py accepted --input-dir and omitted sigma/source-sequence",
+      "source_result": "the current CLI requires --source-sequence and --sigma; --input-dir does not exist",
+      "repair": "LOCAL_AGENT_RUNBOOK.md now gives the exact current CLI"
+    },
+    {
+      "severity": "blocking_documentation_error",
+      "old_statement": "prepare_control_scoring.py accepted case-dir/gt-path/protocol-json/runtime-json/evaluator-source",
+      "source_result": "the current flow first builds a request with research_math.control_scoring request, then calls prepare_control_scoring.py with request/protocol/environment/group/device/resources",
+      "repair": "LOCAL_AGENT_RUNBOOK.md now separates and specifies both exact commands"
+    },
+    {
+      "severity": "false_blocker",
+      "old_statement": "a separate harnessed native runner might be missing",
+      "source_result": "prepare_control_scoring.py emits a scientific harness plan whose inner command is research_math.control_scoring score; that command launches the pinned census/official scorer for six fresh processes",
+      "repair": "the runner blocker was removed; native protocol/runtime/replay evidence remain pending"
+    },
+    {
+      "severity": "incorrect_path",
+      "old_statement": "tests and exporter paths named nonexistent files",
+      "source_result": "tests are under actionmesh/research_math/tests and the exporter is scripts/research_evidence_20261006/export_feedback.py",
+      "repair": "WEB_HANDOFF.md paths corrected"
+    }
+  ],
+  "execution_performed": false,
+  "software_tests_performed": false,
+  "native_scoring_performed": false,
+  "candidate_designs_verified": 0,
+  "candidate_native_results": 0,
+  "remaining_blockers": [
+    "receipt-bound original report/sequence and matching ActionBench GT bytes must be restored",
+    "Local must freeze a source-backed native qualification protocol and matching runtime/device manifest",
+    "Local must perform trusted official/harness parity and nonce-bound replay after the developmental scoring plan"
+  ]
+}

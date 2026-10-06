@@ -90,9 +90,21 @@ This is a CPU/software acceptance task (`gpu_count: 0`). The current source disc
 
 ### 4. Restore and verify one original development asset
 
-Recover one complete original ActionBench development case and its official GT from the user's existing evidence store. Verify the ActionBench source revision, sample UID, all 16 frame meshes, cameras, SMPL parameters, masks, GT file, and source hashes. Preserve the original outputs read-only.
+Recover one complete original ActionBench development case and its official GT from the user's existing evidence store. This is controller file transfer, not a scientific workload: preserve the original files read-only, copy them into the clean delivered checkout, and then make every subsequent test/control/scoring workload use the harness.
 
-The earlier exporter documentation contains historical paths and is not itself an admitted executable plan. Do not run it raw. If there is no committed harness plan that can stage the required asset without mutating the source, return `blocked_missing_harnessed_asset_stage` with the inspected paths. Otherwise, run the source-inspected staging plan through `run_harness.py` and retain its complete attempt evidence.
+Use an actual completed W0 unit under the verified protocol fingerprint `3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d`. Inspect that unit's `generation.receipt.json`; verify `status=complete`, the fingerprint, and its recorded SHA-256/byte count for the generation `report.json` and `sequence.npz`. Verify the same UID's `surfaces.npy` against `protocol.json` `generation.data_records` and ActionBench revision `2796071cbe6248422fcbeab3101fa9f9886cb7b9`.
+
+Copy the verified bytes to these exact project-relative locations:
+
+```text
+inputs/original-case/report.json
+inputs/original-case/sequence.npz
+inputs/gt/<actual-uid>/surfaces.npy
+inputs/original-provenance/generation.receipt.json
+inputs/original-provenance/protocol.json
+```
+
+After transfer, recompute all hashes and compare them to the original receipt/protocol before using a builder. Record both source and destination paths/hashes in the return packet. The committed `scripts/research_evidence_20261006/export_feedback.py` is a full historical evidence exporter, not required merely to copy these three admitted bytes and not to be run raw as a substitute for this verification. If the original receipt-bound bytes are absent, return `blocked_missing_original_asset_bytes` with the inspected host paths; do not use the small checkpoint archive, a fixture, or regenerated data.
 
 ### 5. Build the strong simple controls
 
@@ -102,12 +114,14 @@ After the original case is staged and verified, create a plan with:
 "$python_bin" "$project_dir/actionmesh/prepare_mesh_controls.py" \
   --root "$project_dir" \
   --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
   --run-id baseline-controls-001 \
-  --input-dir "$original_case_dir" \
-  --plan-dir "$project_dir/plans/baseline-controls-001"
+  --plan-dir "$project_dir/plans/baseline-controls-001" \
+  --sigma 1.0 \
+  --wall-seconds 600
 ```
 
-Source-inspect the generated commands and run the plan with `run_harness.py` plus its exact printed digest. The output must contain three paired arms for the same sample UID and frame set:
+Source-inspect the generated commands and run the plan with `run_harness.py` plus its exact printed digest. Locate the completed attempt from the harness/native receipts rather than guessing its UUID. The attempt workspace's `actionmesh/control-output/` must contain three paired arms for the same sample UID and frame set:
 
 | Arm | Definition | Purpose |
 |---|---|---|
@@ -115,32 +129,53 @@ Source-inspect the generated commands and run the plan with `run_harness.py` plu
 | `world_gaussian` | deterministic world-coordinate Gaussian perturbation | equally cheap non-body-aware perturbation |
 | `body_gaussian` | deterministic canonical/body-coordinate Gaussian perturbation | cheap body-aware comparator |
 
-Required frozen control parameters are seed `44`, sigma `1.0`, all 16 frames, and identical topology/metadata. Validate hashes and arm manifests before scoring.
+Required frozen control parameters are inference seed inherited from the source report (`42` for the retained W0 case), scorer seed `44`, sigma `1.0`, all 16 frames, and identical topology/metadata. Validate hashes and arm manifests. Then use controller file transfer to copy that immutable completed `control-output/` into `$project_dir/inputs/three-arm-case/`, recheck every manifest hash, and record the source attempt path. Do not copy a partial or failed attempt.
 
 ### 6. Freeze native scoring inputs and prepare the request
 
-Create the scoring input/check plan:
+First generate the request only; this does not run the scorer:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.control_scoring request \
+  --root "$project_dir" \
+  --source-case "$project_dir/inputs/original-case" \
+  --controls-dir "$project_dir/inputs/three-arm-case" \
+  --ground-truth "$project_dir/inputs/gt/$actual_uid/surfaces.npy" \
+  --repo-root "$project_dir/actionmesh/repo" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --output "$project_dir/plans/control-scoring-request-001.json"
+```
+
+The request builder verifies the source report, released population membership, exact native-byte arm, three arm reports/sequences, topology/timeline/anchor, GT UID, and current scorer/adapter hashes. Retain its printed request digest.
+
+Next create the source-backed frozen qualification protocol and native runtime JSON described in `BASELINE_SCORING.md`. They are Local evidence, not Web placeholders. Freeze and hash at minimum: ActionBench revision, sample UID/split, three arm manifests, evaluator module/function and source closure, `n_pts_chamfer=100000`, `n_pts_icp=10000`, rotation count `24`, ICP iterations `200`, scorer seed `44`, device policy, framework/library versions, dependency locks, and the one physical GPU UUID. Do not approve a request with unknown or mismatched fields.
+
+Create the admitted scientific plan with the actual resolved values:
 
 ```bash
 "$python_bin" "$project_dir/actionmesh/prepare_control_scoring.py" \
   --root "$project_dir" \
   --skill-dir "$skill_dir" \
-  --run-id baseline-native-score-001 \
-  --case-dir "$three_arm_case_dir" \
-  --gt-path "$gt_path" \
-  --protocol-json "$protocol_json" \
-  --runtime-json "$runtime_json" \
-  --evaluator-source "$evaluator_source" \
-  --plan-dir "$project_dir/plans/baseline-native-score-001"
+  --request "$project_dir/plans/control-scoring-request-001.json" \
+  --protocol "$project_dir/plans/$protocol_file" \
+  --environment "$project_dir/plans/$runtime_file" \
+  --run-id native-controls-development-001 \
+  --plan-dir "$project_dir/plans/native-controls-development-001" \
+  --group "$frozen_group" \
+  --gpu-uuid "$gpu_uuid" \
+  --wall-seconds "$reviewed_wall_seconds" \
+  --ram-mib "$admitted_ram_mib" \
+  --cpu-cores "$admitted_cpu_cores"
 ```
 
-The protocol/runtime files must be created from source inspection, not placeholders. Freeze and hash at minimum: ActionBench revision, sample UID/split, three arm manifests, evaluator module/function and source closure, `n_pts=100000`, ICP subsample `10000`, rotation count `24`, ICP iterations `200`, seed `44`, device policy, framework/library versions, and the one physical GPU identity. Do not approve a request with unknown or mismatched fields.
-
-Run the generated plan through `run_harness.py`. It must emit a reviewer-visible dry-run report/request and integrity checks; it must not be counted as a score.
+Review `native.json` and `harness.json`, capture the printed digest, and execute that exact harness plan. Plan generation or request generation is not a score.
 
 ### 7. Native replay and strict output binding
 
-Use the official/native ActionBench scoring entrypoint identified by source inspection. Execute all three arms under the same frozen protocol/device manifest. If a separate native runner is not yet represented by an admitted harness plan, stop and return `blocked_missing_harnessed_native_runner`; do not replace it with a surrogate scorer.
+The admitted plan already uses `python -m research_math.control_scoring score` as its inner executor. That command starts a fresh `research_census_eval.py` process for each of two passes over each arm; the wrapper in turn calls the pinned official ActionBench source. Do not launch either command outside the admitted plan and do not replace it with another scorer.
+
+If `prepare_control_scoring.py` rejects the protocol/runtime, return `blocked_missing_source_backed_native_protocol` or `blocked_native_runtime_mismatch` with the exact validation error. A completed developmental scoring plan still leaves `native_contract_qualified=false`; trusted official/harness parity and nonce-bound replay remain separate Local acceptance evidence, as specified in `BASELINE_SCORING.md`.
 
 For every arm and pass, retain raw score output plus:
 
@@ -163,7 +198,7 @@ This round may establish baseline/native-scoring qualification. It may not claim
 
 For every executed harness plan, use its source-inspected status interface and retain the live record/status files. Stop launching scientific work when 1,800 seconds remain. Collection includes final status, attempts, logs, runtime/device telemetry, output hashes, protocol/runtime manifests, raw scores, integrity report, and `git rev-parse HEAD`/dirty patch.
 
-Do not use a historical two-arm timing estimate. First measure the complete current three-arm unit, including scoring and integrity collection. Only then may a later round derive a queue that fits `28,800 - 1,800 = 27,000` seconds.
+Do not use a historical two-arm timing estimate. The current cached scoring plan explicitly marks its cost ineligible for the full queue. First measure a complete current multi-arm experimental unit including generation or source restoration, control/candidate preparation, scoring, integrity replay, and collection. Only then may a later round derive a queue that fits `28,800 - 1,800 = 27,000` seconds.
 
 ## Debug table
 

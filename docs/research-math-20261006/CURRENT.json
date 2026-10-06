@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-06T20:49:19Z",
+  "recorded_at": "2026-10-06T21:57:21Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -54,15 +54,38 @@
     },
     "runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "f6b4d375ddb8c144ab416adb6882c45244149d805a9a2fe93d0dd9c214eec7dc"
+      "sha256": "9ca7e4906a6ef38b3725ba0f3430c9e1af71f4f80493081d3353e8f2df9e7e1c"
     },
     "round_handoff_ref": {
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
-      "sha256": "0a580bc7a30b67424d57ec5e940dd93738a9bc25cd5f7c5363245c9e25f06158"
+      "sha256": "f62ad7fc15df2bb986c0a22b11b254a5b86f55c3ed22e9c666e3f2da3025a9c7"
     },
     "checkpoint_ref": {
       "path": "docs/research-math-20261006/workflow-checkpoint-local-agent-handoff.json",
       "sha256": "14e6bd30bdfbd0b9a2f619238003b621e40f56c70fccadf440d2fc075d2fc709"
+    },
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "local_runbook_repair": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-06T21:57:21Z",
+    "base_commit": "3cd9a2d3aac63032b9ce642f45da17766c2cfef0",
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/local-runbook-source-review.json",
+      "sha256": "8ca5686fbe5e245a001faf4159853fcebbe60167cb3e36bc7c9c3a6c006cab35"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-local-runbook-repair.json",
+      "sha256": "b6e5d325d2ac5deb0a7a9a2ace1a0f77b1c0672a9f95daf1f6d92992ba759cda"
+    },
+    "repaired_runbook_ref": {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "9ca7e4906a6ef38b3725ba0f3430c9e1af71f4f80493081d3353e8f2df9e7e1c"
+    },
+    "repaired_round_handoff_ref": {
+      "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
+      "sha256": "f62ad7fc15df2bb986c0a22b11b254a5b86f55c3ed22e9c666e3f2da3025a9c7"
     },
     "candidate_designs_verified": 0,
     "candidate_native_results": 0
