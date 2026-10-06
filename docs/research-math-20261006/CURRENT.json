@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-06T13:15:59.771836+00:00",
+  "recorded_at": "2026-10-06T20:49:19Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -42,5 +42,29 @@
       "sha256": "834eef360a06b1c2ee808a7efac76875e1e4d7822fe1d94a78a19b0d92f1e026"
     },
     "candidate_designs_verified": 0
+  },
+  "local_agent_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-06T20:49:19Z",
+    "base_commit": "766c955eae07f6e328033b196cb3b7dea88b096a",
+    "round_id": "20261006-baseline-qualification",
+    "root_rules_ref": {
+      "path": "AGENTS.md",
+      "sha256": "2cbb30ce6592fb097cd29322ab5f4f7ba34edd3caf4cec0b121b6d730eee68cf"
+    },
+    "runbook_ref": {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "5c318e11b20f6d0c1af457e59cf3a298cf279ffbc6269cdaff3f213a2d153b4d"
+    },
+    "round_handoff_ref": {
+      "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
+      "sha256": "b30e8b31c0fc6751ce9f200e1a79cfbd347058d0b9a4dd72ca075b8650c60073"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-local-agent-handoff.json",
+      "sha256": "14e6bd30bdfbd0b9a2f619238003b621e40f56c70fccadf440d2fc075d2fc709"
+    },
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
   }
 }

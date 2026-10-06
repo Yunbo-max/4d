@@ -1,0 +1,38 @@
+{
+  "kind": "workflow-checkpoint",
+  "checkpoint_id": "local-agent-handoff-20261006",
+  "recorded_at": "2026-10-06T20:49:19Z",
+  "base_commit": "766c955eae07f6e328033b196cb3b7dea88b096a",
+  "round_id": "20261006-baseline-qualification",
+  "status": "generated_unexecuted",
+  "delivered": {
+    "root_rules": "AGENTS.md",
+    "local_runbook": "LOCAL_AGENT_RUNBOOK.md",
+    "immutable_round_handoff": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md"
+  },
+  "scientific_state": {
+    "mathematical_constructions": 20,
+    "conditionally_selected": 15,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "baseline_native_qualification": "pending"
+  },
+  "local_validation": {
+    "performed": [
+      "document presence and line-count inspection",
+      "required-token scan for honest status, harness routing, blockers, and window budget"
+    ],
+    "not_performed": [
+      "repository software tests",
+      "GPU execution",
+      "official native scoring"
+    ]
+  },
+  "next_executable_step": "Local Codex resolves the delivered commit, SSH target, installed research-autopilot path, and Conda interpreter, then runs the parser-only acceptance plan through run_harness.py exactly as specified in LOCAL_AGENT_RUNBOOK.md.",
+  "blocking_facts": [
+    "current GPU-host project path and SSH alias are not available to the Web agent",
+    "original development asset and GT paths must be restored and verified locally",
+    "official native runner must be represented by a source-inspected admitted harness plan before replay"
+  ],
+  "evidence_policy": "Generated documentation and historical software receipts are not native scientific qualification."
+}
