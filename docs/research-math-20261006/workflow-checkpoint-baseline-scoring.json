@@ -1,0 +1,98 @@
+{
+  "kind": "baseline-scoring-handoff",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T19:15:24Z",
+  "base_commit": "d1e1ab887d73d9e79d76aa31a7363eee003bcbbb",
+  "role": "web_supervisor",
+  "role_source": "Owner standing Web/Local split: Web generates/reads/delivers, Local tests/runs; scheduled continuation retains this role",
+  "status": "generated_unexecuted",
+  "entry_ref": {
+    "path": "docs/research-math-20261006/BASELINE_SCORING.md",
+    "sha256": "77a7dd15450e52168ba192ba26b520ec04ef36e45492fa058d32c15ef8d16f29"
+  },
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/control_scoring.py",
+      "sha256": "ebf986c2083b227ec64f5826b209cd2e8e0d3b153e6b7f561d250a0fa5d046bf"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring.py",
+      "sha256": "2ae11800f5cae8eb0d6cc17565917b71f2ddcb4fed4b8b6efc38d573883cb215"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "14931db1b19a337f9a737fb812adeb684b847aefdf334de88befa2f37589dae2"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_control_scoring.py",
+      "sha256": "bd6029afe12ae7f20e63f4136f9938818942bad90ae166fcaf31d4df12aac4f2"
+    }
+  ],
+  "source_review_ref": {
+    "path": "docs/research-math-20261006/baseline-scoring-source-review.json",
+    "sha256": "6dd2cf125a1da152b88c5e5806458f0a82dd35b5ca453f3c0fa9463fb1f94721"
+  },
+  "skill_revision_sha256": "b138bed01563c36b8ade8fc15bbac834bfe3e00b15f27a552aa380d41e766c87",
+  "skill_module_sha256": {
+    "workflow-harness.md": "3593adfccbe3922e01e9b63faf3793d436f8d9b066ca154316027c2a0ca3eafc",
+    "method-verification.md": "f70ec9eb8e0a156f2675f1a7762ccdca3550809aa31edccd0632873d352dc864",
+    "full-validation-and-review.md": "f705d04a7b836ec8eaa6121d8da708c76b903c5342a834a0a2d6a9e1835afe14",
+    "native-evaluation.md": "6262d90670f1ca667669f4b208a44df6aab748956b2360527e94f80b500c9a80",
+    "gpu-host-runtime.md": "4cfbb2b473e3af9c2d333237e82c41245df0648e8c66ce686f6c57cc59224bbc",
+    "repository-round-trips.md": "e746a13d78143253b5ded27041c8174deb9483d9aa135ee6dd3efdd48d022e70"
+  },
+  "completed_this_round": [
+    "Generated full three-arm native scoring request/admission/runner source",
+    "Generated independent scorer processes, evidence packaging and physical-device sampling source",
+    "Generated scientific plan builder requiring qualified frozen native protocol/runtime/GPU identities",
+    "Generated CPU whole-suite harness builder and 33 additional engineering checks",
+    "Independent source review and scoped repairs"
+  ],
+  "not_executed_this_round": [
+    "Generated software checks",
+    "Native scorer processes",
+    "GPU jobs",
+    "Trusted native replay"
+  ],
+  "observed_status": {
+    "historical_research_math_software_passes": 66,
+    "new_engineering_checks_authored": 33,
+    "new_engineering_checks_executed": 0,
+    "verified_candidate_designs": 0,
+    "complete_new_candidate_comparisons": 0,
+    "verified_candidate_successes": 0,
+    "verified_candidate_failures": 0,
+    "native_three_arm_qualification": false,
+    "complete_multi_arm_cost_measured": false,
+    "gpu_connected": false
+  },
+  "math_batch_action": "Preserved 20 conditional constructs/selected 15; no reranking or retrospective code certification",
+  "runtime": {
+    "user_gpu_count": 1,
+    "user_gpu_model": "2080 Ti",
+    "execution_mode": "native_host/conda",
+    "containers_allowed": false,
+    "current_uuid": null,
+    "current_vram_mib": null,
+    "window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "cached_scoring_cost_eligible_for_full_queue": false
+  },
+  "source_reads_at_base_commit": [
+    "actionmesh/repo/actionbench/README.md",
+    "actionmesh/repo/actionbench/benchmark.py",
+    "actionmesh/repo/actionbench/sample_mesh.py",
+    "actionmesh/repo/actionbench/evaluate_dataset.py",
+    "actionmesh/research_census_eval.py",
+    "actionmesh/research_math/simple_mesh_controls.py",
+    "actionmesh/research_overnight/assets/actionbench_population.json"
+  ],
+  "execution_blockers": [
+    "Original native source meshes/receipts and same-UID released GT unavailable on Web host",
+    "No connected GPU executor",
+    "Local software/semantic acceptance pending",
+    "Authentic faithful-harness/native definition/source-backed qualification rules and frozen protocol pending",
+    "Trusted official/harness replay and complete-unit timing/VRAM pending"
+  ],
+  "next_action": "Local software acceptance, original evidence recovery, native protocol/runtime qualification. Web continues source/protocol preparation without candidate admission."
+}

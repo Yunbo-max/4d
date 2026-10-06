@@ -11,5 +11,18 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews, 15 conditional current specs; no scientific implementation/native comparison/outcome."
+  "status": "20 conditional mathematical self-reviews, 15 conditional current specs; no scientific implementation/native comparison/outcome.",
+  "baseline_qualification_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-06T19:15:24Z",
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-baseline-scoring.json",
+      "sha256": "ba86ca10c2cb9d12c45500c05f5cf326bf4f206d7979d91d0777f9d93559f42d"
+    },
+    "entry_ref": {
+      "path": "docs/research-math-20261006/BASELINE_SCORING.md",
+      "sha256": "77a7dd15450e52168ba192ba26b520ec04ef36e45492fa058d32c15ef8d16f29"
+    },
+    "candidate_designs_verified": 0
+  }
 }

@@ -1,0 +1,52 @@
+{
+  "kind": "baseline-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T19:15:24Z",
+  "base_commit": "d1e1ab887d73d9e79d76aa31a7363eee003bcbbb",
+  "reviewer": "/root/review_scoring_draft",
+  "scope": "Independent source-only protocol/scorer/harness/dependency/failure-preservation review",
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/control_scoring.py",
+      "sha256": "ebf986c2083b227ec64f5826b209cd2e8e0d3b153e6b7f561d250a0fa5d046bf"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring.py",
+      "sha256": "2ae11800f5cae8eb0d6cc17565917b71f2ddcb4fed4b8b6efc38d573883cb215"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "14931db1b19a337f9a737fb812adeb684b847aefdf334de88befa2f37589dae2"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_control_scoring.py",
+      "sha256": "bd6029afe12ae7f20e63f4136f9938818942bad90ae166fcaf31d4df12aac4f2"
+    }
+  ],
+  "findings_and_repairs": [
+    {
+      "finding": "Admitted native contract did not match executed scorer/all arm code",
+      "repair": "Exact faithful scorer command, metric paths, denominator, full sampling/budgets and every arm implementation now bound"
+    },
+    {
+      "finding": "Unexpected scoring-pass error omitted remaining inventory and evidence",
+      "repair": "Six pass slots/one-asset denominator initialize first; per-pass error retention and final readout/copy checks"
+    },
+    {
+      "finding": "Generator report/control summary/body pose optional on loaded request",
+      "repair": "Explicit refs and closure/source UID-seed-hash binding required"
+    },
+    {
+      "finding": "Missing ARMS import",
+      "repair": "Import restored"
+    },
+    {
+      "finding": "SIGKILL bypasses finally",
+      "repair": "Initial qualification outcome inconclusive; non-GT source bundle copied before first scorer; preserve entire staged attempt on kill"
+    }
+  ],
+  "final_narrow_review": "No remaining material source issue found; Local acceptance pending",
+  "software_executed": false,
+  "native_executed": false,
+  "native_contract_qualified": false
+}
