@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "/root/rivermind-data/actionmesh-repro/runs/experiments/native-probe-c02-20261006-v2/native-probe-c02-20261006-v2/native-probe-a1-7d6078454ece41e99ea1a3699f472948/workspace/research/c02-harness/actionmesh/research_math/native_probe.py",
+    "--root",
+    "/root/rivermind-data/actionmesh-repro",
+    "--case-dir",
+    "/root/rivermind-data/actionmesh-repro/outputs/census-20261002/cases/000-037_1358c424008a43cbaa35eba5e58551ac__seed42__attempt2",
+    "--output",
+    "runs/native-probe-c02-20261006-v2",
+    "--points",
+    "24",
+    "--max-seconds",
+    "600"
+  ],
+  "points": 24,
+  "seconds_cap": 600.0
+}
