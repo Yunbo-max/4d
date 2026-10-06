@@ -1,0 +1,64 @@
+{
+  "kind": "native-runtime-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T22:53:19Z",
+  "reviewed_parent": "e1f3f8f4fbe3a05c0b2b5b175c5d5258bc7c7dd0",
+  "reviewer": "Web supervisor source self-review",
+  "status": "source_reviewed_generated_unexecuted",
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/native_runtime.py",
+      "sha256": "31fa0687bad46511521eb59cf7b7feff14f17ecf9a71220b10e5c670768ab64b"
+    },
+    {
+      "path": "actionmesh/prepare_native_runtime.py",
+      "sha256": "c878ebba2924c1c7171868b38a27f2361df590e343ddddd2a73499a36510e986"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_native_runtime.py",
+      "sha256": "c266f387b97a8af65a8725035637b4416ed905fdb846a66e093da0137c8211be"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "cce8cd8bec2211fdd42ddd2e8dc0f1a46ddcbd083072e72fe1c1ddeb83ee504d"
+    }
+  ],
+  "checks": [
+    {
+      "scope": "consumer_binding",
+      "rationale": "Compared capture fields against prepare_control_scoring.py build_plans: execution_mode, sys.executable, five metadata versions, supplied GPU UUID and nonempty hashed dependency_lock_refs are emitted. No consumer validation was weakened.",
+      "status": "source_reviewed"
+    },
+    {
+      "scope": "isolated_staging",
+      "rationale": "Read installed run_experiments.py _stage. Native capture argv uses --root .. and --output ../inputs/native-runtime from staged actionmesh. Staged __init__.py is inert; collector module and both declared outputs retain project-relative paths for controller transfer.",
+      "status": "source_reviewed"
+    },
+    {
+      "scope": "resource_execution",
+      "rationale": "Builder only emits/validates plans. Collector runs as the foreground CPU engineering task with 120s native/180s outer limits, one attempt, zero GPUs and no retry. No scorer, model, CUDA import or scientific protocol enters this task.",
+      "status": "source_reviewed"
+    },
+    {
+      "scope": "retention_and_privacy",
+      "rationale": "Installed metadata is read without dumping environment variables or Conda URL/channel records. Output directories refuse reuse; invalid/missing dependency or Conda data stops capture before new output. Installed identities are explicitly not upstream checksums or solver locks.",
+      "status": "source_reviewed"
+    },
+    {
+      "scope": "planned_acceptance",
+      "rationale": "Eight authored tests check real emitted lock hashes/relative paths, preserved existing bytes, required-package and version conflicts, selected Conda metadata fields, non-Conda rejection, path escape and multiple/missing device identities. Tests use metadata fixtures and cannot constitute native evidence.",
+      "status": "pending_local_execution"
+    }
+  ],
+  "source_syntax_parse_performed": true,
+  "software_tests_performed": false,
+  "generated_code_executed": false,
+  "native_scoring_performed": false,
+  "gpu_work_performed": false,
+  "remaining": [
+    "Local whole-suite acceptance",
+    "Actual remote Conda/runtime capture and separate physical GPU inventory",
+    "Source-backed frozen native qualification protocol",
+    "Original receipt-bound W0 meshes/GT and trusted native replay"
+  ]
+}

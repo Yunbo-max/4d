@@ -1,0 +1,67 @@
+{
+  "kind": "workflow-checkpoint",
+  "checkpoint_id": "native-runtime-capture-20261006",
+  "recorded_at": "2026-10-06T22:53:19Z",
+  "base_commit": "e1f3f8f4fbe3a05c0b2b5b175c5d5258bc7c7dd0",
+  "round_id": "20261006-baseline-qualification",
+  "role": "web_supervisor",
+  "role_source": "User's retained Web/Local split and repository AGENTS.md",
+  "status": "generated_unexecuted",
+  "decision": "Supply the bounded installed native environment capture required by the current scoring-plan consumer.",
+  "earliest_unclosed_prerequisite": "Local software acceptance and source-backed baseline/native evaluator qualification",
+  "evidence_refs": [
+    {
+      "path": "actionmesh/research_math/native_runtime.py",
+      "sha256": "31fa0687bad46511521eb59cf7b7feff14f17ecf9a71220b10e5c670768ab64b"
+    },
+    {
+      "path": "actionmesh/prepare_native_runtime.py",
+      "sha256": "c878ebba2924c1c7171868b38a27f2361df590e343ddddd2a73499a36510e986"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_native_runtime.py",
+      "sha256": "c266f387b97a8af65a8725035637b4416ed905fdb846a66e093da0137c8211be"
+    },
+    {
+      "path": "docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md",
+      "sha256": "94188173473e4c3096be8b1be42bf477add6458ae033b9361d40240150614260"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "cce8cd8bec2211fdd42ddd2e8dc0f1a46ddcbd083072e72fe1c1ddeb83ee504d"
+    },
+    {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "9ae9b0c48dee89efb127e2a44a4387ada5442e8a1af850a257089a72f00ee25f"
+    },
+    {
+      "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
+      "sha256": "824e5f2ee966d55bce464060690da9b3db7afb445517497304fe7f21f5b12608"
+    },
+    {
+      "path": "docs/research-math-20261006/BASELINE_SCORING.md",
+      "sha256": "2fca9b5f74a0b9c4c2bfa4d3a6198ab69f0362cccaf415b51f4de52b6bff0b21"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e246158e365b3219d4de1edd21d28dc3361cf37b19c361700e76a98470897595"
+    }
+  ],
+  "skill_source": {
+    "entry_sha256": "9973303fbcf9c228856818a936655cbbee103a45901e825232742fd224ee7e74",
+    "workflow_harness_sha256": "b2ab91c130e81871edc0e4815bd807e12c2baa245de704fe12356d8f3d585f77",
+    "local_code_handoff_sha256": "eb4e402c498019a4c89f1fc73a8037ada85fe9d90a572ee568425cad6a0102f3",
+    "inspected_native_runner_sha256": "e1e2b22c210c22f6028bcb846220eaa33501be4cd22f135c8f97ac9f3405137c"
+  },
+  "scientific_state": {
+    "mathematical_constructions": 20,
+    "conditionally_selected": 15,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "baseline_native_qualification": "pending"
+  },
+  "execution_performed": false,
+  "new_software_checks_authored": 8,
+  "new_software_checks_executed": 0,
+  "next_executable_step": "Local runs the current whole-suite CPU acceptance harness, then captures the actual remote Conda inventory with prepare_native_runtime.py and retains the two hashed outputs at their same project-relative paths. Native qualification remains separate."
+}

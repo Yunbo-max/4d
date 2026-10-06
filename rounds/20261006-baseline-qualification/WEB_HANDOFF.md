@@ -35,6 +35,8 @@ The historical software-test receipts are engineering evidence only. They do not
 7. `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
 8. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
+Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
+
 ## Code and builders in scope
 
 | Purpose | Path | Current role |
@@ -42,6 +44,7 @@ The historical software-test receipts are engineering evidence only. They do not
 | Three-arm construction | `actionmesh/research_math/simple_mesh_controls.py` | deterministic `native`, `world_gaussian`, `body_gaussian` arms |
 | Control plan builder | `actionmesh/prepare_mesh_controls.py` | emits harness plan for three-arm construction |
 | Scoring/integrity core | `actionmesh/research_math/control_scoring.py` | request validation, arm/score checks, per-pass output binding |
+| Runtime capture | `actionmesh/prepare_native_runtime.py`, `actionmesh/research_math/native_runtime.py` | CPU-only installed metadata collection; GPU identity and scorer qualification remain pending |
 | Acceptance plan builder | `actionmesh/prepare_control_scoring_checks.py` | emits parser-only unit-test plan |
 | Scoring plan builder | `actionmesh/prepare_control_scoring.py` | emits native-scoring request/integrity plan |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
@@ -83,6 +86,10 @@ Apply the exact success/failure/insufficient-evidence rules in `BASELINE_SCORING
 ## First executable step
 
 After resolving the exact delivered commit, host, interpreter, and installed skill directory, execute the parser-only acceptance plan exactly as specified in `LOCAL_AGENT_RUNBOOK.md`. Source-inspect the generated plan and harness before approving its digest.
+
+## Runtime supplement — 2026-10-06
+
+After software acceptance, run the exact CPU-only environment capture in `NATIVE_RUNTIME_CAPTURE.md`. Retain the actual attempt and transfer both output files to their same project-relative `inputs/native-runtime/` paths. The scientific scoring plan reads that captured runtime and checks its current package/interpreter bindings. Eight new engineering checks are authored, unexecuted; mathematical/native counters remain unchanged.
 
 ## Return contract
 

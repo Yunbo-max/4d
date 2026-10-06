@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-06T21:57:21Z",
+  "recorded_at": "2026-10-06T22:53:19Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -87,6 +87,39 @@
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
       "sha256": "f62ad7fc15df2bb986c0a22b11b254a5b86f55c3ed22e9c666e3f2da3025a9c7"
     },
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "native_runtime_capture_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-06T22:53:19Z",
+    "base_commit": "e1f3f8f4fbe3a05c0b2b5b175c5d5258bc7c7dd0",
+    "entry_ref": {
+      "path": "docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md",
+      "sha256": "94188173473e4c3096be8b1be42bf477add6458ae033b9361d40240150614260"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/native-runtime-source-review.json",
+      "sha256": "ddb3bd67998007d089bd19efb26c40632cee3420f2ef3a01a5fea1d9ee633dcf"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-native-runtime-capture.json",
+      "sha256": "e3e99376174b3c68d45d4d1049933b647e351a5974f9a68ff88623e4034ef660"
+    },
+    "current_runbook_ref": {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "9ae9b0c48dee89efb127e2a44a4387ada5442e8a1af850a257089a72f00ee25f"
+    },
+    "current_round_handoff_ref": {
+      "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
+      "sha256": "824e5f2ee966d55bce464060690da9b3db7afb445517497304fe7f21f5b12608"
+    },
+    "current_baseline_scoring_ref": {
+      "path": "docs/research-math-20261006/BASELINE_SCORING.md",
+      "sha256": "2fca9b5f74a0b9c4c2bfa4d3a6198ab69f0362cccaf415b51f4de52b6bff0b21"
+    },
+    "new_checks_authored": 8,
+    "new_checks_executed": 0,
     "candidate_designs_verified": 0,
     "candidate_native_results": 0
   }

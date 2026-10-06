@@ -20,7 +20,8 @@ def main():
     from research_math.control_scoring import file_ref
     files = sorted((root/'actionmesh/research_math').rglob('*.py'))
     files += [root/'actionmesh'/name for name in ('research_census_eval.py', 'prepare_mesh_controls.py',
-                                                'prepare_control_scoring.py', 'prepare_control_scoring_checks.py')]
+                                                'prepare_control_scoring.py', 'prepare_control_scoring_checks.py',
+                                                'prepare_native_runtime.py')]
     refs = [file_ref(root, path) for path in files]
     # Test_control_plan imports the installed harness modules. Carry their actual
     # directory to the child rather than relying on an inherited PYTHONPATH.

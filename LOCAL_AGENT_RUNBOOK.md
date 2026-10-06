@@ -15,6 +15,7 @@ Read these files at the delivered commit before acting:
 - `docs/research-math-20261006/BASELINE_CONTROLS.md`
 - `docs/research-math-20261006/BASELINE_SCORING.md`
 - `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
+- `docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md`
 - `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 ## Roles and unresolved host facts
@@ -88,6 +89,12 @@ Review the generated plan and capture the printed digest. Then execute only with
 
 This is a CPU/software acceptance task (`gpu_count: 0`). The current source discovers the repository's `research_math` unit tests; record the observed test count and outcome instead of copying historical counts. A pass proves parser/orchestration behavior only, not native scientific qualification.
 
+### 3a. Capture the actual installed native environment
+
+Follow [the exact environment-capture commands](docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md#ordered-local-commands). The committed `actionmesh/prepare_native_runtime.py` emits a CPU-only harness plan; its inner collector writes the actual interpreter, Conda/package inventory and hashed runtime JSON. Retain its attempt evidence and copy the completed `inputs/native-runtime/` directory back to this checkout without rewriting paths or replacing earlier captures.
+
+This does not initialize CUDA or verify the physical device. Keep the current host GPU inventory separately; native protocol and official replay qualification remain pending. A capture alone never authorizes scoring.
+
 ### 4. Restore and verify one original development asset
 
 Recover one complete original ActionBench development case and its official GT from the user's existing evidence store. This is controller file transfer, not a scientific workload: preserve the original files read-only, copy them into the clean delivered checkout, and then make every subsequent test/control/scoring workload use the harness.
@@ -159,7 +166,7 @@ Create the admitted scientific plan with the actual resolved values:
   --skill-dir "$skill_dir" \
   --request "$project_dir/plans/control-scoring-request-001.json" \
   --protocol "$project_dir/plans/$protocol_file" \
-  --environment "$project_dir/plans/$runtime_file" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
   --run-id native-controls-development-001 \
   --plan-dir "$project_dir/plans/native-controls-development-001" \
   --group "$frozen_group" \

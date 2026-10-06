@@ -142,7 +142,9 @@ the nonce-bound replay required by `_native_eval.verify_run`. The generated
 record always leaves `native_contract_qualified=false`. Source binding is
 necessary and does not replace actual Local native semantic qualification.
 
-Record a native runtime JSON with `execution_mode: native_host`, the actual
+Use [NATIVE_RUNTIME_CAPTURE.md](NATIVE_RUNTIME_CAPTURE.md) to capture the installed environment through its CPU-only harness task after software acceptance. Transfer the completed files to their same project-relative paths. The capture does not qualify GPU identity or native scoring.
+
+The captured native runtime JSON contains `execution_mode: native_host`, the actual
 `python_executable`, `gpu_uuid`, installed versions under `packages` for numpy,
 torch, trimesh, scipy and pytorch3d, and nonempty hashed `dependency_lock_refs`.
 Capture the actual GPU inventory and environment separately; historical 22 GiB
@@ -155,7 +157,7 @@ python "$project_dir/actionmesh/prepare_control_scoring.py" \
   --root "$project_dir" --skill-dir "$skill_dir" \
   --request "$project_dir/plans/control-scoring-request-001.json" \
   --protocol "$project_dir/plans/LOCAL_FROZEN_QUALIFICATION_PROTOCOL.json" \
-  --environment "$project_dir/plans/LOCAL_NATIVE_RUNTIME.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
   --run-id native-controls-development-001 \
   --plan-dir "$project_dir/plans/native-controls-development-001" \
   --group ACTUAL_FROZEN_GROUP --gpu-uuid ACTUAL_GPU_UUID \

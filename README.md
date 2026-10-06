@@ -6,6 +6,8 @@
 
 状态仍为 `generated_unexecuted`：三臂强简单对照、原生评分请求和严格输出绑定已生成，但本状态没有新的测试执行、GPU 运行或官方评分结果；候选完整验证设计和 native 结果均为 0/15。不得把数学规格、静态 receipt 或软件测试当作科学资格。
 
+本地软件验收后，按[原生环境采集入口](docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md)运行 CPU harness，生成实际 Conda／包版本及带哈希的 runtime JSON；新增8项检查尚待执行，设备与评分资格仍需单独验证。
+
 ## 当前：方法必要性与可识别性审查
 
 [第二轮研究修订](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md)补推 C02 的保护代价和匹配步长对照、C20 的 principal-angle 可识别性及噪声放大、C05 的原生接口和 localized blend 离面边界。保留20个构造与原15个入选身份，更新全池顺序和15份条件规格。数学仍是条件自审，新候选实现、完整 native 实验及正式成败均为0。
