@@ -17,7 +17,8 @@ def project_protected_step(
 ) -> np.ndarray:
     """Project ``d`` into the null space of ``C`` under positive metric ``W``.
 
-    Pinned coordinates are held at zero. The solve uses a pseudoinverse of the
+    Minimize .5 * (p-d).T @ W @ (p-d), subject to C @ p = 0
+    and p[pins] = 0. Pinned coordinates are held at zero. The solve uses a pseudoinverse of the
     constraint Gram matrix, so redundant rows are valid and deterministic.
     Inputs are copied and the returned vector is always a fresh float array.
     """
@@ -54,6 +55,13 @@ def project_protected_step(
     W_ff = W[np.ix_(free_indices, free_indices)]
     C_f = C[:, free_indices]
     d_f = d[free_indices]
+    # Eliminating p_pinned=0 retains the cross term in the full metric
+    # objective. Merely restricting d to free coordinates minimizes a
+    # different objective when W couples pinned and free coordinates.
+    if pinned.size:
+        d_f = d_f + np.linalg.solve(
+            W_ff, W[np.ix_(free_indices, pinned)] @ d[pinned]
+        )
     if C_f.size:
         rhs = C_f @ d_f
         gram = C_f @ np.linalg.solve(W_ff, C_f.T)
