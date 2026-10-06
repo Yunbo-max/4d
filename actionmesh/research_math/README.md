@@ -17,6 +17,11 @@ The output directory must be new. The CPU controls require NumPy only. They pres
 | controllability.py | Output-metric reachable spaces, trust-ball least squares, model/output comparison | Local reachable rank does not prove global or semantic edit feasibility |
 | contact_events.py | Typed event alignment and endpoint contact repair | Constructed endpoint problem, not complete multi-body physics |
 | native_probe.py | Cached frozen ActionMesh decoder, finite differences, actual redecoding and GPU telemetry | Sparse query-interface probe with constructed edit requests; no full mesh or natural quality gain claim |
+| protected_projection.py | C02 weighted action-subspace projection with redundant-constraint and pin handling | Declared action observations are not ground-truth motion; native qualification is still pending |
+
+C02 implementation status (2026-10-06): four local NumPy tests and the same four
+tests in the remote inference environment pass. No candidate GPU generation or
+official ActionBench comparison has been run yet.
 
 The native probe uses the already installed ActionMesh inference environment, weights and complete census caches. It never downloads or trains a model. Example on the existing GPU server, from its new research directory:
 
