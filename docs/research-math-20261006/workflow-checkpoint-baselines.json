@@ -1,0 +1,52 @@
+{
+  "workflow_checkpoint": {
+    "policy_version": "1.1.0",
+    "execution_role": "single-project continuation",
+    "role_source": "user-authorized long goal",
+    "project_id": null,
+    "route_id": null,
+    "canonical_ledger_ref": null,
+    "ledger_status": "No canonical project ledger found in current remote tree; explicit CURRENT and STEPWISE_PROGRESS reused.",
+    "current_goal_ref": "User instruction: complete 15 selected candidate implementations/protocols/native outcomes.",
+    "user_message_effect": "Continue existing authorized scope",
+    "current_node": "Baseline and evaluator qualification preparation",
+    "requested_action": "Implement ordinary comparator adapters and verified artifact handoff",
+    "earliest_unclosed_prerequisite": "Full live native baseline/control qualification and natural failure evidence; candidate admission remains pending.",
+    "readiness": "baseline engineering delivered; scientific dispatch pending",
+    "produced_deliverable_refs": [
+      {
+        "path": "actionmesh/research_math/simple_mesh_controls.py",
+        "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+      },
+      {
+        "path": "actionmesh/prepare_mesh_controls.py",
+        "sha256": "a89ff94f2bd900b3d25e746aaac4b8521a03cdfead5fd831927762a900f53535"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_simple_mesh_controls.py",
+        "sha256": "cdfa7b712aad3e9ef1757ee217c47f378c025c43c8e8ced3a6857f8b12869bc6"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_control_plan.py",
+        "sha256": "a947fced05b76c3f8278a880e5082857fed1e6c30529b96e6ff5cc2f12dc8540"
+      },
+      {
+        "path": "actionmesh/research_math/tests/write_control_fixture.py",
+        "sha256": "b51ce59d82a2eb49e184f44000e882f44f22e08de0ea0bcf8fd33b2baf747dbe"
+      }
+    ],
+    "remaining_coverage": [
+      "Official native scoring and replay",
+      "Natural Gate 0/IPCG",
+      "15 candidate implementation/design evidence",
+      "Measured eight-hour queue",
+      "Complete native and confirmation outcomes"
+    ],
+    "next_legal_action": "Qualify existing benchmark controls and continue remaining comparator/source preparation",
+    "continuation_refs": [
+      "docs/research-math-20261006/CURRENT.json",
+      "docs/research-math-20261006/STEPWISE_PROGRESS.md",
+      "docs/research-math-20261006/BASELINE_CONTROLS.md"
+    ]
+  }
+}

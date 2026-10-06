@@ -1,0 +1,95 @@
+test_body_smoothing_is_equivariant_to_global_translation (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_is_equivariant_to_global_translation) ... FAIL
+test_body_smoothing_preserves_time_varying_rigid_motion (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_preserves_time_varying_rigid_motion) ... FAIL
+test_body_smoothing_removes_nonrigid_jitter (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_removes_nonrigid_jitter) ... FAIL
+test_collinear_pose_is_rejected_instead_of_arbitrary_rotation (test_simple_mesh_controls.SimpleMeshControlsTest.test_collinear_pose_is_rejected_instead_of_arbitrary_rotation) ... FAIL
+test_export_preserves_native_arrays_and_reports_full_inventory (test_simple_mesh_controls.SimpleMeshControlsTest.test_export_preserves_native_arrays_and_reports_full_inventory) ... FAIL
+test_failed_body_arm_stays_in_manifest_and_prevents_completion (test_simple_mesh_controls.SimpleMeshControlsTest.test_failed_body_arm_stays_in_manifest_and_prevents_completion) ... FAIL
+test_gaussian_boundary_renormalizes_without_wrapping (test_simple_mesh_controls.SimpleMeshControlsTest.test_gaussian_boundary_renormalizes_without_wrapping) ... FAIL
+test_invalid_parameters_or_nonfinite_vertices_rejected (test_simple_mesh_controls.SimpleMeshControlsTest.test_invalid_parameters_or_nonfinite_vertices_rejected) ... FAIL
+test_stale_source_hash_rejected_before_creating_outputs (test_simple_mesh_controls.SimpleMeshControlsTest.test_stale_source_hash_rejected_before_creating_outputs) ... FAIL
+test_world_smoothing_damps_isolated_displacement_and_pins_anchor (test_simple_mesh_controls.SimpleMeshControlsTest.test_world_smoothing_damps_isolated_displacement_and_pins_anchor) ... FAIL
+
+======================================================================
+FAIL: test_body_smoothing_is_equivariant_to_global_translation (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_is_equivariant_to_global_translation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_body_smoothing_preserves_time_varying_rigid_motion (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_preserves_time_varying_rigid_motion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_body_smoothing_removes_nonrigid_jitter (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_removes_nonrigid_jitter)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_collinear_pose_is_rejected_instead_of_arbitrary_rotation (test_simple_mesh_controls.SimpleMeshControlsTest.test_collinear_pose_is_rejected_instead_of_arbitrary_rotation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_export_preserves_native_arrays_and_reports_full_inventory (test_simple_mesh_controls.SimpleMeshControlsTest.test_export_preserves_native_arrays_and_reports_full_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_failed_body_arm_stays_in_manifest_and_prevents_completion (test_simple_mesh_controls.SimpleMeshControlsTest.test_failed_body_arm_stays_in_manifest_and_prevents_completion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_gaussian_boundary_renormalizes_without_wrapping (test_simple_mesh_controls.SimpleMeshControlsTest.test_gaussian_boundary_renormalizes_without_wrapping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_invalid_parameters_or_nonfinite_vertices_rejected (test_simple_mesh_controls.SimpleMeshControlsTest.test_invalid_parameters_or_nonfinite_vertices_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_stale_source_hash_rejected_before_creating_outputs (test_simple_mesh_controls.SimpleMeshControlsTest.test_stale_source_hash_rejected_before_creating_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+======================================================================
+FAIL: test_world_smoothing_damps_isolated_displacement_and_pins_anchor (test_simple_mesh_controls.SimpleMeshControlsTest.test_world_smoothing_damps_isolated_displacement_and_pins_anchor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 19, in setUp
+    self.assertIsNotNone(controls, 'Simple mesh baseline adapter is missing')
+AssertionError: unexpectedly None : Simple mesh baseline adapter is missing
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=10)

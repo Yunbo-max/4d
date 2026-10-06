@@ -1,0 +1,257 @@
+{
+  "kind": "baseline-engineering-evidence",
+  "version": "1.0.0",
+  "base_commit": "87b6ddb760c882ce893627bcfbc0a64d18f91b03",
+  "scope": "Ordinary simple comparator code, software validation and artifact preparation only. No benchmark efficacy, scientific qualification, candidate design, or verdict.",
+  "software_suite": {
+    "tests": 66,
+    "status": "passed",
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "research_math/tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "runner": "installed research-autopilot run_harness.py -> run_experiments.py",
+    "run_id": "mesh-controls-publish",
+    "code_refs": [
+      {
+        "path": "actionmesh/research_math/__init__.py",
+        "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+      },
+      {
+        "path": "actionmesh/research_math/contact_events.py",
+        "sha256": "dbb64f4817b17e695601de1d9f521a55ce038ae95be001d06368a40b45d1a073"
+      },
+      {
+        "path": "actionmesh/research_math/controllability.py",
+        "sha256": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc"
+      },
+      {
+        "path": "actionmesh/research_math/correlated.py",
+        "sha256": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395"
+      },
+      {
+        "path": "actionmesh/research_math/native_probe.py",
+        "sha256": "06641222f25fdf12e7a92f7765638a48aed5d68bac43f351f9b327b987f310b3"
+      },
+      {
+        "path": "actionmesh/research_math/protected_projection.py",
+        "sha256": "b85827f75a738544c5ca4cd6a5bf817eea9034777058742288953901c601d1a6"
+      },
+      {
+        "path": "actionmesh/research_math/run_controls.py",
+        "sha256": "cc9bf7579dd8bd24423e21149773cc23f88dd0e26ec41b416212fb5f2fa207e7"
+      },
+      {
+        "path": "actionmesh/research_math/simple_mesh_controls.py",
+        "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+      },
+      {
+        "path": "actionmesh/research_math/tests/__init__.py",
+        "sha256": "e35706ab31b38faa4054555ab76506b124b88f62c0ca6b548e0775b5f0b1fe64"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_contact_events.py",
+        "sha256": "cfc6344043ba763125ed7bfe841d53ae2ab49c572b4a98ded0ec266516ac2f9b"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_control_plan.py",
+        "sha256": "a947fced05b76c3f8278a880e5082857fed1e6c30529b96e6ff5cc2f12dc8540"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_controllability.py",
+        "sha256": "b6fac43458906b8142553e84fe7792c4c554685a81934e3988a8b567e2f8b536"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_correlated.py",
+        "sha256": "613c08e13fcb7909908d6db3fd3f73326e3e166264cdbd6084738eba9ab5b5a7"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_native_probe.py",
+        "sha256": "c211a346b4da4092fc90acbdf62e45f980347e3f2ad16a58eac90bfd4f7f832e"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_protected_projection.py",
+        "sha256": "ef9bb4f86b65869bde1df264b8510a75f3adc0c0366c2656103679792114eed0"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_simple_mesh_controls.py",
+        "sha256": "cdfa7b712aad3e9ef1757ee217c47f378c025c43c8e8ced3a6857f8b12869bc6"
+      },
+      {
+        "path": "actionmesh/research_math/tests/write_control_fixture.py",
+        "sha256": "b51ce59d82a2eb49e184f44000e882f44f22e08de0ea0bcf8fd33b2baf747dbe"
+      },
+      {
+        "path": "actionmesh/research_census_eval.py",
+        "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+      }
+    ]
+  },
+  "integration": {
+    "run_id": "mesh-controls-staging-integration",
+    "status": "completed",
+    "expected_outputs": 9,
+    "observed_outputs": 9,
+    "scope": "Explicit engineering-fixture-not-actionbench; CPU-only; no scorer/model/GT.",
+    "source_note": "Exact integration snapshot retained with original receipt mapping below. Before publication, an extra trailing newline from snapshot materialization was removed from unchanged base source files; all original files now match base Git blobs and the 66-test suite was repeated. An additional normalized-dependency staging replay was blocked before any attempt by an active shared host driver; not reported as completed."
+  },
+  "review": {
+    "reviewer": "independent read-only baseline_review agent",
+    "outcome": "Ready to commit after fixes",
+    "resolved": [
+      "Ambiguous reflection-corrected SO(3) fits",
+      "Integer frame/vertex index admission",
+      "Nonfinite world reconstruction rejection"
+    ],
+    "accepted_limits": [
+      "Mesh pose can absorb articulation",
+      "Smoothing can erase real motion",
+      "Software fixtures are not native benchmark evidence"
+    ]
+  },
+  "scientific_state": {
+    "baseline_native_qualification": "pending",
+    "candidate_designs_verified": 0,
+    "candidate_native_comparisons": 0,
+    "scoped_successes": 0,
+    "scoped_failures": 0,
+    "Natural_Gate0": "not advanced",
+    "IPCG": "not advanced",
+    "complete_multiarm_gpu_cost": "unmeasured"
+  },
+  "retained_records": [
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-red-stderr.log",
+      "sha256": "e89cd135c2b7b52dc253b829216f81f1c93e3c1b7d648928be44daafb2a92ad3",
+      "original_path": "runs/attempts/mesh-controls-red/software-checks-a1-0b4acf90b8114cbbbe53c0dba2e11a0b/stderr.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-cli-red-stderr.log",
+      "sha256": "4e6bb54bfaf5018fed8ed2c39858ad2d518eeede4fb2f0aafc1c5c9e66870c68",
+      "original_path": "runs/attempts/mesh-controls-cli-red/software-checks-a1-59eac1ea81c542a9a5547c6c642738ee/stderr.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-planner-red-stderr.log",
+      "sha256": "ea8a869b3fc9acf2d8fc01fadd3807038d88f0bc7281831b55545ecdb4ad94fc",
+      "original_path": "runs/attempts/mesh-controls-planner-red/software-checks-a1-7501b0741f984348af3f17dc82fa7ad1/stderr.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-reflection-red-stderr.log",
+      "sha256": "3c6cc533cb602d424e0eccff695a126cdb334d61c5181b95179b5a36e1d2f7bd",
+      "original_path": "runs/attempts/mesh-controls-reflection-red/software-checks-a1-60e1e6e38e824a0c8dd694c6de3ac814/stderr.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-robustness-red-stderr.log",
+      "sha256": "b741d7957f1c29e61fc0563016a789bb49ff533a26f6d78771e13efd69f267e6",
+      "original_path": "runs/attempts/mesh-controls-robustness-red/software-checks-a1-f532c85cffbc43dd96cad9f6f1706a89/stderr.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-publish-stderr.log",
+      "sha256": "153b7c8642b8645155c5fc4aec3d01b77856b381e4417392dff2ce0e5fdaed3c",
+      "original_path": "runs/attempts/mesh-controls-publish/software-checks-a1-d97ef94091c8495ea67debbb5c654d9c/stderr.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-publish-receipt.json",
+      "sha256": "5bf7f4f5f18ad5dcf819a4a703cc2110d5672fef779ea5bad04ffd72feed04c3",
+      "original_path": "runs/attempts/mesh-controls-publish/receipt.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-publish-plan.json",
+      "sha256": "d0a73959c4ea0d08d14719d951db68c2a1122daf764d8e45a74999bca1de219b",
+      "original_path": "runs/attempts/mesh-controls-publish/plan.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-staging-integration-stdout.log",
+      "sha256": "f22dd1f38faf0e7ccf0333b2ded1cdd797e02f82d71dd121fb933d2c1aa87b35",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/stdout.log"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-staging-integration-receipt.json",
+      "sha256": "e915646860d4732e62f6e4ec9ab6b90451849b7a97c36bc6fcc9a9dd988010e9",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/receipt.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/engineering/mesh-controls-staging-integration-plan.json",
+      "sha256": "1e3e4c3c8f398d632e39c35633da2d1600a88e0144d3d8f7e5612175436353e2",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/plan.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/research_math/simple_mesh_controls.py",
+      "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/research_math/simple_mesh_controls.py"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/research_math/__init__.py",
+      "sha256": "10e2b98d1d67d74b5a0d5c852d141d3b2888dcaf2642b9b9fd4a444a7724c255",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/research_math/__init__.py"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/manifest.json",
+      "sha256": "f11def63d3bd3f734e7d27dad544f37f837397d007f6d65a07ae9c8699f7f424",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/manifest.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/controls.json",
+      "sha256": "c8b3c942fe0145691631a574eee16faa8745c7ec3ce6227893e4c102d9c4b4a1",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/controls.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/body_gaussian/poses.npz",
+      "sha256": "3769172f9e2fef1b280f9af74f1097b3aec1a2d376f605316566bb2554c3c7a2",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/body_gaussian/poses.npz"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/body_gaussian/sequence.npz",
+      "sha256": "1b6da2defe8b4bdd127f0ba43b6dd14f662d395d09f1c78bcad00ff49c1640b2",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/body_gaussian/sequence.npz"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/body_gaussian/report.json",
+      "sha256": "1e07e6586fa197ed4199b765a7b2cc86ce891311842f28c85129b4c593d4d7a7",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/body_gaussian/report.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/native/sequence.npz",
+      "sha256": "ad5028e8b599f38962f13308535f8673be61400d4f109331737c8670f3405264",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/native/sequence.npz"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/native/report.json",
+      "sha256": "e27afc06316bd8dcbfa2a2f0def0b926228e7dbd26179784293299c6a21c8777",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/native/report.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/world_gaussian/sequence.npz",
+      "sha256": "6fbe415243957986dc3abb9eeac3fe30bbff800f821cf49dc10ae0b60d5a09d6",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/world_gaussian/sequence.npz"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/world_gaussian/report.json",
+      "sha256": "faa18de5a5787782ded5fc34b1dcb52f9f017cf3c6ef26f5e17de7aad5cdd30b",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/actionmesh/control-output/world_gaussian/report.json"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/runs/attempts/mesh-controls-fixture/software-checks-a1-a352c351b46d402ab6d75876da84cdef/workspace/actionmesh/software-fixture/source/sequence.npz",
+      "sha256": "ad5028e8b599f38962f13308535f8673be61400d4f109331737c8670f3405264",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/runs/attempts/mesh-controls-fixture/software-checks-a1-a352c351b46d402ab6d75876da84cdef/workspace/actionmesh/software-fixture/source/sequence.npz"
+    },
+    {
+      "path": "results/baseline-controls-20261006/staging/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/runs/attempts/mesh-controls-fixture/software-checks-a1-a352c351b46d402ab6d75876da84cdef/workspace/actionmesh/software-fixture/source/report.json",
+      "sha256": "e5dd8dabac6b2ad860f8e4f6ec00ef7fe40d031e68ddaaa4ce951efe4fcd9630",
+      "original_path": "runs/attempts/mesh-controls-staging-integration/prepare-mesh-arms-a1-27ed2e9ad0ce4bfcb9342a6318d50bf9/workspace/runs/attempts/mesh-controls-fixture/software-checks-a1-a352c351b46d402ab6d75876da84cdef/workspace/actionmesh/software-fixture/source/report.json"
+    }
+  ],
+  "next_steps": [
+    "Bind real released assets, GT, source/runtime identity and development qualification protocol.",
+    "Run full native baseline+ordinary controls with unchanged scorer and preserve failed arms.",
+    "Measure complete multi-arm end-to-end time/VRAM; reserve 1800/28800 seconds.",
+    "Establish natural failure and current scientific admission before new candidate investment."
+  ]
+}

@@ -1,0 +1,41 @@
+test_changed_source_report_blocks_plan (test_control_plan.ControlPlanTest.test_changed_source_report_blocks_plan) ... FAIL
+test_plan_output_cannot_overwrite_existing_work (test_control_plan.ControlPlanTest.test_plan_output_cannot_overwrite_existing_work) ... FAIL
+test_plan_pins_both_source_files_and_cpu_only_resources (test_control_plan.ControlPlanTest.test_plan_pins_both_source_files_and_cpu_only_resources) ... FAIL
+test_source_outside_project_rejected (test_control_plan.ControlPlanTest.test_source_outside_project_rejected) ... FAIL
+
+======================================================================
+FAIL: test_changed_source_report_blocks_plan (test_control_plan.ControlPlanTest.test_changed_source_report_blocks_plan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-planner-red/software-checks-a1-7501b0741f984348af3f17dc82fa7ad1/workspace/actionmesh/research_math/tests/test_control_plan.py", line 17, in setUp
+    self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
+AssertionError: unexpectedly None : Baseline preparation plan builder missing
+
+======================================================================
+FAIL: test_plan_output_cannot_overwrite_existing_work (test_control_plan.ControlPlanTest.test_plan_output_cannot_overwrite_existing_work)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-planner-red/software-checks-a1-7501b0741f984348af3f17dc82fa7ad1/workspace/actionmesh/research_math/tests/test_control_plan.py", line 17, in setUp
+    self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
+AssertionError: unexpectedly None : Baseline preparation plan builder missing
+
+======================================================================
+FAIL: test_plan_pins_both_source_files_and_cpu_only_resources (test_control_plan.ControlPlanTest.test_plan_pins_both_source_files_and_cpu_only_resources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-planner-red/software-checks-a1-7501b0741f984348af3f17dc82fa7ad1/workspace/actionmesh/research_math/tests/test_control_plan.py", line 17, in setUp
+    self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
+AssertionError: unexpectedly None : Baseline preparation plan builder missing
+
+======================================================================
+FAIL: test_source_outside_project_rejected (test_control_plan.ControlPlanTest.test_source_outside_project_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-planner-red/software-checks-a1-7501b0741f984348af3f17dc82fa7ad1/workspace/actionmesh/research_math/tests/test_control_plan.py", line 17, in setUp
+    self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
+AssertionError: unexpectedly None : Baseline preparation plan builder missing
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=4)

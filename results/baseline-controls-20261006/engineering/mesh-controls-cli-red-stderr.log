@@ -1,0 +1,29 @@
+test_body_smoothing_is_equivariant_to_global_translation (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_is_equivariant_to_global_translation) ... ok
+test_body_smoothing_preserves_time_varying_rigid_motion (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_preserves_time_varying_rigid_motion) ... ok
+test_body_smoothing_removes_nonrigid_jitter (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_removes_nonrigid_jitter) ... ok
+test_collinear_pose_is_rejected_instead_of_arbitrary_rotation (test_simple_mesh_controls.SimpleMeshControlsTest.test_collinear_pose_is_rejected_instead_of_arbitrary_rotation) ... ok
+test_existing_evaluator_keeps_failed_arm_in_declared_inventory (test_simple_mesh_controls.SimpleMeshControlsTest.test_existing_evaluator_keeps_failed_arm_in_declared_inventory) ... ok
+test_export_preserves_native_arrays_and_reports_full_inventory (test_simple_mesh_controls.SimpleMeshControlsTest.test_export_preserves_native_arrays_and_reports_full_inventory) ... ok
+test_failed_body_arm_stays_in_manifest_and_prevents_completion (test_simple_mesh_controls.SimpleMeshControlsTest.test_failed_body_arm_stays_in_manifest_and_prevents_completion) ... ok
+test_gaussian_boundary_renormalizes_without_wrapping (test_simple_mesh_controls.SimpleMeshControlsTest.test_gaussian_boundary_renormalizes_without_wrapping) ... ok
+test_invalid_parameters_or_nonfinite_vertices_rejected (test_simple_mesh_controls.SimpleMeshControlsTest.test_invalid_parameters_or_nonfinite_vertices_rejected) ... ok
+test_source_sequence_cli_works_from_a_staged_file_path (test_simple_mesh_controls.SimpleMeshControlsTest.test_source_sequence_cli_works_from_a_staged_file_path) ... FAIL
+test_stale_source_hash_rejected_before_creating_outputs (test_simple_mesh_controls.SimpleMeshControlsTest.test_stale_source_hash_rejected_before_creating_outputs) ... ok
+test_world_smoothing_damps_isolated_displacement_and_pins_anchor (test_simple_mesh_controls.SimpleMeshControlsTest.test_world_smoothing_damps_isolated_displacement_and_pins_anchor) ... ok
+
+======================================================================
+FAIL: test_source_sequence_cli_works_from_a_staged_file_path (test_simple_mesh_controls.SimpleMeshControlsTest.test_source_sequence_cli_works_from_a_staged_file_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-cli-red/software-checks-a1-59eac1ea81c542a9a5547c6c642738ee/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 125, in test_source_sequence_cli_works_from_a_staged_file_path
+    self.assertEqual(process.returncode, 0, process.stderr)
+AssertionError: 2 != 0 : usage: simple_mesh_controls.py [-h] --source-case SOURCE_CASE --output OUTPUT
+                               --uid UID --expected-sequence-sha256
+                               EXPECTED_SEQUENCE_SHA256 --sigma SIGMA
+simple_mesh_controls.py: error: the following arguments are required: --source-case
+
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.146s
+
+FAILED (failures=1)

@@ -56,3 +56,39 @@ specifications exist; C02 has a developmental operator implementation. Fully
 verified candidate designs, complete new native method comparisons, and formal
 candidate success/failure outcomes remain zero. This checkpoint does not change
 the mathematical batch's gate fields or claim experiment generation is finished.
+
+## Continuation: ordinary mesh controls — 2026-10-06
+
+Resumed unchanged remote main `87b6ddb760c882ce893627bcfbc0a64d18f91b03`
+and CURRENT revision mechanism-boundaries-r2; no additional GPU feedback was
+present. No existing dirty checkout was reset or overwritten.
+
+Implemented ordinary world-coordinate Gaussian and classical body-frame
+Procrustes Gaussian as simple comparator adapters. They preserve all 16 original
+frames/timestamps, vertex identity, shared faces and the exact first-frame anchor;
+they receive no GT/camera/scorer transform. The native arm is a byte copy.
+Failed pose fits remain in the three-arm manifest and prevent completion.
+The CPU-only plan builder pins source sequence/report and code, stages actual
+files through run_harness, and exports complete meshes rather than sparse probes.
+
+Independent review identified ambiguous reflection-corrected pose fits; a failing
+regression established the issue before repair. Integer-index admission and
+nonfinite world-output rejection were also repaired with failing regressions.
+The final whole research_math suite passes **66 checks**, software evidence only.
+A labelled engineering staging integration exported all nine expected artifacts
+without running any native benchmark/scorer. Its scope and source identities
+are retained in the engineering evidence; it provides no scientific qualification.
+
+See [BASELINE_CONTROLS.md](BASELINE_CONTROLS.md) for algorithms, actual local
+preparation/harness commands, native-score obligations and return contents.
+No numerical candidate criteria, full science protocol, native score or measured
+multi-arm GPU timing was certified. The mathematical batch and CURRENT pointers
+remain unchanged. Verified candidate designs remain **0/15**; complete new-method
+native comparisons and formal scoped successes/failures remain **0**.
+
+Next executable work: prepare verified cached native sequences with these simple
+adapters on the original host; bind the full scorer/input/GT/runtime qualification
+protocol, measure one full multi-arm unit, and analyze all development failures
+before candidate admission. Meanwhile continue remaining baseline/source/protocol
+preparation within scope. The lack of a connected GPU does not turn draft method
+specifications into completed experiment generation.

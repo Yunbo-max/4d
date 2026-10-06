@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "case_id": "engineering-fixture-not-actionbench-native",
+      "uid": "engineering-fixture-not-actionbench",
+      "case_dir": "native"
+    },
+    {
+      "case_id": "engineering-fixture-not-actionbench-world_gaussian",
+      "uid": "engineering-fixture-not-actionbench",
+      "case_dir": "world_gaussian"
+    },
+    {
+      "case_id": "engineering-fixture-not-actionbench-body_gaussian",
+      "uid": "engineering-fixture-not-actionbench",
+      "case_dir": "body_gaussian"
+    }
+  ],
+  "scope": "Baseline qualification assets; not independent arms-as-assets or confirmation"
+}

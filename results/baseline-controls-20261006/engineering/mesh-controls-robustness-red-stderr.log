@@ -1,0 +1,40 @@
+test_ambiguous_reflection_pose_is_rejected (test_simple_mesh_controls.SimpleMeshControlsTest.test_ambiguous_reflection_pose_is_rejected) ... ok
+test_body_smoothing_is_equivariant_to_global_translation (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_is_equivariant_to_global_translation) ... ok
+test_body_smoothing_preserves_time_varying_rigid_motion (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_preserves_time_varying_rigid_motion) ... ok
+test_body_smoothing_removes_nonrigid_jitter (test_simple_mesh_controls.SimpleMeshControlsTest.test_body_smoothing_removes_nonrigid_jitter) ... ok
+test_collinear_pose_is_rejected_instead_of_arbitrary_rotation (test_simple_mesh_controls.SimpleMeshControlsTest.test_collinear_pose_is_rejected_instead_of_arbitrary_rotation) ... ok
+test_existing_evaluator_keeps_failed_arm_in_declared_inventory (test_simple_mesh_controls.SimpleMeshControlsTest.test_existing_evaluator_keeps_failed_arm_in_declared_inventory) ... ok
+test_export_preserves_native_arrays_and_reports_full_inventory (test_simple_mesh_controls.SimpleMeshControlsTest.test_export_preserves_native_arrays_and_reports_full_inventory) ... ok
+test_failed_body_arm_stays_in_manifest_and_prevents_completion (test_simple_mesh_controls.SimpleMeshControlsTest.test_failed_body_arm_stays_in_manifest_and_prevents_completion) ... ok
+test_finite_extreme_input_cannot_emit_nonfinite_world_control (test_simple_mesh_controls.SimpleMeshControlsTest.test_finite_extreme_input_cannot_emit_nonfinite_world_control) ... /workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-robustness-red/software-checks-a1-f532c85cffbc43dd96cad9f6f1706a89/workspace/actionmesh/research_math/simple_mesh_controls.py:46: RuntimeWarning: overflow encountered in subtract
+  residual = source.astype(np.float64)-anchor
+FAIL
+test_gaussian_boundary_renormalizes_without_wrapping (test_simple_mesh_controls.SimpleMeshControlsTest.test_gaussian_boundary_renormalizes_without_wrapping) ... ok
+test_invalid_parameters_or_nonfinite_vertices_rejected (test_simple_mesh_controls.SimpleMeshControlsTest.test_invalid_parameters_or_nonfinite_vertices_rejected) ... ok
+test_noninteger_identity_metadata_rejected_before_outputs (test_simple_mesh_controls.SimpleMeshControlsTest.test_noninteger_identity_metadata_rejected_before_outputs) ... FAIL
+test_source_sequence_cli_works_from_a_staged_file_path (test_simple_mesh_controls.SimpleMeshControlsTest.test_source_sequence_cli_works_from_a_staged_file_path) ... ok
+test_stale_source_hash_rejected_before_creating_outputs (test_simple_mesh_controls.SimpleMeshControlsTest.test_stale_source_hash_rejected_before_creating_outputs) ... ok
+test_world_smoothing_damps_isolated_displacement_and_pins_anchor (test_simple_mesh_controls.SimpleMeshControlsTest.test_world_smoothing_damps_isolated_displacement_and_pins_anchor) ... ok
+
+======================================================================
+FAIL: test_finite_extreme_input_cannot_emit_nonfinite_world_control (test_simple_mesh_controls.SimpleMeshControlsTest.test_finite_extreme_input_cannot_emit_nonfinite_world_control)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-robustness-red/software-checks-a1-f532c85cffbc43dd96cad9f6f1706a89/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 85, in test_finite_extreme_input_cannot_emit_nonfinite_world_control
+    with self.assertRaises(ValueError): controls.smooth_world(huge, 1.)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_noninteger_identity_metadata_rejected_before_outputs (test_simple_mesh_controls.SimpleMeshControlsTest.test_noninteger_identity_metadata_rejected_before_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/ec1b0c6b9ea9/baseline-qualification-20261006/runs/attempts/mesh-controls-robustness-red/software-checks-a1-f532c85cffbc43dd96cad9f6f1706a89/workspace/actionmesh/research_math/tests/test_simple_mesh_controls.py", line 129, in test_noninteger_identity_metadata_rejected_before_outputs
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.158s
+
+FAILED (failures=2)

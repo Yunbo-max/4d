@@ -1,0 +1,16 @@
+{
+  "uid": "engineering-fixture-not-actionbench",
+  "seed": 0,
+  "baseline_arm": "native",
+  "sigma_frames": 1.0,
+  "source_sequence_sha256": "ad5028e8b599f38962f13308535f8673be61400d4f109331737c8670f3405264",
+  "source_report_sha256": "e5dd8dabac6b2ad860f8e4f6ec00ef7fe40d031e68ddaaa4ce951efe4fcd9630",
+  "implementation_sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6",
+  "native_qualified": false,
+  "information": "Full predicted mesh sequence only; no GT, scorer ICP, labels, cameras, or learned weights",
+  "sha256": {
+    "sequence.npz": "ad5028e8b599f38962f13308535f8673be61400d4f109331737c8670f3405264"
+  },
+  "status": "completed",
+  "elapsed_seconds": 0.000541749999683816
+}
