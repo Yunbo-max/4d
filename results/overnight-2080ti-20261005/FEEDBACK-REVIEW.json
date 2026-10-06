@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "review_type": "post_return_metadata_source_and_arithmetic_verification",
+  "source_commit": "8f09779b300604f565d63eca6c4b6c0f14c7408f",
+  "protocol_fingerprint": "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+  "checks": {
+    "captured_remote_blobs": 16,
+    "captured_blob_shas": {
+      "results/overnight-2080ti-20261005/README.md": "39266400842a080a416faf9ac118e350e65db9aa",
+      "results/overnight-2080ti-20261005/REPORT.md": "6593eed4f62688c6f70665bf596ca634fb70f96b",
+      "results/overnight-2080ti-20261005/COMPLETION.md": "d285a60cb152b969f7160d487ca8d8229b4cee42",
+      "results/overnight-2080ti-20261005/window.json": "e5acef699453bd22222cf5f071d2c4238e5ab090",
+      "results/overnight-2080ti-20261005/summary.json": "576643faae10b8f3d684dfab59b321c7c48e3bbb",
+      "results/overnight-2080ti-20261005/queue.json": "6e4ae76b035332c6ea6d1ef45a64d1112e230cf9",
+      "results/overnight-2080ti-20261005/protocol.json": "50fda6f20b81833ee496a6edb5ccb0104234381e",
+      "results/overnight-2080ti-20261005/completion-status.json": "67c54732c9f346b41e76522a291754843606eea0",
+      "results/overnight-2080ti-20261005/completion-verification.json": "703b877fdd4a8947a03a90a1cfcf3e9b487e33d1",
+      "results/overnight-2080ti-20261005/completion-authorization.json": "aa67efea5796bca008c1de39ba2809cdc8952493",
+      "results/overnight-2080ti-20261005/progress-20261005T222233Z.json": "703b877fdd4a8947a03a90a1cfcf3e9b487e33d1",
+      "scripts/overnight_completion/check_completion.py": "2778e071cbee189de1d65f428c74ee15befeec5b",
+      "scripts/overnight_completion/completion.py": "bdb3228c581e1661751170cd8bad8ea8100bc8df",
+      "scripts/overnight_completion/launch_completion.py": "5d61d113d2c721e02df5f5a0c284022e82fbe3be",
+      "scripts/overnight_completion/test_completion.py": "6a9da4983f7a9f88af729c5b4797d432240717aa",
+      "docs/research-overnight/COMPLETION.md": "0c7cdd58f859dedaee1694a7d52d2ac7eb4cdbd9"
+    },
+    "protocol_fingerprint_matches": true,
+    "cohort_queue_summary_ids_match": true,
+    "reported_complete_pairs": 16,
+    "one_completed_successful_attempt_per_unit": true,
+    "runner_source_hash_checks": 15,
+    "native_source_hash_checks": 44,
+    "distinct_local_source_files": 56,
+    "source_hashes_match": true,
+    "paired_differences_and_bootstrap_recomputed": true,
+    "raw_artifact_receipts_replayed": false,
+    "native_metrics_rerun": false,
+    "full_gpu_telemetry_audited": false
+  },
+  "timing": {
+    "started_utc": "2026-10-05T22:00:00.089627+00:00",
+    "last_unit_finished_utc": "2026-10-06T02:01:51.261871+00:00",
+    "completion_finished_utc": "2026-10-06T02:02:09.641503+00:00",
+    "london_started": "2026-10-05T23:00:00.089627+01:00",
+    "london_finished": "2026-10-06T03:02:09.641503+01:00",
+    "elapsed_seconds": 14529.551876,
+    "finished_inside_original_eight_hour_deadline": true,
+    "unit_seconds": {
+      "minimum": 890.716836120002,
+      "mean": 899.2092513810057,
+      "median": 898.7679911990417,
+      "maximum": 910.2362775199581,
+      "sum": 14387.348022096092
+    },
+    "supervisor_minus_pair_timer_seconds": {
+      "minimum": 37.75604759575799,
+      "mean": 38.88790513429558,
+      "maximum": 40.292192245833576
+    },
+    "guardian_handoff_after_all_units_finished": true
+  },
+  "metrics": {
+    "cd_3d": {
+      "n_assets": 16,
+      "mean": -0.024518697245228246,
+      "bootstrap_95_ci": [
+        -0.03569441261744531,
+        -0.015058479142113085
+      ],
+      "scope": "conditional on this development cohort and inference seed; no method verdict",
+      "native_better_assets": 15
+    },
+    "cd_4d": {
+      "n_assets": 16,
+      "mean": -0.06342738921200855,
+      "bootstrap_95_ci": [
+        -0.10265697618782368,
+        -0.030184107753024825
+      ],
+      "scope": "conditional on this development cohort and inference seed; no method verdict",
+      "native_better_assets": 15
+    },
+    "cd_motion": {
+      "n_assets": 16,
+      "mean": -0.14151340583339334,
+      "bootstrap_95_ci": [
+        -0.20797148952260613,
+        -0.08133678324520588
+      ],
+      "scope": "conditional on this development cohort and inference seed; no method verdict",
+      "native_better_assets": 15
+    }
+  },
+  "native_better_on_all_three_metrics_assets": 15,
+  "motion_non_improvement": [
+    {
+      "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+      "native": 0.06364399194717407,
+      "stationary": 0.05980132520198822,
+      "difference": 0.003842666745185852
+    }
+  ],
+  "inspection_priority_largest_native_motion_error": [
+    {
+      "uid": "000-059_ee85486b41c1442aaf35fc2563381ad0",
+      "native_cd_motion": 0.38000285625457764,
+      "scope": "outcome-selected inspection only; not a diagnosed failure mechanism"
+    },
+    {
+      "uid": "000-130_94be397f8db74f7c9c06263aaf988532",
+      "native_cd_motion": 0.3376045823097229,
+      "scope": "outcome-selected inspection only; not a diagnosed failure mechanism"
+    },
+    {
+      "uid": "000-144_0c7abbb8b0e34a34bf1fb783da518664",
+      "native_cd_motion": 0.2500574290752411,
+      "scope": "outcome-selected inspection only; not a diagnosed failure mechanism"
+    }
+  ],
+  "verification_gap": {
+    "published_completion_verification_sha": "703b877fdd4a8947a03a90a1cfcf3e9b487e33d1",
+    "identical_to_progress_snapshot": true,
+    "checked_utc": "2026-10-05T22:22:33.037871+00:00",
+    "verified_complete_pairs": 1,
+    "is_final": false,
+    "reported_completion_supported_by": [
+      "queue.json",
+      "summary.json",
+      "completion-status.json"
+    ],
+    "missing": [
+      "units raw outputs and receipts",
+      "native per-arm score reports",
+      "attempt logs",
+      "preflight environment report",
+      "full gpu telemetry"
+    ]
+  },
+  "scientific_gate_pass": false,
+  "candidate_methods_tested": false,
+  "review_effect": "Records evidence and next scheduling design only. Does not modify generation, metrics, historical snapshots or current runner behavior."
+}

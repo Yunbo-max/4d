@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "measured_prior_for_next_design_not_consumed_by_current_runner",
+  "source_commit": "8f09779b300604f565d63eca6c4b6c0f14c7408f",
+  "source_run": "overnight-2080ti-20261005",
+  "protocol_fingerprint": "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+  "evidence": "Published queue elapsed_seconds; metrics and protocol checked against captured Git blobs. Raw receipt replay and peak telemetry remain pending.",
+  "gpu": {
+    "uuid": "GPU-e9d01956-88db-b317-ea53-be3fb6cf7190",
+    "physical_index": "0",
+    "name": "NVIDIA GeForce RTX 2080 Ti",
+    "total_mib": 22528,
+    "total_gib": 22
+  },
+  "workers": 1,
+  "compatible_work_unit": "one asset: native generation, same-anchor stationary control, both official scoring arms, source/input/weight checks and complete receipt",
+  "compatible_inference": {
+    "frames": 16,
+    "stage0_steps": 100,
+    "stageI_steps": 30,
+    "cfg": 7.5,
+    "seed": 42,
+    "low_ram": true,
+    "dtype": "float16",
+    "weights_frozen": true
+  },
+  "compatible_evaluation": {
+    "scorer": "official ActionBench compute_chamfer_3d_4d",
+    "frames": 16,
+    "sampling_seed": 44,
+    "surface_samples": 100000,
+    "icp_samples": 10000,
+    "icp_rotations": 24,
+    "icp_iterations": 200,
+    "metrics": [
+      "cd_3d",
+      "cd_4d",
+      "cd_motion"
+    ]
+  },
+  "unit_seconds": {
+    "minimum": 890.716836120002,
+    "mean": 899.2092513810057,
+    "median": 898.7679911990417,
+    "maximum": 910.2362775199581,
+    "sum": 14387.348022096092
+  },
+  "supervisor_minus_pair_timer_seconds": {
+    "minimum": 37.75604759575799,
+    "mean": 38.88790513429558,
+    "maximum": 40.292192245833576
+  },
+  "pair_timer_limitation": "Excludes work before worker started timer and after pair.json was written; do not use it for whole-unit admission.",
+  "observed_window_seconds": 14529.551876,
+  "observed_preflight_seconds": 81.43359743896872,
+  "scheduling_recommendation": {
+    "history_multiplier": 1.35,
+    "initial_compatible_unit_prior_seconds": 1229,
+    "report_window_seconds": 28800,
+    "preflight_verification_feedback_reserve_seconds": 1800,
+    "conservative_same_protocol_unit_capacity": 21,
+    "estimate_rule": "ceil(1.35 * max(compatible historical and current whole-unit elapsed_seconds)); allow below the legacy 2400s floor.",
+    "example_core_equivalent_units": 21,
+    "example_ready_reserve_equivalent_units": 8,
+    "example_is_not_a_frozen_cohort": true,
+    "admission_rule": "Start one complete scientific comparison only when remaining authorized execution time >= its family estimate + 1800s reserve.",
+    "reserve_activation": "Only predeclared, data-ready, scientifically qualified work; activate by capacity/readiness, never by observed favorable effects.",
+    "invalidate_for": [
+      "different GPU capacity or environment",
+      "new algorithm or additional arms",
+      "changed frame count, steps, precision or model",
+      "changed evaluator, sampling or output verification"
+    ],
+    "new_family_calibration": "Measure 2-3 complete comparisons with all planned arms; include these in the frozen denominator and total budget. Do not transfer this one-arm-generation-plus-static prior blindly."
+  },
+  "gpu_memory_evidence": {
+    "sample_utc": "2026-10-05T22:22:33.133735+00:00",
+    "used_mib": 10255,
+    "full_run_peak_mib": null,
+    "fit_on_11gib_established_by_this_run": false
+  },
+  "future_execution_authorization": {
+    "status": "not_launched_or_authorized_by_this_review",
+    "report_boundary_hours": 8,
+    "total_execution_limit": "record in the next run manifest; historical continuation authorization binds the old 16-asset inventory only"
+  },
+  "scientific_limits": {
+    "candidate_method_tested": false,
+    "gate_pass": false,
+    "strong_baseline_qualified": false,
+    "scope": "baseline qualification and development census"
+  },
+  "current_runner_implementation": {
+    "changed": false,
+    "still_has_2400_second_floor": true,
+    "still_has_fixed_16_asset_inventory": true,
+    "profile_loaded_by_runner": false
+  }
+}
