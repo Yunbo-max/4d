@@ -5,9 +5,9 @@ development census on one RTX 2080 Ti. Every asset has native ActionMesh
 generation, a same-anchor stationary control, and both official scoring arms.
 
 The published queue, summary and completion supervisor report all 16 pairs
-complete. The completion collector validates receipts on the GPU workspace;
-the raw artifacts and a final 16-pair verification packet have not been published
-here. See [the returned-feedback review](../../docs/research-overnight/FEEDBACK-20261006.md).
+complete. A later W0 check on the GPU workspace verified all 16 pair/receipt
+records and produced the small checkpoint listed below; the raw per-frame
+artifacts remain on the GPU workspace. See [the returned-feedback review](../../docs/research-overnight/FEEDBACK-20261006.md).
 No candidate method, training, or perception/QA suite was included in this
 protocol. The original eight-hour window is retained as historical provenance;
 the user-authorized continuation record allowed the finite inventory to finish
@@ -34,6 +34,11 @@ Key artifacts:
 - `completion-authorization.json`, `completion-status.json`: continuation provenance.
 - `completion-verification.json`: early progress/source verification at 22:22 UTC,
   with one verified pair; identical to `progress-20261005T222233Z.json`, not final verification.
+- `w0-final-verification-20261006.json`: later read-only W0 check with all 16
+  pair/receipt records verified; SHA256
+  `bfa57d882ab9b45abe93c41ed42596e2a17dac3abc720722b3f9f9363d8d5e7b`.
+- `w0-final-checkpoint-20261006.tar.gz`: 48 KiB W0 checkpoint; SHA256
+  `daa0444db6474cc6974c8f56bfae50a2e64519e017d8e24c4f804ca953a3d4e6`.
 - `FEEDBACK-REVIEW.json`: source, denominator, timing and arithmetic checks on
   the returned metadata; raw receipt replay remains pending.
 

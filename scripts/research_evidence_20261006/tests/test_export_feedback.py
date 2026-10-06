@@ -53,7 +53,10 @@ class ReceiptTransport(unittest.TestCase):
     def setUp(self):
         self.temporary = tempfile.TemporaryDirectory()
         self.addCleanup(self.temporary.cleanup)
-        self.root = Path(self.temporary.name) / "project"
+        # macOS exposes /var through a system symlink to /private/var. Resolve
+        # the fixture root so the exporter tests only exercise links created by
+        # the fixture, not the host's canonical temporary-directory alias.
+        self.root = Path(self.temporary.name).resolve() / "project"
         self.run = self.root / "outputs" / "original"
         self.run.mkdir(parents=True)
         self.dest = self.root / "outputs" / "export"
