@@ -1,0 +1,182 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c05",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+    "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or formal theorem review",
+  "reviewed_at": "2026-10-06T13:15:59.771836+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Conditional proofs and interface reading only. Natural prevalence, calibration, originality, candidate implementation and native effects unverified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Keep a declared coordinate candidate bank distinct from a latent attention row and the actual native direct-coordinate output.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "B05 variance identity requires an explicitly defined coordinate distribution; H06 nonlinear noncommutation refutes an unjustified bridge. Neither establishes natural multimodality.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "Variance identity is retained; equal logits 0 and 2 prove decode/mean noncommutation. Nearby sphere points show that localized blending implies convex-hull inclusion, not surface inclusion, with second-order radial deficit. The finite label energy remains nonconvex and has no global or posterior guarantee.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "STAC-style surface support, chain extraction, hints and common lifting backend remain unqualified. Normalized scores are not assumed to be calibrated material posterior probabilities.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Spatial joint labels remain conditional on a real supported candidate bank. No phantom mode-return API or author-code reproduction is claimed.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "Mean/projected-mean/top-1/joint compare identical candidate support and cost. Curvature/candidate-spread prediction is conditional; lack of real candidate modes or gain over direct projected-mean prevents claiming that joint selection is needed merely to avoid off-surface averaging.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "STAC Eq2-4 and its landmark/Gaussian/rigid lift are read as the direct comparator. Generic labeling and scalar temperature are attributed; function-level collision review remains open.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    }
+  }
+}

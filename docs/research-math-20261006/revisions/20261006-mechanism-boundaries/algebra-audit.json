@@ -1,0 +1,49 @@
+{
+  "kind": "finite-mathematical-witnesses",
+  "numpy_version": "2.3.5",
+  "projection": {
+    "finite_random_instances": 40,
+    "max_identity_residual": 6.039613253960852e-14,
+    "redundant_rows_checked": true,
+    "equal_norm_scalar_gain_inequality": true
+  },
+  "phase_amplitude": {
+    "principal_angle_instances": [
+      {
+        "angle_radians": 0.1,
+        "kappa": 0.009966711079379185,
+        "noise_gain": 10.016686131634776
+      },
+      {
+        "angle_radians": 0.3,
+        "kappa": 0.08733219254516084,
+        "noise_gain": 3.383863361824123
+      },
+      {
+        "angle_radians": 0.8,
+        "kappa": 0.5145997611506444,
+        "noise_gain": 1.394007819388636
+      },
+      {
+        "angle_radians": 1.2,
+        "kappa": 0.8686968577706227,
+        "noise_gain": 1.0729163777098973
+      }
+    ],
+    "identical_prediction_different_phase_amplitude": true,
+    "ridge_invertible_despite_unidentifiable_data": true
+  },
+  "nonlinear_mean": {
+    "decode_mean": 0.46211715726000974,
+    "mean_decode": 0.3807970779778824
+  },
+  "localized_surface_mean": {
+    "radius": 2.0,
+    "angle": 0.1,
+    "chord": 0.3993336665873126,
+    "radial_deficit": 0.009991669443948359
+  },
+  "scope": "Finite arithmetic checks accompany written proofs; not a general theorem verifier or scientific benchmark evaluation.",
+  "native_scorer_executed": false,
+  "candidate_method_implemented": false
+}

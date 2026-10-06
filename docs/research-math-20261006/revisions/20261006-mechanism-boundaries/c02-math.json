@@ -1,0 +1,135 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c02",
+  "name_zh": "保留动作特征的几何近端更新",
+  "formal_object": "Flattened trajectory y in R^(3TV); desired geometry repair d; fixed positive definite metric W; linear protected-feature operator C including anchor rows.",
+  "operations": [
+    {
+      "id": "D01",
+      "input": "min_delta .5(delta-d)^T W(delta-d), C delta=0",
+      "condition": "W positive definite; C fixed before repair",
+      "condition_status": "conditional",
+      "output": "KKT metric projection"
+    },
+    {
+      "id": "H02",
+      "input": "ker C and row space C",
+      "condition": "Protected features are explicitly chosen; not all velocities",
+      "condition_status": "conditional",
+      "output": "Only directions in ker C remain editable"
+    },
+    {
+      "id": "C04",
+      "input": "W-orthogonal repair decomposition",
+      "condition": "fixed SPD W and d; d nonzero for rho",
+      "condition_status": "conditional",
+      "output": "exact constrained geometry cost and matched-step scalar comparator"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "Stationarity gives W(delta-d)+C^T lambda=0.",
+      "justification": "Differentiate the convex quadratic with equality constraints."
+    },
+    {
+      "id": "s2",
+      "statement": "C W^-1 C^T lambda=C d.",
+      "justification": "Insert delta=d-W^-1 C^T lambda into feasibility."
+    },
+    {
+      "id": "s3",
+      "statement": "delta*=d-W^-1 C^T(C W^-1 C^T)^dagger C d; C delta*=0.",
+      "justification": "C d lies in the range of the Gram operator; pseudoinverse handles redundant constraints."
+    },
+    {
+      "id": "s4",
+      "statement": "If C has full column rank then delta*=0.",
+      "justification": "A full-rank observation operator has a zero nullspace; protection may forbid repair."
+    },
+    {
+      "id": "s5",
+      "statement": "For q(delta)=.5 delta^T W delta-delta^T Wd, p=P_W d and r=d-p satisfy p^T W r=0.",
+      "justification": "Cp=0 and r=W^-1 C^T G^dagger Cd give p^TWr=(Cp)^T G^dagger Cd=0."
+    },
+    {
+      "id": "s6",
+      "statement": "q(0)-q(p)=.5||p||_W^2 and q(p)-q(d)=.5||d-p||_W^2.",
+      "justification": "Expand the fixed quadratic and use d=p+r with W-orthogonal components."
+    },
+    {
+      "id": "s7",
+      "statement": "For d!=0, rho=||d-p||_W^2/||d||_W^2 is in [0,1]; the constrained/unconstrained local improvement ratio is 1-rho.",
+      "justification": "Weighted Pythagoras. If Cd=0 then p=d; full column rank C gives p=0."
+    },
+    {
+      "id": "s8",
+      "statement": "Choose scalar s=sqrt(1-rho). Then ||sd||_W=||p||_W and q(0)-q(sd)>=q(0)-q(p), but C(sd)=s Cd.",
+      "justification": "The respective improvement coefficients are (2s-s^2)/2 and s^2/2; their difference s(1-s)>=0. Direction protection must be distinguished from merely taking a smaller step."
+    },
+    {
+      "id": "s9",
+      "statement": "If C=Dpsi(y) and ||D^2 psi||<=L locally, Cp=0 implies ||psi(y+p)-psi(y)||<=L||p||_2^2/2.",
+      "justification": "Taylor remainder in a declared vector observation. This is not exact nonlinear preservation or a native metric bound."
+    }
+  ],
+  "assumptions": [
+    "W is symmetric positive definite and is frozen while the subproblem is solved.",
+    "C protects specified coarse motion moments inferred from permitted inputs/model outputs, not ground-truth motion.",
+    "Preserving C y does not preserve every motion or the official CD-M.",
+    "d comes from a declared geometry surrogate; no evaluation labels enter inference.",
+    "Fixed local quadratic q is not the full nonlinear native score.",
+    "For nonlinear protected observations, derivative preservation leaves a conditional O(step squared) remainder."
+  ],
+  "method_expression": "Compute a geometry-only desired step d, then apply its W-orthogonal projection into ker C; retain exact anchor constraints.",
+  "distinguishing_prediction": "Protected linear motion moments stay unchanged while unprotected geometry directions move; benefit should vanish when ker C is trivial. The projected local quadratic gain fraction is 1-rho; equal-W-norm scalar shrinkage has at least its geometry gain but generally changes C y.",
+  "falsifier": "Reject necessity if the same native geometry/motion frontier is achieved by an equal-cost unconstrained/strength-matched repair, or if protected moments have no relationship to the native motion endpoint.",
+  "closest_alternative": "Classical equality-constrained proximal projection; geometry-only repair and simple displacement blend; SFG local/global motion decoupling means separation alone cannot be the contribution.",
+  "decisive_comparison": "Native ActionMesh, same geometry repair without C, projected repair, and scalar-blend replacement at matched repair cost/tuning; freeze C before confirmation. Also match W-step norm using s=sqrt(1-rho), log Cd/Cdelta/rho and distinguish those diagnostics from full native scores.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+      "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+      "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+    }
+  ],
+  "operational_delta": "Changes the admissible update subspace rather than adjusting a global regularization strength; classical projection is attributed.",
+  "feasibility_and_cost": "Sparse/low-rank C products and small Gram solve; otherwise a full 3TV matrix is inadmissible. Requires native baseline and strongest-simple qualification.",
+  "structural_signature": "Deterministic equality-constrained repair in output trajectory space.",
+  "algebra_review_basis": "Re-derived KKT solution; verified redundant-row and full-rank limits. Avoided the false claim that protecting all velocities leaves useful deformation freedom.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed.",
+  "revision": {
+    "revision_id": "mechanism-boundaries-r2",
+    "authored_at": "2026-10-06T13:15:59.771836+00:00",
+    "supersedes_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c02.json",
+      "sha256": "7559bb57d4eb577ceac0fcec07bfdfa1d8ffb68035e4a48ce2d8d42c71db6af0"
+    },
+    "scope": "Conditional mathematical and interface revision; no native experiment or implementation."
+  }
+}

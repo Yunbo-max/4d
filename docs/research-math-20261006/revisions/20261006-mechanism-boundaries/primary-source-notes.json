@@ -1,0 +1,30 @@
+{
+  "kind": "primary-reading-and-interface-notes",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T13:15:59.771836+00:00",
+  "native_source_ref": {
+    "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+    "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+  },
+  "native_read_scope": "apply_displacement, fwd_cross_attn and forward; no model weights executed.",
+  "native_observation": "The pinned public return interface produces one coordinate per query and target time. Cross-attention produces hidden features followed by projection and sigmoid; it does not return finite semantic coordinate modes and calibrated probabilities.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2605.19786v1",
+      "title": "Fast 4D Mesh Generation by Spatio-Temporal Attention Chains",
+      "read_scope": "Re-read Sections 4.1 and 4.2, Eq. (2)-(4), candidate scoring, sharp blend and landmark lift. No author implementation executed.",
+      "bounded_note": "This is a concrete attention-chain candidate construction and a necessary simple comparator. Its coordinate candidates are not the native ActionMesh temporal decoder output; a normalized score alone does not prove calibrated material correspondence."
+    },
+    {
+      "url": "https://web.stanford.edu/class/ee364a/lectures/equality.pdf",
+      "title": "Convex Optimization, equality constrained minimization",
+      "read_scope": "Slides 10.1-10.3 and start of Newton-step discussion (PDF pages 3-5 and 8).",
+      "bounded_note": "KKT and elimination are classical. The weighted projection cost ratio and principal-angle noise calculation here are independently derived scoped algebra, not claimed novel theorems."
+    }
+  ],
+  "prior_reading_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/primary-source-notes.json",
+    "sha256": "b973f94011c89be8a3e51ec51c4602f6ec6694330049a4070d36793db346d59a"
+  },
+  "novelty_status": "Unadjudicated; no exhaustive collision search or author-code qualification."
+}

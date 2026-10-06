@@ -1,0 +1,133 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c08",
+  "name_zh": "端点约束的轨迹分布桥",
+  "priority_rank": 13,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T13:15:59.771836+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+    "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c08-math.json",
+    "sha256": "8662ec642b8d778740bc7ff5586e4e60559a47c4a0e05a9660cacc5d38788372"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+    "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
+      "sha256": "fd579da74537118c06cac23845566aeff4d47562c4223993e818501c40020626"
+    }
+  ],
+  "prior_art_and_role": "Classical Schrödinger/IPF bridge; local Markov tracking; historical m02 decoder cycle consistency acts on a different object.",
+  "planned_interface": {
+    "inputs": [
+      "qualified sparse Markov kernels and initial probabilities",
+      "legal model-derived endpoint distributions",
+      "support feasibility and common path-decision/lift policy"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Stationarity of KL plus endpoint multipliers yields P*(path)=u(i_1) Q(path) v(i_T).",
+      "planned_function": "4d_math_20261006_c08.form_endpoint_kl_law",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Forward/backward messages compute endpoint marginals without enumerating all paths.",
+      "planned_function": "4d_math_20261006_c08.forward_backward_messages",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "Alternate endpoint scaling until both marginal residuals close.",
+      "planned_function": "4d_math_20261006_c08.close_endpoint_scalings",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "local_transition_tracker",
+      "coordinate_smoother",
+      "decoder_cycle_control",
+      "endpoint_bridge"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Future endpoint evidence can change intermediate correspondence paths without only smoothing coordinates; benefit should disappear when endpoint evidence is uninformative.",
+    "falsifier": "Reject if a local transition smoother or historical decoder-cycle repair with equal inference budget supplies the same native benefit.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "actual sparse reference chain and informative endpoints",
+    "support-feasible endpoint bridge",
+    "same-information local/cycle comparators and whole-path decision",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c08.json",
+    "sha256": "f14e1043da749f6991cbe6bf9b32623e3fecb6460b42dd9845d78f7eb39c8164"
+  }
+}

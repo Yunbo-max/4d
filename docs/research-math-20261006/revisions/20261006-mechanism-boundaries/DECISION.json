@@ -1,0 +1,62 @@
+{
+  "kind": "research-continuation-decision",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T13:22:42.820049+00:00",
+  "project_repository": "Yunbo-max/4d",
+  "base_commit": "036b15e99c5816bd353c56a6491c85de47003d3e",
+  "current_nodes": [
+    "H03",
+    "M02"
+  ],
+  "decision": "retain_same_20_constructions_and_15_membership; revise_three_math_cards_and_priority; investigate_baseline/native_target_qualification_before_candidate_implementation",
+  "rationale": "C02 protection has an exact local geometry cost and a strength-matched scalar alternative. C20 numerical ridge invertibility does not establish phase/amplitude information, with principal-angle noise amplification. C05 coordinate mixture semantics do not follow from the native decoder interface, and localized blend only guarantees convex-hull inclusion.",
+  "evidence_refs": [
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+      "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
+      "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+      "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/verification-report.json",
+      "sha256": "c18c2f3e8ca5eacdf7b7d77f966f2f4a0bf2c643d60888af56af77a82b4f6c79"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/artifact-integrity.json",
+      "sha256": "36728b7e2b252c3d9c36ed7b7a034c9832023be96ff369cc2e6e6987280da3cf"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/w0-feedback-review.json",
+      "sha256": "51f1fe7c1eb3ac44a53a6bf761375f2a267022be24891a19d50eb8fb1c9ee178"
+    }
+  ],
+  "resource_limits": {
+    "gpu_count": 1,
+    "requested_gpu": "RTX 2080 Ti",
+    "window_seconds": 28800,
+    "closeout_reserve_seconds": 1800,
+    "native_multiarm_cost": "unmeasured",
+    "current_host_gpu_connection": false,
+    "new_compute_spend_authorized_or_started": false
+  },
+  "next_discriminating_action": "On original GPU host export final raw closure with existing exporter; unchanged native replay and qualify strongest original-mesh simple comparators. C02 requires equal-W-norm scalar arm; bank/phase branches require real targets/interfaces first.",
+  "scientific_obligations_remaining": [
+    "Natural Gate 0 PASS",
+    "current qualified Parent Problem",
+    "functional collision/IPCG CONCURRENT",
+    "strongest simple native baseline",
+    "legal targets and information budget",
+    "prospective family split and numeric effect/NI/precision freeze",
+    "complete native comparisons and E04"
+  ],
+  "outcome": "pending, not successful or scientifically refuted",
+  "capture_scope": "Explicit saved decision note; not a full native transcript, remote GPU record or shared fleet checkpoint.",
+  "upstream_feedback_commit": "e874f6497318e791bec00ce2d9482aa35d93f5cf",
+  "upstream_feedback_observation": "16 pair JSON hashes match final receipts and prior published metric vectors; 352 referenced stage/raw members absent from small checkpoint. Upstream fixture change preserved."
+}

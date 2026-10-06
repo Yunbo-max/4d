@@ -1,0 +1,532 @@
+{
+  "kind": "method-selection",
+  "version": "1.0.0",
+  "batch_id": "4d-math-20261006-mechanism-boundaries-r2",
+  "pool_target": 20,
+  "selection_target": 15,
+  "math_bindings": [
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
+        "sha256": "6df45ce3122df46c583231602a41f92eb0f32cea06e81dd2b1d6c02eb762a93e"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c01-math.json",
+        "sha256": "013a9c561c0e194aa2171f69f6bad95f610822a2756c30ec6ec9054ad9267ac0"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c02",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+        "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-review.json",
+        "sha256": "8230d4bf18c06c4b4997c427c5888b68451f9ca3abdf5b3fc28ba7fe9bf8fd33"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+        "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+        "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c04",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
+        "sha256": "d22fa4a56610b3abaee5ba863729431bf06b59386c67fe9948c8061bc07d98fa"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c04-math.json",
+        "sha256": "2578c6f63c4eb7cff70921301cdd4325785aa8d79530a0fe2214f391d476987d"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+        "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-review.json",
+        "sha256": "e7ad3567922d57d4c9beef78469efd6acdd4b7d9b0d0ec7caf0cf6442a360747"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c06",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
+        "sha256": "4b38b4752d81535725f96f513b5d4fb585d52308efda44a331fc90c14c8d03f9"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c06-math.json",
+        "sha256": "791e03d35227cb16c50dd2c68552bb59d34c312d0d7460d8334f2bd6e03db656"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+        "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c07-math.json",
+        "sha256": "4bdeef6356922e50c5f476668b30ab5026c02923f8409a7d438892127ebaa163"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+        "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c08-math.json",
+        "sha256": "8662ec642b8d778740bc7ff5586e4e60559a47c4a0e05a9660cacc5d38788372"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c09",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+        "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c09-math.json",
+        "sha256": "dc071822227004d381ab339e2115a7f93884f6edfc9f4294742cc5cd759e22f7"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c10",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
+        "sha256": "a92d7331b59e1e9c78e3d8811d3240c1ab1137dfac97da142acd63ee1f72d173"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c10-math.json",
+        "sha256": "e64132a47b3331ae5b701a01eff9bd94fe319b07b1853d7db43f94ae32c1a54f"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c11",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c11.json",
+        "sha256": "fa863defd6620c99aa0767b1df2dde8f57e50dc1b54385b7b2dba05d7026f3b3"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c11-math.json",
+        "sha256": "236bba4ea916003e3060c1c8faef6db4976704a3ddd79233cd4353d6df95bb42"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
+        "sha256": "893238c0e767ccff25dd1b82c4770b6373c0e8a71c62d3c3a1fefe34ad354500"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c12-math.json",
+        "sha256": "1a3bab65f877119e9eb0e43adcf31d4b157f9c1f577fd3e70eb1b871e8078032"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c13",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+        "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
+        "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c14",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
+        "sha256": "4e8eabce07534f07382ddbd0b4433d4ad9d9589abf3cd1690187de72b1bcffbb"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c14-math.json",
+        "sha256": "52fbceeb3ffdd8230274c0154c4aea9f57921ba90ead1d8275bb3fb137ee81a8"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c15",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c15.json",
+        "sha256": "b57035b5d65e922d0c0f6b1fd7f7734a2fc622841fb83337099fee122fce8241"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c15-math.json",
+        "sha256": "c077b09546bc9783ad974c7ad295d640f9645b2372de97aff86bc147ac7e7eac"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c16",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+        "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c16-math.json",
+        "sha256": "2050de283574110e030efb6f94dfb0bafed219d711ca00b3f0f9be2c344eacbb"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c17",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+        "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c17-math.json",
+        "sha256": "bb5cf814e3810f3867287ea037247e6b75f5054d0c7fd407526493db085df99d"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c18",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+        "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c18-math.json",
+        "sha256": "48ebc781e992f89ae4d68929f47cd2f451798862721267f9eb49bd617ee1e3cf"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c19",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+        "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c19-math.json",
+        "sha256": "62c47364393ce081a0d89931c69dd854bbaef7244a5e6caf8a7297b5bc7c34b9"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c20",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+        "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-review.json",
+        "sha256": "9253b377b9adaf4e8173595673e2fea36c89b17dda71d82437336a296cbe69a9"
+      }
+    }
+  ],
+  "ranking": [
+    {
+      "rank": 1,
+      "candidate_id": "4d-math-20261006-c02",
+      "rationale": {
+        "problem_value": "优先级 1：直接提出几何修复可用空间与动作保护之间的可识别边界；便于与强普通修复作同目标对照。",
+        "mathematical_consequence": "Differentiating the strictly convex W-quadratic yields the KKT system. The Gram pseudoinverse is legitimate because Cd lies in its range, including redundant C rows. An independently parameterized nullspace least-squares witness agrees. Full column rank C eliminates all repair freedom, so protecting every velocity is not proposed. Choose scalar s=sqrt(1-rho). Then ||sd||_W=||p||_W and q(0)-q(sd)>=q(0)-q(p), but C(sd)=s Cd. If C=Dpsi(y) and ||D^2 psi||<=L locally, Cp=0 implies ||psi(y+p)-psi(y)||<=L||p||_2^2/2.",
+        "closest_work_delta": "Classical equality-constrained proximal projection; geometry-only repair and simple displacement blend; SFG local/global motion decoupling means separation alone cannot be the contribution. Changes the admissible update subspace rather than adjusting a global regularization strength; classical projection is attributed. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Protected linear motion moments stay unchanged while unprotected geometry directions move; benefit should vanish when ker C is trivial. The projected local quadratic gain fraction is 1-rho; equal-W-norm scalar shrinkage has at least its geometry gain but generally changes C y. Decisive comparison: Native ActionMesh, same geometry repair without C, projected repair, and scalar-blend replacement at matched repair cost/tuning; freeze C before confirmation. Also match W-step norm using s=sqrt(1-rho), log Cd/Cdelta/rho and distinguish those diagnostics from full native scores.",
+        "feasibility_and_cost": "Sparse/low-rank C products and small Gram solve; otherwise a full 3TV matrix is inadmissible. Requires native baseline and strongest-simple qualification. No full native cost or live GPU allocation is currently established. 本轮排序依据：保护的局部代价与缩步强对照已明确；native motion relevance 仍待检验。"
+      }
+    },
+    {
+      "rank": 2,
+      "candidate_id": "4d-math-20261006-c01",
+      "rationale": {
+        "problem_value": "优先级 2：低额外解码成本、严格自映射边界，是参考误差诊断及C03必要强对照；SFG已有差分锚定，本条目前不能按原创贡献计。",
+        "mathematical_consequence": "Substitution gives H_a=x and cancels a target-time-shared additive field. The full squared-risk expansion keeps E[e_t^T e_a]; improvement requires a positive cross term exceeding half the self-error power. This is not an unsquared Chamfer or CD-M inequality. Direct-coordinate semantics are matched to the pinned decoder.",
+        "closest_work_delta": "Uncorrected ActionMesh; simple mean-bias correction; SFG already anchors latent sampling trajectories by initial shape plus differences (Eq.2). Historical m02 checks decoder cycles, not this shared-bias risk criterion. The decoded-coordinate variant is a diagnostic/baseline until a material functional delta is established. Exact boundary and nuisance-invariance consequence; novelty beyond existing boundary correction remains pending. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "The correction should help when self-map error positively predicts downstream error strongly enough to exceed half its own squared magnitude; zero self-map residual gives no change. Decisive comparison: Same latent/context/seed, full native ActionBench scoring; F_t versus H_t versus mean-bias fit; all arms pay the self-query cost or receive equal total budget.",
+        "feasibility_and_cost": "One additional decoder target-time query per cached context; no training. Cache/replay and full-mesh timing must be qualified. No full native cost or live GPU allocation is currently established. 本轮排序依据：原生坐标与同上下文 self-map 接口明确，优先作为固定校正对照，不冒称原创。"
+      }
+    },
+    {
+      "rank": 3,
+      "candidate_id": "4d-math-20261006-c10",
+      "rationale": {
+        "problem_value": "优先级 3：将局部差分修复投影为可积全局场；可作为所有对应分支的共同重建基础和独立约束比较。",
+        "mathematical_consequence": "With delta=Sz, differentiation gives the reduced normal equations and weighted residual orthogonality. QR agrees on a pinned finite graph. A disconnected or unconstrained gauge needs explicit treatment. Integrability projects inconsistent differential targets and provides no face-flip or self-intersection guarantee.",
+        "closest_work_delta": "Classical gradient-domain/ARAP deformation and direct rigid-skinning lift. A global differential compatibility constraint differs from independent local rotations; the solver class is not new. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Benefit should track the inconsistent component of h; already integrable fields should require no projection change apart from numerical error. Decisive comparison: Common h: direct lift, qualified ARAP and integrable-field solve; all original times/vertices and native scores, plus solver residual retained as an internal check.",
+        "feasibility_and_cost": "Sparse CPU/GPU Laplacian solve with one factorization reused across times; native template and safe update constraints require qualification. No full native cost or live GPU allocation is currently established. 本轮排序依据：对原完整 mesh 差分场的可积性修复可明确落到稀疏系统；需击败普通 Poisson/ARAP。"
+      }
+    },
+    {
+      "rank": 4,
+      "candidate_id": "4d-math-20261006-c13",
+      "rationale": {
+        "problem_value": "优先级 4：替换高斯平滑的时间先验，检验真实急变与抖动的区别；经典趋势滤波撞车风险高。",
+        "mathematical_consequence": "The vector group norm has a Euclidean dual ball, changing the prior from uniform quadratic acceleration. On y=y_p+Sz, stationarity keeps S^T M(y_p+Sz-yhat), including anchor and off-diagonal metric contributions. Physical timestep scaling is explicit. No event recovery or real-motion preservation is proved.",
+        "closest_work_delta": "Classical trend filtering and STAC Gaussian temporal smoothing. Changes the temporal regularity prior and dual constraint, not the Gaussian bandwidth; existing trend filtering is attributed. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Sparse abrupt changes should survive better than equal-strength Gaussian smoothing; smooth high-frequency real motion can be a failure boundary. Decisive comparison: Base, confidence-weighted Gaussian smoothing, quadratic acceleration repair and group-trend repair; native scoring only, matched development tuning.",
+        "feasibility_and_cost": "Banded temporal optimization per coordinate group; likely cheaper than re-generation, but full mesh/scoring time is unmeasured. No full native cost or live GPU allocation is currently established. 本轮排序依据：原时间与坐标可直接进入事件型时序对照；不需虚构对应 bank，仍需击败普通 smoothing。"
+      }
+    },
+    {
+      "rank": 5,
+      "candidate_id": "4d-math-20261006-c14",
+      "rationale": {
+        "problem_value": "优先级 5：通过共转坐标保留精确刚体动作；SFG已有root-space解耦，本条以强简单对照角色入选，只有额外功能差异成立才继续方法研究。",
+        "mathematical_consequence": "At fixed orthogonal R_t and c_t, the body transform is invertible. Exact rigid animation gives zero residual, so a zero-preserving repair retains its pose for arbitrary time-varying R_t. The witness assumes exact factors and establishes no quality of fitted pose or articulated decomposition.",
+        "closest_work_delta": "Classical corotational deformation and pose-factored smoothing; STAC local rigid fitting; SFG root-space local/global decomposition. Treat basic pose factoring as a strong simple baseline, not a new contribution. An invariance-preserving coordinate choice; a basic rigid-aligned smoother may already close the gap. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Pure rigid rotation/translation should be preserved by construction; improvement versus world smoothing should depend on pose variation rather than merely noise magnitude. Decisive comparison: World-coordinate smoothing, rigid-aligned simple smoothing and the declared body-residual operator under the same fitting/repair budget; full native metrics.",
+        "feasibility_and_cost": "Rigid fits and banded temporal solve; native pose-estimation reliability is unknown. No full native cost or live GPU allocation is currently established. 本轮排序依据：经典共转修复优先用于 strong-baseline 资格；位次不证明新贡献。"
+      }
+    },
+    {
+      "rank": 6,
+      "candidate_id": "4d-math-20261006-c04",
+      "rationale": {
+        "problem_value": "优先级 6：在C02基础上检验不确定方向的最坏情形约束是否必要；须先证明不确定集有实际意义。",
+        "mathematical_consequence": "The ellipsoid support is attained with u parallel to S^(1/2)delta and the sign of g0^Tdelta. Hence the absolute robust inequality is conic. A finite smooth step adds L||delta||^2/2; merely satisfying a linearized surrogate budget cannot promise native CD-M noninferiority or probabilistic coverage.",
+        "closest_work_delta": "Classical robust conic optimization; deterministic constrained repair and C02 are direct controls. Adds a worst-case uncertainty set with an attainable support-function bound; this is not an automatic native safety guarantee. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "As uncertainty radius grows, admissible updates contract in uncertain directions; fixed-equality C02 cannot model this confidence-dependent tradeoff. Decisive comparison: Same native assets, deterministic budget versus ellipsoidal budget, and shrinkage replacement; compare official scores and complete cost under frozen uncertainty calibration.",
+        "feasibility_and_cost": "Small structured conic solve after cached output repair. Reliable uncertainty and smoothness bounds are unresolved. No full native cost or live GPU allocation is currently established. 本轮排序依据：稳健保护仍需合法梯度与覆盖，不过对照可直接与 C02 的固定局部 repair 比较。"
+      }
+    },
+    {
+      "rank": 7,
+      "candidate_id": "4d-math-20261006-c03",
+      "rationale": {
+        "problem_value": "优先级 7：相关参考误差仍值得检验，但平方/非平方目标不等价、合法材料对应和跨资产标定未闭合，低于无标定或更直接识别分支。数学边界修订使原第2位降到第7位，不代表实测失败。",
+        "mathematical_consequence": "The true-moment squared identity survives; an exact centered counterexample refutes transfer to unsquared risk. Smoothed affine MM produces a conditional development-only descent theorem, not native efficacy.",
+        "closest_work_delta": "Classical matrix control variates and robust affine IRLS/MM; old correlated code and nested C01. Matching the unsquared simple estimators is required; changing estimator loss is not a new construction or novelty clearance.",
+        "distinguishing_prediction": "If error tails make squared fitting spend capacity on rare large residuals, a legally fitted unsquared-surrogate estimator may improve held-out native CD-M relative to squared fitting at equal labels and budget. This is a conditional prediction; neither descent nor a large ordinary covariance guarantees native improvement. The centered quadratic operator vanishes at C_ta=0 only for its own risk. Decisive comparison: On qualified native data at identical information/budget: original output, strongest simple repair, intercept-only squared and unsquared fits, fixed unit C01, diagonal squared/unsquared correction, full squared correction and full smoothed-unsquared correction. Every arm receives the original full ActionBench scorer; fitting samples are not independent benchmark units.",
+        "feasibility_and_cost": "Legal development decoded-query correspondence, alignment and frozen asset-family calibration are unqualified. Fits and same-context self queries add cost; a complete multi-arm native unit is unmeasured. Not admitted to implementation. 本轮排序依据：保留非平方目标修订；开发材料标定与跨家族转移仍未闭合。"
+      }
+    },
+    {
+      "rank": 8,
+      "candidate_id": "4d-math-20261006-c20",
+      "rationale": {
+        "problem_value": "优先级 8：区分时间相位错配和幅度不足，减少把所有运动误差当坐标噪声的混淆；合法目标尚需资格验证。",
+        "mathematical_consequence": "Weighted phase elimination gives the Schur projection M and the positive-ridge amplitude solve; a full unconstrained block solve agrees. The formula is invalid when time monotonicity constraints are active. Overlapping phase/amplitude spans are unidentifiable and a second-order remainder remains. Native reference timestamps stay fixed. For original t_j and piecewise-linear internal tau, impose tau_(j+1)-tau_j>=-(1-m)(t_(j+1)-t_j), m>0, and zero endpoint offsets. For block-diagonal W=diag(w_i I) and ||Y_i second derivative||<=K_i, ||epsilon_linear||_W<=.5 sqrt(sum_i w_i K_i^2 tau_i^4).",
+        "closest_work_delta": "Classical phase-amplitude registration and Schur projection; simple lag correction, smoothing and displacement scaling. Separates two competing mechanisms instead of interpreting every motion mismatch as coordinate noise; classical registration remains prior art. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Timing-dominated errors should respond to phase correction while amplitude-only shrinkage loses motion; amplitude-dominated errors should show the opposite pattern. In the unregularized local problem whitened target errors can be amplified by exactly 1/sqrt(kappa); ridge numerical solvability does not resolve zero-kappa data ambiguity. Decisive comparison: Base, phase-only, amplitude-only and joint constrained repair with equal fitting/call budget; native CD-M/3D/4D at untouched timestamps and fresh confirmation. Qualify legal targets, gauges, rank, kappa and interpolation remainder before interpreting a decomposition; no evaluator timestamp changes.",
+        "feasibility_and_cost": "Requires a qualified input/model motion target and a bounded nonlinear solve; target access and native method timing remain unresolved. No full native cost or live GPU allocation is currently established. 本轮排序依据：较原第3位降低：目标接口、gauge、kappa 和误差放大先于联合求解投资。"
+      }
+    },
+    {
+      "rank": 9,
+      "candidate_id": "4d-math-20261006-c11",
+      "rationale": {
+        "problem_value": "优先级 9：局部旋转与应变分别处理，作为局部刚性/弹性对照后的研究分支；经典与旧m01覆盖风险很强。",
+        "mathematical_consequence": "For a full-rank, orientation-preserving square map, polar F=RS has proper R and SPD S. Orthogonal invariance reduces the bounded-stretch Frobenius projection to eigenvalue clipping, retaining R locally. A surface triangle does not supply that square map automatically; frame completion and global reintegration remain separate qualified constructions.",
+        "closest_work_delta": "Classical polar strain limiting; historical m01 elasticity; STAC local rigidity. Selectively changes strain instead of all displacements; strong classical/old-module collision risk remains. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Stretch-heavy artifacts should respond more than nearly rigid motion; excessive strain limits should visibly remove legitimate deformations and lose CD-M. Decisive comparison: Native base, ARAP/elastic repair and rotation-preserving stretch projection with identical lift/tuning budgets; inspect all scores and retain invalid-face cases.",
+        "feasibility_and_cost": "Per-face 3x3 decomposition plus a common sparse solve; safe handling of degenerate geometry is required. No full native cost or live GPU allocation is currently established. 本轮排序依据：原 mesh 应变与旋转接口明确，但应变裁剪及积分均是经典 strong-baseline 范围。"
+      }
+    },
+    {
+      "rank": 10,
+      "candidate_id": "4d-math-20261006-c12",
+      "rationale": {
+        "problem_value": "优先级 10：对修复方向进行可解释的面积可行步长准入；可能仅是有价值的工程对照而非论文方法。",
+        "mathematical_consequence": "Bilinearity of the cross product gives an exact quadratic projected-area polynomial along an affine correction. The accepted interval is the component containing zero; crossing roots and tangencies must be distinguished. Original normal projection can reject valid large rotations and is not global injectivity.",
+        "closest_work_delta": "Classical mesh-flip line search and fixed-step damping, not an invented physical simulator. A geometric admissibility algorithm rather than another tuning value; originality and usefulness remain unresolved. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Compared with arbitrary damping, correction size should depend on the first geometric feasibility boundary; already safe updates should be unchanged. Decisive comparison: Common desired update with fixed damping, generic backtracking and exact quadratic admission; native scores on the complete denominator and all rejected attempts.",
+        "feasibility_and_cost": "Linear face traversal plus scalar roots; cannot solve all global mesh validity issues. No full native cost or live GPU allocation is currently established. 本轮排序依据：面安全可直接作用于同一原 mesh，属于明确安全对照，native 动作收益仍未知。"
+      }
+    },
+    {
+      "rank": 11,
+      "candidate_id": "4d-math-20261006-c15",
+      "rationale": {
+        "problem_value": "优先级 11：在低秩修复中保护固定动作分量，避免仅靠删除动作得分；须比较普通受保护低秩估计。",
+        "mathematical_consequence": "The orthogonal residual is in ker Q. Its nonzero left singular vectors stay there, so residual SVT solves the nuclear-norm proximal problem and Q U is unchanged. Including the anchor basis preserves that row without a post-hoc pin. The low-rank motion prior remains empirically unqualified.",
+        "closest_work_delta": "Classical singular-value thresholding; whole-animation latents in Mesh4D are adjacent prior art, not this estimator's novelty proof. Changes the estimator's protected subspace and residual prior; distinct from C02's projection of a prescribed geometry step. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Protected motion components and the anchor survive exactly; unlike an unconstrained low-rank fit, native gains should not arise by deleting those components. Decisive comparison: Base, unprotected SVT, protected SVT and budget/rank-matched truncated SVD; same native times, all scores and actual SVD cost.",
+        "feasibility_and_cost": "T=16 makes a temporal Gram decomposition small; streaming the 3V columns is possible. Native Q relevance and effect remain unmeasured. No full native cost or live GPU allocation is currently established. 本轮排序依据：完整轨迹的低秩投影接口直接，但保护Q与最强时序替代需证明必要性。"
+      }
+    },
+    {
+      "rank": 12,
+      "candidate_id": "4d-math-20261006-c05",
+      "rationale": {
+        "problem_value": "优先级 12：用明确反例解释多解平均可能压缩几何，并提出不同于调温度的空间联合决策；实际模式接口待核查。",
+        "mathematical_consequence": "The weighted variance identity holds for normalized weights without interpreting attention as a calibrated posterior. Two separated rotation modes provide a valid contraction counterexample. The proposed object is a joint spatial discrete labeling, whose general optimizer is approximate. The counterexample shows possibility, not real failure prevalence. The same finite labeling objective can use -log(normalized positive scores) as unary energies without claiming Bayes posterior optimality. Localized positive-weight surface blends lie in the candidate convex hull, not necessarily on the surface. Equal nearby points on a sphere with chord length ell have radial deficit R-sqrt(R^2-ell^2/4)=ell^2/(8R)+O(ell^4/R^3).",
+        "closest_work_delta": "STAC's localized sharp blend; independent top-1; classical discrete labeling. Historical m03 also selects candidates over time, so spatial joint mode preservation needs explicit collision review. Changes posterior reduction and joint spatial decision, not just top-k or temperature; functional originality is unresolved. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Benefit should concentrate on separated correspondence modes; a mean blend can improve an average score while compressing the predicted shape. This applies only after a real coordinate bank is qualified, not directly to native attention entropy. Local mean off-surface deficit can scale as curvature times squared candidate spread; this alone does not establish a joint-label advantage. Decisive comparison: Common native inputs, candidates and deformation backend: sharp mean, independent top-1 and spatial joint labels; full official CD-M/3D/4D and matched search budget. Add the same-bank surface-projected mean to distinguish simple off-surface repair from joint identity selection.",
+        "feasibility_and_cost": "Sparse/chunked attention capture and bounded landmark search are required. Interfaces, lifting baseline and full-mesh memory remain unqualified. No full native cost or live GPU allocation is currently established. 本轮排序依据：较原第2位降低：native decoder 无直接候选后验，需要资格通过真实 bank、STAC 对照与共同 lift。"
+      }
+    },
+    {
+      "rank": 13,
+      "candidate_id": "4d-math-20261006-c08",
+      "rationale": {
+        "problem_value": "优先级 13：路径级端点信息区别于局部平滑和解码循环；依赖真实稀疏转移和端点支持。",
+        "mathematical_consequence": "KL stationarity with endpoint multipliers gives u(i1)Q(path)v(iT); Markov factorization permits messages. A positive two-state witness agrees with exact path enumeration. Structural support and legal endpoint evidence remain conditions. Endpoint marginal closure is not an identity or geometric correctness guarantee.",
+        "closest_work_delta": "Classical Schrödinger/IPF bridge; local Markov tracking; historical m02 decoder cycle consistency acts on a different object. Constrains an entire path probability law rather than adding pairwise cycle penalties or per-frame temperature. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Future endpoint evidence can change intermediate correspondence paths without only smoothing coordinates; benefit should disappear when endpoint evidence is uninformative. Decisive comparison: Reference chain, local smoothing and endpoint bridge under the same candidates/calls; native task and scorer unchanged; endpoint evidence frozen before confirmation.",
+        "feasibility_and_cost": "Sparse forward/backward messages; reliable endpoint likelihoods and attention/candidate interfaces remain unqualified. No full native cost or live GPU allocation is currently established. 本轮排序依据：较原第6位降低：真实跨帧候选链、端点信息和 path-to-full-mesh 仍未闭合。"
+      }
+    },
+    {
+      "rank": 14,
+      "candidate_id": "4d-math-20261006-c06",
+      "rationale": {
+        "problem_value": "优先级 14：用面积边际区分顶点密度偏差与对应失配；真实伸缩会使守恒假设失败。",
+        "mathematical_consequence": "Differentiating positive entropic transport gives log Pi=-(c+alpha+beta)/epsilon and the uKv form with both marginals. The finite scaling witness closes row and column sums. Equal total mass, support feasibility and area assumptions are indispensable; legitimate stretching can invalidate area-preserving correspondence.",
+        "closest_work_delta": "Classical Sinkhorn OT; STAC row-normalized correspondence; Catalyst4D's OT anchors need full collision inspection. The global column mass constraint differs structurally from C05's discrete mode coherence; OT itself is existing work. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Area constraints should prevent many source regions collapsing onto the same favored target; they can hurt when the target mass model is wrong. Decisive comparison: Same support/cost/lift: row softmax versus equal-count OT versus area OT; complete native scoring and matched correspondence budget.",
+        "feasibility_and_cost": "Chunked/sparse matrix scaling; support connectivity and target-mesh extraction remain prerequisites. No full native cost or live GPU allocation is currently established. 本轮排序依据：面积运输需要真实 surface bank 与共同 lift；Sinkhorn 代数正确不证明接口存在或方法必要。"
+      }
+    },
+    {
+      "rank": 15,
+      "candidate_id": "4d-math-20261006-c07",
+      "rationale": {
+        "problem_value": "优先级 15：为不支持的匹配显式拒绝并回退，检验强制全匹配是否必要；与C06有关但约束及输出策略不同。",
+        "mathematical_consequence": "Each added matched unit removes one unit from both slacks, so the unregularized marginal cost is c-2gamma. Entropy changes that sharp limiting decision and coupled capacities also matter. Every unmatched vertex receives a native fallback; this never licenses dropping a mesh vertex or scoring denominator.",
+        "closest_work_delta": "Classical partial/unbalanced transport and threshold-and-fallback matching. Adds a no-match decision and native fallback, rather than imposing another marginal or lowering confidence temperature. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Compared with C06, rejection should help under source/target mismatch but has no reason to help when full matching is correct. Decisive comparison: Full versus partial assignment versus confidence-threshold fallback, identical outputs and official scoring denominator; retain rejected mass.",
+        "feasibility_and_cost": "Partial convex solve and common lift; target support and threshold calibration are unresolved. No full native cost or live GPU allocation is currently established. 本轮排序依据：部分运输仍依赖 C06 类 surface 支持与 unmatched motion policy，排在可直接审查原 mesh 的分支之后。"
+      }
+    },
+    {
+      "rank": 16,
+      "candidate_id": "4d-math-20261006-c09",
+      "rationale": {
+        "problem_value": "优先级 16：图同步已有强经典覆盖，且依赖尚未资格通过的局部对应/旋转。",
+        "mathematical_consequence": "A common right rotation preserves ||Ri-RijRj||_F. The edge block connection Laplacian reproduces the energy. The bottom eigenvectors solve only the relaxed Stiefel problem; block SO(3) projection does not inherit a global optimum. This is an established synchronization tool and a reserve branch.",
+        "closest_work_delta": "Classical group synchronization and STAC geodesic local rigid fitting. Global relative-rotation consistency is distinct from C10's integrability, but prior-art coverage is strong; reserve. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Loop-inconsistent local rotations should improve more than already consistent graphs; independent local fitting should suffice in the latter case. Decisive comparison: Independent local fits versus graph synchronization with the same matches and geometry lift; native scoring and matched eigensolver overhead.",
+        "feasibility_and_cost": "Sparse block eigensolve and projection; reliable pairwise rotations and native residual necessity remain missing. No full native cost or live GPU allocation is currently established. 本轮排序依据：reserve：局部旋转观测、gauge 与同步相比 ordinary rigid fit 的必要性未建立。"
+      }
+    },
+    {
+      "rank": 17,
+      "candidate_id": "4d-math-20261006-c16",
+      "rationale": {
+        "problem_value": "优先级 17：误差传播选择参考帧有条件价值，但多个参考重建和敏感度探针挤占单卡预算。",
+        "mathematical_consequence": "The propagation expansion requires centered later noise uncorrelated with anchor error. The cross-time covariance formula is only for t!=s; at equal times later-noise covariance remains. Cauchy-Schwarz bounds the omitted remainder contribution by 2 sqrt(R_linear) r+r^2. Actual covariances, sensitivities and costs are unmeasured.",
+        "closest_work_delta": "Classical optimal experimental design and anchor selection; first-frame ActionMesh and a simple legal image-quality selector. Explicit propagation and correlated-time error, rather than arbitrary changing of anchor index; real costs and calibration remain unknown. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Sensitivity-weighted risk should predict downstream degradation better than reference-frame confidence alone; benefit should diminish when anchor sensitivities are alike. Decisive comparison: Fixed anchor versus simple selector versus sensitivity-risk selector with identical finite anchor/search budget and full native scoring.",
+        "feasibility_and_cost": "Multiple Stage-0 reconstructions/Jacobian probes are expensive on 2080 Ti; reserve until cheaper selected mechanisms are resolved. No full native cost or live GPU allocation is currently established. 本轮排序依据：reserve：anchor risk proxy 尚无合法误差校准，额外 generation budget 高。"
+      }
+    },
+    {
+      "rank": 18,
+      "candidate_id": "4d-math-20261006-c17",
+      "rationale": {
+        "problem_value": "优先级 18：查询预算公式清晰，功能与旧m07及曲率采样相近；先做撞车和成本审查。",
+        "mathematical_consequence": "On shape-regular 2D patches, the squared interpolation bound scales as kappa^2 A^3/n^2. Convex interior KKT gives n proportional to A kappa^(2/3); equal marginal derivatives and total allocation are checked. Positive coefficients are required, and zero curvature, integer rounding, coverage and probe cost need separate constrained treatment.",
+        "closest_work_delta": "Classical adaptive finite-element sampling; historical m07 query allocation and STAC curvature-boosted landmarks. A derived allocation exponent and error model; strong functional collision risk makes this reserve, not a claimed new contribution. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "At matched full query/probe budget, interpolation error should follow local curvature and area, not vertex count alone. Decisive comparison: Uniform/FPS/curvature-FPS versus the derived allocation, same full cost and native outputs; no dropping scoring points.",
+        "feasibility_and_cost": "Sparse queries plus derivative probes can cost more than dense native decoding; no speed guarantee without measurement. No full native cost or live GPU allocation is currently established. 本轮排序依据：reserve：稀疏 query 与 full native 输出 lift 的误差和成本尚未资格验证。"
+      }
+    },
+    {
+      "rank": 19,
+      "candidate_id": "4d-math-20261006-c18",
+      "rationale": {
+        "problem_value": "优先级 19：相机消元经典且合法输入及可观测深度未建立，目前不能直接支持几何贡献。",
+        "mathematical_consequence": "The weighted nuisance pseudoinverse leaves P=I-Jc(Jc^T W Jc)^dagger Jc^T W, which is idempotent and W-self-adjoint. Therefore WP and the geometry Schur metric are PSD. Eliminating camera does not recover hidden depth or establish legal access to camera metadata.",
+        "closest_work_delta": "Classical bundle adjustment/Schur elimination; STAC camera recovery. A profiled geometry metric, not simply camera alignment; benchmark permissions and functional novelty remain unresolved. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Geometry updates should avoid chasing residual directions explained by camera; no improvement is expected if those nuisance directions are absent. Decisive comparison: Qualified input-only PnP plus geometry, joint optimization and profiled optimization under identical inputs/budget; native ActionBench scores remain unchanged.",
+        "feasibility_and_cost": "Qualified video-to-mesh correspondences and camera estimation are missing, so reserve rather than presenting runnable geometry fitting. No full native cost or live GPU allocation is currently established. 本轮排序依据：reserve：合法 camera/shape evidence、gauge 和 task compatibility 不明确。"
+      }
+    },
+    {
+      "rank": 20,
+      "candidate_id": "4d-math-20261006-c19",
+      "rationale": {
+        "problem_value": "优先级 20：输出度量引导与已有controllability/m09重合较多，且全解码探针昂贵；须先合并审查。",
+        "mathematical_consequence": "The output Jacobian gives K=JU and a positive-ridge two-column solve. Augmented least squares agrees and unreachable components remain orthogonal to span K. Decoder anisotropy, trust bounds and consistent ridge rescaling are necessary when comparing with latent Euclidean projection.",
+        "closest_work_delta": "Historical m09 conflict projection, APG-related guidance and research_math.controllability; classical Jacobian least squares. Changes the space in which guidance is optimized, but existing prototype overlap is substantial; reserve. Originality remains unadjudicated; merge/reclassify if function-level review finds full coverage.",
+        "distinguishing_prediction": "Benefit relative to Euclidean conflict projection should grow with decoder anisotropy; scalar-isotropic interfaces should show no metric advantage. Decisive comparison: Same noise, context, 30-step native schedule and full mesh scoring: ordinary guidance, Euclidean projection and output-metric coefficients with identical probe budget.",
+        "feasibility_and_cost": "Native Jacobian-vector/finite-difference probes and full Stage-I replay can be expensive; no 2-step smoke result qualifies the full method. No full native cost or live GPU allocation is currently established. 本轮排序依据：reserve：两路引导探针的输出目标、Jacobian成本和剩余 native frontier 未建立。"
+      }
+    }
+  ],
+  "selected_ids": [
+    "4d-math-20261006-c02",
+    "4d-math-20261006-c01",
+    "4d-math-20261006-c10",
+    "4d-math-20261006-c13",
+    "4d-math-20261006-c14",
+    "4d-math-20261006-c04",
+    "4d-math-20261006-c03",
+    "4d-math-20261006-c20",
+    "4d-math-20261006-c11",
+    "4d-math-20261006-c12",
+    "4d-math-20261006-c15",
+    "4d-math-20261006-c05",
+    "4d-math-20261006-c08",
+    "4d-math-20261006-c06",
+    "4d-math-20261006-c07"
+  ],
+  "selection_scope": "Conditional research shortlist for code/experiment design; not scientific admission or a list of 15 original/working methods.",
+  "ranking_policy": "Qualitative comparison of task value, derivation consequence, comparator delta, falsifiable prediction and resource feasibility. No invented novelty or effect scores.",
+  "structural_relations": [
+    {
+      "candidates": [
+        "C01",
+        "C03"
+      ],
+      "relationship": "C01 fixed unit correction is nested in C03 regression; C03 introduces development-fitted means/cross-moments and estimation risk. Treat as related constructions, not two independent mechanisms or two novel contributions."
+    },
+    {
+      "candidates": [
+        "C02",
+        "C04",
+        "C15"
+      ],
+      "relationship": "Prescribed-step equality projection, uncertain conic budget, and protected-residual nuclear-norm estimation have different admissible sets/estimators. They share the protection question and are not independent evidence."
+    },
+    {
+      "candidates": [
+        "C05",
+        "C06",
+        "C07",
+        "C08"
+      ],
+      "relationship": "Joint spatial discrete mode decision, balanced area transport, slack-enabled partial transport/fallback, and path-law endpoint KL projection act on different objects. C06/C07 are nested mass models and must share controls."
+    },
+    {
+      "candidates": [
+        "C09",
+        "C10",
+        "C11",
+        "C12"
+      ],
+      "relationship": "Rotation graph gauge, field integrability, stretch spectrum and line-area feasibility constrain different objects. A common lift must not be counted as an extra independent method."
+    },
+    {
+      "candidates": [
+        "C13",
+        "C14",
+        "C15",
+        "C20"
+      ],
+      "relationship": "Temporal group-norm prior, frozen body coordinates, protected low-rank residual and internal phase/amplitude inference differ structurally; timing and geometry metrics remain the same."
+    },
+    {
+      "candidates": [
+        "C16",
+        "C17",
+        "C18",
+        "C19"
+      ],
+      "relationship": "Anchor experiment design, spatial query allocation, camera nuisance elimination and latent output-metric coefficients have distinct decision variables; all remain reserve paths."
+    }
+  ],
+  "admission_rule": "Do not implement a new candidate until Natural Gate 0, strongest simple baseline and required importance/collision gates admit it. If fully covered, merge or classify as a baseline rather than pad the pool.",
+  "revision": {
+    "supersedes_ref": {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
+      "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+    },
+    "reason": "Same 20 identities, same 15 membership, revised ordering from C02 cost, C20 information boundary and C05 native-interface audit. No new empirical scores.",
+    "recorded_at": "2026-10-06T13:15:59.771836+00:00"
+  }
+}

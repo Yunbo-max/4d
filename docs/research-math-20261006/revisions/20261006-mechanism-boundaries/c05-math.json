@@ -1,0 +1,137 @@
+{
+  "kind": "math-card",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c05",
+  "name_zh": "保留对应多解的空间联合分支",
+  "formal_object": "Each anchor vertex i has finite target modes y_i,k and model scores p_i,k>0; connected anchor graph E; no GT target coordinates.",
+  "operations": [
+    {
+      "id": "B05",
+      "input": "Mixture over candidate correspondences",
+      "condition": "Candidate support and probabilities come from the same permitted model",
+      "condition_status": "conditional",
+      "output": "Separate within-mode and between-mode variation"
+    },
+    {
+      "id": "H06",
+      "input": "Posterior-mean coordinate as a universal safe correspondence",
+      "condition": "Two separated valid modes are possible",
+      "condition_status": "conditional",
+      "output": "Averaging can create an unsupported interior point"
+    },
+    {
+      "id": "D01",
+      "input": "Finite coherent-label objective",
+      "condition": "Modes and pairwise geometry terms are declared",
+      "condition_status": "conditional",
+      "output": "Construct a discrete assignment, not a temperature change"
+    },
+    {
+      "id": "H06",
+      "input": "coordinate mean versus nonlinear latent decoding",
+      "condition": "nonlinear decoder; actual candidate-coordinate map not established",
+      "condition_status": "conditional",
+      "output": "noncommutation prevents inheriting coordinate-mixture semantics from token attention"
+    }
+  ],
+  "derivation_steps": [
+    {
+      "id": "s1",
+      "statement": "E||Y||^2-||E Y||^2=tr Cov(Y).",
+      "justification": "Expand variance around the mean."
+    },
+    {
+      "id": "s2",
+      "statement": "For two opposite rotation modes of a vector, their mean can have a smaller norm than either mode.",
+      "justification": "This is a conditional mathematical counterexample, not a benchmark case or a claim of natural prevalence."
+    },
+    {
+      "id": "s3",
+      "statement": "Choose labels k_i minimizing sum_i -log p_i,k_i + lambda sum_(i,j) ||(y_i,k_i-y_j,k_j)-R_ij(x_i-x_j)||^2.",
+      "justification": "A finite spatial objective rewards coherent mode choices rather than averaging across modes."
+    },
+    {
+      "id": "s4",
+      "statement": "The general discrete objective is nonconvex; beam/message/graph search is approximate and must retain its achieved objective and budget.",
+      "justification": "No global optimum follows from the construction."
+    },
+    {
+      "id": "s5",
+      "statement": "In general g(sum_k p_k z_k) != sum_k p_k g(z_k); for g(z)=2sigmoid(z)-1 and equal z=0,2 the values are tanh(1/2) and tanh(1)/2.",
+      "justification": "Nonlinear decoding and averaging do not commute. This is a mathematical function-class witness, not an assertion about measured frozen-weight outputs."
+    },
+    {
+      "id": "s6",
+      "statement": "A normalized token attention row does not by itself define a calibrated distribution over target material coordinates.",
+      "justification": "Keys/values are latent features, and the inspected native API emits a single coordinate after nonlinear layers. A semantic candidate map and calibration require additional evidence."
+    },
+    {
+      "id": "s7",
+      "statement": "The same finite labeling objective can use -log(normalized positive scores) as unary energies without claiming Bayes posterior optimality.",
+      "justification": "Normalization defines mathematical weights; label optimization is still a declared energy construction. All arms must share the actual candidate support, geometry hints, lift and budget."
+    },
+    {
+      "id": "s8",
+      "statement": "Localized positive-weight surface blends lie in the candidate convex hull, not necessarily on the surface. Equal nearby points on a sphere with chord length ell have radial deficit R-sqrt(R^2-ell^2/4)=ell^2/(8R)+O(ell^4/R^3).",
+      "justification": "Use x_plus/minus=(R cos theta,+/-R sin theta,0). The mean is inside even for arbitrarily small positive theta. This mathematical counterexample does not establish natural prevalence or final lifted-mesh failure."
+    }
+  ],
+  "assumptions": [
+    "Separated modes must be exposed by an actual inspected model interface; attention confidence alone is not calibrated probability.",
+    "Spatial coherence may choose the wrong symmetric part; no unique identity is guaranteed.",
+    "Rotation hints R_ij must use legal model/anchor information and identical availability for comparators.",
+    "No full dense 32768-token attention tensor is presumed feasible on this GPU.",
+    "The public native decoder returns coordinates, not a candidate-mode posterior.",
+    "Positive normalized scores may be unary energies without calibrated posterior meaning."
+  ],
+  "method_expression": "Extract a bounded candidate set per landmark, perform spatially coherent discrete label search, and lift selected targets with a qualified common deformation backend.",
+  "distinguishing_prediction": "Benefit should concentrate on separated correspondence modes; a mean blend can improve an average score while compressing the predicted shape. This applies only after a real coordinate bank is qualified, not directly to native attention entropy. Local mean off-surface deficit can scale as curvature times squared candidate spread; this alone does not establish a joint-label advantage.",
+  "falsifier": "Reject if naturally sourced modes are unimodal, or independent top-1/temperature-matched means match the same native performance at equal search cost. An absent or semantically unqualified candidate interface blocks instantiation and is not an empirical KILL.",
+  "closest_alternative": "STAC's localized sharp blend; independent top-1; classical discrete labeling. Historical m03 also selects candidates over time, so spatial joint mode preservation needs explicit collision review.",
+  "decisive_comparison": "Common native inputs, candidates and deformation backend: sharp mean, independent top-1 and spatial joint labels; full official CD-M/3D/4D and matched search budget. Add the same-bank surface-projected mean to distinguish simple off-surface repair from joint identity selection.",
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/evidence/source-capture.json",
+      "sha256": "851956719bfe853b4f46dbce87b28a3272186cf604473ebaa6c4f5a6053dd5b4"
+    },
+    {
+      "path": "docs/research-math-20261006/evidence/primary-source-notes.json",
+      "sha256": "362a84014907e3bc7fb98a7e425e884c65e3a5758fcd89441303a62aa9acde62"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+      "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+      "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+    }
+  ],
+  "operational_delta": "Changes posterior reduction and joint spatial decision, not just top-k or temperature; functional originality is unresolved.",
+  "feasibility_and_cost": "Sparse/chunked attention capture and bounded landmark search are required. Interfaces, lifting baseline and full-mesh memory remain unqualified.",
+  "structural_signature": "Discrete spatial mode assignment before deformation, as opposed to continuous averaging or mass balancing.",
+  "algebra_review_basis": "Variance identity and collapse counterexample rechecked. No promise of correct correspondence or a polynomial global solver.",
+  "empirical_status": "Not implemented in this round; no native method comparison or outcome.",
+  "originality_status": "Unadjudicated. Classical tools and historical related code are explicitly attributed.",
+  "revision": {
+    "revision_id": "mechanism-boundaries-r2",
+    "authored_at": "2026-10-06T13:15:59.771836+00:00",
+    "supersedes_ref": {
+      "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c05.json",
+      "sha256": "5d5a8f8a3737eb5dd2927f8a9656ab77123aa2259b4504220890071564c0179b"
+    },
+    "scope": "Conditional mathematical and interface revision; no native experiment or implementation."
+  }
+}

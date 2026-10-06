@@ -1,15 +1,15 @@
 {
   "kind": "current-research-revision",
-  "revision_id": "native-loss-r1",
-  "recorded_at": "2026-10-06T11:54:50.761039+00:00",
+  "revision_id": "mechanism-boundaries-r2",
+  "recorded_at": "2026-10-06T13:15:59.771836+00:00",
   "batch_ref": {
-    "path": "docs/research-math-20261006/revisions/20261006-native-loss/batch.json",
-    "sha256": "684f3ab541d284510bd5d5376d7dd7b0d4c43b05f3a8e417231fec8969e5d12e"
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
+    "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
   },
   "selection_ref": {
-    "path": "docs/research-math-20261006/revisions/20261006-native-loss/selection.json",
-    "sha256": "ffd97169180a936a53ac892bc8ea4feef0259e8e3a246d09247885f2795fdbd2"
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+    "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
-  "entry_path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
-  "status": "Conditional 20-to-15 discovery; scientific code/design/results all pending. Evidence exporter is separate engineering."
+  "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
+  "status": "20 conditional mathematical self-reviews, 15 conditional current specs; no scientific implementation/native comparison/outcome."
 }

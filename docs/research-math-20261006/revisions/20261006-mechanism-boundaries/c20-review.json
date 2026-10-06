@@ -1,0 +1,182 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c20",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+    "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or formal theorem review",
+  "reviewed_at": "2026-10-06T13:15:59.771836+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Conditional proofs and interface reading only. Natural prevalence, calibration, originality, candidate implementation and native effects unverified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Whitened local phase/amplitude data problem, QR amplitude coordinates and inactive inequality regime are stated separately from a constrained nonlinear time-warp method.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "F06 elimination supplies the residual projector; H02 then analyzes rank and principal-angle separation. Full-rank B and phase gauge are explicit; active inequalities need the full constrained analysis.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "S=I-V^TUU^TV gives kappa exactly; pseudoinverse singular values give the sharp 1/sqrt(kappa) amplification. Alias cancellation distinguishes data information from positive-ridge matrix invertibility.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "Legal target, residual error, rank, interpolation, monotonicity and curvature bounds remain to qualify. The weighted Taylor bound is restricted to block-diagonal weights.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "Keep the existing small endpoint-preserving phase/amplitude construction. Rank/kappa are admission diagnostics, not new methods, native metrics or empirically chosen safe thresholds.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "Near overlap amplifies target/interpolation errors even with a stable ridge solve. Compare phase-only/amplitude-only/joint at original timestamps and matched information/cost; unresolved target stays inconclusive.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Classical registration, Schur elimination, simple timing/scale and smoothing are direct alternatives. These linear algebra identities do not certify novelty or actual ActionBench prevalence.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    }
+  }
+}

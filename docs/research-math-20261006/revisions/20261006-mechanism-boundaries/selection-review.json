@@ -1,0 +1,119 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-mechanism-boundaries-r2",
+  "scope": "selection",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+    "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or theorem review",
+  "reviewed_at": "2026-10-06T13:15:59.771836+00:00",
+  "outcome": "verified",
+  "checks": {
+    "structural_distinctness": {
+      "status": "verified",
+      "rationale": "All 20 constructions were compared by object, admissible set, estimator and output. The nested and shared-mechanism families are recorded explicitly, including C01/C03 and C06/C07. Learned matrix estimation versus fixed subtraction is an estimator/information change, not another gain value. These are conditional research branches, not certified novel or statistically independent methods; coverage may still force merger.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+          "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        }
+      ]
+    },
+    "all_candidates_compared": {
+      "status": "verified",
+      "rationale": "Review all 20 original identities and their five ranking fields; three revised mathematical cards replace their prior bindings. Ranking adds explicit candidate-specific native-interface and comparator readiness, never invented performance or novelty scores.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+          "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        }
+      ]
+    },
+    "ranking_basis": {
+      "status": "verified",
+      "rationale": "Direct original-mesh and classic-baseline branches precede unqualified coordinate-bank/path/phase-target branches. C05 moves 2->12, C20 3->8 and C08 6->13. C02 cost identities require strength-matched comparison. This is conditional research priority, not scientific admission.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+          "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        }
+      ]
+    },
+    "top_selection": {
+      "status": "verified",
+      "rationale": "The ranked prefix is c02,c01,c10,c13,c14,c04,c03,c20,c11,c12,c15,c05,c08,c06,c07. Membership is unchanged; remaining five stay reserve. C01/C14 baseline roles are explicit and not presented as novel contributions.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+          "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+          "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+          "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+        }
+      ]
+    }
+  }
+}

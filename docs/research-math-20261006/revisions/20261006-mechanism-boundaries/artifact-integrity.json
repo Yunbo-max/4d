@@ -1,0 +1,20 @@
+{
+  "kind": "artifact-integrity-check",
+  "recorded_at": "2026-10-06T13:22:42.819587+00:00",
+  "scope": "Current R2 math/spec JSON refs only, excluding this report and final DECISION which is written afterward. Historical engineering validation remains tied to its original commit; the upstream macOS fixture change is not silently recertified. No native benchmark or automatic theorem proof.",
+  "json_files_checked": 29,
+  "content_bound_references_checked": 367,
+  "reference_errors": [],
+  "stable_candidates": 20,
+  "selected_specs": 15,
+  "planned_steps_covered": true,
+  "candidate_operations_not_implemented": true,
+  "finite_algebra_audit_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+    "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+  },
+  "finite_algebra_source_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+    "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+  }
+}

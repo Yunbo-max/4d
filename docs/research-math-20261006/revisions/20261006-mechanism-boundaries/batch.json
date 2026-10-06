@@ -1,0 +1,242 @@
+{
+  "kind": "method-verification-batch",
+  "version": "1.0.0",
+  "batch_id": "4d-math-20261006-mechanism-boundaries-r2",
+  "pool_target": 20,
+  "selection_target": 15,
+  "candidates": [
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
+        "sha256": "6df45ce3122df46c583231602a41f92eb0f32cea06e81dd2b1d6c02eb762a93e"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c01-math.json",
+        "sha256": "013a9c561c0e194aa2171f69f6bad95f610822a2756c30ec6ec9054ad9267ac0"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c02",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+        "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-review.json",
+        "sha256": "8230d4bf18c06c4b4997c427c5888b68451f9ca3abdf5b3fc28ba7fe9bf8fd33"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+        "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+        "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c04",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
+        "sha256": "d22fa4a56610b3abaee5ba863729431bf06b59386c67fe9948c8061bc07d98fa"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c04-math.json",
+        "sha256": "2578c6f63c4eb7cff70921301cdd4325785aa8d79530a0fe2214f391d476987d"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+        "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-review.json",
+        "sha256": "e7ad3567922d57d4c9beef78469efd6acdd4b7d9b0d0ec7caf0cf6442a360747"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c06",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
+        "sha256": "4b38b4752d81535725f96f513b5d4fb585d52308efda44a331fc90c14c8d03f9"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c06-math.json",
+        "sha256": "791e03d35227cb16c50dd2c68552bb59d34c312d0d7460d8334f2bd6e03db656"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+        "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c07-math.json",
+        "sha256": "4bdeef6356922e50c5f476668b30ab5026c02923f8409a7d438892127ebaa163"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+        "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c08-math.json",
+        "sha256": "8662ec642b8d778740bc7ff5586e4e60559a47c4a0e05a9660cacc5d38788372"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c09",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c09.json",
+        "sha256": "5ec1bcffcb82ba4ebee24c43f919f2036b486f52565fcdd9e194e5487c2bdb80"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c09-math.json",
+        "sha256": "dc071822227004d381ab339e2115a7f93884f6edfc9f4294742cc5cd759e22f7"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c10",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
+        "sha256": "a92d7331b59e1e9c78e3d8811d3240c1ab1137dfac97da142acd63ee1f72d173"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c10-math.json",
+        "sha256": "e64132a47b3331ae5b701a01eff9bd94fe319b07b1853d7db43f94ae32c1a54f"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c11",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c11.json",
+        "sha256": "fa863defd6620c99aa0767b1df2dde8f57e50dc1b54385b7b2dba05d7026f3b3"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c11-math.json",
+        "sha256": "236bba4ea916003e3060c1c8faef6db4976704a3ddd79233cd4353d6df95bb42"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
+        "sha256": "893238c0e767ccff25dd1b82c4770b6373c0e8a71c62d3c3a1fefe34ad354500"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c12-math.json",
+        "sha256": "1a3bab65f877119e9eb0e43adcf31d4b157f9c1f577fd3e70eb1b871e8078032"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c13",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+        "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
+        "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c14",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
+        "sha256": "4e8eabce07534f07382ddbd0b4433d4ad9d9589abf3cd1690187de72b1bcffbb"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c14-math.json",
+        "sha256": "52fbceeb3ffdd8230274c0154c4aea9f57921ba90ead1d8275bb3fb137ee81a8"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c15",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c15.json",
+        "sha256": "b57035b5d65e922d0c0f6b1fd7f7734a2fc622841fb83337099fee122fce8241"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c15-math.json",
+        "sha256": "c077b09546bc9783ad974c7ad295d640f9645b2372de97aff86bc147ac7e7eac"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c16",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c16.json",
+        "sha256": "3b858bee4a1ca51013ed7ec7df9706409794560f68632d3491b57fd57edbdccc"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c16-math.json",
+        "sha256": "2050de283574110e030efb6f94dfb0bafed219d711ca00b3f0f9be2c344eacbb"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c17",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c17.json",
+        "sha256": "daf3adc66fcd1da3806b16944bcfdb10380195b36c4f5853ecad5f2d964e3438"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c17-math.json",
+        "sha256": "bb5cf814e3810f3867287ea037247e6b75f5054d0c7fd407526493db085df99d"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c18",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c18.json",
+        "sha256": "cf3fbe2fce7d7261f50673b50e02afb55513ec3ae691276f96bcda1373631af5"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c18-math.json",
+        "sha256": "48ebc781e992f89ae4d68929f47cd2f451798862721267f9eb49bd617ee1e3cf"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c19",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c19.json",
+        "sha256": "ac15d64b7e225d499d362549f3c3b7454cfa022ba4100450d40e8022a9e7579e"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c19-math.json",
+        "sha256": "62c47364393ce081a0d89931c69dd854bbaef7244a5e6caf8a7297b5bc7c34b9"
+      }
+    },
+    {
+      "candidate_id": "4d-math-20261006-c20",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+        "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-review.json",
+        "sha256": "9253b377b9adaf4e8173595673e2fea36c89b17dda71d82437336a296cbe69a9"
+      }
+    }
+  ],
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+    "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+  },
+  "selection_review_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection-review.json",
+    "sha256": "518cb3b0ae42891d4cd35fa32c9693c575c6b4cc0bd7cafa83e0dec4845fe34b"
+  },
+  "scope": "Same-pool mechanism-boundary revision. Mathematical self-review and conditional specifications only; scientific code/design/results all pending.",
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/batch.json",
+    "sha256": "684f3ab541d284510bd5d5376d7dd7b0d4c43b05f3a8e417231fec8969e5d12e"
+  }
+}

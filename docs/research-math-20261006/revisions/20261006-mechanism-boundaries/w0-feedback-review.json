@@ -1,0 +1,43 @@
+{
+  "kind": "returned-w0-checkpoint-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-06T13:21:02.931139+00:00",
+  "source_commit": "e874f6497318e791bec00ce2d9482aa35d93f5cf",
+  "report_identity": {
+    "repository_path": "results/overnight-2080ti-20261005/w0-final-verification-20261006.json",
+    "sha256": "bfa57d882ab9b45abe93c41ed42596e2a17dac3abc720722b3f9f9363d8d5e7b"
+  },
+  "checkpoint_identity": {
+    "repository_path": "results/overnight-2080ti-20261005/w0-final-checkpoint-20261006.tar.gz",
+    "sha256": "daa0444db6474cc6974c8f56bfae50a2e64519e017d8e24c4f804ca953a3d4e6",
+    "bytes": 49032
+  },
+  "archive_members": 40,
+  "verified_pair_json_hashes": 16,
+  "protocol_fingerprint": "3c3fe5a7f9b0ec7b75ce32d2ab08a21bcd36cfc64ae7e9a39b88517d08072d0d",
+  "published_metric_vectors_match_prior_summary": true,
+  "pair_elapsed_fields_match_prior_summary": true,
+  "host_reported_gpu_total_mib": 22528,
+  "host_reported_final_record_count": 16,
+  "retained_receipt_referenced_raw_members_absent_from_small_checkpoint": 352,
+  "missing_raw_examples": [
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation.receipt.json",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/native_score.receipt.json",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/stationary_score.receipt.json",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/stationary.receipt.json",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/report.json",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/stage0.npz",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/anchor.glb",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/prepared.npz",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/denoised.npz",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/sequence.npz",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/deformations_vertices.npy",
+    "units/gen-000-059_0f142eaa4ab94740ba9e5d074f306a15/generation__attempt1/deformations_faces.npy"
+  ],
+  "scope": "Read-only archive enumeration, protocol fingerprint, pair JSON hash closure and consistency with published W0 record/old summary. GPU-side native scorer execution and full referenced phase/raw files were not replayed here. Static host-report booleans are not independent native validation.",
+  "native_replay_performed": false,
+  "final_raw_closure_received": false,
+  "candidate_methods_tested": 0,
+  "formal_method_successes": 0,
+  "formal_method_failures": 0
+}

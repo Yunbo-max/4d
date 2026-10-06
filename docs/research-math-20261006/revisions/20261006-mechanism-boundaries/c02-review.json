@@ -1,0 +1,182 @@
+{
+  "kind": "method-review",
+  "version": "1.0.0",
+  "subject_id": "4d-math-20261006-c02",
+  "scope": "math",
+  "artifact_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+    "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+  },
+  "reviewer": "Codex /root; same-context mathematical self-review, not independent human or formal theorem review",
+  "reviewed_at": "2026-10-06T13:15:59.771836+00:00",
+  "outcome": "verified",
+  "conditional_scope": "Conditional proofs and interface reading only. Natural prevalence, calibration, originality, candidate implementation and native effects unverified.",
+  "checks": {
+    "formal_object": {
+      "status": "verified",
+      "rationale": "Fixed local quadratic geometry objective is distinguished from the full nonlinear repair and from native CD scores. W, d and C remain frozen in the subproblem.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    },
+    "operations_and_conditions": {
+      "status": "verified",
+      "rationale": "KKT leads to W-orthogonal decomposition and C04 error accounting; d!=0 is required for rho. The nonlinear observation uses an explicitly conditional Hessian bound.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "derivation": {
+      "status": "verified",
+      "rationale": "Check orthogonality, Pythagoras, both exact gain identities and the matched-W-norm scalar inequality. Redundant rows are allowed by the Gram pseudoinverse; Cd=0 and trivial-nullspace limits agree.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "assumptions": {
+      "status": "verified",
+      "rationale": "The constrained observation must be legally available and task-relevant; no GT metric gradient is inferred. The result is local quadratic, not a promise for ARAP global optimization or native scores.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    },
+    "method_expression": {
+      "status": "verified",
+      "rationale": "The construction remains the same projected geometry repair; rho exposes its cost. Scalar strength matching is a necessary comparator, not an extra candidate.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "prediction_and_falsifier": {
+      "status": "verified",
+      "rationale": "Same d/W and matched step size distinguish direction protection from simple shrinkage. Benefit is unsupported if protection is redundant, coarse observations are irrelevant, or strongest simple native frontier matches.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        }
+      ]
+    },
+    "closest_alternative": {
+      "status": "verified",
+      "rationale": "Classical projection and ARAP are attributed. Prior global-centroid invariance and scalar blending require direct comparison; mathematical frontier accounting is not originality clearance.",
+      "evidence_refs": [
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+          "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/THEOREMS.md",
+          "sha256": "5dc2e426edb2998faa185f9e02a26371204e2e3ed0aaa9bc09525208d8af0769"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra_audit.py",
+          "sha256": "605c0b0d2251e0f9a7d01ba68c41e5c9bfcb7f70235d7bb7b78d488abd7c573c"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/algebra-audit.json",
+          "sha256": "54e92586286b58b4faf26e2179b757755514be7518301105948d129bd19a7682"
+        },
+        {
+          "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/primary-source-notes.json",
+          "sha256": "4478635cb09b291b8f34592aa73800571ce1d9fa5b3ca0543e120f72eee752b4"
+        }
+      ]
+    }
+  }
+}

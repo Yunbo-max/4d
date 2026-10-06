@@ -1,5 +1,11 @@
 # 4D 研究复现
 
+## 当前：方法必要性与可识别性审查
+
+[第二轮研究修订](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md)补推 C02 的保护代价和匹配步长对照、C20 的 principal-angle 可识别性及噪声放大、C05 的原生接口和 localized blend 离面边界。保留20个构造与原15个入选身份，更新全池顺序和15份条件规格。数学仍是条件自审，新候选实现、完整 native 实验及正式成败均为0。
+
+新回传的 W0 checkpoint 已核对16个 pair／final receipt 字节 hash，分数与旧 summary 一致；小包仍缺其回执引用的352个阶段／raw成员。见[反馈审查](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/w0-feedback-review.json)，完整 raw 导出与 native 回放继续待补。
+
 ## 2026-10-06：数学指标审查与最终证据回传
 
 当前研究入口：[native-loss 修订与完整 20→15 排序](docs/research-math-20261006/revisions/20261006-native-loss/README.md)。C03 的平方风险收益不能保证原生非平方距离收益；已补精确反例、条件非平方标定推导和15份当前规格。`math_verified=20`、`selection_verified=true`；新候选 code/design/results_verified 仍为0。

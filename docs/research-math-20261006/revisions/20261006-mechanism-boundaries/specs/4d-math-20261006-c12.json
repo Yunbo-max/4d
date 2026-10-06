@@ -1,0 +1,132 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c12",
+  "name_zh": "最大可行的三角面安全修正",
+  "priority_rank": 10,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T13:15:59.771836+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
+    "sha256": "893238c0e767ccff25dd1b82c4770b6373c0e8a71c62d3c3a1fefe34ad354500"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c12-math.json",
+    "sha256": "1a3bab65f877119e9eb0e43adcf31d4b157f9c1f577fd3e70eb1b871e8078032"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+    "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
+      "sha256": "fd579da74537118c06cac23845566aeff4d47562c4223993e818501c40020626"
+    }
+  ],
+  "prior_art_and_role": "Classical mesh-flip line search and fixed-step damping, not an invented physical simulator.",
+  "planned_interface": {
+    "inputs": [
+      "same proposed full-mesh update d",
+      "original faces, nondegenerate normals and beta",
+      "common constraint checking, scalar-root and numerical-margin policy"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "a(alpha)=n0 dot ((e1+alpha d1) cross (e2+alpha d2))=a0+a1 alpha+a2 alpha^2.",
+      "planned_function": "4d_math_20261006_c12.form_exact_face_quadratics",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "Require a_f(alpha)>=beta a_f(0) for every face and alpha in [0,1].",
+      "planned_function": "4d_math_20261006_c12.check_all_face_area_constraints",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "Choose the first positive crossing among all face polynomials, or 1 if none, with an inward numerical margin.",
+      "planned_function": "4d_math_20261006_c12.find_first_violation_interval",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "fixed_damping",
+      "generic_backtracking",
+      "exact_quadratic_admission"
+    ],
+    "primary_metric": "cd_3d",
+    "guardrail_metrics": [
+      "cd_4d",
+      "cd_motion"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Compared with arbitrary damping, correction size should depend on the first geometric feasibility boundary; already safe updates should be unchanged.",
+    "falsifier": "Reject necessity if fixed damping/backtracking with the same checks and full cost attains the same native frontier, or if conservative area limits block useful genuine rotation.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "meaningful natural repair-safety gap and permitted large-rotation boundary",
+    "exact first crossing versus tangent root handling",
+    "ordinary line-search necessity; potentially engineering baseline only",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c12.json",
+    "sha256": "8ad5e50c8a1d7916ff10fc37c5bac48b6dd7ce9a1888c0465d3ef4bc825afd3a"
+  }
+}

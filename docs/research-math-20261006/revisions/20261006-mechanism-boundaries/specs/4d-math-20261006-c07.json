@@ -1,0 +1,132 @@
+{
+  "kind": "conditional-method-specification",
+  "version": "1.0.0",
+  "candidate_id": "4d-math-20261006-c07",
+  "name_zh": "允许不匹配质量的部分运输",
+  "priority_rank": 15,
+  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "authored_at": "2026-10-06T13:15:59.771836+00:00",
+  "math_card_ref": {
+    "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+    "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+  },
+  "math_review_ref": {
+    "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c07-math.json",
+    "sha256": "4bdeef6356922e50c5f476668b30ab5026c02923f8409a7d438892127ebaa163"
+  },
+  "selection_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
+    "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
+  },
+  "specification_refs": [
+    {
+      "path": "docs/research-math-20261006/CODE_DESIGN.md",
+      "sha256": "874d6d4aa443a74a4814b2186560ed044abcd930a227ac8a01a2fcd777d6f9e1"
+    },
+    {
+      "path": "docs/research-math-20261006/EXPERIMENTS.md",
+      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
+      "sha256": "13ee3182b358df4244ca255bcb17d4912d86219507ea0e0ddb85a3dd11e02678"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
+      "sha256": "fd579da74537118c06cac23845566aeff4d47562c4223993e818501c40020626"
+    }
+  ],
+  "prior_art_and_role": "Classical partial/unbalanced transport and threshold-and-fallback matching.",
+  "planned_interface": {
+    "inputs": [
+      "same feature bank, areas, cost and support as full transport",
+      "frozen unmatched penalty gamma and entropy epsilon",
+      "full native output available for unmatched fallback"
+    ],
+    "outputs": [
+      "full original-identity mesh sequence at every original frame",
+      "unchanged faces and retained vertex mapping",
+      "parameters, fallback/rejection/termination logs",
+      "solver residuals, input/source hashes and end-to-end costs"
+    ]
+  },
+  "planned_math_to_code": [
+    {
+      "derivation_step": "s1",
+      "statement": "Minimize <c,Pi>+gamma(1^T s+1^T t)+epsilon sum Pi(log Pi-1).",
+      "planned_function": "4d_math_20261006_c07.form_partial_mass_objective",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s2",
+      "statement": "At epsilon=0, adding a small transport mass removes the same mass from each slack, changing cost by (c_ij-2gamma) times mass.",
+      "planned_function": "4d_math_20261006_c07.account_unregularized_slack_tradeoff",
+      "status": "not_implemented"
+    },
+    {
+      "derivation_step": "s3",
+      "statement": "Every unmatched source vertex still receives the frozen native decoder prediction.",
+      "planned_function": "4d_math_20261006_c07.apply_native_fallback_to_every_unmatched_vertex",
+      "status": "not_implemented"
+    }
+  ],
+  "native_experiment": {
+    "benchmark": "ActionBench",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/evidence/exposure-and-contract.json",
+      "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
+    },
+    "arms": [
+      "B0",
+      "B_star",
+      "full_mass_transport",
+      "confidence_threshold_fallback",
+      "partial_mass_native_fallback"
+    ],
+    "primary_metric": "cd_motion",
+    "guardrail_metrics": [
+      "cd_3d",
+      "cd_4d"
+    ],
+    "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
+    "distinguishing_prediction": "Compared with C06, rejection should help under source/target mismatch but has no reason to help when full matching is correct.",
+    "falsifier": "Reject if gains arise only by dropping scoring points or if a confidence-threshold native fallback with the same budget performs equally well.",
+    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "seed_policy": {
+      "inference": [
+        42,
+        314,
+        2718
+      ],
+      "scoring": 44,
+      "independent_unit": "audited asset family, not frame/point/seed"
+    },
+    "criteria": {
+      "pairwise_difference": "treatment-control; lower is better",
+      "min_effect": null,
+      "noninferiority_margins": null,
+      "status": "requires task/precision-based numeric freeze, not run ready"
+    },
+    "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "proposed_decisions": [
+      "PASS for complete qualified/native-confirmed frozen claims",
+      "KILL for qualified and adequately precise refutation of this construction/necessity",
+      "REVISE for prespecified child hypothesis",
+      "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
+    ]
+  },
+  "outstanding_requirements": [
+    "task-relevant unsupported matches on natural cases",
+    "mass/slack solver and complete fallback semantics",
+    "ordinary threshold-fallback comparator not deliberately disadvantaged",
+    "final 16/16 raw receipts and native replay",
+    "Natural Gate 0 PASS; required importance/collision decision",
+    "code identity/software/native-interface verification",
+    "strongest executable baseline and fair information/cost",
+    "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+  ],
+  "supersedes_ref": {
+    "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c07.json",
+    "sha256": "bcca0d512bedd3cafd5868376598fe6b23f93dc7d34a51f65151bc43768d24fd"
+  }
+}
