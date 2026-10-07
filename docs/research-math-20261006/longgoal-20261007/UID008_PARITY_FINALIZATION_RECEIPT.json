@@ -1,0 +1,187 @@
+{
+  "kind": "uid008-parity-finalization-compact-receipt",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T21:31:52.299655+00:00",
+  "sample_uid": "000-007_84496dfddf6046ce9ec9fddace6f5ed3",
+  "main_source_commit_verified": "240bd0dd3556bdd64830b75ebde496bf0de8dc8d",
+  "source_code_refs_verified": 16,
+  "parity": {
+    "outer_plan_digest": "cceeb3098dd8ce1b7752df33af1ed01202fe6d9e0e3a125d3386346e04b840ca",
+    "native_plan_digest": "70fc5d22db6aec162f9ad3290a00d0ec0714ce030ca7ac105d2cf44b95647059",
+    "receipt_sha256": "dbe583e888f9a118167d7d850972473eb71161f0772c40f4bb093b3c0250b1a4",
+    "attempt_id": "official-faithful-three-arm-parity-a1-c8680a6294a246b3994cc2a8f41cde41",
+    "attempt_sha256": "7a6d82bd83ddc930273089e8f536bda3849925eff38349f5c42dec8b5b805f97",
+    "status": "completed",
+    "exit_code": 0,
+    "started_at": "2026-10-07T21:11:04.847735Z",
+    "completed_at": "2026-10-07T21:25:21.896090Z",
+    "arms": {
+      "native": {
+        "status": "passed",
+        "official_metrics": {
+          "cd_3d": 0.04159317162973604,
+          "cd_4d": 0.0428163906414859,
+          "cd_motion": 0.05069758743047714
+        },
+        "faithful_metrics": {
+          "cd_3d": 0.04159317162973604,
+          "cd_4d": 0.0428163906414859,
+          "cd_motion": 0.05069758743047714
+        },
+        "absolute_differences": {
+          "cd_3d": 0.0,
+          "cd_4d": 0.0,
+          "cd_motion": 0.0
+        },
+        "comparison_passed": true,
+        "official_exit_code": 0,
+        "faithful_exit_code": 0
+      },
+      "world_gaussian": {
+        "status": "passed",
+        "official_metrics": {
+          "cd_3d": 0.04156793351309143,
+          "cd_4d": 0.042750349292631946,
+          "cd_motion": 0.05054894834756851
+        },
+        "faithful_metrics": {
+          "cd_3d": 0.04156793351309143,
+          "cd_4d": 0.042750349292631946,
+          "cd_motion": 0.05054894834756851
+        },
+        "absolute_differences": {
+          "cd_3d": 0.0,
+          "cd_4d": 0.0,
+          "cd_motion": 0.0
+        },
+        "comparison_passed": true,
+        "official_exit_code": 0,
+        "faithful_exit_code": 0
+      },
+      "body_gaussian": {
+        "status": "passed",
+        "official_metrics": {
+          "cd_3d": 0.04157822793650014,
+          "cd_4d": 0.04277415800249802,
+          "cd_motion": 0.05064421892166138
+        },
+        "faithful_metrics": {
+          "cd_3d": 0.04157822793650014,
+          "cd_4d": 0.04277415800249802,
+          "cd_motion": 0.05064421892166138
+        },
+        "absolute_differences": {
+          "cd_3d": 0.0,
+          "cd_4d": 0.0,
+          "cd_motion": 0.0
+        },
+        "comparison_passed": true,
+        "official_exit_code": 0,
+        "faithful_exit_code": 0
+      }
+    },
+    "frozen_ref_recheck": {
+      "status": "passed",
+      "error": null
+    },
+    "telemetry": {
+      "samples": 822,
+      "max_observed_used_mib": 519.0,
+      "telemetry_errors": [],
+      "not_exact_peak": true
+    },
+    "current_device_identity_bound": true
+  },
+  "finalization": {
+    "outer_plan_digest": "0515f5c00e159af5300cc6edca2085d838ff9c1c5d91fa1a59e444d15c6e99dd",
+    "native_plan_digest": "b9affb540d2d37a92a8ea72285316b83f1cb10f801368be80002679d71768902",
+    "receipt_sha256": "450725ddf3fbe47df1e21698fa8ebabe46c44355f6826568dd82388d929b9b9f",
+    "attempt_id": "finalize-promoted-actionbench-parity-a1-c703eabe03e9459c8228fbc8ba6de967",
+    "attempt_sha256": "028e9533f5c3e41c6acbc42235820505ba027d24267f172f4046f5a51d84dcec",
+    "status": "completed",
+    "exit_code": 0,
+    "started_at": "2026-10-07T21:29:05.159088Z",
+    "completed_at": "2026-10-07T21:29:08.015012Z",
+    "gpu_count": 0,
+    "input_refs_verified": 285,
+    "code_refs_verified": 7
+  },
+  "integrity": {
+    "parity_receipt_output_refs_verified": 112,
+    "parity_output_mismatches": 0,
+    "promoted_bundle_files_verified": 127,
+    "promotion_mismatches": 0,
+    "sidecar_ref_occurrences_verified": 79,
+    "sidecar_unique_refs_verified": 28,
+    "sidecar_bad_refs": 0,
+    "sidecar_canonical_promotion_complete": true
+  },
+  "bundle_size": {
+    "files": 127,
+    "uncompressed_bytes": 34140280,
+    "tar_gzip_bytes_measured_in_memory": 19886079,
+    "raw_bundle_transferred": false
+  },
+  "core_evidence": {
+    "parity_record": {
+      "sha256": "df86641185c4c3c572a6134648db1d461eff33a37218e678556bfb8dc520403a",
+      "bytes": 31593
+    },
+    "parity_evidence": {
+      "sha256": "ea0485b263f29a3f61cb492b392b1911f3cdff919a9f1a955cfc9295fcf19133",
+      "bytes": 12280
+    },
+    "bundle_attestation": {
+      "sha256": "f5ccbbc0f773e2c19393c23237fbd4012e47316e7088c117205b7cbe09d8d539",
+      "bytes": 13295
+    },
+    "device_samples": {
+      "sha256": "615f55f75ca8d03f95b6c10456089655f8b994d7554ab083e4acc4228831f8b4",
+      "bytes": 174133
+    },
+    "source_evidence": {
+      "sha256": "877f06bc1f968656b0354678c9ff3d927076d7b0d41465520aefb1315a4aede8",
+      "bytes": 10591
+    },
+    "scoring_request": {
+      "sha256": "fc9f5fa899f27b1e6944baa84241a96cfc2cef8a1389b3917155a836b44e1ab0",
+      "bytes": 8281
+    },
+    "sample_manifest": {
+      "sha256": "ad7f3586f1a58efaccb50f652c0c1d3e2ebc116819b1b5214e7e5fcc9f41e3aa",
+      "bytes": 4940
+    },
+    "parity_contract": {
+      "sha256": "4ba89862f648abc1fe8a9da244c8a9e8ff99259f54cbfa6caea6926bbeacd8ea",
+      "bytes": 15411
+    },
+    "sidecar": {
+      "sha256": "2c2e97bbc99ada9fe7ccf152fce39098306ace0d788220b24fd6e06b545dcb32",
+      "bytes": 17449
+    },
+    "bundle_promotion_manifest": {
+      "sha256": "8cf290293bb39737e4b23123d46531cb955cf19ed161b9cb4c9f5f0963cf8384",
+      "bytes": 30468
+    },
+    "sidecar_promotion_manifest": {
+      "sha256": "d68547c24e5d4097b5b39f481f8d22ec8188f9787c78e7babf117351eb9164f8",
+      "bytes": 26801
+    }
+  },
+  "scope": {
+    "engineering_only": true,
+    "scorer_equivalence_only": true,
+    "three_frozen_arms_one_uid_only": true,
+    "cpu_knn_backward_explicit": true,
+    "scientific_effect_qualification": false,
+    "native_contract_qualified": false,
+    "nonce_bound_trusted_replay_completed": false,
+    "same_scorer_repeat_qualification_completed": false,
+    "candidate_methods_tested": false,
+    "full128_reproduction_completed": false,
+    "limitations": [
+      "Exact-zero agreement applies to this UID, frozen prediction artifacts, source hashes, protocol, and explicit runtime backend.",
+      "This does not establish scientific performance, baseline/control qualification, trusted nonce replay, or global benchmark equivalence."
+    ]
+  }
+}
