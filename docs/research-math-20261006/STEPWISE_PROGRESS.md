@@ -465,3 +465,44 @@ was generated. Web performed only source/static review; it executed **0** tests,
 scorer calls or GPU workloads. The current observed authored test-method count is
 161, but only Local harness execution can accept it. Candidate designs, native
 results and formal outcomes remain **0/15**, **0/15**, and **0**.
+
+## Continuation: resolve the current public ActionMesh generation chain — 2026-10-07
+
+No newer Local/GPU packet followed `29c8da1`. The full-128 alternative's next
+source prerequisite was audited against the current official ActionMesh Git tree
+and Hugging Face repositories. The current public chain is now explicit:
+ActionMesh Git `d5c01f5045df55819e337369c9617f603c667e00`, TripoSG submodule
+`fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c`, ActionBench dataset
+`2796071cbe6248422fcbeab3101fa9f9886cb7b9`, plus immutable current revisions
+for `facebook/ActionMesh`, `VAST-AI/TripoSG`, `facebook/dinov2-large` and
+`briaai/RMBG-1.4`. The Local runbook now gives exact revision-pinned `hf download`
+commands and requires complete file/size/SHA-256 manifests before inference.
+
+That resolution does **not** establish exact replay of the published leaderboard
+generation. The complete official tree has no ActionBench batch-generation
+driver or published prediction bundle. Its model downloader omits revisions and
+trusts any nonempty local directory. The leaderboard supplies the non-fast
+ActionMesh variant, all 128 objects and generation seed 42, while the public
+entrypoint defaults to seed 44; it does not state the actual code/weight
+revisions, dtype, low-RAM choice, hardware, dependency lock, retry policy or
+prediction hashes. A future run using today's pinned releases must therefore be
+reported as a versioned **current-public-release reproduction**, not the
+unpublished historical run.
+
+The hardware boundary is also now explicit. The official release documents
+32 GB VRAM in default mode and 12 GB with `--low_ram`, but no RTX 2080 Ti result;
+neither low-RAM nor float16 is source-bound to the published row. Local must
+capture the actual device/runtime and preserve OOM or unsupported dtype as a
+natural failure, not silently switch `--fast`, precision, configuration,
+population or metric. Only after immutable staging may it measure one complete
+non-fast, seed-42, 16-frame generation/export/scoring unit and peak VRAM. No
+28,800-second queue was generated, because one-UID parity timing cannot price
+this unit and the required 1,800-second collection reserve remains unbudgeted.
+
+Web executed **0** tests, inference units, scorer calls and GPU workloads. The
+existing 161 authored checks remain unaccepted until the Local harness run.
+Candidate validation designs/results/formal outcomes remain **0/15**, **0/15**,
+and **0**. The immediate Local order remains current whole-suite acceptance,
+one-UID engineering parity, complete-bundle promotion and CPU-only finalization;
+then return device/disk facts and pinned snapshot manifests before any full-128
+timing plan is authored.

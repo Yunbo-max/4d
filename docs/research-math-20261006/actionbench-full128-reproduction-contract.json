@@ -1,7 +1,7 @@
 {
   "kind": "actionbench-full-population-reproduction-contract",
   "version": "1.0.0",
-  "recorded_at": "2026-10-07T06:34:00Z",
+  "recorded_at": "2026-10-07T06:55:59Z",
   "status": "conditional_generated_unexecuted",
   "purpose": "official-full-population-baseline-reproduction",
   "scope": "Reproduce the current official ActionMesh row over the complete released ActionBench population. This is a baseline/evaluator qualification path, not a candidate-method effect test.",
@@ -22,7 +22,26 @@
     "generation_seed": 42,
     "generation_source_revision": "not_yet_bound",
     "weights_revision": "not_yet_bound",
-    "prediction_manifest_ref": null
+    "prediction_manifest_ref": null,
+    "current_public_release_candidate": {
+      "source_repository": "facebookresearch/actionmesh",
+      "source_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+      "source_tree": "aae2874f931d21e038966ecfde312638fff2091a",
+      "triposg_submodule_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+      "entrypoint": "inference/video_to_animated_mesh.py",
+      "target_variant_requires_fast_false": true,
+      "target_seed_requires_explicit_override": true,
+      "published_row_source_revision_match": "not_supplied",
+      "published_row_weight_revision_match": "not_supplied",
+      "published_row_dtype_low_ram_hardware_match": "not_supplied"
+    },
+    "current_available_weight_candidates": {
+      "facebook/ActionMesh": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+      "VAST-AI/TripoSG": "2c1c516d22d58db486a058d98d31bb6177344e06",
+      "facebook/dinov2-large": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "briaai/RMBG-1.4": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+      "admission": "pin candidates for a new current-public-release reproduction; not evidence of the unpublished leaderboard run"
+    }
   },
   "official_scorer": {
     "repository": "facebookresearch/actionmesh",
@@ -92,7 +111,8 @@
   "source_refs": [
     {"path": "docs/research-math-20261006/actionbench-qualification-source-audit.json", "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"},
     {"path": "docs/research-math-20261006/actionbench-official-source-evidence.json", "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"},
-    {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"}
+    {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"},
+    {"path": "docs/research-math-20261006/actionbench-full128-generation-source-audit.json", "sha256": "4c6c92ec79b2c2aab92f7a1293210e14ec1c2f330787f0d964764819c8d9389b"}
   ],
   "validator_refs": [
     {"path": "actionmesh/research_math/actionbench_full_reproduction.py", "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"},
@@ -103,7 +123,7 @@
     "one_uid_official_faithful_parity_and_finalization": "pending",
     "complete_128_gt_manifest_with_hashes": "pending",
     "complete_128_prediction_manifest_with_16_glbs_per_uid": "pending",
-    "actionmesh_generation_source_weights_and_config": "pending",
+    "actionmesh_generation_source_weights_and_config": "current public candidates resolved; exact published-row revisions/dtype/low-RAM/hardware and immutable local snapshots pending",
     "native_conda_runtime_and_device_manifest": "pending",
     "installed_verifier_native_protocol": "pending",
     "nonce_bound_official_scorer_replay": "pending",
@@ -111,7 +131,7 @@
   },
   "queue_policy": {
     "queue_generated": false,
-    "reason": "The reproduction unit has not been staged or timed on the current RTX 2080 Ti. One-UID parity timing and old two-arm diagnostics are not transferable.",
+    "reason": "The reproduction unit has not been staged or timed on the current RTX 2080 Ti. The official release documents 32 GB default and 12 GB low-RAM requirements but no 2080 Ti result, and it does not bind low-RAM/dtype to the published row. One-UID parity timing and old two-arm diagnostics are not transferable.",
     "hard_window_seconds": 28800,
     "collection_reserve_seconds": 1800
   },

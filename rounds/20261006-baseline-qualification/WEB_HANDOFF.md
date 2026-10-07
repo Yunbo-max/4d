@@ -116,6 +116,26 @@ seed-42 generation source/weights/config, current resource measurement,
 installed-verifier protocol acceptance and fresh replay are bound. The official
 scorer sampling seed remains 44; do not replace it with the generation seed.
 
+The follow-up primary-source audit at
+`docs/research-math-20261006/actionbench-full128-generation-source-audit.json`
+now resolves the current public Git, submodule, dataset and four model-repository
+revisions, but also proves the remaining provenance boundary. The public tree has
+no ActionBench batch-generation driver or published prediction bundle; model
+downloads are unpinned; and the leaderboard does not state its exact code/weight
+revisions, dtype, low-RAM choice, hardware, dependency lock or retry policy. Use
+the resolved revisions only as candidates for a newly versioned
+`current-public-release reproduction`, not an exact replay of the unpublished
+leaderboard run. The entrypoint defaults to seed 44, so the target row requires
+an explicit generation `--seed 42`; the scorer still uses sampling seed 44.
+
+Before any dataset-wide launch, Local must return verified immutable dataset and
+model snapshot manifests, actual RTX 2080 Ti memory/runtime facts, and a measured
+complete non-fast seed-42 16-frame generation/export/scoring unit. The official
+release documents 32 GB default and 12 GB low-RAM requirements but no 2080 Ti
+result, and does not bind low-RAM or float16 to the published row. Preserve OOM
+or dtype incompatibility as a natural failure; do not silently switch variant or
+precision. No eight-hour queue may be generated from one-UID parity timing.
+
 ## Runtime supplement — 2026-10-06
 
 After software acceptance, run the exact CPU-only environment capture in `NATIVE_RUNTIME_CAPTURE.md`. Retain the actual attempt and transfer both output files to their same project-relative `inputs/native-runtime/` paths. The scientific scoring plan reads that captured runtime and checks its current package/interpreter bindings. Eight new engineering checks are authored, unexecuted; mathematical/native counters remain unchanged.

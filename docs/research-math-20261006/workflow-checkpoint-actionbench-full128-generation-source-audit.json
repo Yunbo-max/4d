@@ -1,0 +1,73 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "checkpoint_id": "actionbench-full128-generation-source-audit-20261007",
+  "recorded_at": "2026-10-07T06:55:59Z",
+  "base_remote_commit": "29c8da172115668f5aab1bbdb79cb5923ca02af9",
+  "workflow": "research-autopilot",
+  "status": "source_gap_narrowed_dispatch_blocked",
+  "objective": "Resolve the official public ActionMesh generation chain for the frozen full-128 reproduction alternative without confusing currently downloadable revisions with the unpublished leaderboard environment.",
+  "source_audit_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-generation-source-audit.json",
+    "sha256": "4c6c92ec79b2c2aab92f7a1293210e14ec1c2f330787f0d964764819c8d9389b"
+  },
+  "updated_contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json",
+    "sha256": "395131d08773b16dbc86c374dc2738dcf5079ca62e5dcef1738aa6791d7a53f9"
+  },
+  "handoff_refs": [
+    {"path": "AGENTS.md", "sha256": "3e5d6ca44699b1230ae6a866bec86fa120df492a0625d0631bcd6f52e73e5035"},
+    {"path": "LOCAL_AGENT_RUNBOOK.md", "sha256": "55a441fffb65d25982d1949966e54cafd45a0f748ca4a2ffc8299b6fd7d0f661"},
+    {"path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md", "sha256": "6315477f48c139e0cd78e72fdc5ba0318d6daa12e2e419835c07d4c43782ec14"}
+  ],
+  "skill_reference_snapshot": {
+    "workflow-harness.md": "b2ab91c130e81871edc0e4815bd807e12c2baa245de704fe12356d8f3d585f77",
+    "literature-evidence.md": "ba6a93fd125e0fa1f5126de136c73691a4ded7534aba79ac75e0d5ab63c70d7f",
+    "paper-knowledge-loop.md": "5eff0aa7517e4d503a56d69a2e8208c3c3f7ddca06a0a4a27dd90330bcfaac59",
+    "canonical-literature.md": "4c1a8f13dcdd482c040c4725f31974c4d8981a00d3da609740bc68aaaa99b09a",
+    "repository-round-trips.md": "080c7cb185be241bf521180ddc4f88217711c27afc506744d2aa36ef4e593403",
+    "local-code-handoff.md": "eb4e402c498019a4c89f1fc73a8037ada85fe9d90a572ee568425cad6a0102f3",
+    "native-evaluation.md": "6262d90670f1ca667669f4b208a44df6aab748956b2360527e94f80b500c9a80",
+    "native-runner.md": "711aefad52429e6d3c5412b23bd8499f29972ca061f76b58a9b7901d1e9528c3",
+    "full-validation-and-review.md": "f705d04a7b836ec8eaa6121d8da708c76b903c5342a834a0a2d6a9e1835afe14",
+    "research-quality-bar.md": "cb4e4522337f6815f3c53f5e0c193783ada6a492e652c6531e90b30cb580c409",
+    "gpu-host-runtime.md": "a50a6614cb22b67615d3e5b73233f3a4be636385477d26fb61b2b28b8182bd1c",
+    "rolling-research-batches.md": "a43997f1309dcfdf1cafa77742e4051520e0686b7b19e6473fd698d74411c9a1",
+    "statistics-and-claims.md": "12322da38b2ae3fd6cc4b10171eba245d7ce26affcc76f17590537087443a3c7"
+  },
+  "resolved": {
+    "official_code_head": "d5c01f5045df55819e337369c9617f603c667e00",
+    "official_code_tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "triposg_submodule_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+    "actionbench_dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "current_hub_model_revisions": 4,
+    "target_variant": "non-fast",
+    "generation_seed": 42,
+    "official_scorer_sampling_seed": 44,
+    "per_uid_input_frames": 16,
+    "per_uid_expected_meshes": 16
+  },
+  "negative_findings": {
+    "official_batch_generation_driver": false,
+    "published_prediction_bundle": false,
+    "model_download_revisions_pinned_by_source": false,
+    "leaderboard_code_and_weight_revisions_published": false,
+    "leaderboard_dtype_low_ram_hardware_published": false,
+    "current_2080ti_qualified": false
+  },
+  "scientific_boundary": "The resolved current public revisions may support a newly versioned current-public-release reproduction attempt. They do not establish exact replay of the unpublished leaderboard generation environment, native scorer qualification, any candidate effect, or dispatch readiness.",
+  "execution": {
+    "repository_tests_executed_by_web": 0,
+    "official_scorer_invocations": 0,
+    "gpu_workloads": 0,
+    "static_json_parse_required": true,
+    "static_reference_hash_check_required": true,
+    "remote_blob_readback_required_after_publish": true
+  },
+  "next_executable_step": "Local first completes the already delivered current-revision software acceptance and one-UID engineering parity/finalization. It then captures actual host/device/disk facts and stages the exact current-release dataset/model snapshots with complete manifests. Only after those pass may Web author a one-unit non-fast seed-42 generation/export/scoring timing plan; no 28800-second queue is admitted before that measured unit.",
+  "counters": {
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

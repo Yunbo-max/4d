@@ -259,7 +259,9 @@ Review `native.json` and `harness.json`, capture the printed digest, and execute
 ### 6b. Conditional full-population reproduction path
 
 Read `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
-and its source review before preparing any dataset-wide replacement for the
+and both its source review and
+`docs/research-math-20261006/actionbench-full128-generation-source-audit.json`
+before preparing any dataset-wide replacement for the
 blocked one-UID scientific protocol. The contract now fixes the previously
 missing prospective agreement rule: require all 128 released UIDs, 128 successes,
 zero failures, and all three official aggregate means within the half-open
@@ -274,6 +276,60 @@ generation seed; the official scorer sampling seed remains `44`. The paper-v2
 values are a different versioned target and may not be silently substituted.
 The nine new unit checks for the fail-closed contract helper are part of the
 current whole-suite acceptance and are unexecuted until Local runs step 3.
+
+The bounded generation audit resolves the **current public release candidates**:
+ActionMesh Git `d5c01f5045df55819e337369c9617f603c667e00`, TripoSG submodule
+`fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c`, ActionBench dataset
+`2796071cbe6248422fcbeab3101fa9f9886cb7b9`, and the four current Hub
+revisions listed in the audit. Do not relabel those current revisions as the
+unpublished leaderboard revisions. The official tree has no 128-UID generation
+driver or prediction bundle, and `snapshot_download` is unpinned. The published
+row supplies seed `42` and the non-fast variant but not code/weight revisions,
+dtype, low-RAM choice, hardware, dependency lock, retry policy, or output
+manifest. Therefore an admitted future attempt must be named a versioned
+**current-public-release reproduction**, unless new primary evidence binds the
+historical row.
+
+Do not launch even one full-population generation unit until the four Hub
+snapshots and dataset are materialized at immutable revisions with complete
+file/hash manifests. Inspect the real GPU first. The official README states a
+32 GB default and 12 GB `--low_ram` requirement and gives no RTX 2080 Ti result;
+neither `--low_ram` nor `--dtype float16` is source-bound to the published row.
+Record an OOM or unsupported dtype as the observed natural failure. Do not
+silently change `--fast`, dtype, low-RAM mode, configuration, population, or
+metrics to make it fit. After provenance staging, measure one complete non-fast,
+seed-42, 16-frame generation/export/scoring unit and its peak VRAM. Only that
+current complete-unit receipt can price a later 28,800-second plan with the
+1,800-second collection reserve.
+
+After confirming disk capacity and before inference, pin the current public Hub
+snapshots rather than allowing the upstream entrypoint to resolve moving `main`:
+
+```bash
+hf download facebook/actionbench --type dataset \
+  --revision 2796071cbe6248422fcbeab3101fa9f9886cb7b9 \
+  --local-dir "$project_dir/inputs/actionbench-2796071c"
+hf download facebook/ActionMesh \
+  --revision fb69228ba8a4df684907b5d259cff3c22fb722f1 \
+  --local-dir "$actionmesh_source/pretrained_weights/ActionMesh"
+hf download VAST-AI/TripoSG \
+  --revision 2c1c516d22d58db486a058d98d31bb6177344e06 \
+  --local-dir "$actionmesh_source/pretrained_weights/TripoSG"
+hf download facebook/dinov2-large \
+  --revision 47b73eefe95e8d44ec3623f8890bd894b6ea2d6c \
+  --local-dir "$actionmesh_source/pretrained_weights/dinov2"
+hf download briaai/RMBG-1.4 \
+  --revision 2ceba5a5efaec153162aedea169f76caf9b46cf8 \
+  --local-dir "$actionmesh_source/pretrained_weights/RMBG"
+```
+
+Here `actionmesh_source` must be the detached official checkout at
+`d5c01f5045df55819e337369c9617f603c667e00`, with the TripoSG submodule at
+`fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c`. Preserve each CLI receipt and a
+recursive regular-file manifest with size and SHA-256. Reject an HTML response,
+LFS pointer, empty/nonmatching directory, moving branch, or submodule mismatch.
+These acquisition commands do not authorize inference; they only stage the
+candidate current-release bytes for a later harness-owned plan.
 
 After the current one-UID engineering parity/finalization chain, inventory these
 full-population prerequisites without launching generation or scoring. Return

@@ -15,6 +15,7 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 7. `docs/research-math-20261006/actionbench-qualification-source-audit.json`
 8. `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
 9. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
+10. `docs/research-math-20261006/actionbench-full128-generation-source-audit.json`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
@@ -28,6 +29,7 @@ Do not infer current status from older receipts. Mathematical construction, a ge
 - Do not dispatch a candidate merely because it is mathematically selected. Candidate execution requires baseline/native-scoring qualification, Natural Gate 0, IPCG, code/design verification, a simple baseline, and an ablation.
 - Do not convert missing results into zeroes or successes. Record `generated_unexecuted`, `insufficient_evidence`, or the observed failure.
 - Keep ActionMesh generation seed `42` distinct from the pinned official evaluator sampling seed `44`. The conditional full-128 reproduction contract is not a one-UID threshold, a candidate protocol, or a dispatch-ready queue.
+- The current public ActionMesh/Hugging Face revisions are pin candidates for a new current-release reproduction, not proof of the unpublished leaderboard generation environment. Do not call them an exact published-run replay. The public entrypoint defaults to seed `44`; the target generation row requires an explicit `--seed 42`.
 
 ## Runtime and evidence contract
 

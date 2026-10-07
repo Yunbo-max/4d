@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T06:34:00Z",
+  "recorded_at": "2026-10-07T06:55:59Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical result does not accept this revision. One-UID scientific scoring remains blocked. The full-128 current-README alternative now has a prospective complete-population/three-decimal reproduction rule and fail-closed checker, but lacks full GT/prediction/generation/runtime/timing/replay bindings and is not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical result does not accept this revision. One-UID scientific scoring remains blocked. The full-128 current-README alternative has a prospective complete-population/three-decimal reproduction rule. Its current public Git/submodule/dataset/four-model release candidates are now resolved, but the published leaderboard's exact generation revisions, dtype, low-RAM choice, hardware, dependency lock and batch/failure policy were not published; full GT/prediction/runtime/timing/replay bindings remain absent and the path is not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -292,7 +292,7 @@
     "base_commit": "af4d36b236f3ebae0f20cf9211f3515dc9d92b1d",
     "contract_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json",
-      "sha256": "d94b68cc5d2bf28c8f67335c07d987376b1ac6cd654576a5c2d3e933a70a6705"
+      "sha256": "395131d08773b16dbc86c374dc2738dcf5079ca62e5dcef1738aa6791d7a53f9"
     },
     "source_review_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-reproduction-source-review.json",
@@ -316,6 +316,34 @@
     "full_population_protocol_ready": false,
     "queue_generated": false,
     "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_generation_source_audit": {
+    "status": "current_public_release_resolved_published_generation_provenance_incomplete",
+    "recorded_at": "2026-10-07T06:55:59Z",
+    "base_commit": "29c8da172115668f5aab1bbdb79cb5923ca02af9",
+    "audit_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-generation-source-audit.json",
+      "sha256": "4c6c92ec79b2c2aab92f7a1293210e14ec1c2f330787f0d964764819c8d9389b"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-generation-source-audit.json",
+      "sha256": "17e4defbbb6de18ddbbf42d37e8910886991fb20d8033a5cd5eebd71bb75212b"
+    },
+    "official_source_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "triposg_submodule_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+    "actionbench_dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "current_hub_model_revisions_resolved": 4,
+    "official_batch_generation_driver_found": false,
+    "published_prediction_bundle_found": false,
+    "published_generation_environment_complete": false,
+    "current_2080ti_qualified": false,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
+    "tests_executed_by_web": 0,
+    "official_scores_run": 0,
+    "gpu_workloads": 0,
     "candidate_designs_verified": 0,
     "candidate_native_results": 0
   }
