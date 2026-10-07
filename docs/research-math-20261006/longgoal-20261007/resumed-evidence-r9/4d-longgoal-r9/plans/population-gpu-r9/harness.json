@@ -1,0 +1,214 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "population-gpu-r9",
+  "tasks": [
+    {
+      "task_id": "population-001",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 127,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/001/native.json",
+        "sha256": "01639b35a9c50ed6fefbc9fa10777f33f07aeb34bf3700f255464a6ca76eeae4"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-002",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 126,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/002/native.json",
+        "sha256": "622654fed96cde7563f10ba94ebb0e3e1e76c278a84c48586d14318e464654b3"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-003",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 125,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/003/native.json",
+        "sha256": "9c429593d4e5f7b4c29177d4ad55d0c58f3c5592a36658a38c9a89c55df2d244"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-004",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 124,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/004/native.json",
+        "sha256": "2260e2014366c30e37e3f1fc2cda596d22872bb67710bca4b2ef73da3faa3e13"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-005",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 123,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/005/native.json",
+        "sha256": "6c8f85f032cf017f7890ec86bf48755e732711d269579b57fd7c377bb10ad1e7"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-006",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 122,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/006/native.json",
+        "sha256": "36c952d3d0ec4b370a685db0e6bb801ae9b620ebdc06f3846cb4567157688f9a"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-007",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 121,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/007/native.json",
+        "sha256": "fa27fbdb9a8ab009b7ea69cd8bbfb4b5d0d20a69b645cd91225adfa3b5d5dcf1"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-008",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 120,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/008/native.json",
+        "sha256": "fe8a02df21bb87569d4fe0d00cc9e3ad0af3f622d98bee0e08123d1992a1e27e"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    },
+    {
+      "task_id": "population-009",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 119,
+      "plan_ref": {
+        "path": "plans/population-gpu-r9/009/native.json",
+        "sha256": "2ed9c42aac952ecc387613784d26cb5d37f213e60a17dde7271ca5c180509dbd"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 28800,
+    "window_seconds": 3600,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 8,
+    "ram_mib": 32768,
+    "max_gpu_task_seconds": 24300
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [
+      "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740"
+    ],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "a3c147375f3433a989af8cf07a483ea5f31a339f7d6d475a829707108b558f49"
+}

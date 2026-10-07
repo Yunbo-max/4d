@@ -1,0 +1,9 @@
+{
+  "n_total": 1,
+  "n_success": 1,
+  "n_failed": 0,
+  "success_rate": 1.0,
+  "cd_3d_mean": 0.038530298423024086,
+  "cd_4d_mean": 0.07685447701011298,
+  "cd_motion_mean": 0.17124666273593903
+}

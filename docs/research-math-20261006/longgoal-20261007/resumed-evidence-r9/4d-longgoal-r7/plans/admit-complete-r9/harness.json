@@ -1,0 +1,44 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "admit-complete-r9",
+  "tasks": [
+    {
+      "task_id": "complete-unit-admission",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/admit-complete-r9/native.json",
+        "sha256": "bba0ff13a541c1de29d3c4ab49706fdcdb569c33001350dfea5a840c1c6f72b3"
+      },
+      "resources": {
+        "cpu_cores": 2,
+        "ram_mib": 4096,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "complete-unit-admission"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 900,
+    "window_seconds": 900,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 2,
+    "ram_mib": 4096,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "06e3cfaa5d7221d40c1a7e6af21433712ff8766afa0a4629d985cadc9368f3fc"
+}

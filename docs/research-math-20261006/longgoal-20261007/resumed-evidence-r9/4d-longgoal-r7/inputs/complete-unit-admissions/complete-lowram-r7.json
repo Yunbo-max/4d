@@ -1,0 +1,598 @@
+{
+  "kind": "actionbench-complete-unit-admission",
+  "version": "1.0.0",
+  "status": "admitted_engineering_complete_unit",
+  "run_id": "complete-lowram-r7",
+  "trial_id": "complete-fp16-lowram-v1-three-arm-unit",
+  "attempt_id": "complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739",
+  "approved_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+  "unit_manifest_ref": {
+    "path": "inputs/fp16-lowram-v1/unit-manifest.json",
+    "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+  },
+  "result_ref": {
+    "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/result.json",
+    "sha256": "1cf6aea2aaaf39c9e8f1b535bd60e7f0fcf4b4f9c1ecaf72239878cd5ed13b10"
+  },
+  "origin_refs": [
+    {
+      "path": "runs/harness/complete-lowram-r7/plan.json",
+      "sha256": "4a6e5e5c1aa719a79dfaaadb614dfb0ac57932d3a904824abf18e0e4fcc0cbc6"
+    },
+    {
+      "path": "runs/harness/complete-lowram-r7/state.json",
+      "sha256": "311bbc2475406a6a9d4fdfa8d8aefd2efc2b079f4f6b18e32df8e6478fb1647d"
+    },
+    {
+      "path": "runs/harness/complete-lowram-r7/report.json",
+      "sha256": "985bf0988559193a95c8a91c475f8646f011cb502f38d3da6fc8e202064d4e04"
+    },
+    {
+      "path": "runs/harness/complete-lowram-r7/tasks/complete-fp16-lowram-v1-three-arm-unit/task.json",
+      "sha256": "19fd337dd169fd8fb17d719fcf35ff2e5cd1715759566abbe7c68170c2c160e9"
+    },
+    {
+      "path": "runs/harness/complete-lowram-r7/tasks/complete-fp16-lowram-v1-three-arm-unit/result.json",
+      "sha256": "db5548b171f99411f91a82598d0173cabc252e317811f6939234ae1acfbd7eb5"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/plan.json",
+      "sha256": "cd1a8fb8ed4c02a037b0cf21498f346ed6d408c1df6529284ce55457e823989d"
+    },
+    {
+      "path": "runs/harness/complete-lowram-r7/tasks/complete-fp16-lowram-v1-three-arm-unit/execution-context.json",
+      "sha256": "a5d9c029a786a2761dd176fce05c4208d78ae8d04369a3ed5891740af92872df"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/receipt.json",
+      "sha256": "ec72d1aa2301d73cbc62eb61bda4e588ebc7ebbb949c17f542b7dc3e21f43909"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/attempt.json",
+      "sha256": "051ee241d1c8ed6fd55b8a3eaa1c8d27d3e85939883c6c1b357d0ecd3b07848b"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/process-guard.json",
+      "sha256": "7944c296efb59ffe380e39617bbe8e5e91b9acd5aaf4d8260720924138e12801"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/generation.execution.json",
+      "sha256": "7f062bba18e5910c0dac7557b0245c5eb127b5f8dc99246d7d93dd9bfc9f745f"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scoring.execution.json",
+      "sha256": "984292112e064e26d3c84b1b8d39d30945e81ce230a5e6b118a278a52d4ffc99"
+    }
+  ],
+  "output_refs": [
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/result.json",
+      "sha256": "1cf6aea2aaaf39c9e8f1b535bd60e7f0fcf4b4f9c1ecaf72239878cd5ed13b10"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/device-samples.jsonl",
+      "sha256": "7b38ac523d99a35b0b2748ebd362043cd289e85849767ebd0febb10f98f1638e"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/host-samples.jsonl",
+      "sha256": "60476c75fb94111a4fcd36ddd036afee7ddac49bbcc6c0a9590155e58a88885d"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/revalidated-unit-manifest.json",
+      "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/generation.stdout.log",
+      "sha256": "4f05ed6786f777945a6d7db5a43a0889bbe8352556e265226411a2f3b1a8aa56"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/generation.stderr.log",
+      "sha256": "01f4870a52a34c5fa37236dcf6429699a323fe3ab938aff10bfee7bd9ddd0f71"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/generation.execution.json",
+      "sha256": "7f062bba18e5910c0dac7557b0245c5eb127b5f8dc99246d7d93dd9bfc9f745f"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scoring.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scoring.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scoring.execution.json",
+      "sha256": "984292112e064e26d3c84b1b8d39d30945e81ce230a5e6b118a278a52d4ffc99"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json",
+      "sha256": "db4ee6c17cbf43708a9df49b769eb1cba83309316ced9ef13d8e8a6a6aa77189"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/final-integrity/revalidated-unit-manifest.json",
+      "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/deformations_vertices.npy",
+      "sha256": "1d7ad2773c1042f9783b55b93f0b957e8131c6d1ff0914ef90acaf15c1b8772e"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/deformations_faces.npy",
+      "sha256": "0152df7a5888f34d34b1810985ab19d164deb9f92e134bbe77061f610dd1c913"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/sequence.npz",
+      "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/report.json",
+      "sha256": "747cf189291b485cd8cf927a8c735a9367191d78c4cf5bd8e63d6bf6b872005a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/grid_normal.mp4",
+      "sha256": "a9371b578d1929733d92091b9d0f06cdfa0d973005b1dc4c1a45c9da72eda2aa"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_00.glb",
+      "sha256": "154ce7d2fef2df62039301f4a64c5daec3691255f8a2acfcb802bb160152a92c"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_01.glb",
+      "sha256": "3c6e751090a835cdc8e698e96ca77510cb93086c93b1c859f6b3e55033d75e91"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_02.glb",
+      "sha256": "e81d2374e261cab4f30a872141121194b445534f8d4c884837f2816e03829015"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_03.glb",
+      "sha256": "15fc66ea3f35bc87ff9b38fa616e6105ef394a659174bbb619e323180adf9157"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_04.glb",
+      "sha256": "1d685485a898a3ead8f91ad305f49cd3146a93e80c8d3a56d757b1d93642e985"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_05.glb",
+      "sha256": "8886f475c96b812c20c0edbcc672be79060723d4ddea068f744311e24ecfcb10"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_06.glb",
+      "sha256": "762b663e3b724a6d8942d4b400f9dd731ada8526c662a363b9ace7c170e69929"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_07.glb",
+      "sha256": "00266b3ada1712ba8cfdc532751e83be2a06878210629ae080582ee2b7ed8794"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_08.glb",
+      "sha256": "eadf4458d472df81d9a3166359bd68ac1f14aa356d76cb6c95f78bd7d1c61d13"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_09.glb",
+      "sha256": "7cae37bb6e5319592656878d0145f3f4ca625c68b8f566b333d1c3980dacffac"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_10.glb",
+      "sha256": "7fe88f07c8b9db708bbe96d800946d915f5de1c2079493150d5a2904eb6f3c4a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_11.glb",
+      "sha256": "1eeb895577d9fcda42aca53d42cb7689e43acc00e2e2b53f90bda0a2248d198c"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_12.glb",
+      "sha256": "693d1c220ecf2f6bf348708a6064af24a79b318b01dcdfd6ede68b0bb7a5e1e6"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_13.glb",
+      "sha256": "98f917156aa64aa874a43c4b7ef2368b52ca874fc06bb2bf5655226e23c7f1cb"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_14.glb",
+      "sha256": "813c74e6a45bb75d3a35063e59dbfa3f69561e0ea7e7b5888a954acbd5276765"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/native-generation/mesh_15.glb",
+      "sha256": "2e2fd29a6c0fe759dafc59e3debace7b8e4f59d7d35030f205ca500d3f00017f"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/manifest.json",
+      "sha256": "633d87d66b9900b98ec0ca8c7d1c681d22b7dda502ce4a5a47040df4280a644a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/controls.json",
+      "sha256": "be3be2bfc7379cc9925619743ac2828876cfa0136c9dfa7c55a5a779747bd70a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/native/sequence.npz",
+      "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/native/report.json",
+      "sha256": "85faa225457e2bf04eb2474bfb03ea63d8c3a696059bda6f73984e7c14628216"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/world_gaussian/sequence.npz",
+      "sha256": "4b07c7b1f265bbba0d676f64d150a6b68e69bc00e86463648098af22a4ef09ae"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/world_gaussian/report.json",
+      "sha256": "62460fe67dcd53379e3a2abe05da6e7117b7d1545c5aec2689288022cb87a266"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/body_gaussian/sequence.npz",
+      "sha256": "681c0f096cd34097e1673ac1a3e9c032eddd200773b1825638fc4f378754a618"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/body_gaussian/report.json",
+      "sha256": "c21c0e1d51f71d19ff27daaa13baf648a792cd6f9085f4b7d84a7c2e4e342d44"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/controls/body_gaussian/poses.npz",
+      "sha256": "f612a3094a89135ba171d4fe0ce47b3c82e527782c2ddddffec7750bb753929e"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/official-source/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/official-source/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/official-source/icp.py",
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/official-source/sample_mesh.py",
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/official-source/sample_point_cloud.py",
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/official-source/evaluate_dataset.py",
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/execution.json",
+      "sha256": "6efab6278060505bbdf71c44dfd95052e03de54b88a95350c38849d31cefeebd"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/export-manifest.json",
+      "sha256": "d3a7f5b512756c39d414c63d93e2e7aa5096a811b8f1d9ee07487995c9be8805"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/official.csv",
+      "sha256": "2833208361df933293b1aeb47d6f364759f61d07b655379d444e672c8a6c6254"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/official.summary.json",
+      "sha256": "03ad29c19bb2963ce6832bc156e417d23314a9adb98346456dec49b6791e85b0"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/official.backend.json",
+      "sha256": "f73f1663cd331bcf79e164d629b00d1836c3612cb004899e2451634f42caba09"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/stdout.log",
+      "sha256": "7a1b35579f50c264abad671259ecb92545c9a633c07dda6b58992f5f7dd2dfca"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/stderr.log",
+      "sha256": "7aa15fa972e378551454444d6bd4d510faa7cb09e735b2ae392850142254e4b1"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00000.glb",
+      "sha256": "3d63cfa7235276b5266d7f14b3be19b0deec2898b9ff98243c2262058b5cf44a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00001.glb",
+      "sha256": "3c6e751090a835cdc8e698e96ca77510cb93086c93b1c859f6b3e55033d75e91"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00002.glb",
+      "sha256": "e81d2374e261cab4f30a872141121194b445534f8d4c884837f2816e03829015"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00003.glb",
+      "sha256": "15fc66ea3f35bc87ff9b38fa616e6105ef394a659174bbb619e323180adf9157"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00004.glb",
+      "sha256": "1d685485a898a3ead8f91ad305f49cd3146a93e80c8d3a56d757b1d93642e985"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00005.glb",
+      "sha256": "8886f475c96b812c20c0edbcc672be79060723d4ddea068f744311e24ecfcb10"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00006.glb",
+      "sha256": "762b663e3b724a6d8942d4b400f9dd731ada8526c662a363b9ace7c170e69929"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00007.glb",
+      "sha256": "00266b3ada1712ba8cfdc532751e83be2a06878210629ae080582ee2b7ed8794"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00008.glb",
+      "sha256": "eadf4458d472df81d9a3166359bd68ac1f14aa356d76cb6c95f78bd7d1c61d13"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00009.glb",
+      "sha256": "7cae37bb6e5319592656878d0145f3f4ca625c68b8f566b333d1c3980dacffac"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00010.glb",
+      "sha256": "7fe88f07c8b9db708bbe96d800946d915f5de1c2079493150d5a2904eb6f3c4a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00011.glb",
+      "sha256": "1eeb895577d9fcda42aca53d42cb7689e43acc00e2e2b53f90bda0a2248d198c"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00012.glb",
+      "sha256": "693d1c220ecf2f6bf348708a6064af24a79b318b01dcdfd6ede68b0bb7a5e1e6"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00013.glb",
+      "sha256": "98f917156aa64aa874a43c4b7ef2368b52ca874fc06bb2bf5655226e23c7f1cb"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00014.glb",
+      "sha256": "813c74e6a45bb75d3a35063e59dbfa3f69561e0ea7e7b5888a954acbd5276765"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00015.glb",
+      "sha256": "2e2fd29a6c0fe759dafc59e3debace7b8e4f59d7d35030f205ca500d3f00017f"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/execution.json",
+      "sha256": "4d2395e5ab99ef8ced4504ba8aa33ca427ab2b2b7ea8a88ec527f6d463a6d5c1"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/export-manifest.json",
+      "sha256": "0ae89bd6f343e48254aab3b6dad6ea75ec508d92e10637b433b54a43b792c420"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/official.csv",
+      "sha256": "25168dcbe266ca974752f324114a5c678a7c2eeb8a14d262b28e7e6d612779ac"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/official.summary.json",
+      "sha256": "b101c2fa86270534fd71a35bc2f1b09969f6d51140494691c4090b0db0e01cb6"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/official.backend.json",
+      "sha256": "f73f1663cd331bcf79e164d629b00d1836c3612cb004899e2451634f42caba09"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/stdout.log",
+      "sha256": "3b4c167770e6612e0821e94100011256d9ab1eccd066d57040f962130e426812"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/stderr.log",
+      "sha256": "77315e025a746389271d9841b0186183dd1f52e68e2c35028884cc7165ebbbfc"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00000.glb",
+      "sha256": "3d63cfa7235276b5266d7f14b3be19b0deec2898b9ff98243c2262058b5cf44a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00001.glb",
+      "sha256": "150f2d26b0402d14c13bd1fcb411ff771d3863eb284a9657141800460df2291b"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00002.glb",
+      "sha256": "fa2d36965f50a063b6d1e5066f4f94f65aed578b96fb353451ea925dd6ad4ae3"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00003.glb",
+      "sha256": "5bc62eb924bacf948142a527a997f782579a6afd9f23c6fb02be65117f97fb17"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00004.glb",
+      "sha256": "e71611378ca9c118d74f21935253c0b403ba3b922a4e45ccfd8fc271d1046b07"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00005.glb",
+      "sha256": "bd6485f2c74bb8a5654cbe825a28d45a1501f0015db154235d5a6624993d8326"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00006.glb",
+      "sha256": "fcc51abd85abd557cf0d97702a54a7968b37bad5a2faedc5f4f52c4fbc88dc4d"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00007.glb",
+      "sha256": "06b5f5bd771b5577ac00ad928c203f5647bde4aaff0828fafeb6a0b3e3cb0505"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00008.glb",
+      "sha256": "d082836deb1a198a4443cd76069b0b636fdc01aa5c88d89855f851368f9c1bb5"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00009.glb",
+      "sha256": "119c46163e138ec2fa29a867be4bffdc12e9414c90d54a3c6c0335dadcaa6906"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00010.glb",
+      "sha256": "5ccbcb3517a1a25984e3c9ab3f7d39ada793dc87b1fe41baf93a87a4b280f9af"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00011.glb",
+      "sha256": "a1e80e43751eb9c775e41f8f928d34bef5e1ab393c163be6fa269f7237e5ad2b"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00012.glb",
+      "sha256": "b0a4e50adafea77a9914fec7690066d92b24b2e3935a384b0d1b2fd9486d2887"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00013.glb",
+      "sha256": "4886745ee47adbd7ffa2aa90732f1b352d3e8112efef31077539090cd02c21c2"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00014.glb",
+      "sha256": "415ebca98200cdf3e5d47acf5eff9451c49083eef6c2b5391a725a8e5bda1e69"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00015.glb",
+      "sha256": "9ec94347247e8f74d0c1bb8e65fb666123e2db08880f98445ba512632dc6f4c9"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/execution.json",
+      "sha256": "9a4f73fd6ca054a470d567fa7fe18127c06f93099c31d37b728fc75e7ca32122"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/export-manifest.json",
+      "sha256": "df730c0575062089e8628a8a4f6b0f8da69797f2f8ad6c9d10ec74df9a1decd4"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/official.csv",
+      "sha256": "e16a396da3b0aef50db781efa685969786dfaac2e88c0bdf8fd98dcd572a84db"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/official.summary.json",
+      "sha256": "6aa16140762e1ef9aa37dcb8eddf82d0bc837c196df7acedfd6f2dd1c9869375"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/official.backend.json",
+      "sha256": "f73f1663cd331bcf79e164d629b00d1836c3612cb004899e2451634f42caba09"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/stdout.log",
+      "sha256": "c1c00841a66de2b9e849da2d592fdd32ccbcfdbcaf8d39789cea9ad38899cce0"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/stderr.log",
+      "sha256": "eca491a57a6b8a8922043b4529bb5e15968e116115a1396be4cdd1a867f5529e"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00000.glb",
+      "sha256": "3d63cfa7235276b5266d7f14b3be19b0deec2898b9ff98243c2262058b5cf44a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00001.glb",
+      "sha256": "509e2b0bc692109adc025c15e54557e8d517e168744e7931f855a8056cff22a8"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00002.glb",
+      "sha256": "fd32ed8c1ce1bb34eb0277021b0704d01b4f4ebd35fbc1e1da3eb332da4d9036"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00003.glb",
+      "sha256": "52e9220128c28e1921836b839a55a7d58bfd00103f64424e42a09ec03643bd3a"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00004.glb",
+      "sha256": "558ea2a1fcdc4343f5654e4da8fff18b1402eb8e890700b1393e04aee47cf119"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00005.glb",
+      "sha256": "cfc14b263bc5649c2bc724435173b608cfb71925d355b1856bee16f4b1cd75e8"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00006.glb",
+      "sha256": "da6273ac7488e2403aa1b6e0c07d8eb9739280ec02a29ab9d3c05efa309c8876"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00007.glb",
+      "sha256": "3b4f89e905850c31439b09eb71c70fa23796346d57b81d66bca0e678283f6ff4"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00008.glb",
+      "sha256": "1c0529b5fab17040e7cb9e1d0d00bab7599a04c0f3ec342e1979b8a1962dea45"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00009.glb",
+      "sha256": "deac735bc0132a9fb8013ff0f600cbfef3b3caf3ab94a406aec6de6f73e2d2b4"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00010.glb",
+      "sha256": "097868f183a663c5414ab735321b428ced4723caf9b3ef02d284f83bf9bcf4de"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00011.glb",
+      "sha256": "4eab0142fbd82fb64f699b81a5f71809076b8692f87227f21a80548cb88b9b21"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00012.glb",
+      "sha256": "c82bd34eebcf464077c3d4db664677b68e1e50f8c17ebde56eb4e471c10e2fcd"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00013.glb",
+      "sha256": "51fa25f133fb6100c9031a990a0bb4d447bbccb6e0f72c35f4d3fc2fb5eee1ae"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00014.glb",
+      "sha256": "9b8ac6b72b27c8efc6025ecc53424bb656c7daadba3402d657a8d9ab68d04770"
+    },
+    {
+      "path": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739/workspace/actionmesh/unit-output/official-scores.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00015.glb",
+      "sha256": "9b9c9994f8498f2eee346010db23e4b527061932a87ca1dcfdec528b313c97f9"
+    }
+  ],
+  "successful_output_file_count": 117,
+  "measurement": {
+    "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+    "runtime_profile": "fp16-lowram-v1",
+    "gpu_uuid": "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740",
+    "gpu_total_mib": 22528,
+    "observed_peak_mib": 10255.0,
+    "device_sample_interval_seconds": 1,
+    "device_samples": 1232,
+    "elapsed_seconds": 1330.4655511886813,
+    "stage_elapsed_seconds": {
+      "generation": 792.5364902312867,
+      "export": 1.2543293833732605,
+      "controls": 0.738666535820812,
+      "official_scoring": 458.2660387000069
+    },
+    "host_resources": {
+      "observed_peak_rss_bytes": 11539595264,
+      "observed_peak_output_bytes": 66287125,
+      "minimum_free_disk_bytes": 24768958464
+    },
+    "scores": {
+      "native": {
+        "cd_3d": 0.03884803608007244,
+        "cd_4d": 0.07596155655519302,
+        "cd_motion": 0.1683817356824875
+      },
+      "world_gaussian": {
+        "cd_3d": 0.038530298423024086,
+        "cd_4d": 0.07685447701011298,
+        "cd_motion": 0.17124666273593903
+      },
+      "body_gaussian": {
+        "cd_3d": 0.038372574887254554,
+        "cd_4d": 0.07583400290438996,
+        "cd_motion": 0.16919727623462677
+      }
+    },
+    "scientific_effect_qualification": false,
+    "candidate_methods_tested": false,
+    "queue_approved": false,
+    "queue_generated": false
+  },
+  "eligible_for_queue_pricing": true,
+  "scientific_effect_qualification": false,
+  "native_scientific_qualification": false,
+  "candidate_methods_tested": false,
+  "queue_approved": false,
+  "queue_generated": false,
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+    "sha256": "37b115bee75d20a72ec028718a7ec1e047b6c69e458e697197b8445a3fd3fb0d"
+  }
+}

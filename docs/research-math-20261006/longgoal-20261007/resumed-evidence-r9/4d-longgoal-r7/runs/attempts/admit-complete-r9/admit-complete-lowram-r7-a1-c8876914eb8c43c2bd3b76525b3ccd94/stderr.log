@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/actionmesh-research-staging/4d-longgoal-r7/runs/attempts/admit-complete-r9/admit-complete-lowram-r7-a1-c8876914eb8c43c2bd3b76525b3ccd94/workspace/actionmesh/research_math/complete_unit_admission.py", line 622, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/actionmesh-research-staging/4d-longgoal-r7/runs/attempts/admit-complete-r9/admit-complete-lowram-r7-a1-c8876914eb8c43c2bd3b76525b3ccd94/workspace/actionmesh/research_math/complete_unit_admission.py", line 606, in main
+    admission = admit(args.root, args.contract, args.harness_plan, args.harness_report,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/4d-longgoal-r7/runs/attempts/admit-complete-r9/admit-complete-lowram-r7-a1-c8876914eb8c43c2bd3b76525b3ccd94/workspace/actionmesh/research_math/complete_unit_admission.py", line 585, in admit
+    output.relative_to(root)
+  File "/opt/conda/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/root/actionmesh-research-staging/4d-longgoal-r7/inputs/complete-unit-admissions/complete-lowram-r7.json' is not in the subpath of '/root/actionmesh-research-staging/4d-longgoal-r7/runs/attempts/admit-complete-r9/admit-complete-lowram-r7-a1-c8876914eb8c43c2bd3b76525b3ccd94/workspace'

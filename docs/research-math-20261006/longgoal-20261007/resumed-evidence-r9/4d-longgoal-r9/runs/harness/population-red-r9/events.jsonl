@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T15:09:32.219862Z","plan_digest":"2e2bb49c7f1e60cf2fc48f2325788a6db58482726a2cb7631f619ae60180288c"}
+{"devices":[],"event":"task_started","launcher_pid":416,"native_plan_digest":"76522f2f1faf75ffd734158bcb64439e06dab535336423a968eafdb8e2a414d5","observed_at":"2026-10-07T15:09:32.347393Z","task_id":"all-research-math-checks"}
+{"event":"task_finished","observed_at":"2026-10-07T15:09:41.606833Z","status":"failed","task_id":"all-research-math-checks"}

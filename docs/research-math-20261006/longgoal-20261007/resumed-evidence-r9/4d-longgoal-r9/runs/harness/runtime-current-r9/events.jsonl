@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T15:29:49.410207Z","plan_digest":"911f5bbcfc4d107493068aeacb1dab0d0becbf6626554143e4688d6b0a401ec7"}
+{"devices":[],"event":"task_started","launcher_pid":3074,"native_plan_digest":"9aaf2c5028ac0027d658e067939f8f74f28128700fe028992abcc482ea627c94","observed_at":"2026-10-07T15:29:49.492523Z","task_id":"native-runtime-metadata"}
+{"event":"task_finished","observed_at":"2026-10-07T15:29:50.523271Z","status":"completed","task_id":"native-runtime-metadata"}

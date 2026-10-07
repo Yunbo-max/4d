@@ -1,0 +1,1 @@
+{"admission_ref": {"path": "inputs/complete-unit-admissions/complete-lowram-r7.json", "sha256": "74ae411497af727eb5ccb6ae66fb803f856362956688c8b5aeea793193700144"}, "status": "admitted_engineering_complete_unit", "elapsed_seconds": 1330.4655511886813, "observed_peak_mib": 10255.0, "scientific_effect_qualification": false, "queue_approved": false, "queue_generated": false}

@@ -1,0 +1,44 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "price-full128-r9",
+  "tasks": [
+    {
+      "task_id": "full128-queue-pricing",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/price-full128-r9/native.json",
+        "sha256": "d73baa43117e6542ca370476812b9c21af94f52e6d20235d899c7b678da74164"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "full128-queue-pricing"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 900,
+    "window_seconds": 900,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 2048,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "028641490520dc72aa9217a8dfb73b871058645da665fcc835f496616faee180"
+}

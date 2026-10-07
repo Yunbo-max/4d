@@ -1,0 +1,44 @@
+2026-10-07 12:25:46,978 - INFO - Found 1 GT, 1 pred, 1 common
+
+Evaluating samples:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ICP per-frame:   0%|          | 0/16 [00:00<?, ?it/s][A
+
+ICP per-frame:   6%|▋         | 1/16 [00:08<02:06,  8.44s/it][A
+
+ICP per-frame:  12%|█▎        | 2/16 [00:16<01:51,  7.98s/it][A
+
+ICP per-frame:  19%|█▉        | 3/16 [00:24<01:46,  8.16s/it][A
+
+ICP per-frame:  25%|██▌       | 4/16 [00:32<01:39,  8.30s/it][A
+
+ICP per-frame:  31%|███▏      | 5/16 [00:41<01:33,  8.46s/it][A
+
+ICP per-frame:  38%|███▊      | 6/16 [00:49<01:23,  8.34s/it][A
+
+ICP per-frame:  44%|████▍     | 7/16 [00:59<01:18,  8.71s/it][A
+
+ICP per-frame:  50%|█████     | 8/16 [01:08<01:09,  8.74s/it][A
+
+ICP per-frame:  56%|█████▋    | 9/16 [01:16<01:00,  8.66s/it][A
+
+ICP per-frame:  62%|██████▎   | 10/16 [01:24<00:50,  8.49s/it][A
+
+ICP per-frame:  69%|██████▉   | 11/16 [01:32<00:41,  8.25s/it][A
+
+ICP per-frame:  75%|███████▌  | 12/16 [01:40<00:32,  8.14s/it][A
+
+ICP per-frame:  81%|████████▏ | 13/16 [01:49<00:25,  8.39s/it][A
+
+ICP per-frame:  88%|████████▊ | 14/16 [01:58<00:17,  8.77s/it][A
+
+ICP per-frame:  94%|█████████▍| 15/16 [02:07<00:08,  8.86s/it][A
+
+ICP per-frame: 100%|██████████| 16/16 [02:16<00:00,  8.73s/it][A
+ICP per-frame: 100%|██████████| 16/16 [02:16<00:00,  8.52s/it]
+2026-10-07 12:28:20,385 - INFO - [000-000_03b69da8d2c94b5999bcf2605ee2ecd9] CD_3D=0.039, CD_4D=0.076, CD_Motion=0.168
+
+Evaluating samples: 100%|██████████| 1/1 [02:33<00:00, 153.42s/it]
+Evaluating samples: 100%|██████████| 1/1 [02:33<00:00, 153.42s/it]
+2026-10-07 12:28:20,398 - INFO - Results saved to: /root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/official.csv
+2026-10-07 12:28:20,398 - INFO - Summary saved to: /root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native/official.summary.json

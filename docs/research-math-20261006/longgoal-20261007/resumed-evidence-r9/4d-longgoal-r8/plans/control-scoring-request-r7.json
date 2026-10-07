@@ -1,0 +1,204 @@
+{
+  "kind": "baseline-control-scoring-request",
+  "version": "1.0.0",
+  "purpose": "baseline-native-qualification",
+  "evidence_mode": "developmental",
+  "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+  "inference_seed": 42,
+  "scoring_seed": 44,
+  "arms": [
+    {
+      "arm": "native",
+      "report_ref": {
+        "path": "inputs/current-release-gpu-case/controls/native/report.json",
+        "sha256": "85faa225457e2bf04eb2474bfb03ea63d8c3a696059bda6f73984e7c14628216"
+      },
+      "sequence_ref": {
+        "path": "inputs/current-release-gpu-case/controls/native/sequence.npz",
+        "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+      },
+      "preparation_status": "completed"
+    },
+    {
+      "arm": "world_gaussian",
+      "report_ref": {
+        "path": "inputs/current-release-gpu-case/controls/world_gaussian/report.json",
+        "sha256": "62460fe67dcd53379e3a2abe05da6e7117b7d1545c5aec2689288022cb87a266"
+      },
+      "sequence_ref": {
+        "path": "inputs/current-release-gpu-case/controls/world_gaussian/sequence.npz",
+        "sha256": "4b07c7b1f265bbba0d676f64d150a6b68e69bc00e86463648098af22a4ef09ae"
+      },
+      "preparation_status": "completed"
+    },
+    {
+      "arm": "body_gaussian",
+      "report_ref": {
+        "path": "inputs/current-release-gpu-case/controls/body_gaussian/report.json",
+        "sha256": "c21c0e1d51f71d19ff27daaa13baf648a792cd6f9085f4b7d84a7c2e4e342d44"
+      },
+      "sequence_ref": {
+        "path": "inputs/current-release-gpu-case/controls/body_gaussian/sequence.npz",
+        "sha256": "681c0f096cd34097e1673ac1a3e9c032eddd200773b1825638fc4f378754a618"
+      },
+      "preparation_status": "completed"
+    }
+  ],
+  "manifest_ref": {
+    "path": "inputs/current-release-gpu-case/controls/manifest.json",
+    "sha256": "633d87d66b9900b98ec0ca8c7d1c681d22b7dda502ce4a5a47040df4280a644a"
+  },
+  "source_sequence_ref": {
+    "path": "inputs/current-release-gpu-case/native-generation/sequence.npz",
+    "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+  },
+  "source_report_ref": {
+    "path": "inputs/current-release-gpu-case/native-generation/report.json",
+    "sha256": "747cf189291b485cd8cf927a8c735a9367191d78c4cf5bd8e63d6bf6b872005a"
+  },
+  "control_summary_ref": {
+    "path": "inputs/current-release-gpu-case/controls/controls.json",
+    "sha256": "be3be2bfc7379cc9925619743ac2828876cfa0136c9dfa7c55a5a779747bd70a"
+  },
+  "body_pose_ref": {
+    "path": "inputs/current-release-gpu-case/controls/body_gaussian/poses.npz",
+    "sha256": "f612a3094a89135ba171d4fe0ce47b3c82e527782c2ddddffec7750bb753929e"
+  },
+  "ground_truth_ref": {
+    "path": "inputs/actionbench-gt/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+    "sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284"
+  },
+  "population_ref": {
+    "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+    "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+  },
+  "repo_root": "actionmesh/repo",
+  "input_refs": [
+    {
+      "path": "inputs/current-release-gpu-case/native-generation/sequence.npz",
+      "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/native-generation/report.json",
+      "sha256": "747cf189291b485cd8cf927a8c735a9367191d78c4cf5bd8e63d6bf6b872005a"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/manifest.json",
+      "sha256": "633d87d66b9900b98ec0ca8c7d1c681d22b7dda502ce4a5a47040df4280a644a"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/controls.json",
+      "sha256": "be3be2bfc7379cc9925619743ac2828876cfa0136c9dfa7c55a5a779747bd70a"
+    },
+    {
+      "path": "inputs/actionbench-gt/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+      "sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284"
+    },
+    {
+      "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+      "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/native/report.json",
+      "sha256": "85faa225457e2bf04eb2474bfb03ea63d8c3a696059bda6f73984e7c14628216"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/native/sequence.npz",
+      "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/world_gaussian/report.json",
+      "sha256": "62460fe67dcd53379e3a2abe05da6e7117b7d1545c5aec2689288022cb87a266"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/world_gaussian/sequence.npz",
+      "sha256": "4b07c7b1f265bbba0d676f64d150a6b68e69bc00e86463648098af22a4ef09ae"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/body_gaussian/report.json",
+      "sha256": "c21c0e1d51f71d19ff27daaa13baf648a792cd6f9085f4b7d84a7c2e4e342d44"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/body_gaussian/sequence.npz",
+      "sha256": "681c0f096cd34097e1673ac1a3e9c032eddd200773b1825638fc4f378754a618"
+    },
+    {
+      "path": "inputs/current-release-gpu-case/controls/body_gaussian/poses.npz",
+      "sha256": "f612a3094a89135ba171d4fe0ce47b3c82e527782c2ddddffec7750bb753929e"
+    }
+  ],
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/control_scoring.py",
+      "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+    },
+    {
+      "path": "actionmesh/research_census_eval.py",
+      "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+    },
+    {
+      "path": "actionmesh/research_math/simple_mesh_controls.py",
+      "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+    },
+    {
+      "path": "actionmesh/research_math/__init__.py",
+      "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/icp.py",
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/sample_mesh.py",
+      "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    }
+  ],
+  "native_protocol": {
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "sigma_frames": 1.0,
+  "replay": {
+    "passes_per_arm": 2,
+    "absolute_tolerance": 0.0,
+    "scope": "Fresh scorer process per pass; not trusted host native-contract replay"
+  },
+  "native_contract_qualified": false,
+  "candidate_methods_tested": false,
+  "request_digest": "b53417d75dbc322a89e94a628467b21670802dd316fc052e19bf96680fde26f5"
+}

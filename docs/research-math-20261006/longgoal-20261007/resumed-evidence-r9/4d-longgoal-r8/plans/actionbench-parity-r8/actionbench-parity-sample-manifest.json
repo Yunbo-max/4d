@@ -1,0 +1,113 @@
+{
+  "kind": "actionbench-parity-sample-manifest",
+  "version": "1.0.0",
+  "benchmark_id": "facebook/actionbench",
+  "benchmark_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "split": "released-single-asset-parity-only",
+  "sample_ids": [
+    "000-000_03b69da8d2c94b5999bcf2605ee2ecd9"
+  ],
+  "request_ref": {
+    "path": "plans/control-scoring-request-r7.json",
+    "sha256": "88353a6ee7feb9ba62abfc04a113f195b8dfec6b5a3940897cb72a6168440a35"
+  },
+  "request_digest": "b53417d75dbc322a89e94a628467b21670802dd316fc052e19bf96680fde26f5",
+  "population_ref": {
+    "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+    "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+  },
+  "denominator": 1,
+  "predictions_per_sample": 1,
+  "arm_inputs": [
+    {
+      "arm": "native",
+      "preparation_status": "completed",
+      "report_ref": {
+        "path": "inputs/current-release-gpu-case/controls/native/report.json",
+        "sha256": "85faa225457e2bf04eb2474bfb03ea63d8c3a696059bda6f73984e7c14628216"
+      },
+      "prediction_ref": {
+        "path": "inputs/current-release-gpu-case/controls/native/sequence.npz",
+        "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+      }
+    },
+    {
+      "arm": "world_gaussian",
+      "preparation_status": "completed",
+      "report_ref": {
+        "path": "inputs/current-release-gpu-case/controls/world_gaussian/report.json",
+        "sha256": "62460fe67dcd53379e3a2abe05da6e7117b7d1545c5aec2689288022cb87a266"
+      },
+      "prediction_ref": {
+        "path": "inputs/current-release-gpu-case/controls/world_gaussian/sequence.npz",
+        "sha256": "4b07c7b1f265bbba0d676f64d150a6b68e69bc00e86463648098af22a4ef09ae"
+      }
+    },
+    {
+      "arm": "body_gaussian",
+      "preparation_status": "completed",
+      "report_ref": {
+        "path": "inputs/current-release-gpu-case/controls/body_gaussian/report.json",
+        "sha256": "c21c0e1d51f71d19ff27daaa13baf648a792cd6f9085f4b7d84a7c2e4e342d44"
+      },
+      "prediction_ref": {
+        "path": "inputs/current-release-gpu-case/controls/body_gaussian/sequence.npz",
+        "sha256": "681c0f096cd34097e1673ac1a3e9c032eddd200773b1825638fc4f378754a618"
+      }
+    }
+  ],
+  "labels_or_tests_ref": {
+    "path": "inputs/actionbench-gt/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+    "sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284"
+  },
+  "sampling": {
+    "policy": "official-actionbench-full-sequence",
+    "parameters": {
+      "n_pts_chamfer": 100000,
+      "n_pts_icp": 10000,
+      "icp_initial_rotations": 24,
+      "icp_iterations": 200,
+      "icp_learning_rate": 0.01,
+      "icp_transform": "rotation + translation + anisotropic scale (official)",
+      "cd_query_points_per_direction": 10000,
+      "cd_query_subsampling_seeds": {
+        "predicted": 44,
+        "ground_truth": 45
+      },
+      "cd_reference_tree_points": 100000,
+      "cd_distance": "unsquared Euclidean; sum of both directional means",
+      "cd_3d_alignment": "independent ICP each frame",
+      "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+      "cd_motion_alignment": "same first-frame ICP as CD4D",
+      "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+      "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+      "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+      "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+      "sampling_seed": 44
+    }
+  },
+  "budget": {
+    "frames": 16,
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  }
+}

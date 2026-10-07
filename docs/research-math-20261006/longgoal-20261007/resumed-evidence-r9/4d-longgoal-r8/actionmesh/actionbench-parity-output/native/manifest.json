@@ -1,0 +1,10 @@
+{
+  "cases": [
+    {
+      "case_id": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native",
+      "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+      "case_dir": "native"
+    }
+  ],
+  "scope": "same single prediction for official/faithful parity"
+}

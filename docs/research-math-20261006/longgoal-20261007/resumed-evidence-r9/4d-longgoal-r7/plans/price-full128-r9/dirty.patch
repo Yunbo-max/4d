@@ -1,0 +1,26 @@
+diff --git a/actionmesh/prepare_actionbench_queue_pricing.py b/actionmesh/prepare_actionbench_queue_pricing.py
+index 25cee70..94ddd8f 100644
+--- a/actionmesh/prepare_actionbench_queue_pricing.py
++++ b/actionmesh/prepare_actionbench_queue_pricing.py
+@@ -133,7 +133,7 @@ def build_plans(root: Path, *, contract_path: Path, admission_path: Path,
+         "--contract", str(contract_path),
+         "--admission", str(admission_path),
+         "--population", str(population_path),
+-        "--output", str(output),
++        "--output", "../" + output.relative_to(root).as_posix(),
+     ]
+     plan = native.make_plan(
+         root, run_id=run_id, purpose="engineering", evidence_mode="developmental",
+diff --git a/actionmesh/prepare_complete_unit_admission.py b/actionmesh/prepare_complete_unit_admission.py
+index d4c2a0e..f6b8f34 100644
+--- a/actionmesh/prepare_complete_unit_admission.py
++++ b/actionmesh/prepare_complete_unit_admission.py
+@@ -193,7 +193,7 @@ def build_plans(root: Path, *, contract_path: Path, harness_plan_path: Path, har
+         "--native-plan", str(native_plan_path),
+         "--native-receipt", str(native_receipt_path),
+         "--approved-plan-digest", approved_unit_plan_digest,
+-        "--output", str(output),
++        "--output", "../" + output.relative_to(root).as_posix(),
+     ]
+     plan = native.make_plan(
+         root, run_id=run_id, purpose="engineering", evidence_mode="developmental",

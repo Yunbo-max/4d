@@ -1,0 +1,108 @@
+{
+  "source_sequence": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/current-release-gpu-case/controls/body_gaussian/sequence.npz",
+  "source_sequence_sha256": "681c0f096cd34097e1673ac1a3e9c032eddd200773b1825638fc4f378754a618",
+  "vertices_dtype": "float32",
+  "faces_dtype": "int32",
+  "n_frames": 16,
+  "n_vertices": 20001,
+  "n_faces": 39998,
+  "files": [
+    {
+      "frame_index": 0,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00000.glb",
+      "sha256": "3d63cfa7235276b5266d7f14b3be19b0deec2898b9ff98243c2262058b5cf44a",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 1,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00001.glb",
+      "sha256": "509e2b0bc692109adc025c15e54557e8d517e168744e7931f855a8056cff22a8",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 2,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00002.glb",
+      "sha256": "fd32ed8c1ce1bb34eb0277021b0704d01b4f4ebd35fbc1e1da3eb332da4d9036",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 3,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00003.glb",
+      "sha256": "52e9220128c28e1921836b839a55a7d58bfd00103f64424e42a09ec03643bd3a",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 4,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00004.glb",
+      "sha256": "558ea2a1fcdc4343f5654e4da8fff18b1402eb8e890700b1393e04aee47cf119",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 5,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00005.glb",
+      "sha256": "cfc14b263bc5649c2bc724435173b608cfb71925d355b1856bee16f4b1cd75e8",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 6,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00006.glb",
+      "sha256": "da6273ac7488e2403aa1b6e0c07d8eb9739280ec02a29ab9d3c05efa309c8876",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 7,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00007.glb",
+      "sha256": "3b4f89e905850c31439b09eb71c70fa23796346d57b81d66bca0e678283f6ff4",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 8,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00008.glb",
+      "sha256": "1c0529b5fab17040e7cb9e1d0d00bab7599a04c0f3ec342e1979b8a1962dea45",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 9,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00009.glb",
+      "sha256": "deac735bc0132a9fb8013ff0f600cbfef3b3caf3ab94a406aec6de6f73e2d2b4",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 10,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00010.glb",
+      "sha256": "097868f183a663c5414ab735321b428ced4723caf9b3ef02d284f83bf9bcf4de",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 11,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00011.glb",
+      "sha256": "4eab0142fbd82fb64f699b81a5f71809076b8692f87227f21a80548cb88b9b21",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 12,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00012.glb",
+      "sha256": "c82bd34eebcf464077c3d4db664677b68e1e50f8c17ebde56eb4e471c10e2fcd",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 13,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00013.glb",
+      "sha256": "51fa25f133fb6100c9031a990a0bb4d447bbccb6e0f72c35f4d3fc2fb5eee1ae",
+      "bytes": 720748
+    },
+    {
+      "frame_index": 14,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00014.glb",
+      "sha256": "9b8ac6b72b27c8efc6025ecc53424bb656c7daadba3402d657a8d9ab68d04770",
+      "bytes": 720752
+    },
+    {
+      "frame_index": 15,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/mesh_00015.glb",
+      "sha256": "9b9c9994f8498f2eee346010db23e4b527061932a87ca1dcfdec528b313c97f9",
+      "bytes": 720752
+    }
+  ],
+  "round_trip": "exact vertices and faces for every frame"
+}

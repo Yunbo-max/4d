@@ -1,0 +1,1319 @@
+diff --git a/docs/research-math-20261006/actionbench-official-source-evidence.json b/docs/research-math-20261006/actionbench-official-source-evidence.json
+index e1cb818..9914d90 100644
+--- a/docs/research-math-20261006/actionbench-official-source-evidence.json
++++ b/docs/research-math-20261006/actionbench-official-source-evidence.json
+@@ -1,7 +1,7 @@
+ {
+   "kind": "actionbench-official-source-evidence",
+   "version": "1.0.0",
+-  "captured_at": "2026-10-07T01:03:06Z",
++  "captured_at": "2026-10-07T12:20:00Z",
+   "benchmark": {
+     "id": "facebook/actionbench",
+     "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+@@ -19,25 +19,45 @@
+     }
+   },
+   "selected_development_asset": {
+-    "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+-    "tree_api_url": "https://huggingface.co/api/datasets/facebook/actionbench/tree/2796071cbe6248422fcbeab3101fa9f9886cb7b9/data/000-048_45e57349f062416aaf11f2c31587da16?recursive=true&expand=true",
+-    "tree_api_bytes": 16441,
+-    "tree_api_sha256": "da44aa9582312c566b4a8162d31525fbfbfeb25cc4a00fe84a8769809f9bf30c",
+-    "camera_git_oid": "3848a260fcf3f034daf1da03e600d888bfeba0ae",
+-    "image_count": 16,
+-    "surfaces_git_oid": "6a4ce13b2952b319390a517c3ba56e3e7d873540",
+-    "surfaces_lfs_sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e",
++    "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
++    "source_note": "Updated to the preselected lexicographically first engineering calibration asset; source record below is from the pinned Hugging Face snapshot manifest/cache at the declared revision.",
++    "source_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
++    "surfaces_lfs_sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284",
+     "surfaces_bytes": 38400128,
++    "snapshot_manifest_path": "inputs/actionbench-full128-snapshots/unit-manifest.json",
++    "snapshot_file_path": "data/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
++    "snapshot_file_etag": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284",
+     "returned_gt_sha256_matches_released_lfs_oid": true
+   },
+   "official_local_sources": [
+-    {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"},
+-    {"path": "actionmesh/repo/actionbench/benchmark.py", "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"},
+-    {"path": "actionmesh/repo/actionbench/chamfer.py", "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"},
+-    {"path": "actionmesh/repo/actionbench/icp.py", "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"},
+-    {"path": "actionmesh/repo/actionbench/sample_mesh.py", "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"},
+-    {"path": "actionmesh/repo/actionbench/sample_point_cloud.py", "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"},
+-    {"path": "actionmesh/repo/actionbench/evaluate_dataset.py", "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"}
++    {
++      "path": "actionmesh/repo/actionbench/README.md",
++      "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"
++    },
++    {
++      "path": "actionmesh/repo/actionbench/benchmark.py",
++      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
++    },
++    {
++      "path": "actionmesh/repo/actionbench/chamfer.py",
++      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
++    },
++    {
++      "path": "actionmesh/repo/actionbench/icp.py",
++      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
++    },
++    {
++      "path": "actionmesh/repo/actionbench/sample_mesh.py",
++      "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
++    },
++    {
++      "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
++      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
++    },
++    {
++      "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
++      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
++    }
+   ],
+   "published_definition": {
+     "dataset_card_url": "https://huggingface.co/datasets/facebook/actionbench",
+@@ -47,12 +67,24 @@
+     "frames_per_sample": 16,
+     "tracked_points_per_frame": 100000,
+     "normalization": "[-1,1]^3",
+-    "metrics": ["cd_3d", "cd_4d", "cd_motion"],
++    "metrics": [
++      "cd_3d",
++      "cd_4d",
++      "cd_motion"
++    ],
+     "direction": "lower_is_better",
+     "official_readme_aggregate_scope": "mean over all 128 animated objects",
+     "official_readme_actionmesh_seed": 42,
+-    "official_readme_actionmesh_means": {"cd_3d": 0.054, "cd_4d": 0.085, "cd_motion": 0.153},
+-    "paper_v2_actionmesh_means": {"cd_3d": 0.053, "cd_4d": 0.081, "cd_motion": 0.148},
++    "official_readme_actionmesh_means": {
++      "cd_3d": 0.054,
++      "cd_4d": 0.085,
++      "cd_motion": 0.153
++    },
++    "paper_v2_actionmesh_means": {
++      "cd_3d": 0.053,
++      "cd_4d": 0.081,
++      "cd_motion": 0.148
++    },
+     "aggregate_source_discrepancy": true,
+     "discrepancy_policy": "Retain both versioned aggregate reports; do not choose either as a one-asset threshold."
+   },
+@@ -60,7 +92,11 @@
+     "source": "ActionMesh paper v2 metric definitions and pinned official ActionBench implementation",
+     "definition": "The pinned evaluator computes CD-3D, CD-4D and CD-M from sums or means of Euclidean norms after the stated alignment/sampling operations; every valid returned distance is nonnegative.",
+     "range": "finite values >= 0",
+-    "scorer_validity_rule": {"metric": "cd_3d", "operator": "ge", "threshold": 0.0},
++    "scorer_validity_rule": {
++      "metric": "cd_3d",
++      "operator": "ge",
++      "threshold": 0.0
++    },
+     "supports_performance_qualification": false,
+     "boundary": "This rule only rejects invalid scorer output. It does not distinguish useful from ineffective predictions and cannot qualify a baseline, control, candidate, or scientific claim."
+   },
+@@ -75,5 +111,9 @@
+     "candidate_validation_designs_complete": 0,
+     "candidate_native_results": 0,
+     "candidate_formal_outcomes": 0
++  },
++  "selected_asset_history": {
++    "prior_evidence_path": "docs/research-math-20261006/actionbench-official-source-evidence-prior.json",
++    "prior_uid": "000-048_45e57349f062416aaf11f2c31587da16"
+   }
+ }
+diff --git a/inputs/current-release-gpu-case/official-scores.json.official/official-source/benchmark.py b/inputs/current-release-gpu-case/official-scores.json.official/official-source/benchmark.py
+new file mode 100644
+index 0000000..8d252b4
+--- /dev/null
++++ b/inputs/current-release-gpu-case/official-scores.json.official/official-source/benchmark.py
+@@ -0,0 +1,153 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++# All rights reserved.
++#
++# This source code is licensed under the license found in the
++# LICENSE file in the root directory of this source tree.
++
++import numpy as np
++import torch
++import trimesh
++from chamfer import compute_chamfer_score, compute_motion_chamfer_score
++from icp import gradient_icp
++from sample_mesh import sample_meshes
++from sample_point_cloud import sample_point_cloud
++from tqdm import tqdm
++
++
++def _compute_per_frame_icp(
++    gt_pc: torch.Tensor,
++    pred_pc: torch.Tensor,
++) -> list:
++    """
++    Compute per-frame ICP transforms between predicted and GT point clouds.
++
++    Args:
++        gt_pc: (T, N, 3) ground truth point clouds.
++        pred_pc: (T, N, 3) predicted point clouds.
++
++    Returns:
++        List of T Transform3d objects aligning pred to gt per frame.
++    """
++    n_ts = gt_pc.shape[0]
++    transforms = []
++    for k in tqdm(range(n_ts), desc="ICP per-frame"):
++        transforms.append(
++            gradient_icp(
++                pc_gt=gt_pc[k],
++                pc_pred=pred_pc[k],
++                lr=0.01,
++                n_iter=200,
++            )
++        )
++    return transforms
++
++
++def _compute_unified_icp(
++    gt_pc: torch.Tensor,
++    pred_pc: torch.Tensor,
++) -> object:
++    """
++    Compute a single ICP transform using only the first frame.
++
++    Args:
++        gt_pc: (T, N, 3) ground truth point clouds.
++        pred_pc: (T, N, 3) predicted point clouds.
++
++    Returns:
++        Transform3d aligning pred to gt based on first frame only.
++    """
++    return gradient_icp(
++        pc_gt=gt_pc[0],
++        pc_pred=pred_pc[0],
++        lr=0.01,
++        n_iter=200,
++    )
++
++
++def compute_chamfer_3d_4d(
++    gt_pc: torch.Tensor,
++    pred_meshes: list[trimesh.Trimesh],
++    device: str,
++    is_4D: bool = False,
++    n_pts_icp: int = 10_000,
++    n_pts_chamfer: int = 100_000,
++    seed: int = 44,
++) -> tuple[float, float, float]:
++    """
++    Compute 3D and 4D Chamfer distance between meshes and GT points.
++
++    Performs ICP alignment followed by Chamfer distance computation. Computes
++    two variants:
++        - cd_3d: Per-frame ICP alignment, then average Chamfer across frames.
++        - cd_4d: Unified ICP from first frame, then average Chamfer.
++
++    For 4D evaluation, also computes motion-aware Chamfer using synchronized
++    sampling.
++
++    Args:
++        gt_pc: (T, N, 3) ground truth point clouds over T timesteps.
++        pred_meshes: List of T predicted meshes.
++        device: Device for computation ("cuda" or "cpu").
++        is_4D: If True, compute motion Chamfer distance.
++        n_pts_icp: Number of points for ICP alignment.
++        n_pts_chamfer: Number of points for Chamfer computation.
++        seed: Random seed for reproducibility.
++
++    Returns:
++        Tuple of (cd_3d, cd_4d, cd_motion) where:
++            - cd_3d: Chamfer with per-frame ICP alignment.
++            - cd_4d: Chamfer with unified (first-frame) ICP alignment.
++            - cd_motion: Motion Chamfer (0.0 if is_4D is False).
++    """
++    n_ts = len(pred_meshes)
++
++    pred_pc = sample_meshes(
++        pred_meshes, n_pts=n_pts_chamfer, synchronized=False, seed=seed
++    )
++    pred_pc_icp = sample_point_cloud(pred_pc, n_pts=n_pts_icp, seed=seed)
++    gt_pc_icp = sample_point_cloud(gt_pc, n_pts=n_pts_icp, seed=seed)
++
++    pred_pc = pred_pc.to(device)
++    gt_pc = gt_pc.to(device)
++    pred_pc_icp = pred_pc_icp.to(device)
++    gt_pc_icp = gt_pc_icp.to(device)
++
++    # Per-frame ICP alignment
++    icp_list = _compute_per_frame_icp(gt_pc_icp, pred_pc_icp)
++    icp_transforms_3D = icp_list[0].stack(*icp_list[1:])
++
++    # Unified ICP alignment (first frame only)
++    icp_transforms_u4D = _compute_unified_icp(gt_pc_icp, pred_pc_icp)
++
++    # Transform predicted point clouds
++    pred_pc_aligned_3D = icp_transforms_3D.transform_points(pred_pc)
++    pred_pc_aligned_u4D = icp_transforms_u4D.transform_points(pred_pc)
++
++    # Compute Chamfer distances
++    cd_3d = np.mean(
++        [
++            compute_chamfer_score(gt=gt_pc[k].cpu(), pred=pred_pc_aligned_3D[k].cpu())
++            for k in range(n_ts)
++        ]
++    )
++    cd_4d = np.mean(
++        [
++            compute_chamfer_score(gt=gt_pc[k].cpu(), pred=pred_pc_aligned_u4D[k].cpu())
++            for k in range(n_ts)
++        ]
++    )
++
++    cd_motion = 0.0
++    if is_4D:
++        pred_pc_4D = sample_meshes(
++            pred_meshes, n_pts=n_pts_chamfer, synchronized=True, seed=seed
++        )
++        pred_pc_4D = pred_pc_4D.to(device)
++        pred_pc_aligned_4D = icp_transforms_u4D.transform_points(pred_pc_4D)
++
++        cd_motion = compute_motion_chamfer_score(
++            preds=pred_pc_aligned_4D.cpu(),
++            gts=gt_pc.cpu(),
++        )
++
++    return cd_3d, cd_4d, cd_motion
+diff --git a/inputs/current-release-gpu-case/official-scores.json.official/official-source/chamfer.py b/inputs/current-release-gpu-case/official-scores.json.official/official-source/chamfer.py
+new file mode 100644
+index 0000000..dd1ef0f
+--- /dev/null
++++ b/inputs/current-release-gpu-case/official-scores.json.official/official-source/chamfer.py
+@@ -0,0 +1,86 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++# All rights reserved.
++#
++# This source code is licensed under the license found in the
++# LICENSE file in the root directory of this source tree.
++
++import numpy as np
++import torch
++from scipy.spatial import KDTree
++
++
++def compute_chamfer_score(
++    pred: torch.Tensor,
++    gt: torch.Tensor,
++    n: int = 10_000,
++    seed: int = 44,
++) -> float:
++    """
++    Compute symmetric Chamfer distance between two point clouds.
++
++    Args:
++        pred: (N, 3) predicted points.
++        gt: (M, 3) ground truth points.
++        n: Maximum number of points to sample from each cloud. If <= 0,
++            uses all points.
++        seed: Random seed for reproducible subsampling.
++
++    Returns:
++        Symmetric Chamfer distance (sum of both directions).
++    """
++    rng_pred = np.random.RandomState(seed=seed)
++    rng_gt = np.random.RandomState(seed=seed + 1)
++
++    if 0 < n < len(pred):
++        indices_pred = rng_pred.permutation(len(pred))[:n]
++    else:
++        indices_pred = np.arange(len(pred))
++
++    if 0 < n < len(gt):
++        indices_gt = rng_gt.permutation(len(gt))[:n]
++    else:
++        indices_gt = np.arange(len(gt))
++
++    tree_pred = KDTree(pred)
++    d1, _ = tree_pred.query(gt[indices_gt])
++    gt_to_pred = np.mean(d1)
++
++    tree_gt = KDTree(gt)
++    d2, _ = tree_gt.query(pred[indices_pred])
++    pred_to_gt = np.mean(d2)
++
++    return float(gt_to_pred + pred_to_gt)
++
++
++def compute_motion_chamfer_score(
++    preds: torch.Tensor,
++    gts: torch.Tensor,
++) -> float:
++    """
++    Compute motion Chamfer distance across a sequence.
++
++    Matches points using the first frame and computes distances across all
++    frames.
++
++    Args:
++        preds: (T, P, 3) predicted points over T timesteps.
++        gts: (T, Q, 3) ground truth points over T timesteps.
++
++    Returns:
++        Symmetric motion Chamfer distance.
++    """
++    assert preds.shape[0] == gts.shape[0], "Mismatching number of timesteps"
++
++    tree_pred = KDTree(preds[0])
++    _, idx_gt_to_pred = tree_pred.query(gts[0])
++
++    tree_gt = KDTree(gts[0])
++    _, idx_pred_to_gt = tree_gt.query(preds[0])
++
++    diff1 = preds[:, idx_gt_to_pred, :] - gts
++    d1 = np.linalg.norm(diff1, axis=-1).mean(axis=0)
++
++    diff2 = gts[:, idx_pred_to_gt, :] - preds
++    d2 = np.linalg.norm(diff2, axis=-1).mean(axis=0)
++
++    return float(np.mean(d1) + np.mean(d2))
+diff --git a/inputs/current-release-gpu-case/official-scores.json.official/official-source/evaluate_dataset.py b/inputs/current-release-gpu-case/official-scores.json.official/official-source/evaluate_dataset.py
+new file mode 100644
+index 0000000..2c9f1f0
+--- /dev/null
++++ b/inputs/current-release-gpu-case/official-scores.json.official/official-source/evaluate_dataset.py
+@@ -0,0 +1,528 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++# All rights reserved.
++#
++# This source code is licensed under the license found in the
++# LICENSE file in the root directory of this source tree.
++
++"""
++Evaluation script for computing 3D/4D metrics across a dataset.
++
++Usage:
++    python evaluate_dataset.py \
++        --gt_root /path/to/gt/root \
++        --pred_root /path/to/pred/root \
++        --output_csv /path/to/results.csv \
++        --device cuda
++
++Expected structure:
++    GT:   {gt_root}/{uid}/surfaces.npy     (T, N, 6) point clouds
++    Pred: {pred_root}/{uid}/mesh_*.glb    or {pred_root}/{uid}/*.glb
++
++Note:
++    When using HuggingFace ActionBench, gt_root should point to the
++    data/ subdirectory (e.g. data/actionbench/data/).
++"""
++
++import argparse
++import json
++import logging
++from dataclasses import dataclass, field
++from pathlib import Path
++
++import numpy as np
++import pandas as pd
++import torch
++import trimesh
++from benchmark import compute_chamfer_3d_4d
++from natsort import natsorted
++from tqdm import tqdm
++
++logging.basicConfig(
++    level=logging.INFO,
++    format="%(asctime)s - %(levelname)s - %(message)s",
++)
++logger = logging.getLogger(__name__)
++
++
++@dataclass
++class SampleResult:
++    """Result for a single sample evaluation."""
++
++    uid: str
++    cd_3d: float = float("nan")
++    cd_4d: float = float("nan")
++    cd_motion: float = float("nan")
++    n_frames: int = 0
++    status: str = "pending"
++    error_message: str = ""
++
++
++@dataclass
++class DatasetResults:
++    """Aggregated results for the entire dataset."""
++
++    samples: list[SampleResult] = field(default_factory=list)
++
++    def add(self, result: SampleResult) -> None:
++        self.samples.append(result)
++
++    def to_dataframe(self) -> pd.DataFrame:
++        return pd.DataFrame([vars(s) for s in self.samples])
++
++    def summary(self) -> dict[str, float]:
++        """Compute mean metrics over successful samples."""
++        df = self.to_dataframe()
++        success_df = df[df["status"] == "success"]
++
++        n_total = len(df)
++        n_success = len(success_df)
++        n_failed = n_total - n_success
++
++        summary = {
++            "n_total": n_total,
++            "n_success": n_success,
++            "n_failed": n_failed,
++            "success_rate": n_success / n_total if n_total > 0 else 0.0,
++        }
++
++        if n_success > 0:
++            summary["cd_3d_mean"] = success_df["cd_3d"].mean()
++            summary["cd_4d_mean"] = success_df["cd_4d"].mean()
++            summary["cd_motion_mean"] = success_df["cd_motion"].mean()
++        else:
++            summary["cd_3d_mean"] = float("nan")
++            summary["cd_4d_mean"] = float("nan")
++            summary["cd_motion_mean"] = float("nan")
++
++        return summary
++
++
++def find_uids(
++    gt_root: Path, pred_root: Path, mesh_pattern: str = "mesh_*.glb"
++) -> list[str]:
++    """
++    Find all UIDs that exist in both GT and prediction directories.
++
++    Args:
++        gt_root: Root directory containing GT surfaces.
++        pred_root: Root directory containing predictions.
++        mesh_pattern: Glob pattern to match mesh files.
++
++    Returns:
++        List of UIDs found in both directories.
++    """
++    # Find GT UIDs (directories with surfaces.npy)
++    gt_uids = {p.parent.name for p in gt_root.glob("*/surfaces.npy")}
++
++    # Find pred UIDs (directories with mesh files matching pattern)
++    pred_uids = {
++        p.relative_to(pred_root).parts[0] for p in pred_root.glob(f"*/{mesh_pattern}")
++    }
++
++    common_uids = gt_uids & pred_uids
++
++    logger.info(
++        f"Found {len(gt_uids)} GT, {len(pred_uids)} pred, " f"{len(common_uids)} common"
++    )
++
++    if not gt_uids:
++        raise FileNotFoundError(
++            f"No GT samples found in {gt_root}. Expected */surfaces.npy files."
++        )
++
++    if not pred_uids:
++        raise FileNotFoundError(
++            f"No predictions found in {pred_root}. " f"Expected */{mesh_pattern} files."
++        )
++
++    if not common_uids:
++        raise ValueError(
++            f"No common UIDs between GT and predictions. "
++            f"GT UIDs: {len(gt_uids)}, Pred UIDs: {len(pred_uids)}."
++        )
++
++    if gt_uids - pred_uids:
++        logger.warning(f"Missing predictions: {len(gt_uids - pred_uids)}")
++
++    if pred_uids - gt_uids:
++        logger.warning(f"Missing GT: {len(pred_uids - gt_uids)}")
++
++    return sorted(common_uids)
++
++
++def load_gt_surfaces(gt_path: Path) -> torch.Tensor:
++    """
++    Load GT surfaces from a .npy file.
++
++    Args:
++        gt_path: Path to surfaces.npy file.
++
++    Returns:
++        (T, N, 3) tensor of point cloud positions.
++    """
++    data = torch.from_numpy(np.load(gt_path))
++    return data[..., :3].float()
++
++
++def load_pred_meshes(
++    pred_dir: Path,
++    n_frames: int | None = None,
++    pattern: str = "mesh_*.glb",
++) -> list[trimesh.Trimesh]:
++    """
++    Load predicted meshes from a directory.
++
++    Args:
++        pred_dir: Directory containing mesh files.
++        n_frames: Expected number of frames. If None, loads all found.
++        pattern: Glob pattern to match mesh files.
++
++    Returns:
++        List of trimesh meshes ordered by filename.
++    """
++    mesh_files = natsorted(pred_dir.glob(pattern))
++
++    if not mesh_files:
++        raise FileNotFoundError(f"No mesh files found in {pred_dir}")
++
++    if n_frames is not None:
++        if len(mesh_files) < n_frames:
++            raise ValueError(
++                f"Not enough meshes: found {len(mesh_files)}, need {n_frames}"
++            )
++        mesh_files = mesh_files[:n_frames]
++
++    return [trimesh.load(p, force="mesh") for p in mesh_files]
++
++
++def evaluate_sample(
++    uid: str,
++    gt_root: Path,
++    pred_root: Path,
++    device: str = "cuda",
++    n_pts_icp: int = 10_000,
++    n_pts_chamfer: int = 100_000,
++    seed: int = 44,
++    mesh_pattern: str = "mesh_*.glb",
++    is_4d: bool = True,
++) -> SampleResult:
++    """
++    Evaluate a single sample.
++
++    Args:
++        uid: Unique identifier for the sample.
++        gt_root: Root directory containing GT surfaces.
++        pred_root: Root directory containing predictions.
++        device: Device for computation.
++        n_pts_icp: Number of points for ICP alignment.
++        n_pts_chamfer: Number of points for Chamfer computation.
++        seed: Random seed.
++        mesh_pattern: Glob pattern to match mesh files.
++
++    Returns:
++        SampleResult with computed metrics or error info.
++    """
++    result = SampleResult(uid=uid)
++
++    try:
++        gt_path = gt_root / uid / "surfaces.npy"
++        pred_dir = pred_root / uid
++
++        if not gt_path.exists():
++            result.status = "error"
++            result.error_message = f"GT not found: {gt_path}"
++            return result
++
++        if not pred_dir.exists():
++            result.status = "error"
++            result.error_message = f"Pred dir not found: {pred_dir}"
++            return result
++
++        gt_pc = load_gt_surfaces(gt_path)
++        n_frames = gt_pc.shape[0]
++        result.n_frames = n_frames
++
++        try:
++            pred_meshes = load_pred_meshes(
++                pred_dir, n_frames=n_frames, pattern=mesh_pattern
++            )
++        except (FileNotFoundError, ValueError) as e:
++            result.status = "error"
++            result.error_message = str(e)
++            return result
++
++        cd_3d, cd_4d, cd_motion = compute_chamfer_3d_4d(
++            gt_pc=gt_pc,
++            pred_meshes=pred_meshes,
++            device=device,
++            is_4D=is_4d,
++            n_pts_icp=n_pts_icp,
++            n_pts_chamfer=n_pts_chamfer,
++            seed=seed,
++        )
++
++        result.cd_3d = cd_3d
++        result.cd_4d = cd_4d
++        result.cd_motion = cd_motion
++        result.status = "success"
++
++    except Exception as e:
++        result.status = "error"
++        result.error_message = str(e)
++        logger.error(f"[{uid}] Error: {e}")
++
++    return result
++
++
++def load_existing_results(output_csv: Path) -> dict[str, SampleResult]:
++    """
++    Load existing results from CSV for resumption.
++
++    Args:
++        output_csv: Path to the results CSV file.
++
++    Returns:
++        Dictionary mapping uid to SampleResult.
++    """
++    if not output_csv.exists():
++        return {}
++
++    df = pd.read_csv(output_csv)
++    results = {}
++    for _, row in df.iterrows():
++        results[row["uid"]] = SampleResult(
++            uid=row["uid"],
++            cd_3d=row["cd_3d"],
++            cd_4d=row["cd_4d"],
++            cd_motion=row["cd_motion"],
++            n_frames=row["n_frames"],
++            status=row["status"],
++            error_message=row.get("error_message", ""),
++        )
++    return results
++
++
++def save_results(results: DatasetResults, output_path: Path) -> None:
++    """
++    Save results to CSV and summary JSON.
++
++    Args:
++        results: DatasetResults to save.
++        output_path: Path to save the CSV file.
++    """
++    output_path.parent.mkdir(parents=True, exist_ok=True)
++    df = results.to_dataframe()
++    df.to_csv(output_path, index=False)
++
++    summary_path = output_path.with_suffix(".summary.json")
++    with open(summary_path, "w") as f:
++        json.dump(results.summary(), f, indent=2)
++
++
++def evaluate_dataset(
++    gt_root: str,
++    pred_root: str,
++    output_csv: str | None = None,
++    device: str = "cuda",
++    n_pts_icp: int = 10_000,
++    n_pts_chamfer: int = 100_000,
++    seed: int = 44,
++    mesh_pattern: str = "mesh_*.glb",
++    recompute: bool = False,
++    is_4d: bool = True,
++) -> DatasetResults:
++    """
++    Evaluate all samples in the dataset.
++
++    Supports stop/start resilience: results are saved after each sample,
++    and existing results are loaded on restart (unless recompute=True).
++
++    Args:
++        gt_root: Root directory containing GT surfaces.
++        pred_root: Root directory containing predictions.
++        output_csv: Optional path to save results CSV.
++        device: Device for computation.
++        n_pts_icp: Number of points for ICP alignment.
++        n_pts_chamfer: Number of points for Chamfer computation.
++        seed: Random seed.
++        mesh_pattern: Glob pattern to match mesh files.
++        recompute: If True, recompute all samples even if already done.
++
++    Returns:
++        DatasetResults containing all sample results and summary.
++    """
++    gt_root = Path(gt_root)
++    pred_root = Path(pred_root)
++    output_path = Path(output_csv) if output_csv else None
++
++    uids = find_uids(gt_root, pred_root, mesh_pattern)
++
++    # Load existing results for resumption
++    existing_results: dict[str, SampleResult] = {}
++    if output_path and not recompute:
++        existing_results = load_existing_results(output_path)
++        if existing_results:
++            n_done = sum(1 for r in existing_results.values() if r.status == "success")
++            logger.info(
++                f"Loaded {len(existing_results)} existing results "
++                f"({n_done} successful). Use --recompute to redo all."
++            )
++
++    results = DatasetResults()
++
++    for uid in tqdm(uids, desc="Evaluating samples"):
++        # Skip if already successfully computed
++        if uid in existing_results and not recompute:
++            prev = existing_results[uid]
++            if prev.status == "success":
++                results.add(prev)
++                continue
++            logger.info(f"[{uid}] Retrying previously failed sample")
++
++        result = evaluate_sample(
++            uid=uid,
++            gt_root=gt_root,
++            pred_root=pred_root,
++            device=device,
++            n_pts_icp=n_pts_icp,
++            n_pts_chamfer=n_pts_chamfer,
++            seed=seed,
++            mesh_pattern=mesh_pattern,
++            is_4d=is_4d,
++        )
++        results.add(result)
++
++        if result.status == "success":
++            logger.info(
++                f"[{uid}] CD_3D={result.cd_3d:.3f}, "
++                f"CD_4D={result.cd_4d:.3f}, "
++                f"CD_Motion={result.cd_motion:.3f}"
++            )
++
++        # Save after each sample for resilience
++        if output_path:
++            save_results(results, output_path)
++
++    if output_path:
++        save_results(results, output_path)
++        logger.info(f"Results saved to: {output_path}")
++        logger.info(f"Summary saved to: {output_path.with_suffix('.summary.json')}")
++
++    return results
++
++
++def print_summary(results: DatasetResults) -> None:
++    """Print a formatted summary of the evaluation results."""
++    summary = results.summary()
++
++    print("\n" + "=" * 60)
++    print("EVALUATION SUMMARY")
++    print("=" * 60)
++
++    print("\nSamples:")
++    print(f"  Total:   {summary['n_total']}")
++    print(f"  Success: {summary['n_success']}")
++    print(f"  Failed:  {summary['n_failed']}")
++    print(f"  Rate:    {summary['success_rate']:.1%}")
++
++    if summary["n_success"] > 0:
++        print("\nMetrics (mean):")
++        print(f"  CD_3D:     {summary['cd_3d_mean']:.3f}")
++        print(f"  CD_4D:     {summary['cd_4d_mean']:.3f}")
++        print(f"  CD_Motion: {summary['cd_motion_mean']:.3f}")
++
++    # Report failed samples
++    df = results.to_dataframe()
++    failed = df[df["status"] != "success"]
++    if len(failed) > 0:
++        print(f"\nFailed samples ({len(failed)}):")
++        for _, row in failed.iterrows():
++            print(f"  [{row['uid']}] {row['status']}: {row['error_message']}")
++
++    print("=" * 60 + "\n")
++
++
++def main():
++    parser = argparse.ArgumentParser(
++        description="Evaluate 3D/4D reconstruction metrics across a dataset"
++    )
++    parser.add_argument(
++        "--gt_root",
++        type=str,
++        required=True,
++        help="Root directory containing GT surfaces (uid/surfaces.npy)",
++    )
++    parser.add_argument(
++        "--pred_root",
++        type=str,
++        required=True,
++        help="Root directory containing predictions (uid/mesh_*.glb)",
++    )
++    parser.add_argument(
++        "--output_csv",
++        type=str,
++        default=None,
++        help="Path to save results CSV",
++    )
++    parser.add_argument(
++        "--device",
++        type=str,
++        default="cuda",
++        help="Device for computation (cuda or cpu)",
++    )
++    parser.add_argument(
++        "--n_pts_icp",
++        type=int,
++        default=10_000,
++        help="Number of points for ICP alignment",
++    )
++    parser.add_argument(
++        "--n_pts_chamfer",
++        type=int,
++        default=100_000,
++        help="Number of points for Chamfer computation",
++    )
++    parser.add_argument(
++        "--seed",
++        type=int,
++        default=44,
++        help="Random seed for reproducibility",
++    )
++    parser.add_argument(
++        "--mesh_pattern",
++        type=str,
++        default="mesh_*.glb",
++        help="Glob pattern for mesh files (default: mesh_*.glb)",
++    )
++    parser.add_argument(
++        "--recompute",
++        action="store_true",
++        help="Recompute all samples even if already done",
++    )
++    parser.add_argument(
++        "--3d-only",
++        action="store_true",
++        dest="three_d_only",
++        help="Compute 3D metrics only (skip 4D/motion metrics)",
++    )
++
++    args = parser.parse_args()
++
++    results = evaluate_dataset(
++        gt_root=args.gt_root,
++        pred_root=args.pred_root,
++        output_csv=args.output_csv,
++        device=args.device,
++        n_pts_icp=args.n_pts_icp,
++        n_pts_chamfer=args.n_pts_chamfer,
++        seed=args.seed,
++        mesh_pattern=args.mesh_pattern,
++        recompute=args.recompute,
++        is_4d=not args.three_d_only,
++    )
++
++    print_summary(results)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/inputs/current-release-gpu-case/official-scores.json.official/official-source/icp.py b/inputs/current-release-gpu-case/official-scores.json.official/official-source/icp.py
+new file mode 100644
+index 0000000..b2de6f0
+--- /dev/null
++++ b/inputs/current-release-gpu-case/official-scores.json.official/official-source/icp.py
+@@ -0,0 +1,112 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++# All rights reserved.
++#
++# This source code is licensed under the license found in the
++# LICENSE file in the root directory of this source tree.
++
++import torch
++from pytorch3d.loss import chamfer_distance
++from pytorch3d.transforms import (
++    euler_angles_to_matrix,
++    rotation_6d_to_matrix,
++    transform3d,
++)
++from torch import nn
++from torch.optim import Adam
++
++
++def canonical_rotation_matrices() -> torch.Tensor:
++    """
++    Generate 24 rotation matrices for canonical orientations.
++
++    Returns:
++        (24, 3, 3) rotation matrices covering all axis-aligned orientations.
++    """
++    deg_to_rad = torch.pi / 180
++    azim = (
++        torch.tensor(
++            [0] * 4 + [90] * 4 + [180] * 4 + [270] * 4 + [0] * 4 + [90] * 4,
++            dtype=torch.float32,
++        )
++        * deg_to_rad
++    )
++    elev = (
++        torch.tensor(
++            [0] * 16 + [90] * 2 + [-90] * 2 + [90] * 2 + [-90] * 2,
++            dtype=torch.float32,
++        )
++        * deg_to_rad
++    )
++    roll = (
++        torch.tensor(
++            [0, 90, 180, 270] * 4 + [0, 90] * 4,
++            dtype=torch.float32,
++        )
++        * deg_to_rad
++    )
++    return euler_angles_to_matrix(
++        torch.stack((azim, elev, roll), dim=-1), convention="XYZ"
++    )
++
++
++@torch.enable_grad()
++def gradient_icp(
++    pc_pred: torch.Tensor,
++    pc_gt: torch.Tensor,
++    lr: float = 0.01,
++    n_iter: int = 200,
++) -> transform3d.Transform3d:
++    """
++    Find the rigid + scale transformation from pc_pred to pc_gt.
++
++    Uses gradient-based ICP with 24 canonical rotation initializations to
++    avoid local minima. Optimizes rotation (6D representation), translation,
++    and anisotropic scale.
++
++    Args:
++        pc_pred: (P, 3) predicted point cloud.
++        pc_gt: (P, 3) ground truth point cloud.
++        lr: Learning rate for Adam optimizer.
++        n_iter: Number of optimization iterations.
++
++    Returns:
++        Transform3d that aligns pc_pred to pc_gt.
++    """
++    device = pc_pred.device
++
++    R_init = canonical_rotation_matrices().to(device)
++    n_rots = len(R_init)
++    pc_pred = pc_pred[None].expand(n_rots, -1, -1)
++    pc_gt = pc_gt[None].expand(n_rots, -1, -1)
++
++    T = nn.Parameter(torch.zeros(n_rots, 3, device=device))
++    r6d_init = torch.tensor([[1.0, 0.0, 0.0, 0.0, 1.0, 0.0]], device=device)
++    R_6d = nn.Parameter(r6d_init.repeat(n_rots, 1))
++    s = nn.Parameter(torch.ones(n_rots, 3, device=device))
++
++    opt = Adam(params=[T, R_6d, s], lr=lr)
++    best_loss = float("inf")
++    best_params = None
++
++    for _ in range(n_iter):
++        opt.zero_grad()
++        R = R_init @ rotation_6d_to_matrix(R_6d)
++        pc_transformed = s[:, None] * pc_pred @ R + T[:, None]
++        loss = chamfer_distance(pc_transformed, pc_gt, batch_reduction=None)[0]
++        loss.mean().backward()
++        opt.step()
++
++        min_loss, idx = loss.detach().min(0)
++        if min_loss.item() < best_loss:
++            best_loss = min_loss.item()
++            best_params = (
++                R[idx : idx + 1].detach().clone(),
++                T[idx : idx + 1].detach().clone(),
++                s[idx : idx + 1].detach().clone(),
++            )
++
++    Rf, Tf, sf = best_params
++    return transform3d.Scale(sf).compose(
++        transform3d.Rotate(Rf),
++        transform3d.Translate(Tf),
++    )
+diff --git a/inputs/current-release-gpu-case/official-scores.json.official/official-source/sample_mesh.py b/inputs/current-release-gpu-case/official-scores.json.official/official-source/sample_mesh.py
+new file mode 100644
+index 0000000..a350a9f
+--- /dev/null
++++ b/inputs/current-release-gpu-case/official-scores.json.official/official-source/sample_mesh.py
+@@ -0,0 +1,243 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++# All rights reserved.
++#
++# This source code is licensed under the license found in the
++# LICENSE file in the root directory of this source tree.
++
++import torch
++import trimesh
++from pytorch3d.ops.mesh_face_areas_normals import mesh_face_areas_normals
++from pytorch3d.ops.packed_to_padded import packed_to_padded
++from pytorch3d.structures import join_meshes_as_batch, Meshes
++
++
++def trimesh_to_pytorch3d(mesh: trimesh.Trimesh, device: str = "cpu") -> Meshes:
++    """
++    Convert a trimesh mesh to a pytorch3d Meshes object.
++
++    Args:
++        mesh: Input trimesh object.
++        device: Device to place tensors on.
++
++    Returns:
++        PyTorch3D Meshes object.
++    """
++    verts = torch.tensor(mesh.vertices, dtype=torch.float32, device=device)
++    faces = torch.tensor(mesh.faces, dtype=torch.int64, device=device)
++    return Meshes(verts=[verts], faces=[faces])
++
++
++def _rand_barycentric_coords(
++    size1: int,
++    size2: int,
++    dtype: torch.dtype,
++    device: torch.device,
++) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
++    """
++    Generate random barycentric coordinates uniformly over a triangle.
++
++    Args:
++        size1: First dimension of output tensors.
++        size2: Second dimension of output tensors.
++        dtype: Data type for the output tensors.
++        device: Device to place tensors on.
++
++    Returns:
++        Tuple of (w0, w1, w2) tensors of shape (size1, size2).
++    """
++    uv = torch.rand(2, size1, size2, dtype=dtype, device=device)
++    u, v = uv[0], uv[1]
++    u_sqrt = u.sqrt()
++    w0 = 1.0 - u_sqrt
++    w1 = u_sqrt * (1.0 - v)
++    w2 = u_sqrt * v
++    return w0, w1, w2
++
++
++def get_baryc_sampling_mesh(
++    mesh: Meshes,
++    num_samples: int,
++    seed: int = 44,
++) -> tuple[torch.Tensor, torch.Tensor]:
++    """
++    Compute face indices and barycentric coordinates for sampling a mesh.
++
++    Args:
++        mesh: Single PyTorch3D Meshes object.
++        num_samples: Number of points to sample.
++        seed: Random seed for reproducibility.
++
++    Returns:
++        Tuple of (sample_face_idxs, baryc_coords) tensors.
++    """
++    if mesh.isempty():
++        raise ValueError("Meshes are empty.")
++
++    verts = mesh.verts_packed()
++    if not torch.isfinite(verts).all():
++        raise ValueError("Meshes contain nan or inf.")
++
++    faces = mesh.faces_packed()
++    mesh_to_face = mesh.mesh_to_faces_packed_first_idx()
++    num_meshes = len(mesh)
++    num_valid_meshes = torch.sum(mesh.valid)
++
++    assert num_meshes == 1, "Only one mesh is supported."
++
++    with torch.no_grad():
++        with torch.random.fork_rng(devices=([verts.device] if verts.is_cuda else []), enabled=True):
++            torch.manual_seed(seed)
++            areas, _ = mesh_face_areas_normals(verts, faces)
++            max_faces = mesh.num_faces_per_mesh().max().item()
++            areas_padded = packed_to_padded(areas, mesh_to_face[mesh.valid], max_faces)
++
++            sample_face_idxs = areas_padded.multinomial(num_samples, replacement=True)
++            offset = mesh_to_face[mesh.valid].view(num_valid_meshes, 1)
++            sample_face_idxs += offset
++
++            w0, w1, w2 = _rand_barycentric_coords(
++                num_valid_meshes, num_samples, verts.dtype, verts.device
++            )
++            baryc_coords = torch.stack([w0, w1, w2], dim=-1)
++
++    return sample_face_idxs, baryc_coords
++
++
++def apply_baryc_sampling_on_meshes(
++    meshes: Meshes,
++    sample_face_idxs: torch.Tensor,
++    baryc_coords: torch.Tensor,
++) -> torch.Tensor:
++    """
++    Apply precomputed barycentric sampling to a batch of meshes.
++
++    Args:
++        meshes: Batch of PyTorch3D Meshes with same topology.
++        sample_face_idxs: (1, num_samples) face indices from reference mesh.
++        baryc_coords: (1, num_samples, 3) barycentric coordinates.
++
++    Returns:
++        (num_meshes, num_samples, 3) sampled points.
++    """
++    assert all(
++        torch.all(meshes.faces_list()[0] == face_list)
++        for face_list in meshes.faces_list()
++    )
++
++    num_meshes = len(meshes)
++    num_samples = sample_face_idxs.shape[-1]
++    w0, w1, w2 = torch.unbind(baryc_coords, dim=-1)
++
++    samples = torch.zeros((num_meshes, num_samples, 3), device=meshes.device)
++
++    for k in range(num_meshes):
++        if not meshes[k].valid:
++            continue
++
++        verts_packed = meshes[k].verts_packed()
++        faces_packed = meshes[k].faces_packed()
++        face_verts = verts_packed[faces_packed]
++        v0, v1, v2 = face_verts[:, 0], face_verts[:, 1], face_verts[:, 2]
++
++        a = v0[sample_face_idxs]
++        b = v1[sample_face_idxs]
++        c = v2[sample_face_idxs]
++
++        samples[k] = w0[:, :, None] * a + w1[:, :, None] * b + w2[:, :, None] * c
++
++    return samples
++
++
++def sample_synchronized_points(
++    meshes: list[trimesh.Trimesh],
++    n_pts: int,
++    seed: int = 44,
++    root_idx: int = 0,
++) -> torch.Tensor:
++    """
++    Sample points from meshes using synchronized barycentric coordinates.
++
++    Computes sampling from the root mesh and applies it to all meshes,
++    ensuring point correspondence across the sequence.
++
++    Args:
++        meshes: List of trimesh objects with same topology.
++        n_pts: Number of points to sample.
++        seed: Random seed for reproducibility.
++        root_idx: Index of the mesh to use for computing sampling.
++
++    Returns:
++        (T, n_pts, 3) sampled points for each mesh.
++    """
++    sample_face_idxs, baryc_coords = get_baryc_sampling_mesh(
++        mesh=trimesh_to_pytorch3d(meshes[root_idx]),
++        num_samples=n_pts,
++        seed=seed,
++    )
++
++    samples = apply_baryc_sampling_on_meshes(
++        meshes=join_meshes_as_batch([trimesh_to_pytorch3d(mesh) for mesh in meshes]),
++        sample_face_idxs=sample_face_idxs,
++        baryc_coords=baryc_coords,
++    )
++
++    return samples
++
++
++def sample_points(
++    mesh: trimesh.Trimesh,
++    n_pts: int,
++    seed: int = 44,
++    device: str = "cpu",
++) -> torch.Tensor:
++    """
++    Sample points uniformly from mesh surface.
++
++    Args:
++        mesh: Input trimesh object.
++        n_pts: Number of points to sample.
++        seed: Random seed for reproducibility.
++        device: Device to place output tensor on.
++
++    Returns:
++        (n_pts, 3) sampled points.
++    """
++    sampled_points, _ = trimesh.sample.sample_surface(
++        mesh,
++        count=n_pts,
++        seed=seed,
++    )
++    return torch.from_numpy(sampled_points).float().to(device)
++
++
++def sample_meshes(
++    meshes: list[trimesh.Trimesh],
++    n_pts: int = 100_000,
++    synchronized: bool = False,
++    seed: int = 44,
++) -> torch.Tensor:
++    """
++    Sample points from a sequence of meshes.
++
++    Args:
++        meshes: List of trimesh objects.
++        n_pts: Number of points to sample per mesh.
++        synchronized: If True, use synchronized sampling for correspondence.
++        seed: Random seed for reproducibility.
++
++    Returns:
++        (T, n_pts, 3) sampled points for each mesh.
++    """
++    if synchronized:
++        return sample_synchronized_points(
++            meshes=meshes,
++            n_pts=n_pts,
++            seed=seed,
++            root_idx=0,
++        )
++
++    samples = [
++        sample_points(mesh=mesh, n_pts=n_pts, seed=seed + i)
++        for i, mesh in enumerate(meshes)
++    ]
++    return torch.stack(samples)
+diff --git a/inputs/current-release-gpu-case/official-scores.json.official/official-source/sample_point_cloud.py b/inputs/current-release-gpu-case/official-scores.json.official/official-source/sample_point_cloud.py
+new file mode 100644
+index 0000000..7b2c553
+--- /dev/null
++++ b/inputs/current-release-gpu-case/official-scores.json.official/official-source/sample_point_cloud.py
+@@ -0,0 +1,36 @@
++# Copyright (c) Meta Platforms, Inc. and affiliates.
++# All rights reserved.
++#
++# This source code is licensed under the license found in the
++# LICENSE file in the root directory of this source tree.
++
++import numpy as np
++import torch
++
++
++def sample_point_cloud(
++    point_cloud: torch.Tensor,
++    n_pts: int,
++    seed: int = 44,
++) -> torch.Tensor:
++    """
++    Subsample points from a temporal point cloud sequence.
++
++    Uses a single random permutation applied consistently across all timesteps
++    to maintain point correspondence.
++
++    Args:
++        point_cloud: (T, N, C) point clouds over T timesteps.
++        n_pts: Number of points to sample.
++        seed: Random seed for reproducibility.
++
++    Returns:
++        (T, n_pts, C) subsampled point clouds.
++    """
++    n_pts_src = point_cloud.shape[1]
++    if n_pts_src <= n_pts:
++        return point_cloud
++
++    rng = np.random.RandomState(seed=seed)
++    indices = torch.from_numpy(rng.permutation(n_pts_src)[:n_pts]).long()
++    return point_cloud[:, indices]

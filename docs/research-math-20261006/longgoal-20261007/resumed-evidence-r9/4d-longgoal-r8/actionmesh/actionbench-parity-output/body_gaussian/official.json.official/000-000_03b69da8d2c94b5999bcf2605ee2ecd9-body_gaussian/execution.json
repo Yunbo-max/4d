@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/deterministic_actionbench_entry.py",
+    "--official-script",
+    "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/evaluate_dataset.py",
+    "--gt_root",
+    "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/actionbench-gt",
+    "--pred_root",
+    "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/predictions",
+    "--output_csv",
+    "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/official.csv",
+    "--device",
+    "cuda:0",
+    "--n_pts_icp",
+    "10000",
+    "--n_pts_chamfer",
+    "100000",
+    "--seed",
+    "44",
+    "--mesh_pattern",
+    "mesh_*.glb",
+    "--recompute"
+  ],
+  "cwd": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source",
+  "exit_code": 0,
+  "stdout_sha256": "c1c00841a66de2b9e849da2d592fdd32ccbcfdbcaf8d39789cea9ad38899cce0",
+  "stderr_sha256": "51e68ed52de5e7e60d5330ce8acba2502ea482f865a2f7018b94484dd18c790b"
+}

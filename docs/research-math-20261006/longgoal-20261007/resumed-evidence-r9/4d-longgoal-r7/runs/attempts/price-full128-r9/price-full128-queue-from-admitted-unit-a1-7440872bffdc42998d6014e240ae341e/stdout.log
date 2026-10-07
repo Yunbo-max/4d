@@ -1,0 +1,1 @@
+{"pricing_ref": {"path": "inputs/actionbench-full128-queue/pricing.json", "sha256": "83a02e7e0f5609336de8c9fd6f93f1d0b0e6132cc916375f1a407ee47293ae5e"}, "status": "priced_engineering_only", "units_per_window": 16, "window_count": 8, "queue_approved": false, "queue_generated": false, "dispatch_ready": false}

@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T15:23:31.773411Z","plan_digest":"028641490520dc72aa9217a8dfb73b871058645da665fcc835f496616faee180"}
+{"devices":[],"event":"task_started","launcher_pid":2130,"native_plan_digest":"0d5a33bc6a1f02438c0d66fa7a0bbffefb1a16f4116d775db319c6009b1f0520","observed_at":"2026-10-07T15:23:32.173070Z","task_id":"full128-queue-pricing"}
+{"event":"task_finished","observed_at":"2026-10-07T15:23:35.337111Z","status":"completed","task_id":"full128-queue-pricing"}

@@ -1,0 +1,362 @@
+{
+  "kind": "actionbench-current-release-unit-manifest",
+  "version": "1.0.0",
+  "status": "frozen_engineering_current_release_unit",
+  "scope": "Deterministic one-UID input/output manifest for later complete-unit resource measurement; not execution, scorer qualification, a published-run replay, candidate evidence or a queue",
+  "population": {
+    "dataset": "facebook/actionbench",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "size": 128,
+    "uid_set_sha256": "ced97606907c703e99da4abd4066ed462a4c6e2d4cdbe82124bce8a1695df932"
+  },
+  "calibration_unit": {
+    "uid": "000-007_17ed60fbe8af47b69cbf45b97730e0ab",
+    "population_index": 7,
+    "selection_rule": "canonical full-population index; no outcome-based exclusions",
+    "role": "full-population engineering baseline; not a candidate experiment",
+    "independent_scientific_sample": false
+  },
+  "source": {
+    "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "tracked_worktree_clean": true,
+    "required_files": [
+      {
+        "path": "inference/video_to_animated_mesh.py",
+        "bytes": 7755,
+        "sha256": "8b7c5af8b713b87f7a2059b78309616cbf1ad7144f63843362b88dfd66d76bae"
+      },
+      {
+        "path": "actionmesh/configs/actionmesh.yaml",
+        "bytes": 3575,
+        "sha256": "2c1da517256133af1f986739e32ded0f00a2d58df82d5a338348f75595acccff"
+      },
+      {
+        "path": "actionmesh/pipeline.py",
+        "bytes": 28319,
+        "sha256": "0934b6801676a9e6f188e5b07450109e0c3359c10fa1230a9b9c69f056fd50f2"
+      },
+      {
+        "path": "actionmesh/io/video_input.py",
+        "bytes": 8820,
+        "sha256": "c39bb3a7ae6438e2c4a8ec6ec4eee8803d5fe543bc0bc70b7c07797ee2c4f8a6"
+      },
+      {
+        "path": "actionmesh/io/mesh_io.py",
+        "bytes": 3493,
+        "sha256": "7188e46e8bf6ee27314498966653e9985cefbb8a91276d368e95f2989669987f"
+      },
+      {
+        "path": "actionmesh/preprocessing/background_removal.py",
+        "bytes": 5209,
+        "sha256": "4a5aba61333002147b489c1febf56e658badc802ca57abcec61ed34baf451ce0"
+      },
+      {
+        "path": "actionbench/benchmark.py",
+        "bytes": 4672,
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionbench/chamfer.py",
+        "bytes": 2334,
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionbench/icp.py",
+        "bytes": 3292,
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionbench/sample_mesh.py",
+        "bytes": 7158,
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionbench/sample_point_cloud.py",
+        "bytes": 1004,
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionbench/evaluate_dataset.py",
+        "bytes": 15219,
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      },
+      {
+        "path": "requirements.txt",
+        "bytes": 246,
+        "sha256": "9c9a370eeb8c77693c85523279e66cf8dcc32f75adf5a817e3f08324fef1e659"
+      },
+      {
+        "path": "actionmesh/configs/actionmesh_lowram.yaml",
+        "bytes": 505,
+        "sha256": "17a66d65110bda031534aea9e9ef9ff7a7eaf4e49cc3e26550661609f9a1067b"
+      }
+    ]
+  },
+  "model_snapshots": {
+    "actionmesh": {
+      "repository": "facebook/ActionMesh",
+      "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+      "file_count": 10,
+      "total_bytes": 6615176099,
+      "manifest_sha256": "b4f7e0d4db009627cc90de5b23739ef12c09ea53e6a0ac8803ee25fcad650043"
+    },
+    "triposg": {
+      "repository": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+      "file_count": 10,
+      "total_bytes": 7946492674,
+      "manifest_sha256": "e5dfea10c8e7aa1d51b52b2336dc7dec1a2a319a4c9b78f590e72493e23117e4"
+    },
+    "dinov2": {
+      "repository": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "file_count": 4,
+      "total_bytes": 1217526906,
+      "manifest_sha256": "04acd76f8133c037084c86b8a3ae351806b88772beacf56d3b568c973c51c28e"
+    },
+    "rmbg": {
+      "repository": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+      "file_count": 9,
+      "total_bytes": 176407656,
+      "manifest_sha256": "dbdcaa70fab427fdbf08407a74a9db8d1ef4a2d5b78bca21720eb50d93d5a753"
+    }
+  },
+  "dataset_inputs": [
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/camera.json",
+      "bytes": 486,
+      "sha256": "c42aab63d650bbb9cc1bb0ca7b04d40f8e554d877b9ef3259b62e4b8eea0b92f",
+      "etag": "2d40d0f2ae6066f62c99b2aa9dffc358ccc2a404"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/surfaces.npy",
+      "bytes": 38400128,
+      "sha256": "3f80371521ea28b687b19bbebc781d0599422a3d253de7e1bd7ac2ed7dc1ce1a",
+      "etag": "3f80371521ea28b687b19bbebc781d0599422a3d253de7e1bd7ac2ed7dc1ce1a"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/00.png",
+      "bytes": 194680,
+      "sha256": "de2dd0801124c0ebd42dead64fad5a698fc2b799c0839d629d9d73462d16ddd2",
+      "etag": "de2dd0801124c0ebd42dead64fad5a698fc2b799c0839d629d9d73462d16ddd2"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/01.png",
+      "bytes": 195074,
+      "sha256": "e185a2ee28bfb592cffe51493d429cefa2488b265e238bd21b7cc27107ab123c",
+      "etag": "e185a2ee28bfb592cffe51493d429cefa2488b265e238bd21b7cc27107ab123c"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/02.png",
+      "bytes": 195007,
+      "sha256": "8ab422cd4c5a87de19d92943e76d83b78ab664d4a49ef50e2ca602ec4019c1ed",
+      "etag": "8ab422cd4c5a87de19d92943e76d83b78ab664d4a49ef50e2ca602ec4019c1ed"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/03.png",
+      "bytes": 195204,
+      "sha256": "37c8576962f3b71df75531275977c7c316fc2a4fc86fe068ca5b180e32000c64",
+      "etag": "37c8576962f3b71df75531275977c7c316fc2a4fc86fe068ca5b180e32000c64"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/04.png",
+      "bytes": 195318,
+      "sha256": "d4472145bb10bd94045e966c587c33508fc471026b8a0afb24205e5f08f9b912",
+      "etag": "d4472145bb10bd94045e966c587c33508fc471026b8a0afb24205e5f08f9b912"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/05.png",
+      "bytes": 195719,
+      "sha256": "bb80c86a7c7a0a719028082982fcfafaf4c4ce6df9a0d194a54b3866d1b5f13d",
+      "etag": "bb80c86a7c7a0a719028082982fcfafaf4c4ce6df9a0d194a54b3866d1b5f13d"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/06.png",
+      "bytes": 196090,
+      "sha256": "bfd06f4dfafddfd43cb62ebe21603fe6429342897e48552958236262c8cb5b3d",
+      "etag": "bfd06f4dfafddfd43cb62ebe21603fe6429342897e48552958236262c8cb5b3d"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/07.png",
+      "bytes": 196787,
+      "sha256": "6a312f6194b315d77e2fbca15866bc7194f8389d0c886960e966010759273178",
+      "etag": "6a312f6194b315d77e2fbca15866bc7194f8389d0c886960e966010759273178"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/08.png",
+      "bytes": 196910,
+      "sha256": "cdcd2ef7985686b4090ab8c55dafc4f032ee3b3163c3f337567de613f613b1b5",
+      "etag": "cdcd2ef7985686b4090ab8c55dafc4f032ee3b3163c3f337567de613f613b1b5"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/09.png",
+      "bytes": 197338,
+      "sha256": "155456b9486bedc53d51e696942e7ac4862de59083d99d0e25dd3e09e1663665",
+      "etag": "155456b9486bedc53d51e696942e7ac4862de59083d99d0e25dd3e09e1663665"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/10.png",
+      "bytes": 197488,
+      "sha256": "11fe79e5a14cff02ccc4613467eb4f276bcbcdd1478f75048356cf77ba57036c",
+      "etag": "11fe79e5a14cff02ccc4613467eb4f276bcbcdd1478f75048356cf77ba57036c"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/11.png",
+      "bytes": 197463,
+      "sha256": "b84688d4fc5a00695d42442ac9adee0ea24ef14aefbf87d02079556bda376bdc",
+      "etag": "b84688d4fc5a00695d42442ac9adee0ea24ef14aefbf87d02079556bda376bdc"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/12.png",
+      "bytes": 197749,
+      "sha256": "29471e7680bcfc1bad101ade069ff0465f0d4f57a1dde2702a95ba17a575bd0b",
+      "etag": "29471e7680bcfc1bad101ade069ff0465f0d4f57a1dde2702a95ba17a575bd0b"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/13.png",
+      "bytes": 197387,
+      "sha256": "ec2faf25ca1876ca115785376ba82bd01cb1859ca25490790a3bfe111f503c0f",
+      "etag": "ec2faf25ca1876ca115785376ba82bd01cb1859ca25490790a3bfe111f503c0f"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/14.png",
+      "bytes": 196875,
+      "sha256": "87bbbf7ed963ebfee377136f26297ac595e33956573778ccc7b9e278c3b0d05a",
+      "etag": "87bbbf7ed963ebfee377136f26297ac595e33956573778ccc7b9e278c3b0d05a"
+    },
+    {
+      "path": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs/15.png",
+      "bytes": 196727,
+      "sha256": "600246739b8baeb3dc4c5f568865c154a53448c9b0ee11f0966a286c4ecc6f15",
+      "etag": "600246739b8baeb3dc4c5f568865c154a53448c9b0ee11f0966a286c4ecc6f15"
+    }
+  ],
+  "dataset_input_manifest_sha256": "03170dfeffd47febc6a1bee7f00159c26fec4a93ce7fece6eff6de82d2652f93",
+  "generation": {
+    "release_scope": "current-public-release FP16 low-RAM engineering repair; no BF16 or published-row equivalence claim",
+    "input": "data/000-007_17ed60fbe8af47b69cbf45b97730e0ab/imgs containing exactly 00.png through 15.png",
+    "seed": 42,
+    "config": "actionmesh/configs/actionmesh_lowram.yaml",
+    "fast": false,
+    "low_ram": true,
+    "dtype": "float16",
+    "effective_parameters": {
+      "stage_0_steps": 100,
+      "face_decimation": 40000,
+      "floaters_threshold": 0.02,
+      "stage_1_steps": 30,
+      "guidance_scales": [
+        7.5
+      ],
+      "anchor_idx": 0,
+      "temporal_context_size": 16,
+      "sliding_window_denoiser": 15,
+      "subsampling_level": 1,
+      "sliding_window_autoencoder": 15
+    },
+    "network": "offline after admitted snapshots",
+    "gpu_policy": "exactly one freshly inventoried physical RTX 2080 Ti; UUID, driver, CUDA, total/free memory and competing processes must be retained",
+    "optional_outputs": "Blender animated GLB and PyTorch3D preview renders are diagnostics and are not required for ActionBench scoring",
+    "runtime_profile": "fp16-lowram-v1",
+    "repair_parent_receipt_sha256": "7b4223a3fdcf4a738c1cec646ecb8f8172ece850a46aa8936aa96d8626cd62f9",
+    "memory_policy": {
+      "lazy_loading": true,
+      "clear_autocast": true,
+      "split_cfg_batch": true
+    }
+  },
+  "multi_arm_unit": {
+    "arms": [
+      "native",
+      "world_gaussian",
+      "body_gaussian"
+    ],
+    "native": "the 16 meshes emitted by the pinned current-public-release generation",
+    "world_gaussian": "the existing deterministic sigma=1.0 frame Gaussian smoother in world coordinates",
+    "body_gaussian": "the existing deterministic sigma=1.0 frame Gaussian smoother after proper rigid pose factoring",
+    "shared": "same UID, generated native vertices, frame indices, topology, anchor and scorer inputs",
+    "control_sigma_frames": 1.0,
+    "official_scorer": {
+      "sampling_seed": 44,
+      "frames": 16,
+      "n_pts_chamfer": 100000,
+      "n_pts_icp": 10000,
+      "rotations": 24,
+      "icp_iterations": 200,
+      "metrics": [
+        "cd_3d",
+        "cd_4d",
+        "cd_motion"
+      ],
+      "role": "engineering completeness/timing observation; no one-UID performance threshold exists"
+    },
+    "timing_boundary": "one harness-owned attempt from pre-model-load through all three retained official score rows and integrity collection",
+    "required_resource_observations": [
+      "wall seconds for the complete boundary",
+      "per-stage wall seconds",
+      "baseline and peak device memory with sampling interval",
+      "host RAM and disk high-water marks",
+      "all process exit codes and timeouts"
+    ]
+  },
+  "required_outputs": {
+    "native_generation": [
+      "mesh_00.glb through mesh_15.glb",
+      "deformations_vertices.npy",
+      "deformations_faces.npy",
+      "generation report with exact command, cwd, environment, source/input/output hashes and stage timings"
+    ],
+    "controls": [
+      "native sequence and report",
+      "world_gaussian sequence and report",
+      "body_gaussian sequence, pose factors and report",
+      "three-arm manifest and control summary"
+    ],
+    "official_scoring": [
+      "one raw official CSV and summary per arm",
+      "official source copies/patch identity and subprocess records",
+      "all prediction GLB hashes",
+      "three retained metric rows including failures"
+    ],
+    "integrity_and_resources": [
+      "harness/native plans and approved digest",
+      "task/state/result/attempt records and stdout/stderr",
+      "current runtime/device manifest",
+      "complete recursive output manifest",
+      "wall-time and peak-VRAM receipt"
+    ]
+  },
+  "natural_failure_policy": {
+    "retained_failure_classes": [
+      "unsupported bfloat16 operation",
+      "CUDA out of memory",
+      "model deserialization or dependency incompatibility",
+      "input preprocessing failure",
+      "mesh topology/export failure",
+      "control construction failure",
+      "official scorer failure or timeout",
+      "resource or collection timeout"
+    ],
+    "forbidden_automatic_changes": [
+      "change runtime profile or precision",
+      "enable --fast",
+      "change generation or scoring seed",
+      "reduce frames, points, arms or scorer settings",
+      "change UID, source, model or dataset revision",
+      "retry without a separately reviewed repair plan"
+    ],
+    "adjudication": "Retain any failure as a failure of this explicit FP16 low-RAM repair. No automatic retries or further fallback.",
+    "success_limit": "A successful one-UID unit prices this exact three-arm engineering unit only. It does not establish the full-128 aggregate, scorer qualification or a candidate effect."
+  },
+  "prerequisite_receipts": {
+    "snapshot_admission_sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04",
+    "dataset_semantics_sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+  },
+  "inference_executed": false,
+  "official_scorer_invocations": 0,
+  "scientific_effect_qualification": false,
+  "dispatch_ready": false,
+  "queue_generated": false
+}

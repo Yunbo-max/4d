@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T15:21:39.818378Z","plan_digest":"20fca8bd13d8257dae2c9db7dc17fd30cfcd19915b1ff5907a2c9a008351e224"}
+{"devices":[],"event":"task_started","launcher_pid":1989,"native_plan_digest":"44fff6dcbf26019f79f110f4c29ae48cf610f154cc2c8bc605f9b3682461a1d1","observed_at":"2026-10-07T15:21:40.235959Z","task_id":"complete-unit-admission"}
+{"event":"task_finished","observed_at":"2026-10-07T15:21:42.302376Z","status":"completed","task_id":"complete-unit-admission"}

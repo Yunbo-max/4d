@@ -1,0 +1,44 @@
+2026-10-07 12:31:02,305 - INFO - Found 1 GT, 1 pred, 1 common
+
+Evaluating samples:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ICP per-frame:   0%|          | 0/16 [00:00<?, ?it/s][A
+
+ICP per-frame:   6%|▋         | 1/16 [00:08<02:06,  8.41s/it][A
+
+ICP per-frame:  12%|█▎        | 2/16 [00:16<01:53,  8.14s/it][A
+
+ICP per-frame:  19%|█▉        | 3/16 [00:24<01:43,  7.96s/it][A
+
+ICP per-frame:  25%|██▌       | 4/16 [00:31<01:34,  7.88s/it][A
+
+ICP per-frame:  31%|███▏      | 5/16 [00:40<01:29,  8.12s/it][A
+
+ICP per-frame:  38%|███▊      | 6/16 [00:49<01:23,  8.36s/it][A
+
+ICP per-frame:  44%|████▍     | 7/16 [00:57<01:16,  8.48s/it][A
+
+ICP per-frame:  50%|█████     | 8/16 [01:05<01:06,  8.26s/it][A
+
+ICP per-frame:  56%|█████▋    | 9/16 [01:14<00:57,  8.28s/it][A
+
+ICP per-frame:  62%|██████▎   | 10/16 [01:22<00:50,  8.40s/it][A
+
+ICP per-frame:  69%|██████▉   | 11/16 [01:31<00:42,  8.48s/it][A
+
+ICP per-frame:  75%|███████▌  | 12/16 [01:39<00:32,  8.24s/it][A
+
+ICP per-frame:  81%|████████▏ | 13/16 [01:46<00:24,  8.08s/it][A
+
+ICP per-frame:  88%|████████▊ | 14/16 [01:55<00:16,  8.17s/it][A
+
+ICP per-frame:  94%|█████████▍| 15/16 [02:03<00:08,  8.06s/it][A
+
+ICP per-frame: 100%|██████████| 16/16 [02:11<00:00,  8.30s/it][A
+ICP per-frame: 100%|██████████| 16/16 [02:11<00:00,  8.24s/it]
+2026-10-07 12:33:32,872 - INFO - [000-000_03b69da8d2c94b5999bcf2605ee2ecd9] CD_3D=0.039, CD_4D=0.077, CD_Motion=0.171
+
+Evaluating samples: 100%|██████████| 1/1 [02:30<00:00, 150.58s/it]
+Evaluating samples: 100%|██████████| 1/1 [02:30<00:00, 150.58s/it]
+2026-10-07 12:33:32,885 - INFO - Results saved to: /root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/official.csv
+2026-10-07 12:33:32,885 - INFO - Summary saved to: /root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-world_gaussian/official.summary.json

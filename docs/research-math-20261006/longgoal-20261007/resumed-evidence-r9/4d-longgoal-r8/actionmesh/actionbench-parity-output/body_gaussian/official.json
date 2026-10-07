@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "adapter_role": "format-only wrapper around official evaluate_dataset.py",
+  "metric_implementation": "none; metrics come from the official CLI subprocess",
+  "denominator": {
+    "frozen": true,
+    "manifest": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/manifest.json",
+    "manifest_sha256": "db2a1779b0634924d7f5bb58f2b299fe760117148b4ecb2d755fa0c29f37e132",
+    "n_declared": 1
+  },
+  "device": "cuda:0",
+  "seed": 44,
+  "python": "3.12.13",
+  "adapter_sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2",
+  "official_source": {
+    "original_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "patched_source_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "compatibility_patch": {
+      "file": "sample_mesh.py",
+      "function": "get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU surface sampler must not query CUDA RNG state for a CPU device",
+      "metric_or_draw_change": false
+    }
+  },
+  "cases": [
+    {
+      "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+      "case_id": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian",
+      "case_dir": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/current-release-gpu-case/controls/body_gaussian",
+      "status": "success",
+      "n_frames": 16,
+      "cd_3d": 0.038372574887254554,
+      "cd_4d": 0.07583400290438996,
+      "cd_motion": 0.16919727623462677,
+      "additional_runtime_compatibility": {
+        "kind": "experimental-knn-backward-cpu-compatibility",
+        "scope": "engineering-only; native qualification remains false",
+        "forward": "unchanged installed PyTorch3D CUDA KNN",
+        "backward": "installed upstream PyTorch3D CPU KNN primitive",
+        "source_sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771",
+        "extension_sha256": "e003c4048f34bd46f0a92f59b87d1951fe82b0c3df856826a02d4efb790965ce",
+        "cpu_backward_calls": 6800
+      },
+      "inputs": {
+        "sequence": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/current-release-gpu-case/controls/body_gaussian/sequence.npz",
+          "sha256": "681c0f096cd34097e1673ac1a3e9c032eddd200773b1825638fc4f378754a618"
+        },
+        "ground_truth": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/actionbench-gt/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+          "sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284"
+        }
+      },
+      "official_outputs": {
+        "csv": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/official.csv",
+          "sha256": "e16a396da3b0aef50db781efa685969786dfaac2e88c0bdf8fd98dcd572a84db"
+        },
+        "summary": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/official.summary.json",
+          "sha256": "6aa16140762e1ef9aa37dcb8eddf82d0bc837c196df7acedfd6f2dd1c9869375"
+        },
+        "export_manifest": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/export-manifest.json",
+          "sha256": "9ca369a19c7236508242b72c6cb89ae9db04277f7934b4856c8ccdaf18b3ae32"
+        },
+        "execution": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-000_03b69da8d2c94b5999bcf2605ee2ecd9-body_gaussian/execution.json",
+          "sha256": "f214709b4c89ae2972306f425abab23b93ef45352d7ee128cec2de1c8c9dc686"
+        }
+      },
+      "elapsed_seconds": 161.1107755471021
+    }
+  ],
+  "summary": {
+    "n_total": 1,
+    "n_success": 1,
+    "n_failed": 0,
+    "success_rate": 1.0
+  }
+}

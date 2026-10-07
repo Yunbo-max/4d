@@ -1,0 +1,438 @@
+{
+  "schema_id": "experiment-run-plan",
+  "schema_version": "1.0.0",
+  "run_id": "population-gpu-current-r9-unit-009",
+  "purpose": "engineering",
+  "evidence_mode": "developmental",
+  "protocol_ref": null,
+  "protocol_digest": null,
+  "output_root": "runs/attempts",
+  "provenance": {
+    "git_revision": "8c63cc474b5c1e244eded75abb7f2beabd3ab72b",
+    "model_revision": "four immutable manifests in snapshot admission",
+    "data_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "environment_digest": "c52875cf24d020e556712b5704d41c0fc3c7b423c6112e36c797d1cc92901f0c"
+  },
+  "limits": {
+    "max_attempts": 1,
+    "max_development_trials": 1,
+    "max_confirmation_trials": 0,
+    "max_retries_per_trial": 0,
+    "wall_time_seconds": 2700,
+    "attempt_timeout_seconds": 2700
+  },
+  "jobs": [
+    {
+      "trial_id": "complete-fp16-lowram-v1-three-arm-unit",
+      "command": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-m",
+        "research_math.complete_unit_runner",
+        "--contract",
+        "/root/actionmesh-research-staging/4d-longgoal-r9/inputs/population-campaign-r9/009/contract.json",
+        "--population",
+        "/root/actionmesh-research-staging/4d-longgoal-r9/actionmesh/research_overnight/assets/actionbench_population.json",
+        "--snapshot-contract",
+        "/root/actionmesh-research-staging/4d-longgoal-r9/docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+        "--snapshot-admission",
+        "/root/actionmesh-research-staging/4d-longgoal-r9/inputs/actionbench-full128-snapshots/admission.json",
+        "--dataset-semantics",
+        "/root/actionmesh-research-staging/4d-longgoal-r9/inputs/actionbench-full128-snapshots/dataset-semantics.json",
+        "--unit-manifest",
+        "/root/actionmesh-research-staging/4d-longgoal-r9/inputs/population-campaign-r9/009/unit-manifest.json",
+        "--source-root",
+        "/root/actionmesh-research-staging/actionmesh-source-d5c01f5",
+        "--dataset-root",
+        "/root/actionmesh-research-staging/actionbench-full128-direct",
+        "--weights-root",
+        "/root/rivermind-data/actionmesh-repro/weights",
+        "--gpu-uuid",
+        "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+        "--wall-seconds",
+        "2700",
+        "--output",
+        "unit-output"
+      ],
+      "cwd": "actionmesh",
+      "input_refs": [
+        {
+          "path": "inputs/population-campaign-r9/009/contract.json",
+          "sha256": "6b1e72d4f957a7d7072dd70629bae46e5d00ae0a8dbdf1b30945d2d23217be7e"
+        },
+        {
+          "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+          "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+        },
+        {
+          "path": "docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+          "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/admission.json",
+          "sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/dataset-semantics.json",
+          "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+        },
+        {
+          "path": "inputs/population-campaign-r9/009/unit-manifest.json",
+          "sha256": "b190d1b02a180bbe13627f508ca272c38517572e33014baba2526b7d465b874e"
+        },
+        {
+          "path": "inputs/native-runtime/environment.json",
+          "sha256": "c52875cf24d020e556712b5704d41c0fc3c7b423c6112e36c797d1cc92901f0c"
+        },
+        {
+          "path": "inputs/native-runtime/dependencies.json",
+          "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+        }
+      ],
+      "code_refs": [
+        {
+          "path": "actionmesh/research_math/__init__.py",
+          "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_dataset_semantics.py",
+          "sha256": "5d7a12a0f84596188c2fa59defc518667e6e139c1b860df35b9f039ea300dd55"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_full_reproduction.py",
+          "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_parity.py",
+          "sha256": "41274a0ce70008cc151649dba52ad8de8c2af391c9e518812c1796c77778de73"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_queue_pricing.py",
+          "sha256": "14c684bcd1d05fc9f6eb7d35179932f79f1a50d525b9652a33596c6204e8d776"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_unit_manifest.py",
+          "sha256": "3403780557927321e240ddd17a5e6faea4ebbd533938c13724b5004a59d31c06"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_admission.py",
+          "sha256": "a73242c113e31b05102b6743b45528e194c7402309668db7c5216f6d107a5291"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_contract.py",
+          "sha256": "191d3417e9ff52d116783cd9248c7a6c8cfe08a78fade994bd7a491a26c9099a"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_export.py",
+          "sha256": "f8c0dff18b1361f2133c177cdef6cee6bfc00ed363ac96783aff366688545503"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_plan.py",
+          "sha256": "6be61d930fe23f34711045109789b795e23a45b64a3239081d7d7190e3c5a767"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_runner.py",
+          "sha256": "8db6504aaa5997d92151d85093fc64efded070b7a17bddc4db1469be66a96609"
+        },
+        {
+          "path": "actionmesh/research_math/contact_events.py",
+          "sha256": "dbb64f4817b17e695601de1d9f521a55ce038ae95be001d06368a40b45d1a073"
+        },
+        {
+          "path": "actionmesh/research_math/control_scoring.py",
+          "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+        },
+        {
+          "path": "actionmesh/research_math/controllability.py",
+          "sha256": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc"
+        },
+        {
+          "path": "actionmesh/research_math/correlated.py",
+          "sha256": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395"
+        },
+        {
+          "path": "actionmesh/research_math/decoder_observer.py",
+          "sha256": "c2a19c385b5eafb36b1383c1060f464469a0e6219e771abdbf1df4f2174abe94"
+        },
+        {
+          "path": "actionmesh/research_math/deterministic_knn.py",
+          "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+        },
+        {
+          "path": "actionmesh/research_math/knn_backend_checks.py",
+          "sha256": "e118c9faf6bc4e0c179ef0cbae53167ba8d56a7c8b3e529a9d968ba4530bc057"
+        },
+        {
+          "path": "actionmesh/research_math/native_probe.py",
+          "sha256": "06641222f25fdf12e7a92f7765638a48aed5d68bac43f351f9b327b987f310b3"
+        },
+        {
+          "path": "actionmesh/research_math/native_runtime.py",
+          "sha256": "c13de3122f51847438ee15ccdc406e28e29da074491c4732de03ed76669c0398"
+        },
+        {
+          "path": "actionmesh/research_math/population_window_plan.py",
+          "sha256": "c7fca1e54916cef745ca017edc73f6ecdae437aadca475580336d572535f2f5d"
+        },
+        {
+          "path": "actionmesh/research_math/protected_projection.py",
+          "sha256": "b85827f75a738544c5ca4cd6a5bf817eea9034777058742288953901c601d1a6"
+        },
+        {
+          "path": "actionmesh/research_math/run_controls.py",
+          "sha256": "cc9bf7579dd8bd24423e21149773cc23f88dd0e26ec41b416212fb5f2fa207e7"
+        },
+        {
+          "path": "actionmesh/research_math/simple_mesh_controls.py",
+          "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+        },
+        {
+          "path": "actionmesh/research_math/snapshot_admission.py",
+          "sha256": "59b4e4e61f1a5eaae330bf9550bda0e603a6d2876659e63173eb168e55eabeef"
+        },
+        {
+          "path": "actionmesh/research_math/tests/__init__.py",
+          "sha256": "e35706ab31b38faa4054555ab76506b124b88f62c0ca6b548e0775b5f0b1fe64"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_dataset_semantics.py",
+          "sha256": "bf0e7bae1468b6ff5a45f2b19f280089956982c6504a03a2165ed39b89acab5c"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_full_reproduction.py",
+          "sha256": "d3ad5664d1733cf24ba897166e378db2c9bee9dab865880d50859966629e7fec"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_parity.py",
+          "sha256": "e05157a4a7f03410d696e63fcb72786b377fa1a8674f6b33e629f219180fa3b8"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_queue_pricing.py",
+          "sha256": "b420cee26673172e90bb7cbc87624feaaf89232041f4e16c5e33c635e1e89370"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_queue_pricing_plan.py",
+          "sha256": "57b61e7448a633b3bc636057a9369722af4e8725aed9679484f7e0b02412ae12"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_unit_manifest.py",
+          "sha256": "ee0dde49950cc6388d887bd2d2f029d6f876d91f30c39a0e7950a5faa7c5ab60"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_complete_unit_admission.py",
+          "sha256": "1f3ea94d8bc76e3bce32d934b4fc83c68d33a17e8eca3a5246167d63e239d371"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_complete_unit_admission_plan.py",
+          "sha256": "beee7b4f4f17e961d4f2c3c1b62444db0189e13d5afa84a2386a498610c4e862"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_complete_unit_contract.py",
+          "sha256": "2eda4fbf34ffd62d1c1b6c93dff985815f1ec17c072886eb5223f34bb9cf2b2d"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_complete_unit_export.py",
+          "sha256": "8f3799024f6047ae8298c2b29a0dd40f70f002c1e05bba9166f0836b5d236aff"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_complete_unit_runner.py",
+          "sha256": "f012ff5a4c11b43de877fa8044d83951fe9ce469fb6501c5f94c2c761796c750"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_contact_events.py",
+          "sha256": "cfc6344043ba763125ed7bfe841d53ae2ab49c572b4a98ded0ec266516ac2f9b"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_control_plan.py",
+          "sha256": "b49137bc5dbcf1597b0066e35693628a4472bc8384d636a8e10ad64ff86539f0"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_control_scoring.py",
+          "sha256": "7cfbeccb99afac2ef96ef3ae38da9086ad4c1dea2c42761294d960f1fec83d3d"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_controllability.py",
+          "sha256": "b6fac43458906b8142553e84fe7792c4c554685a81934e3988a8b567e2f8b536"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_correlated.py",
+          "sha256": "613c08e13fcb7909908d6db3fd3f73326e3e166264cdbd6084738eba9ab5b5a7"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_decoder_observer.py",
+          "sha256": "49c12fc134b314ce3610c4533db8d504015d4ef7da5fb4bf3f9afdf08e07960a"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_native_probe.py",
+          "sha256": "c211a346b4da4092fc90acbdf62e45f980347e3f2ad16a58eac90bfd4f7f832e"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_native_runtime.py",
+          "sha256": "4a349b8b8c2cf781df7bb24f921342e6b12b909a1a9b6a22e1287f102ea9340b"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_population_window.py",
+          "sha256": "6aad10dbc00d24e22775a56bdad05016311a32de3ced1382ad1d41d7da6ff102"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_protected_projection.py",
+          "sha256": "ef9bb4f86b65869bde1df264b8510a75f3adc0c0366c2656103679792114eed0"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_simple_mesh_controls.py",
+          "sha256": "cdfa7b712aad3e9ef1757ee217c47f378c025c43c8e8ced3a6857f8b12869bc6"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_snapshot_admission.py",
+          "sha256": "9753470dac656049d50075eec2a6d9badb8fe6e747d000348b6afdb1999b6f19"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_unit_resources_plan.py",
+          "sha256": "d8dd2c989d7bd1f09e34b6a327c92c0272c23da24a12e33ee8af2c0ce6a0a277"
+        },
+        {
+          "path": "actionmesh/research_math/tests/write_control_fixture.py",
+          "sha256": "b51ce59d82a2eb49e184f44000e882f44f22e08de0ea0bcf8fd33b2baf747dbe"
+        },
+        {
+          "path": "actionmesh/research_math/unit_resources.py",
+          "sha256": "226a9a6d4985e6a0ca9073236c69aa3e84edb45885307f6773690fca4ae8c030"
+        },
+        {
+          "path": "actionmesh/official_actionbench_adapter.py",
+          "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+        },
+        {
+          "path": "actionmesh/deterministic_actionbench_entry.py",
+          "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+        },
+        {
+          "path": "actionmesh/research_census_eval.py",
+          "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+        }
+      ],
+      "output_paths": [
+        "actionmesh/unit-output/result.json",
+        "actionmesh/unit-output/device-samples.jsonl",
+        "actionmesh/unit-output/host-samples.jsonl",
+        "actionmesh/unit-output/revalidated-unit-manifest.json",
+        "actionmesh/unit-output/generation.stdout.log",
+        "actionmesh/unit-output/generation.stderr.log",
+        "actionmesh/unit-output/generation.execution.json",
+        "actionmesh/unit-output/official-scoring.stdout.log",
+        "actionmesh/unit-output/official-scoring.stderr.log",
+        "actionmesh/unit-output/official-scoring.execution.json",
+        "actionmesh/unit-output/official-scores.json",
+        "actionmesh/unit-output/final-integrity/revalidated-unit-manifest.json",
+        "actionmesh/unit-output/native-generation/deformations_vertices.npy",
+        "actionmesh/unit-output/native-generation/deformations_faces.npy",
+        "actionmesh/unit-output/native-generation/sequence.npz",
+        "actionmesh/unit-output/native-generation/report.json",
+        "actionmesh/unit-output/native-generation/grid_normal.mp4",
+        "actionmesh/unit-output/native-generation/mesh_00.glb",
+        "actionmesh/unit-output/native-generation/mesh_01.glb",
+        "actionmesh/unit-output/native-generation/mesh_02.glb",
+        "actionmesh/unit-output/native-generation/mesh_03.glb",
+        "actionmesh/unit-output/native-generation/mesh_04.glb",
+        "actionmesh/unit-output/native-generation/mesh_05.glb",
+        "actionmesh/unit-output/native-generation/mesh_06.glb",
+        "actionmesh/unit-output/native-generation/mesh_07.glb",
+        "actionmesh/unit-output/native-generation/mesh_08.glb",
+        "actionmesh/unit-output/native-generation/mesh_09.glb",
+        "actionmesh/unit-output/native-generation/mesh_10.glb",
+        "actionmesh/unit-output/native-generation/mesh_11.glb",
+        "actionmesh/unit-output/native-generation/mesh_12.glb",
+        "actionmesh/unit-output/native-generation/mesh_13.glb",
+        "actionmesh/unit-output/native-generation/mesh_14.glb",
+        "actionmesh/unit-output/native-generation/mesh_15.glb",
+        "actionmesh/unit-output/controls/manifest.json",
+        "actionmesh/unit-output/controls/controls.json",
+        "actionmesh/unit-output/controls/native/sequence.npz",
+        "actionmesh/unit-output/controls/native/report.json",
+        "actionmesh/unit-output/controls/world_gaussian/sequence.npz",
+        "actionmesh/unit-output/controls/world_gaussian/report.json",
+        "actionmesh/unit-output/controls/body_gaussian/sequence.npz",
+        "actionmesh/unit-output/controls/body_gaussian/report.json",
+        "actionmesh/unit-output/controls/body_gaussian/poses.npz",
+        "actionmesh/unit-output/official-scores.json.official/official-source/benchmark.py",
+        "actionmesh/unit-output/official-scores.json.official/official-source/chamfer.py",
+        "actionmesh/unit-output/official-scores.json.official/official-source/icp.py",
+        "actionmesh/unit-output/official-scores.json.official/official-source/sample_mesh.py",
+        "actionmesh/unit-output/official-scores.json.official/official-source/sample_point_cloud.py",
+        "actionmesh/unit-output/official-scores.json.official/official-source/evaluate_dataset.py",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/execution.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/export-manifest.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/official.csv",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/official.summary.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/official.backend.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/stdout.log",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/stderr.log",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00000.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00001.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00002.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00003.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00004.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00005.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00006.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00007.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00008.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00009.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00010.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00011.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00012.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00013.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00014.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-native/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00015.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/execution.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/export-manifest.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/official.csv",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/official.summary.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/official.backend.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/stdout.log",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/stderr.log",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00000.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00001.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00002.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00003.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00004.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00005.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00006.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00007.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00008.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00009.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00010.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00011.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00012.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00013.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00014.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-world_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00015.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/execution.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/export-manifest.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/official.csv",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/official.summary.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/official.backend.json",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/stdout.log",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/stderr.log",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00000.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00001.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00002.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00003.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00004.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00005.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00006.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00007.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00008.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00009.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00010.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00011.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00012.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00013.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00014.glb",
+        "actionmesh/unit-output/official-scores.json.official/000-008_95878b202a624ae88a021fe5ca99b335-body_gaussian/predictions/000-008_95878b202a624ae88a021fe5ca99b335/mesh_00015.glb"
+      ],
+      "seed": 42,
+      "group": "engineering",
+      "arm_role": "complete-current-release-calibration"
+    }
+  ],
+  "plan_digest": "4788ccf71ca6f1afe719670afefbd506dcec68fc1a7a2793b52093ed3e478e7f"
+}

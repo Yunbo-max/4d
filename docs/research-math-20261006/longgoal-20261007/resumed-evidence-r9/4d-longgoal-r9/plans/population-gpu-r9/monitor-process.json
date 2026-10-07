@@ -1,0 +1,13 @@
+{
+  "pid": 2543,
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/scripts/research_monitor_20261007.py",
+    "--root",
+    "/root/actionmesh-research-staging/4d-longgoal-r9",
+    "--run-id",
+    "population-gpu-r9",
+    "--output",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/plans/population-gpu-r9/monitor-20min.jsonl"
+  ]
+}

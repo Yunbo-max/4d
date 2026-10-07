@@ -1,0 +1,46 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "population-gpu-current-r9-unit-008",
+  "tasks": [
+    {
+      "task_id": "complete-fp16-lowram-v1-three-arm-unit",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/population-gpu-current-r9/008/native.json",
+        "sha256": "8295856e992270673f7ebfc4a70e1107ace9f396e176298b5a87b2c8c5a7ab70"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 4500,
+    "window_seconds": 4500,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 8,
+    "ram_mib": 32768,
+    "max_gpu_task_seconds": 2700
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [
+      "GPU-4910bb04-2d00-ca81-f64a-2031568758ad"
+    ],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "2fd466d0ad3510e47a6c6fe9f1b4b0352cfd8ea08c3bf4d70fb386f540ca648f"
+}

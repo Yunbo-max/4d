@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "protocol": {
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "denominator": {
+    "frozen": true,
+    "manifest": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/actionbench-parity-output/native/manifest.json",
+    "manifest_sha256": "f6cb3b713394677b3c0216de735f0944e519aa0f46c2472e1d08a7f0207cb116",
+    "n_declared": 1
+  },
+  "cases": [
+    {
+      "case_id": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native",
+      "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+      "case_dir": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/current-release-gpu-case/controls/native",
+      "manifest_entry": {
+        "case_id": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native",
+        "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+        "case_dir": "native"
+      },
+      "status": "success",
+      "generation_status": "completed",
+      "inputs": {
+        "sequence": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/current-release-gpu-case/controls/native/sequence.npz",
+          "sha256": "37c0d90f8712d9901d73a5e3944b3dd37af9940dd9d186f0989c17ea0e5abe1c"
+        },
+        "ground_truth": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/actionbench-gt/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/surfaces.npy",
+          "sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284"
+        },
+        "generation_report": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/inputs/current-release-gpu-case/controls/native/report.json",
+          "sha256": "85faa225457e2bf04eb2474bfb03ea63d8c3a696059bda6f73984e7c14628216"
+        }
+      },
+      "shapes": {
+        "vertices": [
+          16,
+          20001,
+          3
+        ],
+        "faces": [
+          39998,
+          3
+        ],
+        "gt_positions": [
+          16,
+          100000,
+          3
+        ]
+      },
+      "cd_3d": 0.03884803608007244,
+      "cd_4d": 0.07596155655519302,
+      "cd_motion": 0.1683817356824875,
+      "elapsed_seconds": 149.05942179029807
+    }
+  ],
+  "device": "cuda:0",
+  "python": "3.12.13",
+  "evaluator_sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+  "official_source": {
+    "source_root": "/root/actionmesh-research-staging/4d-longgoal-r8/runs/attempts/actionbench-parity-repeat-r8/official-faithful-three-arm-parity-a1-7be3ad28650c4acc9f3d313d88ac9359/workspace/actionmesh/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "scipy": "1.17.1",
+    "pytorch3d": "0.7.9"
+  },
+  "summary": {
+    "n_total": 1,
+    "n_success": 1,
+    "n_failed": 0,
+    "n_pending": 0,
+    "n_validated_only": 0,
+    "success_rate": 1.0,
+    "mean_scope": "successful cases only; never treat failures as zero",
+    "means_weighting": "case/run weighted; asset-balanced means also provided",
+    "n_unique_assets": 1,
+    "n_assets_with_success": 1,
+    "asset_results": [
+      {
+        "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+        "n_runs": 1,
+        "n_success": 1,
+        "means": {
+          "cd_3d": 0.03884803608007244,
+          "cd_4d": 0.07596155655519302,
+          "cd_motion": 0.1683817356824875
+        }
+      }
+    ],
+    "asset_balanced_means": {
+      "cd_3d": 0.03884803608007244,
+      "cd_4d": 0.07596155655519302,
+      "cd_motion": 0.1683817356824875
+    },
+    "successful_case_ids": [
+      "000-000_03b69da8d2c94b5999bcf2605ee2ecd9-native"
+    ],
+    "means": {
+      "cd_3d": 0.03884803608007244,
+      "cd_4d": 0.07596155655519302,
+      "cd_motion": 0.1683817356824875
+    }
+  },
+  "additional_runtime_compatibility": {
+    "kind": "experimental-knn-backward-cpu-compatibility",
+    "scope": "engineering-only; native qualification remains false",
+    "forward": "unchanged installed PyTorch3D CUDA KNN",
+    "backward": "installed upstream PyTorch3D CPU KNN primitive",
+    "source_sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771",
+    "extension_sha256": "e003c4048f34bd46f0a92f59b87d1951fe82b0c3df856826a02d4efb790965ce",
+    "cpu_backward_calls": 6800,
+    "regression_checks": {
+      "analytic_gradients": "passed norms 1 and 2",
+      "forward_unchanged": true,
+      "bitwise_repeats": 3,
+      "restores_backend_on_exception": true
+    }
+  }
+}

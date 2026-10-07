@@ -1,0 +1,16 @@
+{
+  "run_id": "population-gpu-current-r9",
+  "pid": 3157,
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/rivermind-data/actionmesh-repro/tools/research-autopilot/scripts/run_harness.py",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/plans/population-gpu-current-r9/harness.json",
+    "--root",
+    "/root/actionmesh-research-staging/4d-longgoal-r9",
+    "--execute",
+    "--approved-plan-digest",
+    "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1"
+  ],
+  "launched_at": "2026-10-07T15:32:28.057578+00:00",
+  "gpu_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad"
+}

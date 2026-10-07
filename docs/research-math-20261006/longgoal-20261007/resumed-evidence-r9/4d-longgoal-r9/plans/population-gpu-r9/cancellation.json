@@ -1,0 +1,7 @@
+{
+  "status": "cancelled_before_dispatch",
+  "reason": "historical physical GPU UUID no longer allocated; all nine tasks remained pending; no experiment launched",
+  "observed_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
+  "historical_uuid": "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740",
+  "cancelled_at": "2026-10-07T15:29:49.286111+00:00"
+}
