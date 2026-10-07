@@ -20,6 +20,7 @@ from prepare_actionbench_full128_window import (
     R9_STATE_SNAPSHOT_PATH,
     R9_STATUS_SNAPSHOT_PATH,
     RETAINED_DISPOSITIONS,
+    retained_observation_window,
 )
 
 
@@ -116,7 +117,7 @@ def capture_snapshot(*, root: Path, live_state_path: Path,
         if task_status not in counts:
             raise ValueError("Unsupported retained harness task status")
         counts[task_status] += 1
-    window = status.get("population_window")
+    window = retained_observation_window(status, state, profile)
     if (not isinstance(window, dict) or
             window.get("run_id") != profile["run_id"] or
             window.get("plan_digest") != profile["plan_digest"] or

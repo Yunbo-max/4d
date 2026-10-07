@@ -61,6 +61,50 @@ def _plan_digest(plan: dict) -> str:
     return hashlib.sha256(encoded).hexdigest()
 
 
+def retained_observation_window(status: dict, state: dict,
+                                profile: dict) -> dict:
+    """Validate an observer output and expose its bound population summary.
+
+    Older retained evidence stores a ``population_window`` wrapper. The
+    installed harness's read-only ``--status`` interface instead returns the
+    exact harness state with an observation timestamp and a provenance flag.
+    Accept both forms while preserving the official status bytes unchanged.
+    """
+    window = status.get("population_window")
+    if isinstance(window, dict):
+        return window
+
+    if (status.get("format") != "research-harness-state-v1" or
+            status.get("status_is_retained_observation") is not True):
+        raise ValueError("Exact retained observer status required")
+    observed_state = {
+        key: value for key, value in status.items()
+        if key not in {"observed_at", "status_is_retained_observation"}
+    }
+    if observed_state != state:
+        raise ValueError("Official observer status differs from harness state")
+    start, stop = profile["population_range"]
+    expected_task_ids = [f"population-{index:03d}"
+                         for index in range(start, stop)]
+    tasks = state.get("tasks")
+    if not isinstance(tasks, dict) or set(tasks) != set(expected_task_ids):
+        raise ValueError("Official observer status lacks the exact task set")
+    counts = {name: 0 for name in RETAINED_DISPOSITIONS}
+    for task_id in expected_task_ids:
+        task = tasks[task_id]
+        disposition = task.get("status") if isinstance(task, dict) else None
+        if disposition not in counts:
+            raise ValueError("Official observer status has an unsupported task status")
+        counts[disposition] += 1
+    return {
+        "run_id": status.get("batch_id"),
+        "plan_digest": status.get("plan_digest"),
+        "indices": list(range(start, stop)),
+        "observed_at": status.get("observed_at"),
+        **counts,
+    }
+
+
 def extend_with_opaque_refs(root: Path, refs: list[dict],
                             paths: list[Path]) -> list[dict]:
     """Add already-validated archived evidence without rebasing nested refs.
@@ -244,14 +288,15 @@ def validate_active_batch_reconciliation(root: Path, pricing: dict,
                 raise ValueError("Retained native plan identity or digest mismatch")
             resolved.append(native_path.resolve())
         status = json.loads(status_path.read_text())
-        population_window = status.get("population_window")
+        state = json.loads(state_path.read_text())
+        population_window = retained_observation_window(
+            status, state, profile)
         if (not isinstance(population_window, dict) or
                 population_window.get("run_id") != run["run_id"] or
                 population_window.get("plan_digest") != digest or
                 population_window.get("indices") != list(range(start, stop)) or
                 population_window.get("observed_at") != observed_at):
             raise ValueError("Status snapshot does not bind the retained run")
-        state = json.loads(state_path.read_text())
         task_states = state.get("tasks")
         if (state.get("format") != "research-harness-state-v1" or
                 state.get("batch_id") != run["run_id"] or

@@ -17,6 +17,7 @@ from prepare_actionbench_full128_window import (
     R9_STATE_SNAPSHOT_PATH,
     R9_STATUS_SNAPSHOT_PATH,
     RETAINED_DISPOSITIONS,
+    retained_observation_window,
     validate_active_batch_reconciliation,
 )
 from research_math.control_scoring import file_ref
@@ -85,7 +86,7 @@ def build_reconciliation(*, root: Path, pricing_path: Path,
             "status": task_status,
         })
 
-    population_window = status.get("population_window")
+    population_window = retained_observation_window(status, state, profile)
     if not isinstance(population_window, dict):
         raise ValueError("Exact population status snapshot required")
     result = {

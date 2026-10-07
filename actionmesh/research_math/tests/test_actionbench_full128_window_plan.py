@@ -252,6 +252,60 @@ class Full128WindowPlanTests(unittest.TestCase):
             live_status.write_text("{}")
             self.assertEqual(json.loads(status_output.read_text()), status)
 
+    def test_snapshot_builder_accepts_official_harness_status_observation(self):
+        """Preserve the harness's read-only --status output without synthesizing STATUS."""
+        from tempfile import TemporaryDirectory
+        from prepare_actionbench_active_batch_snapshot import capture_snapshot
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            live = root / "live"
+            live.mkdir()
+            profile = {
+                "run_id": "population-gpu-current-r9",
+                "population_range": (1, 10),
+                "plan_digest": "a" * 64,
+                "campaign_plan_path": "archive/harness.json",
+                "status_snapshot_path": "archive/status-snapshot.json",
+                "state_snapshot_path": "archive/state.json",
+            }
+            statuses = ["completed"] * 3 + ["running"] + ["pending"] * 5
+            state = {
+                "format": "research-harness-state-v1",
+                "batch_id": profile["run_id"],
+                "plan_digest": profile["plan_digest"],
+                "status": "running",
+                "tasks": {
+                    f"population-{index:03d}": {"status": task_status}
+                    for index, task_status in zip(range(1, 10), statuses)
+                },
+            }
+            observed = dict(state)
+            observed.update({
+                "observed_at": "2026-10-07T19:12:37.209259Z",
+                "status_is_retained_observation": True,
+            })
+            live_state = live / "state.json"
+            live_status = live / "harness-status.stdout.json"
+            live_state.write_text(json.dumps(state))
+            live_status.write_text(json.dumps(observed))
+            state_output = root / profile["state_snapshot_path"]
+            status_output = root / profile["status_snapshot_path"]
+
+            result = capture_snapshot(
+                root=root,
+                live_state_path=live_state,
+                live_status_path=live_status,
+                state_output_path=state_output,
+                status_output_path=status_output,
+                required_profile=profile,
+            )
+
+            self.assertEqual(status_output.read_bytes(), live_status.read_bytes())
+            self.assertEqual(result["observed_at"], observed["observed_at"])
+            self.assertEqual(result["counts"], {
+                "completed": 3, "running": 1, "pending": 5, "failed": 0,
+            })
+
     def test_snapshot_builder_rejects_incoherent_counts_without_partial_output(self):
         """Catch archiving a state/status pair from different observations."""
         from tempfile import TemporaryDirectory
@@ -335,6 +389,66 @@ class Full128WindowPlanTests(unittest.TestCase):
                 ["completed"] * 3 + ["running"] + ["pending"] * 5,
             )
             self.assertEqual(json.loads(output.read_text()), built)
+
+    def test_reconciliation_accepts_official_harness_status_unchanged(self):
+        """Bind native --status output without inventing a STATUS wrapper."""
+        from tempfile import TemporaryDirectory
+        from prepare_actionbench_active_batch_reconciliation import (
+            build_reconciliation,
+        )
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (_, campaign_ref, status_ref, profile, _) = evidence_fixture(
+                root, pricing)
+            state_path = root / profile["state_snapshot_path"]
+            status_path = root / status_ref["path"]
+            state = json.loads(state_path.read_text())
+            observed = dict(state)
+            observed.update({
+                "observed_at": "2026-10-07T19:12:37.209259Z",
+                "status_is_retained_observation": True,
+            })
+            raw_status = json.dumps(observed).encode()
+            status_path.write_bytes(raw_status)
+            output = root / (
+                "inputs/actionbench-full128-queue/"
+                "active-batch-reconciliation.json")
+
+            built = build_reconciliation(
+                root=root,
+                pricing_path=root / "inputs/actionbench-full128-queue/pricing.json",
+                campaign_path=root / campaign_ref["path"],
+                state_path=state_path,
+                status_path=status_path,
+                output_path=output,
+                required_profile=profile,
+            )
+
+            self.assertEqual(built["observed_at"], observed["observed_at"])
+            self.assertEqual(status_path.read_bytes(), raw_status)
+
+    def test_official_harness_status_must_match_the_exact_state(self):
+        """Reject a marked observer payload whose task record was altered."""
+        from tempfile import TemporaryDirectory
+        from prepare_actionbench_full128_window import (
+            retained_observation_window,
+        )
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (_, _, _, profile, _) = evidence_fixture(root, pricing)
+            state = json.loads((root / profile["state_snapshot_path"]).read_text())
+            observed = dict(state)
+            observed.update({
+                "observed_at": "2026-10-07T19:12:37.209259Z",
+                "status_is_retained_observation": True,
+            })
+            observed["tasks"] = dict(observed["tasks"])
+            observed["tasks"]["population-001"] = {"status": "failed"}
+
+            with self.assertRaisesRegex(ValueError, "differs from harness state"):
+                retained_observation_window(observed, state, profile)
 
     def test_active_batch_reconciliation_is_derived_from_exact_harness_state(self):
         """Catch accepting caller-authored dispositions without task state."""
