@@ -1,0 +1,5 @@
+# Additional dependencies used by the released ActionBench dataset CLI.
+# Installed in the existing project venv; no Torch/CUDA/NumPy upgrade required.
+pandas==2.2.3
+pytz==2025.2
+natsort==8.4.0
