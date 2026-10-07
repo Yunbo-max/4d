@@ -1,6 +1,7 @@
 # Native decoder context needed by the fifteen-method program
 
-Status: source-inspected engineering design; not implemented or executed.
+Status: engineering capture core and five CPU hook tests authored; unexecuted.
+The native observer/replay admission has not run.
 This does not change the frozen default-release calibration unit.
 
 At ActionMesh `d5c01f5045df55819e337369c9617f603c667e00`,
@@ -44,3 +45,32 @@ Admission experiment after the baseline runtime is qualified:
 This observer alone does not provide `SparseModes` or a `LegalMotionSurrogate`.
 Those interfaces still need independently justified model outputs or input-video
 measurements and frozen eligibility rules. A saved tensor is not their admission.
+
+## Implementation checkpoint, 2026-10-07
+
+`actionmesh/research_math/decoder_observer.py` captures the five actual named
+forward tensor arguments and raw output with PyTorch pre/post hooks. Hooks
+return no replacements. CPU snapshots preserve dtype (including BF16) and have
+safetensors hashes, shape/dtype metadata, original device and autocast/inference
+state. Originals are never cast or edited. Capture storage is bounded to 64 MiB
+of tensor payload per call. The bound excludes serialization overhead and the
+retained separate input copy, so disk can approach twice that bound. Successful
+captures remain `captured_unqualified`. Failures preserve captured inputs.
+
+Five engineering checks cover nonmutation/RNG/output preservation, byte bounds,
+failed forward cleanup, positional arguments/BF16, and tamper rejection. The
+first test-plan launch was rejected with `HARNESS_HOST_DRIVER_ALREADY_ACTIVE`
+while complete-lowram-r7 was executing. This is not a test failure or pass.
+No attempt was made to bypass the host supervisor lock or stop the GPU run.
+Run the original red plan after the current GPU task terminates, then transfer
+the authored core, generate a new green plan, and run the complete suite.
+The remote red plan pins the test with no implementation in its code closure.
+
+Outstanding integration remains explicit: attach the observer to the loaded
+Stage-II module just around `_decode_displacement`, bind anchor faces and the
+complete generation manifest, source/config/weights and frame mapping; compare
+observed and unobserved native outputs; replay all original queries; only then
+issue the same-source-time query. No candidate can consume the core's outputs
+until those checks establish the `NativeContext` interface. No new GPU observer
+run has been launched and no context from the live baseline is retroactively
+claimed captured.
