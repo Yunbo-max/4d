@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T12:06:06.285784+00:00",
+  "updated_at": "2026-10-07T12:48:13+00:00",
   "software_acceptance": {
     "run_id": "lowram-closure-r6",
     "tests_passed": 228,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Monitor complete-lowram-r7 generation, export and all three official score rows",
+  "current_task": "Monitor complete-lowram-r7 official scoring; prospective CPU-only 117-file admission is authored but cannot run before a terminal completed receipt",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,7 +129,7 @@
       "comparator_and_ablation": "required"
     }
   ],
-  "next_checkpoint": "replay and qualify scorer on this output; complete official baseline threshold/protocol qualification; implement all 15 after native context admission",
+  "next_checkpoint": "Run current software acceptance and the pinned CPU-only complete-unit admission against the terminal r7 records before queue pricing; then replay and qualify the scorer/protocol",
   "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r7",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
@@ -237,9 +237,32 @@
     "path": "actionmesh/research_math/complete_unit_runner.py",
     "status": "completed_fp16_lowram_v1_engineering_only",
     "remaining": [
-      "complete actual GPU integration",
-      "three-arm official scoring and integrity collection"
+      "current-revision software acceptance",
+      "CPU-only complete-unit admission",
+      "queue pricing and official scorer replay after admission"
     ]
+  },
+  "complete_unit_admission": {
+    "status": "prospective_contract_and_finalizer_authored_unexecuted",
+    "contract": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+    "plan_builder": "actionmesh/prepare_complete_unit_admission.py",
+    "finalizer": "actionmesh/research_math/complete_unit_admission.py",
+    "source_run_id": "complete-lowram-r7",
+    "source_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+    "source_status": "terminal_completed_engineering_only",
+    "source_elapsed_seconds": 1330.4655511886813,
+    "source_observed_peak_mib": 10255,
+    "required_receipt_outputs": 117,
+    "required_nested_pre_result_outputs": 121,
+    "tests_authored": 12,
+    "tests_executed": 0,
+    "gpu_count": 0,
+    "complete_unit_admitted": false,
+    "eligible_for_queue_pricing": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
+    "queue_approved": false,
+    "queue_generated": false
   },
   "runtime_capture": {
     "run_id": "runtime-r5",
@@ -285,13 +308,14 @@
     "log": "/root/actionmesh-research-staging/complete-lowram-r7.log",
     "last_observed_gpu_memory_mib": 10255,
     "last_observed_utilization_percent": 100,
-    "stage_observed": "native and world_gaussian official scores success; body_gaussian scoring pending",
+    "stage_observed": "all three official score rows succeeded; final integrity collection and harness completed",
     "completed_at": "2026-10-07T12:03:47.144347Z",
     "harness_status": "completed",
     "attempt_receipt_sha256": "ec72d1aa2301d73cbc62eb61bda4e588ebc7ebbb949c17f542b7dc3e21f43909",
     "result_sha256": "1cf6aea2aaaf39c9e8f1b535bd60e7f0fcf4b4f9c1ecaf72239878cd5ed13b10",
     "elapsed_seconds": 1330.4655511886813,
-    "output_count": 121,
+    "receipt_output_count": 117,
+    "runner_pre_result_output_count": 121,
     "observed_peak_gpu_mib": 10255,
     "observed_peak_rss_bytes": 11539595264,
     "minimum_free_disk_bytes": 24768958464,

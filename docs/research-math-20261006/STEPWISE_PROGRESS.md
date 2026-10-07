@@ -674,3 +674,53 @@ automatic fallback. This change executes **0** tests, inference, scorer or GPU
 workloads and does not change candidate designs/results/outcomes from **0/15**,
 **0/15**, and **0**. No queue is generated until the full receipt returns actual
 wall time and observed peak VRAM.
+
+## Continuation: freeze complete-unit admission before scoring returns — 2026-10-07
+
+Local advanced the admitted current-release path substantially. The full 128
+snapshot, dataset-semantics and one-UID unit-manifest passes are complete, and
+the current software suite returned 228/228. The frozen default non-fast BF16
+attempt retained a natural Stage-I attention OOM after 135.94 seconds with a
+sampled 20,673 MiB peak; this is not converted into a score. The explicitly
+versioned `fp16-lowram-v1` repair then completed all 30 temporal denoising steps,
+decoded and rendered all 16 frames, and exited generation successfully after
+792.54 seconds. At the latest committed observation, its three official score
+rows were still pending at contract authorship. The subsequently returned
+terminal evidence contains all three successful rows, 117 receipt-bound outputs
+and a 121-file runner inventory: the 116 declared non-result files plus five
+CPython 3.12 evaluator caches created by the official scorer. No second GPU
+attempt was launched by Web.
+
+The remaining post-run evidence boundary was not closed. Although the running
+native plan declares 117 outputs, no independent pass yet requires the terminal
+harness/native records, rehashes every declared raw file, compares the runner's
+own pre-result inventory, and freezes the measured unit cost. Accepting
+`result.json` or a completed receipt alone would allow a missing raw score bundle,
+changed file or stale resource summary to become a queue-pricing input.
+
+Added a prospective admission contract bound before the score outcome to
+`complete-lowram-r7`, its approved plan digest, the frozen UID and
+`fp16-lowram-v1`. Added a CPU-only finalizer and plan builder. A pass requires one
+completed harness task/job/attempt, canonical plan/state/report/task/receipt/
+attempt records, the exact 117 receipt files, the exact 121 files listed before
+`result.json` was written (including the five exact evaluator caches), all four
+completed stages, all three finite official
+metric rows, and error-free one-second host/device sampling. It emits one
+single-use measurement sidecar. It cannot qualify a scientific effect or native
+benchmark, cannot increment a candidate, and does not generate a queue.
+
+Twelve focused rejection/closure checks were authored first. Review then closed
+three fail-open edges: the builder now recognizes only the official per-case
+external ground-truth diagnostic reference while rejecting other escaping refs;
+raw host/device JSONL is reparsed to reproduce identity, counts, peaks, cadence
+and workload coverage; and the source execution context, remapped command/cwd,
+process guard and generation/scoring stage records are independently bound.
+Queue approval is explicitly false. The tree now has 245 statically observed
+`test_*` methods: 228 are covered by the last returned suite; the five observer
+checks and twelve new admission checks remain unexecuted. Web
+performed AST/JSON/hash inspection only and ran **0** project tests, finalizers,
+scorers or GPU work. Candidate native results and formal outcomes remain
+**0/15** and **0**. Next: Local runs current whole-suite acceptance and the exact
+CPU-only admission digest against the returned terminal source records.
+Only its admitted measurement can feed a later 27,000-second workload queue with
+the required 1,800-second collection reserve.

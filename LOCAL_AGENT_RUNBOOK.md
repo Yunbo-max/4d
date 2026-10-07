@@ -517,13 +517,65 @@ device telemetry. A plan declaring only `result.json` is obsolete and must be
 rejected. Preserve any partial failure rather than manufacturing the absent
 success files.
 
+The first frozen default attempt returned a retained natural OOM at Stage I with
+an observed 20,673 MiB sampled peak. Its separately reviewed repair is
+`complete-lowram-r7`: non-fast FP16 with the official low-RAM path, still seed 42,
+all 16 frames and all three score arms. The terminal harness completed in
+1,330.47 seconds with all three official rows, 117 receipt outputs, 121 runner
+pre-result files and a sampled 10,255 MiB GPU peak. Do not start another GPU
+attempt; proceed through the CPU-only admission below.
+
+After—and only after—`complete-lowram-r7` returns `completed`, build the
+CPU-only evidence-admission plan. The prospective contract is already frozen at
+the running plan digest, so a different run, UID, profile or edited output cannot
+be substituted:
+
+```bash
+source_unit_run_id=complete-lowram-r7
+admission_run_id=admit-complete-lowram-r7
+unit_plan_digest=a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b
+
+"$python_bin" "$project_dir/actionmesh/prepare_complete_unit_admission.py" \
+  --root "$project_dir" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-complete-unit-admission-contract.json" \
+  --harness-plan "$project_dir/plans/$source_unit_run_id/harness.json" \
+  --harness-report "$project_dir/runs/harness/$source_unit_run_id/report.json" \
+  --native-plan "$project_dir/plans/$source_unit_run_id/native.json" \
+  --native-receipt "$project_dir/runs/attempts/$source_unit_run_id/receipt.json" \
+  --approved-unit-plan-digest "$unit_plan_digest" \
+  --output "$project_dir/inputs/complete-unit-admissions/complete-lowram-r7.json" \
+  --skill-dir "$skill_dir" \
+  --plan-dir "$project_dir/plans/$admission_run_id" \
+  --run-id "$admission_run_id" \
+  --wall-seconds 900 \
+  --ram-mib 4096 \
+  --cpu-cores 2
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$admission_run_id/harness.json" \
+  --root "$project_dir" \
+  --execute \
+  --approved-plan-digest "$admission_plan_digest"
+```
+
+Before executing, inspect that this second plan has `gpu_count: 0`, one attempt,
+no retry and only one output sidecar. A pass must bind the canonical source
+harness/native plan, state, report, task, receipt and attempt; exact 117 receipt
+files; exact 121 nested pre-`result.json` files (116 declared files plus five
+retained CPython 3.12 evaluator caches); four completed stages; three
+official score arms; and error-free one-second host/device samples. Keep the raw
+source unit immutable on the GPU host. The sidecar permits later queue pricing
+for this exact FP16 low-RAM engineering unit only; it is not a baseline/native
+scientific qualification and does not itself generate the queue.
+
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.
 Inventory these full-population prerequisites without launching generation or scoring. Return
 their exact paths/revisions/hashes, snapshot and semantic admissions, and measured
 storage/semantic-pass requirements plus the unit manifest. The complete-unit
-runner and plan builder are now authored but unexecuted; only their full
-generation/three-arm export/scoring receipt can price the eight-hour queue.
+default runner has a retained OOM and the explicit FP16 low-RAM repair completed
+generation before entering official scoring. Only a terminal successful receipt
+followed by the CPU-only complete-unit admission can price the eight-hour queue.
 One-UID parity timing or any CPU admission timing cannot.
 
 ### 7. Native replay and strict output binding

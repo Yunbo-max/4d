@@ -1,0 +1,67 @@
+{
+  "kind": "research-autopilot-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T12:48:13Z",
+  "base_commit": "65b2598cb4ed73d841c16f47728f69165e1352d1",
+  "status": "prospective_complete_unit_admission_authored_unexecuted",
+  "decision": "A terminal complete-unit runner result is not itself sufficient for queue pricing. Require a separate CPU-only harness pass that revalidates the prospective source identity, canonical execution records, complete raw-output closure, nested hashes, three official score rows and measured resources.",
+  "source_run": {
+    "run_id": "complete-lowram-r7",
+    "approved_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+    "last_observed_status": "terminal completed; all three official rows succeeded; elapsed 1330.4655511886813 seconds; sampled peak 10255 MiB; receipt outputs 117; runner pre-result files 121",
+    "admission_attempted": false
+  },
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/complete_unit_admission.py",
+      "sha256": "a73242c113e31b05102b6743b45528e194c7402309668db7c5216f6d107a5291"
+    },
+    {
+      "path": "actionmesh/prepare_complete_unit_admission.py",
+      "sha256": "e2ff53802b400122f02a5d4e2bd243d76d116b2ce39de5c095d53fc4e90ba418"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_complete_unit_admission.py",
+      "sha256": "1f3ea94d8bc76e3bce32d934b4fc83c68d33a17e8eca3a5246167d63e239d371"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_complete_unit_admission_plan.py",
+      "sha256": "beee7b4f4f17e961d4f2c3c1b62444db0189e13d5afa84a2386a498610c4e862"
+    }
+  ],
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+    "sha256": "37b115bee75d20a72ec028718a7ec1e047b6c69e458e697197b8445a3fd3fb0d"
+  },
+  "admission_requirements": {
+    "receipt_output_files": 117,
+    "nested_pre_result_files": 121,
+    "completed_stages": 4,
+    "score_arms": 3,
+    "score_metrics_per_arm": 3,
+    "gpu_sample_interval_seconds": 1,
+    "host_sample_interval_seconds": 1,
+    "raw_telemetry_recomputed": true,
+    "execution_context_and_stage_records_bound": true,
+    "gpu_count_for_finalizer": 0,
+    "max_finalizer_wall_seconds": 900
+  },
+  "software_state": {
+    "last_executed_suite_passed": 228,
+    "last_executed_suite_failed": 0,
+    "authored_test_methods_observed": 245,
+    "new_admission_checks_authored": 12,
+    "checks_authored_after_last_suite": 17,
+    "tests_executed_by_web": 0
+  },
+  "scientific_state": {
+    "complete_unit_admitted": false,
+    "eligible_for_queue_pricing": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "next_executable_step": "Local pulls this revision, runs whole-suite software acceptance, source-inspects the generated CPU-only admission plan, executes its exact digest against the terminal complete-lowram-r7 records and returns the admission sidecar plus receipt."
+}

@@ -145,12 +145,20 @@ precision. No eight-hour queue may be generated from one-UID parity timing.
 The unit contract fixes UID
 `000-000_03b69da8d2c94b5999bcf2605ee2ecd9` before outcomes and defines a later
 complete boundary with native, world-Gaussian and body-Gaussian arms plus all
-three official score rows. The GPU complete-unit runner and single-GPU plan
-builder are now authored but unexecuted. The delivered plan must bind the entire
-successful output closure in its native receipt, not only `result.json`. It may
-be generated only after snapshot, dataset-semantic and unit-manifest admission;
-its actual timing/VRAM receipt, not its code or the old parity timing, is the
-first evidence eligible to price a later queue.
+three official score rows. The GPU complete-unit runner and single-GPU plan are
+authored. The default BF16 attempt is a retained Stage-I OOM; the separately
+versioned FP16 low-RAM repair completed its 16-frame generation after 792.54
+seconds and subsequently completed all three official rows in 1,330.47 seconds
+with a sampled 10,255 MiB peak. The delivered plan
+binds the entire successful output closure in its native receipt, not only
+`result.json`. Snapshot, dataset-semantic and unit-manifest admission have now
+returned successfully. Its timing/VRAM cannot
+price a queue until the CPU-only `prepare_complete_unit_admission.py` path
+verifies the prospective contract, canonical run records, exact 117 receipt
+outputs, exact 121 nested outputs (116 declared plus five retained evaluator
+caches), three score rows and resource telemetry. That
+admitted measurement—not code, live progress or old parity timing—is the first
+evidence eligible to price a later queue.
 
 ## Runtime supplement — 2026-10-06
 
