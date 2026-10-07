@@ -1,0 +1,110 @@
+{
+  "kind": "actionbench-current-release-unit-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T10:15:00Z",
+  "base_commit": "00b30fd3dfc75678839b6fe8dc1f6060a14b5a84",
+  "status": "reviewed_generated_unexecuted",
+  "scope": "Static source and contract review for freezing the deterministic input/output identity of a later current-public-release complete three-arm calibration unit. No tests, dataset bytes, models, inference, scorer or GPU workload were executed by Web.",
+  "workflow_instruction_source": {
+    "research_autopilot_package_available_in_authoring_runtime": false,
+    "fallback": "Followed the repository-pinned AGENTS.md, LOCAL_AGENT_RUNBOOK.md, WEB_HANDOFF.md, CURRENT.json, STEPWISE_PROGRESS.md and prior workflow checkpoints. Local execution still requires the complete installed research-autopilot harness.",
+    "effect": "No workload was executed or approved outside the retained repository workflow."
+  },
+  "reviewed_official_sources": [
+    {
+      "path": "actionmesh/repo/inference/video_to_animated_mesh.py",
+      "upstream_blob_sha1": "996963a7ac2ffbe373f2f62d742d880988e09345",
+      "finding": "The public CLI accepts an image directory, defaults to non-fast/non-low-RAM bfloat16 and seed 44, selects actionmesh.yaml, saves per-frame meshes and deformation arrays, and optionally emits Blender/render diagnostics. The published ActionBench row requires explicit generation seed 42."
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/io/video_input.py",
+      "upstream_blob_sha1": "e6bd99d120fb9b858d7a068a60fc05e406088129",
+      "finding": "A directory of the released 00.png through 15.png files is loaded in natural order as RGBA with sequential float32 timesteps; at least 16 frames are required."
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/io/mesh_io.py",
+      "upstream_blob_sha1": "54d8d9e2a155500b5a743166e060f4f031db63d4",
+      "finding": "The public output required by ActionBench is mesh_00.glb through mesh_15.glb. The same run also saves deformations_vertices.npy and deformations_faces.npy after checking shared topology."
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/configs/actionmesh.yaml",
+      "upstream_blob_sha1": "0bcf2cfda4b0680f6182f5961800a256f7ae210c",
+      "finding": "The non-fast public defaults are stage-0 100 steps, 40,000-face decimation, floaters threshold 0.02, stage-I 30 steps, guidance 7.5, anchor 0 and 16-frame temporal context."
+    },
+    {
+      "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+      "finding": "The official dataset CLI consumes per-UID mesh_*.glb, uses scorer seed 44, 100,000 Chamfer samples and 10,000 ICP samples, and writes per-sample CSV plus summary."
+    }
+  ],
+  "review_findings": [
+    {
+      "check": "selection_before_outcome",
+      "finding": "The calibration UID is the first UID in the already retained canonical lexicographically sorted 128-object population: 000-000_03b69da8d2c94b5999bcf2605ee2ecd9. It is fixed before current-release generation or scoring and is not selected from an observed result."
+    },
+    {
+      "check": "byte_and_revision_closure",
+      "finding": "The manifest pass requires successful immutable snapshot and full-population semantic admissions, rechecks the selected sample's 18 admitted files, rechecks the exact clean Git revision/tree, hashes the 13 required source files and carries the four model-snapshot manifest digests."
+    },
+    {
+      "check": "complete_multi_arm_boundary",
+      "finding": "The later timing boundary is prospective and includes model load/generation, native plus two sigma-1 simple controls, all three official score rows, integrity collection, per-stage timing and peak-VRAM telemetry. Existing one-UID parity or adapter timing cannot price it."
+    },
+    {
+      "check": "seed_separation",
+      "finding": "Generation seed 42 and official scorer sampling seed 44 remain distinct."
+    },
+    {
+      "check": "natural_failure",
+      "finding": "OOM, unsupported bfloat16, model/dependency, preprocessing, export, control, scorer and timeout failures must be retained. The contract forbids automatic low-RAM, float16, fast, UID, seed, revision, frame, point or arm changes."
+    },
+    {
+      "check": "claim_boundary",
+      "finding": "A successful CPU manifest is input/output binding only. A later successful one-UID complete unit prices that exact engineering unit only; neither is scorer qualification, the full-128 aggregate, candidate evidence or queue authorization."
+    }
+  ],
+  "authored_artifacts": {
+    "contract": {
+      "path": "docs/research-math-20261006/actionbench-current-release-unit-contract.json",
+      "sha256": "d07ec5322dc4cbfa8c193713e7a30b11907b79d83369976aa39f3e4fe547ea5a"
+    },
+    "module": {
+      "path": "actionmesh/research_math/actionbench_unit_manifest.py",
+      "sha256": "ff8b989ef66a0c0ee2e32234eb2a151772fba9924e0b973b7938940ee4f5950a"
+    },
+    "plan_builder": {
+      "path": "actionmesh/prepare_actionbench_unit_manifest.py",
+      "sha256": "458264979f0ad8ef342f927bac6fe08f48ac6b5329d3dc7adb3965dc3fae9a12"
+    },
+    "tests": {
+      "path": "actionmesh/research_math/tests/test_actionbench_unit_manifest.py",
+      "sha256": "82151d93977716e87d8cccf157a935ac6eb07718bb0c7a00ae65a96bcad2b867",
+      "new_test_methods_authored": 11,
+      "tests_executed_by_web": 0
+    }
+  },
+  "static_review": {
+    "python_files_ast_parsed": 3,
+    "json_files_parsed": 4,
+    "git_diff_check": "passed_at_review_time",
+    "research_math_test_methods_observed": 212,
+    "project_tests_executed_by_web": 0,
+    "dataset_bytes_loaded_by_web": 0,
+    "model_bytes_loaded_by_web": 0,
+    "official_scorer_invocations": 0,
+    "gpu_workloads": 0
+  },
+  "remaining_before_gpu_unit": [
+    "Local whole-suite acceptance at the delivered revision",
+    "retain the already passed one-UID engineering scorer parity/finalization evidence at 00b30fd without rerunning it unless its bound source/input closure changes",
+    "successful snapshot and dataset-semantics admissions",
+    "successful execution and promotion of this unit-manifest admission",
+    "fresh runtime/device/disk capture and source inspection of a still-unwritten complete-unit runner",
+    "harness-owned execution of the later complete unit with retained natural failure or full outputs"
+  ],
+  "execution_counters": {
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "queue_generated": false
+  }
+}

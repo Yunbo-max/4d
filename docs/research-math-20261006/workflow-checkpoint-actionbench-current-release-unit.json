@@ -1,0 +1,33 @@
+{
+  "kind": "research-autopilot-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T10:15:00Z",
+  "base_commit": "00b30fd3dfc75678839b6fe8dc1f6060a14b5a84",
+  "status": "generated_unexecuted_after_engineering_parity_finalized",
+  "decision": "Freeze a deterministic current-public-release complete three-arm calibration-unit identity after snapshot and dataset-semantic admission. Use the first canonical released UID; preserve default non-fast/non-low-RAM bfloat16 natural failure; keep generation seed 42 separate from scorer seed 44; do not author an eight-hour queue until the later full boundary is actually timed with peak VRAM.",
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-current-release-unit-contract.json",
+    "sha256": "d07ec5322dc4cbfa8c193713e7a30b11907b79d83369976aa39f3e4fe547ea5a"
+  },
+  "source_review_ref": {
+    "path": "docs/research-math-20261006/actionbench-current-release-unit-source-review.json",
+    "sha256": "26c282256ae1da1e46490f87c170bc284902f7663de24ac0a87f6a7bdcd65eff"
+  },
+  "manifest_target": "inputs/actionbench-full128-snapshots/unit-manifest.json",
+  "calibration_uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+  "generation_seed": 42,
+  "scorer_seed": 44,
+  "arms": [
+    "native",
+    "world_gaussian",
+    "body_gaussian"
+  ],
+  "complete_unit_runner_authored": false,
+  "unit_manifest_executed": false,
+  "complete_unit_executed": false,
+  "queue_generated": false,
+  "scientific_effect_qualification": false,
+  "candidate_validation_designs_complete": 0,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0
+}

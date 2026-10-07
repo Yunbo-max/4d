@@ -594,3 +594,47 @@ authorize model loading or scoring, cannot price a complete multi-arm unit, and
 does not change candidate designs/results/verdicts from **0/15**, **0/15**, and
 **0**. The 28,800-second queue remains blocked pending a complete current
 generation/export/scoring timing and peak-VRAM receipt.
+
+## Continuation: freeze the first complete-unit identity — 2026-10-07
+
+While this revision was being prepared, Local returned `00b30fd`: 201/201
+software checks, all nine one-UID three-arm official/faithful parity comparisons
+at exact zero difference under a versioned deterministic compatibility backend,
+and completed CPU finalization. Those observations establish engineering scorer
+equivalence only; they do not qualify the one-UID scores or any candidate. The
+next unresolved binding before a current-public-release resource attempt was the exact unit identity: a later
+runner must not choose a favorable object, reinterpret the official output
+inventory, omit simple controls, or switch to a memory-saving variant after
+seeing a failure. The official source closure confirms that the input is the 16
+released RGBA frames and the required prediction output is `mesh_00.glb` through
+`mesh_15.glb` plus the two deformation arrays.
+
+Added a prospective current-release unit contract and CPU-only manifest pass.
+The calibration object is fixed before outcomes as the first UID in the retained
+canonical sorted population,
+`000-000_03b69da8d2c94b5999bcf2605ee2ecd9`. After successful snapshot and
+dataset-semantic admissions, the pass revalidates that UID's exact 18 admitted
+files, the clean official Git revision/tree and 13 required source files, and
+binds the complete-manifest digests for all four model snapshots. It refuses an
+existing output instead of overwriting it.
+
+The later timing boundary is now explicit: non-fast, non-low-RAM `bfloat16`
+generation at seed 42; native, world-Gaussian and body-Gaussian arms; official
+scoring of all three at seed 44; integrity collection; and complete wall/peak-
+VRAM evidence. OOM, unsupported dtype, dependency/model, preprocessing, export,
+control, scorer and timeout failures are retained. Automatic low-RAM, float16,
+fast, UID, seed, revision, frame, point or arm changes are forbidden. Eleven
+focused checks were authored, including path-escape rejection. After reconciling
+the concurrent Local determinism update, the merged tree contains 212 statically
+observed `research_math` test methods; none of the 11 new checks has run yet.
+
+This closes only the manifest/specification layer. The current revision emits no
+GPU plan and the complete-unit runner is still unimplemented. Web parsed the new
+Python/JSON sources and ran `git diff --check`, but executed **0** project tests,
+dataset/model loads, inference units, scorer calls or GPU workloads. Local must
+run current software acceptance for the newly added checks, retain rather than
+repeat the finalized parity, then run the snapshot, semantic and unit-manifest
+admissions. A later reviewed runner must return the
+actual full three-arm unit time and peak VRAM before any 28,800-second queue can
+reserve 1,800 seconds for collection. Candidate designs/results/verdicts remain
+**0/15**, **0/15**, and **0**.

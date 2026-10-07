@@ -4,14 +4,17 @@
 
 This runbook is the Local Codex entry point for round `20261006-baseline-qualification`. It covers acceptance of the committed control/scoring software, recovery and verification of one original development asset, construction of the three-arm baseline unit, native-scoring replay, integrity validation, and evidence return.
 
-Latest accepted setup evidence is
-`rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md`.
-It records 127/127 software checks, a captured native runtime, restored original
-development asset, and completed native/world-Gaussian/body-Gaussian prediction
-arms plus a validated scoring request. **No official score or GPU scorer replay
-ran.** Do not repeat accepted setup merely because older sections below describe
-its original execution order; first validate the returned hashes against the
-current checkout and continue from the first open prerequisite.
+Latest execution evidence is
+`docs/research-math-20261006/longgoal-20261007/README.md`. It records 201/201
+software checks at the returned revision, exact-zero official/faithful parity
+for all nine one-UID/three-arm metric comparisons under the explicit GPU-forward
+plus upstream CPU-backward compatibility policy, and successful CPU
+finalization. This is engineering scorer-equivalence evidence only: no native
+scientific contract was qualified and no candidate ran. This revision adds new
+unit-manifest checks, so rerun current-revision software acceptance, but do not
+repeat the already finalized parity unless one of its bound source/input hashes
+has changed. Continue from snapshot/data staging after verifying the retained
+evidence hashes.
 
 There are 20 mathematical constructions and 15 conditionally selected candidates,
 but **0/15 candidate implementations have a complete validation design and 0/15
@@ -32,6 +35,7 @@ Read these files at the delivered commit before acting:
 - `docs/research-math-20261006/actionbench-qualification-source-audit.json`
 - `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
 - `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
+- `docs/research-math-20261006/actionbench-current-release-unit-contract.json`
 - `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 ## Roles and unresolved host facts
@@ -111,6 +115,10 @@ The generated native plan must list `actionmesh/finalize_actionbench_parity.py`
 in `code_refs`; the parity rejection tests import that controller finalizer. If
 it is absent, reject the plan rather than treating an earlier 127-test run as
 acceptance of the current revision.
+The returned 201/201 suite predates the unit-manifest checks added here. Run the
+current suite once; this does not invalidate or require repetition of the
+separately finalized scorer parity because this change does not modify its bound
+implementation or inputs.
 
 ### 3a. Capture the actual installed native environment
 
@@ -428,12 +436,54 @@ occupancy threshold was invented. Report its actual wall time, per-UID semantic
 digest and any failing UID/path. It remains zero-GPU, zero-score and cannot
 authorize generation, a scientific protocol or queue sizing.
 
-After the current one-UID engineering parity/finalization chain, inventory these
-full-population prerequisites without launching generation or scoring. Return
+After promoting both admissions, freeze the exact first calibration unit before
+any current-release inference. This separate CPU pass prospectively selects the
+first canonical released UID, revalidates its 18 admitted files, rechecks the
+official clean Git revision/tree, hashes the required generation/scorer source
+closure, and binds all four admitted model-manifest digests:
+
+```bash
+unit_manifest_run_id=actionbench-current-release-unit-manifest-001
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_unit_manifest.py" \
+  --root "$project_dir" \
+  --skill-dir "$skill_dir" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-current-release-unit-contract.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --snapshot-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --source-root "$actionmesh_source" \
+  --dataset-root "$project_dir/inputs/actionbench-2796071c" \
+  --run-id "$unit_manifest_run_id" \
+  --wall-seconds 900 \
+  --ram-mib 1024 \
+  --cpu-cores 1 \
+  --plan-dir "$project_dir/plans/$unit_manifest_run_id"
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$unit_manifest_run_id/harness.json" \
+  --root "$project_dir" \
+  --execute \
+  --approved-plan-digest "$approved_plan_digest"
+```
+
+Promote only the receipt-bound output to
+`inputs/actionbench-full128-snapshots/unit-manifest.json`. Its UID must be
+`000-000_03b69da8d2c94b5999bcf2605ee2ecd9`; generation remains seed 42 and
+scoring remains seed 44. The manifest freezes a later boundary containing
+non-fast/non-low-RAM bfloat16 generation, native/world-Gaussian/body-Gaussian
+arms, all three official score rows, integrity collection, wall time and peak
+VRAM. It emits no GPU plan. OOM or unsupported bfloat16 must be preserved; do
+not silently enable low-RAM, float16 or fast mode. The complete-unit runner is
+still unimplemented and requires a later reviewed commit before GPU dispatch.
+
+The one-UID engineering parity/finalization chain is now complete and retained at
+`00b30fd`; do not rerun it merely because the downstream manifest is new.
+Inventory these full-population prerequisites without launching generation or scoring. Return
 their exact paths/revisions/hashes, snapshot and semantic admissions, and measured
-storage/semantic-pass requirements. Generation still requires a later reviewed
-current-release unit design; only a complete generation/export/scoring receipt can
-price the eight-hour queue. One-UID parity timing or a CPU semantic pass cannot.
+storage/semantic-pass requirements plus the unit manifest. Generation still
+requires a later reviewed complete-unit runner; only its full
+generation/three-arm export/scoring receipt can price the eight-hour queue.
+One-UID parity timing or any CPU admission timing cannot.
 
 ### 7. Native replay and strict output binding
 
