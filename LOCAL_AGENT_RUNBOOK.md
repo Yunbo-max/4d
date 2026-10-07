@@ -2,6 +2,16 @@
 
 ## Scope and current truth
 
+### Current source delivery — paired replay and supervisor
+
+Read [the native-context/supervisor handoff](rounds/20261008-native-context/WEB_HANDOFF.md)
+first for this revision. GPU STOP is still effective. New source is
+`generated_unexecuted`; Web ran no project tests, generation, scoring or GPU work.
+This adds an independent paired official-generation instrument, complete decoder
+replay and finite campaign supervision. The capture-only unit below is retained
+with its own archive and receipt format. The supervisor delegates to the existing
+harness and has not been installed or started. No candidate is promoted.
+
 ### Latest source handoff — decoder capture
 
 The latest implementation entry is
@@ -347,6 +357,9 @@ metrics to make it fit. After provenance staging, measure one complete non-fast,
 seed-42, 16-frame generation/export/scoring unit and its peak VRAM. Only that
 current complete-unit receipt can price a later 28,800-second plan with the
 1,800-second collection reserve.
+
+<a id="download-datasets-and-models"></a>
+### Download datasets and models
 
 After confirming disk capacity and before inference, pin the current public Hub
 snapshots rather than allowing the upstream entrypoint to resolve moving `main`:

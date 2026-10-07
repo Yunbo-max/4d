@@ -44,6 +44,18 @@ class ControlPlanTest(unittest.TestCase):
                 'actionmesh/prepare_actionbench_active_batch_reconciliation.py'):
             self.assertIn(path, paths)
 
+    def test_acceptance_stages_native_context_and_external_supervisor(self):
+        """An isolated acceptance workspace must include the out-of-package CLI."""
+        project_root = Path(__file__).resolve().parents[3]
+        paths = {path.relative_to(project_root).as_posix()
+                 for path in acceptance.acceptance_sources(project_root)}
+        for path in (
+                'scripts/research_supervisor.py',
+                'actionmesh/research_math/native_context_runner.py',
+                'actionmesh/research_math/pipeline_decoder_observer.py',
+                'actionmesh/research_math/tests/test_research_supervisor.py'):
+            self.assertIn(path, paths)
+
     def project(self, root):
         code = root/'actionmesh/research_math'; code.mkdir(parents=True)
         (code/'__init__.py').write_text('')

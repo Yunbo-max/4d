@@ -52,7 +52,8 @@ class PipelineDecoderCapture:
         self.active = False
 
     def __enter__(self):
-        if self.active or hasattr(self.pipeline, '_research_decoder_capture'):
+        if (self.active or hasattr(self.pipeline, '_research_decoder_capture')
+                or getattr(self.pipeline, '_research_observer_active', False)):
             raise ValueError('Pipeline observer already attached')
         self.original = self.pipeline._decode_displacement
         self.signature = inspect.signature(self.original)

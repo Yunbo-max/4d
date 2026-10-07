@@ -183,6 +183,21 @@ class PipelineDecoderCaptureTests(unittest.TestCase):
             self.assertFalse((Path(tmp)/'second').exists())
             self.assertNotIn('_decode_displacement', vars(pipeline))
 
+    def test_active_pipeline_observer_is_rejected_without_side_effects(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            pipeline = FixturePipeline()
+            original = pipeline._decode_displacement
+            pipeline._decode_displacement = original
+            pipeline._research_observer_active = True
+            root = Path(tmp)/'capture'
+            with self.assertRaisesRegex(ValueError, 'already attached'):
+                with PipelineDecoderCapture(pipeline, root, {}):
+                    self.fail('Another active observer must prevent attachment')
+            self.assertIs(pipeline._decode_displacement, original)
+            self.assertIs(pipeline._research_observer_active, True)
+            self.assertNotIn('_research_decoder_capture', vars(pipeline))
+            self.assertFalse(root.exists())
+
     def test_window_limit_preserves_first_capture_and_restores_prior_override(self):
         with tempfile.TemporaryDirectory() as tmp:
             pipeline = FixturePipeline()

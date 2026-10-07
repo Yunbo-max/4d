@@ -4,6 +4,14 @@ These rules apply to the entire repository. The Web research agent authors and r
 
 ## Read first
 
+Current authoring handoff: `rounds/20261008-native-context/WEB_HANDOFF.md`.
+GPU STOP remains in force. This source delivery does not authorize any new GPU
+run, enable an existing campaign, or install a running supervisor. Read the
+[asset acquisition section](LOCAL_AGENT_RUNBOOK.md#download-datasets-and-models)
+and the new handoff before accepting the changed software. Keep source authored,
+Local software acceptance, native instrumentation replay and scientific method
+evidence as separate states.
+
 Before setup, acceptance, execution, repair, collection, or delivery, read at the exact delivered commit:
 
 1. `LOCAL_AGENT_RUNBOOK.md`

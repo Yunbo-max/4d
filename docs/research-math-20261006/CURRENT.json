@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T23:07:36Z",
+  "recorded_at": "2026-10-07T23:24:50Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "The Full128 runtime historical-pricing root propagation repair is present in source. R3 green-r2 raw archive has 21 rehashed manifest payloads and a retained 311-test OK log, but one of its 72 source refs already differs at base 1da40c7; current-source acceptance is pending. New opt-in complete-unit --capture-decoder source connects official generation to full decoder/window capture and a 119-output three-arm unit, generated_unexecuted. GPU execution remains stopped. UID008 raw bundle/repeat/trusted replay and native qualification remain pending. Candidate complete designs/results remain 0/15 and formal outcomes 0.",
+  "status": "The Full128 historical-pricing root repair and concurrent capture-only unit remain present. New source adds independently paired official generation, complete native-context replay and a finite campaign supervisor; all newly changed software is generated_unexecuted. The supervisor is not installed or running. Current-source Local acceptance and an independently frozen paired-instrument budget remain pending. GPU execution remains stopped. Historical 311-test acceptance does not cover this revision. UID008 raw bundle/repeat/trusted replay and candidate scientific prerequisites remain pending; candidate complete designs/results remain 0/15 and formal outcomes 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -934,7 +934,7 @@
     "dispatch_ready": false,
     "candidate_native_results": 0
   },
-  "historical_sections_notice": "Earlier timestamped handoff/review entries retain historical statuses and hashes. Use native_decoder_capture_handoff and its checkpoint for the latest source/acceptance state; no prior receipt accepts newly changed code.",
+  "historical_sections_notice": "Earlier timestamped handoffs retain historical statuses and hashes. Use native_context_supervisor_handoff for the latest source delivery; native_decoder_capture_handoff remains the separate capture-only interface. No prior receipt accepts newly changed code.",
   "native_decoder_capture_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-07T23:07:36Z",
@@ -962,5 +962,54 @@
     "candidate_designs_verified": 0,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
+  },
+  "native_context_supervisor_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-07T23:24:50Z",
+    "authoring_base_commit": "1da40c748a71f9687bd2c5958ee6705671632d10",
+    "integration_base_commit": "1bc3c973e0c6f23c94a32be7d30a06de4a812cd8",
+    "entry_ref": {
+      "path": "rounds/20261008-native-context/WEB_HANDOFF.md",
+      "sha256": "5c42b42877376891a371a629b68b95c0bf803213b84cdb3bf8f23f7a218c2232"
+    },
+    "supervisor_entry_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
+      "sha256": "e0c02dd46a4f58c5938e617da60b121a4ef0bdd3f1d8740b81db61907aca2139"
+    },
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/decoder_observer.py",
+        "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"
+      },
+      {
+        "path": "actionmesh/research_math/pipeline_decoder_observer.py",
+        "sha256": "a63c1ed6bb76f5b997b80a8a0383a850eeecc51b04f206a0d421f63a0eca7ecd"
+      },
+      {
+        "path": "actionmesh/research_math/native_context_runner.py",
+        "sha256": "6e582b10a2a0def86b49056043850440a7a5a80be964501c83176f64675a8d86"
+      },
+      {
+        "path": "scripts/research_supervisor.py",
+        "sha256": "6c5273f1c36b13aabf8420fb214c7fe19142f8cba780cc69cec31fa8daf3884b"
+      },
+      {
+        "path": "actionmesh/prepare_control_scoring_checks.py",
+        "sha256": "d377a7799f3467351ad06e20748f5581f3823436b7cf8a400e8f8d0bee59e966"
+      }
+    ],
+    "source_review_complete": true,
+    "local_software_acceptance_complete": false,
+    "project_tests_executed_by_web": false,
+    "native_instrument_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "supervisor_installed": false,
+    "supervisor_running": false,
+    "native_context_qualified": false,
+    "replay_qualified": false,
+    "dispatch_ready": false,
+    "candidate_methods_completed": 0,
+    "candidate_native_results": 0,
+    "next_step": "Local CPU harness acceptance of this exact merged source; preserve all failures. Separately freeze paired instrument budget/tolerances/assets/output closure only after applicable authorization and gates."
   }
 }

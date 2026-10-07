@@ -33,6 +33,7 @@ def acceptance_sources(root: Path) -> list[Path]:
     root = Path(root).resolve()
     files = sorted((root/'actionmesh/research_math').rglob('*.py'))
     files += [root/'actionmesh'/name for name in ROOT_SOURCES]
+    files.append(root/'scripts/research_supervisor.py')
     missing = [path for path in files if not path.is_file()]
     if missing:
         raise FileNotFoundError('Missing acceptance source: '+str(missing[0]))
@@ -53,9 +54,10 @@ def main():
     from research_math.control_scoring import file_ref
     files = acceptance_sources(root)
     refs = [file_ref(root, path) for path in files]
-    # Test_control_plan imports the installed harness modules. Carry their actual
-    # directory to the child rather than relying on an inherited PYTHONPATH.
-    program = ('import sys,unittest;sys.path.insert(0,'+repr(str(scripts))+');'
+    # Bind both harness imports and supervisor acceptance to the selected full
+    # installed skill; do not inherit an unrelated skill path from the shell.
+    program = ('import os,sys,unittest;sys.path.insert(0,'+repr(str(scripts))+');'
+        'os.environ["RESEARCH_AUTOPILOT_SKILL_DIR"]='+repr(str(args.skill_dir.resolve()))+';'
         'suite=unittest.defaultTestLoader.discover("research_math/tests",pattern="test_*.py");'
         'result=unittest.TextTestRunner(verbosity=2).run(suite);raise SystemExit(not result.wasSuccessful())')
     command = [sys.executable, '-c', program]

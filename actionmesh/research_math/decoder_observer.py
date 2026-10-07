@@ -45,6 +45,8 @@ class DecoderObserver:
     Hooks return None and never change the model, RNG, autocast or precision.
     Tensor copies synchronize devices and add overhead, which must be measured
     in the later admission experiment. One root and one directory per call.
+    max_bytes bounds each call's persisted tensor payload: both input copies
+    and the output. Safetensors headers and JSON metadata are excluded.
     """
     def __init__(self,model,root:Path,identity:dict,*,max_bytes=64*1024*1024):
         if not isinstance(max_bytes,int) or max_bytes<1:
@@ -79,6 +81,7 @@ class DecoderObserver:
                 'identity_sha256':sha256(self.root/'identity.json'),
                 'prediction_mode':getattr(module,'prediction_mode',None),
                 'training':bool(module.training),'inference_mode':torch.is_inference_mode_enabled(),
+                'grad_enabled':torch.is_grad_enabled(),
                 'cuda_autocast_enabled':cuda_autocast_enabled,
                 'cuda_autocast_dtype':str(cuda_autocast_dtype),
                 'cpu_autocast_enabled':cpu_autocast_enabled,
@@ -86,7 +89,9 @@ class DecoderObserver:
                 'input_devices':{k:str(v.device) for k,v in values.items()},
                 'step_callback_present':bound.arguments.get('step_callback') is not None,
                 'inputs_sha256':sha256(path/'inputs.safetensors'),
-                'tensors':tensor_inventory(tensors),'max_bytes':self.max_bytes}
+                'tensors':tensor_inventory(tensors),'max_bytes':self.max_bytes,
+                'byte_bound_scope':'persisted_tensor_payload_excludes_headers',
+                'payload_bytes':size}
         write_record(path/'record.json',record)
         self.pending=(path,tensors,record,size)
         # No replacement args or kwargs: the model receives the original objects.
@@ -102,21 +107,30 @@ class DecoderObserver:
         if not isinstance(output,torch.Tensor):
             record['status']='unsupported_output';write_record(path/'record.json',record)
             raise ValueError('Native decoder tensor output required')
-        if size+output.numel()*output.element_size()>self.max_bytes:
+        # inputs.safetensors remains on disk when tensors.safetensors is saved.
+        persisted_size=2*size+output.numel()*output.element_size()
+        if persisted_size>self.max_bytes:
             record['status']='output_byte_bound_exceeded';write_record(path/'record.json',record)
             raise ValueError('Decoder output capture exceeds byte bound')
         tensors['output']=output.detach().to(device='cpu',copy=True).contiguous()
         save_file(tensors,str(path/'tensors.safetensors'))
         record.update(status='captured_unqualified',tensors=tensor_inventory(tensors),
-                      tensors_sha256=sha256(path/'tensors.safetensors'))
+                      tensors_sha256=sha256(path/'tensors.safetensors'),
+                      payload_bytes=persisted_size)
         write_record(path/'record.json',record)
         # No replacement output: the caller receives the original object.
 
     def __enter__(self):
         if self.handles:raise ValueError('Observer already attached')
         if self.model.training:raise ValueError('Only an eval-mode native decoder may be observed')
-        self.handles=[self.model.register_forward_pre_hook(self._before,with_kwargs=True),
-                      self.model.register_forward_hook(self._after,with_kwargs=True,always_call=True)]
+        try:
+            self.handles.append(self.model.register_forward_pre_hook(self._before,with_kwargs=True))
+            self.handles.append(self.model.register_forward_hook(self._after,with_kwargs=True,always_call=True))
+        except BaseException:
+            # __exit__ is not called when __enter__ fails after the first hook.
+            for handle in self.handles:handle.remove()
+            self.handles=[]
+            raise
         return self
 
     def __exit__(self,typ,error,tb):

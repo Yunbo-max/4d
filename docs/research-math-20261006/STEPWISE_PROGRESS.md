@@ -1166,3 +1166,11 @@ equivalence and full-context replay still require actual Local execution. GPU
 stop remains in force. Next executable step: the documented CPU harness
 acceptance; then eligible plan-only preparation and evidence restoration.
 Candidate complete designs/results remain 0/15 and formal outcomes remain 0.
+
+## Continuation: native replay and finite supervisor source — 2026-10-07T23:24:50Z
+
+Preserved the concurrent `1bc3c97` capture-only unit and added a separate paired official-generation instrument, complete original decoder-context replay and guarded source-time query. The new observer retains exact native frame mapping, gradient/autocast modes, original argument/output identity and full geometry. Persisted payload accounting includes both decoder input copies; partial hook registration rolls back. Both pipeline wrappers reject simultaneous attachment.
+
+Added a finite campaign controller around the installed `run_harness.py`: pinned dependencies, verified terminal receipts, bounded preapproved repair children, same-task recovery, an unchanged overall deadline, driver-lock waiting and STOP handoff. It is source only, not an installed or running supervisor. CPU acceptance stages both capture entries, new replay modules, supervisor and test sources with the selected installed skill path.
+
+Source review, AST/JSON parsing and whitespace checks are distinct from runtime acceptance. No project test, builder, model, scorer, supervisor campaign or GPU task was executed by this authoring round. All new source remains `generated_unexecuted`. The paired instrument needs its own budget and output closure; old calibration pricing is not reused. The 15 candidate implementations/full designs are not complete, and no scientific gate or native result advances. See `rounds/20261008-native-context/WEB_HANDOFF.md` for the concrete next Local acceptance step.

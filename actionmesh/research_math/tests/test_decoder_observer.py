@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import torch
 
 class Decoder(torch.nn.Module):
@@ -53,6 +54,57 @@ class DecoderObserverTests(unittest.TestCase):
             with DecoderObserver(model,Path(d)/'capture',{},max_bytes=1):
                 with self.assertRaises(ValueError):model(**self.inputs(),step_callback=lambda *x:called.append(x))
             self.assertEqual(called,[])
+
+    def test_partial_hook_registration_is_rolled_back(self):
+        from research_math.decoder_observer import DecoderObserver
+        model=Decoder().eval()
+        with tempfile.TemporaryDirectory() as d:
+            observer=DecoderObserver(model,Path(d)/'capture',{})
+            with patch.object(model,'register_forward_hook',
+                              side_effect=RuntimeError('hook registration failed')):
+                with self.assertRaisesRegex(RuntimeError,'hook registration failed'):
+                    with observer:self.fail('Partially attached observer entered')
+            self.assertEqual(len(model._forward_pre_hooks),0)
+            self.assertEqual(len(model._forward_hooks),0)
+            self.assertEqual(observer.handles,[])
+            model(**self.inputs())
+            self.assertEqual(observer.calls,0)
+            self.assertFalse((Path(d)/'capture/call-0000').exists())
+
+    def test_persisted_payload_limit_counts_both_input_files(self):
+        from research_math.decoder_observer import DecoderObserver
+        # Inputs: 96 + 8 + 4 + 4 + 120 = 232 bytes; output: 60 bytes.
+        # Persisted payload is 232 + (232 + 60) = 524 bytes, not 292.
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)/'capture';model=Decoder().eval()
+            with DecoderObserver(model,root,{},max_bytes=523):
+                with self.assertRaisesRegex(ValueError,'byte bound'):
+                    model(**self.inputs())
+            call=root/'call-0000'
+            self.assertTrue((call/'inputs.safetensors').exists())
+            self.assertFalse((call/'tensors.safetensors').exists())
+            record=json.loads((call/'record.json').read_text())
+            self.assertEqual(record['status'],'output_byte_bound_exceeded')
+            self.assertEqual(record['payload_bytes'],232)
+            self.assertEqual(len(model._forward_pre_hooks),0)
+            self.assertEqual(len(model._forward_hooks),0)
+
+    def test_exact_persisted_payload_limit_accepts_complete_capture(self):
+        from research_math.decoder_observer import DecoderObserver,load_capture
+        from safetensors.torch import load_file
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)/'capture';model=Decoder().eval()
+            with DecoderObserver(model,root,{},max_bytes=524):
+                model(**self.inputs())
+            call=root/'call-0000'
+            _,record=load_capture(call)
+            persisted=sum(value.numel()*value.element_size()
+                          for name in ('inputs.safetensors','tensors.safetensors')
+                          for value in load_file(str(call/name)).values())
+            self.assertEqual(persisted,524)
+            self.assertEqual(record['payload_bytes'],persisted)
+            self.assertEqual(record['byte_bound_scope'],
+                             'persisted_tensor_payload_excludes_headers')
 
     def test_forward_failure_keeps_inputs_and_detaches_hooks(self):
         from research_math.decoder_observer import DecoderObserver
