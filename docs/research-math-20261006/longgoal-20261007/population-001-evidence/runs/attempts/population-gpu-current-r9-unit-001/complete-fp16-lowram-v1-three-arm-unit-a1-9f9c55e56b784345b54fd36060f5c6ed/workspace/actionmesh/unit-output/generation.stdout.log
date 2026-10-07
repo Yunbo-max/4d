@@ -1,0 +1,3 @@
+final grids shape =  torch.Size([505, 505, 505])
+Loading weights from local directory
+Loading weights from local directory

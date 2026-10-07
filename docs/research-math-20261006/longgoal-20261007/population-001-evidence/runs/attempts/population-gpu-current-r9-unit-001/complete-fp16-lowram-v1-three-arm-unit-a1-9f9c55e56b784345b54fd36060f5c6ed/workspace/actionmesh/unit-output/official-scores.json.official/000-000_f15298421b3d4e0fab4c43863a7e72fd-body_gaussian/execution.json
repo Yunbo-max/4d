@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/deterministic_actionbench_entry.py",
+    "--official-script",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/official-source/evaluate_dataset.py",
+    "--gt_root",
+    "/root/actionmesh-research-staging/actionbench-full128-direct/data",
+    "--pred_root",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/predictions",
+    "--output_csv",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/official.csv",
+    "--device",
+    "cuda:0",
+    "--n_pts_icp",
+    "10000",
+    "--n_pts_chamfer",
+    "100000",
+    "--seed",
+    "44",
+    "--mesh_pattern",
+    "mesh_*.glb",
+    "--recompute"
+  ],
+  "cwd": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/official-source",
+  "exit_code": 0,
+  "stdout_sha256": "a582c60975c06a21da0ef1cc5840233009ce8a6188f0352a1ad6df6f67dd3819",
+  "stderr_sha256": "2a9e603b21f5ca481c16bacc751b95ce227109b6b0b6866a21fcf23e8843c323"
+}

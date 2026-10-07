@@ -1,0 +1,16 @@
+{
+  "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+  "seed": 42,
+  "baseline_arm": "native",
+  "sigma_frames": 1.0,
+  "source_sequence_sha256": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928",
+  "source_report_sha256": "d9324223de97220c2fe3c41c8b596c56d3c89b308aaae1ed846ea410ce09ddbf",
+  "implementation_sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6",
+  "native_qualified": false,
+  "information": "Full predicted mesh sequence only; no GT, scorer ICP, labels, cameras, or learned weights",
+  "sha256": {
+    "sequence.npz": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928"
+  },
+  "status": "completed",
+  "elapsed_seconds": 0.011424113996326923
+}

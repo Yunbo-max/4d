@@ -1,0 +1,61 @@
+{
+  "status": "completed",
+  "recorded_at": "2026-10-07T15:44:54.261223+00:00",
+  "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+  "seed": 42,
+  "arms": [
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "seed": 42,
+      "baseline_arm": "native",
+      "sigma_frames": 1.0,
+      "source_sequence_sha256": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928",
+      "source_report_sha256": "d9324223de97220c2fe3c41c8b596c56d3c89b308aaae1ed846ea410ce09ddbf",
+      "implementation_sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6",
+      "native_qualified": false,
+      "information": "Full predicted mesh sequence only; no GT, scorer ICP, labels, cameras, or learned weights",
+      "sha256": {
+        "sequence.npz": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928"
+      },
+      "status": "completed",
+      "elapsed_seconds": 0.011424113996326923
+    },
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "seed": 42,
+      "baseline_arm": "world_gaussian",
+      "sigma_frames": 1.0,
+      "source_sequence_sha256": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928",
+      "source_report_sha256": "d9324223de97220c2fe3c41c8b596c56d3c89b308aaae1ed846ea410ce09ddbf",
+      "implementation_sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6",
+      "native_qualified": false,
+      "information": "Full predicted mesh sequence only; no GT, scorer ICP, labels, cameras, or learned weights",
+      "sha256": {
+        "sequence.npz": "2bb8f9482f03b8d74a47267ffec5176df24800b58a910c8fcabc639232810f59"
+      },
+      "status": "completed",
+      "elapsed_seconds": 0.30625129071995616
+    },
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "seed": 42,
+      "baseline_arm": "body_gaussian",
+      "sigma_frames": 1.0,
+      "source_sequence_sha256": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928",
+      "source_report_sha256": "d9324223de97220c2fe3c41c8b596c56d3c89b308aaae1ed846ea410ce09ddbf",
+      "implementation_sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6",
+      "native_qualified": false,
+      "information": "Full predicted mesh sequence only; no GT, scorer ICP, labels, cameras, or learned weights",
+      "sha256": {
+        "poses.npz": "a6dfd84232f8916c9d475b4192b9b5af26bee621b41c30126b79e6b9f885d325",
+        "sequence.npz": "4e910b6d885b8a668a0f4394c8ee814fdfcbbdc30a41fb5d5b07f83d769acd5c"
+      },
+      "status": "completed",
+      "elapsed_seconds": 0.4211100973188877
+    }
+  ],
+  "native_qualified": false,
+  "candidate_methods_tested": false,
+  "elapsed_seconds": 0.7747075692750514,
+  "timing_scope": "Adapter I/O + mesh repair only; excludes generation, scorer and collection; NOT full multi-arm cost"
+}

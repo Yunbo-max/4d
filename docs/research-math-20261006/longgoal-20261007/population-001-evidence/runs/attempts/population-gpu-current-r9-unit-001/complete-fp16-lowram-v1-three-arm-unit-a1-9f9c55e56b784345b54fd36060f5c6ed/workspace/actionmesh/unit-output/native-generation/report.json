@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+  "seed": 42,
+  "frames": 16,
+  "coordinate_conversion": "inverse official (-z,x,y) export; exact GLB equality",
+  "sha256": {
+    "mesh_01.glb": "259117644a48d7673fef60987e7e91f35fe7c4b3bc0cecd581e1da42bedde111",
+    "mesh_03.glb": "8121ec75db94e6a3985c848c44176d3655159b11627a41fa6353a14df9ac8835",
+    "mesh_14.glb": "842c2154ef8cab48709a583293374aaaecf56c1f8faa65472056e855a717cda7",
+    "mesh_07.glb": "39296a18232642059a0f3410e1cd1160b02a62fbcaa8da08c690c965eb783d5f",
+    "sequence.npz": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928",
+    "mesh_06.glb": "3b4dc71c240c54052fbfa00fbd6e91e766e2dbf60d0fcaf489992c4e5861f39f",
+    "deformations_faces.npy": "b8a8aa5d3758a6a5fa81af0bd15ae76eabaec06739847eb5ced08c2c930d9949",
+    "mesh_10.glb": "c964c695f6550c22690e516b5770d6d1b255f7842d7ee1a2503d1c9ebac5a19a",
+    "mesh_05.glb": "f763415b3e4fe88966c5c14e94c3af062fbfe96a2bc206eeacd9b3f6f3891c1e",
+    "mesh_00.glb": "e993ad7e23261aa08a817707781aad8d325fbc65bb68ab4bccd34eefd122ba10",
+    "mesh_13.glb": "5c359cf38c3e27d9ce418fc7838102d26488d0089682537235aeb06c77ff4b6e",
+    "mesh_15.glb": "efdb631f9deceb4ccff50edd92011029228829d7697739c1f4d9c2ad5f20b3d8",
+    "mesh_11.glb": "bb196cfbd3380315faf9d10af23582f4a3cbc3d66f51a38ea809365889bb02b4",
+    "grid_normal.mp4": "1e8565d3eb4851e880ed52e8902edc8500062b361b4e8076810a439bbf563a3b",
+    "deformations_vertices.npy": "8df9f6e8dbf6fd4031054877f5c48cc97a3a497e40073246af3c1f493fa741c9",
+    "mesh_04.glb": "2d74f0db4230e11cf98aea5fdef10e1b83ea328e9b5b6813f6595c4421b456d6",
+    "mesh_08.glb": "33093ea7392fce992040221f9ce3696db2f2306a312ae8281d06f06b1c3f3dd7",
+    "mesh_09.glb": "52b5d4d4e84c9582a0f49666772a25545b26b313402c820822cdfa19039f2d2f",
+    "mesh_02.glb": "2d9fd0a9bae81d612bf10df24ab78a4fdfd254dfde525744b18a00be699180ea",
+    "mesh_12.glb": "49ee1421bdaa60cb5e6b4051b2d4e3ef463bc5bc1f3c78ad16f6430553d03fae"
+  },
+  "scientific_effect_qualification": false
+}

@@ -1,0 +1,108 @@
+{
+  "source_sequence": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/native/sequence.npz",
+  "source_sequence_sha256": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928",
+  "vertices_dtype": "float32",
+  "faces_dtype": "int32",
+  "n_frames": 16,
+  "n_vertices": 19994,
+  "n_faces": 39984,
+  "files": [
+    {
+      "frame_index": 0,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00000.glb",
+      "sha256": "d1d49832894d243a4c97865628c65a98969a11502de77a4ee4b11b17bdb1b3a6",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 1,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00001.glb",
+      "sha256": "259117644a48d7673fef60987e7e91f35fe7c4b3bc0cecd581e1da42bedde111",
+      "bytes": 720500
+    },
+    {
+      "frame_index": 2,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00002.glb",
+      "sha256": "2d9fd0a9bae81d612bf10df24ab78a4fdfd254dfde525744b18a00be699180ea",
+      "bytes": 720500
+    },
+    {
+      "frame_index": 3,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00003.glb",
+      "sha256": "8121ec75db94e6a3985c848c44176d3655159b11627a41fa6353a14df9ac8835",
+      "bytes": 720496
+    },
+    {
+      "frame_index": 4,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00004.glb",
+      "sha256": "2d74f0db4230e11cf98aea5fdef10e1b83ea328e9b5b6813f6595c4421b456d6",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 5,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00005.glb",
+      "sha256": "f763415b3e4fe88966c5c14e94c3af062fbfe96a2bc206eeacd9b3f6f3891c1e",
+      "bytes": 720500
+    },
+    {
+      "frame_index": 6,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00006.glb",
+      "sha256": "3b4dc71c240c54052fbfa00fbd6e91e766e2dbf60d0fcaf489992c4e5861f39f",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 7,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00007.glb",
+      "sha256": "39296a18232642059a0f3410e1cd1160b02a62fbcaa8da08c690c965eb783d5f",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 8,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00008.glb",
+      "sha256": "33093ea7392fce992040221f9ce3696db2f2306a312ae8281d06f06b1c3f3dd7",
+      "bytes": 720500
+    },
+    {
+      "frame_index": 9,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00009.glb",
+      "sha256": "52b5d4d4e84c9582a0f49666772a25545b26b313402c820822cdfa19039f2d2f",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 10,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00010.glb",
+      "sha256": "c964c695f6550c22690e516b5770d6d1b255f7842d7ee1a2503d1c9ebac5a19a",
+      "bytes": 720500
+    },
+    {
+      "frame_index": 11,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00011.glb",
+      "sha256": "bb196cfbd3380315faf9d10af23582f4a3cbc3d66f51a38ea809365889bb02b4",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 12,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00012.glb",
+      "sha256": "49ee1421bdaa60cb5e6b4051b2d4e3ef463bc5bc1f3c78ad16f6430553d03fae",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 13,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00013.glb",
+      "sha256": "5c359cf38c3e27d9ce418fc7838102d26488d0089682537235aeb06c77ff4b6e",
+      "bytes": 720500
+    },
+    {
+      "frame_index": 14,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00014.glb",
+      "sha256": "842c2154ef8cab48709a583293374aaaecf56c1f8faa65472056e855a717cda7",
+      "bytes": 720504
+    },
+    {
+      "frame_index": 15,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/predictions/000-000_f15298421b3d4e0fab4c43863a7e72fd/mesh_00015.glb",
+      "sha256": "efdb631f9deceb4ccff50edd92011029228829d7697739c1f4d9c2ad5f20b3d8",
+      "bytes": 720504
+    }
+  ],
+  "round_trip": "exact vertices and faces for every frame"
+}

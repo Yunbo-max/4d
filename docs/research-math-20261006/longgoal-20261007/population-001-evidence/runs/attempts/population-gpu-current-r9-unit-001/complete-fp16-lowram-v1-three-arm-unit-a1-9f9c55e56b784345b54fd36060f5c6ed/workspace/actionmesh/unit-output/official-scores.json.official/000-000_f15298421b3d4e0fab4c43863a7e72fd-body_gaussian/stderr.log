@@ -1,0 +1,45 @@
+2026-10-07 15:49:40,523 - INFO - Found 128 GT, 1 pred, 1 common
+2026-10-07 15:49:40,523 - WARNING - Missing predictions: 127
+
+Evaluating samples:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ICP per-frame:   0%|          | 0/16 [00:00<?, ?it/s][A
+
+ICP per-frame:   6%|▋         | 1/16 [00:07<01:50,  7.37s/it][A
+
+ICP per-frame:  12%|█▎        | 2/16 [00:14<01:39,  7.09s/it][A
+
+ICP per-frame:  19%|█▉        | 3/16 [00:21<01:31,  7.07s/it][A
+
+ICP per-frame:  25%|██▌       | 4/16 [00:28<01:26,  7.23s/it][A
+
+ICP per-frame:  31%|███▏      | 5/16 [00:36<01:21,  7.41s/it][A
+
+ICP per-frame:  38%|███▊      | 6/16 [00:43<01:12,  7.24s/it][A
+
+ICP per-frame:  44%|████▍     | 7/16 [00:50<01:04,  7.16s/it][A
+
+ICP per-frame:  50%|█████     | 8/16 [00:57<00:56,  7.10s/it][A
+
+ICP per-frame:  56%|█████▋    | 9/16 [01:04<00:50,  7.17s/it][A
+
+ICP per-frame:  62%|██████▎   | 10/16 [01:12<00:44,  7.35s/it][A
+
+ICP per-frame:  69%|██████▉   | 11/16 [01:20<00:37,  7.41s/it][A
+
+ICP per-frame:  75%|███████▌  | 12/16 [01:27<00:29,  7.42s/it][A
+
+ICP per-frame:  81%|████████▏ | 13/16 [01:35<00:22,  7.50s/it][A
+
+ICP per-frame:  88%|████████▊ | 14/16 [01:42<00:15,  7.58s/it][A
+
+ICP per-frame:  94%|█████████▍| 15/16 [01:50<00:07,  7.70s/it][A
+
+ICP per-frame: 100%|██████████| 16/16 [01:58<00:00,  7.69s/it][A
+ICP per-frame: 100%|██████████| 16/16 [01:58<00:00,  7.41s/it]
+2026-10-07 15:51:55,687 - INFO - [000-000_f15298421b3d4e0fab4c43863a7e72fd] CD_3D=0.055, CD_4D=0.058, CD_Motion=0.066
+
+Evaluating samples: 100%|██████████| 1/1 [02:15<00:00, 135.17s/it]
+Evaluating samples: 100%|██████████| 1/1 [02:15<00:00, 135.17s/it]
+2026-10-07 15:51:55,699 - INFO - Results saved to: /root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/official.csv
+2026-10-07 15:51:55,699 - INFO - Summary saved to: /root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/official.summary.json

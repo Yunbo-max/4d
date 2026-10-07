@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "adapter_role": "format-only wrapper around official evaluate_dataset.py",
+  "metric_implementation": "none; metrics come from the official CLI subprocess",
+  "denominator": {
+    "frozen": true,
+    "manifest": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/manifest.json",
+    "manifest_sha256": "4089f52f225a0f10ab09dbbe680806992d0a56a0a14fc4c62c01190f660c511f",
+    "n_declared": 3
+  },
+  "device": "cuda:0",
+  "seed": 44,
+  "python": "3.12.13",
+  "adapter_sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2",
+  "official_source": {
+    "original_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "patched_source_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "compatibility_patch": {
+      "file": "sample_mesh.py",
+      "function": "get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU surface sampler must not query CUDA RNG state for a CPU device",
+      "metric_or_draw_change": false
+    }
+  },
+  "cases": [
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "case_id": "000-000_f15298421b3d4e0fab4c43863a7e72fd-native",
+      "case_dir": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/native",
+      "status": "success",
+      "n_frames": 16,
+      "cd_3d": 0.05499049531342125,
+      "cd_4d": 0.05813780831827206,
+      "cd_motion": 0.06586745381355286,
+      "additional_runtime_compatibility": {
+        "kind": "experimental-knn-backward-cpu-compatibility",
+        "scope": "engineering-only; native qualification remains false",
+        "forward": "unchanged installed PyTorch3D CUDA KNN",
+        "backward": "installed upstream PyTorch3D CPU KNN primitive",
+        "source_sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771",
+        "extension_sha256": "e003c4048f34bd46f0a92f59b87d1951fe82b0c3df856826a02d4efb790965ce",
+        "cpu_backward_calls": 6800
+      },
+      "inputs": {
+        "sequence": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/native/sequence.npz",
+          "sha256": "25bfb2eaebdbf9f404f3276d0fa52fd779eb37b158b36b00be50a7b446941928"
+        },
+        "ground_truth": {
+          "path": "/root/actionmesh-research-staging/actionbench-full128-direct/data/000-000_f15298421b3d4e0fab4c43863a7e72fd/surfaces.npy",
+          "sha256": "3432d2e0760461ee3dc4d4fae5b18f4bd1fd03ac3b7f38757f3c3444dfcc2ddc"
+        }
+      },
+      "official_outputs": {
+        "csv": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/official.csv",
+          "sha256": "4cbae18c50bff3e2a094036f1f70c0ef6f2e5b3a5ebb5108ef082e5da41a0f66"
+        },
+        "summary": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/official.summary.json",
+          "sha256": "4ce6e9ed6be0a7ded8eca5166fa6422adadd4cc7041c9a705f779db7dfc10c69"
+        },
+        "export_manifest": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/export-manifest.json",
+          "sha256": "8cf5bb8e1fa443d8e3ed108c5faca637be3a59c0e6aeccd1f28efff86856fd99"
+        },
+        "execution": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-native/execution.json",
+          "sha256": "63c39c68cc16a483e1a615250453b0170678be028ccc198a302c10771e418477"
+        }
+      },
+      "elapsed_seconds": 142.025032246951
+    },
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "case_id": "000-000_f15298421b3d4e0fab4c43863a7e72fd-world_gaussian",
+      "case_dir": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/world_gaussian",
+      "status": "success",
+      "n_frames": 16,
+      "cd_3d": 0.055023380932516394,
+      "cd_4d": 0.05831302472310834,
+      "cd_motion": 0.066110759973526,
+      "additional_runtime_compatibility": {
+        "kind": "experimental-knn-backward-cpu-compatibility",
+        "scope": "engineering-only; native qualification remains false",
+        "forward": "unchanged installed PyTorch3D CUDA KNN",
+        "backward": "installed upstream PyTorch3D CPU KNN primitive",
+        "source_sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771",
+        "extension_sha256": "e003c4048f34bd46f0a92f59b87d1951fe82b0c3df856826a02d4efb790965ce",
+        "cpu_backward_calls": 6800
+      },
+      "inputs": {
+        "sequence": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/world_gaussian/sequence.npz",
+          "sha256": "2bb8f9482f03b8d74a47267ffec5176df24800b58a910c8fcabc639232810f59"
+        },
+        "ground_truth": {
+          "path": "/root/actionmesh-research-staging/actionbench-full128-direct/data/000-000_f15298421b3d4e0fab4c43863a7e72fd/surfaces.npy",
+          "sha256": "3432d2e0760461ee3dc4d4fae5b18f4bd1fd03ac3b7f38757f3c3444dfcc2ddc"
+        }
+      },
+      "official_outputs": {
+        "csv": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-world_gaussian/official.csv",
+          "sha256": "b92e4107554e0452131aadf53c4205a4598eb25b6bbd3f7a4ee3206040de802f"
+        },
+        "summary": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-world_gaussian/official.summary.json",
+          "sha256": "b2c03dd01b1ba3146d58f244bd170475be2e34383ab8ac2e80575664d8f05d8e"
+        },
+        "export_manifest": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-world_gaussian/export-manifest.json",
+          "sha256": "6041bbafc582e7f0352ce7a1a26fb740263180bbac84ec9b41421b1fd024af5b"
+        },
+        "execution": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-world_gaussian/execution.json",
+          "sha256": "5b818a88b6146c4f1a8c37c18bfdd9f8158369d9641f781ddee6024affd0d836"
+        }
+      },
+      "elapsed_seconds": 140.01690883701667
+    },
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "case_id": "000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian",
+      "case_dir": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/body_gaussian",
+      "status": "success",
+      "n_frames": 16,
+      "cd_3d": 0.0550265464452451,
+      "cd_4d": 0.05810375509495849,
+      "cd_motion": 0.06577248871326447,
+      "additional_runtime_compatibility": {
+        "kind": "experimental-knn-backward-cpu-compatibility",
+        "scope": "engineering-only; native qualification remains false",
+        "forward": "unchanged installed PyTorch3D CUDA KNN",
+        "backward": "installed upstream PyTorch3D CPU KNN primitive",
+        "source_sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771",
+        "extension_sha256": "e003c4048f34bd46f0a92f59b87d1951fe82b0c3df856826a02d4efb790965ce",
+        "cpu_backward_calls": 6800
+      },
+      "inputs": {
+        "sequence": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/controls/body_gaussian/sequence.npz",
+          "sha256": "4e910b6d885b8a668a0f4394c8ee814fdfcbbdc30a41fb5d5b07f83d769acd5c"
+        },
+        "ground_truth": {
+          "path": "/root/actionmesh-research-staging/actionbench-full128-direct/data/000-000_f15298421b3d4e0fab4c43863a7e72fd/surfaces.npy",
+          "sha256": "3432d2e0760461ee3dc4d4fae5b18f4bd1fd03ac3b7f38757f3c3444dfcc2ddc"
+        }
+      },
+      "official_outputs": {
+        "csv": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/official.csv",
+          "sha256": "de5e83ee4b72bb9119d30a0ae7e473d4614c9634962e2a75edaeadd3f9a26103"
+        },
+        "summary": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/official.summary.json",
+          "sha256": "cdb2ae5cf9f6577440a8174976cf746e807f26e3a53ca2975af7065eb7f1bcf0"
+        },
+        "export_manifest": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/export-manifest.json",
+          "sha256": "8db2dd76f45412d0db1891bb3325a930e08546c598e6d6c8d62bdb45605a5eaf"
+        },
+        "execution": {
+          "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001/complete-fp16-lowram-v1-three-arm-unit-a1-9f9c55e56b784345b54fd36060f5c6ed/workspace/actionmesh/unit-output/official-scores.json.official/000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian/execution.json",
+          "sha256": "4a1e85609916fbdff9310c456dc44e0fb09417d201775aa0df567230b06fc3cb"
+        }
+      },
+      "elapsed_seconds": 140.26354003092274
+    }
+  ],
+  "summary": {
+    "n_total": 3,
+    "n_success": 3,
+    "n_failed": 0,
+    "success_rate": 1.0
+  }
+}

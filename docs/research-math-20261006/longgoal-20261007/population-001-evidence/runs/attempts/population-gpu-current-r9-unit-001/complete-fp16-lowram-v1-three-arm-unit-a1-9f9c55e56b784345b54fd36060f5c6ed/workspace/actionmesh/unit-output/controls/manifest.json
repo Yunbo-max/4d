@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "case_id": "000-000_f15298421b3d4e0fab4c43863a7e72fd-native",
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "case_dir": "native"
+    },
+    {
+      "case_id": "000-000_f15298421b3d4e0fab4c43863a7e72fd-world_gaussian",
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "case_dir": "world_gaussian"
+    },
+    {
+      "case_id": "000-000_f15298421b3d4e0fab4c43863a7e72fd-body_gaussian",
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "case_dir": "body_gaussian"
+    }
+  ],
+  "scope": "Baseline qualification assets; not independent arms-as-assets or confirmation"
+}

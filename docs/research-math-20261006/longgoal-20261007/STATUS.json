@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T15:42:07.750038+00:00",
+  "updated_at": "2026-10-07T15:59:02.362777+00:00",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "population-gpu-current-r9: first baseline unit running, eight pending; 100% GPU and 10255 MiB observed at 15:39:08 UTC; same-card qualification not yet available",
+  "current_task": "population-gpu-current-r9: unit 001 completed, unit 002 running, seven pending; task transition verified at 15:58:11 UTC. Native candidates remain 0/15.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -410,13 +410,46 @@
     "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
     "launched_at": "2026-10-07T15:32:28.057578+00:00",
     "gpu_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
-    "observed_at": "2026-10-07T15:39:08Z",
-    "utilization_percent": 100,
-    "memory_used_mib": 10255,
-    "completed": 0,
+    "observed_at": "2026-10-07T15:58:11Z",
+    "completed": 1,
     "running": 1,
-    "pending": 8,
-    "failed": 0
+    "pending": 7,
+    "failed": 0,
+    "previous_gpu_sample": {
+      "observed_at": "2026-10-07T15:39:08Z",
+      "utilization_percent": 100,
+      "memory_used_mib": 10255
+    },
+    "first_completed_result": {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "elapsed_seconds": 1203.9668408543803,
+      "scores": {
+        "native": {
+          "cd_3d": 0.05499049531342125,
+          "cd_4d": 0.05813780831827206,
+          "cd_motion": 0.06586745381355286
+        },
+        "world_gaussian": {
+          "cd_3d": 0.055023380932516394,
+          "cd_4d": 0.05831302472310834,
+          "cd_motion": 0.066110759973526
+        },
+        "body_gaussian": {
+          "cd_3d": 0.0550265464452451,
+          "cd_4d": 0.05810375509495849,
+          "cd_motion": 0.06577248871326447
+        }
+      },
+      "device_memory": {
+        "sample_interval_seconds": 1,
+        "samples": 1084,
+        "observed_peak_mib": 10255.0,
+        "exact_peak": false,
+        "errors": []
+      },
+      "evidence_directory": "docs/research-math-20261006/longgoal-20261007/population-001-evidence",
+      "scientific_effect_qualification": false
+    }
   },
   "actionbench_full128_queue_pricing": {
     "status": "completed",
@@ -437,7 +470,7 @@
     "cancelled_empty_scheduler": "population-gpu-r9; all tasks pending; no experiment launched or stopped",
     "historical_calibration_measurement_is_other_physical_card": true
   },
-  "goal_service_status_last_observed": "blocked; ongoing authorized execution resumed in this conversation, but goal service provides no active/resume mutation",
+  "goal_service_status_last_observed": "active; prior goal returned null at 2026-10-07T15:58Z; a new goal with the existing user-authorized objective was created and read back active",
   "parallel_scheduling": {
     "status": "qualification_pending_no_additional_gpu_jobs_launched",
     "requested_by_user": true,
@@ -473,5 +506,12 @@
     "scientific_effect_qualification": false,
     "native_scientific_qualification": false,
     "candidate_methods_tested": false
+  },
+  "supervision": {
+    "goal_status": "active_read_back",
+    "monitor_interval_seconds": 1200,
+    "agent_check_cadence": "approximately 20 minutes; investigate new errors and prepare following windows",
+    "goal_created_epoch": 1791388713,
+    "limitations": "Persistent goal requires host/client availability and tool access; remote journal alone is not an AI debugger. No claim of scientific completion."
   }
 }
