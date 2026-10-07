@@ -56,6 +56,16 @@ def reference_closure(root: Path, seed_paths: list[Path]) -> list[dict]:
         if path.suffix == ".json":
             document = json.loads(path.read_text())
             for nested_ref in _nested_refs(document):
+                # Raw scorer provenance records observed absolute paths. Admit
+                # them only if they resolve inside this exact controller root,
+                # then retain a project-relative ref without editing raw evidence.
+                if Path(nested_ref['path']).is_absolute():
+                    absolute = Path(nested_ref['path']).resolve()
+                    try:
+                        relative = absolute.relative_to(root).as_posix()
+                    except ValueError as exc:
+                        raise ValueError('Absolute evidence ref escapes project root') from exc
+                    nested_ref = {'path': relative, 'sha256': nested_ref['sha256']}
                 queue.append(resolve_ref(root, nested_ref))
     return [refs[path] for path in sorted(refs)]
 

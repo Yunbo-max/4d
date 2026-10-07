@@ -142,6 +142,21 @@ class OfficialAdapterContractTests(unittest.TestCase):
 
 
 class ParityReadoutTests(unittest.TestCase):
+    def test_finalization_raw_absolute_refs_are_hash_bound_and_nonescaping(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary); target=root/'retained.txt';target.write_text('raw evidence')
+            seed=root/'raw.json'
+            ref=file_ref(root,target);ref['path']=str(target)
+            seed.write_text(json.dumps({'source':ref}))
+            refs=finalization.reference_closure(root,[seed])
+            self.assertIn(file_ref(root,target),refs)
+            self.assertEqual(json.loads(seed.read_text())['source']['path'],str(target))
+            ref['sha256']='0'*64;seed.write_text(json.dumps(ref))
+            with self.assertRaises(ValueError):finalization.reference_closure(root,[seed])
+            ref['path']=str(root.parent/'outside');seed.write_text(json.dumps(ref))
+            with self.assertRaisesRegex(ValueError,'escapes project'):
+                finalization.reference_closure(root,[seed])
+
     def test_finalization_reference_closure_follows_nested_refs(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
