@@ -349,3 +349,28 @@ completed `scorer-parity` attempt, immutable input/code refs, the complete
 declared-output inventory and the harness-recorded attestation, record, evidence
 and raw-output hashes. Predictions must be receipt-bound attempt inputs. Thus an
 internally consistent reconstructed output tree cannot mint a consumer sidecar.
+
+## Continuation: repair current software-acceptance import closure — 2026-10-07
+
+No new Local/GPU return followed `202cb6e`. Static inspection of the next required
+whole-suite plan found a concrete execution blocker: the parity test module now
+imports the root-level `finalize_actionbench_parity.py`, but
+`prepare_control_scoring_checks.py` did not include that file in the native
+plan's `code_refs`. The isolated harness workspace would therefore fail during
+test import, before exercising the new parity/finalizer rejection checks.
+
+The acceptance builder now owns a single explicit `acceptance_sources(root)`
+inventory, includes the finalizer, and rejects a missing source before plan
+emission. One regression check asserts that both the finalizer and parity test
+module are staged. The Local handoff now requires inspecting this exact code ref
+and explicitly says that the historical 127/127 result does not accept the
+current revision.
+
+Web parsed the two changed Python files and observed 149 authored `test_*`
+methods statically; it did **not** execute the suite, scorer or GPU workload.
+The observed Local count may differ through loader behavior and must be recorded
+from the harness run. Scientific state is unchanged: parity is unexecuted,
+official scores are zero, and candidate designs/results/verdicts remain **0/15**.
+Next: Local regenerates the acceptance plan at the delivered revision, confirms
+the finalizer ref, runs its exact approved digest, then proceeds to parity only
+after that current-revision acceptance passes.

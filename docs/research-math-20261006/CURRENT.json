@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T02:51:00Z",
+  "recorded_at": "2026-10-07T02:54:36Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Official/faithful scorer equivalence is now a protocol-free engineering plan with staged-path-stable contract, post-run frozen-ref recheck and mandatory full-bundle finalization; it is generated but unexecuted. Scientific scoring remains blocked because reviewed sources provide no per-asset performance threshold. There is still no official score, scorer parity result, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). The current whole-suite plan's missing parity-finalizer import closure is repaired but unexecuted; the historical test result does not accept this revision. Official/faithful scorer equivalence remains a generated, unexecuted engineering plan. Scientific scoring still lacks a source-backed per-asset performance threshold; there is no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -214,6 +214,27 @@
     "native_contract_qualified": false,
     "parity_module_checks_total": 21,
     "new_checks_authored": 7,
+    "new_checks_executed": 0,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "software_acceptance_import_closure": {
+    "status": "repaired_generated_unexecuted",
+    "recorded_at": "2026-10-07T02:54:36Z",
+    "base_commit": "202cb6e2a95cf6fc91ac8362c9489b6f73b69770",
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/software-acceptance-import-closure-source-review.json",
+      "sha256": "6347c15926a21f9475dfd9e9597d3dbc6f2d5e9ffb5cea5056e7401237997aab"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-software-acceptance-import-closure.json",
+      "sha256": "328f8b8ea8c2e584976c6670eba62b79c809fe9b6702ae8467213fa49f535607"
+    },
+    "historical_software_checks_passed": 127,
+    "historical_result_accepts_current_revision": false,
+    "current_authored_test_methods_observed": 149,
+    "new_checks_authored": 1,
     "new_checks_executed": 0,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,

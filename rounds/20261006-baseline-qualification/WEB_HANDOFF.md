@@ -91,6 +91,8 @@ Apply the exact success/failure/insufficient-evidence rules in `BASELINE_SCORING
 
 After resolving the exact delivered commit, host, interpreter and installed skill
 directory, execute the whole software acceptance plan at this changed revision.
+Confirm its `code_refs` includes the post-promotion parity finalizer; historical
+127/127 evidence predates that source and is not current acceptance.
 Then source-inspect and run the protocol-free engineering parity plan from
 `ACTIONBENCH_SCORER_PARITY.md`, promote its complete passed output bundle and run
 the committed post-promotion finalizer. Preserve its exact one-UID scope. Scientific

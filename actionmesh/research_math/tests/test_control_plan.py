@@ -8,13 +8,24 @@ import unittest
 
 try:
     planner = importlib.import_module('prepare_mesh_controls')
+    acceptance = importlib.import_module('prepare_control_scoring_checks')
 except ModuleNotFoundError:
     planner = None
+    acceptance = None
 
 
 class ControlPlanTest(unittest.TestCase):
     def setUp(self):
         self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
+        self.assertIsNotNone(acceptance, 'Acceptance plan builder missing')
+
+    def test_acceptance_source_closure_includes_parity_finalizer(self):
+        project_root = Path(__file__).resolve().parents[3]
+        paths = {path.relative_to(project_root).as_posix()
+                 for path in acceptance.acceptance_sources(project_root)}
+        self.assertIn('actionmesh/finalize_actionbench_parity.py', paths)
+        self.assertIn(
+            'actionmesh/research_math/tests/test_actionbench_parity.py', paths)
 
     def project(self, root):
         code = root/'actionmesh/research_math'; code.mkdir(parents=True)

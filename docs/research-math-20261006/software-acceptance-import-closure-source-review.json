@@ -1,0 +1,35 @@
+{
+  "kind": "source-review",
+  "status": "acceptance_import_closure_repaired_generated_unexecuted",
+  "recorded_at": "2026-10-07T02:54:36Z",
+  "base_commit": "202cb6e2a95cf6fc91ac8362c9489b6f73b69770",
+  "reviewed_sources": [
+    {"path": "actionmesh/prepare_control_scoring_checks.py", "sha256": "dbf43d32aa5a8c8f3051467e2e79165bc3d30eecc94af7125bf8ba2d76cd8654"},
+    {"path": "actionmesh/research_math/tests/test_control_plan.py", "sha256": "c42436414190695168f3cd904bfc0706985af96f57421767c4eb838e8ea45193"},
+    {"path": "LOCAL_AGENT_RUNBOOK.md", "sha256": "8217e8a4f2af95a06cb40edc19b1e1d20f29a4af09d38bb0101c36a992d37e7c"},
+    {"path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md", "sha256": "ca3aa83cf44ab6a70240fd54cafba3968c5369784952ca74be1ce61ae7d3575c"}
+  ],
+  "finding": {
+    "severity": "critical_local_execution_blocker",
+    "problem": "The parity test module imports actionmesh/finalize_actionbench_parity.py, but the whole-suite native plan did not stage that root-level source in code_refs. The current acceptance attempt would fail at import before exercising the new parity/finalizer checks.",
+    "historical_evidence_scope": "The returned 127/127 result predates the finalizer and cannot accept the current revision.",
+    "scientific_effect": "none; this is engineering acceptance closure only"
+  },
+  "resolution": {
+    "central_source_inventory": "acceptance_sources(root)",
+    "finalizer_in_code_refs": true,
+    "missing_source_fails_before_plan": true,
+    "regression_check_authored": "test_acceptance_source_closure_includes_parity_finalizer"
+  },
+  "static_checks": {
+    "python_ast_parse": "passed",
+    "git_diff_check": "passed",
+    "authored_test_methods_observed": 149,
+    "new_checks_authored": 1,
+    "new_checks_executed": 0,
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "next_executable_step": "Local regenerates the whole-suite plan at the delivered revision, confirms finalize_actionbench_parity.py is in code_refs, then runs the exact approved harness digest and reports the observed test count and result before parity execution."
+}

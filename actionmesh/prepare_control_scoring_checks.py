@@ -6,6 +6,29 @@ from pathlib import Path
 import sys
 
 
+ROOT_SOURCES = (
+    'research_census_eval.py',
+    'prepare_mesh_controls.py',
+    'prepare_control_scoring.py',
+    'prepare_control_scoring_checks.py',
+    'prepare_native_runtime.py',
+    'official_actionbench_adapter.py',
+    'prepare_actionbench_parity.py',
+    'finalize_actionbench_parity.py',
+)
+
+
+def acceptance_sources(root: Path) -> list[Path]:
+    """Return the complete import closure exercised by the acceptance suite."""
+    root = Path(root).resolve()
+    files = sorted((root/'actionmesh/research_math').rglob('*.py'))
+    files += [root/'actionmesh'/name for name in ROOT_SOURCES]
+    missing = [path for path in files if not path.is_file()]
+    if missing:
+        raise FileNotFoundError('Missing acceptance source: '+str(missing[0]))
+    return files
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('root', 'skill-dir', 'plan-dir'): parser.add_argument('--'+name, type=Path, required=True)
@@ -18,11 +41,7 @@ def main():
     import run_experiments as native
     import run_harness as harness
     from research_math.control_scoring import file_ref
-    files = sorted((root/'actionmesh/research_math').rglob('*.py'))
-    files += [root/'actionmesh'/name for name in ('research_census_eval.py', 'prepare_mesh_controls.py',
-                                                'prepare_control_scoring.py', 'prepare_control_scoring_checks.py',
-                                                'prepare_native_runtime.py', 'official_actionbench_adapter.py',
-                                                'prepare_actionbench_parity.py')]
+    files = acceptance_sources(root)
     refs = [file_ref(root, path) for path in files]
     # Test_control_plan imports the installed harness modules. Carry their actual
     # directory to the child rather than relying on an inherited PYTHONPATH.

@@ -1,0 +1,38 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "status": "software_acceptance_closure_repaired_generated_unexecuted",
+  "recorded_at": "2026-10-07T02:54:36Z",
+  "base_commit": "202cb6e2a95cf6fc91ac8362c9489b6f73b69770",
+  "decision": "Repair the isolated whole-suite import closure before asking Local to accept or execute parity; do not reuse the historical 127-test result for changed source.",
+  "delivery": {
+    "acceptance_builder_ref": {"path": "actionmesh/prepare_control_scoring_checks.py", "sha256": "dbf43d32aa5a8c8f3051467e2e79165bc3d30eecc94af7125bf8ba2d76cd8654"},
+    "regression_tests_ref": {"path": "actionmesh/research_math/tests/test_control_plan.py", "sha256": "c42436414190695168f3cd904bfc0706985af96f57421767c4eb838e8ea45193"},
+    "source_review_ref": {"path": "docs/research-math-20261006/software-acceptance-import-closure-source-review.json", "sha256": "6347c15926a21f9475dfd9e9597d3dbc6f2d5e9ffb5cea5056e7401237997aab"},
+    "runbook_ref": {"path": "LOCAL_AGENT_RUNBOOK.md", "sha256": "8217e8a4f2af95a06cb40edc19b1e1d20f29a4af09d38bb0101c36a992d37e7c"},
+    "round_handoff_ref": {"path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md", "sha256": "ca3aa83cf44ab6a70240fd54cafba3968c5369784952ca74be1ce61ae7d3575c"},
+    "progress_ref": {"path": "docs/research-math-20261006/STEPWISE_PROGRESS.md", "sha256": "46aaebca35f5214ad325c9a20d73b020d79408bf3b34f3b19c75e0dfde802bdc"}
+  },
+  "acceptance_boundary": {
+    "finalizer_staged_in_code_refs": true,
+    "parity_test_module_staged": true,
+    "missing_declared_source_rejected_before_plan": true,
+    "historical_127_test_result_accepts_current_revision": false,
+    "current_suite_executed": false,
+    "scientific_gate_advanced": false
+  },
+  "verification": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "authored_test_methods_observed": 149,
+    "new_checks_authored": 1,
+    "new_checks_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "next_executable_step": "Local generates the current whole-suite plan, confirms actionmesh/finalize_actionbench_parity.py appears in code_refs, executes the exact approved harness digest, and returns the observed test count/logs before generating the engineering parity plan.",
+  "official_scores_run": 0,
+  "candidate_validation_designs_complete": 0,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0
+}

@@ -104,6 +104,10 @@ Review the generated plan and capture the printed digest. Then execute only with
 ```
 
 This is a CPU/software acceptance task (`gpu_count: 0`). The current source discovers the repository's `research_math` unit tests; record the observed test count and outcome instead of copying historical counts. A pass proves parser/orchestration behavior only, not native scientific qualification.
+The generated native plan must list `actionmesh/finalize_actionbench_parity.py`
+in `code_refs`; the parity rejection tests import that controller finalizer. If
+it is absent, reject the plan rather than treating an earlier 127-test run as
+acceptance of the current revision.
 
 ### 3a. Capture the actual installed native environment
 
