@@ -1,0 +1,228 @@
+{
+  "observed_at": "2026-10-07T19:48:40.549747+00:00",
+  "units": [
+    {
+      "index": 1,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-001",
+      "attempt": {
+        "bytes": 67949198,
+        "allocated_bytes": 68313088
+      },
+      "output": {
+        "bytes": 66167930,
+        "allocated_bytes": 66355200
+      },
+      "controls": {
+        "bytes": 11205693,
+        "allocated_bytes": 11231232
+      },
+      "official": {
+        "bytes": 34688319,
+        "allocated_bytes": 34795520
+      }
+    },
+    {
+      "index": 2,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-002",
+      "attempt": {
+        "bytes": 68032057,
+        "allocated_bytes": 68378624
+      },
+      "output": {
+        "bytes": 66250787,
+        "allocated_bytes": 66420736
+      },
+      "controls": {
+        "bytes": 11256298,
+        "allocated_bytes": 11276288
+      },
+      "official": {
+        "bytes": 34693479,
+        "allocated_bytes": 34795520
+      }
+    },
+    {
+      "index": 3,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-003",
+      "attempt": {
+        "bytes": 67785956,
+        "allocated_bytes": 68149248
+      },
+      "output": {
+        "bytes": 66004688,
+        "allocated_bytes": 66191360
+      },
+      "controls": {
+        "bytes": 11059948,
+        "allocated_bytes": 11079680
+      },
+      "official": {
+        "bytes": 34681909,
+        "allocated_bytes": 34795520
+      }
+    },
+    {
+      "index": 4,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-004",
+      "attempt": {
+        "bytes": 63579614,
+        "allocated_bytes": 64114688
+      },
+      "output": {
+        "bytes": 61798349,
+        "allocated_bytes": 62156800
+      },
+      "controls": {
+        "bytes": 10426928,
+        "allocated_bytes": 10452992
+      },
+      "official": {
+        "bytes": 32393439,
+        "allocated_bytes": 32632832
+      }
+    },
+    {
+      "index": 5,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-005",
+      "attempt": {
+        "bytes": 67871788,
+        "allocated_bytes": 68308992
+      },
+      "output": {
+        "bytes": 66090523,
+        "allocated_bytes": 66351104
+      },
+      "controls": {
+        "bytes": 11186274,
+        "allocated_bytes": 11206656
+      },
+      "official": {
+        "bytes": 34627209,
+        "allocated_bytes": 34795520
+      }
+    },
+    {
+      "index": 6,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-006",
+      "attempt": {
+        "bytes": 67664970,
+        "allocated_bytes": 68009984
+      },
+      "output": {
+        "bytes": 65883701,
+        "allocated_bytes": 66052096
+      },
+      "controls": {
+        "bytes": 10972347,
+        "allocated_bytes": 10997760
+      },
+      "official": {
+        "bytes": 34698699,
+        "allocated_bytes": 34795520
+      }
+    },
+    {
+      "index": 7,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-007",
+      "attempt": {
+        "bytes": 67627554,
+        "allocated_bytes": 67981312
+      },
+      "output": {
+        "bytes": 65846285,
+        "allocated_bytes": 66023424
+      },
+      "controls": {
+        "bytes": 11157260,
+        "allocated_bytes": 11177984
+      },
+      "official": {
+        "bytes": 34496481,
+        "allocated_bytes": 34598912
+      }
+    },
+    {
+      "index": 8,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-008",
+      "attempt": {
+        "bytes": 66063469,
+        "allocated_bytes": 66646016
+      },
+      "output": {
+        "bytes": 64282199,
+        "allocated_bytes": 64688128
+      },
+      "controls": {
+        "bytes": 10839614,
+        "allocated_bytes": 10862592
+      },
+      "official": {
+        "bytes": 33738431,
+        "allocated_bytes": 34009088
+      }
+    },
+    {
+      "index": 9,
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/runs/attempts/population-gpu-current-r9-unit-009",
+      "attempt": {
+        "bytes": 67953849,
+        "allocated_bytes": 68378624
+      },
+      "output": {
+        "bytes": 66172579,
+        "allocated_bytes": 66420736
+      },
+      "controls": {
+        "bytes": 11228080,
+        "allocated_bytes": 11251712
+      },
+      "official": {
+        "bytes": 34646745,
+        "allocated_bytes": 34795520
+      }
+    }
+  ],
+  "storage": [
+    {
+      "path": "/root/actionmesh-research-staging/actionbench-full128-direct",
+      "du_stdout": "5308858368\t/root/actionmesh-research-staging/actionbench-full128-direct\n",
+      "findmnt_stdout": "/      overlay overlay\n",
+      "disk_usage": {
+        "total": 31526391808,
+        "used": 14781542400,
+        "free": 16728072192
+      }
+    },
+    {
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/inputs/actionbench-full128-snapshots",
+      "du_stdout": "868352\t/root/actionmesh-research-staging/4d-longgoal-r9/inputs/actionbench-full128-snapshots\n",
+      "findmnt_stdout": "/      overlay overlay\n",
+      "disk_usage": {
+        "total": 31526391808,
+        "used": 14781542400,
+        "free": 16728072192
+      }
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/weights",
+      "du_stdout": "40179933184\t/root/rivermind-data/actionmesh-repro/weights\n",
+      "findmnt_stdout": "/root/rivermind-data ext4   /dev/mapper/lvmdata-pvc--fe5435a1--d06b--4462--98f7--72ea6cac591d\n",
+      "disk_usage": {
+        "total": 52521566208,
+        "used": 51187675136,
+        "free": 1317113856
+      }
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/hf-cache",
+      "du_stdout": "12288\t/root/rivermind-data/actionmesh-repro/hf-cache\n",
+      "findmnt_stdout": "/root/rivermind-data ext4   /dev/mapper/lvmdata-pvc--fe5435a1--d06b--4462--98f7--72ea6cac591d\n",
+      "disk_usage": {
+        "total": 52521566208,
+        "used": 51187675136,
+        "free": 1317113856
+      }
+    }
+  ],
+  "scope": "Read-only file stat and mounted filesystem inventory; no workload or deletion."
+}
