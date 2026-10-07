@@ -1,0 +1,64 @@
+{
+  "kind": "actionbench-full128-unit-freeze-contract",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T15:30:00Z",
+  "status": "prospective_generated_unexecuted",
+  "scope": "Freeze and revalidate the exact inputs for one UID already assigned to an admitted Full128 pricing window. This contract adds no executable queue, queue approval, inference, scorer invocation, baseline qualification, or candidate evidence.",
+  "pricing_prerequisite": {
+    "canonical_path": "inputs/actionbench-full128-queue/pricing.json",
+    "required_kind": "actionbench-full128-queue-pricing",
+    "required_status": "priced_engineering_only",
+    "required_flags": {
+      "queue_priced": true,
+      "queue_approved": false,
+      "queue_generated": false,
+      "dispatch_ready": false,
+      "scientific_effect_qualification": false,
+      "native_scientific_qualification": false,
+      "candidate_methods_tested": false
+    },
+    "verification": "Recompute the complete pricing manifest from its pinned pricing contract, complete-unit admission and canonical population, including the admission's transitive origin/output evidence closure. Exact equality is required."
+  },
+  "selection": {
+    "rule": "The UID must occur exactly once in the complete ordered pricing population and must belong to the explicitly named window.",
+    "required_population_size": 128,
+    "retry_or_success_selection": "forbidden"
+  },
+  "input_revalidation": {
+    "template": "The exact complete-unit manifest referenced by the admitted timing sidecar; FP16 low-RAM repair profile only.",
+    "source": "Clean official source revision/tree plus every required source file byte/size from the template.",
+    "models": "Exact ActionMesh, TripoSG, DINOv2 and RMBG snapshot revision/count/size/manifest identities from the admitted template.",
+    "dataset": "Exactly camera.json, surfaces.npy and imgs/00.png through imgs/15.png for the selected UID, rehashed against snapshot and semantic admissions.",
+    "unit_timeout": "Must equal the unit_timeout_seconds in the recomputed pricing receipt; no override."
+  },
+  "output": {
+    "kind": "actionbench-full128-unit-manifest",
+    "required_status": "frozen_engineering_full128_unit",
+    "single_use": true,
+    "required_nonclaims": {
+      "inference_executed": false,
+      "official_scorer_invocations": 0,
+      "queue_approved": false,
+      "queue_generated": false,
+      "dispatch_ready": false,
+      "scientific_effect_qualification": false
+    }
+  },
+  "failure_policy": "Reject before output on any pricing recomputation mismatch, noncanonical path, UID/window mismatch, duplicate or incomplete population, changed template/source/model/data byte, semantic mismatch, changed receipt, or wall-budget mismatch. Preserve source evidence and do not substitute another UID or runtime profile.",
+  "implementation": {
+    "freezer": "actionmesh/research_math/actionbench_full128_unit.py",
+    "runner_integration": "actionmesh/research_math/complete_unit_runner.py",
+    "tests": [
+      "actionmesh/research_math/tests/test_actionbench_full128_unit.py",
+      "actionmesh/research_math/tests/test_complete_unit_runner.py"
+    ],
+    "tests_executed_by_web": 0,
+    "gpu_workloads_executed_by_web": 0
+  },
+  "queue_priced": false,
+  "queue_approved": false,
+  "queue_generated": false,
+  "dispatch_ready": false,
+  "scientific_effect_qualification": false,
+  "candidate_methods_tested": false
+}

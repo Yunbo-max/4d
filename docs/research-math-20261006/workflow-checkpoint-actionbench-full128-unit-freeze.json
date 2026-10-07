@@ -1,0 +1,58 @@
+{
+  "kind": "research-autopilot-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T15:30:00Z",
+  "base_commit": "de608b17a101aeb47d6676de4d3fbdc3c32dd5fa",
+  "status": "prospective_full128_per_uid_freezer_authored_unexecuted",
+  "decision": "Introduce the fail-closed per-UID input boundary before authoring executable Full128 windows. Recompute the pricing receipt and all upstream evidence, bind each UID to its priced window, rehash its exact 18 dataset files, and require the admitted FP16 low-RAM three-arm profile and exact priced timeout.",
+  "delivered_scope": {
+    "priced_receipt_recomputation": true,
+    "uid_window_membership": true,
+    "source_model_dataset_revalidation": true,
+    "complete_unit_runner_full128_mode": true,
+    "window_plan_compiler": false,
+    "queue_generated": false,
+    "dispatch_ready": false
+  },
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/actionbench_full128_unit.py",
+      "sha256": "3f96b538c0d32adc82348c6dba032795d1395e07397725ec0c2918b1e9b46bcc"
+    },
+    {
+      "path": "actionmesh/research_math/complete_unit_runner.py",
+      "sha256": "416fe4ad1f51baa921735500499627a2b5c6e78cb786a452bb370c5ef2720850"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_actionbench_full128_unit.py",
+      "sha256": "4ad6b58c5f4617b1c596e789bf9d67c4434b706ca1b7a99a12e2ebc7a01a4eab"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_complete_unit_runner.py",
+      "sha256": "66a73fe180f694bc79e24e707712146537536decfdc5a99846e06305bd687702"
+    }
+  ],
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-unit-freeze-contract.json",
+    "sha256": "c397b1d219b0164d0b04aea1a8d5889f634f09d20c9c2bccb3c49d796735f240"
+  },
+  "software_state": {
+    "last_executed_suite_passed": 228,
+    "last_executed_suite_failed": 0,
+    "authored_test_methods_observed": 265,
+    "new_checks_authored": 12,
+    "checks_authored_after_last_suite": 37,
+    "tests_executed_by_web": 0
+  },
+  "scientific_state": {
+    "complete_unit_admitted": false,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "next_executable_step": "Local runs all 265 current software checks, then the existing complete-unit admission and queue-pricing passes in order. Do not invoke the new Full128 runner directly: an admitted harness window compiler and baseline/replay closure are still absent."
+}

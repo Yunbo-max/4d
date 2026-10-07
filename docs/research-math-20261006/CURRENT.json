@@ -557,5 +557,34 @@
     "dispatch_ready": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_per_uid_freeze": {
+    "status": "prospective_freezer_and_runner_mode_authored_unexecuted",
+    "recorded_at": "2026-10-07T15:30:00Z",
+    "source_pricing_required": true,
+    "source_pricing_observed": false,
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-unit-freeze-contract.json",
+      "sha256": "c397b1d219b0164d0b04aea1a8d5889f634f09d20c9c2bccb3c49d796735f240"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-unit-freeze.json",
+      "sha256": "2a0c8de19830bb55975f65d59e4efa0d590e1755fc321ae720549ed93a7ac94a"
+    },
+    "freezer": "actionmesh/research_math/actionbench_full128_unit.py",
+    "runner": "actionmesh/research_math/complete_unit_runner.py",
+    "required_runtime_profile": "fp16-lowram-v1",
+    "per_uid_dataset_files_rehashed": 18,
+    "unit_timeout_seconds_if_priced": 1664,
+    "new_checks_authored": 12,
+    "current_authored_test_methods_observed": 265,
+    "new_checks_executed_by_web": 0,
+    "window_plan_compiler_authored": false,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
   }
 }

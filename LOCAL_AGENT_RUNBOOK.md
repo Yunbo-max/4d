@@ -612,6 +612,16 @@ executable queue. Do not dispatch these windows until a later revision provides
 and admits the per-UID generation/export/three-arm scoring runner, binds all
 full-population prerequisites and qualifies the official baseline/replay path.
 
+The per-UID input freezer and runner mode are now authored, but there is still no
+admitted harness window compiler. After updating to this revision, run the full
+software acceptance suite and confirm 265 tests are collected and pass. Do not
+invoke `research_math.actionbench_full128_unit` or the new runner mode directly.
+Once pricing returns, send back its canonical JSON and receipts so the next
+revision can build a harness-owned window compiler. That compiler must bind each
+UID to its priced window, use exactly the returned `unit_timeout_seconds`, and
+retain the 1,800-second collection reserve. Until that compiler is reviewed and
+admitted, `queue_generated` and `dispatch_ready` remain false.
+
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.
 Inventory these full-population prerequisites without launching generation or scoring. Return
