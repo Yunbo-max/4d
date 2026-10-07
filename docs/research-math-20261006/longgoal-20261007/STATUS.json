@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T14:07:55+00:00",
+  "updated_at": "2026-10-07T15:30:00+00:00",
   "software_acceptance": {
     "run_id": "lowram-closure-r6",
     "tests_passed": 228,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Run current software acceptance, CPU-only complete-unit admission, then the separately admitted CPU-only Full128 queue-pricing pass; no executable queue exists",
+  "current_task": "Run current software acceptance, CPU-only complete-unit admission and pricing; the per-UID freezer is authored but no window plan compiler or executable queue exists",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,7 +129,7 @@
       "comparator_and_ablation": "required"
     }
   ],
-  "next_checkpoint": "Run 253 current software checks; execute the pinned complete-unit admission; only if admitted, execute the CPU-only pricing pass and return its eight-window manifest before authoring any executable per-UID queue",
+  "next_checkpoint": "Run 265 current software checks; execute the pinned complete-unit admission; only if admitted, execute CPU-only pricing and return its eight-window manifest. Do not invoke the per-UID runner until a harness window compiler is authored and admitted.",
   "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r7",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
@@ -283,6 +283,27 @@
     "tests_authored": 8,
     "tests_executed": 0,
     "gpu_count": 0,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
+    "candidate_methods_tested": false
+  },
+  "full128_per_uid_freeze": {
+    "status": "prospective_freezer_and_runner_mode_authored_unexecuted",
+    "contract": "docs/research-math-20261006/actionbench-full128-unit-freeze-contract.json",
+    "freezer": "actionmesh/research_math/actionbench_full128_unit.py",
+    "runner": "actionmesh/research_math/complete_unit_runner.py",
+    "source_pricing": "inputs/actionbench-full128-queue/pricing.json",
+    "source_pricing_observed": false,
+    "required_runtime_profile": "fp16-lowram-v1",
+    "required_unit_timeout_seconds_if_priced": 1664,
+    "dataset_files_rehashed_per_uid": 18,
+    "tests_authored": 12,
+    "tests_executed": 0,
+    "window_plan_compiler_authored": false,
     "queue_priced": false,
     "queue_approved": false,
     "queue_generated": false,

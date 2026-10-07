@@ -64,6 +64,7 @@ Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_R
 | Current-release unit manifest | `actionmesh/prepare_actionbench_unit_manifest.py`, `actionmesh/research_math/actionbench_unit_manifest.py` | freezes the first canonical UID, exact input/source/model identities and later three-arm output/timing boundary; CPU-only, generated, unexecuted |
 | Complete-unit admission | `actionmesh/prepare_complete_unit_admission.py`, `actionmesh/research_math/complete_unit_admission.py` | rehashes returned terminal unit records, outputs and telemetry; CPU-only, generated, unexecuted |
 | Full-128 queue pricing | `actionmesh/prepare_actionbench_queue_pricing.py`, `actionmesh/research_math/actionbench_queue_pricing.py` | consumes only an admitted complete unit and freezes eight ordered capacity windows; CPU-only, generated, unexecuted, never dispatches |
+| Full-128 per-UID freeze | `actionmesh/research_math/actionbench_full128_unit.py`, `actionmesh/research_math/complete_unit_runner.py` | revalidates a priced UID/window and exact inputs; authored, unexecuted, no harness window compiler or dispatch |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
@@ -171,9 +172,17 @@ in `LOCAL_AGENT_RUNBOOK.md`. It applies 25% operational headroom to the measured
 per 27,000-second workload budget, 26,624 planned seconds, 376 seconds of extra
 workload slack, and eight ordered windows for the 128 UIDs. The generated
 pricing manifest explicitly keeps queue approval, queue generation, dispatch,
-native scientific qualification and candidate testing false. A later admitted
-per-UID runner and official baseline/replay qualification are still required
-before any window is executable.
+native scientific qualification and candidate testing false. An admitted
+harness window compiler and official baseline/replay qualification are still
+required before any window is executable.
+
+The per-UID input freezer and an explicit Full128 mode in the complete-unit
+runner are now authored. They recompute the pricing receipt, bind a UID to its
+named window, rehash its exact 18 dataset files and require the admitted FP16
+low-RAM profile plus the exact priced unit timeout. Run all 265 software checks
+at the delivered revision. Do not call the module or runner directly: no
+harness-owned window compiler exists yet, so the queue remains ungenerated and
+non-dispatchable. Return the complete-unit admission and pricing receipts first.
 
 ## Runtime supplement — 2026-10-06
 
