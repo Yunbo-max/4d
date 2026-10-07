@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T10:33:30.290799+00:00",
+  "updated_at": "2026-10-07T10:38:48.284409+00:00",
   "software_acceptance": {
-    "run_id": "unit-contract-green-r4",
-    "tests_passed": 218,
+    "run_id": "unit-runner-green-r4",
+    "tests_passed": 221,
     "tests_failed": 0,
-    "plan_digest": "6ea150c5160a09d0f3a1ebd6b0aa06eba2b792e6f6161ca1dc7dcb5774782319",
-    "scope": "latest merged unit-manifest checks plus default generation/three-arm completeness checks; CPU software evidence only"
+    "plan_digest": "c1fa7001d0433318d48dd8f0ae560d2e63467837e87e48c7e261c7e622de03bc",
+    "scope": "CPU software checks including real tiny GLB roundtrip and subprocess failure/timeout; no model inference"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "full dataset and source transfer running; fixed generation argv and strict three-arm completion checks implemented; complete execution adapter and plan builder still pending",
+  "current_task": "complete_unit_runner authored and software-checked; GPU plan builder, host resource telemetry and end-to-end admission validation still pending; dataset and source transfers continue",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -174,7 +174,7 @@
   "data_staging": {
     "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
     "remote_target": "/root/actionmesh-research-staging/actionbench-full128-direct",
-    "status": "download PID 22918 observed live, 27 GT files present including reused files; complete snapshot admission still pending",
+    "status": "download PID 22918 observed live, 686/2309 files reported at 10:37 UTC; 52 surfaces incl reused cache; complete admission pending",
     "old_models_deleted": false,
     "transport": "loopback pinned public Hub metadata bridge; direct GPU-to-official-CDN object download",
     "first_direct_object_sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284",
@@ -197,5 +197,16 @@
     "revision": "87f99d275a07a11a7fb9081596bb24ac33c2af86",
     "status": "merged; all 11 unit-manifest checks passed in software-unit-r4 (216 total), subsequently 218 passed",
     "first_unit_policy": "preserve default BF16 non-low-RAM natural failure before separately versioned repair"
+  },
+  "complete_unit_runner": {
+    "path": "actionmesh/research_math/complete_unit_runner.py",
+    "status": "implemented_partial_admission_not_dispatched",
+    "remaining": [
+      "committed harness plan builder",
+      "host RAM/disk telemetry",
+      "review source/runtime binding and complete wall timeout",
+      "full snapshot + semantics + unit manifest admissions",
+      "actual GPU integration"
+    ]
   }
 }
