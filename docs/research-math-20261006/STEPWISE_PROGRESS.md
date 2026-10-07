@@ -769,3 +769,32 @@ pricing manifest freezes capacity and UID windows but still cannot be dispatched
 a later revision must implement and admit the per-UID full reproduction runner,
 qualify the official baseline/replay path, and preserve the full denominator.
 Candidate native results and formal outcomes remain **0/15** and **0**.
+
+## Continuation: bind each Full128 UID to admitted pricing — 2026-10-07
+
+The conditional queue still has no admitted pricing receipt, executable window
+plan or dispatch authorization. This continuation therefore does not create a
+queue or run generation/scoring. It closes the next software boundary that was
+previously missing: the calibration runner could only accept the prospectively
+fixed first UID and could not safely represent the other 127 samples.
+
+Added `research_math.actionbench_full128_unit`, which recomputes the prospective
+pricing receipt from its three pinned sources and therefore rechecks the complete
+unit's transitive origin/output evidence. A selected UID must occur in the exact
+named ordered window. The freezer then verifies the admission-bound FP16 low-RAM
+template, clean source revision/tree and required files, four model snapshot
+identities, and the UID's exact 18 dataset files against both snapshot and semantic
+admissions. Its single-use output retains every queue/science flag as false.
+
+The existing complete-unit runner now has an explicit Full128 mode. The pricing
+path must be canonical, `root`, pricing, UID and window ID must be supplied as one
+bundle, and its wall limit must exactly equal the admitted per-unit price. The
+same revalidation runs again after scoring for final integrity. Twelve focused
+checks were authored first, bringing the statically observed `test_*` count from
+253 to 265. Web executed **0** tests, finalizers, scorer calls or GPU workloads.
+
+This is not yet an executable queue: no harness window compiler has been authored
+or admitted, and baseline/replay qualification remains outstanding. Local's next
+step remains the full 265-test software acceptance, complete-unit admission and
+CPU-only pricing pass in that order. Candidate native results and formal outcomes
+remain **0/15** and **0**.

@@ -10,7 +10,7 @@
     "tests_passed": 258,
     "tests_failed": 0,
     "plan_digest": "de087cd475cee3713071ba38a55f10e5d884a11aa477696fa5d34571d84f707d",
-    "scope": "upstream complete-unit and queue-pricing tests plus population-window checks"
+    "scope": "258 checks passed on pre-a408422 r9 sources; latest merged optional Full128 mode requires separate acceptance and is not used by active batch"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -247,8 +247,8 @@
     }
   },
   "concurrent_upstream": {
-    "revision": "de608b1",
-    "status": "de608b1 merged; complete-unit admission and pricing executed successfully. New a408422 freezer observed, integration pending."
+    "revision": "a408422",
+    "status": "Merged per-UID freezer and optional runner mode locally; new checks unexecuted, not deployed to active r9. Existing r9 uses independently accepted population-contract builder."
   },
   "complete_unit_runner": {
     "path": "actionmesh/research_math/complete_unit_runner.py",
@@ -452,5 +452,26 @@
       "active frozen batch remains unchanged"
     ],
     "next_action": "Prepare isolated two-job co-location qualification at next safe batch boundary; retain only if bounds and useful throughput pass; independent preparation may overlap."
+  },
+  "full128_per_uid_freeze": {
+    "status": "prospective_freezer_and_runner_mode_authored_unexecuted",
+    "contract": "docs/research-math-20261006/actionbench-full128-unit-freeze-contract.json",
+    "freezer": "actionmesh/research_math/actionbench_full128_unit.py",
+    "runner": "actionmesh/research_math/complete_unit_runner.py",
+    "source_pricing": "inputs/actionbench-full128-queue/pricing.json",
+    "source_pricing_observed": true,
+    "required_runtime_profile": "fp16-lowram-v1",
+    "required_unit_timeout_seconds_if_priced": 1664,
+    "dataset_files_rehashed_per_uid": 18,
+    "tests_authored": 12,
+    "tests_executed": 0,
+    "window_plan_compiler_authored": false,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
+    "candidate_methods_tested": false
   }
 }

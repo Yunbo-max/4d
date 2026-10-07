@@ -76,22 +76,53 @@ def collect_native_sequence(output,uid):
     return report
 
 
+def validate_full128_mode(args):
+    values=(args.uid,args.window_id,args.pricing,args.root)
+    active=any(value is not None for value in values)
+    if active and not all(values):
+        raise ValueError('Full128 mode requires root, pricing, UID and window ID together')
+    if active and args.pricing.resolve()!=args.root.resolve()/'inputs/actionbench-full128-queue/pricing.json':
+        raise ValueError('Canonical Full128 pricing path required')
+    return active
+
+
+def require_full128_budget(args,manifest):
+    if args.wall_seconds!=manifest['selected_unit']['unit_timeout_seconds']:
+        raise ValueError('Full128 unit wall limit must equal admitted queue price')
+
+
 def verify_prerequisites(args,output):
     from research_math.actionbench_unit_manifest import freeze
     from research_math.snapshot_admission import snapshot_manifest, verify_source
     load=lambda p:json.loads(p.read_text())
     contract,population,snapshot,semantics,manifest=map(load,(args.contract,args.population,
         args.snapshot_admission,args.dataset_semantics,args.unit_manifest))
-    if manifest.get('status')!='frozen_engineering_current_release_unit':
+    full128_mode=validate_full128_mode(args)
+    expected_status=('frozen_engineering_current_release_unit' if not full128_mode
+                     else 'frozen_engineering_full128_unit')
+    if not full128_mode and manifest.get('status')!='frozen_engineering_current_release_unit':
         raise ValueError('Frozen unit manifest required')
     if manifest['prerequisite_receipts']!={'snapshot_admission_sha256':digest(args.snapshot_admission),
             'dataset_semantics_sha256':digest(args.dataset_semantics)}:
         raise ValueError('Prerequisite receipt hashes changed')
-    checked=freeze(contract,population,snapshot,semantics,args.source_root,args.dataset_root,
-        output/'revalidated-unit-manifest.json',digest(args.snapshot_admission),digest(args.dataset_semantics))
-    if checked!=manifest:raise ValueError('Frozen unit inputs or configuration changed')
+    if full128_mode:
+        from research_math.actionbench_full128_unit import freeze_unit
+        pricing=load(args.pricing)
+        require_full128_budget(args,{'selected_unit':{
+            'unit_timeout_seconds':pricing.get('unit_timeout_seconds')}})
+        checked=freeze_unit(args.root,pricing,snapshot,semantics,manifest,
+            args.source_root,args.dataset_root,args.uid,args.window_id,
+            output/'revalidated-unit-manifest.json',digest(args.snapshot_admission),
+            digest(args.dataset_semantics))
+        require_full128_budget(args,checked)
+    else:
+        checked=freeze(contract,population,snapshot,semantics,args.source_root,args.dataset_root,
+            output/'revalidated-unit-manifest.json',digest(args.snapshot_admission),digest(args.dataset_semantics))
+        if checked!=manifest:raise ValueError('Frozen unit inputs or configuration changed')
+    if checked.get('status')!=expected_status:
+        raise ValueError('Unexpected revalidated unit status')
     verify_source(args.source_root,load(args.snapshot_contract)['source'])
-    generation=manifest['generation']
+    generation=checked['generation']
     validate_generation_profile(generation)
     model_dirs={'actionmesh':'ActionMesh','triposg':'TripoSG','dinov2':'dinov2','rmbg':'RMBG'}
     for key,name in model_dirs.items():
@@ -103,7 +134,7 @@ def verify_prerequisites(args,output):
             raise ValueError('Official model cache path differs from verified root: '+key)
     if os.environ.get('CUDA_VISIBLE_DEVICES')!=args.gpu_uuid:
         raise ValueError('Harness must allocate the exact physical GPU UUID')
-    return manifest
+    return checked
 
 
 def execute(args):
@@ -113,13 +144,20 @@ def execute(args):
     output=args.output.resolve();output.mkdir(parents=True,exist_ok=False)
     started=time.monotonic();monitor=DeviceSamples(args.gpu_uuid,output/'device-samples.jsonl')
     host=HostSamples(output,output/'host-samples.jsonl')
-    result={'status':'failed','scientific_effect_qualification':False,'candidate_methods_tested':False,
-            'source_root':str(args.source_root),'gpu_uuid':args.gpu_uuid,'stages':{}}
+    result={'status':'failed','scientific_effect_qualification':False,
+            'native_scientific_qualification':False,'candidate_methods_tested':False,
+            'queue_priced':False,'queue_approved':False,'queue_generated':False,
+            'dispatch_ready':False,'source_root':str(args.source_root),
+            'gpu_uuid':args.gpu_uuid,'stages':{}}
     try:
         host.start()
         manifest=verify_prerequisites(args,output)
         monitor.start()
-        uid=manifest['calibration_unit']['uid']
+        uid=(manifest['selected_unit']['uid'] if 'selected_unit' in manifest
+             else manifest['calibration_unit']['uid'])
+        if 'selected_unit' in manifest:
+            result['queue_context']=manifest['selected_unit']
+            result['queue_priced']=True
         environment=os.environ.copy()
         environment.update(HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1',HF_HUB_DISABLE_IMPLICIT_TOKEN='1',
             PYTHONPATH=str(args.source_root)+os.pathsep+str(args.source_root/'third_party/TripoSG'))
@@ -171,6 +209,10 @@ def main():
     for name in ('contract','population','snapshot-contract','snapshot-admission','dataset-semantics',
                  'unit-manifest','source-root','dataset-root','weights-root','output'):
         parser.add_argument('--'+name,type=Path,required=True)
+    parser.add_argument('--root',type=Path)
+    parser.add_argument('--pricing',type=Path)
+    parser.add_argument('--uid')
+    parser.add_argument('--window-id')
     parser.add_argument('--gpu-uuid',required=True)
     parser.add_argument('--wall-seconds',type=int,default=27000)
     args=parser.parse_args()
