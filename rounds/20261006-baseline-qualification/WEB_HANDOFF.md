@@ -20,7 +20,7 @@ Qualify the strong simple controls and official/native ActionBench scoring chain
 - Native candidate results: 0/15
 - Returned setup: 127/127 software checks, native runtime, original asset,
   three control artifacts and scoring request accepted from the latest review packet
-- Scorer-parity separation: generated, not run at the current revision
+- Scorer parity/finalization: returned at `00b30fd`; nine three-arm metric comparisons had exact zero difference under the explicit deterministic compatibility backend; engineering evidence only
 - C02 corrected development operator: software-tested historically, not natively qualified
 
 The historical software-test receipts are engineering evidence only. They do not close native qualification.
@@ -40,7 +40,8 @@ The historical software-test receipts are engineering evidence only. They do not
 11. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
 12. `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
 13. `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
-14. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
+14. `docs/research-math-20261006/actionbench-current-release-unit-contract.json`
+15. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
 
@@ -58,6 +59,7 @@ Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_R
 | Full-128 reproduction guard | `actionmesh/research_math/actionbench_full_reproduction.py` | checks the frozen complete-population/current-README rule; never runs the scorer or authorizes dispatch |
 | Full-128 snapshot admission | `actionmesh/prepare_actionbench_snapshots.py`, `actionmesh/research_math/snapshot_admission.py` | CPU-only immutable revision/byte/file closure; generated, unexecuted |
 | Full-128 dataset semantics | `actionmesh/prepare_actionbench_dataset_semantics.py`, `actionmesh/research_math/actionbench_dataset_semantics.py` | revalidates admitted bytes and all 128 tensor/camera/RGBA structures; generated, unexecuted, no scientific qualification |
+| Current-release unit manifest | `actionmesh/prepare_actionbench_unit_manifest.py`, `actionmesh/research_math/actionbench_unit_manifest.py` | freezes the first canonical UID, exact input/source/model identities and later three-arm output/timing boundary; CPU-only, generated, unexecuted |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
@@ -98,14 +100,13 @@ Apply the exact success/failure/insufficient-evidence rules in `BASELINE_SCORING
 ## First executable step
 
 After resolving the exact delivered commit, host, interpreter and installed skill
-directory, execute the whole software acceptance plan at this changed revision.
-Confirm its `code_refs` includes the post-promotion parity finalizer; historical
-127/127 evidence predates that source and is not current acceptance.
-Then source-inspect and run the protocol-free engineering parity plan from
-`ACTIONBENCH_SCORER_PARITY.md`, promote its complete passed output bundle and run
-the committed CPU-only post-promotion finalization harness; direct finalizer
-execution is forbidden. Preserve its exact one-UID scope. Scientific
-baseline scoring remains blocked until a genuine source-backed protocol exists.
+directory, execute the whole software acceptance plan at this changed revision;
+the returned 201/201 run predates the new unit-manifest checks. Verify the
+retained parity/finalization hashes from `longgoal-20261007` and do not rerun that
+expensive one-UID scorer chain unless its bound source/input closure changed.
+Continue with immutable full-128 staging, snapshot admission, dataset semantics
+and the deterministic unit manifest. Scientific baseline scoring remains blocked
+until a genuine source-backed protocol exists.
 
 The bounded primary-source audit at
 `docs/research-math-20261006/actionbench-qualification-source-audit.json`
@@ -134,12 +135,19 @@ an explicit generation `--seed 42`; the scorer still uses sampling seed 44.
 
 Before any dataset-wide launch, Local must return verified immutable dataset and
 model snapshot manifests, the byte-bound full-128 dataset-semantics admission,
+the receipt-bound deterministic unit manifest,
 actual RTX 2080 Ti memory/runtime facts, and a measured
 complete non-fast seed-42 16-frame generation/export/scoring unit. The official
 release documents 32 GB default and 12 GB low-RAM requirements but no 2080 Ti
 result, and does not bind low-RAM or float16 to the published row. Preserve OOM
 or dtype incompatibility as a natural failure; do not silently switch variant or
 precision. No eight-hour queue may be generated from one-UID parity timing.
+The unit contract fixes UID
+`000-000_03b69da8d2c94b5999bcf2605ee2ecd9` before outcomes and defines a later
+complete boundary with native, world-Gaussian and body-Gaussian arms plus all
+three official score rows. Its current plan is CPU-only manifest admission; the
+GPU complete-unit runner is not yet authored, so neither the manifest nor its
+timing authorizes inference or queue construction.
 
 ## Runtime supplement — 2026-10-06
 

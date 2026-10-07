@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T09:05:28Z",
+  "recorded_at": "2026-10-07T10:15:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local 2026-10-07 update: 201 software checks passed; one-UID three-arm official/faithful scorer parity passed with zero differences under an explicitly versioned deterministic KNN backward compatibility policy; CPU finalization completed. See local_execution_update_20261007 and its raw evidence. Full128 data/model admission, formal baseline/native qualification and all 15 candidate native comparisons remain pending. Earlier generated_unexecuted records below retain their historical authoring scope.",
+  "status": "Local 2026-10-07 update: 201 software checks passed; one-UID three-arm official/faithful scorer parity passed with zero differences under an explicitly versioned deterministic KNN backward compatibility policy; CPU finalization completed. This revision adds a generated deterministic first-UID manifest for a later non-fast bfloat16 three-arm complete-unit timing attempt. Full128 snapshot/dataset-semantic admission, execution of the new manifest, the GPU complete-unit runner, formal baseline/native qualification and all 15 candidate native comparisons remain pending. There is no candidate native result, formal outcome or queue.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -422,5 +422,52 @@
     "native_contract_qualified": false,
     "candidate_native_results": 0,
     "candidate_count": 15
+  },
+  "actionbench_current_release_unit_manifest": {
+    "status": "generated_unexecuted_parity_complete_snapshot_and_semantics_pending",
+    "recorded_at": "2026-10-07T10:15:00Z",
+    "base_commit": "00b30fd3dfc75678839b6fe8dc1f6060a14b5a84",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-current-release-unit-contract.json",
+      "sha256": "d07ec5322dc4cbfa8c193713e7a30b11907b79d83369976aa39f3e4fe547ea5a"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-current-release-unit-source-review.json",
+      "sha256": "26c282256ae1da1e46490f87c170bc284902f7663de24ac0a87f6a7bdcd65eff"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-current-release-unit.json",
+      "sha256": "c38bb68262f07c8475f64e28a908d300488932e461eda34380e3c1e4615a4360"
+    },
+    "runbook_ref": {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "47afea923f30a86f263ab4ca04df4897473a22037bfa66999bd379d2bc67e97d"
+    },
+    "round_handoff_ref": {
+      "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
+      "sha256": "4ae7bf5dbb490965b917e9b9968e31ba837336faf6e95a8aa5f8f3c3aa352b92"
+    },
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "calibration_uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+    "uid_selection_prospective": true,
+    "generation_seed": 42,
+    "official_scorer_sampling_seed": 44,
+    "arms_bound": 3,
+    "default_nonfast_bfloat16_natural_failure_preserved": true,
+    "unit_manifest_executed": false,
+    "complete_unit_runner_authored": false,
+    "complete_unit_executed": false,
+    "current_authored_test_methods_observed": 212,
+    "new_checks_authored": 11,
+    "tests_executed_by_web": 0,
+    "dataset_bytes_loaded_by_web": 0,
+    "model_bytes_loaded_by_web": 0,
+    "official_scores_run": 0,
+    "gpu_workloads": 0,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
   }
 }
