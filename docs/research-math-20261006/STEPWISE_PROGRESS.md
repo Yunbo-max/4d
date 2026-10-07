@@ -187,3 +187,108 @@ not increment the candidate ledger: complete candidate validation designs remain
 The parity unit's six scorer invocations are not a complete candidate experiment;
 its timing cannot price the 27,000-second launch budget. Next work is authentic
 protocol/threshold freezing, Local software acceptance, then this parity plan.
+
+## Continuation: source-bound parity admission — 2026-10-07
+
+Resumed exact remote main `741be89e28cebc52ea84ac1aa345cd0ae383e217`;
+no newer Local/GPU feedback was present. Official ActionBench dataset/API, pinned
+README/evaluator source and ActionMesh paper v2 were rechecked. The release binds
+128 assets, 16 frames and 100,000 tracked surface points per frame. For the
+returned development UID, the released `surfaces.npy` LFS SHA-256 exactly matches
+the retained GT hash `25881f...823e`.
+
+The source review found that ActionBench publishes only full-128 aggregate
+leaderboard means, not a per-asset qualification threshold. Applying those means
+to the one development UID would be a scope error. The prior parity builder also
+required a fully verified native protocol before it could create the
+official-versus-faithful sidecar, producing a circular dependency while the
+faithful protocol itself needs that sidecar.
+
+Generated a narrower parity admission. The builder now writes and pins a
+single-UID sample manifest plus a source/scorer contract binding the released
+population, exact GT, official sources, native budgets, three metric names and
+both scorer descriptors. It explicitly records `qualification_rules=not_supplied`
+and `native_contract_qualified=false`; changing these or any identity rejects the
+run. Three new rejection checks were authored. **Web executed no tests, scorer or
+GPU workload**; Local whole-suite acceptance and the actual parity run remain
+pending.
+
+This unblocks measurement of scorer equivalence without fabricating scientific
+qualification. A passed zero-tolerance parity sidecar still does not authorize
+baseline/control acceptance: prospective source-backed decision rules, a complete
+installed-verifier protocol and nonce-bound trusted replay remain mandatory.
+Candidate validation designs/results/verdicts remain **0/15**. Next executable
+step: Local accepts the changed suite, rechecks device/disk, generates and reviews
+the parity-only plan, then runs it through the installed harness and returns all
+raw official/faithful outputs.
+
+## Continuation: parity admission independent-review repair — 2026-10-07
+
+Independent source review found the preceding narrower admission was still not
+executable: `run_experiments.py` rejects every `purpose=scientific` plan lacking
+`protocol_ref`. It also found that the parity runner could write a sidecar after
+metric equality without validating the official adapter/source/input/output
+provenance or the faithful wrapper's protocol/source/input bindings. Finally,
+the builder pinned the source-evidence file but did not verify its contents
+against the current request.
+
+The builder now generates a complete installed-verifier protocol alongside the
+admission, manifest and native definition. Its source-backed `cd_3d >= 0` rules
+express only the published native-distance output domain; explicit guardrails
+forbid effect/candidate claims and retain `native_contract_qualified=false`.
+This satisfies the scientific execution framework without inventing a
+one-asset performance threshold. Plan construction now passes that protocol to
+`native.make_plan`, uses a declared native arm role, and cannot complete unless
+the installed protocol verifier accepts all source, split, metric, scorer,
+sampling, budget, role and qualification-reference bindings.
+
+Before metric comparison, the runner now validates each process command/cwd/
+exit/log binding. The official result must additionally bind the exact adapter,
+seed/device, frozen denominator, original and patched evaluator hashes, reviewed
+compatibility patch, UID/frame count, sequence/GT, every GLB, export manifest,
+CSV/summary and inner official CLI execution. The faithful result is passed
+through the existing strict native-output validator, which binds protocol,
+device, evaluator and official-source hashes, sequence, GT, generation report
+and pass manifest. A mismatch prevents the verification sidecar.
+
+Nine parity checks are newly authored relative to remote main (21 checks in the
+module total), but **none were executed by Web**. No scorer or GPU workload ran;
+official scores, complete multi-arm timing, candidate designs/results/verdicts
+remain 0. The next executable step remains Local whole-suite acceptance,
+device/disk recheck, source inspection of all four generated parity contract
+files, then exact-digest harness execution with complete raw return.
+
+## Continuation: reject false native qualification — 2026-10-07
+
+A second independent review invalidated the attempted generated scorer-validity
+protocol. Besides an incompatible paired/project aggregation combination, the
+substantive problem is that the installed native evaluator does not honor prose
+guardrails: it would interpret `cd_3d >= 0` as ordinary baseline/control
+qualification and could mark every finite nonnegative score qualified. That
+would turn a domain-validity fact into a false scientific result.
+
+The generated protocol/admission path was removed. Parity again requires a
+separately authored `--protocol` that passes the installed verifier, uses the
+exact official scorer and request sampling, cites the verified source evidence,
+declares a `scorer-qualification` execution role, and contains genuine
+source-backed performance rules. The builder and runner explicitly reject the
+known domain-only `cd_3d >= 0` substitute. Because official sources reviewed so
+far publish aggregate 128-object means but no one-asset threshold, parity plan
+generation remains honestly blocked rather than relabeled as engineering.
+
+The useful code advance is retained: source evidence is checked against the
+request/GT/current official files, and sidecar emission now requires exact outer
+command/log binding plus complete official adapter/source/patch/input/GLB/output
+provenance and the faithful wrapper's strict protocol/source/input validation.
+Two new checks cover execution-command and unbound-adapter rejection (14 checks
+in the parity module total); **Web executed none**. Official scores, GPU work,
+complete multi-arm timing, candidate designs/results/verdicts remain 0. The
+next executable step is to establish a legitimate source-backed native protocol;
+without it Local should return `blocked_missing_source_backed_native_protocol`.
+
+Final static review also found and repaired four fail-closed details: the native
+sample manifest is now a direct scientific-plan input; both scorers execute from
+the exact descriptor cwd; any qualification rule citing the negative threshold
+review is rejected, regardless of metric/operator spelling; and the full
+sampling policy plus `predictions_per_sample=1` are bound in both builder and
+runner. These remain authored, unexecuted safeguards.

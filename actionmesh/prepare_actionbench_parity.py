@@ -51,20 +51,47 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         raise ValueError("Retained dependency lock references required")
     for ref in dependency_refs:
         resolve_ref(root, ref)
+    from research_math.actionbench_parity import (
+        scorer_descriptors, verify_source_evidence,
+    )
+    descriptors = scorer_descriptors(root, request)
+    population = json.loads(resolve_ref(root, request["population_ref"]).read_text())
+    if (population.get("dataset"), population.get("revision")) != (
+            "facebook/actionbench", descriptors["official_scorer"]["revision"]):
+        raise ValueError("Released population and official scorer revision differ")
+    source_evidence = (root / "docs" / "research-math-20261006" /
+                       "actionbench-official-source-evidence.json")
+    if not source_evidence.is_file():
+        raise ValueError("Committed ActionBench source evidence is required")
+    verify_source_evidence(root, request, source_evidence)
+    source_evidence_ref = file_ref(root, source_evidence)
     protocol = json.loads(protocol_path.read_text())
     evaluation.verify_protocol(root, protocol)
     contract = evaluation.contract_for_group(protocol, group)
-    from research_math.actionbench_parity import scorer_descriptors
-    descriptors = scorer_descriptors(root, request)
     if contract.get("scorer") != descriptors["official_scorer"]:
         raise ValueError("Freeze the exact official-adapter scorer before parity execution")
     if (contract.get("benchmark_id"), contract.get("benchmark_revision")) != (
             "facebook/actionbench", descriptors["official_scorer"]["revision"]):
         raise ValueError("Frozen native contract is not the pinned ActionBench revision")
-    if contract.get("sampling", {}).get("parameters") != request["native_protocol"]:
+    expected_sampling = {"policy": "official-actionbench-full-sequence",
+                         "parameters": request["native_protocol"]}
+    if contract.get("sampling") != expected_sampling:
         raise ValueError("Frozen native sampling differs from the admitted request")
-    if {row.get("name") for row in contract.get("metrics", [])} != set(("cd_3d", "cd_4d", "cd_motion")):
-        raise ValueError("Frozen native metrics differ from ActionBench qualification metrics")
+    if {row.get("name") for row in contract.get("metrics", [])} != {
+            "cd_3d", "cd_4d", "cd_motion"}:
+        raise ValueError("Frozen native metrics differ from ActionBench metrics")
+    sample_manifest = json.loads(resolve_ref(root, contract["sample_manifest_ref"]).read_text())
+    if (sample_manifest.get("sample_ids") != [request["uid"]] or
+            sample_manifest.get("denominator") != 1 or
+            sample_manifest.get("predictions_per_sample") != 1 or
+            sample_manifest.get("labels_or_tests_ref") != request["ground_truth_ref"]):
+        raise ValueError("Parity protocol must bind the one exact released sample")
+    if "scorer-qualification" not in contract.get("arm_requirements", {}):
+        raise ValueError("Protocol must declare the scorer-qualification execution role")
+    qualifications = [contract.get("baseline_qualification", {})] + list(
+        contract.get("control_qualifications", []))
+    if any(rule.get("reference_ref") == source_evidence_ref for rule in qualifications):
+        raise ValueError("Negative threshold review cannot qualify baseline/control efficacy")
 
     new_sources = [root / "actionmesh" / "official_actionbench_adapter.py",
                    root / "actionmesh" / "research_math" / "actionbench_parity.py",
@@ -85,8 +112,16 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     plan_dir.mkdir(parents=True, exist_ok=False)
     dirty_path = plan_dir / "dirty.patch"
     dirty_path.write_bytes(dirty)
-    inputs = request["input_refs"] + [file_ref(root, request_path), file_ref(root, protocol_path), environment_ref,
-                                      file_ref(root, dirty_path)] + dependency_refs
+    published_refs = [
+        file_ref(root, root / "actionmesh" / "repo" / "actionbench" / "README.md"),
+        file_ref(root, source_evidence),
+    ]
+    if source_evidence_ref not in contract.get("published_source_refs", []):
+        raise ValueError("Native contract must cite the verified ActionBench source evidence")
+    inputs = request["input_refs"] + [file_ref(root, request_path),
+                                      file_ref(root, protocol_path),
+                                      contract["sample_manifest_ref"], environment_ref,
+                                      file_ref(root, dirty_path)] + published_refs + dependency_refs
     unique_inputs = {ref["path"]: ref for ref in inputs}
     command = [sys.executable, "-m", "research_math.actionbench_parity",
                "--root", "..", "--request", str(request_path),
@@ -134,7 +169,8 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         limits={"max_attempts": 1, "max_development_trials": 1,
                 "max_confirmation_trials": 0, "max_retries_per_trial": 0,
                 "wall_time_seconds": wall_seconds,
-                "attempt_timeout_seconds": wall_seconds})
+                "attempt_timeout_seconds": wall_seconds},
+        protocol_ref=file_ref(root, protocol_path))
     plan["plan_digest"] = native.plan_digest(plan)
     native.validate_plan(root, plan)
     native_path = plan_dir / "native.json"

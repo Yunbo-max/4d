@@ -1,0 +1,79 @@
+{
+  "kind": "actionbench-official-source-evidence",
+  "version": "1.0.0",
+  "captured_at": "2026-10-07T01:03:06Z",
+  "benchmark": {
+    "id": "facebook/actionbench",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "revision_api_url": "https://huggingface.co/api/datasets/facebook/actionbench/revision/2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "revision_api_bytes": 172191,
+    "revision_api_sha256": "a274894117f522d7d393ae74723f339a59656deb115a29df34871f22a03d9650",
+    "upstream_last_modified": "2026-05-28T20:36:52.000Z",
+    "released_file_count": 2309,
+    "released_sample_count": 128,
+    "released_camera_count": 128,
+    "released_image_count": 2048,
+    "population_ref": {
+      "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+      "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+    }
+  },
+  "selected_development_asset": {
+    "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+    "tree_api_url": "https://huggingface.co/api/datasets/facebook/actionbench/tree/2796071cbe6248422fcbeab3101fa9f9886cb7b9/data/000-048_45e57349f062416aaf11f2c31587da16?recursive=true&expand=true",
+    "tree_api_bytes": 16441,
+    "tree_api_sha256": "da44aa9582312c566b4a8162d31525fbfbfeb25cc4a00fe84a8769809f9bf30c",
+    "camera_git_oid": "3848a260fcf3f034daf1da03e600d888bfeba0ae",
+    "image_count": 16,
+    "surfaces_git_oid": "6a4ce13b2952b319390a517c3ba56e3e7d873540",
+    "surfaces_lfs_sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e",
+    "surfaces_bytes": 38400128,
+    "returned_gt_sha256_matches_released_lfs_oid": true
+  },
+  "official_local_sources": [
+    {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"},
+    {"path": "actionmesh/repo/actionbench/benchmark.py", "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"},
+    {"path": "actionmesh/repo/actionbench/chamfer.py", "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"},
+    {"path": "actionmesh/repo/actionbench/icp.py", "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"},
+    {"path": "actionmesh/repo/actionbench/sample_mesh.py", "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"},
+    {"path": "actionmesh/repo/actionbench/sample_point_cloud.py", "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"},
+    {"path": "actionmesh/repo/actionbench/evaluate_dataset.py", "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"}
+  ],
+  "published_definition": {
+    "dataset_card_url": "https://huggingface.co/datasets/facebook/actionbench",
+    "paper_url": "https://arxiv.org/abs/2601.16148v2",
+    "paper_version": "v2",
+    "paper_revised_at": "2026-04-01",
+    "frames_per_sample": 16,
+    "tracked_points_per_frame": 100000,
+    "normalization": "[-1,1]^3",
+    "metrics": ["cd_3d", "cd_4d", "cd_motion"],
+    "direction": "lower_is_better",
+    "official_readme_aggregate_scope": "mean over all 128 animated objects",
+    "official_readme_actionmesh_seed": 42,
+    "official_readme_actionmesh_means": {"cd_3d": 0.054, "cd_4d": 0.085, "cd_motion": 0.153},
+    "paper_v2_actionmesh_means": {"cd_3d": 0.053, "cd_4d": 0.081, "cd_motion": 0.148},
+    "aggregate_source_discrepancy": true,
+    "discrepancy_policy": "Retain both versioned aggregate reports; do not choose either as a one-asset threshold."
+  },
+  "metric_domain_review": {
+    "source": "ActionMesh paper v2 metric definitions and pinned official ActionBench implementation",
+    "definition": "The pinned evaluator computes CD-3D, CD-4D and CD-M from sums or means of Euclidean norms after the stated alignment/sampling operations; every valid returned distance is nonnegative.",
+    "range": "finite values >= 0",
+    "scorer_validity_rule": {"metric": "cd_3d", "operator": "ge", "threshold": 0.0},
+    "supports_performance_qualification": false,
+    "boundary": "This rule only rejects invalid scorer output. It does not distinguish useful from ineffective predictions and cannot qualify a baseline, control, candidate, or scientific claim."
+  },
+  "threshold_review": {
+    "per_asset_qualification_threshold_published": false,
+    "aggregate_values_may_be_applied_to_one_asset": false,
+    "decision": "Do not reuse a 128-object aggregate mean as a one-asset pass threshold. Also do not put the nonnegative distance domain into baseline/control qualification fields: the installed evaluator would treat it as scientific qualification.",
+    "remaining_requirement": "Freeze prospective source-backed scientific qualification rules before baseline/control qualification or candidate scoring acceptance."
+  },
+  "scientific_state": {
+    "official_scores_run": 0,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

@@ -187,17 +187,27 @@ this development asset.
 
 Before changing the native contract to `faithful_harness`, follow
 [`ACTIONBENCH_SCORER_PARITY.md`](docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md).
-The first frozen protocol revision must use the exact official scorer descriptor.
-Build the parity plan only after that full protocol passes the installed native
-verifier, then execute the plan only through `run_harness.py`.
+The official release has no per-asset numerical performance threshold, so do
+not copy its 128-object aggregate means into the one-asset protocol. A
+`metric >= 0` domain-validity rule is also forbidden because the installed
+evaluator would treat it as baseline/control qualification. The parity builder
+requires a separately reviewed `--protocol`, validates it through the installed
+verifier, and rejects domain-only qualifications. Source-inspect that protocol
+and both generated plans, then execute only through `run_harness.py`. If no
+genuine source-backed performance rule exists, return
+`blocked_missing_source_backed_native_protocol`; do not relabel this benchmark
+comparison as engineering.
 
 The parity unit invokes the official ActionBench dataset CLI and the existing
 faithful wrapper separately for each of the same three prediction arms. It
-retains GLBs, source copies, patch identity, raw official CSV/summary, raw
-faithful JSON and logs. All three official metrics require zero absolute
-tolerance. A passed sidecar permits a new frozen protocol revision using the
-faithful descriptor plus `verification_ref`; it does not qualify any baseline,
-control or candidate and does not replace trusted nonce-bound replay.
+retains and verifies GLBs, source copies, patch identity, exact subprocess
+commands, input hashes, raw official CSV/summary, raw faithful JSON and logs.
+All three official metrics require zero absolute tolerance. A passed sidecar
+permits a new frozen protocol revision using the faithful descriptor plus
+`verification_ref`; that protocol still requires prospective source-backed
+performance qualification rules and installed-verifier acceptance.
+Parity does not qualify any baseline, control or candidate and does not replace
+trusted nonce-bound replay.
 
 Create the admitted scientific plan with the actual resolved values:
 

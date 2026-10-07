@@ -37,20 +37,32 @@ The retained metric values are infrastructure evidence only at this stage.
 
 ## Admission before execution
 
-Do not execute from the current setup evidence alone. First freeze a complete
-source-backed native protocol that passes the installed
-`scripts/_native_eval.py:verify_protocol` with the scorer set to the exact
-official descriptor returned by
-`research_math.actionbench_parity.scorer_descriptors`. This deliberately blocks
-the task while authentic sample/split definitions and prospective
-baseline/control thresholds are missing. Do not invent a one-asset threshold.
+The official dataset and paper publish the released population and metric
+definition, but no per-asset numerical pass threshold. Their leaderboard values
+are means over all 128 objects and must not be reused as a threshold for this one
+development UID. The exact captured sources and this negative threshold finding
+are frozen in `actionbench-official-source-evidence.json`.
 
-The protocol must retain the released ActionBench revision
-`2796071cbe6248422fcbeab3101fa9f9886cb7b9`, its released sample manifest and GT
-inventory, the three official metric paths, the current request's sampling
-parameters and budgets, and source-backed qualification rules. The selected
-group must expose this exact official scorer descriptor. The environment and
-GPU UUID must match the returned native runtime and current physical device.
+Scientific-purpose harness execution requires a complete installed-verifier
+native protocol. A nonnegativity rule such as `cd_3d >= 0` proves only that a
+distance is in its valid output domain; the installed evaluator would still
+interpret it as baseline/control qualification. It is therefore explicitly
+rejected and must not be used to bypass the missing performance rule.
+
+`prepare_actionbench_parity.py` requires `--protocol` and fails before emitting
+a plan unless the installed verifier accepts it, its scorer is the exact
+official adapter, its ActionBench revision/metrics/sampling match the request,
+its published sources include the verified source-evidence file, and it declares
+the `scorer-qualification` role with genuine source-backed qualifications. The
+builder and runner validate the source-evidence contents against the request,
+returned GT, and current official files rather than trusting its hash alone.
+
+No such efficacy qualification protocol is presently committed. This is a
+deliberate hard block, not permission to relabel parity as engineering or to use
+the 128-object aggregate mean as a one-asset threshold. The provenance-hardened
+runner is ready, but execution remains blocked until that protocol exists.
+The environment and GPU UUID must match the returned runtime and current physical
+device before parity execution.
 
 ## Harness-only Local commands
 
@@ -63,7 +75,7 @@ angle brackets with reviewed facts:
   --root "$project_dir" \
   --skill-dir "$skill_dir" \
   --request "$project_dir/plans/control-scoring-request-000-048.json" \
-  --protocol "$project_dir/plans/<frozen-official-scorer-protocol>.json" \
+  --protocol "$project_dir/plans/<reviewed-official-scorer-protocol>.json" \
   --environment "$project_dir/inputs/native-runtime/environment.json" \
   --run-id actionbench-official-faithful-parity-001 \
   --plan-dir "$project_dir/plans/actionbench-official-faithful-parity-001" \
@@ -91,14 +103,19 @@ observed VRAM.
 Accept scorer parity only when:
 
 - the outer and native harness receipts are complete and bind the approved plan;
+- each wrapper process record exactly matches the reviewed command, working
+  directory, exit code and retained stdout/stderr;
 - each official invocation executed the retained patched copy of the pinned
-  official CLI and returned exactly one requested UID;
+  official CLI and binds its source hashes, compatibility patch, exact command,
+  UID, sequence, GT, CSV, summary, export manifest and logs;
+- each faithful output binds its protocol, device, evaluator/source hashes,
+  sequence, GT, generation report and pass manifest;
 - every exported GLB round-trips with exact vertices and faces;
 - both scorers succeeded on all three arms;
 - all nine metric comparisons have absolute difference `0.0`;
 - device samples bind the current physical GPU UUID with no telemetry error; and
-- `faithful-harness-verification.json` matches the frozen official contract's
-  sample manifest and both exact scorer descriptors.
+- `faithful-harness-verification.json` matches the generated parity-only sample
+  manifest and both exact scorer descriptors.
 
 Do not relax the zero tolerance after seeing a mismatch. Inspect, in order, the
 GLB export manifest, executed official source hashes and patch record, runtime
@@ -107,9 +124,11 @@ failure as parity failure; do not average the two paths or select the preferred
 value.
 
 After a pass, copy the verification sidecar into a stable project-relative
-location, hash it, and freeze a second protocol revision whose scorer is the
-faithful descriptor plus that `verification_ref`. Re-run native protocol
-verification. Only then may the existing three-arm scoring plan be prepared.
+location and hash it. Freeze a complete scientific protocol whose scorer is the
+faithful descriptor plus that `verification_ref`, whose sample manifest matches
+the parity manifest, and whose prospective qualification rules are independently
+source-backed. Run native protocol verification. Only then may the existing
+three-arm scoring plan be prepared.
 Trusted live replay remains mandatory and accepted values come from the official
 path. This parity unit is not a complete candidate multi-arm experiment and its
 timing cannot price the later eight-hour queue.

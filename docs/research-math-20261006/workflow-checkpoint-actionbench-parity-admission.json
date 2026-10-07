@@ -1,0 +1,58 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "status": "blocked_missing_source_backed_native_protocol",
+  "recorded_at": "2026-10-07T01:24:36Z",
+  "base_commit": "741be89e28cebc52ea84ac1aa345cd0ae383e217",
+  "decision": "Keep scorer parity behind the native scientific protocol gate; reject domain-only and aggregate-mean substitutes while retaining fail-closed provenance hardening.",
+  "delivery": {
+    "parity_runner_ref": {"path": "actionmesh/research_math/actionbench_parity.py", "sha256": "4a8bcf888ac9d95a026d2fa32b44b4918e4fd9910ced837f7090257e5a396881"},
+    "plan_builder_ref": {"path": "actionmesh/prepare_actionbench_parity.py", "sha256": "d1eae476d0f68eab56f56f21dbcf4a86e30d25ee2f897fb5b0158153ac2fa81b"},
+    "tests_ref": {"path": "actionmesh/research_math/tests/test_actionbench_parity.py", "sha256": "df512cba9ca1feb38d71c13f914521dea02697938089a6aad5c5ff3e347c2350"},
+    "source_evidence_ref": {"path": "docs/research-math-20261006/actionbench-official-source-evidence.json", "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"},
+    "source_review_ref": {"path": "docs/research-math-20261006/actionbench-parity-admission-source-review.json", "sha256": "124b3af84c5dfa03e2bce33aa62b4e645049f71f15d3e23b83ca4adc5db176d2"},
+    "entry_ref": {"path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md", "sha256": "24322dac454bd1155125b4c7944d8e4f039fc4f6da90bb199b04846545c019de"},
+    "runbook_ref": {"path": "LOCAL_AGENT_RUNBOOK.md", "sha256": "6fe91fd03064113f84036898c045b4330c8819c98f606eb6b1d530e1cfd44155"},
+    "baseline_scoring_ref": {"path": "docs/research-math-20261006/BASELINE_SCORING.md", "sha256": "da80e902edf999baeae5dc606b7ef00c52b6162d1ca0d42311af0909efbfb0df"},
+    "progress_ref": {"path": "docs/research-math-20261006/STEPWISE_PROGRESS.md", "sha256": "d00757420f0ff6d4dd4d286cae715059b52b636203812443e81410802580c4da"}
+  },
+  "source_facts": {
+    "benchmark_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "sample_uid": "000-048_45e57349f062416aaf11f2c31587da16",
+    "released_gt_sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e",
+    "metrics": ["cd_3d", "cd_4d", "cd_motion"],
+    "pinned_metric_distance": "unsquared Euclidean",
+    "published_per_asset_performance_threshold": false
+  },
+  "execution_gate": {
+    "protocol_argument_required": true,
+    "installed_native_verifier_required": true,
+    "exact_official_scorer_required": true,
+    "required_arm_role": "scorer-qualification",
+    "domain_only_cd_3d_ge_0_rejected": true,
+    "native_contract_qualified": false
+  },
+  "provenance_hardening": {
+    "source_evidence_content_bound": true,
+    "native_sample_manifest_directly_declared": true,
+    "frozen_scorer_cwd_exercised_exactly": true,
+    "full_sampling_policy_and_single_prediction_bound": true,
+    "outer_execution_command_logs_bound": true,
+    "official_adapter_source_patch_inputs_glbs_outputs_inner_command_bound": true,
+    "faithful_protocol_source_inputs_manifest_bound": true,
+    "validation_precedes_comparison_and_sidecar": true
+  },
+  "verification": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "parity_module_checks_total": 14,
+    "new_checks_authored_relative_to_base": 2,
+    "new_checks_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "next_executable_step": "Author and independently source-review a genuine native official-scorer protocol with performance qualifications and scorer-qualification role. Until then Local should return blocked_missing_source_backed_native_protocol; do not run or relabel parity.",
+  "candidate_validation_designs_complete": 0,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0
+}

@@ -1,0 +1,88 @@
+{
+  "kind": "source-review",
+  "status": "static_review_hardened_blocked_missing_protocol",
+  "recorded_at": "2026-10-07T01:24:36Z",
+  "base_commit": "741be89e28cebc52ea84ac1aa345cd0ae383e217",
+  "reviewed_sources": [
+    {"path": "actionmesh/research_math/actionbench_parity.py", "sha256": "4a8bcf888ac9d95a026d2fa32b44b4918e4fd9910ced837f7090257e5a396881"},
+    {"path": "actionmesh/prepare_actionbench_parity.py", "sha256": "d1eae476d0f68eab56f56f21dbcf4a86e30d25ee2f897fb5b0158153ac2fa81b"},
+    {"path": "actionmesh/research_math/tests/test_actionbench_parity.py", "sha256": "df512cba9ca1feb38d71c13f914521dea02697938089a6aad5c5ff3e347c2350"},
+    {"path": "docs/research-math-20261006/actionbench-official-source-evidence.json", "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"}
+  ],
+  "primary_source_findings": {
+    "released_population": 128,
+    "frames_per_asset": 16,
+    "tracked_points_per_frame": 100000,
+    "official_metrics": ["cd_3d", "cd_4d", "cd_motion"],
+    "pinned_implementation_distance": "unsquared Euclidean",
+    "published_metric_domain": "finite values >= 0",
+    "published_leaderboard_scope": "mean over all 128 animated objects",
+    "published_aggregate_reports_disagree": true,
+    "published_per_asset_performance_threshold": false,
+    "selected_gt_release_hash_matches_returned_gt": true
+  },
+  "independent_review_findings": [
+    {
+      "severity": "critical",
+      "problem": "A scientific plan without protocol_ref is rejected before execution.",
+      "resolution": "The builder again requires --protocol and validates it with the installed native verifier before plan emission."
+    },
+    {
+      "severity": "critical",
+      "problem": "A generated cd_3d >= 0 rule would be machine-interpreted as baseline/control qualification even though it proves output-domain validity only.",
+      "resolution": "Remove the generated protocol/admission path and explicitly reject the known domain-only qualification substitute."
+    },
+    {
+      "severity": "critical",
+      "problem": "Metric equality alone could emit the sidecar without proving exact source, adapter, input, command, device, seed or output identity.",
+      "resolution": "Validate outer execution records, full official provenance, and the faithful wrapper through validate_native_output before comparison."
+    },
+    {
+      "severity": "important",
+      "problem": "The source-evidence file was hash-pinned but its claims were not compared with the request and checkout.",
+      "resolution": "Verify benchmark revision/population, UID, GT hash/bytes, unsquared metric/sampling definition, threshold boundary and all pinned official source files during build and execution."
+    }
+  ],
+  "admission_boundary": {
+    "scientific_purpose_requires_protocol": true,
+    "installed_native_verifier_required": true,
+    "required_execution_role": "scorer-qualification",
+    "domain_only_qualification_rejected": true,
+    "aggregate_mean_as_one_asset_threshold_rejected": true,
+    "current_protocol_status": "blocked_missing_source_backed_native_protocol"
+  },
+  "provenance_fail_closed_checks": [
+    "changed source evidence, population, GT, request, protocol, sampling or scorer identity rejects",
+    "native sample manifest is a direct scientific-plan input and binds one prediction",
+    "scorer subprocess cwd exactly matches the frozen descriptor",
+    "any qualification rule citing the negative threshold review rejects",
+    "all three frozen prediction arms and zero metric tolerance remain prospective",
+    "official and faithful provenance validation precedes every metric comparison",
+    "sidecar cannot be emitted from stored booleans or metric equality alone"
+  ],
+  "static_checks": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "parity_module_checks_total": 14,
+    "new_checks_authored_relative_to_base": 2,
+    "new_checks_executed": 0,
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "final_narrow_static_review": "no remaining critical or important correctness issue",
+  "remaining_blockers": [
+    "genuine source-backed native performance qualification protocol declaring scorer-qualification",
+    "Local harnessed acceptance of the changed source and 14-test parity module",
+    "current device/disk recheck and successful three-arm official-versus-faithful parity",
+    "faithful-harness protocol revision and nonce-bound trusted replay",
+    "complete current multi-arm timing and peak VRAM"
+  ],
+  "scientific_state": {
+    "official_scores_run": 0,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

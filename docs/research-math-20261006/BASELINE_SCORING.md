@@ -176,9 +176,12 @@ per-pass JSON/logs, input/code bundle, device samples, native and outer plans,
 receipts, source revision/dirty patch and environment/dependency lock. Failed
 attempts and pending pass slots must be returned as well. For formal acceptance,
 Use [ACTIONBENCH_SCORER_PARITY.md](ACTIONBENCH_SCORER_PARITY.md) for the new
-independent path. Freeze a complete first protocol revision with its exact
-official scorer descriptor before executing parity; a pass emits the sidecar
-needed for the later faithful-harness protocol revision. Local must retain the
+independent path. Its provenance-hardened runner binds the exact official
+scorer, released sample/GT and budgets, but the builder still requires a genuine
+source-backed official-scorer protocol. It rejects a nonnegative-distance domain
+rule because the installed evaluator would incorrectly count that as
+baseline/control qualification. A pass emits the sidecar needed for the later
+faithful-harness protocol revision. Local must retain the
 live official/harness parity and nonce-bound replay records,
 source-backed qualification rules and the natural-failure analysis separately.
 

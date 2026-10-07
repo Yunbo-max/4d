@@ -11,7 +11,13 @@ if str(ACTIONMESH) not in sys.path:
     sys.path.insert(0, str(ACTIONMESH))
 
 import official_actionbench_adapter as official
-from research_math.actionbench_parity import exact_comparison, one_case
+from research_math.actionbench_parity import (
+    exact_comparison,
+    one_case,
+    validate_execution,
+    validate_official_output,
+)
+from research_math.control_scoring import file_ref
 
 
 class OfficialAdapterContractTests(unittest.TestCase):
@@ -135,6 +141,43 @@ class ParityReadoutTests(unittest.TestCase):
         official_values = {"cd_3d": 1.0, "cd_4d": 2.0, "cd_motion": 3.0}
         faithful_values = dict(official_values, cd_motion=3.0 + 1e-12)
         self.assertFalse(exact_comparison(official_values, faithful_values)["passed"])
+
+    def test_execution_binding_rejects_changed_command(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "stdout.log").write_text("out")
+            (root / "stderr.log").write_text("err")
+            record = {
+                "status": "completed", "exit_code": 0,
+                "command": ["python", "scorer.py"], "cwd": str(root),
+                "stdout_ref": file_ref(root, root / "stdout.log"),
+                "stderr_ref": file_ref(root, root / "stderr.log"),
+            }
+            validate_execution(root, record, ["python", "scorer.py"], root)
+            with self.assertRaisesRegex(ValueError, "execution binding"):
+                validate_execution(root, record, ["python", "other.py"], root)
+
+    def test_official_provenance_rejects_unbound_adapter_output(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            controls = root / "controls"
+            controls.mkdir()
+            (controls / "manifest.json").write_text("{}")
+            stage = root / "stage"
+            stage.mkdir()
+            (stage / "manifest.json").write_text("{}")
+            request = {
+                "uid": "sample", "scoring_seed": 44,
+                "repo_root": "repo",
+                "manifest_ref": file_ref(root, controls / "manifest.json"),
+                "native_protocol": {"frames": 16},
+                "arms": [{"arm": "native", "preparation_status": "completed",
+                          "sequence_ref": {"path": "sequence.npz",
+                                           "sha256": "0" * 64}}],
+            }
+            with self.assertRaisesRegex(ValueError, "adapter/device/seed"):
+                validate_official_output(
+                    root, request, "native", stage, "cuda:0", {}, 0)
 
 
 if __name__ == "__main__":
