@@ -1,0 +1,6 @@
+{
+  "upstream_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+  "bundle_sha256": "b068b5b998a581af4496b6888174da108efdc83b1d1664009e990990e4e08285",
+  "scope": "committed source and documents subset; immutable inputs copied from active r9, not moved",
+  "active_r9_changed": false
+}

@@ -513,5 +513,24 @@
     "agent_check_cadence": "approximately 20 minutes; investigate new errors and prepare following windows",
     "goal_created_epoch": 1791388713,
     "limitations": "Persistent goal requires host/client availability and tool access; remote journal alone is not an AI debugger. No claim of scientific completion."
+  },
+  "next_window_preparation": {
+    "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
+    "source_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+    "software_plan": "plans/software-r10/harness.json",
+    "software_plan_digest": "5c6f38b196fef2d622d60484582f2936b8a5eae5bf41f4e2e05f12e5520c97d3",
+    "software_checks_executed": false,
+    "manifest_plans_record": "plans/CONTINUATION_MANIFESTS.json",
+    "population_indices": [
+      10,
+      127
+    ],
+    "population_units": 118,
+    "batches": 8,
+    "static_validation": "all nine CPU-only harness plans accepted",
+    "workloads_started": false,
+    "prerequisites": "r9 host-pool release; software-r10 accepted before manifest workloads; promote receipt-bound inputs and review new GPU plans before dispatch",
+    "unit_timeout_seconds_proposed": 1664,
+    "timeout_evidence": "admitted r7 pricing; r9 first current-card complete unit 1203.9668408543803s; reassess further current-card units before GPU dispatch"
   }
 }

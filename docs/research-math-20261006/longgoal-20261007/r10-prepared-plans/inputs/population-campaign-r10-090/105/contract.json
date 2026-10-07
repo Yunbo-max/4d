@@ -1,0 +1,205 @@
+{
+  "kind": "actionbench-current-release-population-unit-contract",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07",
+  "status": "generated_unexecuted",
+  "scope": "One fixed-index member of current-release full-population engineering baseline",
+  "population": {
+    "dataset": "facebook/actionbench",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "size": 128,
+    "uid_set_sha256": "ced97606907c703e99da4abd4066ed462a4c6e2d4cdbe82124bce8a1695df932"
+  },
+  "calibration_unit": {
+    "uid": "000-128_030d9e43df9840dbb57f599843d6953a",
+    "population_index": 105,
+    "selection_rule": "canonical full-population index; no outcome-based exclusions",
+    "role": "full-population engineering baseline; not a candidate experiment",
+    "independent_scientific_sample": false
+  },
+  "source": {
+    "repository": "facebookresearch/actionmesh",
+    "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "required_files": [
+      "inference/video_to_animated_mesh.py",
+      "actionmesh/configs/actionmesh.yaml",
+      "actionmesh/pipeline.py",
+      "actionmesh/io/video_input.py",
+      "actionmesh/io/mesh_io.py",
+      "actionmesh/preprocessing/background_removal.py",
+      "actionbench/benchmark.py",
+      "actionbench/chamfer.py",
+      "actionbench/icp.py",
+      "actionbench/sample_mesh.py",
+      "actionbench/sample_point_cloud.py",
+      "actionbench/evaluate_dataset.py",
+      "requirements.txt",
+      "actionmesh/configs/actionmesh_lowram.yaml"
+    ]
+  },
+  "model_snapshots": {
+    "actionmesh": {
+      "repository": "facebook/ActionMesh",
+      "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1"
+    },
+    "triposg": {
+      "repository": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06"
+    },
+    "dinov2": {
+      "repository": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c"
+    },
+    "rmbg": {
+      "repository": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8"
+    }
+  },
+  "generation": {
+    "release_scope": "current-public-release FP16 low-RAM engineering repair; no BF16 or published-row equivalence claim",
+    "input": "data/000-128_030d9e43df9840dbb57f599843d6953a/imgs containing exactly 00.png through 15.png",
+    "seed": 42,
+    "config": "actionmesh/configs/actionmesh_lowram.yaml",
+    "fast": false,
+    "low_ram": true,
+    "dtype": "float16",
+    "effective_parameters": {
+      "stage_0_steps": 100,
+      "face_decimation": 40000,
+      "floaters_threshold": 0.02,
+      "stage_1_steps": 30,
+      "guidance_scales": [
+        7.5
+      ],
+      "anchor_idx": 0,
+      "temporal_context_size": 16,
+      "sliding_window_denoiser": 15,
+      "subsampling_level": 1,
+      "sliding_window_autoencoder": 15
+    },
+    "network": "offline after admitted snapshots",
+    "gpu_policy": "exactly one freshly inventoried physical RTX 2080 Ti; UUID, driver, CUDA, total/free memory and competing processes must be retained",
+    "optional_outputs": "Blender animated GLB and PyTorch3D preview renders are diagnostics and are not required for ActionBench scoring",
+    "runtime_profile": "fp16-lowram-v1",
+    "repair_parent_receipt_sha256": "7b4223a3fdcf4a738c1cec646ecb8f8172ece850a46aa8936aa96d8626cd62f9",
+    "memory_policy": {
+      "lazy_loading": true,
+      "clear_autocast": true,
+      "split_cfg_batch": true
+    }
+  },
+  "multi_arm_unit": {
+    "arms": [
+      "native",
+      "world_gaussian",
+      "body_gaussian"
+    ],
+    "native": "the 16 meshes emitted by the pinned current-public-release generation",
+    "world_gaussian": "the existing deterministic sigma=1.0 frame Gaussian smoother in world coordinates",
+    "body_gaussian": "the existing deterministic sigma=1.0 frame Gaussian smoother after proper rigid pose factoring",
+    "shared": "same UID, generated native vertices, frame indices, topology, anchor and scorer inputs",
+    "control_sigma_frames": 1.0,
+    "official_scorer": {
+      "sampling_seed": 44,
+      "frames": 16,
+      "n_pts_chamfer": 100000,
+      "n_pts_icp": 10000,
+      "rotations": 24,
+      "icp_iterations": 200,
+      "metrics": [
+        "cd_3d",
+        "cd_4d",
+        "cd_motion"
+      ],
+      "role": "engineering completeness/timing observation; no one-UID performance threshold exists"
+    },
+    "timing_boundary": "one harness-owned attempt from pre-model-load through all three retained official score rows and integrity collection",
+    "required_resource_observations": [
+      "wall seconds for the complete boundary",
+      "per-stage wall seconds",
+      "baseline and peak device memory with sampling interval",
+      "host RAM and disk high-water marks",
+      "all process exit codes and timeouts"
+    ]
+  },
+  "required_outputs": {
+    "native_generation": [
+      "mesh_00.glb through mesh_15.glb",
+      "deformations_vertices.npy",
+      "deformations_faces.npy",
+      "generation report with exact command, cwd, environment, source/input/output hashes and stage timings"
+    ],
+    "controls": [
+      "native sequence and report",
+      "world_gaussian sequence and report",
+      "body_gaussian sequence, pose factors and report",
+      "three-arm manifest and control summary"
+    ],
+    "official_scoring": [
+      "one raw official CSV and summary per arm",
+      "official source copies/patch identity and subprocess records",
+      "all prediction GLB hashes",
+      "three retained metric rows including failures"
+    ],
+    "integrity_and_resources": [
+      "harness/native plans and approved digest",
+      "task/state/result/attempt records and stdout/stderr",
+      "current runtime/device manifest",
+      "complete recursive output manifest",
+      "wall-time and peak-VRAM receipt"
+    ]
+  },
+  "natural_failure_policy": {
+    "retained_failure_classes": [
+      "unsupported bfloat16 operation",
+      "CUDA out of memory",
+      "model deserialization or dependency incompatibility",
+      "input preprocessing failure",
+      "mesh topology/export failure",
+      "control construction failure",
+      "official scorer failure or timeout",
+      "resource or collection timeout"
+    ],
+    "forbidden_automatic_changes": [
+      "change runtime profile or precision",
+      "enable --fast",
+      "change generation or scoring seed",
+      "reduce frames, points, arms or scorer settings",
+      "change UID, source, model or dataset revision",
+      "retry without a separately reviewed repair plan"
+    ],
+    "adjudication": "Retain any failure as a failure of this explicit FP16 low-RAM repair. No automatic retries or further fallback.",
+    "success_limit": "A successful one-UID unit prices this exact three-arm engineering unit only. It does not establish the full-128 aggregate, scorer qualification or a candidate effect."
+  },
+  "execution": {
+    "manifest_builder": "actionmesh/prepare_actionbench_unit_manifest.py",
+    "manifest_module": "research_math.actionbench_unit_manifest",
+    "manifest_purpose": "engineering",
+    "manifest_gpu_count": 0,
+    "complete_unit_runner": "actionmesh/research_math/complete_unit_runner.py",
+    "direct_manifest_module_execution_allowed": false,
+    "tests_executed_by_web": 0
+  },
+  "admission_output": {
+    "single_use_project_target": "inputs/actionbench-full128-snapshots/unit-manifest.json",
+    "required_status": "frozen_engineering_current_release_unit",
+    "scientific_effect_qualification": false,
+    "dispatch_ready": false,
+    "queue_generated": false
+  },
+  "limitations": [
+    "FP16 plus official low-RAM is an explicitly different numerical runtime; no equivalence to default BF16 or published aggregate is assumed.",
+    "One complete three-arm unit is engineering timing and integration evidence only; candidate qualification remains pending."
+  ],
+  "repair_lineage": {
+    "parent_contract_sha256": "d07ec5322dc4cbfa8c193713e7a30b11907b79d83369976aa39f3e4fe547ea5a",
+    "parent_run": "complete-default-r6",
+    "parent_receipt_sha256": "7b4223a3fdcf4a738c1cec646ecb8f8172ece850a46aa8936aa96d8626cd62f9",
+    "review": "FP16 and official low-RAM flags explicitly chosen under existing user authorization for 22GB inference. No automatic fallback; preserve all scientific budgets."
+  },
+  "parent_profile_ref": {
+    "path": "docs/research-math-20261006/actionbench-fp16-lowram-unit-contract-v1.json",
+    "sha256": "96405eb7e11027e911423cb4bf2a89643ef2b7794d3c164bf7034b465c0bf49c"
+  }
+}

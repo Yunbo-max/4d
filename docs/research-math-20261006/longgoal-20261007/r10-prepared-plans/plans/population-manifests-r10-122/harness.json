@@ -1,0 +1,149 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "population-manifests-r10-122",
+  "tasks": [
+    {
+      "task_id": "population-122",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 6,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-122/122/native.json",
+        "sha256": "c51477bfc0efcfcc5002b3ddc1cf3766a8a600a2a0d947f0223ce5ca7e496d0d"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-123",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 5,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-122/123/native.json",
+        "sha256": "931b9f71104c8a40058ff1ef3659bbf37274ea90bf454bb9545e7b7e945573bf"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-124",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 4,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-122/124/native.json",
+        "sha256": "eac10301babe1aad1545ee001da8267f75ebcab65bb86d272f956f1f2e3380d6"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-125",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 3,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-122/125/native.json",
+        "sha256": "c8be0ea4d05ef93a7e165eb07d8eb07537886f5cb35cecf01e2759ddbdab1645"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-126",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 2,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-122/126/native.json",
+        "sha256": "1218a0f22d5a912b439d1bc69f3dfd87124c90319adc75a13efda5e630d734f1"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-127",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-122/127/native.json",
+        "sha256": "f527295a9797e7edf44a511a1b84323d022039efb15ec6ac2e035ab294f0bf4a"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 1020,
+    "window_seconds": 1020,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 2048,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "d2537da1fb0123410c28b6414050709718760b87432552ea5973741c076d5a95"
+}

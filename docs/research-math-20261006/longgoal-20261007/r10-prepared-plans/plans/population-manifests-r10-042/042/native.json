@@ -1,0 +1,106 @@
+{
+  "schema_id": "experiment-run-plan",
+  "schema_version": "1.0.0",
+  "run_id": "population-manifests-r10-042-unit-042",
+  "purpose": "engineering",
+  "evidence_mode": "developmental",
+  "protocol_ref": null,
+  "protocol_digest": null,
+  "output_root": "runs/attempts",
+  "provenance": {
+    "git_revision": "fe1fa8f14c5f5a371b2558dd9ccd588580c7a507",
+    "model_revision": "bound by snapshot admission",
+    "data_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "environment_digest": "430f06e8d2ab4bb3b93aad10bb69e59ed5afbc09633ebb543f97ce82fec5a4a4",
+    "data_refs": [
+      {
+        "path": "inputs/population-campaign-r10-042/042/contract.json",
+        "sha256": "8e8234523d92f0df6f1f860d515d18a26b8d66ffa96ccf679b2d685fa5efe9d9"
+      },
+      {
+        "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+        "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+      },
+      {
+        "path": "inputs/actionbench-full128-snapshots/admission.json",
+        "sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04"
+      },
+      {
+        "path": "inputs/actionbench-full128-snapshots/dataset-semantics.json",
+        "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+      }
+    ]
+  },
+  "limits": {
+    "max_attempts": 1,
+    "max_development_trials": 1,
+    "max_confirmation_trials": 0,
+    "max_retries_per_trial": 0,
+    "wall_time_seconds": 120,
+    "attempt_timeout_seconds": 120
+  },
+  "jobs": [
+    {
+      "trial_id": "actionbench-current-release-unit-manifest",
+      "command": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-m",
+        "research_math.actionbench_unit_manifest",
+        "--contract",
+        "/root/actionmesh-research-staging/4d-longgoal-r10/inputs/population-campaign-r10-042/042/contract.json",
+        "--population",
+        "/root/actionmesh-research-staging/4d-longgoal-r10/actionmesh/research_overnight/assets/actionbench_population.json",
+        "--snapshot-admission",
+        "/root/actionmesh-research-staging/4d-longgoal-r10/inputs/actionbench-full128-snapshots/admission.json",
+        "--dataset-semantics",
+        "/root/actionmesh-research-staging/4d-longgoal-r10/inputs/actionbench-full128-snapshots/dataset-semantics.json",
+        "--source-root",
+        "/root/actionmesh-research-staging/actionmesh-source-d5c01f5",
+        "--dataset-root",
+        "/root/actionmesh-research-staging/actionbench-full128-direct",
+        "--output",
+        "../inputs/actionbench-full128-snapshots/unit-manifest.json"
+      ],
+      "cwd": "actionmesh",
+      "input_refs": [
+        {
+          "path": "inputs/population-campaign-r10-042/042/contract.json",
+          "sha256": "8e8234523d92f0df6f1f860d515d18a26b8d66ffa96ccf679b2d685fa5efe9d9"
+        },
+        {
+          "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+          "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/admission.json",
+          "sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/dataset-semantics.json",
+          "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+        }
+      ],
+      "code_refs": [
+        {
+          "path": "actionmesh/research_math/__init__.py",
+          "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_unit_manifest.py",
+          "sha256": "3403780557927321e240ddd17a5e6faea4ebbd533938c13724b5004a59d31c06"
+        },
+        {
+          "path": "actionmesh/prepare_actionbench_unit_manifest.py",
+          "sha256": "458264979f0ad8ef342f927bac6fe08f48ac6b5329d3dc7adb3965dc3fae9a12"
+        }
+      ],
+      "output_paths": [
+        "inputs/actionbench-full128-snapshots/unit-manifest.json"
+      ],
+      "seed": 0,
+      "group": "engineering",
+      "arm_role": "unit-manifest-freeze"
+    }
+  ],
+  "plan_digest": "bdffdf9c7f0e3b3ca988a072f1cd202e9d4ce244baa407d58db999153ddc8313"
+}

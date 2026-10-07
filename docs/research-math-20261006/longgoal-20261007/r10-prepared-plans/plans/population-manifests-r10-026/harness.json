@@ -1,0 +1,359 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "population-manifests-r10-026",
+  "tasks": [
+    {
+      "task_id": "population-026",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 102,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/026/native.json",
+        "sha256": "677c3faf764ce7d44c3a7b31624b3a35dc53b57957a5830cbb177d114f71a5e1"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-027",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 101,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/027/native.json",
+        "sha256": "c6a087cd668ccb8340490cb3d39c01dea44938a3180df7811e79340a1b44dc49"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-028",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 100,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/028/native.json",
+        "sha256": "24ca5fdd526a4d7bf499c4182430feed395e78e01e1d914f43fd9c70e1dade53"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-029",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 99,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/029/native.json",
+        "sha256": "92895e8b4564acc63e07b4fc312d80cceff338ec980927c4973b9e813badf3ba"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-030",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 98,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/030/native.json",
+        "sha256": "1421ada664f4c8455ce730e131ccd852d9f398855f9c38fb1b9393db5f1483d0"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-031",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 97,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/031/native.json",
+        "sha256": "f2967fcad39eb3d4d24af04d22410f0df7f5e192ea771fb501d034573eac68c6"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-032",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 96,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/032/native.json",
+        "sha256": "d9dbc704cf5d5dae506b0192528fed8bf10c862ed6ca29f021d7d65c0df5081a"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-033",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 95,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/033/native.json",
+        "sha256": "ad519d57440f723042326e15951fa7071ec8dcae70d33f044e95de83402d6465"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-034",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 94,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/034/native.json",
+        "sha256": "5154b6ee9da6b0b57d1a5087be5541e398e2a2129069fedfb6986bfc84fbeff4"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-035",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 93,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/035/native.json",
+        "sha256": "fea21300cee34beb7d4ccb5178d1237b7e481fc9b2790b20032d4e07d621935c"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-036",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 92,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/036/native.json",
+        "sha256": "b386ae7d5f90dc1db248fef3e7a8329aa6c9da3fe7fbb3a48079bbab197f3497"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-037",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 91,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/037/native.json",
+        "sha256": "f9c2b21f5d595f613ee9facc561106df7bf51c44e4d77a7aa5be80ebcb34f536"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-038",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 90,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/038/native.json",
+        "sha256": "9d65b0bd2e7fa4829b2ed52c10680c3290d8a9aaa66b60756e8151880805e793"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-039",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 89,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/039/native.json",
+        "sha256": "603e369c1cb1b4cde56f0c99571ef68abfde7c886598bd3d54db29fd3a952185"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-040",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 88,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/040/native.json",
+        "sha256": "cf889f7da918a2491b4623f6864964e989a66cb9eecf4cbc477d28069520a2c2"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    },
+    {
+      "task_id": "population-041",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 87,
+      "plan_ref": {
+        "path": "plans/population-manifests-r10-026/041/native.json",
+        "sha256": "9fb7fb412eca1e8676fe36530ad9ac26320c34c1b6f7fc71d09ee9187f10b5e9"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 2220,
+    "window_seconds": 2220,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 2048,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "948e589ac1057b4a716491cb60339b40bf5b6ff0a50033578834926de856ca24"
+}

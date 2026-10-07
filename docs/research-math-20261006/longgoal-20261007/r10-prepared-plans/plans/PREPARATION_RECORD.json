@@ -1,0 +1,206 @@
+{
+  "recorded_at": "2026-10-07T16:09:09.821297+00:00",
+  "kind": "prepared-next-window-checkpoint",
+  "source_delivery": {
+    "upstream_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+    "bundle_sha256": "b068b5b998a581af4496b6888174da108efdc83b1d1664009e990990e4e08285",
+    "scope": "committed source and documents subset; immutable inputs copied from active r9, not moved",
+    "active_r9_changed": false
+  },
+  "software_plan_digest": "5c6f38b196fef2d622d60484582f2936b8a5eae5bf41f4e2e05f12e5520c97d3",
+  "software_checks_executed": false,
+  "plan_validation": "installed harness validate_plan accepted all nine plan files; no workloads executed",
+  "next": {
+    "source_revision": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+    "status": "generated_unexecuted",
+    "first_prerequisite": "software-r10 must complete; active r9 must finish before host pool handoff",
+    "unit_timeout_seconds": 1664,
+    "native_methods_completed": 0,
+    "plans": [
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-010/harness.json",
+        "approved_plan_digest": "cbbde45a537165af86dcf1e0b564d0d0b7731bea876034239f5dba2fbb8922ff",
+        "execution_started": false,
+        "indices": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-026/harness.json",
+        "approved_plan_digest": "948e589ac1057b4a716491cb60339b40bf5b6ff0a50033578834926de856ca24",
+        "execution_started": false,
+        "indices": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-042/harness.json",
+        "approved_plan_digest": "83f151773b11aa52cb829b331f328b12725be00aaa795bf6371f24f55bcb0dcb",
+        "execution_started": false,
+        "indices": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-058/harness.json",
+        "approved_plan_digest": "339fdd386cc1078200a48969eb2ed48427d1ae71059e55dcfb41d9b820fb4e11",
+        "execution_started": false,
+        "indices": [
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-074/harness.json",
+        "approved_plan_digest": "8581aeb4f3d34801a6d89a5c3f041ba23387fca0b013c3c562525c4348ce1483",
+        "execution_started": false,
+        "indices": [
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-090/harness.json",
+        "approved_plan_digest": "daac10caa9740033cb638469f5818b26ee3b77adda0abee49d438c3f98b059a3",
+        "execution_started": false,
+        "indices": [
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-106/harness.json",
+        "approved_plan_digest": "2a0141e04a0b9fbf8e10a243e8ce299bafabdcb87fe1fec0c564d0696c9db6a0",
+        "execution_started": false,
+        "indices": [
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121
+        ],
+        "phase": "manifests"
+      },
+      {
+        "plan": "/root/actionmesh-research-staging/4d-longgoal-r10/plans/population-manifests-r10-122/harness.json",
+        "approved_plan_digest": "d2537da1fb0123410c28b6414050709718760b87432552ea5973741c076d5a95",
+        "execution_started": false,
+        "indices": [
+          122,
+          123,
+          124,
+          125,
+          126,
+          127
+        ],
+        "phase": "manifests"
+      }
+    ]
+  },
+  "active_r9_unchanged": true,
+  "operational_budget": "future population windows use admitted r7 1664s bound; current-device first complete unit measured1203.9668s; retain timeout failures and review before GPU dispatch"
+}
