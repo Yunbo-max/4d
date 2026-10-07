@@ -1,0 +1,120 @@
+{
+  "kind": "actionbench-full128-dataset-semantics-contract",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T09:05:28Z",
+  "status": "generated_unexecuted",
+  "scope": "Fail-closed byte-bound validation of the released ActionBench tensor, camera and RGBA frame structures after successful snapshot admission. This is engineering input qualification only; it is not inference, scoring, tracked-correspondence proof, runtime compatibility or scientific evidence.",
+  "dataset": "facebook/actionbench",
+  "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "population_size": 128,
+  "frames_per_sample": 16,
+  "population_ref": {
+    "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+    "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+  },
+  "uid_set_sha256": "ced97606907c703e99da4abd4066ed462a4c6e2d4cdbe82124bce8a1695df932",
+  "required_snapshot_admission": {
+    "kind": "actionbench-full128-snapshot-admission",
+    "version": "1.0.0",
+    "status": "admitted_engineering_snapshot",
+    "dataset_repository": "facebook/actionbench",
+    "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "rule": "Every camera.json, surfaces.npy and PNG consumed by this semantic pass must re-match its size and SHA-256 in the successful snapshot admission."
+  },
+  "surfaces": {
+    "path": "data/<uid>/surfaces.npy",
+    "allow_pickle": false,
+    "shape": [
+      16,
+      100000,
+      6
+    ],
+    "columns": [
+      "x",
+      "y",
+      "z",
+      "nx",
+      "ny",
+      "nz"
+    ],
+    "allowed_float_item_bytes": [
+      4,
+      8
+    ],
+    "all_values_finite": true,
+    "position_bounds": [
+      -1.0,
+      1.0
+    ],
+    "position_bound_tolerance": 1e-06,
+    "normal_policy": "Require finite floating values and report norm extrema/zero count; the public README names these columns as normals but does not publish a unit-normal tolerance, so no invented norm threshold is applied.",
+    "tracked_correspondence_policy": "The public README states that point indices are tracked through time. File structure cannot independently prove semantic correspondence, so this remains a source claim and is not promoted by this admission."
+  },
+  "camera": {
+    "path": "data/<uid>/camera.json",
+    "required_keys": [
+      "R",
+      "T",
+      "focal_length_ndc",
+      "principal_point_ndc"
+    ],
+    "R_shape": [
+      3,
+      3
+    ],
+    "T_shape": [
+      3
+    ],
+    "focal_length_ndc_shape": [
+      2
+    ],
+    "principal_point_ndc_shape": [
+      2
+    ],
+    "all_values_finite": true,
+    "positive_focal_lengths": true,
+    "proper_orthonormal_rotation": true,
+    "rotation_tolerance": 1e-05,
+    "projection_convention": "X_cam = X @ R^T + T; camera looks along -Z"
+  },
+  "frames": {
+    "paths": "data/<uid>/imgs/00.png through 15.png",
+    "count": 16,
+    "png_signature_chunk_crc_and_scanline_decompression_required": true,
+    "encoding": "PNG colour type 6 (RGBA), 8 or 16 bits per channel, valid standard compression/filter/interlace mode",
+    "geometry": "positive square dimensions and identical IHDR encoding within each 16-frame sample; population-wide encoding variants are recorded rather than forbidden",
+    "alpha_semantics_limit": "RGBA encoding proves an alpha channel is present. This admission does not invent a foreground-mask occupancy threshold."
+  },
+  "parser_resource_limits": {
+    "camera_max_bytes": 65536,
+    "surface_max_bytes": 83886080,
+    "frame_max_bytes": 67108864,
+    "scope": "Fail-closed parser memory guards, not scientific data thresholds. The admitted released files are expected to lie below these per-file bounds; exceeding a bound is returned for review rather than loaded into the bounded process."
+  },
+  "admission_output": {
+    "kind": "actionbench-full128-dataset-semantics-admission",
+    "version": "1.0.0",
+    "single_use_project_target": "inputs/actionbench-full128-snapshots/dataset-semantics.json",
+    "required_status": "admitted_engineering_dataset_semantics",
+    "per_uid_input_manifest_digest": true,
+    "per_uid_camera_and_tensor_summary": true,
+    "scientific_effect_qualification": false,
+    "dispatch_ready": false,
+    "queue_generated": false
+  },
+  "execution": {
+    "plan_builder": "actionmesh/prepare_actionbench_dataset_semantics.py",
+    "inner_module": "research_math.actionbench_dataset_semantics",
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "network_required": false,
+    "direct_inner_module_execution_allowed": false,
+    "tests_executed_by_web": 0
+  },
+  "limitations": [
+    "The pass rereads roughly 5.3 GB of admitted dataset content and therefore requires a fresh Local wall-time observation; no Web timing is claimed.",
+    "It does not deserialize any model, run ActionMesh, export GLBs or invoke the official scorer.",
+    "It does not prove that the current public release matches the unpublished leaderboard generation environment.",
+    "It cannot authorize or price the 28,800-second queue; a complete current multi-arm generation/export/scoring unit and peak-VRAM receipt remain required."
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "checkpoint_id": "actionbench-full128-dataset-semantics-20261007",
+  "recorded_at": "2026-10-07T09:05:28Z",
+  "base_remote_commit": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
+  "workflow": "research-autopilot",
+  "status": "dataset_semantics_generated_unexecuted_prior_parity_and_snapshot_admission_pending",
+  "objective": "Close the released ActionBench GT/input semantic gap after immutable snapshot admission by revalidating every consumed byte and checking all 128 tensor, camera and RGBA structures without launching inference or scoring.",
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json",
+    "sha256": "2577b6ddae5c21a3a4786ae05706c42ad1b0e7556179887b148a45eae2e007f6"
+  },
+  "source_review_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-dataset-semantics-source-review.json",
+    "sha256": "3afe74ca0398179473a1ae4b8939b58caa9be65830b2b1d0930d22a000e906c7"
+  },
+  "generated_refs": [
+    {
+      "path": "actionmesh/prepare_actionbench_dataset_semantics.py",
+      "sha256": "fa77862b66fd06b3ec506a42f7215b5ea6aa9b5b4937ebcecc31b38b072eb303"
+    },
+    {
+      "path": "actionmesh/research_math/actionbench_dataset_semantics.py",
+      "sha256": "5d7a12a0f84596188c2fa59defc518667e6e139c1b860df35b9f039ea300dd55"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_actionbench_dataset_semantics.py",
+      "sha256": "bf0e7bae1468b6ff5a45f2b19f280089956982c6504a03a2165ed39b89acab5c"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "3793e724e23cd45818391ad86e855567b542cd24da466f4ab0b60d8fd935e9c5"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_control_plan.py",
+      "sha256": "b49137bc5dbcf1597b0066e35693628a4472bc8384d636a8e10ad64ff86539f0"
+    }
+  ],
+  "handoff_refs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "731ff7bbae880a4b6914f2f9e59ab06812b41519f009b97bd560ab915569763a"
+    },
+    {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "16b3a578659c7eb010e46c75eec6acca415e438f47534fb9337e1c47e8927648"
+    },
+    {
+      "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
+      "sha256": "5486470b956f685febe81d5f631e7c85fe8d1881529c86f2f8bc3e15ae4e0251"
+    }
+  ],
+  "skill_reference_snapshot": {
+    "SKILL.md": "9973303fbcf9c228856818a936655cbbee103a45901e825232742fd224ee7e74",
+    "workflow-harness.md": "b2ab91c130e81871edc0e4815bd807e12c2baa245de704fe12356d8f3d585f77",
+    "evaluation-and-assets.md": "75beef5ce21153dabdd2751209a4e0f86eb1ad1df1b7dd48688281ae97c64ae7",
+    "repository-round-trips.md": "080c7cb185be241bf521180ddc4f88217711c27afc506744d2aa36ef4e593403",
+    "local-code-handoff.md": "eb4e402c498019a4c89f1fc73a8037ada85fe9d90a572ee568425cad6a0102f3"
+  },
+  "semantic_scope": {
+    "snapshot_admission_required": true,
+    "consumed_file_hashes_revalidated": true,
+    "population_size": 128,
+    "surface_shape": [
+      16,
+      100000,
+      6
+    ],
+    "camera_schema_and_rotation_checked": true,
+    "rgba_pngs_checked": 2048,
+    "tracked_correspondence_proved": false,
+    "gpu_count": 0,
+    "network": false,
+    "inference": false,
+    "scoring": false
+  },
+  "fixed_rejections": [
+    "missing, failed or wrong-revision snapshot admission",
+    "post-admission file size or SHA-256 mutation",
+    "symlinked/non-directory input parent or non-regular file",
+    "wrong tensor shape, non-floating dtype or nonfinite value",
+    "position outside the documented normalized cube beyond the frozen tolerance",
+    "camera key/shape/finiteness/focal/rotation mismatch",
+    "invalid, non-square, non-RGBA, inconsistent, truncated or CRC-invalid PNG",
+    "existing semantic output overwrite"
+  ],
+  "execution": {
+    "current_authored_test_methods_observed": 197,
+    "new_test_methods_authored": 18,
+    "repository_tests_executed_by_web": 0,
+    "dataset_bytes_loaded_by_web": 0,
+    "official_scorer_invocations": 0,
+    "inference_units": 0,
+    "gpu_workloads": 0,
+    "local_acceptance": "pending"
+  },
+  "scientific_boundary": "A future passed semantic admission will establish only the byte-bound parseable structure of the pinned released ActionBench inputs. It cannot prove tracked semantic correspondences, model/runtime compatibility, generation success, official scorer qualification, leaderboard provenance, a baseline/candidate effect, or dispatch readiness.",
+  "earliest_unclosed_prerequisite": "Local current-revision whole-suite acceptance followed by the already-generated one-UID engineering parity, complete-bundle promotion and CPU-only finalization; full-128 snapshot admission then precedes this semantic pass.",
+  "next_executable_step": "After the earlier chain and successful promoted snapshot admission, Local source-inspects and executes the CPU-only dataset-semantics plan, returns the attempt/output hashes, per-UID digest and actual wall time, and does not launch generation or build the 28,800-second queue.",
+  "counters": {
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

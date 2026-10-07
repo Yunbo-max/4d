@@ -31,6 +31,7 @@ Read these files at the delivered commit before acting:
 - `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
 - `docs/research-math-20261006/actionbench-qualification-source-audit.json`
 - `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
+- `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
 - `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 ## Roles and unresolved host facts
@@ -381,12 +382,58 @@ actual file counts, byte totals and manifest digests for all five snapshots.
 does not prove model loading, runtime compatibility, inference, scoring,
 leaderboard identity, a complete prediction inventory, or dispatch readiness.
 
+After promoting the successful snapshot admission, run the separate byte-bound
+dataset-semantics pass. This pass must consume that exact admission; it is not a
+replacement for snapshot admission and may not read a mutable or differently
+downloaded dataset root:
+
+```bash
+semantics_run_id=actionbench-full128-dataset-semantics-001
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_dataset_semantics.py" \
+  --root "$project_dir" \
+  --skill-dir "$skill_dir" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --snapshot-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-root "$project_dir/inputs/actionbench-2796071c" \
+  --run-id "$semantics_run_id" \
+  --wall-seconds 3600 \
+  --ram-mib 2048 \
+  --cpu-cores 1 \
+  --plan-dir "$project_dir/plans/$semantics_run_id"
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$semantics_run_id/harness.json" \
+  --root "$project_dir" \
+  --execute \
+  --approved-plan-digest "$approved_plan_digest"
+```
+
+Before execution, inspect both plans and confirm one CPU-only attempt, no network,
+model, inference or scorer command, and an output path of
+`inputs/actionbench-full128-snapshots/dataset-semantics.json`. The runner rechecks
+the admission-bound size/SHA-256 of every consumed `camera.json`, `surfaces.npy`
+and PNG, rejects parent links and mutation, then checks all 128 tensors for
+shape `(16,100000,6)`, floating finite values and normalized position bounds. It
+also checks the released four-key camera schema/proper rotation/positive focal
+lengths and validates all 2,048 PNGs as square RGBA files with complete chunk
+CRCs and compressed streams, requiring frame encoding consistency within each
+sample while recording any cross-sample variants. Preserve the attempt and output hashes; promote the output
+only into an absent target and stop on any existing-content difference.
+
+`admitted_engineering_dataset_semantics` closes only released-input parsing and
+structure. The public statement that point indices are tracked through time is
+not independently proved by this structural pass, and no normal-length or alpha-
+occupancy threshold was invented. Report its actual wall time, per-UID semantic
+digest and any failing UID/path. It remains zero-GPU, zero-score and cannot
+authorize generation, a scientific protocol or queue sizing.
+
 After the current one-UID engineering parity/finalization chain, inventory these
 full-population prerequisites without launching generation or scoring. Return
-their exact paths/revisions/hashes and measured storage requirements. Only after
-the 128-by-16 prediction inventory and GT closure are complete may a later Web
-revision author the installed-verifier native protocol and a representative
-complete-unit timing plan. One-UID parity timing cannot price that unit.
+their exact paths/revisions/hashes, snapshot and semantic admissions, and measured
+storage/semantic-pass requirements. Generation still requires a later reviewed
+current-release unit design; only a complete generation/export/scoring receipt can
+price the eight-hour queue. One-UID parity timing or a CPU semantic pass cannot.
 
 ### 7. Native replay and strict output binding
 

@@ -28,6 +28,10 @@ class ControlPlanTest(unittest.TestCase):
             'actionmesh/prepare_actionbench_parity_finalization.py', paths)
         self.assertIn(
             'actionmesh/research_math/tests/test_actionbench_parity.py', paths)
+        self.assertIn(
+            'actionmesh/prepare_actionbench_dataset_semantics.py', paths)
+        self.assertIn(
+            'actionmesh/research_math/tests/test_actionbench_dataset_semantics.py', paths)
 
     def project(self, root):
         code = root/'actionmesh/research_math'; code.mkdir(parents=True)

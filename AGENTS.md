@@ -17,6 +17,7 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 9. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
 10. `docs/research-math-20261006/actionbench-full128-generation-source-audit.json`
 11. `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
+12. `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
@@ -31,6 +32,7 @@ Do not infer current status from older receipts. Mathematical construction, a ge
 - Do not convert missing results into zeroes or successes. Record `generated_unexecuted`, `insufficient_evidence`, or the observed failure.
 - Keep ActionMesh generation seed `42` distinct from the pinned official evaluator sampling seed `44`. The conditional full-128 reproduction contract is not a one-UID threshold, a candidate protocol, or a dispatch-ready queue.
 - The current public ActionMesh/Hugging Face revisions are pin candidates for a new current-release reproduction, not proof of the unpublished leaderboard generation environment. Do not call them an exact published-run replay. The public entrypoint defaults to seed `44`; the target generation row requires an explicit `--seed 42`.
+- A successful full-128 snapshot or dataset-semantics admission is engineering input evidence only. It does not prove tracked correspondences, model loading, inference, scorer qualification, runtime compatibility, or a candidate effect.
 
 ## Runtime and evidence contract
 
