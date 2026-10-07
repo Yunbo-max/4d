@@ -1,0 +1,147 @@
+{
+  "kind": "actionbench-qualification-source-audit",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T04:57:16Z",
+  "decision_scope": "Whether an official ActionBench source supports a one-asset scientific qualification rule for the returned development UID, and what source-matched alternative remains possible.",
+  "reused_evidence_ref": {
+    "path": "docs/research-math-20261006/actionbench-official-source-evidence.json",
+    "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"
+  },
+  "new_primary_source_inspection": {
+    "official_repository": "facebookresearch/actionmesh",
+    "observed_branch": "main",
+    "observed_head": "d5c01f5045df55819e337369c9617f603c667e00",
+    "head_authored_at": "2026-05-28T21:09:54Z",
+    "head_message": "[ACTIONBENCH] add camera.json for pointcloud projection",
+    "head_tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "actionbench_tree": "c9ff3641c2a3f6e81d34ecd1901a70451a0ace37",
+    "tree_api_url": "https://api.github.com/repos/facebookresearch/actionmesh/git/trees/aae2874f931d21e038966ecfde312638fff2091a?recursive=1",
+    "tree_truncated": false,
+    "actionbench_files": [
+      {
+        "path": "actionbench/README.md",
+        "git_blob": "83b4d7c08c0cded4fa6eca74512a5db512f669d2",
+        "retained_sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"
+      },
+      {
+        "path": "actionbench/benchmark.py",
+        "git_blob": "8d252b40d09189a92e4415a1dbeb4da2e4300646",
+        "retained_sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionbench/chamfer.py",
+        "git_blob": "dd1ef0f1c71faabda0ecade33d0b9f22a91d22f5",
+        "retained_sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionbench/evaluate_dataset.py",
+        "git_blob": "2c9f1f02b8bd5486ee178754761a93532adb6de8",
+        "retained_sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      },
+      {
+        "path": "actionbench/icp.py",
+        "git_blob": "b2de6f0b98a024991a5d740a9e0f008e0b809448",
+        "retained_sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionbench/sample_mesh.py",
+        "git_blob": "b46ae6e6e1d588b907e8168fce5542dfaf9d8663",
+        "retained_sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionbench/sample_point_cloud.py",
+        "git_blob": "7b2c553aa0e7e445773559a3246b79d5f0015a39",
+        "retained_sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      }
+    ],
+    "retained_files_match_observed_upstream_blobs": true,
+    "published_result_artifacts_in_actionbench_tree": [],
+    "tree_finding": "The complete current ActionBench source tree contains the README and six evaluator modules. It contains no committed prediction bundle, per-sample score table, CSV, JSON result file, or qualification-threshold file."
+  },
+  "official_code_searches": [
+    {
+      "query": "repo:facebookresearch/actionmesh path:actionbench extension:csv",
+      "api_url": "https://api.github.com/search/code?q=repo%3Afacebookresearch%2Factionmesh+path%3Aactionbench+extension%3Acsv",
+      "returned_count": 0
+    },
+    {
+      "query": "repo:facebookresearch/actionmesh path:actionbench threshold",
+      "api_url": "https://api.github.com/search/code?q=repo%3Afacebookresearch%2Factionmesh+path%3Aactionbench+threshold",
+      "returned_count": 0
+    },
+    {
+      "query": "repo:facebookresearch/actionmesh path:actionbench results",
+      "api_url": "https://api.github.com/search/code?q=repo%3Afacebookresearch%2Factionmesh+path%3Aactionbench+results",
+      "returned_count": 2,
+      "returned_paths": [
+        "actionbench/README.md",
+        "actionbench/evaluate_dataset.py"
+      ],
+      "finding": "Both hits describe result production or the aggregate leaderboard; neither publishes per-sample result values or a pass rule."
+    }
+  ],
+  "official_history_inspection": {
+    "api_url": "https://api.github.com/repos/facebookresearch/actionmesh/commits?path=actionbench%2FREADME.md&per_page=100",
+    "relevant_commits": [
+      {
+        "sha": "cbb4d007a5e0eb0d041564f90bfe79249dd57c1d",
+        "authored_at": "2026-02-20T13:30:09Z",
+        "message": "release ActionBench + evaluation script"
+      },
+      {
+        "sha": "ba4b9509590c640bfb79d06433a4b055cee4d24f",
+        "authored_at": "2026-03-09T10:28:32Z",
+        "message": "Add ActionMesh result on ActionBench"
+      },
+      {
+        "sha": "5f03c718906324734d054df7d25bdaf98da16925",
+        "authored_at": "2026-03-27T11:04:02Z",
+        "message": "update ActionBench leaderboard"
+      },
+      {
+        "sha": "d5c01f5045df55819e337369c9617f603c667e00",
+        "authored_at": "2026-05-28T21:09:54Z",
+        "message": "[ACTIONBENCH] add camera.json for pointcloud projection"
+      }
+    ],
+    "finding": "The official history exposes leaderboard edits, but the current complete tree still carries only the aggregate table and evaluator source. No historical locator reviewed here supplies a one-asset qualification threshold."
+  },
+  "published_aggregate_contract": {
+    "source_path": "actionmesh/repo/actionbench/README.md",
+    "population": "all 128 animated objects",
+    "actionmesh_seed": 42,
+    "metrics": {
+      "cd_3d": 0.054,
+      "cd_4d": 0.085,
+      "cd_motion": 0.153
+    },
+    "aggregation": "mean over successful samples as implemented by actionbench/evaluate_dataset.py",
+    "metric_direction": "lower_is_better",
+    "scope_limit": "These are published full-population observations, not per-object values and not an author-declared pass threshold."
+  },
+  "adjudication": {
+    "one_uid_absolute_qualification": "blocked_no_primary_source_rule",
+    "aggregate_mean_as_one_uid_threshold": "forbidden_scope_mismatch",
+    "nonnegative_metric_domain_as_qualification": "forbidden_false_scientific_gate",
+    "current_one_uid_engineering_parity": "allowed_before_scientific_qualification",
+    "source_matched_scientific_alternative": "A prospective reproduction protocol may compare a complete 128-object, seed-42, official-scorer aggregate against the versioned published ActionMesh aggregate. It must declare its own rule prospectively, preserve all failures and denominator, and cannot reuse the one-UID parity sidecar or one-UID timing.",
+    "alternative_ready_for_dispatch": false,
+    "alternative_missing": [
+      "complete released 128-object manifest and GT bindings for the scientific protocol",
+      "matching full-population predictions or an admitted generation plan",
+      "prospectively frozen reproduction tolerance and uncertainty rule",
+      "complete official-scorer protocol accepted by the installed verifier",
+      "measured full multi-arm unit wall time and peak VRAM on the current RTX 2080 Ti",
+      "fresh nonce-bound official replay and retained per-sample outputs"
+    ]
+  },
+  "execution_status": {
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0,
+    "official_scores_run": 0,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "status": "one_uid_protocol_blocked_full_population_reproduction_conditional",
+  "recorded_at": "2026-10-07T04:57:16Z",
+  "base_commit": "9c1d7ef41927060472a4f161626798f13e0f330e",
+  "decision": "Do not freeze a one-UID ActionBench scientific qualification rule from full-population leaderboard means. Retain engineering scorer parity, and treat a same-population 128-object seed-42 aggregate reproduction as the only source-matched alternative identified by this audit.",
+  "evidence": {
+    "source_audit_ref": {
+      "path": "docs/research-math-20261006/actionbench-qualification-source-audit.json",
+      "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"
+    },
+    "prior_official_source_ref": {
+      "path": "docs/research-math-20261006/actionbench-official-source-evidence.json",
+      "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"
+    },
+    "official_repository_head": "d5c01f5045df55819e337369c9617f603c667e00",
+    "official_repository_tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "official_actionbench_tree": "c9ff3641c2a3f6e81d34ecd1901a70451a0ace37",
+    "retained_files_match_current_upstream_blobs": true,
+    "complete_actionbench_tree_has_published_per_sample_results": false,
+    "complete_actionbench_tree_has_one_asset_threshold": false
+  },
+  "boundary": {
+    "one_uid_absolute_scientific_qualification": "blocked",
+    "one_uid_engineering_scorer_parity": "generated_unexecuted_allowed",
+    "aggregate_mean_reused_as_one_uid_threshold": false,
+    "metric_domain_reused_as_scientific_qualification": false,
+    "full_population_reproduction_protocol": "conditional_not_authored_not_dispatch_ready",
+    "current_software_acceptance_required": true,
+    "scientific_gate_advanced": false
+  },
+  "next_executable_step": "Local accepts the current revision, runs the one-UID engineering parity, promotes the complete bundle and executes the CPU-only finalization plan. The scientific branch remains blocked unless a separate full-128 reproduction protocol closes its manifest, prediction, prospective tolerance, native-verifier, resource and replay prerequisites.",
+  "verification": {
+    "json_parse": "passed",
+    "repository_source_tree": "read_only_inspected",
+    "official_code_searches": 3,
+    "official_history_records_inspected": 4,
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "official_scores_run": 0,
+  "candidate_validation_designs_complete": 0,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0
+}

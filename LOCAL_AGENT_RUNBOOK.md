@@ -29,6 +29,7 @@ Read these files at the delivered commit before acting:
 - `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
 - `docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md`
 - `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
+- `docs/research-math-20261006/actionbench-qualification-source-audit.json`
 - `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 ## Roles and unresolved host facts

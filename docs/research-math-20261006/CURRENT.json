@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T04:02:18Z",
+  "recorded_at": "2026-10-07T04:57:16Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the new CPU-only post-promotion finalization harness are generated but unexecuted; the historical test result does not accept this revision. Scientific scoring still lacks a source-backed per-asset performance threshold; there is no official score, scorer parity result, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical test result does not accept this revision. A fresh audit of the complete current official ActionBench repository tree/history found no per-sample result or one-asset threshold. One-UID scientific scoring remains blocked; the only source-matched alternative identified is a new full-128 seed-42 aggregate reproduction protocol, still conditional and not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -260,6 +260,28 @@
     "current_authored_test_methods_observed": 152,
     "new_checks_authored": 3,
     "new_checks_executed": 0,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_qualification_source_audit": {
+    "status": "one_uid_protocol_blocked_full_population_reproduction_conditional",
+    "recorded_at": "2026-10-07T04:57:16Z",
+    "base_commit": "9c1d7ef41927060472a4f161626798f13e0f330e",
+    "audit_ref": {
+      "path": "docs/research-math-20261006/actionbench-qualification-source-audit.json",
+      "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-qualification-source-audit.json",
+      "sha256": "213141389ac5f2a04efc075dc47d4234bc63c721ddc4c619a632e2e57fd0a137"
+    },
+    "official_repository_head": "d5c01f5045df55819e337369c9617f603c667e00",
+    "official_actionbench_tree": "c9ff3641c2a3f6e81d34ecd1901a70451a0ace37",
+    "published_per_asset_performance_threshold": false,
+    "published_per_sample_results": false,
+    "one_uid_scientific_protocol_ready": false,
+    "full_population_reproduction_protocol_ready": false,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,
     "candidate_native_results": 0

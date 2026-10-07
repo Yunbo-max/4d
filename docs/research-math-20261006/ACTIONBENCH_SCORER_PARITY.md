@@ -197,3 +197,25 @@ three-arm scientific scoring plan be prepared.
 Trusted live replay remains mandatory and accepted values come from the official
 path. This parity unit is not a complete candidate multi-arm experiment and its
 timing cannot price the later eight-hour queue.
+
+## Qualification-source audit — 2026-10-07
+
+The current official repository head and complete ActionBench source tree were
+re-inspected after the parity/finalization handoff. The seven-file ActionBench
+tree matches the retained evaluator bytes exactly and contains no committed
+prediction bundle, per-sample score table, CSV/JSON result artifact, or
+qualification-threshold file. Official code searches for ActionBench CSV files
+and thresholds returned no result; the only `results` hits are the README and
+the evaluator that writes a caller's output. The release history exposes the
+leaderboard edits, but the published values remain means over all 128 objects.
+See `actionbench-qualification-source-audit.json` for the exact head/tree/blob
+identities, queries, returned paths, and scope adjudication.
+
+This closes the bounded source search without changing the gate: the returned
+one-UID development asset still has no primary-source absolute qualification
+rule. A legitimate source-matched alternative would be a new prospective
+full-population reproduction protocol: all 128 released objects, ActionMesh
+seed 42, the official scorer, the published aggregate values, a separately
+justified frozen tolerance/uncertainty rule, complete per-sample retention and
+fresh replay. It is not dispatch-ready. It cannot reuse this one-UID parity
+sidecar, this one-UID timing, or either aggregate table as a per-asset threshold.

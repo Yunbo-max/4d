@@ -35,7 +35,8 @@ The historical software-test receipts are engineering evidence only. They do not
 6. `docs/research-math-20261006/BASELINE_SCORING.md`
 7. `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
 8. `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
-9. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
+9. `docs/research-math-20261006/actionbench-qualification-source-audit.json`
+10. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
 
@@ -98,6 +99,15 @@ Then source-inspect and run the protocol-free engineering parity plan from
 the committed CPU-only post-promotion finalization harness; direct finalizer
 execution is forbidden. Preserve its exact one-UID scope. Scientific
 baseline scoring remains blocked until a genuine source-backed protocol exists.
+
+The bounded primary-source audit at
+`docs/research-math-20261006/actionbench-qualification-source-audit.json`
+confirms that the current official repository tree and history publish no
+per-sample results or one-asset threshold. Do not repeat that search or invent a
+rule. The only source-matched scientific alternative identified so far is a new
+full-128, seed-42 official-scorer reproduction protocol; it is not part of this
+one-UID parity unit and remains conditional on a prospective tolerance/statistical
+rule, full manifests/predictions, current resource measurement and fresh replay.
 
 ## Runtime supplement — 2026-10-06
 

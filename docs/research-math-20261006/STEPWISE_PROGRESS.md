@@ -401,3 +401,34 @@ official scores are zero, and candidate designs/results/verdicts remain **0/15**
 Next: Local runs current software acceptance, parity, complete bundle promotion,
 then the new CPU-only finalization plan before any scientific protocol can cite
 the sidecar.
+
+## Continuation: exhaust the official one-asset qualification source path — 2026-10-07
+
+Resumed exact remote main `9c1d7ef41927060472a4f161626798f13e0f330e`;
+no newer Local/GPU packet was present. The current official ActionMesh main head,
+its complete non-truncated repository tree, ActionBench README/evaluator files,
+ActionBench-specific code searches and README history were inspected against the
+retained source bytes. The retained seven ActionBench files exactly match the
+current upstream Git blobs. The tree contains no predictions, per-sample score
+table, CSV/JSON result artifact or threshold file. Searches for committed
+ActionBench CSVs and thresholds returned zero results; the two `results` hits are
+only the README and evaluator output writer.
+
+This independently confirms the prior negative finding rather than weakening it:
+the published leaderboard values are means over all 128 objects (ActionMesh seed
+42), not one-object qualification thresholds. They remain forbidden for the
+returned development UID, and metric nonnegativity remains forbidden as a false
+scientific gate. The exact source identities, query URLs/counts, relevant official
+history and adjudication are frozen in
+`actionbench-qualification-source-audit.json`.
+
+The audit identifies one legitimate but not-yet-ready source-matched alternative:
+a new prospective full-128, seed-42 reproduction protocol using the official
+scorer and published aggregate observations, with its own predeclared tolerance/
+uncertainty rule and complete per-sample retention. It cannot reuse the existing
+one-UID parity sidecar, one-UID timing or current single-asset inputs. No protocol,
+test, scorer or GPU workload was executed; candidate designs/results/verdicts
+remain **0/15**. The immediate Local order is unchanged: current software
+acceptance, one-UID engineering parity, complete bundle promotion and CPU-only
+finalization. Scientific scoring then remains blocked unless the full-population
+protocol prerequisites are deliberately completed.
