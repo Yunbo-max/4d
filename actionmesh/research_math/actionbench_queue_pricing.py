@@ -129,9 +129,28 @@ def _canonical_origin_paths(root: Path, harness_plan: dict, native_plan: dict,
     ]
 
 
+def canonical_harness_plan_path(root: Path, admission: dict) -> Path:
+    """Resolve the retained harness plan pinned by the admission sidecar.
+
+    Completed harness batches retain their executed plan under
+    ``runs/harness/<run_id>/plan.json``.  The original builder input under
+    ``plans/<run_id>/harness.json`` is not part of this admission's canonical
+    closure, so pricing must validate and use the retained executed plan.
+    """
+    run_id = "complete-lowram-r7"
+    path = Path(root) / "runs" / "harness" / run_id / "plan.json"
+    expected = file_ref(root, path)
+    refs = admission.get("origin_refs")
+    if (not isinstance(refs, list) or
+            [ref for ref in refs if isinstance(ref, dict) and
+             ref.get("path") == expected["path"]] != [expected]):
+        raise ValueError("Exact canonical harness plan ref required")
+    return path
+
+
 def _validate_origin(root: Path, admission: dict) -> None:
     run_id = "complete-lowram-r7"
-    harness_plan_path = root / "plans" / run_id / "harness.json"
+    harness_plan_path = canonical_harness_plan_path(root, admission)
     harness_report_path = root / "runs/harness" / run_id / "report.json"
     native_plan_path = root / "plans" / run_id / "native.json"
     native_receipt_path = root / "runs/attempts" / run_id / "receipt.json"

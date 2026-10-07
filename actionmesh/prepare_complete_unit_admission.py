@@ -85,26 +85,124 @@ def _nested_refs(value, trail=()):
             yield from _nested_refs(nested, trail + (index,))
 
 
-def reference_closure(root: Path, seed_paths: list[Path]) -> list[dict]:
+def reference_closure(root: Path, seed_paths: list[Path], *,
+                      historical_manifest: Path | None = None) -> list[dict]:
+    """Resolve a JSON evidence graph, optionally using byte-pinned old paths.
+
+    Historical evidence is kept under its archive path in the current project.
+    A manifest row maps the original absolute/relative source name to that
+    archived byte blob.  Current project files are always preferred when their
+    bytes match the reference; a same-name file with different bytes is never
+    silently rebound.
+    """
     root = Path(root).resolve()
-    queue = [Path(path).resolve() for path in seed_paths]
+    archive_index = {}
+    manifest_path = None
+    if historical_manifest is not None:
+        raw_manifest_path = Path(historical_manifest)
+        if raw_manifest_path.is_symlink():
+            raise ValueError("Regular historical evidence manifest required")
+        manifest_path = raw_manifest_path.resolve()
+        manifest_path.relative_to(root)
+        if not manifest_path.is_file():
+            raise ValueError("Regular historical evidence manifest required")
+        manifest = json.loads(manifest_path.read_text())
+        if (manifest.get("original_bytes") is not True or
+                manifest.get("copied_to_canonical_project_paths") is not False or
+                not isinstance(manifest.get("files"), list)):
+            raise ValueError("Hash-verified historical archive manifest required")
+        for row in manifest["files"]:
+            matches = row.get("matches") if isinstance(row, dict) else None
+            if (not isinstance(row, dict) or
+                    (matches is not None and not isinstance(matches, bool)) or
+                    not isinstance(row.get("source"), str) or
+                    not isinstance(row.get("sha256"), str) or
+                    len(row["sha256"]) != 64 or
+                    not isinstance(row.get("bytes"), int) or row["bytes"] < 0 or
+                    not isinstance(row.get("archive_path"), str)):
+                raise ValueError("Exact historical archive row required")
+            # A retained manifest may also inventory files from the newer live
+            # checkout. They are metadata for that run, not original historical
+            # bytes. Bind them through the manifest itself, but never expose
+            # their blobs as historical aliases.
+            if row.get("matches") is not True:
+                continue
+            relative = Path(row["archive_path"])
+            if (relative.is_absolute() or not relative.parts or
+                    ".." in relative.parts):
+                raise ValueError("Project-relative historical blob path required")
+            raw_blob = root / relative
+            if raw_blob.is_symlink():
+                raise ValueError("Archived historical evidence may not be a symlink")
+            blob = raw_blob.resolve()
+            blob.relative_to(root)
+            if (not blob.is_file() or
+                    blob.stat().st_size != row["bytes"] or
+                    hashlib.sha256(blob.read_bytes()).hexdigest() != row["sha256"]):
+                raise ValueError("Hash-mismatched archived historical evidence: " +
+                                 row["source"])
+            source = Path(row["source"])
+            aliases = {source.as_posix()}
+            parts = source.parts
+            aliases.update(Path(*parts[index:]).as_posix()
+                           for index in range(1, len(parts)))
+            item = {"path": blob, "source": row["source"],
+                    "sha256": row["sha256"], "logical_suffix": source.suffix}
+            for alias in aliases:
+                archive_index.setdefault(alias, []).append(item)
+
+    queue = [(Path(path).resolve(), Path(path).suffix) for path in seed_paths]
     refs = {}
+    if manifest_path is not None:
+        manifest_ref = file_ref(root, manifest_path)
+        refs[manifest_ref["path"]] = manifest_ref
+
+    def archived_reference(reference: dict) -> dict | None:
+        raw_path = reference["path"]
+        aliases = [Path(raw_path).as_posix()]
+        if Path(raw_path).is_absolute():
+            aliases.extend(Path(*Path(raw_path).parts[index:]).as_posix()
+                           for index in range(1, len(Path(raw_path).parts)))
+        candidates = []
+        for alias in aliases:
+            candidates = [item for item in archive_index.get(alias, [])
+                          if item["sha256"] == reference["sha256"]]
+            if candidates:
+                break
+        if not candidates:
+            return None
+        paths = {candidate["path"] for candidate in candidates}
+        if len(paths) != 1:
+            raise ValueError("Ambiguous archived historical evidence: " + raw_path)
+        return candidates[0]
+
     while queue:
-        path = queue.pop()
+        path, logical_suffix = queue.pop()
+        path = Path(path).resolve()
+        try:
+            path.relative_to(root)
+        except ValueError as exc:
+            raise ValueError("Evidence seed escapes project root") from exc
         ref = file_ref(root, path)
         if ref["path"] in refs:
             if refs[ref["path"]] != ref:
                 raise ValueError("Conflicting complete-unit reference")
             continue
         refs[ref["path"]] = ref
-        if path.suffix == ".json":
+        if logical_suffix == ".json":
             document = json.loads(path.read_text())
             for trail, nested in _nested_refs(document):
+                candidate = None
                 if Path(nested["path"]).is_absolute():
                     absolute = Path(nested["path"]).resolve()
                     try:
                         relative = absolute.relative_to(root).as_posix()
                     except ValueError:
+                        archived = archived_reference(nested)
+                        if archived is not None:
+                            queue.append((archived["path"],
+                                          archived["logical_suffix"]))
+                            continue
                         # The official adapter retains this diagnostic input
                         # path outside the project-root harness. Its bytes were
                         # admitted by the frozen snapshot/unit manifest and the
@@ -116,7 +214,27 @@ def reference_closure(root: Path, seed_paths: list[Path]) -> list[dict]:
                         raise ValueError("Unexpected absolute evidence ref escapes "
                                          "project root: " + "/".join(map(str, trail)))
                     nested = {"path": relative, "sha256": nested["sha256"]}
-                queue.append(resolve_ref(root, nested))
+                    candidate = root / relative
+                else:
+                    candidate = root / nested["path"]
+                try:
+                    resolved_candidate = candidate.resolve()
+                    resolved_candidate.relative_to(root)
+                except ValueError as exc:
+                    raise ValueError("Evidence reference escapes project root: " +
+                                     nested["path"]) from exc
+                if (candidate.is_file() and not candidate.is_symlink() and
+                        resolved_candidate.is_file()):
+                    actual = hashlib.sha256(resolved_candidate.read_bytes()).hexdigest()
+                    if actual == nested["sha256"]:
+                        queue.append((resolved_candidate, candidate.suffix))
+                        continue
+                archived = archived_reference(nested)
+                if archived is None:
+                    # Retain the original precise error for ordinary closures.
+                    resolve_ref(root, nested)
+                    raise ValueError("Unreachable reference-closure branch")
+                queue.append((archived["path"], archived["logical_suffix"]))
     return [refs[path] for path in sorted(refs)]
 
 

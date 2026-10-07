@@ -31,6 +31,8 @@ CURRENT_UNITS_PER_WINDOW = 16
 RETAINED_DISPOSITIONS = {"completed", "running", "pending", "failed"}
 R9_RETAINED_RANGE = (1, 10)
 R9_PLAN_DIGEST = "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1"
+R7_SOURCE_REVISION = "84a94a60779b86e477c3488929097b76fdcebfec"
+R7_ARCHIVE_MANIFEST_SHA256 = "3e65c9347aab4b67329df72f6e14800a510b6c79d02ecabf337f0d0d105a1eb0"
 R9_CAMPAIGN_PLAN_PATH = (
     "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
     "4d-longgoal-r9/plans/population-gpu-current-r9/harness.json")
@@ -124,11 +126,54 @@ def extend_with_opaque_refs(root: Path, refs: list[dict],
 
 
 def build_input_ref_closure(root: Path, traversed_paths: list[Path],
-                            opaque_paths: list[Path]) -> list[dict]:
+                            opaque_paths: list[Path], *,
+                            historical_manifest: Path | None = None) -> list[dict]:
     """Build the live closure plus the separately validated archive closure."""
     refs = reference_closure(
-        root, [Path(path).resolve() for path in traversed_paths])
+        root, [Path(path).resolve() for path in traversed_paths],
+        historical_manifest=historical_manifest)
     return extend_with_opaque_refs(root, refs, opaque_paths)
+
+
+def validate_historical_root(root: Path) -> Path:
+    """Require the exact immutable source checkout used by the priced unit."""
+    root = Path(root).resolve()
+    if not root.is_dir():
+        raise FileNotFoundError("Historical pricing evidence root is required")
+    revision = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=root, check=True,
+        capture_output=True, text=True).stdout.strip()
+    if revision != R7_SOURCE_REVISION:
+        raise ValueError("Exact historical pricing source revision required")
+    status = subprocess.run(
+        ["git", "diff", "--quiet", "HEAD", "--"], cwd=root,
+        check=False, capture_output=True)
+    if status.returncode != 0:
+        raise ValueError("Historical pricing tracked source must match its revision")
+    return root
+
+
+def verify_historical_pricing_copy(root: Path, historical_root: Path,
+                                   args) -> None:
+    """Bind local pricing inputs to the exact historical files being verified."""
+    pairs = (
+        (args.pricing, "inputs/actionbench-full128-queue/pricing.json"),
+        (root / "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+         "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json"),
+        (args.population,
+         "actionmesh/research_overnight/assets/actionbench_population.json"),
+        (root / "inputs/complete-unit-admissions/complete-lowram-r7.json",
+         "inputs/complete-unit-admissions/complete-lowram-r7.json"),
+        (root / "inputs/fp16-lowram-v1/unit-manifest.json",
+         "inputs/fp16-lowram-v1/unit-manifest.json"),
+    )
+    for current, historical_relative in pairs:
+        historical = historical_root / historical_relative
+        if (not current.is_file() or not historical.is_file() or
+                file_ref(root, current)["sha256"] !=
+                file_ref(historical_root, historical)["sha256"]):
+            raise ValueError("Current pricing copy differs from historical evidence: " +
+                             historical_relative)
 
 
 def select_priced_window(pricing: dict, window_id: str) -> dict:
@@ -508,6 +553,16 @@ def build_plan(args) -> dict:
     plan_dir = args.plan_dir.resolve()
     plan_dir.relative_to(root)
     _canonical_paths(root, args)
+    historical_root = validate_historical_root(args.historical_root)
+    raw_historical_manifest = Path(args.historical_manifest)
+    if raw_historical_manifest.is_symlink():
+        raise ValueError("Hash-verified historical evidence manifest required")
+    historical_manifest = raw_historical_manifest.resolve()
+    historical_manifest.relative_to(root)
+    if not historical_manifest.is_file():
+        raise ValueError("Hash-verified historical evidence manifest required")
+    if file_ref(root, historical_manifest)["sha256"] != R7_ARCHIVE_MANIFEST_SHA256:
+        raise ValueError("Exact independently verified r7 closure manifest required")
     if plan_dir.exists():
         raise FileExistsError("Preserve existing Full128 window plan")
     if not args.gpu_uuid.startswith("GPU-"):
@@ -517,7 +572,8 @@ def build_plan(args) -> dict:
             raise FileNotFoundError(path)
 
     pricing = json.loads(args.pricing.read_text())
-    verified, admission = verify_pricing_receipt(root, pricing)
+    verify_historical_pricing_copy(root, historical_root, args)
+    verified, admission = verify_pricing_receipt(historical_root, pricing)
     window = select_priced_window(verified, args.window_id)
     reconciliation = json.loads(args.active_batch_reconciliation.read_text())
     reconciliation_paths = validate_active_batch_reconciliation(
@@ -540,13 +596,15 @@ def build_plan(args) -> dict:
     seed_paths.extend(environment_paths)
     input_refs = build_input_ref_closure(
         root, seed_paths,
-        [args.active_batch_reconciliation, *reconciliation_paths])
+        [args.active_batch_reconciliation, *reconciliation_paths],
+        historical_manifest=historical_manifest)
 
     sources = sorted((root / "actionmesh/research_math").rglob("*.py"))
     sources.extend(root / "actionmesh" / name for name in (
         "official_actionbench_adapter.py",
         "deterministic_actionbench_entry.py",
         "research_census_eval.py",
+        "prepare_complete_unit_admission.py",
         "prepare_actionbench_full128_window.py",
     ))
     missing = [path for path in sources if not path.is_file()]
@@ -598,6 +656,8 @@ def build_plan(args) -> dict:
             provenance={
                 "git_revision": revision,
                 "git_refs": [dirty_ref],
+                "historical_pricing_revision": R7_SOURCE_REVISION,
+                "historical_evidence_manifest": file_ref(root, historical_manifest),
                 "model_revision": "bound by admitted complete-unit template",
                 "data_revision": verified["population"]["revision"],
                 "environment_digest": file_ref(root, args.environment)["sha256"],
@@ -667,7 +727,8 @@ def main() -> int:
             "root", "plan-dir", "skill-dir", "pricing", "contract",
             "population", "snapshot-contract", "snapshot-admission",
             "dataset-semantics", "unit-manifest", "environment",
-            "active-batch-reconciliation",
+            "active-batch-reconciliation", "historical-root",
+            "historical-manifest",
             "source-root", "dataset-root", "weights-root"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--run-id", required=True)

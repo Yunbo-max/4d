@@ -20,9 +20,11 @@ from prepare_actionbench_full128_window import (
     select_priced_window,
     validate_active_batch_reconciliation,
     validate_environment_closure,
+    validate_historical_root,
     validate_native_plan_set,
     window_limits,
 )
+from research_math.actionbench_queue_pricing import canonical_harness_plan_path
 
 
 def pricing_fixture():
@@ -194,6 +196,106 @@ def reconciliation_fixture(pricing, pricing_ref, campaign_ref, status_ref,
 
 
 class Full128WindowPlanTests(unittest.TestCase):
+    def test_historical_closure_ignores_unmatched_unused_archive_rows(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            old = b"verified old source"
+            old_sha = hashlib.sha256(old).hexdigest()
+            blob_rel = Path("evidence-preparation/legacy-blobs") / (old_sha + ".blob")
+            blob = root / blob_rel
+            blob.parent.mkdir(parents=True)
+            blob.write_bytes(old)
+            seed = root / "inputs/legacy-admission.json"
+            seed.parent.mkdir(parents=True)
+            seed.write_text(json.dumps({"origin": {
+                "path": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                "sha256": old_sha,
+            }}))
+            manifest = root / "evidence-preparation/legacy-manifest.json"
+            manifest.write_text(json.dumps({
+                "original_bytes": True,
+                "copied_to_canonical_project_paths": False,
+                "files": [
+                    {"source": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                     "sha256": old_sha, "bytes": len(old), "matches": True,
+                     "archive_path": blob_rel.as_posix()},
+                    {"source": "/root/staging/4d-longgoal-r9/inputs/native-runtime/environment.json",
+                     "sha256": "1" * 64, "bytes": 8,
+                     "archive_path": "evidence-preparation/untrusted.blob"},
+                ],
+            }))
+
+            refs = build_input_ref_closure(
+                root, [seed], [], historical_manifest=manifest)
+
+            self.assertEqual(
+                {ref["path"] for ref in refs},
+                {blob_rel.as_posix(), "evidence-preparation/legacy-manifest.json",
+                 "inputs/legacy-admission.json"})
+
+    def test_historical_closure_does_not_trust_unmatched_archive_row(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            current = root / "actionmesh/research_math/old.py"
+            current.parent.mkdir(parents=True)
+            current.write_bytes(b"current source")
+            old = b"historical source"
+            old_sha = hashlib.sha256(old).hexdigest()
+            blob_rel = Path("evidence-preparation/legacy-blobs") / (old_sha + ".blob")
+            blob = root / blob_rel
+            blob.parent.mkdir(parents=True)
+            blob.write_bytes(old)
+            seed = root / "inputs/legacy-admission.json"
+            seed.parent.mkdir(parents=True)
+            seed.write_text(json.dumps({"origin": {
+                "path": "actionmesh/research_math/old.py",
+                "sha256": old_sha,
+            }}))
+            manifest = root / "evidence-preparation/legacy-manifest.json"
+            manifest.write_text(json.dumps({
+                "original_bytes": True,
+                "copied_to_canonical_project_paths": False,
+                "files": [{
+                    "source": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                    "sha256": old_sha, "bytes": len(old), "matches": False,
+                    "archive_path": blob_rel.as_posix(),
+                }],
+            }))
+
+            with self.assertRaisesRegex(ValueError, "Changed pinned file"):
+                build_input_ref_closure(
+                    root, [seed], [], historical_manifest=manifest)
+
+    def test_historical_admission_resolves_retained_harness_plan(self):
+        from tempfile import TemporaryDirectory
+        from research_math.control_scoring import file_ref
+
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            plan = root / "runs/harness/complete-lowram-r7/plan.json"
+            plan.parent.mkdir(parents=True)
+            plan.write_text("{}\n")
+            admission = {"origin_refs": [file_ref(root, plan)]}
+
+            self.assertEqual(canonical_harness_plan_path(root, admission), plan)
+
+    def test_historical_admission_rejects_harness_plan_hash_mismatch(self):
+        from tempfile import TemporaryDirectory
+        from research_math.control_scoring import file_ref
+
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            plan = root / "runs/harness/complete-lowram-r7/plan.json"
+            plan.parent.mkdir(parents=True)
+            plan.write_text("{}\n")
+            ref = file_ref(root, plan)
+            ref["sha256"] = "0" * 64
+
+            with self.assertRaisesRegex(ValueError, "canonical harness plan ref"):
+                canonical_harness_plan_path(root, {"origin_refs": [ref]})
+
     def test_snapshot_builder_freezes_stable_state_and_status_bytes(self):
         """Catch reconciliation evidence that still points at mutable inputs."""
         from tempfile import TemporaryDirectory
@@ -523,6 +625,200 @@ class Full128WindowPlanTests(unittest.TestCase):
                 "sha256": hashlib.sha256(archived.read_bytes()).hexdigest(),
             }])
             self.assertFalse((root / "plans/r9/001/native.json").exists())
+
+    def test_historical_reference_uses_hash_verified_archive_alias(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            current = root / "actionmesh/research_math/old.py"
+            current.parent.mkdir(parents=True)
+            current.write_bytes(b"new checkout")
+            old = b"historical checkout"
+            old_sha = hashlib.sha256(old).hexdigest()
+            blob_rel = Path("evidence-preparation/legacy-blobs") / (old_sha + ".blob")
+            blob = root / blob_rel
+            blob.parent.mkdir(parents=True)
+            blob.write_bytes(old)
+            seed = root / "inputs/legacy-admission.json"
+            seed.parent.mkdir(parents=True)
+            seed.write_text(json.dumps({"origin": {
+                "path": "actionmesh/research_math/old.py",
+                "sha256": old_sha,
+            }, "absolute_origin": {
+                "path": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                "sha256": old_sha,
+            }}))
+            manifest = root / "evidence-preparation/legacy-manifest.json"
+            manifest.write_text(json.dumps({
+                "original_bytes": True,
+                "copied_to_canonical_project_paths": False,
+                "files": [{
+                    "source": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                    "sha256": old_sha,
+                    "bytes": len(old),
+                    "matches": True,
+                    "archive_path": blob_rel.as_posix(),
+                }],
+            }))
+
+            refs = build_input_ref_closure(
+                root, [seed], [], historical_manifest=manifest)
+            paths = {ref["path"]: ref["sha256"] for ref in refs}
+            self.assertNotIn("actionmesh/research_math/old.py", paths)
+            self.assertEqual(paths[blob_rel.as_posix()], old_sha)
+            self.assertEqual(paths["evidence-preparation/legacy-manifest.json"],
+                             hashlib.sha256(manifest.read_bytes()).hexdigest())
+
+    def test_historical_reference_rejects_archive_hash_mismatch(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            old = b"historical bytes"
+            expected = hashlib.sha256(old).hexdigest()
+            blob_rel = Path("evidence-preparation/legacy-blobs") / (expected + ".blob")
+            blob = root / blob_rel
+            blob.parent.mkdir(parents=True)
+            blob.write_bytes(b"tampered bytes")
+            seed = root / "inputs/legacy-admission.json"
+            seed.parent.mkdir(parents=True)
+            seed.write_text(json.dumps({"origin": {
+                "path": "actionmesh/research_math/old.py",
+                "sha256": expected,
+            }}))
+            manifest = root / "evidence-preparation/legacy-manifest.json"
+            manifest.write_text(json.dumps({
+                "original_bytes": True,
+                "copied_to_canonical_project_paths": False,
+                "files": [{
+                    "source": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                    "sha256": expected,
+                    "bytes": len(old),
+                    "matches": True,
+                    "archive_path": blob_rel.as_posix(),
+                }],
+            }))
+
+            with self.assertRaisesRegex(ValueError, "archived historical evidence"):
+                build_input_ref_closure(
+                    root, [seed], [], historical_manifest=manifest)
+
+    def test_historical_json_archive_expands_nested_historical_references(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            nested_bytes = b"old source bytes"
+            nested_sha = hashlib.sha256(nested_bytes).hexdigest()
+            nested_rel = Path("evidence-preparation/legacy-blobs") / (nested_sha + ".blob")
+            nested_blob = root / nested_rel
+            nested_blob.parent.mkdir(parents=True)
+            nested_blob.write_bytes(nested_bytes)
+
+            old_json_path = "/root/staging/4d-longgoal-r7/inputs/old-record.json"
+            old_json = json.dumps({"source": {
+                "path": "actionmesh/research_math/old.py",
+                "sha256": nested_sha,
+            }}).encode()
+            old_json_sha = hashlib.sha256(old_json).hexdigest()
+            old_json_rel = Path("evidence-preparation/legacy-blobs") / (old_json_sha + ".blob")
+            old_json_blob = root / old_json_rel
+            old_json_blob.write_bytes(old_json)
+
+            seed = root / "inputs/current-record.json"
+            seed.parent.mkdir(parents=True)
+            seed.write_text(json.dumps({"historical": {
+                "path": old_json_path,
+                "sha256": old_json_sha,
+            }}))
+            manifest = root / "evidence-preparation/legacy-manifest.json"
+            manifest.write_text(json.dumps({
+                "original_bytes": True,
+                "copied_to_canonical_project_paths": False,
+                "files": [
+                    {"source": old_json_path, "sha256": old_json_sha,
+                     "bytes": len(old_json), "matches": True,
+                     "archive_path": old_json_rel.as_posix()},
+                    {"source": "/root/staging/4d-longgoal-r7/actionmesh/research_math/old.py",
+                     "sha256": nested_sha, "bytes": len(nested_bytes),
+                     "matches": True, "archive_path": nested_rel.as_posix()},
+                ],
+            }))
+
+            refs = build_input_ref_closure(
+                root, [seed], [], historical_manifest=manifest)
+            paths = {ref["path"]: ref["sha256"] for ref in refs}
+            self.assertEqual(paths[old_json_rel.as_posix()], old_json_sha)
+            self.assertEqual(paths[nested_rel.as_posix()], nested_sha)
+            self.assertNotIn("actionmesh/research_math/old.py", paths)
+
+    def test_historical_reference_rejects_project_escape(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary) / "project"
+            root.mkdir()
+            outside = Path(temporary) / "outside.bin"
+            outside.write_bytes(b"outside")
+            seed = root / "inputs/record.json"
+            seed.parent.mkdir()
+            seed.write_text(json.dumps({"outside": {
+                "path": "../outside.bin",
+                "sha256": hashlib.sha256(outside.read_bytes()).hexdigest(),
+            }}))
+
+            with self.assertRaisesRegex(ValueError, "escapes project root"):
+                build_input_ref_closure(root, [seed], [])
+
+    def test_historical_manifest_symlink_is_rejected(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            manifest_target = root / "manifest-target.json"
+            manifest_target.write_text(json.dumps({
+                "original_bytes": True,
+                "copied_to_canonical_project_paths": False,
+                "files": [],
+            }))
+            manifest_link = root / "manifest.json"
+            manifest_link.symlink_to(manifest_target)
+            seed = root / "inputs/record.json"
+            seed.parent.mkdir()
+            seed.write_text("{}")
+
+            with self.assertRaisesRegex(ValueError, "Regular historical evidence manifest"):
+                build_input_ref_closure(root, [seed], [],
+                                        historical_manifest=manifest_link)
+
+    def test_historical_root_allows_untracked_evidence_but_rejects_source_edits(self):
+        import subprocess
+        from tempfile import TemporaryDirectory
+        import prepare_actionbench_full128_window as window_module
+
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            tracked = root / "source.py"
+            tracked.write_text("pinned source\n")
+            subprocess.run(["git", "init", "-q", str(root)], check=True)
+            subprocess.run(["git", "-C", str(root), "add", "source.py"],
+                           check=True)
+            subprocess.run([
+                "git", "-C", str(root), "-c", "user.name=Research Test",
+                "-c", "user.email=research-test@example.invalid", "commit",
+                "-q", "-m", "historical source fixture"], check=True)
+            revision = subprocess.run(
+                ["git", "-C", str(root), "rev-parse", "HEAD"], check=True,
+                capture_output=True, text=True).stdout.strip()
+            original_revision = window_module.R7_SOURCE_REVISION
+            window_module.R7_SOURCE_REVISION = revision
+            try:
+                evidence = root / "runs/attempt/output.json"
+                evidence.parent.mkdir(parents=True)
+                evidence.write_text("{}\n")
+                self.assertEqual(validate_historical_root(root), root.resolve())
+
+                tracked.write_text("modified source\n")
+                with self.assertRaisesRegex(ValueError, "tracked source"):
+                    validate_historical_root(root)
+            finally:
+                window_module.R7_SOURCE_REVISION = original_revision
 
     def test_active_batch_reconciliation_allows_only_nonoverlapping_window(self):
         from tempfile import TemporaryDirectory
