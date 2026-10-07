@@ -7,6 +7,21 @@ Delivered commit: resolve from the delivery receipt and verify by readback befor
 
 This file is an immutable round handoff. Actual-run evidence belongs under `rounds/20261006-baseline-qualification/windows/<actual-window-id>/`.
 
+## Current source supplement: full decoder capture
+
+The original round history below is preserved. For the latest unexecuted source
+delivery, read [NATIVE_DECODER_CAPTURE.md](../../docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md)
+and the runbook's latest-source section. The optional `--capture-decoder` plan
+uses the real upstream generation entry, captures complete native windows, and
+retains the three simple arms and official scoring. Its new archive/manifest
+are direct receipt outputs. It is not a candidate, native-context qualification
+or an approved GPU plan. GPU execution remains stopped.
+
+R3's historical raw 311-test receipt is now available and its payloads rehashed;
+the historical-root runtime fix exists. That receipt does not certify later
+source changes. Local's next action is current CPU harness acceptance; new GPU
+work, raw scorer replay, Gate 0/IPCG and all 15 candidate results remain pending.
+
 ## Scientific objective
 
 Qualify the strong simple controls and official/native ActionBench scoring chain on one complete original development asset. Produce a source-bound, protocol-bound, per-pass replay that supports a narrow baseline qualification and natural-failure analysis. Do not execute or claim any new candidate arm in this round.

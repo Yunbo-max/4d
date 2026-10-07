@@ -1,5 +1,8 @@
 # Stepwise continuation — 2026-10-06
 
+Latest source handoff: [Native decoder capture](NATIVE_DECODER_CAPTURE.md).
+Earlier entries below are dated history; the final entry supersedes their current-status wording.
+
 ## Evidence checked
 
 Starting repository revision: `28ff4bde041cefab55f058f3c921edb304dc4f5c`.
@@ -1118,3 +1121,48 @@ focused failures, add a non-mocked runner-to-freeze closure test, and only then
 implement the minimal double-root propagation fix. Focused GREEN, current
 whole-suite acceptance and a regenerated complete-unit validation are mandatory
 before any GPU dispatch.
+
+## Continuation: connect complete decoder capture to the official generation path
+
+Resumed exact main `1da40c748a71f9687bd2c5958ee6705671632d10` in a fresh
+checkout, preserving the dirty older workspace. The user's feedback requires
+actual model interfaces and complete output paths instead of treating algebra
+functions or document/test counts as delivered methods. The selected pool and
+unclosed native qualification/Natural Gate 0/IPCG are retained; this work is
+baseline interface engineering, not candidate implementation or a gate bypass.
+
+The existing observer only accepted an already loaded decoder. Added an
+instance-local pipeline adapter that attaches at `_decode_displacement`, after
+official low-RAM lazy loading. It retains full latent/timestep/source/target/query
+tensors including original vertex normals, raw decoder output, anchor topology
+and every returned target mesh. It preserves original call/output objects,
+validates full coverage and output-to-mesh semantics, restores hooks/methods on
+failure, and prevents a caught failed window from becoming a complete session.
+
+The complete-unit plan and runner now have an opt-in `--capture-decoder` path.
+A separate child entry calls the actual upstream `run_actionmesh` using the
+unchanged profile and generation arguments; it archives all captured windows.
+The existing three-arm control and official-scoring stages still execute in a
+later admitted run. A distinct engineering task role and two additional declared
+outputs separate this 119-output unit from the old 117-output timing admission.
+Full128 plus capture is rejected; no old per-unit cost is applied. Observer
+plans enforce the 27,000-second driver cutoff and 1,800-second collection reserve.
+
+Also reconciled the stale runtime-root blocker with R3's raw archive. Its
+green-r2 archive SHA-256 is
+`2d7b0290711ed37044f57083633eb9347f15be2669eeab022f532738977f9a68`;
+all 21 payloads in its manifest match size/SHA-256, the receipt matches
+`61e0a4113e9c1e16b6581f784c94823931b46b5d29982dd6139e9ac9c0a88b4d`,
+and the retained stderr says 311 checks, OK. At the resumed commit one of the
+72 pinned sources already differed (the subsequent macOS path normalization).
+This delivery changes additional sources. Thus the repair exists and its prior
+test evidence is real, while current-tree software acceptance remains pending.
+No historical records or hashes were rewritten.
+
+New capture tests and source are generated, unexecuted. Web performed source,
+AST/JSON, retained-evidence hashing and diff checks only; no project test, plan
+builder, model, scorer or GPU workload ran. Full native capture, observer-free
+equivalence and full-context replay still require actual Local execution. GPU
+stop remains in force. Next executable step: the documented CPU harness
+acceptance; then eligible plan-only preparation and evidence restoration.
+Candidate complete designs/results remain 0/15 and formal outcomes remain 0.

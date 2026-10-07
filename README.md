@@ -4,9 +4,9 @@
 
 当前可执行轮次是[基线／原生评分资格交接](rounds/20261006-baseline-qualification/WEB_HANDOFF.md)。Local Codex 在精确交付 commit 先读[根级执行约束](AGENTS.md)与[项目运行手册](LOCAL_AGENT_RUNBOOK.md)，再按手册通过 `research-autopilot/scripts/run_harness.py` 驱动独立 Linux 2080Ti 主机；远端不需要 Codex/GPT，会话控制、Git、SSH 与文件回传由用户电脑承担。
 
-状态仍为 `generated_unexecuted`：三臂强简单对照、原生评分请求和严格输出绑定已生成，但本状态没有新的测试执行、GPU 运行或官方评分结果；候选完整验证设计和 native 结果均为 0/15。不得把数学规格、静态 receipt 或软件测试当作科学资格。
+当前状态以 [CURRENT.json](docs/research-math-20261006/CURRENT.json) 和最新回执为准：r9 的九个工程基线单元已经完成，R3 原始归档保留了 311 项软件检查通过的记录，历史定价路径修复已在源码中。311 项回执不覆盖后续 macOS 路径修订和本轮新增代码。UID008 仅有紧凑评分一致性回传，完整 raw 包、重复评分和可信重放仍待补。候选完整验证设计与 native 结果仍为 0/15。
 
-本地软件验收后，按[原生环境采集入口](docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md)运行 CPU harness，生成实际 Conda／包版本及带哈希的 runtime JSON；新增8项检查尚待执行，设备与评分资格仍需单独验证。
+本轮新增[完整原生 decoder capture 入口](docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md)：`complete_unit_plan --capture-decoder` 可生成独立观测单元计划，接入官方生成、完整上下文归档和三臂评分。新增源码为 **generated_unexecuted**，需要 Local CPU harness 验收；GPU 实验保持停止，尚无完整原生 capture 或 replay 结果。新增观测单元不能沿用旧队列定价。
 
 ## 当前：方法必要性与可识别性审查
 

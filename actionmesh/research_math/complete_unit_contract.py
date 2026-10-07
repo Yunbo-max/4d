@@ -12,6 +12,12 @@ ARMS = ('native', 'world_gaussian', 'body_gaussian')
 METRICS = ('cd_3d', 'cd_4d', 'cd_motion')
 
 
+def decoder_capture_output_paths():
+    """Additional receipt outputs for the separately requested observer unit."""
+    return ['actionmesh/unit-output/decoder-capture.tar.gz',
+            'actionmesh/unit-output/decoder-capture/manifest.json']
+
+
 def complete_unit_output_paths(uid: str,
                                prefix: str = 'actionmesh/unit-output') -> list[str]:
     """Return the exhaustive successful-unit output closure for the receipt.

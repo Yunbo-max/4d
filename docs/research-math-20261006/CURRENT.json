@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T22:02:12Z",
+  "recorded_at": "2026-10-07T23:07:36Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "UID008 now has a current-device compact engineering parity return: for one frozen UID and the native, world-Gaussian and body-Gaussian arms, all reported official/faithful cd_3d, cd_4d and cd_motion values match exactly. The compact receipt was rehashed from GitHub bytes, but its 127-file promoted bundle was not transferred, so nested evidence cannot yet be independently rehashed or replayed; nonce-bound trusted replay and same-scorer repeat remain absent. Native benchmark/control qualification therefore remains pending. Separately, the Full128 compiler still fails to carry the historical pricing evidence root and archive manifest into the real runner; a cleanly applying RED-test patch is published for Local to execute before any production repair or GPU dispatch. Indices 10-15 remain a coverage gap. Candidate results/formal outcomes remain 0/15 and 0.",
+  "status": "The Full128 runtime historical-pricing root propagation repair is present in source. R3 green-r2 raw archive has 21 rehashed manifest payloads and a retained 311-test OK log, but one of its 72 source refs already differs at base 1da40c7; current-source acceptance is pending. New opt-in complete-unit --capture-decoder source connects official generation to full decoder/window capture and a 119-output three-arm unit, generated_unexecuted. GPU execution remains stopped. UID008 raw bundle/repeat/trusted replay and native qualification remain pending. Candidate complete designs/results remain 0/15 and formal outcomes 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -933,5 +933,34 @@
     "production_fix_authored": false,
     "dispatch_ready": false,
     "candidate_native_results": 0
+  },
+  "historical_sections_notice": "Earlier timestamped handoff/review entries retain historical statuses and hashes. Use native_decoder_capture_handoff and its checkpoint for the latest source/acceptance state; no prior receipt accepts newly changed code.",
+  "native_decoder_capture_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-07T23:07:36Z",
+    "base_commit": "1da40c748a71f9687bd2c5958ee6705671632d10",
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-native-decoder-capture.json",
+      "sha256": "93a545a8abbd3131740c6a4b81c392b99eb548f2bd540c142894c30a02d8574a"
+    },
+    "entry_ref": {
+      "path": "docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md",
+      "sha256": "b31013744e702b2f39540c7832a3d347ad3e941229eee264be277f3746b8c582"
+    },
+    "complete_unit_opt_in": "--capture-decoder",
+    "source_path_complete": true,
+    "local_software_acceptance_complete": false,
+    "native_capture_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "runtime_pricing_production_fix_present": true,
+    "old_runtime_root_blocker_superseded": true,
+    "old_311_receipt_accepts_current_tree": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "native_context_qualified": false,
+    "replay_qualified": false,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
   }
 }

@@ -81,6 +81,8 @@ def validate_full128_mode(args):
     active=any(value is not None for value in values)
     if active and not all(values):
         raise ValueError('Full128 mode requires root, pricing, UID and window ID together')
+    if active and getattr(args,'capture_decoder',False):
+        raise ValueError('Decoder observation requires a separate unpriced calibration unit')
     if active and args.pricing.resolve()!=args.root.resolve()/'inputs/actionbench-full128-queue/pricing.json':
         raise ValueError('Canonical Full128 pricing path required')
     historical_root=getattr(args,'historical_root',None)
@@ -90,6 +92,18 @@ def validate_full128_mode(args):
     if not active and (historical_root is not None or historical_manifest is not None):
         raise ValueError('Historical pricing evidence is valid only in Full128 mode')
     return active
+
+
+def unit_generation_command(args, output, uid, profile):
+    command = generation_argv(args.source_root, args.dataset_root/'data'/uid/'imgs',
+                              output/'native-generation', profile=profile)
+    if getattr(args, 'capture_decoder', False):
+        entry = Path(__file__).resolve().parents[1]/'observe_actionmesh_generation.py'
+        command[2] = str(entry)
+        command[3:3] = ['--source-root', str(args.source_root),
+                        '--capture-root', str(output/'decoder-capture'),
+                        '--identity', str(output/'revalidated-unit-manifest.json')]
+    return command
 
 
 def require_full128_budget(args,manifest):
@@ -173,9 +187,18 @@ def execute(args):
         native=output/'native-generation'
         profile=validate_generation_profile(manifest['generation'])
         result['runtime_profile']=profile
-        command=generation_argv(args.source_root,args.dataset_root/'data'/uid/'imgs',native,profile=profile)
+        command=unit_generation_command(args,output,uid,profile)
         result['stages']['generation']=run_stage('generation',command,args.source_root,output,
                                                 max(1,args.wall_seconds-(time.monotonic()-started)),environment)
+        if getattr(args,'capture_decoder',False):
+            capture=json.loads((output/'decoder-capture/manifest.json').read_text())
+            if capture.get('status')!='captured_unqualified' or capture.get('windows',0)<1:
+                raise ValueError('Complete decoder capture required')
+            result['decoder_capture']={'status':'captured_unqualified',
+                'archive_sha256':digest(output/'decoder-capture.tar.gz'),
+                'manifest_sha256':digest(output/'decoder-capture/manifest.json'),
+                'native_context_qualified':False,'replay_qualified':False,
+                'eligible_for_existing_queue_pricing':False}
         begin=time.monotonic();collect_native_sequence(native,uid)
         result['stages']['export']={'elapsed_seconds':time.monotonic()-begin,'status':'completed'}
         begin=time.monotonic();controls=output/'controls'
@@ -223,6 +246,7 @@ def main():
     parser.add_argument('--historical-manifest',type=Path)
     parser.add_argument('--uid')
     parser.add_argument('--window-id')
+    parser.add_argument('--capture-decoder',action='store_true')
     parser.add_argument('--gpu-uuid',required=True)
     parser.add_argument('--wall-seconds',type=int,default=27000)
     args=parser.parse_args()

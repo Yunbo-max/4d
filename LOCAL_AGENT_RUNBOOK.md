@@ -2,6 +2,30 @@
 
 ## Scope and current truth
 
+### Latest source handoff — decoder capture
+
+The latest implementation entry is
+[NATIVE_DECODER_CAPTURE.md](docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md).
+It adds the opt-in `complete_unit_plan --capture-decoder` path around the actual
+official pipeline, with a complete capture archive plus the existing three-arm
+generation/scoring outputs. It is `generated_unexecuted`; follow that entry's
+CPU harness acceptance commands first. GPU execution remains stopped.
+
+The historical R3 green-r2 archive now contains raw plans, receipt and logs for
+311/311 checks. Web rehashed all 21 manifest payloads and the receipt; the real
+runtime historical-root fix is present. At base `1da40c7`, however, one of its
+72 code refs already differs (`actionbench_full128_unit.py`, later macOS parent
+normalization); this delivery changes further code. Do not label the current
+tree accepted from that historical receipt. The old historical-root defect is
+not the current source blocker. Canonical input staging, current-source
+acceptance, same-device raw scorer evidence and trusted replay remain pending.
+
+The paragraphs and command cards below retain earlier round history. Their old
+294-test and pre-repair status descriptions do not supersede this section,
+CURRENT's latest handoff or the raw R3 return. Do not rewrite historical hashes
+or blindly repeat completed unchanged work. The observer has a different task
+role and 119-output inventory, so it cannot reuse Full128's old price/admission.
+
 This runbook is the Local Codex entry point for round `20261006-baseline-qualification`. It covers acceptance of the committed control/scoring software, recovery and verification of one original development asset, construction of the three-arm baseline unit, native-scoring replay, integrity validation, and evidence return.
 
 Latest execution evidence is summarized in

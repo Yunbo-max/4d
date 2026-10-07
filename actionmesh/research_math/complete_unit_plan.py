@@ -5,7 +5,8 @@ from pathlib import Path
 import subprocess
 import sys
 from research_math.control_scoring import file_ref
-from research_math.complete_unit_contract import validate_generation_profile, complete_unit_output_paths
+from research_math.complete_unit_contract import (validate_generation_profile,
+    complete_unit_output_paths, decoder_capture_output_paths)
 
 INPUT_NAMES=('contract','population','snapshot_contract','snapshot_admission',
              'dataset_semantics','unit_manifest','environment')
@@ -23,15 +24,18 @@ def validate_inventory(args):
     return records
 
 
-def complete_output_inventory(records):
-    return complete_unit_output_paths(records.get('unit_manifest',{}).get('calibration_unit',{}).get('uid'))
+def complete_output_inventory(records, *, capture_decoder=False):
+    paths = complete_unit_output_paths(records.get('unit_manifest',{}).get('calibration_unit',{}).get('uid'))
+    return paths + (decoder_capture_output_paths() if capture_decoder else [])
 
 
 def build_plan(args):
     root=args.root.resolve();plan_dir=args.plan_dir.resolve();plan_dir.relative_to(root)
     records=validate_inventory(args)
     profile=validate_generation_profile(records['unit_manifest']['generation'])
+    capture_decoder=getattr(args,'capture_decoder',False)
     task_id='complete-'+profile+'-three-arm-unit'
+    if capture_decoder:task_id='observer-'+task_id
     environment=json.loads(args.environment.read_text())
     if environment['python_executable']!=sys.executable or environment['gpu_uuid']!=args.gpu_uuid:
         raise ValueError('Fresh current interpreter and allocated physical GPU required')
@@ -48,6 +52,7 @@ def build_plan(args):
     sources=sorted((root/'actionmesh/research_math').rglob('*.py'))
     sources += [root/'actionmesh'/name for name in ('official_actionbench_adapter.py',
         'deterministic_actionbench_entry.py','research_census_eval.py')]
+    if capture_decoder:sources.append(root/'actionmesh/observe_actionmesh_generation.py')
     code=[file_ref(root,p) for p in sources]
     command=[sys.executable,'-m','research_math.complete_unit_runner']
     for name in INPUT_NAMES:
@@ -55,11 +60,14 @@ def build_plan(args):
     for name in ('source_root','dataset_root','weights_root'):
         command+=['--'+name.replace('_','-'),str(getattr(args,name).resolve())]
     command+=['--gpu-uuid',args.gpu_uuid,'--wall-seconds',str(args.wall_seconds),'--output','unit-output']
+    if capture_decoder:command.append('--capture-decoder')
     revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
     plan=native.make_plan(root,run_id=args.run_id,purpose='engineering',evidence_mode='developmental',
         jobs=[{'trial_id':task_id,'command':command,'cwd':'actionmesh',
-            'input_refs':inputs,'code_refs':code,'output_paths':complete_output_inventory(records),
-            'seed':42,'group':'engineering','arm_role':'complete-current-release-calibration'}],
+            'input_refs':inputs,'code_refs':code,
+            'output_paths':complete_output_inventory(records,capture_decoder=capture_decoder),
+            'seed':42,'group':'engineering','arm_role':(
+                'native-context-capture' if capture_decoder else 'complete-current-release-calibration')}],
         provenance={'git_revision':revision,'model_revision':'four immutable manifests in snapshot admission',
             'data_revision':records['unit_manifest']['population']['revision'],
             'environment_digest':file_ref(root,args.environment)['sha256']},
@@ -72,11 +80,13 @@ def build_plan(args):
             'priority':1,'plan_ref':file_ref(root,inner),
             'resources':{'cpu_cores':8,'ram_mib':32768,'gpu_count':1,'gpu_peak_mib':None,
                 'allow_gpu_share':False,'memory_profile_ref':None,'exclusive_keys':['actionbench-complete-unit']}}],
-        limits={'total_wall_seconds':args.wall_seconds+1800,'window_seconds':args.wall_seconds+1800,
+        limits={'total_wall_seconds':args.wall_seconds if capture_decoder else args.wall_seconds+1800,
+                'window_seconds':args.wall_seconds+1800,
                 'max_parallel_tasks':1,'cpu_cores':8,'ram_mib':32768,'max_gpu_task_seconds':args.wall_seconds},
         gpus={'uuids':[args.gpu_uuid],'safety_margin_mib':1024,'max_tasks_per_gpu':1})
     target=plan_dir/'harness.json';target.write_text(json.dumps(outer,indent=2)+'\n')
     return {'plan':str(target),'approved_plan_digest':outer['plan_digest'],'execution_started':False,
+            'capture_decoder':capture_decoder,'native_context_qualified':False,
             'scope':'one complete '+profile+' calibration; no candidates or full128 scientific claim'}
 
 
@@ -86,6 +96,8 @@ def main():
         parser.add_argument('--'+name.replace('_','-'),type=Path,required=True)
     parser.add_argument('--run-id',required=True);parser.add_argument('--gpu-uuid',required=True)
     parser.add_argument('--wall-seconds',type=int,default=27000)
+    parser.add_argument('--capture-decoder',action='store_true',
+                        help='Separate observer unit; does not reuse or update queue pricing')
     print(json.dumps(build_plan(parser.parse_args())))
 
 

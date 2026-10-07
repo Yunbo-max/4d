@@ -24,6 +24,7 @@ ROOT_SOURCES = (
     'prepare_actionbench_active_batch_snapshot.py',
     'prepare_actionbench_active_batch_reconciliation.py',
     'deterministic_actionbench_entry.py',
+    'observe_actionmesh_generation.py',
 )
 
 
