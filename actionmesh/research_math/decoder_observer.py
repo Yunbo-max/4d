@@ -72,6 +72,8 @@ class DecoderObserver:
         # copy=True prevents CPU aliases; clone is unnecessary after a forced copy.
         tensors={k:v.detach().to(device='cpu',copy=True).contiguous() for k,v in values.items()}
         save_file(tensors,str(path/'inputs.safetensors'))
+        cuda_autocast_enabled,cuda_autocast_dtype=autocast_state(torch,'cuda')
+        cpu_autocast_enabled,cpu_autocast_dtype=autocast_state(torch,'cpu')
         record={'kind':'decoder-call-capture','version':1,'status':'inputs_captured',
                 'scientific_effect_qualification':False,'replay_qualified':False,
                 'identity_sha256':sha256(self.root/'identity.json'),
