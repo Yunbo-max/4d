@@ -175,7 +175,11 @@ Return the complete attempt workspace `actionmesh/scoring-output/`, all raw
 per-pass JSON/logs, input/code bundle, device samples, native and outer plans,
 receipts, source revision/dirty patch and environment/dependency lock. Failed
 attempts and pending pass slots must be returned as well. For formal acceptance,
-Local must retain the live official/harness parity and nonce-bound replay records,
+Use [ACTIONBENCH_SCORER_PARITY.md](ACTIONBENCH_SCORER_PARITY.md) for the new
+independent path. Freeze a complete first protocol revision with its exact
+official scorer descriptor before executing parity; a pass emits the sidecar
+needed for the later faithful-harness protocol revision. Local must retain the
+live official/harness parity and nonce-bound replay records,
 source-backed qualification rules and the natural-failure analysis separately.
 
 ## Scope and next closure

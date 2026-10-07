@@ -1,0 +1,78 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "status": "generated_unexecuted",
+  "recorded_at": "2026-10-07T00:53:25Z",
+  "base_commit": "c6d20a0acd2a39be03d9351a86381051d39c94d3",
+  "accepted_local_setup": {
+    "review_packet_ref": {
+      "path": "rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md",
+      "sha256": "f353638221589cc44d9a805c6aed326b3386f2070aabc5d42d108712590380e7"
+    },
+    "supporting_archive_sha256": "06ccb3de0223a4578d2da2c3fdf493cd73d9c55f66ca6b1141d9acdebeadc6b6",
+    "software_checks": {
+      "passed": 127,
+      "failed": 0,
+      "scope": "engineering only"
+    },
+    "control_arms_completed": [
+      "native",
+      "world_gaussian",
+      "body_gaussian"
+    ],
+    "request_sha256": "99f0c2f1526cb98584d6e37ff7fa45f71ed804f13366685ed44c6e1bcf493d22",
+    "official_scores_run": 0,
+    "candidate_native_results": 0
+  },
+  "delivery": {
+    "entry_ref": {
+      "path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md",
+      "sha256": "f59db47698046e65f1329c0dc1aa98f9664fd15c0b05bce998cd1b4837ad1d0b"
+    },
+    "official_adapter_ref": {
+      "path": "actionmesh/official_actionbench_adapter.py",
+      "sha256": "604f072b51cd2b2772785b76d7556b570b8191821434867d5e32a46ecb22594b"
+    },
+    "parity_runner_ref": {
+      "path": "actionmesh/research_math/actionbench_parity.py",
+      "sha256": "2dc1d2162e7b0f5384f38fb639b4310806381a6b0b704d3e1248584a242bb17b"
+    },
+    "plan_builder_ref": {
+      "path": "actionmesh/prepare_actionbench_parity.py",
+      "sha256": "ec5e6c266b1504939e639787be7e76b6df797cf871fec1d12474ee36746db7cb"
+    },
+    "tests_ref": {
+      "path": "actionmesh/research_math/tests/test_actionbench_parity.py",
+      "sha256": "44a1f7cc101951f4a9b180ed1548ce549a2d17c9de041be6512be643478d4e82"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-scorer-parity-source-review.json",
+      "sha256": "d7f3c1217251fc033bee68455851324a365456690ef1d322b05a5025fba9d2a5"
+    },
+    "new_checks_authored": 12,
+    "new_checks_executed": 0
+  },
+  "admission": {
+    "requires_verified_source_backed_protocol_with_official_scorer": true,
+    "official_path": "pinned evaluate_dataset.py in a fresh process through a format-only NPZ-to-GLB adapter",
+    "faithful_path": "research_census_eval.py in a separate fresh process",
+    "arms": 3,
+    "metrics": [
+      "cd_3d",
+      "cd_4d",
+      "cd_motion"
+    ],
+    "absolute_tolerance": 0.0,
+    "writes_sidecar_only_after_all_comparisons_pass": true,
+    "native_contract_qualified": false
+  },
+  "remaining_blockers": [
+    "authentic frozen native definition and released sample manifest",
+    "prospective source-backed baseline and control qualification rules",
+    "Local execution acceptance of this revision",
+    "successful official-versus-faithful parity run",
+    "nonce-bound trusted official replay",
+    "complete current multi-arm timing and peak VRAM"
+  ],
+  "candidate_designs_verified": 0,
+  "candidate_native_results": 0
+}

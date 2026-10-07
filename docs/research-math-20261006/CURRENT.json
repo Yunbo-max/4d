@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-06T22:53:19Z",
+  "recorded_at": "2026-10-07T00:53:25Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews, 15 conditional current specs; no scientific implementation/native comparison/outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 software checks, native runtime, three simple arms, scoring request), but no official score, scorer parity, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -119,6 +119,51 @@
       "sha256": "2fca9b5f74a0b9c4c2bfa4d3a6198ab69f0362cccaf415b51f4de52b6bff0b21"
     },
     "new_checks_authored": 8,
+    "new_checks_executed": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "baseline_setup_return": {
+    "status": "setup_accepted_scoring_pending",
+    "recorded_at": "2026-10-07T00:53:25Z",
+    "commit": "c6d20a0acd2a39be03d9351a86381051d39c94d3",
+    "review_packet_ref": {
+      "path": "rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md",
+      "sha256": "f353638221589cc44d9a805c6aed326b3386f2070aabc5d42d108712590380e7"
+    },
+    "supporting_archive_sha256": "06ccb3de0223a4578d2da2c3fdf493cd73d9c55f66ca6b1141d9acdebeadc6b6",
+    "software_checks_passed": 127,
+    "control_arms_completed": 3,
+    "scoring_request_sha256": "99f0c2f1526cb98584d6e37ff7fa45f71ed804f13366685ed44c6e1bcf493d22",
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_scorer_parity_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-07T00:53:25Z",
+    "base_commit": "c6d20a0acd2a39be03d9351a86381051d39c94d3",
+    "entry_ref": {
+      "path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md",
+      "sha256": "f59db47698046e65f1329c0dc1aa98f9664fd15c0b05bce998cd1b4837ad1d0b"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-scorer-parity.json",
+      "sha256": "6e119bd0f7e26eceba207a13f5080cbea03beefb2381a21b45393b0a47401b13"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-scorer-parity-source-review.json",
+      "sha256": "d7f3c1217251fc033bee68455851324a365456690ef1d322b05a5025fba9d2a5"
+    },
+    "runbook_ref": {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "c1f2139e6ae63c7592898fc1b44190b7b3e2247cc35a04bb962deb8324179bd6"
+    },
+    "baseline_scoring_ref": {
+      "path": "docs/research-math-20261006/BASELINE_SCORING.md",
+      "sha256": "19d36ca74cec4f131655cfc80dc81a9f316ba2905aba596c9f3e36b9d87130ad"
+    },
+    "new_checks_authored": 12,
     "new_checks_executed": 0,
     "candidate_designs_verified": 0,
     "candidate_native_results": 0

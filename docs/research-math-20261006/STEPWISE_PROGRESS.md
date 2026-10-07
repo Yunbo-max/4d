@@ -144,3 +144,46 @@ The output paths are stable relative to the isolated attempt root and final proj
 Eight engineering checks were authored and included in the whole-suite source closure. Static source syntax and command/consumer/staging review were performed; **no software check, generated collector, GPU work or native scorer was executed**. Source self-review is recorded in `native-runtime-source-review.json`; no independent execution acceptance is claimed.
 
 Candidate complete designs and native results remain **0/15**. Next: Local whole-suite acceptance, actual environment capture, original receipt-bound source/GT restoration and source-backed native protocol/trusted replay. Full multi-arm timing and the eight-hour candidate queue remain pending.
+
+## Returned setup accepted; independent scorer parity authored — 2026-10-07
+
+Resumed exact main `c6d20a0acd2a39be03d9351a86381051d39c94d3` and read the
+new Local packet at
+`rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md`.
+Its source-safe archive was independently hash-checked as
+`06ccb3de0223a4578d2da2c3fdf493cd73d9c55f66ca6b1141d9acdebeadc6b6`.
+The accepted setup facts are 127/127 engineering checks, the captured native
+runtime, one receipt-bound original development UID, all three completed simple
+control arms, and a strictly validated scoring request. No official score, GPU
+scorer replay, native decision or candidate result ran. Those completed setup
+steps are no longer scheduled for blind repetition.
+
+Authored an independent ActionBench official path instead of comparing two
+invocations of the same wrapper. A format-only adapter exports all 16 float32 NPZ
+frames to the official GLB layout, proves exact vertex/face round-trip, applies
+only the already-documented CPU RNG device compatibility change in an isolated
+copy of the pinned sources, and starts official `evaluate_dataset.py` in a fresh
+process. It retains every GLB, original and patched source hashes, exact patch,
+command, CSV, summary and logs. A separate process invokes the existing faithful
+wrapper on the identical manifest, GT, device, seed and budgets.
+
+The harnessed parity runner covers native, world-Gaussian and body-Gaussian arms
+and requires exact equality for `cd_3d`, `cd_4d` and `cd_motion`; zero tolerance
+is frozen before results. It emits a native-evaluator-compatible faithful-harness
+verification sidecar only after all nine comparisons and device telemetry pass.
+Twelve parser/identity/rejection checks were added, but **none were executed by
+Web**. All new source remains `generated_unexecuted` until Local acceptance.
+
+The plan builder intentionally requires a complete source-backed native protocol
+that already passes the installed verifier with the exact official scorer
+descriptor. This prevents the parity unit from bypassing the still-missing
+released sample/split definition and prospective baseline/control qualification
+rules. After parity, Local must freeze a new protocol revision with the faithful
+descriptor plus verification ref, then perform nonce-bound official replay.
+
+This delivery closes an executable-source gap, not native qualification. It does
+not increment the candidate ledger: complete candidate validation designs remain
+**0/15**, native candidate results **0/15**, and formal scoped outcomes **0**.
+The parity unit's six scorer invocations are not a complete candidate experiment;
+its timing cannot price the 27,000-second launch budget. Next work is authentic
+protocol/threshold freezing, Local software acceptance, then this parity plan.

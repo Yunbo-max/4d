@@ -10,6 +10,8 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 2. `rounds/20261006-baseline-qualification/WEB_HANDOFF.md`
 3. `docs/research-math-20261006/CURRENT.json`
 4. `docs/research-math-20261006/STEPWISE_PROGRESS.md`
+5. `rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md`
+6. `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 

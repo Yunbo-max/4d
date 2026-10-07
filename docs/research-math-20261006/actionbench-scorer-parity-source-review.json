@@ -1,0 +1,77 @@
+{
+  "kind": "source-review",
+  "status": "static_review_only_generated_unexecuted",
+  "recorded_at": "2026-10-07T00:53:25Z",
+  "base_commit": "c6d20a0acd2a39be03d9351a86381051d39c94d3",
+  "reviewed_sources": [
+    {
+      "path": "actionmesh/official_actionbench_adapter.py",
+      "sha256": "604f072b51cd2b2772785b76d7556b570b8191821434867d5e32a46ecb22594b"
+    },
+    {
+      "path": "actionmesh/research_math/actionbench_parity.py",
+      "sha256": "2dc1d2162e7b0f5384f38fb639b4310806381a6b0b704d3e1248584a242bb17b"
+    },
+    {
+      "path": "actionmesh/prepare_actionbench_parity.py",
+      "sha256": "ec5e6c266b1504939e639787be7e76b6df797cf871fec1d12474ee36746db7cb"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_actionbench_parity.py",
+      "sha256": "44a1f7cc101951f4a9b180ed1548ce549a2d17c9de041be6512be643478d4e82"
+    }
+  ],
+  "upstream_inspection": {
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "official_entrypoint": "actionmesh/repo/actionbench/evaluate_dataset.py",
+    "official_metric_function": "actionmesh/repo/actionbench/benchmark.py:compute_chamfer_3d_4d",
+    "official_prediction_layout": "pred_root/uid/mesh_*.glb",
+    "official_ground_truth_layout": "gt_root/uid/surfaces.npy",
+    "official_output": "CSV plus summary JSON",
+    "faithful_entrypoint": "actionmesh/research_census_eval.py",
+    "observed_compatibility_issue": "Official surface sampling occurs on CPU before device transfer while fork_rng passes verts.device to the CUDA RNG API.",
+    "compatibility_resolution": "An isolated source copy receives the same exact CPU-only RNG device-list fix already recorded by the faithful wrapper; every original/patched hash and replacement is retained."
+  },
+  "findings_repaired_in_source": [
+    {
+      "severity": "critical",
+      "finding": "Two calls to the existing faithful wrapper would not establish official-versus-harness parity.",
+      "resolution": "The official path now launches pinned evaluate_dataset.py as a separate process through a format-only NPZ-to-GLB adapter."
+    },
+    {
+      "severity": "important",
+      "finding": "The official CLI intersects GT and prediction UID sets and emits CSV, unlike the faithful JSON contract.",
+      "resolution": "Each invocation gets one frozen prediction UID; the adapter requires exactly that one successful CSV row and preserves an independent frozen denominator in JSON."
+    },
+    {
+      "severity": "important",
+      "finding": "GLB conversion could change topology/order and therefore stochastic face sampling.",
+      "resolution": "Every frame is reloaded and must match source vertices and faces exactly before the official process starts; source vertices must be float32."
+    },
+    {
+      "severity": "important",
+      "finding": "A parity workload without a verified native contract could bypass missing released split and qualification rules.",
+      "resolution": "The plan builder requires the installed native verifier to accept a complete frozen protocol using the exact official scorer descriptor before execution."
+    },
+    {
+      "severity": "important",
+      "finding": "A saved parity boolean is insufficient for faithful-harness qualification.",
+      "resolution": "Raw official and faithful outputs, sources, commands and logs are retained; zero tolerance is frozen; the sidecar is emitted only after every three-arm comparison passes. Trusted live replay remains explicitly pending."
+    }
+  ],
+  "static_checks": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "open_execution_risks": [
+    "Local must prove trimesh 5.1.0 GLB export preserves exact vertices/faces for all retained frames.",
+    "Local must confirm official and faithful metric floats are exactly equal; tolerance may not be relaxed post hoc.",
+    "The host had approximately 2.4 GB free, so retained 48 GLBs and logs require a fresh disk check.",
+    "The parity unit does not provide nonce-bound replay, baseline/control qualification, candidate evidence, or complete experimental-unit timing."
+  ],
+  "review_conclusion": "No remaining static source blocker found. Local harnessed acceptance and complete source-backed protocol remain mandatory before execution."
+}

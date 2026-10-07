@@ -4,7 +4,19 @@
 
 This runbook is the Local Codex entry point for round `20261006-baseline-qualification`. It covers acceptance of the committed control/scoring software, recovery and verification of one original development asset, construction of the three-arm baseline unit, native-scoring replay, integrity validation, and evidence return.
 
-Current state is `generated_unexecuted`. There are 20 mathematical constructions and 15 conditionally selected candidates, but **0/15 candidate implementations have a complete validation design and 0/15 have native results**. C02 has a corrected development operator and software tests only; it is not admitted here as a new-method arm.
+Latest accepted setup evidence is
+`rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md`.
+It records 127/127 software checks, a captured native runtime, restored original
+development asset, and completed native/world-Gaussian/body-Gaussian prediction
+arms plus a validated scoring request. **No official score or GPU scorer replay
+ran.** Do not repeat accepted setup merely because older sections below describe
+its original execution order; first validate the returned hashes against the
+current checkout and continue from the first open prerequisite.
+
+There are 20 mathematical constructions and 15 conditionally selected candidates,
+but **0/15 candidate implementations have a complete validation design and 0/15
+have native results**. C02 has a corrected development operator and software
+tests only; it is not admitted here as a new-method arm.
 
 Read these files at the delivered commit before acting:
 
@@ -16,6 +28,7 @@ Read these files at the delivered commit before acting:
 - `docs/research-math-20261006/BASELINE_SCORING.md`
 - `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
 - `docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md`
+- `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
 - `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 ## Roles and unresolved host facts
@@ -25,16 +38,19 @@ Read these files at the delivered commit before acting:
 | Controller | Local Codex on the user's computer, with the authenticated Git checkout and configured SSH access |
 | Compute | Separate Linux GPU host; ordinary Conda processes; no remote Codex/GPT required |
 | Repository checkout | Resolve an absolute fresh path locally; do not reuse a dirty or running tree |
-| GPU-host project path | Unknown. `/root/rivermind-data/actionmesh-repro` is historical evidence only and must be verified before use |
+| GPU-host project path | Last returned as `/root/rivermind-data/actionmesh-repro`; verify the current clean checkout and exact delivered commit before use |
 | SSH alias/endpoint | Unknown. Reuse the user's already configured authorized target; do not guess or extract credentials |
 | Installed skill directory | Unknown. Locate the complete current installed `research-autopilot` package and record its absolute path |
-| Conda env/interpreter | Unknown. Inspect and reuse a compatible existing environment; no Docker |
-| GPU | User-authorized target is one RTX 2080 Ti; record current UUID, driver, total/free VRAM, and competing processes before launch |
+| Conda env/interpreter | Last returned as `/root/rivermind-data/actionmesh-repro/inference-env/bin/python`, a Conda-backed venv; revalidate captured package/dependency hashes; no Docker |
+| GPU | Last observed RTX 2080 Ti, UUID `GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740`, driver 580.119.02, 22,528 MiB total; recheck identity/free VRAM/processes before launch |
 | ActionBench revision | `2796071cbe6248422fcbeab3101fa9f9886cb7b9` |
-| Original sample and GT paths | Pending Local restoration/verification from the original evidence store; do not invent |
+| Original sample and GT paths | Returned UID `000-048_45e57349f062416aaf11f2c31587da16`; GT remains host-only at SHA-256 `25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e` |
 | Time budget | 28,800 s hard window, 1,800 s collection reserve; current complete three-arm unit time is unmeasured |
 
-These unknowns are explicit Local resolution steps. If the original development asset, GT, official evaluator source, or compatible environment cannot be restored, stop before scoring and return the exact missing item and inspected locations.
+The packet's host/device/free-space values are observations from that completed
+setup window, not current telemetry. Recheck them before GPU work. If the
+development asset, GT, evaluator source, or compatible environment no longer
+matches the returned hashes, stop before scoring and return the exact mismatch.
 
 ## Ordered execution
 
@@ -156,7 +172,32 @@ cd "$project_dir/actionmesh"
 
 The request builder verifies the source report, released population membership, exact native-byte arm, three arm reports/sequences, topology/timeline/anchor, GT UID, and current scorer/adapter hashes. Retain its printed request digest.
 
-Next create the source-backed frozen qualification protocol and native runtime JSON described in `BASELINE_SCORING.md`. They are Local evidence, not Web placeholders. Freeze and hash at minimum: ActionBench revision, sample UID/split, three arm manifests, evaluator module/function and source closure, `n_pts_chamfer=100000`, `n_pts_icp=10000`, rotation count `24`, ICP iterations `200`, scorer seed `44`, device policy, framework/library versions, dependency locks, and the one physical GPU UUID. Do not approve a request with unknown or mismatched fields.
+Next create the source-backed frozen qualification protocol described in
+`BASELINE_SCORING.md`. The runtime JSON is already returned but must still match
+the executing interpreter and current GPU. Freeze and hash at minimum:
+ActionBench revision, sample UID/split, three arm manifests, evaluator
+module/function and source closure, `n_pts_chamfer=100000`, `n_pts_icp=10000`,
+rotation count `24`, ICP iterations `200`, scorer seed `44`, device policy,
+framework/library versions, dependency locks, and the one physical GPU UUID.
+Do not approve a request with unknown or mismatched fields. Qualification rules
+must be prospective and source-backed; do not derive a permissive threshold from
+this development asset.
+
+### 6a. Establish independent official-versus-faithful parity
+
+Before changing the native contract to `faithful_harness`, follow
+[`ACTIONBENCH_SCORER_PARITY.md`](docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md).
+The first frozen protocol revision must use the exact official scorer descriptor.
+Build the parity plan only after that full protocol passes the installed native
+verifier, then execute the plan only through `run_harness.py`.
+
+The parity unit invokes the official ActionBench dataset CLI and the existing
+faithful wrapper separately for each of the same three prediction arms. It
+retains GLBs, source copies, patch identity, raw official CSV/summary, raw
+faithful JSON and logs. All three official metrics require zero absolute
+tolerance. A passed sidecar permits a new frozen protocol revision using the
+faithful descriptor plus `verification_ref`; it does not qualify any baseline,
+control or candidate and does not replace trusted nonce-bound replay.
 
 Create the admitted scientific plan with the actual resolved values:
 
@@ -184,7 +225,8 @@ The admitted plan already uses `python -m research_math.control_scoring score` a
 
 If `prepare_control_scoring.py` rejects the protocol/runtime, return `blocked_missing_source_backed_native_protocol` or `blocked_native_runtime_mismatch` with the exact validation error. A completed developmental scoring plan still leaves `native_contract_qualified=false`; trusted official/harness parity and nonce-bound replay remain separate Local acceptance evidence, as specified in `BASELINE_SCORING.md`.
 
-For every arm and pass, retain raw score output plus:
+The admitted scoring protocol must reference the passed parity sidecar before
+using the faithful harness. For every arm and pass, retain raw score output plus:
 
 - sample UID and split;
 - protocol and device manifest hashes;
