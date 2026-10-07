@@ -16,6 +16,8 @@ import sys
 
 from prepare_complete_unit_admission import reference_closure
 from research_math.actionbench_full128_unit import (
+    R7_ARCHIVE_MANIFEST_SHA256,
+    R7_SOURCE_REVISION,
     validate_pricing_shape,
     verify_pricing_receipt,
 )
@@ -31,8 +33,6 @@ CURRENT_UNITS_PER_WINDOW = 16
 RETAINED_DISPOSITIONS = {"completed", "running", "pending", "failed"}
 R9_RETAINED_RANGE = (1, 10)
 R9_PLAN_DIGEST = "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1"
-R7_SOURCE_REVISION = "84a94a60779b86e477c3488929097b76fdcebfec"
-R7_ARCHIVE_MANIFEST_SHA256 = "3e65c9347aab4b67329df72f6e14800a510b6c79d02ecabf337f0d0d105a1eb0"
 R9_CAMPAIGN_PLAN_PATH = (
     "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
     "4d-longgoal-r9/plans/population-gpu-current-r9/harness.json")
@@ -467,6 +467,10 @@ def build_native_command(args, uid: str, window_id: str,
         "--root", "..",
         "--pricing", (Path("..") / args.pricing.resolve().relative_to(
             args.root.resolve())).as_posix(),
+        "--historical-root", str(args.historical_root.resolve()),
+        "--historical-manifest", (Path("..") /
+            args.historical_manifest.resolve().relative_to(
+                args.root.resolve())).as_posix(),
         "--uid", uid,
         "--window-id", window_id,
         "--gpu-uuid", args.gpu_uuid,

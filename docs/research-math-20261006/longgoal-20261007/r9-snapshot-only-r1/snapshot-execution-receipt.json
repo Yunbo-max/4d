@@ -1,0 +1,38 @@
+{
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/actionmesh-research-staging/4d-runtime-pricing-closure-green-r2/actionmesh/prepare_actionbench_active_batch_snapshot.py",
+    "--root",
+    "/root/actionmesh-research-staging/4d-runtime-pricing-closure-green-r2",
+    "--live-state",
+    "/root/actionmesh-research-staging/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
+    "--live-status",
+    "/root/actionmesh-research-staging/4d-status-observation-r1/docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json"
+  ],
+  "exit_code": 0,
+  "recorded_at": "2026-10-07T21:59:59.276251+00:00",
+  "gpu_workload_executed": false,
+  "reconciliation_executed": false,
+  "files": [
+    {
+      "path": "evidence-preparation/r9-snapshot-only-r1/stdout.log",
+      "bytes": 974,
+      "sha256": "282cc90436e06a697fb4cd7122454cce7f66323995fcbc066204b39ac8d5f87e"
+    },
+    {
+      "path": "evidence-preparation/r9-snapshot-only-r1/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
+      "bytes": 364183,
+      "sha256": "c6615919ff39b3c0445ccb0358f7c23af7026f4365b657c8e511ab27e564b862"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json",
+      "bytes": 364265,
+      "sha256": "744c4b4630113719a75194caf53a6f40d072eeb45c84c24ad766dc33080ab75b"
+    }
+  ]
+}

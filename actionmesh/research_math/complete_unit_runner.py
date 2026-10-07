@@ -83,6 +83,12 @@ def validate_full128_mode(args):
         raise ValueError('Full128 mode requires root, pricing, UID and window ID together')
     if active and args.pricing.resolve()!=args.root.resolve()/'inputs/actionbench-full128-queue/pricing.json':
         raise ValueError('Canonical Full128 pricing path required')
+    historical_root=getattr(args,'historical_root',None)
+    historical_manifest=getattr(args,'historical_manifest',None)
+    if active and (historical_root is None or historical_manifest is None):
+        raise ValueError('Full128 mode requires historical root and archive manifest')
+    if not active and (historical_root is not None or historical_manifest is not None):
+        raise ValueError('Historical pricing evidence is valid only in Full128 mode')
     return active
 
 
@@ -113,7 +119,9 @@ def verify_prerequisites(args,output):
         checked=freeze_unit(args.root,pricing,snapshot,semantics,manifest,
             args.source_root,args.dataset_root,args.uid,args.window_id,
             output/'revalidated-unit-manifest.json',digest(args.snapshot_admission),
-            digest(args.dataset_semantics))
+            digest(args.dataset_semantics),
+            historical_root=args.historical_root,
+            historical_manifest=args.historical_manifest)
         require_full128_budget(args,checked)
     else:
         checked=freeze(contract,population,snapshot,semantics,args.source_root,args.dataset_root,
@@ -211,6 +219,8 @@ def main():
         parser.add_argument('--'+name,type=Path,required=True)
     parser.add_argument('--root',type=Path)
     parser.add_argument('--pricing',type=Path)
+    parser.add_argument('--historical-root',type=Path)
+    parser.add_argument('--historical-manifest',type=Path)
     parser.add_argument('--uid')
     parser.add_argument('--window-id')
     parser.add_argument('--gpu-uuid',required=True)

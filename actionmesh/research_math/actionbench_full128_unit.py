@@ -8,7 +8,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
+import subprocess
 
 from research_math.actionbench_queue_pricing import build_pricing_manifest
 from research_math.actionbench_unit_manifest import (
@@ -20,9 +22,38 @@ from research_math.complete_unit_contract import validate_generation_profile
 from research_math.control_scoring import file_ref, resolve_ref
 
 
+R7_SOURCE_REVISION = "84a94a60779b86e477c3488929097b76fdcebfec"
+R7_ARCHIVE_MANIFEST_SHA256 = (
+    "3e65c9347aab4b67329df72f6e14800a510b6c79d02ecabf337f0d0d105a1eb0")
+HISTORICAL_PRICING_PATHS = (
+    "inputs/actionbench-full128-queue/pricing.json",
+    "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+    "actionmesh/research_overnight/assets/actionbench_population.json",
+    "inputs/complete-unit-admissions/complete-lowram-r7.json",
+    "inputs/fp16-lowram-v1/unit-manifest.json",
+)
+
+
 def canonical(value) -> bytes:
     return json.dumps(value, sort_keys=True, separators=(",", ":"),
                       ensure_ascii=False, allow_nan=False).encode()
+
+
+def _regular_nonsymlink(root: Path, relative: Path, label: str) -> Path:
+    """Resolve a regular file beneath root while rejecting symlink components."""
+    if relative.is_absolute() or not relative.parts or ".." in relative.parts:
+        raise ValueError("Project-relative " + label + " required")
+    root = Path(root).resolve()
+    candidate = root
+    for part in relative.parts:
+        candidate = candidate / part
+        if candidate.is_symlink():
+            raise ValueError(label + " may not be a symlink")
+    resolved = candidate.resolve()
+    resolved.relative_to(root)
+    if not resolved.is_file():
+        raise FileNotFoundError("Regular " + label + " required")
+    return resolved
 
 
 def validate_pricing_shape(pricing: dict) -> None:
@@ -88,6 +119,103 @@ def verify_pricing_receipt(root: Path, pricing: dict) -> tuple[dict, dict]:
         raise ValueError("Pricing receipt differs from source recomputation")
     validate_pricing_shape(pricing)
     return pricing, admission
+
+
+def verify_runtime_pricing_evidence(project_root: Path, historical_root: Path,
+                                    historical_manifest: Path,
+                                    pricing: dict) -> tuple[dict, dict]:
+    """Recheck the exact historical pricing closure inside each unit attempt.
+
+    The current attempt receives its own hash-pinned copy of the archive
+    manifest and blobs. The old checkout is read only and is never used for
+    executable source, dataset, weights, device, or output selection.
+    """
+    project_root = Path(project_root).resolve()
+    raw_historical_root = Path(historical_root)
+    if raw_historical_root.is_symlink():
+        raise ValueError("Historical pricing root may not be a symlink")
+    historical_root = raw_historical_root.resolve()
+    if not historical_root.is_dir():
+        raise FileNotFoundError("Exact historical pricing root required")
+    revision = subprocess.run(
+        ["git", "rev-parse", "HEAD"], cwd=historical_root, check=True,
+        capture_output=True, text=True).stdout.strip()
+    if revision != R7_SOURCE_REVISION:
+        raise ValueError("Exact historical pricing source revision required")
+    clean = subprocess.run(
+        ["git", "diff", "--quiet", "HEAD", "--"], cwd=historical_root,
+        check=False, capture_output=True)
+    if clean.returncode != 0:
+        raise ValueError("Historical pricing tracked source must match its revision")
+
+    raw_manifest = Path(historical_manifest)
+    absolute_manifest = Path(os.path.abspath(raw_manifest))
+    if not raw_manifest.is_absolute():
+        absolute_manifest = Path(os.path.abspath(Path.cwd() / raw_manifest))
+    try:
+        manifest_relative = absolute_manifest.relative_to(project_root)
+    except ValueError as exc:
+        raise ValueError("Hash-verified historical evidence manifest required") from exc
+    manifest_path = _regular_nonsymlink(
+        project_root, manifest_relative, "historical evidence manifest")
+    if (file_ref(project_root, manifest_path)["sha256"] !=
+            R7_ARCHIVE_MANIFEST_SHA256):
+        raise ValueError("Exact independently verified r7 closure manifest required")
+    manifest = json.loads(manifest_path.read_text())
+    if (manifest.get("original_bytes") is not True or
+            manifest.get("copied_to_canonical_project_paths") is not False or
+            not isinstance(manifest.get("files"), list)):
+        raise ValueError("Hash-verified historical archive manifest required")
+
+    rows_by_source: dict[str, list[dict]] = {}
+    seen_archive_paths: set[str] = set()
+    for row in manifest["files"]:
+        if (not isinstance(row, dict) or
+                (row.get("matches") is not None and
+                 not isinstance(row.get("matches"), bool)) or
+                not isinstance(row.get("source"), str) or
+                not isinstance(row.get("sha256"), str) or
+                len(row["sha256"]) != 64 or
+                not isinstance(row.get("bytes"), int) or row["bytes"] < 0 or
+                not isinstance(row.get("archive_path"), str)):
+            raise ValueError("Exact historical archive row required")
+        if row.get("matches") is not True:
+            continue
+        relative = Path(row["archive_path"])
+        if (relative.is_absolute() or not relative.parts or
+                ".." in relative.parts or relative.as_posix() in seen_archive_paths):
+            raise ValueError("Unique project-relative historical blob required")
+        seen_archive_paths.add(relative.as_posix())
+        blob = _regular_nonsymlink(
+            project_root, relative, "archived historical evidence")
+        if (not blob.is_file() or blob.stat().st_size != row["bytes"] or
+                hashlib.sha256(blob.read_bytes()).hexdigest() != row["sha256"]):
+            raise ValueError("Hash-mismatched archived historical evidence: " +
+                             row["source"])
+        rows_by_source.setdefault(Path(row["source"]).as_posix(), []).append(row)
+
+    for relative in HISTORICAL_PRICING_PATHS:
+        historical = _regular_nonsymlink(
+            historical_root, Path(relative), "historical pricing source")
+        current = _regular_nonsymlink(
+            project_root, Path(relative), "current pricing source")
+        if (
+                file_ref(historical_root, historical)["sha256"] !=
+                file_ref(project_root, current)["sha256"]):
+            raise ValueError("Current pricing copy differs from historical evidence: " +
+                             relative)
+        # Match the canonical suffix while allowing the archive to preserve
+        # the source checkout's original absolute root in its manifest.
+        matches = [row for source, rows in rows_by_source.items()
+                   if source == relative or source.endswith("/" + relative)
+                   for row in rows]
+        matching_hashes = {row["sha256"] for row in matches}
+        if (len(matches) != 1 or matching_hashes !=
+                {file_ref(historical_root, historical)["sha256"]}):
+            raise ValueError("Historical archive lacks one exact pricing source: " +
+                             relative)
+
+    return verify_pricing_receipt(historical_root, pricing)
 
 
 def _selected_window(pricing: dict, uid: str, window_id: str) -> tuple[dict, int]:
@@ -188,14 +316,19 @@ def _verify_sample_directory_closure(dataset_root: Path, uid: str) -> None:
 def freeze_unit(root: Path, pricing: dict, snapshot: dict, semantics: dict,
                 template: dict, source_root: Path, dataset_root: Path, uid: str,
                 window_id: str, output: Path, snapshot_admission_sha256: str,
-                dataset_semantics_sha256: str) -> dict:
+                dataset_semantics_sha256: str, *,
+                historical_root: Path | None = None,
+                historical_manifest: Path | None = None) -> dict:
     """Revalidate and freeze one selected UID without running model or scorer."""
     root = Path(root).resolve()
     output = Path(output).resolve()
     output.relative_to(root)
     if output.exists():
         raise FileExistsError("Preserve existing Full128 unit manifest: " + str(output))
-    verified, admission = verify_pricing_receipt(root, pricing)
+    if historical_root is None or historical_manifest is None:
+        raise ValueError("Runtime historical pricing evidence is required")
+    verified, admission = verify_runtime_pricing_evidence(
+        root, historical_root, historical_manifest, pricing)
     _validate_admissions(verified, snapshot, semantics, template)
     expected_template = admission.get("unit_manifest_ref")
     template_path = resolve_ref(root, expected_template) if isinstance(expected_template, dict) else None
@@ -286,7 +419,8 @@ def freeze_unit(root: Path, pricing: dict, snapshot: dict, semantics: dict,
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("root", "pricing", "snapshot-admission", "dataset-semantics",
-                 "unit-manifest", "source-root", "dataset-root", "output"):
+                 "unit-manifest", "source-root", "dataset-root", "output",
+                 "historical-root", "historical-manifest"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--uid", required=True)
     parser.add_argument("--window-id", required=True)
@@ -301,7 +435,9 @@ def main() -> int:
         json.loads(args.dataset_semantics.read_text()),
         json.loads(args.unit_manifest.read_text()), args.source_root,
         args.dataset_root, args.uid, args.window_id, args.output,
-        digest(args.snapshot_admission), digest(args.dataset_semantics))
+        digest(args.snapshot_admission), digest(args.dataset_semantics),
+        historical_root=args.historical_root,
+        historical_manifest=args.historical_manifest)
     print(json.dumps({"output": str(args.output), "status": result["status"],
                       "uid": args.uid, "inference_executed": False,
                       "scientific_effect_qualification": False,

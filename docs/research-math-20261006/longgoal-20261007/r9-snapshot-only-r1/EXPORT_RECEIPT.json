@@ -1,0 +1,13 @@
+{
+  "kind": "verified-scp-evidence-export",
+  "recorded_at": "2026-10-07T22:03:49.920610+00:00",
+  "transport": "scp over authorized SSH port 30246",
+  "scp_exit_code": 0,
+  "files_verified": 5,
+  "total_bytes": 731162,
+  "remote_write_performed": false,
+  "canonical_inputs_transferred": false,
+  "large_raw_assets_transferred": false,
+  "manifest_sha256": "0d6ba078ecba457fd246676acf3d623ad412f142999c24c3ead7a5227fe2f2ec",
+  "observed_at_preserved": "2026-10-07T19:12:37.209259Z"
+}

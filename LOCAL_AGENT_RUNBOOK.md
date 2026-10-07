@@ -692,8 +692,27 @@ sidecar permits plan generation only; refresh host state again before any later
 dispatch decision.
 
 ```bash
+set -eu
 window_id=full128-window-02
 window_run_id=full128-window-02-r10
+historical_archive=/root/actionmesh-research-staging/4d-historical-closure-r2
+historical_root=/root/actionmesh-research-staging/4d-r7-pricing-84a94
+historical_manifest="$project_dir/evidence-preparation/closure-r7-original-MANIFEST-2000.json"
+source_manifest="$historical_archive/evidence-preparation/closure-r7-original-MANIFEST-2000.json"
+
+# This prepared project root already contains the immutable staged manifest
+# and 170 unique archive blobs at their original archive_path values. Check
+# the original source and staged copy before planning; the builder then
+# rehashes every archived byte. If either source or staged evidence is absent,
+# stop and repair the staging through the reviewed evidence-transfer process.
+test "$(sha256sum "$source_manifest" | cut -d ' ' -f 1)" = \
+  3e65c9347aab4b67329df72f6e14800a510b6c79d02ecabf337f0d0d105a1eb0
+test "$(sha256sum "$historical_manifest" | cut -d ' ' -f 1)" = \
+  3e65c9347aab4b67329df72f6e14800a510b6c79d02ecabf337f0d0d105a1eb0
+cmp "$source_manifest" "$historical_manifest"
+test "$(git -C "$historical_root" rev-parse HEAD)" = \
+  84a94a60779b86e477c3488929097b76fdcebfec
+test -z "$(git -C "$historical_root" status --porcelain --untracked-files=no)"
 
 "$python_bin" "$project_dir/actionmesh/prepare_actionbench_full128_window.py" \
   --root "$project_dir" \
@@ -711,6 +730,8 @@ window_run_id=full128-window-02-r10
   --source-root "$source_root" \
   --dataset-root "$dataset_root" \
   --weights-root "$weights_root" \
+  --historical-root "$historical_root" \
+  --historical-manifest "$historical_manifest" \
   --run-id "$window_run_id" \
   --window-id "$window_id" \
   --gpu-uuid "$gpu_uuid"
@@ -736,6 +757,13 @@ retained r9 indices 1 through 9 and is rejected by code, including after those
 units complete or fail; never duplicate them. Any remaining indices in 0 through
 15 require a separate no-omission continuation rather than an outcome-selected
 replacement window.
+
+For this repaired plan, also verify that every generated native task stages the
+hash-pinned R7 manifest and all 170 unique `archive_path` blobs into its attempt
+input closure. The runtime freezer rechecks every matching manifest row inside
+the attempt root; a plan that omits any blob is not acceptable even if the outer
+plan validates. Keep indices 10 through 15 explicitly covered by a separate
+no-omission continuation; do not treat window 02 alone as full-128 coverage.
 
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.

@@ -16,7 +16,8 @@ class CompleteUnitRunnerTests(unittest.TestCase):
     def test_full128_mode_requires_exact_argument_bundle_and_canonical_price(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp).resolve();pricing=root/'inputs/actionbench-full128-queue/pricing.json'
-            valid=SimpleNamespace(uid='uid',window_id='full128-window-01',pricing=pricing,root=root)
+            valid=SimpleNamespace(uid='uid',window_id='full128-window-01',pricing=pricing,root=root,
+                historical_root=root/'historical-r7',historical_manifest=root/'archive.json')
             self.assertTrue(validate_full128_mode(valid))
             for key in ('uid','window_id','pricing','root'):
                 changed=SimpleNamespace(**vars(valid));setattr(changed,key,None)
@@ -24,6 +25,9 @@ class CompleteUnitRunnerTests(unittest.TestCase):
                     validate_full128_mode(changed)
             changed=SimpleNamespace(**vars(valid));changed.pricing=root/'other.json'
             with self.assertRaisesRegex(ValueError,'Canonical'):
+                validate_full128_mode(changed)
+            changed=SimpleNamespace(**vars(valid));changed.historical_manifest=None
+            with self.assertRaisesRegex(ValueError,'historical root'):
                 validate_full128_mode(changed)
 
     def test_full128_wall_limit_must_equal_admitted_unit_price(self):
@@ -68,7 +72,8 @@ class CompleteUnitRunnerTests(unittest.TestCase):
                       'selected_unit':{'uid':'uid-b','unit_timeout_seconds':1664},
                       'generation':template['generation']}
             args=SimpleNamespace(**paths,root=root,pricing=pricing,uid='uid-b',
-                window_id='full128-window-01',source_root=source,dataset_root=root,
+                window_id='full128-window-01',historical_root=root/'historical-r7',
+                historical_manifest=root/'archive.json',source_root=source,dataset_root=root,
                 weights_root=weights,gpu_uuid='GPU-test',wall_seconds=1664)
             with patch('research_math.actionbench_full128_unit.freeze_unit',return_value=selected), \
                     patch('research_math.snapshot_admission.verify_source'), \

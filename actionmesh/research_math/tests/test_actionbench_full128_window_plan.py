@@ -1087,6 +1087,8 @@ class Full128WindowPlanTests(unittest.TestCase):
             snapshot_admission=root / "snapshot-admission.json",
             dataset_semantics=root / "dataset-semantics.json",
             unit_manifest=root / "unit-manifest.json",
+            historical_root=Path("/historical/r7"),
+            historical_manifest=root / "docs/r7-archive-manifest.json",
             source_root=root / "source", dataset_root=root / "dataset",
             weights_root=root / "weights", gpu_uuid="GPU-test",
         )
@@ -1109,6 +1111,8 @@ class Full128WindowPlanTests(unittest.TestCase):
             snapshot_admission=root / "inputs/snapshot-admission.json",
             dataset_semantics=root / "inputs/dataset-semantics.json",
             unit_manifest=root / "inputs/unit-manifest.json",
+            historical_root=Path("/historical/r7"),
+            historical_manifest=root / "docs/r7-archive-manifest.json",
             source_root=Path("/native/source"), dataset_root=Path("/native/dataset"),
             weights_root=Path("/native/weights"), gpu_uuid="GPU-test",
         )

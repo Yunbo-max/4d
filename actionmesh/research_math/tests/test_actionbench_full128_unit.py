@@ -10,6 +10,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+import subprocess
 from unittest.mock import patch
 
 from research_math import actionbench_full128_unit as full
@@ -125,7 +126,7 @@ class Full128UnitTests(unittest.TestCase):
 
     def freeze(self, pricing=None, uid=UID):
         output = self.root / f"{uid}-manifest.json"
-        with patch.object(full, "verify_pricing_receipt",
+        with patch.object(full, "verify_runtime_pricing_evidence",
                           return_value=(pricing or self.pricing, self.admission)), \
                 patch.object(full, "_verify_template_source"):
             return full.freeze_unit(
@@ -133,7 +134,9 @@ class Full128UnitTests(unittest.TestCase):
                 self.template, self.root / "source", self.dataset, uid,
                 "full128-window-01", output,
                 file_ref(self.root, self.snapshot_path)["sha256"],
-                file_ref(self.root, self.semantics_path)["sha256"])
+                file_ref(self.root, self.semantics_path)["sha256"],
+                historical_root=self.root,
+                historical_manifest=self.root / "archive-manifest.json")
 
     def test_priced_uid_freezes_exact_inputs_without_execution_claim(self):
         result = self.freeze()
@@ -216,8 +219,8 @@ class PricingReceiptTests(unittest.TestCase):
             with patch.object(full, "build_pricing_manifest", return_value=rebuilt), \
                     patch.object(full, "validate_pricing_shape"):
                 returned, admission = full.verify_pricing_receipt(root, pricing)
-            self.assertEqual(returned, pricing)
-            self.assertEqual(admission, {})
+                self.assertEqual(returned, pricing)
+                self.assertEqual(admission, {})
 
     def test_receipt_rejects_a_divergent_recomputation(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -249,5 +252,112 @@ class PricingReceiptTests(unittest.TestCase):
                 full.verify_pricing_receipt(root, pricing)
 
 
+class RuntimeHistoricalPricingClosureTests(Full128UnitTests):
+    def test_real_freezer_revalidates_distinct_historical_pricing_root(self):
+        """Exercise the actual freezer with a current root and archived R7 root."""
+        from unittest.mock import patch
+
+        historical = self.root / "historical-r7"
+        historical.mkdir()
+        subprocess.run(["git", "init", "-q"], cwd=historical, check=True)
+        subprocess.run(["git", "config", "user.name", "Runtime Fixture"],
+                       cwd=historical, check=True)
+        subprocess.run(["git", "config", "user.email", "runtime-fixture@example.invalid"],
+                       cwd=historical, check=True)
+
+        canonical = {
+            "inputs/actionbench-full128-queue/pricing.json": None,
+            "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json":
+                {"kind": "fixture-contract"},
+            "actionmesh/research_overnight/assets/actionbench_population.json":
+                {"kind": "fixture-population"},
+            "inputs/complete-unit-admissions/complete-lowram-r7.json": None,
+            "inputs/fp16-lowram-v1/unit-manifest.json": self.template,
+        }
+        current_manifest = self.root / "inputs/fp16-lowram-v1/unit-manifest.json"
+        current_manifest.parent.mkdir(parents=True, exist_ok=True)
+        current_manifest.write_text(json.dumps(self.template))
+        self.admission = {"unit_manifest_ref": file_ref(self.root, current_manifest)}
+        canonical["inputs/complete-unit-admissions/complete-lowram-r7.json"] = self.admission
+
+        pricing = dict(self.pricing)
+        for relative in ("docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+                         "inputs/complete-unit-admissions/complete-lowram-r7.json",
+                         "actionmesh/research_overnight/assets/actionbench_population.json"):
+            current = self.root / relative
+            current.parent.mkdir(parents=True, exist_ok=True)
+            value = canonical[relative]
+            current.write_text(json.dumps(value))
+            pricing[{"docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json":
+                     "contract_ref",
+                     "inputs/complete-unit-admissions/complete-lowram-r7.json":
+                     "admission_ref",
+                     "actionmesh/research_overnight/assets/actionbench_population.json":
+                     "population_ref"}[relative]] = file_ref(self.root, current)
+        pricing_path = self.root / "inputs/actionbench-full128-queue/pricing.json"
+        pricing_path.parent.mkdir(parents=True, exist_ok=True)
+        pricing_path.write_text(json.dumps(pricing))
+        canonical["inputs/actionbench-full128-queue/pricing.json"] = pricing
+
+        archive_rows = []
+        archive_dir = self.root / "historical-blobs"
+        archive_dir.mkdir()
+        for index, (relative, value) in enumerate(canonical.items()):
+            path = historical / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(value))
+            blob = archive_dir / f"{index}.blob"
+            blob.write_bytes(path.read_bytes())
+            archive_rows.append({"source": relative, "archive_path":
+                                 blob.relative_to(self.root).as_posix(),
+                                 "bytes": blob.stat().st_size,
+                                 "sha256": sha(blob.read_bytes()), "matches": True})
+        subprocess.run(["git", "add", "."], cwd=historical, check=True)
+        subprocess.run(["git", "commit", "-qm", "fixture"], cwd=historical, check=True)
+        revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=historical,
+                                  capture_output=True, text=True, check=True).stdout.strip()
+
+        archive_manifest = self.root / "archive-manifest.json"
+        archive_manifest.write_text(json.dumps({
+            "original_bytes": True,
+            "copied_to_canonical_project_paths": False,
+            "files": archive_rows,
+        }))
+        expected_pricing = {key: value for key, value in pricing.items()
+                            if key not in {"contract_ref", "admission_ref", "population_ref"}}
+        output = self.root / "runtime-revalidated.json"
+        with patch.object(full, "R7_SOURCE_REVISION", revision, create=True), \
+                patch.object(full, "R7_ARCHIVE_MANIFEST_SHA256",
+                             sha(archive_manifest.read_bytes()), create=True), \
+                patch.object(full, "build_pricing_manifest",
+                             return_value=expected_pricing), \
+                patch.object(full, "validate_pricing_shape"), \
+                patch.object(full, "_verify_template_source"):
+            result = full.freeze_unit(
+                self.root, pricing, self.snapshot, self.semantics, self.template,
+                self.root / "source", self.dataset, UID, "full128-window-01",
+                output, file_ref(self.root, self.snapshot_path)["sha256"],
+                file_ref(self.root, self.semantics_path)["sha256"],
+                historical_root=historical, historical_manifest=archive_manifest)
+        self.assertEqual(result["status"], "frozen_engineering_full128_unit")
+        self.assertEqual(result["selected_unit"]["uid"], UID)
+
+        (self.root / "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json").write_text(
+            json.dumps({"kind": "substituted-current-contract"}))
+        with patch.object(full, "R7_SOURCE_REVISION", revision, create=True), \
+                patch.object(full, "R7_ARCHIVE_MANIFEST_SHA256",
+                             sha(archive_manifest.read_bytes()), create=True), \
+                patch.object(full, "build_pricing_manifest",
+                             return_value=expected_pricing), \
+                patch.object(full, "validate_pricing_shape"), \
+                patch.object(full, "_verify_template_source"), \
+                self.assertRaisesRegex(ValueError, "Current pricing copy differs"):
+            full.freeze_unit(
+                self.root, pricing, self.snapshot, self.semantics, self.template,
+                self.root / "source", self.dataset, UID, "full128-window-01",
+                self.root / "runtime-rejected.json",
+                file_ref(self.root, self.snapshot_path)["sha256"],
+                file_ref(self.root, self.semantics_path)["sha256"],
+                historical_root=historical, historical_manifest=archive_manifest)
 if __name__ == "__main__":
     unittest.main()
