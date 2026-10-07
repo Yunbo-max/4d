@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-10-07T19:48:40.549747+00:00",
+  "source_snapshot": "/private/tmp/4d-resource-readonly-20261007T194840.json",
+  "source_sha256": "4abbbcd818ee57e030060b929ec9eaf5954b219dd0e0d48afa6584f95d4d9298",
+  "basis": "Maximum allocated size among nine completed r9 attempts, including workspace and output artifacts; observational estimate, not guaranteed upper bound.",
+  "per_uid_max_allocated_bytes": 68378624,
+  "six_uid_estimate_bytes": 410271744,
+  "one_hundred_twelve_uid_estimate_bytes": 7658405888,
+  "all_118_uid_estimate_bytes": 8068677632,
+  "with_25_percent_headroom_bytes": 10085847040,
+  "overlay_free_bytes": 16728072192,
+  "estimated_remaining_bytes_after_headroom": 6642225152,
+  "storage": [
+    {
+      "path": "/root/actionmesh-research-staging/actionbench-full128-direct",
+      "du_stdout": "5308858368\t/root/actionmesh-research-staging/actionbench-full128-direct\n",
+      "findmnt_stdout": "/      overlay overlay\n",
+      "disk_usage": {
+        "total": 31526391808,
+        "used": 14781542400,
+        "free": 16728072192
+      }
+    },
+    {
+      "path": "/root/actionmesh-research-staging/4d-longgoal-r9/inputs/actionbench-full128-snapshots",
+      "du_stdout": "868352\t/root/actionmesh-research-staging/4d-longgoal-r9/inputs/actionbench-full128-snapshots\n",
+      "findmnt_stdout": "/      overlay overlay\n",
+      "disk_usage": {
+        "total": 31526391808,
+        "used": 14781542400,
+        "free": 16728072192
+      }
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/weights",
+      "du_stdout": "40179933184\t/root/rivermind-data/actionmesh-repro/weights\n",
+      "findmnt_stdout": "/root/rivermind-data ext4   /dev/mapper/lvmdata-pvc--fe5435a1--d06b--4462--98f7--72ea6cac591d\n",
+      "disk_usage": {
+        "total": 52521566208,
+        "used": 51187675136,
+        "free": 1317113856
+      }
+    },
+    {
+      "path": "/root/rivermind-data/actionmesh-repro/hf-cache",
+      "du_stdout": "12288\t/root/rivermind-data/actionmesh-repro/hf-cache\n",
+      "findmnt_stdout": "/root/rivermind-data ext4   /dev/mapper/lvmdata-pvc--fe5435a1--d06b--4462--98f7--72ea6cac591d\n",
+      "disk_usage": {
+        "total": 52521566208,
+        "used": 51187675136,
+        "free": 1317113856
+      }
+    }
+  ],
+  "conditions": [
+    "Keep new experiment outputs on overlay staging.",
+    "Do not duplicate models or entire datasets into each attempt.",
+    "Weights ext4 mount has only 1317113856 bytes free; do not use it for new output storage.",
+    "Retain disk guard during execution; observed maximum is not a theoretical cap."
+  ],
+  "gpu_workload_launched": false,
+  "deleted_anything": false
+}
