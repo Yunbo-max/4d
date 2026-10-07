@@ -193,7 +193,7 @@ def build_plans(root: Path, *, contract_path: Path, harness_plan_path: Path, har
         "--native-plan", str(native_plan_path),
         "--native-receipt", str(native_receipt_path),
         "--approved-plan-digest", approved_unit_plan_digest,
-        "--output", str(output),
+        "--output", "../" + output.relative_to(root).as_posix(),
     ]
     plan = native.make_plan(
         root, run_id=run_id, purpose="engineering", evidence_mode="developmental",

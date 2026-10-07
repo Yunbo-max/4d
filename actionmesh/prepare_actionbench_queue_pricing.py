@@ -133,7 +133,7 @@ def build_plans(root: Path, *, contract_path: Path, admission_path: Path,
         "--contract", str(contract_path),
         "--admission", str(admission_path),
         "--population", str(population_path),
-        "--output", str(output),
+        "--output", "../" + output.relative_to(root).as_posix(),
     ]
     plan = native.make_plan(
         root, run_id=run_id, purpose="engineering", evidence_mode="developmental",

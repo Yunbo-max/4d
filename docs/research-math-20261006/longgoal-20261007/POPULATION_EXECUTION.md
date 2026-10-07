@@ -34,3 +34,12 @@ dispatch. No global environment changes or data deletion are required.
 The final population aggregate, protocol admission, trusted replay and natural
 failure/strong-control analysis remain necessary. A completed window cannot be
 reported as 128/128 or as any of the 15 methods.
+
+Upstream `de608b1` was merged during preparation. Both the source-complete-unit
+admission (`admit-complete-r9b`) and pricing (`price-full128-r9`) now passed.
+The frozen 5/4 price reports 1664 s per unit and capacity 16; the execution
+window deliberately uses the previously declared conservative 2700 s cap and
+nine units. This operational headroom costs throughput, does not change any
+generation/evaluation parameters, and does not confer scientific qualification.
+The first admission attempt exposed a controller-absolute output path; builders
+now write inside the harness attempt. Original run evidence was not edited.
