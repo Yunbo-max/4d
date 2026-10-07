@@ -61,7 +61,9 @@ def _source_identity(source_root: Path) -> dict:
 
 def _validate(contract: dict, population: dict, snapshot: dict,
               semantics: dict) -> tuple[str, dict, dict]:
-    if (contract.get("kind") != "actionbench-current-release-unit-contract" or
+    kind = contract.get("kind")
+    if (kind not in ("actionbench-current-release-unit-contract",
+                    "actionbench-current-release-population-unit-contract") or
             contract.get("version") != "1.0.0"):
         raise ValueError("Unsupported current-release unit contract")
     uids = population.get("uids")
@@ -74,10 +76,19 @@ def _validate(contract: dict, population: dict, snapshot: dict,
     if hashlib.sha256(canonical(uids)).hexdigest() != expected.get("uid_set_sha256"):
         raise ValueError("Released population digest mismatch")
     uid = contract.get("calibration_unit", {}).get("uid")
-    if (contract.get("calibration_unit", {}).get("selection_rule") !=
-            "first UID in the canonical lexicographically sorted released population" or
-            not uids or uid != uids[0]):
-        raise ValueError("Calibration UID was not selected prospectively")
+    selection = contract.get("calibration_unit", {})
+    if kind == "actionbench-current-release-unit-contract":
+        if (selection.get("selection_rule") !=
+                "first UID in the canonical lexicographically sorted released population" or
+                not uids or uid != uids[0]):
+            raise ValueError("Calibration UID was not selected prospectively")
+    else:
+        index = selection.get("population_index")
+        if (selection.get("selection_rule") !=
+                "canonical full-population index; no outcome-based exclusions" or
+                type(index) is not int or not 0 <= index < len(uids) or
+                uid != uids[index]):
+            raise ValueError("Population UID does not match its frozen canonical index")
     if (snapshot.get("kind") != "actionbench-full128-snapshot-admission" or
             snapshot.get("version") != "1.0.0" or
             snapshot.get("status") != "admitted_engineering_snapshot" or

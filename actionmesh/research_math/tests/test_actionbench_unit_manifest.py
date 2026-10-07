@@ -135,6 +135,36 @@ class UnitManifestTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "prospectively"):
             self.freeze()
 
+    def population_case(self):
+        self.population['uids'] = ['uid-a', 'uid-b']
+        self.contract['population'].update(size=2, uid_set_sha256=sha(unit.canonical(['uid-a', 'uid-b'])))
+        self.semantics['population_size'] = 2
+        self.semantics['samples'].append({'uid': 'uid-b', 'input_manifest_sha256': '3' * 64})
+        self.contract['kind'] = 'actionbench-current-release-population-unit-contract'
+        self.contract['calibration_unit'] = {
+            'uid': 'uid-b', 'population_index': 1,
+            'selection_rule': 'canonical full-population index; no outcome-based exclusions',
+        }
+
+    def test_population_contract_admits_exact_second_member(self):
+        self.population_case()
+        uid, _, semantic = unit._validate(self.contract, self.population, self.snapshot, self.semantics)
+        self.assertEqual(uid, 'uid-b')
+        self.assertEqual(semantic['uid'], 'uid-b')
+
+    def test_population_contract_rejects_index_uid_disagreement(self):
+        self.population_case()
+        self.contract['calibration_unit']['population_index'] = 0
+        with self.assertRaises(ValueError):
+            unit._validate(self.contract, self.population, self.snapshot, self.semantics)
+
+    def test_original_calibration_contract_cannot_select_second_member(self):
+        self.population_case()
+        self.contract['kind'] = 'actionbench-current-release-unit-contract'
+        self.contract['calibration_unit']['selection_rule'] = 'first UID in the canonical lexicographically sorted released population'
+        with self.assertRaises(ValueError):
+            unit._validate(self.contract, self.population, self.snapshot, self.semantics)
+
     def test_mutated_selected_frame_is_rejected(self):
         (self.dataset / "data" / UID / "imgs" / "03.png").write_bytes(b"changed")
         with self.assertRaisesRegex(ValueError, "admitted bytes"):

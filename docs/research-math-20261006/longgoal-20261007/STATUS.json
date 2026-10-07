@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T12:06:06.285784+00:00",
+  "updated_at": "2026-10-07T15:09:06.624807+00:00",
   "software_acceptance": {
-    "run_id": "lowram-closure-r6",
-    "tests_passed": 228,
+    "run_id": "observer-green-r8",
+    "tests_passed": 233,
     "tests_failed": 0,
-    "plan_digest": "1f30dbeef936686004beced2a336ac0b24ca2b6da97165bbe3781339829ddade",
-    "scope": "merged FP16 low-RAM profile plus exhaustive raw-output receipt closure"
+    "plan_digest": "34dc630eaad3bf59da7075c42972ea407732306e39f076e13336510741ae94d8",
+    "scope": "prior 228 checks plus five decoder observer engineering checks"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,25 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Monitor complete-lowram-r7 generation, export and all three official score rows",
+  "current_task": "r8 parity finalization completed; implementing a fixed-order full-population baseline window; no GPU run launched yet",
+  "active_evaluator_task": {
+    "task_name": "actionbench-official-faithful-parity",
+    "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
+    "remote_worktree": "/root/actionmesh-research-staging/4d-longgoal-r8",
+    "last_observed_at": "2026-10-07T15:09:06.624807+00:00",
+    "last_observed_state": "completed: r8 parity and CPU finalization succeeded",
+    "ssh_authentication_check_at": "2026-10-07T14:38:12Z",
+    "ssh_authentication_check": "prior password-rejection interpretation was incorrect: sandbox could not open /dev/tty",
+    "ssh_authentication_retry_at": "2026-10-07T14:48:09Z",
+    "ssh_authentication_retry": "authenticated successfully with the supplied password via approved PTY",
+    "current_gpu_utilization_percent": 0,
+    "native_qualification": "pending",
+    "finalization": {
+      "run_id": "finalize-parity-r8",
+      "status": "completed",
+      "verification_sha256": "e327f1f08dd6ba2f7af512892bb03e00010fb4ff20d7d6811a8640ca5fa5101a"
+    }
+  },
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -314,15 +332,22 @@
     }
   },
   "observer_engineering": {
-    "implementation": "authored_unexecuted",
+    "implementation": "core_software_checks_passed_native_integration_pending",
     "path": "actionmesh/research_math/decoder_observer.py",
     "tests_authored": 5,
-    "tests_executed": 0,
+    "tests_executed": 5,
     "pending_red_plan": "/root/actionmesh-research-staging/4d-longgoal-r6/plans/observer-red-r6/harness.json",
     "pending_red_digest": "ff4511601958f5b08c801f5c4a7487f7358d7a85ea9a7037e6ec8c6802d21182",
     "last_launch_reason": "red run completed after baseline GPU unit terminal",
-    "next_action": "Run generated green software acceptance after core transfer",
+    "next_action": "Native observer integration and original-query replay still required",
     "native_context_qualified": false,
-    "red_status": "failed_as_expected: all 5 observer tests import missing core; previous 228 unrelated tests passed"
-  }
+    "red_status": "failed_as_expected: all 5 observer tests import missing core; previous 228 unrelated tests passed",
+    "green_run": "observer-green-r8"
+  },
+  "status_corrections": [
+    {
+      "recorded_at": "2026-10-07T15:09:06.624807+00:00",
+      "correction": "A live SSH shell was incorrectly treated as evidence of a running experiment. r8 parity actually completed at 2026-10-07T12:41:56.372766Z. No native candidate experiment has run."
+    }
+  ]
 }
