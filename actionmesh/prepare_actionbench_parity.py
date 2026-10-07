@@ -11,13 +11,12 @@ import sys
 from research_math.control_scoring import file_ref, resolve_ref, verify_request
 
 
-def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
-                environment_path: Path,
+def build_plans(root: Path, *, request_path: Path, environment_path: Path,
                 skill_dir: Path, plan_dir: Path, run_id: str, gpu_uuid: str,
-                group: str, wall_seconds: int, ram_mib: int, cpu_cores: int):
-    root, request_path, protocol_path, environment_path, plan_dir = map(
+                wall_seconds: int, ram_mib: int, cpu_cores: int):
+    root, request_path, environment_path, plan_dir = map(
         lambda value: Path(value).resolve(),
-        (root, request_path, protocol_path, environment_path, plan_dir))
+        (root, request_path, environment_path, plan_dir))
     plan_dir.relative_to(root)
     if not 1 <= wall_seconds <= 27000:
         raise ValueError("Finite parity limit <=27000; retain the 1800-second collection reserve")
@@ -31,7 +30,6 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     sys.path.insert(0, str(scripts))
     import run_experiments as native
     import run_harness as harness
-    import _native_eval as evaluation
 
     request = json.loads(request_path.read_text())
     verify_request(root, request)
@@ -52,7 +50,8 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     for ref in dependency_refs:
         resolve_ref(root, ref)
     from research_math.actionbench_parity import (
-        scorer_descriptors, verify_source_evidence,
+        parity_contract, parity_sample_manifest, scorer_descriptors,
+        validate_parity_contract, verify_source_evidence,
     )
     descriptors = scorer_descriptors(root, request)
     population = json.loads(resolve_ref(root, request["population_ref"]).read_text())
@@ -65,33 +64,6 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         raise ValueError("Committed ActionBench source evidence is required")
     verify_source_evidence(root, request, source_evidence)
     source_evidence_ref = file_ref(root, source_evidence)
-    protocol = json.loads(protocol_path.read_text())
-    evaluation.verify_protocol(root, protocol)
-    contract = evaluation.contract_for_group(protocol, group)
-    if contract.get("scorer") != descriptors["official_scorer"]:
-        raise ValueError("Freeze the exact official-adapter scorer before parity execution")
-    if (contract.get("benchmark_id"), contract.get("benchmark_revision")) != (
-            "facebook/actionbench", descriptors["official_scorer"]["revision"]):
-        raise ValueError("Frozen native contract is not the pinned ActionBench revision")
-    expected_sampling = {"policy": "official-actionbench-full-sequence",
-                         "parameters": request["native_protocol"]}
-    if contract.get("sampling") != expected_sampling:
-        raise ValueError("Frozen native sampling differs from the admitted request")
-    if {row.get("name") for row in contract.get("metrics", [])} != {
-            "cd_3d", "cd_4d", "cd_motion"}:
-        raise ValueError("Frozen native metrics differ from ActionBench metrics")
-    sample_manifest = json.loads(resolve_ref(root, contract["sample_manifest_ref"]).read_text())
-    if (sample_manifest.get("sample_ids") != [request["uid"]] or
-            sample_manifest.get("denominator") != 1 or
-            sample_manifest.get("predictions_per_sample") != 1 or
-            sample_manifest.get("labels_or_tests_ref") != request["ground_truth_ref"]):
-        raise ValueError("Parity protocol must bind the one exact released sample")
-    if "scorer-qualification" not in contract.get("arm_requirements", {}):
-        raise ValueError("Protocol must declare the scorer-qualification execution role")
-    qualifications = [contract.get("baseline_qualification", {})] + list(
-        contract.get("control_qualifications", []))
-    if any(rule.get("reference_ref") == source_evidence_ref for rule in qualifications):
-        raise ValueError("Negative threshold review cannot qualify baseline/control efficacy")
 
     new_sources = [root / "actionmesh" / "official_actionbench_adapter.py",
                    root / "actionmesh" / "research_math" / "actionbench_parity.py",
@@ -112,26 +84,37 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     plan_dir.mkdir(parents=True, exist_ok=False)
     dirty_path = plan_dir / "dirty.patch"
     dirty_path.write_bytes(dirty)
+    sample_manifest_path = plan_dir / "actionbench-parity-sample-manifest.json"
+    request_ref = file_ref(root, request_path)
+    sample_manifest_path.write_text(json.dumps(parity_sample_manifest(
+        request, request_ref, descriptors["official_scorer"]["revision"]), indent=2) + "\n")
+    sample_manifest_ref = file_ref(root, sample_manifest_path)
+    contract_path = plan_dir / "actionbench-scorer-equivalence-contract.json"
+    contract = parity_contract(root, request, request_ref, sample_manifest_ref,
+                               source_evidence_ref, environment_ref)
+    contract_path.write_text(json.dumps(contract, indent=2) + "\n")
+    validate_parity_contract(root, request, request_path, contract_path)
     published_refs = [
         file_ref(root, root / "actionmesh" / "repo" / "actionbench" / "README.md"),
         file_ref(root, source_evidence),
     ]
-    if source_evidence_ref not in contract.get("published_source_refs", []):
-        raise ValueError("Native contract must cite the verified ActionBench source evidence")
+    if contract.get("source_evidence_ref") != source_evidence_ref:
+        raise ValueError("Parity contract must cite the verified ActionBench source evidence")
     inputs = request["input_refs"] + [file_ref(root, request_path),
-                                      file_ref(root, protocol_path),
-                                      contract["sample_manifest_ref"], environment_ref,
+                                      file_ref(root, contract_path),
+                                      sample_manifest_ref, environment_ref,
                                       file_ref(root, dirty_path)] + published_refs + dependency_refs
     unique_inputs = {ref["path"]: ref for ref in inputs}
     command = [sys.executable, "-m", "research_math.actionbench_parity",
                "--root", "..", "--request", str(request_path),
-               "--protocol", str(protocol_path),
+               "--contract", str(contract_path),
+               "--environment", str(environment_path),
                "--output", "actionbench-parity-output", "--device", "cuda:0",
-               "--gpu-uuid", gpu_uuid, "--group", group,
+               "--gpu-uuid", gpu_uuid,
                "--timeout-seconds", str(wall_seconds)]
     outputs = ["actionmesh/actionbench-parity-output/record.json",
                "actionmesh/actionbench-parity-output/parity-evidence.json",
-               "actionmesh/actionbench-parity-output/faithful-harness-verification.json",
+               "actionmesh/actionbench-parity-output/parity-bundle-attestation.json",
                "actionmesh/actionbench-parity-output/device-samples.jsonl"]
     for arm in ("native", "world_gaussian", "body_gaussian"):
         official_case = f"{request['uid']}-{arm}"
@@ -155,12 +138,12 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
                     for name in ("benchmark.py", "chamfer.py", "icp.py", "sample_mesh.py",
                                  "sample_point_cloud.py", "evaluate_dataset.py")]
     plan = native.make_plan(
-        root, run_id=run_id, purpose="scientific", evidence_mode="developmental",
+        root, run_id=run_id, purpose="engineering", evidence_mode="developmental",
         jobs=[{"trial_id": "official-faithful-three-arm-parity", "command": command,
                "cwd": "actionmesh", "input_refs": list(unique_inputs.values()),
                "code_refs": list(code_refs.values()), "output_paths": outputs,
-               "seed": request["scoring_seed"], "group": group,
-               "arm_role": "scorer-qualification"}],
+               "seed": request["scoring_seed"], "group": "engineering",
+               "arm_role": "scorer-parity"}],
         provenance={"git_revision": revision, "git_refs": [file_ref(root, dirty_path)],
                     "model_revision": "none; scoring existing frozen predictions only",
                     "data_revision": request["ground_truth_ref"]["sha256"],
@@ -169,8 +152,7 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         limits={"max_attempts": 1, "max_development_trials": 1,
                 "max_confirmation_trials": 0, "max_retries_per_trial": 0,
                 "wall_time_seconds": wall_seconds,
-                "attempt_timeout_seconds": wall_seconds},
-        protocol_ref=file_ref(root, protocol_path))
+                "attempt_timeout_seconds": wall_seconds})
     plan["plan_digest"] = native.plan_digest(plan)
     native.validate_plan(root, plan)
     native_path = plan_dir / "native.json"
@@ -178,7 +160,7 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     outer = harness.make_plan(
         root, batch_id=run_id,
         tasks=[{"task_id": "actionbench-official-faithful-parity",
-                "idea_id": "baseline-qualification", "depends_on": [], "priority": 1,
+                "idea_id": "evaluator-implementation-equivalence", "depends_on": [], "priority": 1,
                 "plan_ref": file_ref(root, native_path),
                 "resources": {"cpu_cores": cpu_cores, "ram_mib": ram_mib,
                               "gpu_count": 1, "gpu_peak_mib": None,
@@ -195,16 +177,16 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("root", "request", "protocol", "environment", "skill-dir", "plan-dir"):
+    for name in ("root", "request", "environment", "skill-dir", "plan-dir"):
         parser.add_argument("--" + name, type=Path, required=True)
-    for name in ("run-id", "gpu-uuid", "group"):
+    for name in ("run-id", "gpu-uuid"):
         parser.add_argument("--" + name, required=True)
     for name in ("wall-seconds", "ram-mib", "cpu-cores"):
         parser.add_argument("--" + name, type=int, required=True)
     args = parser.parse_args()
-    plan = build_plans(args.root, request_path=args.request, protocol_path=args.protocol,
+    plan = build_plans(args.root, request_path=args.request,
         environment_path=args.environment, skill_dir=args.skill_dir,
-        plan_dir=args.plan_dir, run_id=args.run_id, gpu_uuid=args.gpu_uuid, group=args.group,
+        plan_dir=args.plan_dir, run_id=args.run_id, gpu_uuid=args.gpu_uuid,
         wall_seconds=args.wall_seconds, ram_mib=args.ram_mib,
         cpu_cores=args.cpu_cores)
     print(json.dumps({"plan": str(args.plan_dir / "harness.json"),

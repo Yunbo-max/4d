@@ -35,7 +35,9 @@ native protocol, actual interpreter/package/dependency lock, original labels,
 released sample identity and physical GPU UUID. It verifies the exact executed
 census command, JSON metric paths, all native sample/ICP budgets, every arm's
 implementation refs and the protocol digest. Missing qualification inputs block
-this stage; no evaluation is relabelled as an engineering job to bypass admission.
+this scientific stage. The separate official-versus-faithful
+implementation-equivalence task is engineering evidence only and cannot bypass
+this admission.
 The preparation retains actual Git HEAD and the dirty patch, without reset/push.
 
 One exclusive GPU is requested, with sharing disabled. One-second physical-device
@@ -104,9 +106,9 @@ not upstream authenticity, natural-failure mechanism or scientific readiness.
 
 ## Required native protocol before scoring
 
-This handoff does not supply fictional GT, native-source parity or qualification
-thresholds. Local must supply its source-backed frozen qualification protocol,
-faithful-harness verification sidecar and live official-scorer comparison before
+This handoff does not supply fictional GT or qualification thresholds. Local must
+first produce the separately scoped faithful-harness verification sidecar, then
+supply a source-backed frozen qualification protocol and live official-scorer comparison before
 the scientific plan is admitted. Preserve the entire released ActionBench
 population and supported subset selection; this one-unit request must coincide
 with the prospectively declared asset or explicitly labelled development asset.
@@ -175,13 +177,11 @@ Return the complete attempt workspace `actionmesh/scoring-output/`, all raw
 per-pass JSON/logs, input/code bundle, device samples, native and outer plans,
 receipts, source revision/dirty patch and environment/dependency lock. Failed
 attempts and pending pass slots must be returned as well. For formal acceptance,
-Use [ACTIONBENCH_SCORER_PARITY.md](ACTIONBENCH_SCORER_PARITY.md) for the new
-independent path. Its provenance-hardened runner binds the exact official
-scorer, released sample/GT and budgets, but the builder still requires a genuine
-source-backed official-scorer protocol. It rejects a nonnegative-distance domain
-rule because the installed evaluator would incorrectly count that as
-baseline/control qualification. A pass emits the sidecar needed for the later
-faithful-harness protocol revision. Local must retain the
+Use [ACTIONBENCH_SCORER_PARITY.md](ACTIONBENCH_SCORER_PARITY.md) for the
+independent protocol-free engineering parity path. Its generated equivalence
+contract binds the exact official scorer, released sample/GT, runtime and budgets
+while containing no performance rules. A pass emits a one-manifest-scoped
+sidecar needed for a later faithful-harness scientific protocol. Local must retain the
 live official/harness parity and nonce-bound replay records,
 source-backed qualification rules and the natural-failure analysis separately.
 

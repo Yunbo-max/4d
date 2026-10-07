@@ -11,11 +11,16 @@ if str(ACTIONMESH) not in sys.path:
     sys.path.insert(0, str(ACTIONMESH))
 
 import official_actionbench_adapter as official
+import finalize_actionbench_parity as finalizer
 from research_math.actionbench_parity import (
     exact_comparison,
     one_case,
+    parity_arm_inputs,
+    project_path_arg,
+    validate_contract_boundary,
     validate_execution,
     validate_official_output,
+    validate_runtime_identity,
 )
 from research_math.control_scoring import file_ref
 
@@ -107,6 +112,79 @@ class OfficialAdapterContractTests(unittest.TestCase):
 
 
 class ParityReadoutTests(unittest.TestCase):
+    def test_finalizer_rejects_noncanonical_receipt_path(self):
+        with self.assertRaisesRegex(ValueError, "Canonical native receipt"):
+            finalizer.require_canonical_path(
+                Path("/tmp/copied-receipt.json"),
+                Path("/project/runs/attempts/run/receipt.json"),
+                "native receipt")
+
+    def test_finalizer_rejects_partial_promoted_bundle(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            original = root / "runs" / "attempt" / "workspace" / "out" / "a.json"
+            original.parent.mkdir(parents=True)
+            original.write_text("original")
+            attempt = {
+                "attempt_path": "runs/attempt",
+                "output_refs": [file_ref(root, original)],
+            }
+            with self.assertRaises(FileNotFoundError):
+                finalizer.verify_complete_promotion(
+                    root, {"output_paths": ["out/a.json"]}, attempt)
+
+    def test_descriptor_paths_are_relative_to_staged_project(self):
+        root = Path("/project").resolve()
+        self.assertEqual(
+            project_path_arg(root, root / "actionmesh" / "scorer.py"),
+            "actionmesh/scorer.py")
+
+    def test_parity_arm_inputs_bind_ordered_reports_and_predictions(self):
+        request = {"arms": [
+            {"arm": arm, "preparation_status": "completed",
+             "report_ref": {"path": f"{arm}/report.json", "sha256": arm},
+             "sequence_ref": {"path": f"{arm}/sequence.npz", "sha256": arm}}
+            for arm in ("native", "world_gaussian", "body_gaussian")
+        ]}
+        frozen = parity_arm_inputs(request)
+        self.assertEqual([row["arm"] for row in frozen],
+                         ["native", "world_gaussian", "body_gaussian"])
+        self.assertEqual(frozen[1]["prediction_ref"]["path"],
+                         "world_gaussian/sequence.npz")
+
+    def test_equivalence_contract_cannot_claim_scientific_qualification(self):
+        contract = {
+            "purpose": "scorer-equivalence-only",
+            "scientific_effect_qualification": False,
+            "native_contract_qualified": False,
+            "baseline_qualification": {
+                "metric": "cd_3d", "operator": "ge", "threshold": 0,
+            },
+        }
+        with self.assertRaisesRegex(ValueError, "scientific qualification"):
+            validate_contract_boundary(contract)
+
+    def test_equivalence_contract_boundary_accepts_no_effect_rules(self):
+        contract = {
+            "purpose": "scorer-equivalence-only",
+            "scientific_effect_qualification": False,
+            "native_contract_qualified": False,
+        }
+        validate_contract_boundary(contract)
+
+    def test_runtime_identity_rejects_different_visible_gpu(self):
+        environment = {
+            "python_executable": "/env/python",
+            "gpu_uuid": "GPU-expected",
+            "execution_mode": "native_host",
+            "packages": {"numpy": "1", "torch": "2", "trimesh": "3",
+                         "scipy": "4", "pytorch3d": "5"},
+        }
+        with self.assertRaisesRegex(ValueError, "runtime/GPU identity"):
+            validate_runtime_identity(
+                environment, gpu_uuid="GPU-expected", visible_gpu="GPU-other",
+                python_executable="/env/python", package_versions=environment["packages"])
+
     def test_one_case_extracts_only_frozen_metrics(self):
         output = {"denominator": {"n_declared": 1}, "cases": [{
             "uid": "sample", "status": "success", "cd_3d": 1.0,

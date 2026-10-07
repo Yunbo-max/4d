@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T01:24:36Z",
+  "recorded_at": "2026-10-07T02:51:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 software checks, native runtime, three simple arms, scoring request). Official/faithful parity provenance is now fail-closed, but execution remains blocked because reviewed sources provide no per-asset performance threshold and domain-only qualification is rejected; there is still no official score, scorer parity, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Official/faithful scorer equivalence is now a protocol-free engineering plan with staged-path-stable contract, post-run frozen-ref recheck and mandatory full-bundle finalization; it is generated but unexecuted. Scientific scoring remains blocked because reviewed sources provide no per-asset performance threshold. There is still no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -190,6 +190,30 @@
     "official_and_faithful_provenance_bound_before_sidecar": true,
     "native_contract_qualified": false,
     "new_checks_authored": 2,
+    "new_checks_executed": 0,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_parity_contract_separation": {
+    "status": "engineering_parity_generated_unexecuted_scientific_protocol_blocked",
+    "recorded_at": "2026-10-07T02:51:00Z",
+    "base_commit": "b6dca6949f42fffaf37be3468346b775b326f5ae",
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-parity-contract-separation-source-review.json",
+      "sha256": "413f460e549294f3827acfadea16e0711836f1686632ac791e6d7553ec180380"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-parity-contract-separation.json",
+      "sha256": "8e503d5a3ef96fb33c2b43f544e868f48168dcade14225cff7c4e5c9c4d7491a"
+    },
+    "engineering_protocol_ref": null,
+    "complete_bundle_finalizer_required": true,
+    "source_backed_per_asset_performance_rule": "not_supplied",
+    "installed_scientific_protocol_generated": false,
+    "native_contract_qualified": false,
+    "parity_module_checks_total": 21,
+    "new_checks_authored": 7,
     "new_checks_executed": 0,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,

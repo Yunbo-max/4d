@@ -1,0 +1,54 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "status": "engineering_parity_generated_unexecuted_scientific_protocol_blocked",
+  "recorded_at": "2026-10-07T02:46:00Z",
+  "base_commit": "b6dca6949f42fffaf37be3468346b775b326f5ae",
+  "decision": "Execute exact official-versus-faithful equivalence as a protocol-free engineering unit; keep every performance qualification and scientific gate behind a genuine source-backed native protocol and trusted replay.",
+  "delivery": {
+    "parity_runner_ref": {"path": "actionmesh/research_math/actionbench_parity.py", "sha256": "8e9bae24af63a57a80c300613cd609259e1373bfb8c8040d1bdc844052812510"},
+    "plan_builder_ref": {"path": "actionmesh/prepare_actionbench_parity.py", "sha256": "9d0c3d6f8b72fde991fcd10785def52757c67d37a17718f9e737800c6e11246a"},
+    "bundle_finalizer_ref": {"path": "actionmesh/finalize_actionbench_parity.py", "sha256": "f9e0a38ff1a4c583a4a987c09dea37cb0c70f1f5dacc909f21c7eaea55cbb7cd"},
+    "tests_ref": {"path": "actionmesh/research_math/tests/test_actionbench_parity.py", "sha256": "5c9edb6d4744e20657bf7a4d4ab031d0420dac796284c332d1aa260dc8b7e2b2"},
+    "source_review_ref": {"path": "docs/research-math-20261006/actionbench-parity-contract-separation-source-review.json", "sha256": "413f460e549294f3827acfadea16e0711836f1686632ac791e6d7553ec180380"},
+    "entry_ref": {"path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md", "sha256": "417b46db6c6fcba9d8e93e60845ad9035c6da1fe9b6a23eaa9116456b551807f"},
+    "baseline_scoring_ref": {"path": "docs/research-math-20261006/BASELINE_SCORING.md", "sha256": "49784b2d695a8e1d51adb2150e2ae9d2bf8ba836ffcd1f9e28493df587821087"},
+    "runbook_ref": {"path": "LOCAL_AGENT_RUNBOOK.md", "sha256": "e4cbfde5cc63616e55cb9e8e670df280f8b1f3efc0119824dc14292ca903140e"},
+    "round_handoff_ref": {"path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md", "sha256": "ffedc895ea5b97ef28813156bdef1526280d408eb1a2978a486b3367c2509e2f"},
+    "progress_ref": {"path": "docs/research-math-20261006/STEPWISE_PROGRESS.md", "sha256": "47bb8e0eb5151dddd747d8a8f6ecda20a22de61507291d7a8c397525491417e8"}
+  },
+  "engineering_parity_contract": {
+    "purpose": "engineering",
+    "protocol_ref": null,
+    "manifest_scope": "one released UID; three frozen prediction arms",
+    "descriptor_paths": "canonical project-relative",
+    "metric_tolerance": 0.0,
+    "runtime_identity_bound": true,
+    "complete_bundle_promotion_required": true,
+    "post_promotion_finalizer_required": true,
+    "scientific_effect_qualification": false,
+    "native_contract_qualified": false
+  },
+  "scientific_boundary": {
+    "source_backed_per_asset_performance_rule": "not_supplied",
+    "domain_only_qualification_rejected": true,
+    "aggregate_mean_as_one_asset_threshold_rejected": true,
+    "installed_native_protocol_generated": false,
+    "trusted_nonce_replay_complete": false,
+    "official_scores_run": 0
+  },
+  "verification": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "independent_static_review": "passed_no_critical_or_important_runtime_admission_issue",
+    "parity_module_checks_total": 21,
+    "new_checks_authored_relative_to_base": 7,
+    "new_checks_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "next_executable_step": "Local runs whole-suite software acceptance, rechecks the current physical device and disk, generates and source-inspects the parity manifest/contract/native/outer plans, executes the exact approved digest, and promotes the complete successful output bundle. Scientific scoring remains blocked_missing_source_backed_native_protocol afterward.",
+  "candidate_validation_designs_complete": 0,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0
+}

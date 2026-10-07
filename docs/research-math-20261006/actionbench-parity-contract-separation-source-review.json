@@ -1,0 +1,99 @@
+{
+  "kind": "source-review",
+  "status": "engineering_equivalence_contract_generated_unexecuted",
+  "recorded_at": "2026-10-07T02:46:00Z",
+  "base_commit": "b6dca6949f42fffaf37be3468346b775b326f5ae",
+  "reviewed_sources": [
+    {"path": "actionmesh/prepare_actionbench_parity.py", "sha256": "9d0c3d6f8b72fde991fcd10785def52757c67d37a17718f9e737800c6e11246a"},
+    {"path": "actionmesh/research_math/actionbench_parity.py", "sha256": "8e9bae24af63a57a80c300613cd609259e1373bfb8c8040d1bdc844052812510"},
+    {"path": "actionmesh/finalize_actionbench_parity.py", "sha256": "f9e0a38ff1a4c583a4a987c09dea37cb0c70f1f5dacc909f21c7eaea55cbb7cd"},
+    {"path": "actionmesh/research_math/tests/test_actionbench_parity.py", "sha256": "5c9edb6d4744e20657bf7a4d4ab031d0420dac796284c332d1aa260dc8b7e2b2"},
+    {"path": "docs/research-math-20261006/actionbench-official-source-evidence.json", "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"}
+  ],
+  "controlling_skill_findings": {
+    "engineering_runner_may_have_null_protocol": true,
+    "scientific_runner_requires_verified_protocol": true,
+    "engineering_evidence_may_not_advance_scientific_gates": true,
+    "native_scores_require_protocol_and_trusted_replay": true
+  },
+  "decision": {
+    "scorer_equivalence_class": "engineering implementation qualification",
+    "plan_purpose": "engineering",
+    "protocol_ref": null,
+    "scientific_effect_qualification": false,
+    "native_contract_qualified": false,
+    "later_scientific_scoring_status": "blocked_missing_source_backed_native_protocol"
+  },
+  "independent_review_findings": [
+    {
+      "severity": "critical",
+      "problem": "Absolute descriptor paths would differ after the native runner stages the project.",
+      "resolution": "Freeze canonical project-relative descriptor arguments and recompute the complete contract in the staged workspace without changing the already request-pinned control_scoring.py."
+    },
+    {
+      "severity": "important",
+      "problem": "The equivalence contract did not self-contain the request, population and three prediction/report identities.",
+      "resolution": "Bind request ref and digest, population ref, and ordered report/prediction refs in both the sample manifest and equivalence contract."
+    },
+    {
+      "severity": "important",
+      "problem": "Copying only the verification sidecar would leave its record and raw-output refs unresolved.",
+      "resolution": "Mark complete-bundle promotion as mandatory and require byte-for-byte promotion to the exact project-relative target plus hash revalidation."
+    },
+    {
+      "severity": "important",
+      "problem": "The Local sequence still placed the unavailable scientific protocol before executable engineering parity.",
+      "resolution": "Run engineering parity first; retain the scientific protocol blocker after parity rather than using it to skip equivalence measurement."
+    },
+    {
+      "severity": "critical",
+      "problem": "The staging-stable canonical descriptor was not the absolute faithful command required by the unchanged later scientific admission.",
+      "resolution": "Emit only a canonical bundle attestation during parity; after complete promotion, the finalizer uses unchanged contract_scorer_command to create the exact scientific-consumer descriptor."
+    },
+    {
+      "severity": "important",
+      "problem": "Promotion was documented but not enforced before the consumer sidecar could be used.",
+      "resolution": "The consumer sidecar is absent from harness outputs and is single-use generated only at the exact stable target after resolving all bundle hashes."
+    },
+    {
+      "severity": "important",
+      "problem": "Frozen inputs were not rechecked after six scorer subprocesses.",
+      "resolution": "Recompute the contract and resolve every frozen request, population, GT, arm, source/code, manifest and environment ref immediately before pass status and attestation."
+    },
+    {
+      "severity": "critical",
+      "problem": "A promoted bundle could be internally consistent without proving origin from the approved completed harness attempt.",
+      "resolution": "Finalization now verifies the approved harness digest, completed harness report, native plan/receipt, exact engineering attempt/input/code/output inventory and receipt-recorded hashes before consumer sidecar creation."
+    },
+    {
+      "severity": "important",
+      "problem": "Pre-promotion evidence called its attestation a completed sidecar.",
+      "resolution": "Evidence now records bundle_attestation_status and explicitly marks consumer verification pending promotion and finalization."
+    }
+  ],
+  "fail_closed_boundary": [
+    "contract rejects all baseline/control qualification fields, criteria, contrasts and effect thresholds",
+    "exact returned request, released population, GT, source review, environment and three arm artifacts are hash-bound",
+    "runtime interpreter, five package versions, physical GPU UUID and CUDA_VISIBLE_DEVICES must match",
+    "all three official and faithful paths must pass full provenance validation before zero-tolerance comparison",
+    "passed consumer sidecar is scoped to the exact manifest and complete promoted bundle",
+    "no official score, baseline/control decision, candidate result or scientific gate is produced"
+  ],
+  "static_checks": {
+    "python_ast_parse": "passed",
+    "git_diff_check": "passed",
+    "parity_module_checks_total": 21,
+    "new_checks_authored_relative_to_base": 7,
+    "new_checks_executed": 0,
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "final_independent_static_review": "no remaining critical or important runtime admission issue",
+  "scientific_state": {
+    "official_scores_run": 0,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

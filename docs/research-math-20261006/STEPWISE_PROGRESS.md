@@ -292,3 +292,60 @@ the exact descriptor cwd; any qualification rule citing the negative threshold
 review is rejected, regardless of metric/operator spelling; and the full
 sampling policy plus `predictions_per_sample=1` are bound in both builder and
 runner. These remain authored, unexecuted safeguards.
+
+## Continuation: separate scorer equivalence from scientific qualification — 2026-10-07
+
+The installed research workflow distinguishes a protocol-free engineering run
+from a scientific run that may advance evidence gates. Official-versus-faithful
+scorer equality belongs to the former: it checks evaluator implementation
+equivalence, while baseline/control efficacy still belongs to the latter. The
+previous requirement for a performance-threshold protocol before parity was
+therefore removed without weakening the scientific gate.
+
+The new builder emits a `purpose=engineering` plan with no `protocol_ref`, plus
+an immutable one-UID sample manifest and scorer-equivalence contract. Those
+inputs bind the exact returned request and digest, released population and GT,
+all three report/prediction artifacts, official source review, runtime, native
+budgets, both scorer descriptors and zero tolerances. The descriptors use
+project-relative arguments so contract identity survives isolated harness
+staging. The runner rejects scientific qualification fields and verifies the
+current interpreter, five dependency versions, physical GPU UUID and
+`CUDA_VISIBLE_DEVICES` before any scorer process.
+
+Independent review found and closed three additional evidence gaps: the contract
+is now self-contained rather than relying only on plan-level inputs; a successful
+run emits only a bundle attestation, then promotion of the complete bound output
+tree and a separate hash-validating finalizer produce the scientific-consumer
+sidecar; and the Local runbook executes engineering parity before trying to
+author the presently unavailable performance-threshold protocol. The later
+scientific plan still requires genuine prospective source-backed decision rules,
+installed-verifier acceptance and nonce-bound trusted replay. A `cd_3d >= 0`
+domain rule and 128-object aggregate means remain forbidden substitutes.
+
+Seven parity/finalizer checks were authored, bringing that module to 21 checks. Web parsed
+the changed Python sources and checked the patch statically, but executed no test,
+scorer or GPU workload. No official score or scientific conclusion was produced;
+candidate validation designs/results/verdicts remain **0/15**. The next Local
+step is whole-suite software acceptance at the delivered revision, device/disk
+recheck, generation and source inspection of the parity contract/plans, then the
+exact-digest harness run and complete-bundle return. Scientific baseline scoring
+remains blocked after parity until a genuine source-backed protocol exists.
+
+A final compatibility review caught that the canonical relative descriptor used
+inside the isolated parity workspace differs from the absolute descriptor that
+the unchanged scientific scorer admission requires. The finalizer now converts
+only that command representation using the existing request-pinned
+`contract_scorer_command`; all source/code identities remain unchanged. It also
+requires the exact stable bundle target and resolves the record, evidence, raw
+official/faithful outputs and predictions before writing the single-use consumer
+sidecar. Separately, the parity runner re-resolves the complete frozen contract
+after all six subprocesses, so a scorer-side mutation prevents pass status and
+attestation emission.
+
+The promotion finalizer is also cryptographically tied back to execution: it
+requires the exact approved outer-plan digest, completed harness report, native
+plan and native receipt. It verifies the engineering/no-protocol identity, one
+completed `scorer-parity` attempt, immutable input/code refs, the complete
+declared-output inventory and the harness-recorded attestation, record, evidence
+and raw-output hashes. Predictions must be receipt-bound attempt inputs. Thus an
+internally consistent reconstructed output tree cannot mint a consumer sidecar.

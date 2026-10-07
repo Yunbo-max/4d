@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
+import importlib.metadata
 import json
 import math
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -14,7 +16,7 @@ import traceback
 import official_actionbench_adapter as official
 import research_census_eval as census
 from research_math.control_scoring import (
-    ARMS, METRICS, DeviceSamples, contract_scorer_command, file_ref,
+    ARMS, METRICS, DeviceSamples, file_ref,
     resolve_ref, validate_native_output, verify_request,
 )
 
@@ -47,6 +49,168 @@ def exact_comparison(official: dict, faithful: dict) -> dict:
     return {"metric_tolerances": {metric: 0.0 for metric in METRICS},
             "absolute_differences": differences,
             "passed": all(value == 0.0 for value in differences.values())}
+
+
+def project_path_arg(root: Path, path: Path) -> str:
+    """Return a scorer argv path relative to the staged project root."""
+    return Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
+
+
+def parity_harness_scorer_command(root: Path, request: dict) -> list[str]:
+    """Describe the faithful scorer independently of checkout location."""
+    root = Path(root).resolve()
+    return [sys.executable, project_path_arg(root, Path(census.__file__)),
+            "--case-dir", project_path_arg(
+                root, resolve_ref(root, request["manifest_ref"]).parent),
+            "--gt-dir", project_path_arg(
+                root, resolve_ref(root, request["ground_truth_ref"]).parent.parent),
+            "--output", "{output}", "--manifest", "{predictions}",
+            "--repo-root", project_path_arg(root, root / request["repo_root"]),
+            "--device", "cuda:0", "--seed", "44"]
+
+
+def validate_contract_boundary(contract: dict) -> None:
+    """Keep scorer-equivalence evidence outside scientific effect qualification."""
+    forbidden = {
+        "baseline_qualification", "control_qualifications", "criteria",
+        "contrasts", "effect_threshold", "qualification_rules",
+    }
+    if (not isinstance(contract, dict) or
+            contract.get("purpose") != "scorer-equivalence-only" or
+            contract.get("scientific_effect_qualification") is not False or
+            contract.get("native_contract_qualified") is not False or
+            forbidden.intersection(contract)):
+        raise ValueError(
+            "Scorer-equivalence contract cannot contain scientific qualification")
+
+
+def validate_runtime_identity(environment: dict, *, gpu_uuid: str,
+                              visible_gpu: str | None,
+                              python_executable: str,
+                              package_versions: dict) -> None:
+    required = ("numpy", "torch", "trimesh", "scipy", "pytorch3d")
+    if (not isinstance(environment, dict) or
+            environment.get("python_executable") != python_executable or
+            environment.get("gpu_uuid") != gpu_uuid or
+            environment.get("execution_mode") != "native_host" or
+            visible_gpu != gpu_uuid or
+            any(environment.get("packages", {}).get(name) != package_versions.get(name)
+                for name in required)):
+        raise ValueError("Current native runtime/GPU identity required")
+
+
+def parity_arm_inputs(request: dict) -> list[dict]:
+    """Return the ordered prediction/report identity frozen by the request."""
+    by_name = {row["arm"]: row for row in request["arms"]}
+    return [{"arm": arm,
+             "preparation_status": by_name[arm]["preparation_status"],
+             "report_ref": by_name[arm]["report_ref"],
+             "prediction_ref": by_name[arm]["sequence_ref"]}
+            for arm in ARMS]
+
+
+def parity_sample_manifest(request: dict, request_ref: dict, revision: str) -> dict:
+    return {
+        "kind": "actionbench-parity-sample-manifest",
+        "version": "1.0.0",
+        "benchmark_id": "facebook/actionbench",
+        "benchmark_revision": revision,
+        "split": "released-single-asset-parity-only",
+        "sample_ids": [request["uid"]],
+        "request_ref": request_ref,
+        "request_digest": request["request_digest"],
+        "population_ref": request["population_ref"],
+        "denominator": 1,
+        "predictions_per_sample": 1,
+        "arm_inputs": parity_arm_inputs(request),
+        "labels_or_tests_ref": request["ground_truth_ref"],
+        "sampling": {"policy": "official-actionbench-full-sequence",
+                     "parameters": request["native_protocol"]},
+        "budget": {"frames": ACTIONBENCH_FRAMES, **request["native_protocol"]},
+    }
+
+
+def parity_contract(root: Path, request: dict, request_ref: dict,
+                    sample_manifest_ref: dict,
+                    source_evidence_ref: dict, environment_ref: dict) -> dict:
+    descriptors = scorer_descriptors(root, request)
+    revision = descriptors["official_scorer"]["revision"]
+    refs = [source_evidence_ref]
+    for scorer in descriptors.values():
+        refs.extend(scorer["source_refs"])
+        refs.extend(scorer["code_refs"])
+    source_refs = {ref["path"]: ref for ref in refs}
+    return {
+        "kind": "actionbench-scorer-equivalence-contract",
+        "version": "1.0.0",
+        "purpose": "scorer-equivalence-only",
+        "scientific_effect_qualification": False,
+        "native_contract_qualified": False,
+        "benchmark_id": "facebook/actionbench",
+        "benchmark_revision": revision,
+        "split": "released-single-asset-parity-only",
+        "uid": request["uid"],
+        "request_ref": request_ref,
+        "request_digest": request["request_digest"],
+        "population_ref": request["population_ref"],
+        "arm_inputs": parity_arm_inputs(request),
+        "source_evidence_ref": source_evidence_ref,
+        "source_refs": list(source_refs.values()),
+        "environment_ref": environment_ref,
+        "sample_manifest_ref": sample_manifest_ref,
+        "labels_or_tests_ref": request["ground_truth_ref"],
+        "metrics": list(METRICS),
+        "sampling": {"policy": "official-actionbench-full-sequence",
+                     "parameters": request["native_protocol"]},
+        "budget": {"frames": ACTIONBENCH_FRAMES, **request["native_protocol"]},
+        "arms": list(ARMS),
+        "official_scorer": descriptors["official_scorer"],
+        "harness_scorer": descriptors["harness_scorer"],
+        "metric_tolerances": {metric: 0.0 for metric in METRICS},
+    }
+
+
+def validate_parity_contract(root: Path, request: dict, request_path: Path,
+                             contract_path: Path) -> dict:
+    root, request_path, contract_path = map(Path.resolve,
+                                            (Path(root), Path(request_path),
+                                             Path(contract_path)))
+    contract = census.read_json(contract_path)
+    validate_contract_boundary(contract)
+    evidence_path = (root / "docs" / "research-math-20261006" /
+                     "actionbench-official-source-evidence.json")
+    verify_source_evidence(root, request, evidence_path)
+    evidence_ref = file_ref(root, evidence_path)
+    sample_ref = contract.get("sample_manifest_ref")
+    sample_path = resolve_ref(root, sample_ref)
+    environment_ref = contract.get("environment_ref")
+    resolve_ref(root, environment_ref)
+    population = census.read_json(resolve_ref(root, request["population_ref"]))
+    request_ref = file_ref(root, request_path)
+    expected_sample = parity_sample_manifest(request, request_ref,
+                                             population["revision"])
+    if census.read_json(sample_path) != expected_sample:
+        raise ValueError("Parity sample manifest differs from the released request")
+    expected = parity_contract(root, request, request_ref, sample_ref, evidence_ref,
+                               environment_ref)
+    if contract != expected:
+        raise ValueError("Parity equivalence contract identity mismatch")
+    return contract
+
+
+def verify_frozen_contract_refs(root: Path, contract: dict) -> None:
+    """Re-resolve every frozen file immediately before parity attestation."""
+    refs = [contract[key] for key in (
+        "request_ref", "population_ref", "source_evidence_ref", "environment_ref",
+        "sample_manifest_ref", "labels_or_tests_ref")]
+    for arm in contract["arm_inputs"]:
+        refs.extend((arm["report_ref"], arm["prediction_ref"]))
+    refs.extend(contract["source_refs"])
+    for descriptor in (contract["official_scorer"], contract["harness_scorer"]):
+        refs.extend(descriptor["source_refs"])
+        refs.extend(descriptor["code_refs"])
+    for ref in {(item["path"], item["sha256"]): item for item in refs}.values():
+        resolve_ref(root, ref)
 
 
 def verify_source_evidence(root: Path, request: dict, evidence_path: Path) -> dict:
@@ -106,10 +270,11 @@ def scorer_descriptors(root: Path, request: dict) -> dict:
         "revision": population["revision"],
         "source_refs": official_refs,
         "code_refs": official_refs + [file_ref(root, official_adapter)],
-        "command": [sys.executable, str(official_adapter),
-                    "--case-dir", str(control_root), "--gt-dir", str(gt_root),
+        "command": [sys.executable, project_path_arg(root, official_adapter),
+                    "--case-dir", project_path_arg(root, control_root),
+                    "--gt-dir", project_path_arg(root, gt_root),
                     "--output", "{output}", "--manifest", "{predictions}",
-                    "--repo-root", str(repo_root), "--device", "cuda:0",
+                    "--repo-root", project_path_arg(root, repo_root), "--device", "cuda:0",
                     "--seed", "{seed}"],
         "cwd": ".",
         "output": {"format": "json", "source": "file", "path": "{output}"},
@@ -122,7 +287,7 @@ def scorer_descriptors(root: Path, request: dict) -> dict:
         "revision": population["revision"],
         "source_refs": official_refs,
         "code_refs": faithful_refs,
-        "command": contract_scorer_command(root, request),
+        "command": parity_harness_scorer_command(root, request),
         "cwd": ".",
         "output": {"format": "json", "source": "file", "path": "{output}"},
         "denominator_path": ["denominator", "n_declared"],
@@ -268,38 +433,30 @@ def validate_official_output(root: Path, request: dict, arm: str, stage: Path,
     return {**row, **one_case(raw, request["uid"])}
 
 
-def evaluate(root: Path, request_path: Path, protocol_path: Path, output: Path,
-             device: str, gpu_uuid: str, group: str,
+def evaluate(root: Path, request_path: Path, contract_path: Path,
+             environment_path: Path, output: Path,
+             device: str, gpu_uuid: str,
              timeout_seconds: int) -> int:
-    root, request_path, protocol_path, output = map(
+    root, request_path, contract_path, environment_path, output = map(
         lambda value: Path(value).resolve(),
-        (root, request_path, protocol_path, output))
+        (root, request_path, contract_path, environment_path, output))
     output.relative_to(root)
     if output.exists():
         raise FileExistsError("Parity output is single-use")
     request = json.loads(request_path.read_text())
     verify_request(root, request)
-    descriptors = scorer_descriptors(root, request)
-    source_evidence_path = (root / "docs" / "research-math-20261006" /
-                            "actionbench-official-source-evidence.json")
-    verify_source_evidence(root, request, source_evidence_path)
-    protocol = census.read_json(protocol_path)
-    contracts = protocol.get("native_eval_contracts")
-    contract = contracts.get(group) if isinstance(contracts, dict) else protocol.get(
-        "native_eval_contract")
-    if not isinstance(contract, dict) or contract.get("scorer") != descriptors["official_scorer"]:
-        raise ValueError("Parity requires the exact verified official-scorer contract")
-    source_evidence_ref = file_ref(root, source_evidence_path)
-    expected_sampling = {"policy": "official-actionbench-full-sequence",
-                         "parameters": request["native_protocol"]}
-    if (contract.get("sampling") != expected_sampling or
-            source_evidence_ref not in contract.get("published_source_refs", []) or
-            "scorer-qualification" not in contract.get("arm_requirements", {})):
-        raise ValueError("Parity protocol source/sampling/role binding mismatch")
-    qualifications = [contract.get("baseline_qualification", {})] + list(
-        contract.get("control_qualifications", []))
-    if any(rule.get("reference_ref") == source_evidence_ref for rule in qualifications):
-        raise ValueError("Negative threshold review cannot qualify baseline/control efficacy")
+    contract = validate_parity_contract(root, request, request_path, contract_path)
+    if file_ref(root, environment_path) != contract["environment_ref"]:
+        raise ValueError("Parity runtime environment differs from frozen contract")
+    environment = census.read_json(environment_path)
+    packages = {name: importlib.metadata.version(name)
+                for name in ("numpy", "torch", "trimesh", "scipy", "pytorch3d")}
+    validate_runtime_identity(
+        environment, gpu_uuid=gpu_uuid,
+        visible_gpu=os.environ.get("CUDA_VISIBLE_DEVICES"),
+        python_executable=sys.executable, package_versions=packages)
+    descriptors = {"official_scorer": contract["official_scorer"],
+                   "harness_scorer": contract["harness_scorer"]}
     sample_manifest_ref = contract.get("sample_manifest_ref")
     manifest = census.read_json(resolve_ref(root, sample_manifest_ref))
     if (manifest.get("sample_ids") != [request["uid"]] or
@@ -318,20 +475,20 @@ def evaluate(root: Path, request_path: Path, protocol_path: Path, output: Path,
     record = {
         "kind": "actionbench-official-faithful-parity",
         "version": "1.0.0", "status": "running",
-        "scope": "one released development UID, three frozen baseline/control arms",
+        "scope": "one released UID and three frozen prediction artifacts; scorer implementation equivalence only",
         "request_ref": file_ref(root, request_path),
-        "protocol_ref": file_ref(root, protocol_path),
+        "parity_contract_ref": file_ref(root, contract_path),
         "sample_manifest_ref": sample_manifest_ref,
-        "uid": request["uid"], "group": group, "device": device, "gpu_uuid": gpu_uuid,
+        "uid": request["uid"], "device": device, "gpu_uuid": gpu_uuid,
         "metric_tolerances": {metric: 0.0 for metric in METRICS},
-        "source_refs": [file_ref(root, official_adapter), file_ref(root, faithful_adapter)] +
-                       [file_ref(root, repo_root / "actionbench" / name)
-                        for name in census.OFFICIAL_FILES],
+        "environment_ref": contract["environment_ref"],
+        "source_refs": contract["source_refs"],
         "arms": {}, "native_contract_qualified": False,
         "scorer_descriptors": descriptors,
         "limitations": [
             "It is not the nonce-bound trusted replay required for native run acceptance.",
             "It does not score or qualify a candidate method.",
+            "It does not qualify baseline/control performance or satisfy a scientific protocol.",
         ],
     }
     census.write_json(output / "record.json", record)
@@ -403,7 +560,18 @@ def evaluate(root: Path, request_path: Path, protocol_path: Path, output: Path,
         "telemetry_errors": telemetry.errors,
         "not_exact_peak": True,
     }
+    frozen_ref_error = None
+    try:
+        validate_parity_contract(root, request, request_path, contract_path)
+        verify_frozen_contract_refs(root, contract)
+    except Exception as exc:
+        frozen_ref_error = f"{type(exc).__name__}: {exc}"
+    record["frozen_ref_recheck"] = {
+        "status": "passed" if frozen_ref_error is None else "failed",
+        "error": frozen_ref_error,
+    }
     record["status"] = ("passed" if not telemetry.errors and
+                        frozen_ref_error is None and
                         all(record["arms"].get(arm, {}).get("status") == "passed"
                             for arm in ARMS) else "failed")
     record["recorded_at"] = datetime.now(timezone.utc).isoformat()
@@ -411,7 +579,7 @@ def evaluate(root: Path, request_path: Path, protocol_path: Path, output: Path,
     evidence = {
         "kind": "faithful-harness-parity-evidence",
         "status": record["status"], "request_ref": record["request_ref"],
-        "protocol_ref": record["protocol_ref"],
+        "parity_contract_ref": record["parity_contract_ref"],
         "sample_uid": request["uid"], "source_refs": record["source_refs"],
         "metric_tolerances": record["metric_tolerances"],
         "official_scorer": descriptors["official_scorer"],
@@ -419,36 +587,57 @@ def evaluate(root: Path, request_path: Path, protocol_path: Path, output: Path,
         "arm_results": {arm: {key: record["arms"][arm].get(key)
                               for key in ("status", "official_metrics", "faithful_metrics", "comparison")}
                         for arm in ARMS},
-        "sidecar_status": "written" if record["status"] == "passed" else "not_written_failed_parity",
+        "bundle_attestation_status": (
+            "written" if record["status"] == "passed" else "not_written_failed_parity"),
+        "consumer_verification_status": (
+            "pending_bundle_promotion_and_finalization" if record["status"] == "passed"
+            else "not_eligible_failed_parity"),
         "native_contract_qualified": False,
     }
     census.write_json(output / "parity-evidence.json", evidence)
     if record["status"] == "passed":
+        record_ref = file_ref(root, output / "record.json")
+        evidence_ref = file_ref(root, output / "parity-evidence.json")
         verification = {
+            "kind": "actionbench-parity-bundle-attestation",
+            "bundle_target": "actionmesh/actionbench-parity-output",
+            "bundle_promotion_required": True,
             "official_scorer": descriptors["official_scorer"],
             "harness_scorer": descriptors["harness_scorer"],
             "sample_manifest_ref": sample_manifest_ref,
-            "protocol_ref": record["protocol_ref"],
+            "parity_contract_ref": record["parity_contract_ref"],
+            "request_ref": record["request_ref"],
+            "population_ref": request["population_ref"],
+            "ground_truth_ref": request["ground_truth_ref"],
+            "environment_ref": record["environment_ref"],
+            "record_ref": record_ref,
+            "parity_evidence_ref": evidence_ref,
+            "arm_evidence": {
+                arm: {key: record["arms"][arm][key] for key in (
+                    "prediction_ref", "official_output_ref", "faithful_output_ref")}
+                for arm in ARMS
+            },
             "source_refs": record["source_refs"],
             "metric_tolerances": record["metric_tolerances"],
+            "scientific_effect_qualification": False,
+            "native_contract_qualified": False,
         }
-        census.write_json(output / "faithful-harness-verification.json", verification)
+        census.write_json(output / "parity-bundle-attestation.json", verification)
     return 0 if record["status"] == "passed" else 1
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ("root", "request", "protocol", "output"):
+    for name in ("root", "request", "contract", "environment", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--device", choices=("cuda", "cuda:0"), default="cuda:0")
     parser.add_argument("--gpu-uuid", required=True)
-    parser.add_argument("--group", required=True)
     parser.add_argument("--timeout-seconds", type=int, required=True)
     args = parser.parse_args()
     if not args.gpu_uuid.startswith("GPU-") or not 1 <= args.timeout_seconds <= 27000:
         parser.error("Physical GPU UUID and finite timeout <=27000 required")
-    return evaluate(args.root, args.request, args.protocol, args.output,
-                    args.device, args.gpu_uuid, args.group, args.timeout_seconds)
+    return evaluate(args.root, args.request, args.contract, args.environment, args.output,
+                    args.device, args.gpu_uuid, args.timeout_seconds)
 
 
 if __name__ == "__main__":

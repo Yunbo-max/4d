@@ -18,8 +18,9 @@ Qualify the strong simple controls and official/native ActionBench scoring chain
 - Conditional selection: 15
 - Complete candidate validation designs: 0/15
 - Native candidate results: 0/15
-- Baseline control software: generated, not run in the current state
-- Native scoring/integrity software: generated, not run in the current state
+- Returned setup: 127/127 software checks, native runtime, original asset,
+  three control artifacts and scoring request accepted from the latest review packet
+- Scorer-parity separation: generated, not run at the current revision
 - C02 corrected development operator: software-tested historically, not natively qualified
 
 The historical software-test receipts are engineering evidence only. They do not close native qualification.
@@ -33,7 +34,8 @@ The historical software-test receipts are engineering evidence only. They do not
 5. `docs/research-math-20261006/BASELINE_CONTROLS.md`
 6. `docs/research-math-20261006/BASELINE_SCORING.md`
 7. `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
-8. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
+8. `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
+9. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
 
@@ -47,6 +49,7 @@ Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_R
 | Runtime capture | `actionmesh/prepare_native_runtime.py`, `actionmesh/research_math/native_runtime.py` | CPU-only installed metadata collection; GPU identity and scorer qualification remain pending |
 | Acceptance plan builder | `actionmesh/prepare_control_scoring_checks.py` | emits parser-only unit-test plan |
 | Scoring plan builder | `actionmesh/prepare_control_scoring.py` | emits native-scoring request/integrity plan |
+| Scorer parity | `actionmesh/prepare_actionbench_parity.py`, `actionmesh/research_math/actionbench_parity.py` | emits/runs protocol-free engineering equivalence with exact source/input/output binding |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
@@ -60,11 +63,12 @@ All test, control-construction, native-evaluation, and integrity workloads must 
 | Original asset restoration | one complete dev sample, GT, ActionBench source | UID/split, 16 frames, manifests and hashes, read-only source preservation | required before controls |
 | Three-arm controls | verified original case | arm manifests/hashes for identical UID/frames/topology; seed 44, sigma 1.0 | required before scoring |
 | Frozen scoring request | verified arms, GT, evaluator, protocol/runtime manifests | dry-run/report, source closure and hashes, strict request validation | required before native replay |
+| Official/faithful parity | returned request/runtime/GT and exact delivered source | three-arm zero-tolerance comparison plus manifest-scoped sidecar | engineering implementation qualification only |
 | Native replay | official source and admitted harness plan | raw outputs for every arm/pass, logs, metrics, wall time and VRAM | scientific evidence |
 | Integrity replay | all native outputs and frozen inputs | strict per-pass binding passes without mismatch | required for qualification |
 | Qualification review | valid paired metrics | narrow decision plus natural-failure/applicability analysis | closes this round only |
 
-Controller file transfer may copy receipt-bound original bytes into the clean checkout; it is not a scientific workload. If those bytes cannot be restored and verified, return `blocked_missing_original_asset_bytes`. The admitted scoring plan already wraps `research_math.control_scoring score` and the pinned `research_census_eval.py`; remaining blockers are a source-backed frozen native protocol, matching native runtime/device evidence, and trusted official/harness replay—not a missing runner. Do not improvise a surrogate.
+Controller file transfer may copy receipt-bound original bytes into the clean checkout; it is not a scientific workload. If those bytes cannot be restored and verified, return `blocked_missing_original_asset_bytes`. The scorer-equivalence plan may run after current software acceptance without a scientific protocol, but it cannot establish an accepted benchmark score. Scientific scoring still requires a source-backed frozen native protocol, matching runtime/device evidence and trusted official/harness replay. Do not improvise a surrogate.
 
 ## Frozen constraints
 
@@ -85,7 +89,12 @@ Apply the exact success/failure/insufficient-evidence rules in `BASELINE_SCORING
 
 ## First executable step
 
-After resolving the exact delivered commit, host, interpreter, and installed skill directory, execute the parser-only acceptance plan exactly as specified in `LOCAL_AGENT_RUNBOOK.md`. Source-inspect the generated plan and harness before approving its digest.
+After resolving the exact delivered commit, host, interpreter and installed skill
+directory, execute the whole software acceptance plan at this changed revision.
+Then source-inspect and run the protocol-free engineering parity plan from
+`ACTIONBENCH_SCORER_PARITY.md`, promote its complete passed output bundle and run
+the committed post-promotion finalizer. Preserve its exact one-UID scope. Scientific
+baseline scoring remains blocked until a genuine source-backed protocol exists.
 
 ## Runtime supplement — 2026-10-06
 

@@ -172,42 +172,61 @@ cd "$project_dir/actionmesh"
 
 The request builder verifies the source report, released population membership, exact native-byte arm, three arm reports/sequences, topology/timeline/anchor, GT UID, and current scorer/adapter hashes. Retain its printed request digest.
 
-Next create the source-backed frozen qualification protocol described in
-`BASELINE_SCORING.md`. The runtime JSON is already returned but must still match
-the executing interpreter and current GPU. Freeze and hash at minimum:
-ActionBench revision, sample UID/split, three arm manifests, evaluator
-module/function and source closure, `n_pts_chamfer=100000`, `n_pts_icp=10000`,
-rotation count `24`, ICP iterations `200`, scorer seed `44`, device policy,
-framework/library versions, dependency locks, and the one physical GPU UUID.
-Do not approve a request with unknown or mismatched fields. Qualification rules
-must be prospective and source-backed; do not derive a permissive threshold from
-this development asset.
-
 ### 6a. Establish independent official-versus-faithful parity
 
 Before changing the native contract to `faithful_harness`, follow
 [`ACTIONBENCH_SCORER_PARITY.md`](docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md).
 The official release has no per-asset numerical performance threshold, so do
-not copy its 128-object aggregate means into the one-asset protocol. A
+not copy its 128-object aggregate means into a one-asset scientific protocol. A
 `metric >= 0` domain-validity rule is also forbidden because the installed
-evaluator would treat it as baseline/control qualification. The parity builder
-requires a separately reviewed `--protocol`, validates it through the installed
-verifier, and rejects domain-only qualifications. Source-inspect that protocol
-and both generated plans, then execute only through `run_harness.py`. If no
-genuine source-backed performance rule exists, return
-`blocked_missing_source_backed_native_protocol`; do not relabel this benchmark
-comparison as engineering.
+evaluator would treat it as baseline/control qualification.
+
+Parity itself is now separated as an engineering implementation-equivalence task:
+the builder emits a hash-pinned one-UID sample manifest and a scorer-equivalence
+contract with no scientific qualification fields, then emits a
+`purpose=engineering` native plan with no `protocol_ref`. Source-inspect those
+two generated inputs and both plans, then execute only through `run_harness.py`.
+This may establish exact scorer implementation equivalence; it cannot qualify a
+baseline, control or scientific score.
 
 The parity unit invokes the official ActionBench dataset CLI and the existing
 faithful wrapper separately for each of the same three prediction arms. It
 retains and verifies GLBs, source copies, patch identity, exact subprocess
 commands, input hashes, raw official CSV/summary, raw faithful JSON and logs.
-All three official metrics require zero absolute tolerance. A passed sidecar
-permits a new frozen protocol revision using the faithful descriptor plus
-`verification_ref`; that protocol still requires prospective source-backed
-performance qualification rules and installed-verifier acceptance.
+All three official metrics require zero absolute tolerance. A passed sidecar is
+limited to its exact sample manifest and permits a later frozen protocol using
+the faithful descriptor plus `verification_ref` only when the scientific manifest
+matches. That later protocol still requires prospective source-backed performance
+qualification rules and installed-verifier acceptance. A different scientific
+manifest requires matching parity evidence.
 Parity does not qualify any baseline, control or candidate and does not replace
 trusted nonce-bound replay.
+
+Run this engineering parity step before attempting to author the scientific
+qualification protocol. After a pass, promote and hash the **complete** output
+bundle to the exact project-relative target specified by the sidecar; copying the
+sidecar alone is invalid because its record, raw-output and prediction refs must
+remain resolvable. Then run `actionmesh/finalize_actionbench_parity.py` with the
+promoted target, exact request and generated equivalence contract. Only its
+post-promotion `faithful-harness-verification.json` may be referenced by a later
+scientific protocol. Supply the exact approved harness digest, harness
+plan/report and native plan/receipt; finalization must fail if the promoted
+attestation or any declared output is absent from those completed receipts.
+
+### 6b. Freeze the scientific qualification protocol
+
+Only after parity bundle promotion, create the source-backed frozen qualification
+protocol described in `BASELINE_SCORING.md`. The runtime JSON is already returned
+but must still match the executing interpreter and current GPU. Freeze and hash
+at minimum: ActionBench revision, sample UID/split, three arm manifests,
+evaluator module/function and source closure, `n_pts_chamfer=100000`,
+`n_pts_icp=10000`, rotation count `24`, ICP iterations `200`, scorer seed `44`,
+device policy, framework/library versions, dependency locks, and the one physical
+GPU UUID. Do not approve a request with unknown or mismatched fields.
+Qualification rules must be prospective and source-backed; do not derive a
+permissive threshold from this development asset. If no such rule is available,
+record `blocked_missing_source_backed_native_protocol` after completing parity;
+do not treat that scientific blocker as a reason to skip engineering parity.
 
 Create the admitted scientific plan with the actual resolved values:
 
