@@ -4,11 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T10:00:32.591182+00:00",
+  "updated_at": "2026-10-07T10:25:46.506198+00:00",
   "software_acceptance": {
-    "run_id": "software-paths-r3-b",
-    "tests_passed": 201,
-    "tests_failed": 0
+    "run_id": "export-green-r3",
+    "tests_passed": 205,
+    "tests_failed": 0,
+    "plan_digest": "93c24fc61279809a9e66234de129e18326c94d51fa9133538a964f6e13e61842",
+    "scope": "software checks only; four new checks cover inverse official deformation coordinate transform and mesh validation"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -17,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "scorer engineering parity and finalization complete; stage full128 dataset and pinned model metadata, then complete formal baseline/native protocol and all 15 methods",
+  "current_task": "full dataset and Git source transfer running; export coordinate adapter implemented and 205 checks passed; complete-unit runner still needs integration",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -127,7 +129,7 @@
       "comparator_and_ablation": "required"
     }
   ],
-  "next_checkpoint": "parity receipt and source-bound diagnosis",
+  "next_checkpoint": "complete pinned snapshot download/admission, dataset semantics, versioned low-RAM FP16 complete generation/export/scoring unit",
   "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r3",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
@@ -171,8 +173,24 @@
   "native_qualification": "not_complete",
   "data_staging": {
     "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
-    "remote_target": "/root/actionmesh-research-staging/actionbench-full128",
-    "status": "incomplete; first asset downloaded locally; SSH relay active but slow; no full dataset admission",
-    "old_models_deleted": false
+    "remote_target": "/root/actionmesh-research-staging/actionbench-full128-direct",
+    "status": "download PID 22918 observed live, 27 GT files present including reused files; complete snapshot admission still pending",
+    "old_models_deleted": false,
+    "transport": "loopback pinned public Hub metadata bridge; direct GPU-to-official-CDN object download",
+    "first_direct_object_sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284",
+    "model_metadata_repair_pid": 22936,
+    "download_log": "/root/actionmesh-research-staging/full128-direct.log",
+    "metadata_log": "/root/actionmesh-research-staging/model-metadata-direct.log",
+    "gpu_job_currently_running": false,
+    "model_metadata_status": "completed all four repositories; 33/33 existing files now have official HF download metadata; full byte admission pending",
+    "source_staging": {
+      "old_remote_source": "extracted source lacks Git metadata; preserved",
+      "local_verified_source": "/private/tmp/4d-actionmesh-pinned-source",
+      "actionmesh_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+      "triposg_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+      "bundle_transfer_session": 22301,
+      "actionmesh_bundle_sha256": "25bf3aa9acbb15b0ed417b746308cd4cbd2819790cf06d314bea86dea17c0fac",
+      "triposg_bundle_sha256": "7497a38f54f6564a959c966b8668bddb12f7dbeaee4ad116dd60a5d01b73c1ef"
+    }
   }
 }
