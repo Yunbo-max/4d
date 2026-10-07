@@ -1,0 +1,37 @@
+{
+  "kind": "workflow-checkpoint",
+  "version": "1.0.0",
+  "checkpoint_id": "uid008-parity-finalization-return",
+  "recorded_at": "2026-10-07T22:02:12Z",
+  "status": "engineering_parity_summary_accepted_native_qualification_pending",
+  "review_ref": {
+    "path": "docs/research-math-20261006/uid008-parity-finalization-return-review.json",
+    "sha256": "22fbf4fd155ea71e7a9ffc1a769b15f0dcda286dd56e8759edf236d6419b6a5e"
+  },
+  "receipt_ref": {
+    "path": "docs/research-math-20261006/longgoal-20261007/UID008_PARITY_FINALIZATION_RECEIPT.json",
+    "sha256": "1ec32c65ed43c7ac2ae68a0b5143c8edf69be36fd2e193eb47a6096449de5b4f"
+  },
+  "completed_this_checkpoint": [
+    "Read the compact UID008 return from exact main commit 6d630ef5fe0d01b364eaa73e2f375e2c63393331.",
+    "Recomputed the compact receipt SHA-256 from GitHub bytes.",
+    "Checked internal numerical equality of official and faithful metrics for all three arms and all three metrics.",
+    "Preserved the receipt's explicit engineering-only and non-qualification scope."
+  ],
+  "not_completed": [
+    "Independent rehash of the 127 promoted files and their nested references.",
+    "Fresh nonce-bound official and faithful replay on the same prediction artifacts.",
+    "Same-scorer repeat qualification under the frozen native protocol.",
+    "Full128 reproduction, native contract qualification, candidate experiments or scientific conclusions."
+  ],
+  "next_executable_steps": [
+    "Local transfers the complete immutable promoted bundle, including the declared manifests, logs, source evidence and scorer outputs, without rewriting paths or bytes.",
+    "Web independently rehashes every transferred file and all manifest references before accepting any replay claim.",
+    "Local runs a fresh nonce-bound official/faithful replay on the same frozen predictions and returns complete outputs.",
+    "Local runs the frozen same-scorer repeat qualification and returns paired records before any native-contract PASS is considered."
+  ],
+  "global_dispatch_gate_unchanged": "Full128 dispatch remains blocked by the separate runtime historical-pricing-root propagation gap.",
+  "candidate_designs_verified": 0,
+  "candidate_native_results": 0,
+  "formal_candidate_outcomes": 0
+}

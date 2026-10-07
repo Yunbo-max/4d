@@ -1081,3 +1081,40 @@ Independent receipt replay therefore remains pending. Web performed static
 source, JSON and SHA-256 review only: zero project tests, builders, scorers,
 models or GPU workloads. Native scientific qualification, trusted replay,
 candidate native results and formal outcomes remain **0/15** and **0**.
+## Continuation: accept UID008 parity return without upgrading native qualification — 2026-10-07
+
+The new compact UID008 return was read from exact main commit
+`6d630ef5fe0d01b364eaa73e2f375e2c63393331`; its repository bytes were
+rehash-checked. It reports one current-device parity attempt and a CPU-only
+finalization attempt with exit code zero. For native, world Gaussian and body
+Gaussian, all three reported official metrics are numerically identical to the
+corresponding faithful metrics and all nine reported absolute differences are
+zero. This is useful scorer-equivalence evidence for the single frozen UID and
+the exact reported source/runtime closure.
+
+The receipt also explicitly says that its 127-file promoted bundle was not
+transferred. Therefore Web could not independently rehash its 112 parity output
+references, 127 promoted files or nested sidecar references, nor replay either
+scorer. No nonce-bound trusted replay or same-scorer repeat was returned. The
+result is accepted only as a compact engineering summary; it does not qualify
+the native benchmark contract, any baseline/control effect, Full128 reproduction
+or a candidate method. Candidate native results and formal outcomes remain
+**0/15** and **0**.
+
+The separate Full128 dispatch blocker is unchanged: the compiler verifies the
+historical pricing closure while building the plan, but its emitted unit command
+does not pass the historical evidence root or manifest into the runner that calls
+`freeze_unit`. A focused RED-test patch now makes both arguments mandatory at the
+command and runner boundaries. The patch was dry-run against the exact reviewed
+source and applies cleanly, but Web did not execute project tests. Under the
+test-driven boundary, no production repair was authored before an actual RED
+receipt exists.
+
+Next executable work is two-track and ordered. Local must transfer the complete
+immutable UID008 bundle for independent rehash, then return fresh nonce-bound and
+same-scorer-repeat records before native qualification is considered. Separately,
+Local must apply the RED patch in an isolated exact-commit checkout, preserve the
+focused failures, add a non-mocked runner-to-freeze closure test, and only then
+implement the minimal double-root propagation fix. Focused GREEN, current
+whole-suite acceptance and a regenerated complete-unit validation are mandatory
+before any GPU dispatch.

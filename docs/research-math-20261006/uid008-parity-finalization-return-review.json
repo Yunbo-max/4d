@@ -1,0 +1,64 @@
+{
+  "kind": "uid008-parity-finalization-return-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T22:02:12Z",
+  "reviewed_main_commit": "6d630ef5fe0d01b364eaa73e2f375e2c63393331",
+  "receipt_ref": {
+    "path": "docs/research-math-20261006/longgoal-20261007/UID008_PARITY_FINALIZATION_RECEIPT.json",
+    "sha256": "1ec32c65ed43c7ac2ae68a0b5143c8edf69be36fd2e193eb47a6096449de5b4f",
+    "git_blob_sha": "a702e8fb8ae8585f82a4240e0ee03ab6b2c552dc"
+  },
+  "sample_uid": "000-007_84496dfddf6046ce9ec9fddace6f5ed3",
+  "accepted_reported_facts": {
+    "parity_attempt_exit_code": 0,
+    "finalization_attempt_exit_code": 0,
+    "current_device_identity_bound": true,
+    "arms": [
+      "native",
+      "world_gaussian",
+      "body_gaussian"
+    ],
+    "metrics": [
+      "cd_3d",
+      "cd_4d",
+      "cd_motion"
+    ],
+    "all_reported_absolute_differences_zero": true,
+    "parity_output_refs_reported_verified": 112,
+    "promoted_bundle_files_reported_verified": 127,
+    "sidecar_unique_refs_reported_verified": 28,
+    "telemetry_samples": 822,
+    "max_observed_used_mib": 519.0,
+    "telemetry_is_not_exact_peak": true,
+    "raw_bundle_transferred": false
+  },
+  "review_checks": {
+    "receipt_json_read_from_exact_commit": true,
+    "receipt_sha256_recomputed_from_github_bytes": true,
+    "official_and_faithful_numbers_identical_in_compact_receipt": true,
+    "reported_absolute_differences_all_zero": true,
+    "scope_flags_self_consistent": true,
+    "raw_bundle_independently_rehashed": false,
+    "official_scorer_replayed_by_web": false,
+    "faithful_scorer_replayed_by_web": false,
+    "nonce_bound_trusted_replay_observed": false,
+    "same_scorer_repeat_observed": false
+  },
+  "disposition": {
+    "status": "accepted_as_compact_engineering_scorer_parity_summary",
+    "scorer_equivalence_scope": "one frozen UID, three frozen arms, explicit reported backend and source closure",
+    "native_contract_qualified": false,
+    "baseline_control_scientifically_qualified": false,
+    "candidate_methods_tested": false,
+    "full128_reproduction_completed": false,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "formal_candidate_outcomes": 0
+  },
+  "blocking_reasons": [
+    "The 127-file promoted bundle was not transferred, so the compact receipt cannot be independently replayed or exhaustively rehashed from repository bytes.",
+    "No fresh nonce-bound official/faithful replay is preserved for Web verification.",
+    "No same-scorer repeat qualification is preserved.",
+    "This one-UID scorer-equivalence result is not a scientific effect test and does not qualify the native benchmark contract."
+  ]
+}

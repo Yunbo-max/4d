@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T21:07:14Z",
+  "recorded_at": "2026-10-07T22:02:12Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local reports a repaired historical archive closure, a 304/304 CPU software pass, and an officially validated but unexecuted Window-02 plan for indices 16-31. Static source review accepts those only as returned engineering summaries: the raw r4/r5/r6 receipts and exact archive manifest are not committed for independent replay. More importantly, historical pricing verification is used by the compiler but is not carried into the emitted unit command; the real runner calls freeze_unit against the current attempt root, so runtime pricing closure is unproven and GPU dispatch remains blocked. Indices 10-15 are still a coverage gap. No GPU work was launched in this review. Current-device native/scoring qualification, trusted replay and all candidate experiments remain open; candidate results/formal outcomes are 0/15 and 0.",
+  "status": "UID008 now has a current-device compact engineering parity return: for one frozen UID and the native, world-Gaussian and body-Gaussian arms, all reported official/faithful cd_3d, cd_4d and cd_motion values match exactly. The compact receipt was rehashed from GitHub bytes, but its 127-file promoted bundle was not transferred, so nested evidence cannot yet be independently rehashed or replayed; nonce-bound trusted replay and same-scorer repeat remain absent. Native benchmark/control qualification therefore remains pending. Separately, the Full128 compiler still fails to carry the historical pricing evidence root and archive manifest into the real runner; a cleanly applying RED-test patch is published for Local to execute before any production repair or GPU dispatch. Indices 10-15 remain a coverage gap. Candidate results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -893,5 +893,45 @@
     "native_scientific_qualification": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
+  },
+  "uid008_parity_finalization_return": {
+    "status": "accepted_as_compact_engineering_scorer_parity_summary",
+    "recorded_at": "2026-10-07T22:02:12Z",
+    "reviewed_main_commit": "6d630ef5fe0d01b364eaa73e2f375e2c63393331",
+    "receipt_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/UID008_PARITY_FINALIZATION_RECEIPT.json",
+      "sha256": "1ec32c65ed43c7ac2ae68a0b5143c8edf69be36fd2e193eb47a6096449de5b4f"
+    },
+    "review_ref": {
+      "path": "docs/research-math-20261006/uid008-parity-finalization-return-review.json",
+      "sha256": "22fbf4fd155ea71e7a9ffc1a769b15f0dcda286dd56e8759edf236d6419b6a5e"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-uid008-parity-finalization-return.json",
+      "sha256": "a592e037cc6a2f1273e7912d5b26f7fb3695923b5adbdab5796a8b2504348ec1"
+    },
+    "official_faithful_metric_pairs_reported_equal": 9,
+    "raw_bundle_transferred": false,
+    "native_contract_qualified": false,
+    "candidate_methods_tested": false,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_runtime_pricing_red_tests": {
+    "status": "red_patch_generated_unexecuted",
+    "recorded_at": "2026-10-07T22:02:12Z",
+    "base_source_commit": "240bd0dd3556bdd64830b75ebde496bf0de8dc8d",
+    "red_patch_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-runtime-pricing-root-red-tests.patch",
+      "sha256": "dcea46748739be361ba0571d4ee3653f410eac9ca1e6541b710d062494b49b59"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-runtime-pricing-red-tests.json",
+      "sha256": "d734b02593d6ea379cfbba000a57dc02326ea31a532cf34e282336eab3bdc496"
+    },
+    "patch_dry_run_exit_code": 0,
+    "focused_tests_executed_by_web": 0,
+    "production_fix_authored": false,
+    "dispatch_ready": false,
+    "candidate_native_results": 0
   }
 }

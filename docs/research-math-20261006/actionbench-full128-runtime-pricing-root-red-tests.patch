@@ -1,0 +1,47 @@
+diff --git a/actionmesh/research_math/tests/test_actionbench_full128_window_plan.py b/actionmesh/research_math/tests/test_actionbench_full128_window_plan.py
+index d3243f2..70abcfb 100644
+--- a/actionmesh/research_math/tests/test_actionbench_full128_window_plan.py
++++ b/actionmesh/research_math/tests/test_actionbench_full128_window_plan.py
+@@ -1082,6 +1082,10 @@ class Full128WindowPlanTests(unittest.TestCase):
+         args = SimpleNamespace(
+             root=root,
+             pricing=root / "inputs/actionbench-full128-queue/pricing.json",
++            pricing_evidence_root=Path("/historical/r7"),
++            historical_manifest=(root /
++                "docs/research-math-20261006/"
++                "actionbench-full128-r7-archive-manifest.json"),
+             contract=root / "contract.json", population=root / "population.json",
+             snapshot_contract=root / "snapshot-contract.json",
+             snapshot_admission=root / "snapshot-admission.json",
+@@ -1093,6 +1097,9 @@ class Full128WindowPlanTests(unittest.TestCase):
+         command = build_native_command(args, "uid-000", "full128-window-01", 1664)
+         joined = " ".join(command)
+         for fragment in ("--root ..", "--pricing ../inputs/actionbench-full128-queue/pricing.json",
++                         "--pricing-evidence-root /historical/r7",
++                         "--historical-manifest "
++                         "../docs/research-math-20261006/actionbench-full128-r7-archive-manifest.json",
+                          "--uid uid-000", "--window-id full128-window-01",
+                          "--wall-seconds 1664", "--gpu-uuid GPU-test"):
+             self.assertIn(fragment, joined)
+diff --git a/actionmesh/research_math/tests/test_complete_unit_runner.py b/actionmesh/research_math/tests/test_complete_unit_runner.py
+index e142049..8b8eca3 100644
+--- a/actionmesh/research_math/tests/test_complete_unit_runner.py
++++ b/actionmesh/research_math/tests/test_complete_unit_runner.py
+@@ -16,9 +16,15 @@ class CompleteUnitRunnerTests(unittest.TestCase):
+     def test_full128_mode_requires_exact_argument_bundle_and_canonical_price(self):
+         with tempfile.TemporaryDirectory() as tmp:
+             root=Path(tmp).resolve();pricing=root/'inputs/actionbench-full128-queue/pricing.json'
+-            valid=SimpleNamespace(uid='uid',window_id='full128-window-01',pricing=pricing,root=root)
++            pricing_evidence_root=root.parent/'historical-r7'
++            historical_manifest=(root/
++                'docs/research-math-20261006/actionbench-full128-r7-archive-manifest.json')
++            valid=SimpleNamespace(uid='uid',window_id='full128-window-01',
++                pricing=pricing,root=root,pricing_evidence_root=pricing_evidence_root,
++                historical_manifest=historical_manifest)
+             self.assertTrue(validate_full128_mode(valid))
+-            for key in ('uid','window_id','pricing','root'):
++            for key in ('uid','window_id','pricing','root','pricing_evidence_root',
++                        'historical_manifest'):
+                 changed=SimpleNamespace(**vars(valid));setattr(changed,key,None)
+                 with self.subTest(key=key),self.assertRaises(ValueError):
+                     validate_full128_mode(changed)
