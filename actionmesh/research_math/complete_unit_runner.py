@@ -23,10 +23,24 @@ def run_stage(name, command, cwd, output, timeout, environment=None):
             'timeout_seconds':timeout}
     try:
         with (output/(name+'.stdout.log')).open('w') as out, (output/(name+'.stderr.log')).open('w') as err:
-            completed=subprocess.run(command,cwd=cwd,env=environment,stdout=out,
-                                     stderr=err,timeout=timeout)
-        record['exit_code']=completed.returncode
-        if completed.returncode:raise RuntimeError(name+' exited '+str(completed.returncode))
+            import psutil
+            process=subprocess.Popen(command,cwd=cwd,env=environment,stdout=out,stderr=err)
+            try:
+                returncode=process.wait(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                # Enumerate while the parent still exists; subprocess.run would kill
+                # it first and leave its scoring descendants orphaned.
+                try:children=psutil.Process(process.pid).children(recursive=True)
+                except psutil.NoSuchProcess:children=[]
+                record['timeout_descendants']=[child.pid for child in children]
+                for child in reversed(children):
+                    try:child.kill()
+                    except psutil.NoSuchProcess:pass
+                process.kill();process.wait()
+                psutil.wait_procs(children,timeout=1)
+                raise
+        record['exit_code']=returncode
+        if returncode:raise RuntimeError(name+' exited '+str(returncode))
         record['status']='completed'
         return record
     except subprocess.TimeoutExpired as error:

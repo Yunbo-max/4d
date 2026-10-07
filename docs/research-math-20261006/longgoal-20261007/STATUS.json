@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T10:44:48.444508+00:00",
+  "updated_at": "2026-10-07T10:52:22.591592+00:00",
   "software_acceptance": {
-    "run_id": "unit-resources-green-r4",
-    "tests_passed": 223,
+    "run_id": "timeout-green-r5",
+    "tests_passed": 224,
     "tests_failed": 0,
-    "plan_digest": "05fbe78279e554546452477d1594a840c605647378c6db6151c1bc9a010eb71b",
-    "scope": "CPU software only; host telemetry and rejection of unexecuted admissions verified"
+    "plan_digest": "ce43414e2d4a678bbf7c951e10447dfdb924ae48730e83cc36ad85308cd67706",
+    "scope": "CPU software only; real descendant timeout leak reproduced and fixed"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "prepare roomy overlay worktree; dataset and official Git bundles still transferring; complete unit runner/plan/resources implemented and 223 software checks passed",
+  "current_task": "dataset and Git source transfer remain live; timeout cleanup repaired; all 15 input prerequisites audited; admissions still pending",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -130,7 +130,7 @@
     }
   ],
   "next_checkpoint": "complete pinned snapshot download/admission, dataset semantics, versioned low-RAM FP16 complete generation/export/scoring unit",
-  "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r4",
+  "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r5",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
     "parity_first_attempt": "failed: official CLI missing pandas",
@@ -204,8 +204,21 @@
     "remaining": [
       "review emitted real-input harness plan after admissions",
       "full snapshot + semantics + unit manifest admissions",
-      "fresh runtime capture",
       "actual GPU integration"
     ]
-  }
+  },
+  "runtime_capture": {
+    "run_id": "runtime-r5",
+    "status": "completed",
+    "plan_digest": "b844e5cde359c7db5d88a602180883fafda80aae25cd2cfdad78ba43e44cc6cb",
+    "environment_sha256": "22bdc7f84f501de66f429e687f4dd25862175b0aa261b62be53e1b05e4b045b3",
+    "dependencies_sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+  },
+  "execution_supervision_repair": {
+    "red_run": "timeout-red-r5",
+    "finding": "subprocess.run timeout killed adapter but left child running",
+    "repair": "enumerate descendants while parent is alive, kill descendants, then kill/wait parent",
+    "green_run": "timeout-green-r5"
+  },
+  "candidate_input_audit": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json"
 }

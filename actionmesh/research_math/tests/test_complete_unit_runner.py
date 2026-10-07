@@ -25,6 +25,25 @@ class CompleteUnitRunnerTests(unittest.TestCase):
             self.assertEqual(record['status'],'timeout')
             self.assertIsNone(record['exit_code'])
 
+    def test_timeout_terminates_descendant_process(self):
+        import psutil
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);pid_path=root/'child.pid'
+            program=('import subprocess,sys,time,pathlib;'
+                     'p=subprocess.Popen([sys.executable,"-c","import time;time.sleep(10)"]);'
+                     'pathlib.Path(sys.argv[1]).write_text(str(p.pid));time.sleep(10)')
+            try:
+                with self.assertRaises(RuntimeError):
+                    run_stage('generation',[sys.executable,'-c',program,str(pid_path)],root,root,1)
+                self.assertTrue(pid_path.exists())
+                pid=int(pid_path.read_text())
+                live=psutil.pid_exists(pid) and psutil.Process(pid).status()!=psutil.STATUS_ZOMBIE
+                self.assertFalse(live,'Timed-out scoring descendant remains running')
+            finally:
+                if pid_path.exists():
+                    try:psutil.Process(int(pid_path.read_text())).kill()
+                    except psutil.NoSuchProcess:pass
+
     def test_official_export_requires_all_glbs_and_exact_agreement(self):
         import numpy as np
         import trimesh

@@ -1,0 +1,209 @@
+{
+  "kind": "candidate-input-dependency-audit",
+  "scope": "Read-only audit of existing 15 specifications; no methods executed or promoted",
+  "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
+  "common_required_interfaces": [
+    "NativeContext",
+    "ProtectionOperator",
+    "GeometryRepair",
+    "SparseModes",
+    "TransportSupport",
+    "LegalMotionSurrogate"
+  ],
+  "existing_implementation_notes": {
+    "C02": "protected_projection.py implements mathematical projection primitive; not complete native method",
+    "C14": "simple_mesh_controls.py has body Gaussian baseline; not full candidate qualification"
+  },
+  "required_next_sequence": [
+    "finish complete current-release calibration and baseline qualification",
+    "measure natural failure prevalence and strong simple alternatives",
+    "qualify observer capture of full decoder context without changing native outputs",
+    "freeze per-candidate legal input, baseline, ablation and decision rules",
+    "implement and run all 15 separately, preserving invalid-input/failure outcomes"
+  ],
+  "candidates": [
+    {
+      "id": "4d-math-20261006-c02",
+      "priority": 1,
+      "name": "保留动作特征的几何近端更新",
+      "inputs": [
+        "desired common geometry step d[T,V,3]",
+        "frozen C operator on free coordinates",
+        "SPD W operator and anchor pins"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c02.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c01",
+      "priority": 2,
+      "name": "同时间自映射偏差消除",
+      "inputs": [
+        "anchor X and same query normals",
+        "F_a and F_t under identical complete native context",
+        "coordinate bounds policy without hidden clipping"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c01.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c10",
+      "priority": 3,
+      "name": "形变梯度的可积投影",
+      "inputs": [
+        "legal independently estimated differential targets h",
+        "mesh gradient/incidence operator G",
+        "positive W and per-component pins"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c10.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c13",
+      "priority": 4,
+      "name": "稀疏加速度的事件保留修复",
+      "inputs": [
+        "full native coordinates Yhat",
+        "SPD observation metric M and explicit anchor affine term",
+        "second differences D2 at actual native timestep units"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c13.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c14",
+      "priority": 5,
+      "name": "共转坐标中的时间修复",
+      "inputs": [
+        "full native coordinates and anchor",
+        "input/model-derived frozen R_t in SO(3),c_t",
+        "declared zero-preserving anchored residual repair"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c14.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c04",
+      "priority": 6,
+      "name": "不确定动作约束下的稳健修复",
+      "inputs": [
+        "common desired geometry repair d",
+        "legal motion-surrogate gradient g0",
+        "PSD set shape S, radius r and epsilon",
+        "anchor pins and Hessian/trust-region obligation"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c04.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c03",
+      "priority": 7,
+      "name": "相关参考误差的矩阵校正：原生指标边界与非平方标定",
+      "inputs": [
+        "same-context self residual r0[T_anchor,V,3]",
+        "development-only labeled error policy",
+        "frozen means, B_t estimator and regularization",
+        "qualified legal development correspondence/lift and coordinate/alignment policy",
+        "fixed weights, tau, lambda and stop conditions; no confirmation fitting"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c03.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c20",
+      "priority": 8,
+      "name": "相位与动作幅度的可识别分解",
+      "inputs": [
+        "legal input/model motion target r",
+        "fixed endpoint-preserving phase and amplitude bases",
+        "original time IDs, derivative bounds, positive amplitude ridge"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c11",
+      "priority": 9,
+      "name": "保留旋转的应变约束修复",
+      "inputs": [
+        "qualified full-rank local square maps with explicit frame completion",
+        "positive stretch bounds l,u and common lift",
+        "original native mesh and anchor pins"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c11.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c12",
+      "priority": 10,
+      "name": "最大可行的三角面安全修正",
+      "inputs": [
+        "same proposed full-mesh update d",
+        "original faces, nondegenerate normals and beta",
+        "common constraint checking, scalar-root and numerical-margin policy"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c12.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c15",
+      "priority": 11,
+      "name": "保护动作分量的低秩轨迹修复",
+      "inputs": [
+        "full trajectory matrix Uhat[T,3V]",
+        "fixed orthogonal Q containing the actual anchor basis",
+        "frozen lambda and residual-rank policy"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c15.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c05",
+      "priority": 12,
+      "name": "保留对应多解的空间联合分支",
+      "inputs": [
+        "qualified sparse target modes and normalized scores per anchor landmark",
+        "fixed anchor spatial graph and legal R_ij hints",
+        "identical output lift for every mode reduction"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c08",
+      "priority": 13,
+      "name": "端点约束的轨迹分布桥",
+      "inputs": [
+        "qualified sparse Markov kernels and initial probabilities",
+        "legal model-derived endpoint distributions",
+        "support feasibility and common path-decision/lift policy"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c08.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c06",
+      "priority": 14,
+      "name": "面积边际约束的对应运输",
+      "inputs": [
+        "same permitted feature cost matrix and sparse support",
+        "source/target model surface areas with equal total mass",
+        "positive entropy epsilon and original vertex mapping"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c06.json",
+      "native_result": "not_started"
+    },
+    {
+      "id": "4d-math-20261006-c07",
+      "priority": 15,
+      "name": "允许不匹配质量的部分运输",
+      "inputs": [
+        "same feature bank, areas, cost and support as full transport",
+        "frozen unmatched penalty gamma and entropy epsilon",
+        "full native output available for unmatched fallback"
+      ],
+      "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c07.json",
+      "native_result": "not_started"
+    }
+  ]
+}
