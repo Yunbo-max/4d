@@ -920,3 +920,43 @@ without modification to its canonical archive path, run current whole-suite
 acceptance, then invoke the sole builder command recorded in the reconciliation
 contract. Only the resulting immutable sidecar may feed a nonoverlapping Full128
 window. Candidate native results and formal outcomes remain **0/15** and **0**.
+
+## Continuation: freeze state and observer status as one immutable pair — 2026-10-07
+
+The latest observed r9 engineering ledger has advanced to seven completed units,
+one running unit and one pending unit at 2026-10-07T17:59:21.929Z. Population-007
+completed generation and official scoring with exit code zero; its receipt and
+all 117 declared output hashes were independently verified. Population-008 then
+reached Stage I 27/30. These are still current-release engineering baseline attempts, not
+candidate-method evidence or full-population qualification.
+
+Source review found a second concurrency boundary in the new reconciliation
+chain. The sidecar required a hash-bound harness `state.json`, but its independent
+aggregate reference still pointed to the global `STATUS.json`. That file is
+intentionally rewritten by the watcher after every observed transition. A valid
+sidecar would therefore become unreproducible from the next checkout even though
+its state evidence had not changed.
+
+Added `prepare_actionbench_active_batch_snapshot.py` and changed the compiler
+profile to an archived `status-snapshot.json`. The Local-only builder double-reads
+both live files, rejects either file moving during capture, validates the r9 run
+ID/digest/task set, derives completed/running/pending/failed counts from the task
+map, requires exact equality to the observer snapshot and writes the original
+bytes exactly once to two immutable archive paths. Ordinary publication failure
+removes a partial pair; existing outputs are never overwritten. Only after this
+pair exists may the separate reconciliation builder derive the nine ordered UID
+dispositions.
+
+Two focused checks were authored first for stable-byte preservation and
+count-incoherent rejection without partial output, raising the expected merged
+software suite from 288 to 290 methods. Under the Web/Local role split these new
+checks remain `generated_unexecuted`; Web ran no project tests, snapshot builder,
+GPU work or scorer. Static source/JSON validation and GitHub byte readback are the
+only author-side acceptance intended for this round.
+
+The current Local software receipt still covers only 258 pre-a408422 checks, so
+it cannot qualify this code. At the next safe r9 boundary Local must refresh the
+observer ledger, run all 290 current checks, execute the immutable snapshot
+builder and then the reconciliation builder. Window generation remains blocked
+until Web reads back that exact pair and sidecar. Candidate native results and
+formal outcomes remain **0/15** and **0**.

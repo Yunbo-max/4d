@@ -1,6 +1,6 @@
 {
   "kind": "actionbench-full128-active-batch-reconciliation-contract",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "generated_unexecuted",
   "scope": "Fail-closed plan-generation guard for retained Full128 engineering work; not a dispatch approval or scientific result.",
   "canonical_output": "inputs/actionbench-full128-queue/active-batch-reconciliation.json",
@@ -31,19 +31,25 @@
     ],
     "required_r9_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
     "required_campaign_plan_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/plans/population-gpu-current-r9/harness.json",
-    "required_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/STATUS.json",
+    "required_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json",
     "required_state_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
     "coverage_rule": "The r9 range is fixed independently to [1,10). Dispositions must appear exactly once in canonical population order for every index in that range.",
     "evidence_rule": "The dedicated reconciliation builder reads the exact retained research-harness state snapshot and derives all nine dispositions from its task map; it accepts no caller-authored status list. The compiler independently rehashes and parses the retained campaign, aggregate status and harness state; recomputes the canonical harness plan digest; resolves every task's exact path/sha256 native-plan reference beneath the archived campaign root; and recomputes each native plan digest. It requires matching run ID, fixed plan digest, task IDs 001 through 009, native-plan paths, status indices, observation time, disposition counts and each individual task status. The validated historical JSON files are staged as opaque byte-pinned evidence so their original run-relative inner paths cannot be rebound against the current project root. Aggregate-only status, swapped per-task states, claimed digests, path-only native references, changed native files, arbitrary same-hash files or pricing-only references are rejected."
   },
+  "canonical_snapshot_builder": {
+    "path": "actionmesh/prepare_actionbench_active_batch_snapshot.py",
+    "command": "python actionmesh/prepare_actionbench_active_batch_snapshot.py --root /root/actionmesh-research-staging/4d-longgoal-r10 --live-state /root/actionmesh-research-staging/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json --live-status /root/actionmesh-research-staging/4d-longgoal-r10/docs/research-math-20261006/longgoal-20261007/STATUS.json",
+    "rule": "The builder double-reads both live inputs, requires byte stability, exact run/digest/task identities and per-state counts equal to the aggregate status, then writes the original bytes exactly once to the two canonical immutable archive paths. Existing or partial outputs fail closed.",
+    "execution_started": false
+  },
   "canonical_builder": {
     "path": "actionmesh/prepare_actionbench_active_batch_reconciliation.py",
     "command": "python actionmesh/prepare_actionbench_active_batch_reconciliation.py --root /root/actionmesh-research-staging/4d-longgoal-r10",
-    "precondition": "The exact r9 state snapshot must first be copied without modification to required_state_snapshot_path and retained with the matching campaign/status snapshot. The builder fails closed while that file is absent.",
+    "precondition": "The canonical snapshot builder must first freeze both required_state_snapshot_path and required_status_snapshot_path from one stable coherent observation. Manual state lists and the mutable global STATUS.json are not accepted.",
     "execution_started": false
   },
   "plan_generation_rule": "A target window is rejected when any target UID appears in any retained source-run disposition, regardless of outcome. This prevents success-selected omission, retry of a natural failure, or duplicate live work.",
-  "nonoverlap_rule": "A nonoverlapping target may be compiled only after the sole required r9 source run and its complete retained range are present, the campaign digest recomputes, and every campaign, status and native-plan reference resolves with matching SHA-256.",
+  "nonoverlap_rule": "A nonoverlapping target may be compiled only after the sole required r9 source run and its complete retained range are present, the campaign digest recomputes, and every campaign, state, status and native-plan reference resolves with matching SHA-256.",
   "freshness_rule": "The observation timestamp describes the evidence snapshot used for plan generation. It does not prove later liveness and cannot authorize dispatch; Local must re-reconcile host state immediately before any execution approval.",
   "required_false_claims": {
     "queue_approved": false,

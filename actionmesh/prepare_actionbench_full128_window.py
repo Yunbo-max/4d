@@ -35,7 +35,9 @@ R9_CAMPAIGN_PLAN_PATH = (
     "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
     "4d-longgoal-r9/plans/population-gpu-current-r9/harness.json")
 R9_STATUS_SNAPSHOT_PATH = (
-    "docs/research-math-20261006/longgoal-20261007/STATUS.json")
+    "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
+    "4d-longgoal-r9/runs/harness/population-gpu-current-r9/"
+    "status-snapshot.json")
 R9_STATE_SNAPSHOT_PATH = (
     "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
     "4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json")

@@ -194,6 +194,114 @@ def reconciliation_fixture(pricing, pricing_ref, campaign_ref, status_ref,
 
 
 class Full128WindowPlanTests(unittest.TestCase):
+    def test_snapshot_builder_freezes_stable_state_and_status_bytes(self):
+        """Catch reconciliation evidence that still points at mutable inputs."""
+        from tempfile import TemporaryDirectory
+        from prepare_actionbench_active_batch_snapshot import capture_snapshot
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            live = root / "live"
+            live.mkdir()
+            profile = {
+                "run_id": "population-gpu-current-r9",
+                "population_range": (1, 10),
+                "plan_digest": "a" * 64,
+                "campaign_plan_path": "archive/harness.json",
+                "status_snapshot_path": "archive/status-snapshot.json",
+                "state_snapshot_path": "archive/state.json",
+            }
+            statuses = ["completed"] * 3 + ["running"] + ["pending"] * 5
+            state = {
+                "format": "research-harness-state-v1",
+                "batch_id": profile["run_id"],
+                "plan_digest": profile["plan_digest"],
+                "status": "running",
+                "tasks": {
+                    f"population-{index:03d}": {"status": task_status}
+                    for index, task_status in zip(range(1, 10), statuses)
+                },
+            }
+            status = {"population_window": {
+                "run_id": profile["run_id"],
+                "plan_digest": profile["plan_digest"],
+                "indices": list(range(1, 10)),
+                "observed_at": "2026-10-07T17:50:33Z",
+                "completed": 3, "running": 1, "pending": 5, "failed": 0,
+            }}
+            live_state = live / "state.json"
+            live_status = live / "STATUS.json"
+            live_state.write_text(json.dumps(state))
+            live_status.write_text(json.dumps(status))
+            state_output = root / profile["state_snapshot_path"]
+            status_output = root / profile["status_snapshot_path"]
+
+            result = capture_snapshot(
+                root=root,
+                live_state_path=live_state,
+                live_status_path=live_status,
+                state_output_path=state_output,
+                status_output_path=status_output,
+                required_profile=profile,
+            )
+
+            self.assertEqual(state_output.read_bytes(), live_state.read_bytes())
+            self.assertEqual(status_output.read_bytes(), live_status.read_bytes())
+            self.assertEqual(result["counts"], {
+                "completed": 3, "running": 1, "pending": 5, "failed": 0,
+            })
+            live_status.write_text("{}")
+            self.assertEqual(json.loads(status_output.read_text()), status)
+
+    def test_snapshot_builder_rejects_incoherent_counts_without_partial_output(self):
+        """Catch archiving a state/status pair from different observations."""
+        from tempfile import TemporaryDirectory
+        from prepare_actionbench_active_batch_snapshot import capture_snapshot
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            live = root / "live"
+            live.mkdir()
+            profile = {
+                "run_id": "population-gpu-current-r9",
+                "population_range": (1, 3),
+                "plan_digest": "a" * 64,
+                "campaign_plan_path": "archive/harness.json",
+                "status_snapshot_path": "archive/status-snapshot.json",
+                "state_snapshot_path": "archive/state.json",
+            }
+            live_state = live / "state.json"
+            live_status = live / "STATUS.json"
+            live_state.write_text(json.dumps({
+                "format": "research-harness-state-v1",
+                "batch_id": profile["run_id"],
+                "plan_digest": profile["plan_digest"],
+                "tasks": {
+                    "population-001": {"status": "completed"},
+                    "population-002": {"status": "pending"},
+                },
+            }))
+            live_status.write_text(json.dumps({"population_window": {
+                "run_id": profile["run_id"],
+                "plan_digest": profile["plan_digest"],
+                "indices": [1, 2],
+                "observed_at": "2026-10-07T17:50:33Z",
+                "completed": 2, "running": 0, "pending": 0, "failed": 0,
+            }}))
+            state_output = root / profile["state_snapshot_path"]
+            status_output = root / profile["status_snapshot_path"]
+
+            with self.assertRaisesRegex(ValueError, "counts"):
+                capture_snapshot(
+                    root=root,
+                    live_state_path=live_state,
+                    live_status_path=live_status,
+                    state_output_path=state_output,
+                    status_output_path=status_output,
+                    required_profile=profile,
+                )
+
+            self.assertFalse(state_output.exists())
+            self.assertFalse(status_output.exists())
+
     def test_reconciliation_builder_derives_every_disposition_from_harness_state(self):
         """Catch a builder that copies unverified caller-supplied statuses."""
         from tempfile import TemporaryDirectory

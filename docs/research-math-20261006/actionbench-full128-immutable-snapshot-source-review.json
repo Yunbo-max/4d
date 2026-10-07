@@ -1,0 +1,57 @@
+{
+  "kind": "actionbench-full128-immutable-snapshot-source-review",
+  "version": "1.0.0",
+  "status": "reviewed_generated_unexecuted",
+  "reviewed_at": "2026-10-07T17:55:22Z",
+  "scope": [
+    "actionmesh/prepare_actionbench_active_batch_snapshot.py",
+    "actionmesh/prepare_actionbench_active_batch_reconciliation.py",
+    "actionmesh/prepare_actionbench_full128_window.py",
+    "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+    "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+    "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+    "LOCAL_AGENT_RUNBOOK.md"
+  ],
+  "finding": "The state-derived sidecar still referenced the mutable global STATUS.json. A watcher update after sidecar generation would change that canonical path's bytes and invalidate the pinned reference, so the same reconciliation could not be reproduced from a later checkout.",
+  "selected_design": "Freeze the live state and matching aggregate status together before sidecar generation. Retain their original bytes at two write-once archive paths and require both hashes thereafter.",
+  "rejected_alternatives": [
+    "Continue binding the global STATUS.json and regenerate the sidecar after each watcher update: this is mutable and races plan review.",
+    "Derive aggregate counts only from state.json and drop STATUS evidence: this loses the independent observer cross-check.",
+    "Copy state and status manually in separate commands: this cannot prove they describe one coherent observation."
+  ],
+  "implemented_guards": [
+    "double-read both live files and reject any byte change within the capture window",
+    "require exact r9 run ID, plan digest, indices and task IDs",
+    "derive per-state counts from the harness task map and require equality to the aggregate observer snapshot",
+    "validate a UTC observation timestamp",
+    "write the original byte sequences exactly once and refuse existing outputs",
+    "remove a partially published pair after an ordinary publication error",
+    "bind reconciliation and later window compilation only to the immutable archive paths"
+  ],
+  "authored_checks": {
+    "new_test_methods": 2,
+    "expected_merged_test_methods": 290,
+    "behaviors": [
+      "freeze stable coherent source bytes and remain unchanged after the live source mutates",
+      "reject mismatched state/status counts without leaving output files"
+    ],
+    "executed_by_web": 0
+  },
+  "static_validation": {
+    "python_ast_files_parsed": 4,
+    "json_documents_parsed": 4,
+    "git_diff_check_passed": true,
+    "window_test_methods_counted": 20,
+    "project_tests_accepted": false,
+    "gpu_workloads_started": 0,
+    "official_scorer_runs": 0
+  },
+  "remaining_preconditions": [
+    "population-gpu-current-r9 must reach a safe observed boundary",
+    "Local must run the current 290-method software-acceptance suite on the delivered source",
+    "Local must execute the canonical snapshot builder against the exact live r9 state and a matching refreshed STATUS.json",
+    "the resulting immutable pair and reconciliation sidecar must be returned and read back before window compilation"
+  ],
+  "scientific_effect_qualification": false,
+  "candidate_methods_tested": false
+}

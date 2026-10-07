@@ -1,0 +1,44 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T17:55:22Z",
+  "project_id": "4d-mechanism-boundaries",
+  "route_id": "baseline-qualification",
+  "role": "web_supervisor",
+  "current_node": "B/S native baseline qualification and safe Full128 scheduling",
+  "decision": "Make active-batch reconciliation reproducible across future watcher updates by freezing one coherent immutable state/status pair before sidecar generation.",
+  "latest_observed_execution": {
+    "run_id": "population-gpu-current-r9",
+    "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
+    "observed_at": "2026-10-07T17:59:21.929Z",
+    "completed": 7,
+    "running": 1,
+    "pending": 1,
+    "failed": 0,
+    "active_task": "population-008 Stage I 27/30",
+    "candidate_methods_tested": false
+  },
+  "completed": [
+    "authored a canonical stable-pair snapshot builder",
+    "moved the required status evidence from mutable STATUS.json to an immutable archived status-snapshot.json",
+    "made state/status identity and aggregate-count agreement executable preconditions",
+    "updated the reconciliation/window contracts and exact Local command sequence",
+    "authored two fail-closed checks"
+  ],
+  "pending": [
+    "r9 completes or reaches a safe coherent snapshot boundary",
+    "Local runs the current 290-method software-acceptance suite",
+    "Local executes the snapshot and reconciliation builders",
+    "Web verifies the returned immutable pair and sidecar",
+    "only then may Local compile and freeze a nonoverlapping Full128 window",
+    "official full-population baseline reproduction and scorer replay remain incomplete"
+  ],
+  "scientific_status": {
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "queue_approved": false,
+    "dispatch_ready": false
+  },
+  "next_discriminating_action": "At the next safe r9 boundary, Local refreshes STATUS.json, runs current software acceptance, freezes the stable state/status pair, then derives the reconciliation sidecar. No queue approval or GPU dispatch is implied."
+}

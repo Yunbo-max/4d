@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T17:41:52Z",
+  "recorded_at": "2026-10-07T18:00:30Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. The frozen Local engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T17:35:40Z with six completed, one running and two pending units on task indices 1 through 9; population-007 generation was at Stage I 12/30, with no observed errors. Population-006 exited generation and scoring successfully; all 117 receipt-declared remote output refs matched. These remain engineering baseline results, not candidate scientific outcomes. Full128 plan generation now additionally requires an immutable per-task r9 harness state snapshot and a reconciliation sidecar derived by the canonical builder; the retained archive does not yet contain that state.json, so generation remains blocked. No canonical next window plan has been generated or approved; baseline reproduction/formal qualification remains incomplete, and candidate native results/formal outcomes remain 0/15 and 0.",
+  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. The retained engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T17:59:21.929Z with seven completed, one running and one pending unit; population-008 generation was at Stage I 27/30 and no failure was observed. Population-007 generation/scoring exited zero and all 117 receipt-declared output hashes were independently verified. These remain engineering baseline results, not candidate scientific outcomes. Full128 plan generation now requires the exact live r9 harness state and matching observer status to be frozen together at write-once archive paths before state-derived reconciliation. The immutable pair, current 290-method Local software acceptance and reconciliation sidecar are not yet returned, so generation and dispatch remain blocked. Candidate native results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -702,6 +702,59 @@
     "dispatch_ready": false,
     "scientific_effect_qualification": false,
     "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_immutable_snapshot": {
+    "status": "generated_unexecuted_stable_pair_guard_authored",
+    "recorded_at": "2026-10-07T18:00:30Z",
+    "base_commit": "e1e31e3b22651f7bdeb521fc73f49db5e453d479",
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-immutable-snapshot-source-review.json",
+      "sha256": "a7ad23574f4ec5576f683de030d4071f21ee02236a42b5f6ddb97d98fd24d743"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-immutable-snapshot.json",
+      "sha256": "81de994b3cefd4508834f7fa4cff58f8ca622a23146c94f331176053362156cb"
+    },
+    "reconciliation_contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+      "sha256": "35d549586b2b32c06547111f1971e6197dfbae243db4bf73011024b38d355a49"
+    },
+    "window_contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+      "sha256": "216999f76ef4028b941b116e20b8bc9f96b4a44fa45643389166fa1ad34e1168"
+    },
+    "snapshot_builder": "actionmesh/prepare_actionbench_active_batch_snapshot.py",
+    "snapshot_builder_sha256": "8220e3a8bd24e965b2e541ad9477597b00fc6217a8ace74a5f538b155ca88eb9",
+    "compiler_sha256": "a590645e70843c0e16bc714e59dff2537018e2072ee88471c079211a7526b47d",
+    "tests_ref": {
+      "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+      "sha256": "d5b1b620694a6d4b4bc2ea18041f4dabf045d0c2ebd61d6ad6980c3c74be3ad1"
+    },
+    "runbook_sha256": "bfc4d10795e808ab3c99128f561d70e694bea473503943c9fe01704e919fb798",
+    "required_state_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
+    "required_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json",
+    "active_batch_run_id": "population-gpu-current-r9",
+    "active_batch_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
+    "active_batch_last_observed_at": "2026-10-07T17:59:21.929Z",
+    "active_batch_counts": {
+      "completed": 7,
+      "running": 1,
+      "pending": 1,
+      "failed": 0
+    },
+    "new_checks_authored": 2,
+    "current_window_test_methods_observed": 20,
+    "expected_merged_test_methods": 290,
+    "new_checks_executed_by_web": 0,
+    "local_software_acceptance_complete": false,
+    "immutable_pair_returned": false,
+    "reconciliation_returned": false,
+    "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
   }

@@ -620,17 +620,31 @@ its real state. A stale status file or SSH shell is not liveness evidence.
 
 After that reconciliation, run the current whole software suite through the
 software-acceptance harness. The newly authored window-plan checks must pass in
-addition to the prior 265 methods; the expected merged total is now 288. The
+addition to the prior 265 methods; the expected merged total is now 290. The
 builder may then be invoked directly only
 to emit a plan; it performs no workload. For a non-overlapping future window,
 for example window 02 after the current r9 batch reaches a safe boundary:
 
-Before invoking the compiler, copy the exact Local harness state from
-`runs/harness/population-gpu-current-r9/state.json` without modification to the
-retained canonical path
-`docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json`.
-Do not infer individual tasks from the aggregate ledger. Then generate the
-immutable reconciliation at
+Before invoking the compiler, freeze the live harness state and its matching
+aggregate status as one coherent immutable evidence pair. Do not copy only one
+file and do not point the sidecar at the mutable global `STATUS.json`. The
+snapshot builder double-reads both inputs, checks exact run/digest/task identity
+and count agreement, and writes each original byte sequence exactly once:
+
+```bash
+live_r9_root=/root/actionmesh-research-staging/4d-longgoal-r9
+
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_active_batch_snapshot.py" \
+  --root "$project_dir" \
+  --live-state "$live_r9_root/runs/harness/population-gpu-current-r9/state.json" \
+  --live-status "$project_dir/docs/research-math-20261006/longgoal-20261007/STATUS.json"
+```
+
+This creates immutable `state.json` and `status-snapshot.json` beneath
+`docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/`.
+If the watcher advances either input or the counts differ, the command fails
+without an admissible pair; refresh/reconcile the source files rather than editing
+the archive. Then generate the immutable reconciliation at
 `inputs/actionbench-full128-queue/active-batch-reconciliation.json` with the
 sole canonical builder:
 
@@ -644,7 +658,8 @@ Follow
 bind the exact pricing receipt, include `population-gpu-current-r9`, its frozen
 plan digest `6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1`,
 the fixed range `[1,10)`, all nine ordered canonical UID dispositions, and SHA-256
-references to the retained canonical campaign plan, `STATUS.json` snapshot and
+references to the retained canonical campaign plan, immutable
+`status-snapshot.json` and
 research-harness `state.json` snapshot.
 This compiler revision accepts exactly that one r9 source run; do not append a
 later retained run without a reviewed compiler revision. The compiler parses

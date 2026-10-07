@@ -35,7 +35,8 @@
     ],
     "required_r9_range": [1, 10],
     "required_r9_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
-    "required_r9_state_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json"
+    "required_r9_state_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
+    "required_r9_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json"
   },
   "required_guards": [
     "recompute the canonical pricing receipt and its transitive evidence before plan creation",
@@ -49,6 +50,7 @@
     "accept exactly the retained r9 handoff in this compiler revision; require reviewed code before adding any later retained run",
     "require ordered complete dispositions for every retained source-run population range",
     "derive dispositions with the canonical reconciliation builder from the hash-bound r9 research-harness state snapshot; never infer task identity from aggregate counts",
+    "freeze the exact state and aggregate status bytes together with the canonical snapshot builder; never bind a reconciliation to the mutable global STATUS.json",
     "parse the canonical r9 campaign plan, aggregate status and harness state, recompute the harness digest, verify each native-plan SHA-256 and plan digest, and match run ID, range, tasks, observation time, aggregate counts and every individual task state",
     "reject a target window that intersects any completed, running, pending, or failed retained UID",
     "retain all reconciliation source references in every native input closure",
