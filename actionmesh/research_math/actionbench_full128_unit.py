@@ -152,6 +152,10 @@ def verify_runtime_pricing_evidence(project_root: Path, historical_root: Path,
     absolute_manifest = Path(os.path.abspath(raw_manifest))
     if not raw_manifest.is_absolute():
         absolute_manifest = Path(os.path.abspath(Path.cwd() / raw_manifest))
+    # Canonicalize parent aliases such as macOS /var -> /private/var while
+    # preserving the leaf so _regular_nonsymlink can still reject a symlinked
+    # manifest file.
+    absolute_manifest = absolute_manifest.parent.resolve() / absolute_manifest.name
     try:
         manifest_relative = absolute_manifest.relative_to(project_root)
     except ValueError as exc:
