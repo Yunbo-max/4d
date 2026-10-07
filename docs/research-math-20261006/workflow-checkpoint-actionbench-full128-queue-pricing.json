@@ -1,0 +1,84 @@
+{
+  "kind": "research-autopilot-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T14:07:55Z",
+  "base_commit": "c72a09a74bb2d8929986a2bfd841e6dfc341896c",
+  "status": "prospective_full128_queue_pricing_authored_unexecuted",
+  "decision": "After, and only after, complete-lowram-r7 is admitted, freeze the Full128 capacity calculation and canonical UID partition in a separate fail-closed CPU harness pass. Keep the result non-executable and all scientific, candidate, approval and dispatch flags false.",
+  "source_measurement": {
+    "run_id": "complete-lowram-r7",
+    "runtime_profile": "fp16-lowram-v1",
+    "elapsed_seconds": 1330.4655511886813,
+    "observed_peak_mib": 10255,
+    "admission_required": true,
+    "admission_observed": false
+  },
+  "pricing": {
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "workload_budget_seconds": 27000,
+    "headroom_numerator": 5,
+    "headroom_denominator": 4,
+    "unit_timeout_seconds_if_admitted": 1664,
+    "units_per_full_window_if_admitted": 16,
+    "planned_workload_seconds_per_full_window": 26624,
+    "unallocated_workload_seconds_per_full_window": 376,
+    "population_size": 128,
+    "window_count_if_admitted": 8
+  },
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/actionbench_queue_pricing.py",
+      "sha256": "14c684bcd1d05fc9f6eb7d35179932f79f1a50d525b9652a33596c6204e8d776"
+    },
+    {
+      "path": "actionmesh/prepare_actionbench_queue_pricing.py",
+      "sha256": "5b63c936b5b432f535d26c2f25ae40dbb1913831a4d6ef3ea1ea5509d5e5e1e4"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_actionbench_queue_pricing.py",
+      "sha256": "b420cee26673172e90bb7cbc87624feaaf89232041f4e16c5e33c635e1e89370"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_actionbench_queue_pricing_plan.py",
+      "sha256": "57b61e7448a633b3bc636057a9369722af4e8725aed9679484f7e0b02412ae12"
+    }
+  ],
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+    "sha256": "af26ce6636b0c27f10e13f48c488d3b3b83ef0a555654ef5cdfb4f122301648c"
+  },
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+      "sha256": "37b115bee75d20a72ec028718a7ec1e047b6c69e458e697197b8445a3fd3fb0d"
+    },
+    {
+      "path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json",
+      "sha256": "395131d08773b16dbc86c374dc2738dcf5079ca62e5dcef1738aa6791d7a53f9"
+    },
+    {
+      "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+      "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+    }
+  ],
+  "software_state": {
+    "last_executed_suite_passed": 228,
+    "last_executed_suite_failed": 0,
+    "authored_test_methods_observed": 253,
+    "new_queue_pricing_checks_authored": 8,
+    "checks_authored_after_last_suite": 25,
+    "tests_executed_by_web": 0
+  },
+  "scientific_state": {
+    "complete_unit_admitted": false,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "next_executable_step": "Local runs all 253 current software checks, executes the exact CPU-only complete-unit admission, and only on its success builds and executes the CPU-only queue-pricing plan. Return both receipts and the pricing manifest; do not dispatch a Full128 window."
+}

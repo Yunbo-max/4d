@@ -568,6 +568,50 @@ source unit immutable on the GPU host. The sidecar permits later queue pricing
 for this exact FP16 low-RAM engineering unit only; it is not a baseline/native
 scientific qualification and does not itself generate the queue.
 
+After—and only after—the sidecar above is promoted at its canonical path, build
+the CPU-only pricing plan. This pass rehashes the admission's entire transitive
+evidence closure again and partitions the immutable 128-UID population; it does
+not launch generation, scoring or any GPU work:
+
+```bash
+pricing_run_id=price-full128-from-complete-lowram-r7
+
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_queue_pricing.py" \
+  --root "$project_dir" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json" \
+  --admission "$project_dir/inputs/complete-unit-admissions/complete-lowram-r7.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --output "$project_dir/inputs/actionbench-full128-queue/pricing.json" \
+  --skill-dir "$skill_dir" \
+  --plan-dir "$project_dir/plans/$pricing_run_id" \
+  --run-id "$pricing_run_id" \
+  --wall-seconds 900 \
+  --ram-mib 2048 \
+  --cpu-cores 1
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$pricing_run_id/harness.json" \
+  --root "$project_dir" \
+  --execute \
+  --approved-plan-digest "$pricing_plan_digest"
+```
+
+Before execution, inspect one CPU-only task, one attempt, no retry,
+`max_gpu_task_seconds: 0`, and the single canonical output. With the returned
+1,330.465551-second complete-unit measurement, the frozen 5/4 operational
+headroom gives `ceil(1330.465551 * 5 / 4) = 1664` seconds per unit. The
+27,000-second workload budget therefore admits 16 complete units (26,624
+seconds), leaving 376 seconds of workload slack in addition to the separate
+1,800-second collection reserve. The complete population must appear exactly
+once in canonical order across eight 16-UID windows.
+
+The pricing output must still say `queue_approved: false`,
+`queue_generated: false`, `dispatch_ready: false`, and all scientific/candidate
+qualification flags false. It is a capacity and partition freeze, not an
+executable queue. Do not dispatch these windows until a later revision provides
+and admits the per-UID generation/export/three-arm scoring runner, binds all
+full-population prerequisites and qualifies the official baseline/replay path.
+
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.
 Inventory these full-population prerequisites without launching generation or scoring. Return
@@ -575,8 +619,9 @@ their exact paths/revisions/hashes, snapshot and semantic admissions, and measur
 storage/semantic-pass requirements plus the unit manifest. The complete-unit
 default runner has a retained OOM and the explicit FP16 low-RAM repair completed
 generation before entering official scoring. Only a terminal successful receipt
-followed by the CPU-only complete-unit admission can price the eight-hour queue.
-One-UID parity timing or any CPU admission timing cannot.
+followed by the CPU-only complete-unit admission can feed the separate pricing
+pass above. One-UID parity timing or any CPU admission timing cannot. Pricing
+still does not create an executable queue.
 
 ### 7. Native replay and strict output binding
 

@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T12:48:13Z",
+  "recorded_at": "2026-10-07T14:07:55Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local evidence includes 228/228 software checks, finalized one-UID engineering scorer parity, runtime capture, and completed Full128 snapshot, dataset-semantic and unit-manifest admissions. The frozen default BF16 unit failed naturally at Stage I with a sampled 20673 MiB peak. Its separately reviewed non-fast FP16 low-RAM repair completed all three official score rows in 1330.47 seconds with a sampled 10255 MiB peak. A prospective CPU-only finalizer is now authored to admit that engineering unit only after rehashing the exact 117 receipt outputs and exact 121 nested pre-result files (116 declared plus five retained evaluator caches), rebinding the source execution context/process guard/stage records, reproducing raw telemetry summaries and validating all three score rows. It is unexecuted; no complete-unit admission, queue approval, queue, candidate native result or formal outcome exists.",
+  "status": "Local evidence includes 228/228 software checks, finalized one-UID engineering scorer parity, runtime capture, and completed Full128 snapshot, dataset-semantic and unit-manifest admissions. The frozen default BF16 unit failed naturally at Stage I with a sampled 20673 MiB peak. Its separately reviewed non-fast FP16 low-RAM repair completed all three official score rows in 1330.47 seconds with a sampled 10255 MiB peak. A prospective CPU-only finalizer is authored to admit that engineering unit only after rehashing the exact 117 receipt outputs and exact 121 nested pre-result files. A second fail-closed CPU-only pass is now authored to price, but never approve or generate, eight ordered 16-UID Full128 windows from that admission using a 1664-second headroom-adjusted unit timeout. Both passes are unexecuted; no complete-unit admission, approved/executable queue, candidate native result or formal outcome exists.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -523,6 +523,38 @@
     "eligible_for_queue_pricing": false,
     "queue_approved": false,
     "queue_generated": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_queue_pricing": {
+    "status": "prospective_contract_and_cpu_plan_authored_unexecuted",
+    "recorded_at": "2026-10-07T14:07:55Z",
+    "source_run_id": "complete-lowram-r7",
+    "source_admission_required": true,
+    "source_admission_observed": false,
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+      "sha256": "af26ce6636b0c27f10e13f48c488d3b3b83ef0a555654ef5cdfb4f122301648c"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-queue-pricing.json",
+      "sha256": "9f391ec479331aa1fe49f45efcddc3aee9011dd5c3cf21be23ee19062e972b64"
+    },
+    "measured_complete_unit_seconds": 1330.4655511886813,
+    "unit_runtime_headroom": "5/4",
+    "unit_timeout_seconds_if_admitted": 1664,
+    "units_per_window_if_admitted": 16,
+    "planned_workload_seconds_per_full_window": 26624,
+    "unallocated_workload_seconds_per_full_window": 376,
+    "collection_reserve_seconds": 1800,
+    "window_count_if_admitted": 8,
+    "new_checks_authored": 8,
+    "current_authored_test_methods_observed": 253,
+    "new_checks_executed_by_web": 0,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
   }

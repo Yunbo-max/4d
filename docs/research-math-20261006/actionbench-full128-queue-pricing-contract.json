@@ -1,0 +1,60 @@
+{
+  "kind": "actionbench-full128-queue-pricing-contract",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T14:07:55Z",
+  "status": "prospective_generated_unexecuted",
+  "scope": "Freeze deterministic rolling-window capacity from the admitted complete current-release three-arm engineering unit. This prices the conditional full128 baseline-reproduction workload only; it neither creates an executable queue nor qualifies a scientific effect.",
+  "source_admission": {
+    "kind": "actionbench-complete-unit-admission",
+    "version": "1.0.0",
+    "status": "admitted_engineering_complete_unit",
+    "run_id": "complete-lowram-r7",
+    "runtime_profile": "fp16-lowram-v1",
+    "successful_output_file_count": 117,
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+      "sha256": "37b115bee75d20a72ec028718a7ec1e047b6c69e458e697197b8445a3fd3fb0d"
+    }
+  },
+  "population": {
+    "dataset": "facebook/actionbench",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "size": 128
+  },
+  "full128_reproduction_contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json",
+    "sha256": "395131d08773b16dbc86c374dc2738dcf5079ca62e5dcef1738aa6791d7a53f9"
+  },
+  "population_ref": {
+    "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+    "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+  },
+  "budget": {
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "workload_budget_seconds": 27000,
+    "unit_runtime_headroom_numerator": 5,
+    "unit_runtime_headroom_denominator": 4
+  },
+  "pricing_rule": {
+    "unit_timeout_seconds": "ceil(admitted_complete_unit_elapsed_seconds * 5 / 4)",
+    "units_per_window": "floor(27000 / unit_timeout_seconds)",
+    "population_partition": "canonical sorted population order, consecutive non-overlapping windows, no success selection",
+    "expected_from_returned_measurement": {
+      "admitted_elapsed_seconds": 1330.4655511886813,
+      "unit_timeout_seconds": 1664,
+      "units_per_full_window": 16,
+      "planned_workload_seconds_per_full_window": 26624,
+      "unallocated_workload_seconds_per_full_window": 376,
+      "window_count": 8
+    }
+  },
+  "output_target": "inputs/actionbench-full128-queue/pricing.json",
+  "failure_policy": "Reject before output on an unadmitted sidecar, changed referenced byte, population mismatch/reordering, profile change, malformed/nonfinite measurement, scientific or queue claim, or a headroom-adjusted unit that cannot fit the workload budget. Preserve the source records; do not repair evidence in place.",
+  "scientific_effect_qualification": false,
+  "native_scientific_qualification": false,
+  "candidate_methods_tested": false,
+  "queue_approved": false,
+  "queue_generated": false,
+  "dispatch_ready": false
+}
