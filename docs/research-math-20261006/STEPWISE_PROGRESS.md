@@ -551,3 +551,46 @@ the missing 128-by-16 prediction inventory, or qualify an official result.
 Therefore candidate validation designs/results/verdicts remain **0/15**,
 **0/15**, and **0**; complete-unit timing/VRAM and the 28,800-second queue remain
 blocked.
+
+## Continuation: bind the full released dataset semantics — 2026-10-07
+
+The immutable snapshot admission deliberately stopped at bytes, revisions and
+file closure. The next source-backed prerequisite was therefore not model launch:
+it was proving that the exact admitted ActionBench bytes have the tensor, camera
+and frame semantics assumed by the official evaluator and generation input path.
+The official README fixes 128 samples, 16 RGBA frames, a
+`(16,100000,6)` position-plus-normal tensor and normalized position space. The
+released `projection.py` fixes the four camera keys, their shapes and Blender
+projection convention. A browsed released sample confirmed that schema but was
+not treated as population-wide evidence.
+
+Added `research_math.actionbench_dataset_semantics` and a CPU-only harness plan
+builder. The pass refuses to operate without a successful exact-revision snapshot
+admission. For every one of the 128 UIDs it rereads and rehashes the bound
+`camera.json`, `surfaces.npy` and 16 PNGs, so post-admission mutation or a swapped
+dataset fails before parsing. It rejects symlinked parents, wrong NumPy shape or
+dtype, nonfinite values, positions outside the documented cube, malformed camera
+keys/shapes/rotation/focal values, and non-square/non-RGBA/internally inconsistent/
+truncated, undecodable or CRC-invalid PNGs. Cross-sample image encoding variants
+are recorded rather than rejected. Its output retains per-UID input-manifest and semantic
+digests plus numeric summaries, but sets scientific qualification and dispatch
+readiness false.
+
+The contract intentionally does not invent a unit-normal tolerance or alpha-mask
+occupancy threshold because the public sources do not publish them. It also does
+not claim to prove that point indices are truly semantically tracked through time;
+that remains a documented dataset property outside what structural validation can
+establish. Eighteen new fixture/rejection/plan checks were authored, raising the
+static observed `research_math` test-method count from 179 to 197. Web performed
+source inspection and static AST/JSON/hash review only: **0** project tests,
+dataset downloads/loads, inference units, scorer calls or GPU workloads.
+
+Local must still execute current whole-suite acceptance, then the earlier one-UID
+parity/promotion/finalization chain. After the five pinned downloads and successful
+snapshot admission, it may execute this single-attempt semantic plan and return
+the exact receipt, output hash, failing UID/path if any, per-UID semantic digest
+and measured wall time. A pass closes released-input structure only. It does not
+authorize model loading or scoring, cannot price a complete multi-arm unit, and
+does not change candidate designs/results/verdicts from **0/15**, **0/15**, and
+**0**. The 28,800-second queue remains blocked pending a complete current
+generation/export/scoring timing and peak-VRAM receipt.

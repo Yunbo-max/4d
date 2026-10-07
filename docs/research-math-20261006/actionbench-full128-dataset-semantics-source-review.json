@@ -1,0 +1,85 @@
+{
+  "kind": "actionbench-full128-dataset-semantics-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T09:05:28Z",
+  "status": "source_review_complete_implementation_generated_unexecuted",
+  "question": "What released ActionBench input semantics can be checked prospectively after immutable snapshot admission, without turning an engineering check into scientific qualification?",
+  "sources": [
+    {
+      "source": "official ActionMesh ActionBench README",
+      "repository": "facebookresearch/actionmesh",
+      "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+      "path": "actionbench/README.md",
+      "local_sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a",
+      "observed_claims": [
+        "128 paired samples",
+        "16 RGBA frames with alpha mask per sample",
+        "surfaces.npy shape (16, 100000, 6)",
+        "first three columns are positions and final three are normals",
+        "animation lies in normalized space [-1, 1]^3",
+        "camera uses Blender convention and points to the released projection.py"
+      ]
+    },
+    {
+      "source": "official ActionBench evaluator",
+      "repository": "facebookresearch/actionmesh",
+      "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+      "path": "actionbench/evaluate_dataset.py",
+      "local_sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195",
+      "observed_claims": [
+        "GT is loaded from <uid>/surfaces.npy",
+        "all frames are selected from the tensor first dimension",
+        "only the first three columns are consumed as positions by the scorer"
+      ]
+    },
+    {
+      "source": "official released projection helper",
+      "repository": "facebook/actionbench",
+      "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+      "url": "https://huggingface.co/datasets/facebook/actionbench/blob/2796071cbe6248422fcbeab3101fa9f9886cb7b9/projection.py",
+      "observed_claims": [
+        "camera keys are R, T, focal_length_ndc and principal_point_ndc",
+        "R is used as a 3x3 rotation and T as a length-3 translation",
+        "focal length and principal point each have two components",
+        "projection uses X_cam = points @ R.T + T and a -Z viewing direction"
+      ]
+    },
+    {
+      "source": "official released sample camera",
+      "repository": "facebook/actionbench",
+      "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+      "url": "https://huggingface.co/datasets/facebook/actionbench/blob/2796071cbe6248422fcbeab3101fa9f9886cb7b9/data/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/camera.json",
+      "observed_claims": [
+        "the released JSON contains exactly the four projection keys",
+        "the observed R, T, focal and principal-point values match the published shapes"
+      ],
+      "scope_limit": "One browsed example supports schema inspection but not population-wide validity; the generated Local pass checks all 128."
+    },
+    {
+      "source": "official released dataset tree",
+      "repository": "facebook/actionbench",
+      "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+      "url": "https://huggingface.co/datasets/facebook/actionbench/tree/2796071cbe6248422fcbeab3101fa9f9886cb7b9/data",
+      "observed_claims": [
+        "published data tree reports 5.29 GB",
+        "sample directories expose camera.json, surfaces.npy and imgs",
+        "the inspected imgs tree contains 00.png through 15.png"
+      ]
+    }
+  ],
+  "review_decisions": [
+    "Check only semantics needed by released input and evaluator code; do not invent a normal-length or alpha-occupancy threshold.",
+    "Revalidate every consumed file against the prior snapshot admission before parsing, so a post-admission mutation fails closed.",
+    "Treat tracked correspondence as a documented source property, not something this structural pass independently proves.",
+    "Keep this as purpose=engineering, CPU-only, single-attempt and output-preserving.",
+    "Do not count successful input semantics as native scorer qualification, a baseline result, a candidate result or dispatch readiness."
+  ],
+  "web_execution": {
+    "project_tests": 0,
+    "dataset_downloads": 0,
+    "dataset_bytes_loaded": 0,
+    "inference_units": 0,
+    "official_scorer_calls": 0,
+    "gpu_workloads": 0
+  }
+}

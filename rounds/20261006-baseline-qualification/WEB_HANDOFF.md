@@ -38,7 +38,9 @@ The historical software-test receipts are engineering evidence only. They do not
 9. `docs/research-math-20261006/actionbench-qualification-source-audit.json`
 10. `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
 11. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
-12. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
+12. `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
+13. `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
+14. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
 
@@ -54,6 +56,8 @@ Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_R
 | Scoring plan builder | `actionmesh/prepare_control_scoring.py` | emits native-scoring request/integrity plan |
 | Scorer parity | `actionmesh/prepare_actionbench_parity.py`, `actionmesh/research_math/actionbench_parity.py` | emits/runs protocol-free engineering equivalence with exact source/input/output binding |
 | Full-128 reproduction guard | `actionmesh/research_math/actionbench_full_reproduction.py` | checks the frozen complete-population/current-README rule; never runs the scorer or authorizes dispatch |
+| Full-128 snapshot admission | `actionmesh/prepare_actionbench_snapshots.py`, `actionmesh/research_math/snapshot_admission.py` | CPU-only immutable revision/byte/file closure; generated, unexecuted |
+| Full-128 dataset semantics | `actionmesh/prepare_actionbench_dataset_semantics.py`, `actionmesh/research_math/actionbench_dataset_semantics.py` | revalidates admitted bytes and all 128 tensor/camera/RGBA structures; generated, unexecuted, no scientific qualification |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
@@ -129,7 +133,8 @@ leaderboard run. The entrypoint defaults to seed 44, so the target row requires
 an explicit generation `--seed 42`; the scorer still uses sampling seed 44.
 
 Before any dataset-wide launch, Local must return verified immutable dataset and
-model snapshot manifests, actual RTX 2080 Ti memory/runtime facts, and a measured
+model snapshot manifests, the byte-bound full-128 dataset-semantics admission,
+actual RTX 2080 Ti memory/runtime facts, and a measured
 complete non-fast seed-42 16-frame generation/export/scoring unit. The official
 release documents 32 GB default and 12 GB low-RAM requirements but no 2080 Ti
 result, and does not bind low-RAM or float16 to the published row. Preserve OOM
