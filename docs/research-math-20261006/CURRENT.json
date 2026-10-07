@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 7728)
-Total output lines: 664
-
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
@@ -241,7 +238,157 @@ Total output lines: 664
     "new_checks_executed": 0,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,
-    "candidate_nat…1728 tokens truncated…tionbench-full128-dataset-semantics-source-review.json",
+    "candidate_native_results": 0
+  },
+  "actionbench_parity_finalization_harness": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-07T04:02:18Z",
+    "base_commit": "32bef65ff6c8008e5692a5ab8bacde54a789a066",
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-parity-finalization-harness-source-review.json",
+      "sha256": "07a931372a140370ae7dc260ed59a44bfdd36f7a3391993879ce5dcefeac943b"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-parity-finalization-harness.json",
+      "sha256": "aa27f472d37e8056e6002e46c63f1edd87edf97c35b0e6b57f797ade575ff4ea"
+    },
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "recursive_reference_closure": true,
+    "canonical_execution_origin_bound": true,
+    "direct_finalizer_execution_allowed": false,
+    "current_authored_test_methods_observed": 152,
+    "new_checks_authored": 3,
+    "new_checks_executed": 0,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_qualification_source_audit": {
+    "status": "one_uid_protocol_blocked_full_population_reproduction_conditional",
+    "recorded_at": "2026-10-07T04:57:16Z",
+    "base_commit": "9c1d7ef41927060472a4f161626798f13e0f330e",
+    "audit_ref": {
+      "path": "docs/research-math-20261006/actionbench-qualification-source-audit.json",
+      "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-qualification-source-audit.json",
+      "sha256": "213141389ac5f2a04efc075dc47d4234bc63c721ddc4c619a632e2e57fd0a137"
+    },
+    "official_repository_head": "d5c01f5045df55819e337369c9617f603c667e00",
+    "official_actionbench_tree": "c9ff3641c2a3f6e81d34ecd1901a70451a0ace37",
+    "published_per_asset_performance_threshold": false,
+    "published_per_sample_results": false,
+    "one_uid_scientific_protocol_ready": false,
+    "full_population_reproduction_protocol_ready": false,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_reproduction": {
+    "status": "conditional_rule_frozen_generated_unexecuted",
+    "recorded_at": "2026-10-07T06:34:00Z",
+    "base_commit": "af4d36b236f3ebae0f20cf9211f3515dc9d92b1d",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json",
+      "sha256": "395131d08773b16dbc86c374dc2738dcf5079ca62e5dcef1738aa6791d7a53f9"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-reproduction-source-review.json",
+      "sha256": "bc1d87ea70e4cac6eaeceb55cb06e0ae8c07eb82d8e44c0dd49802110c0f5cb8"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-reproduction.json",
+      "sha256": "91a9ec5aeb107562c3601164c67a3e551ef64998a4734a50da1e97c47e05a495"
+    },
+    "published_target": "current official README ActionMesh row over all 128 objects",
+    "generation_seed": 42,
+    "official_scorer_sampling_seed": 44,
+    "required_total": 128,
+    "required_successes": 128,
+    "required_failures": 0,
+    "all_three_published_rounding_intervals_required": true,
+    "sampling_confidence_interval_claimed": false,
+    "current_authored_test_methods_observed": 161,
+    "new_checks_authored": 9,
+    "new_checks_executed": 0,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_generation_source_audit": {
+    "status": "current_public_release_resolved_published_generation_provenance_incomplete",
+    "recorded_at": "2026-10-07T06:55:59Z",
+    "base_commit": "29c8da172115668f5aab1bbdb79cb5923ca02af9",
+    "audit_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-generation-source-audit.json",
+      "sha256": "4c6c92ec79b2c2aab92f7a1293210e14ec1c2f330787f0d964764819c8d9389b"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-generation-source-audit.json",
+      "sha256": "17e4defbbb6de18ddbbf42d37e8910886991fb20d8033a5cd5eebd71bb75212b"
+    },
+    "official_source_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "triposg_submodule_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+    "actionbench_dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "current_hub_model_revisions_resolved": 4,
+    "official_batch_generation_driver_found": false,
+    "published_prediction_bundle_found": false,
+    "published_generation_environment_complete": false,
+    "current_2080ti_qualified": false,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
+    "tests_executed_by_web": 0,
+    "official_scores_run": 0,
+    "gpu_workloads": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_snapshot_admission": {
+    "status": "completed_snapshot_r6",
+    "recorded_at": "2026-10-07T07:59:45Z",
+    "base_commit": "3fb78a5f790b5e5be72bbef49fa418dce7d61323",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+      "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-snapshot-source-review.json",
+      "sha256": "a0ef71f3328d9d1bc5071cf0810dcab1bc1daa8366c5cb5d6e86961341c47dc4"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-snapshot-admission.json",
+      "sha256": "172827ea169cc1e7a7fea8f3e79c8e91d6cee682b4dc1ea4cc6db0db508d3197"
+    },
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "immutable_hub_revisions_bound": 5,
+    "official_git_and_submodule_bound": true,
+    "exact_released_uid_and_frame_closure_bound": true,
+    "snapshot_admission_executed": true,
+    "current_authored_test_methods_observed": 179,
+    "new_checks_authored": 18,
+    "tests_executed_by_web": 0,
+    "official_scores_run": 0,
+    "gpu_workloads": 0,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_dataset_semantics": {
+    "status": "completed_semantics_r6",
+    "recorded_at": "2026-10-07T09:05:28Z",
+    "base_commit": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json",
+      "sha256": "2577b6ddae5c21a3a4786ae05706c42ad1b0e7556179887b148a45eae2e007f6"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-dataset-semantics-source-review.json",
       "sha256": "3afe74ca0398179473a1ae4b8939b58caa9be65830b2b1d0930d22a000e906c7"
     },
     "checkpoint_ref": {
