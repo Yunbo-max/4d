@@ -1,0 +1,547 @@
+test_complete_sample_emits_semantic_digest_without_qualification (test_actionbench_dataset_semantics.SemanticAdmissionTests) ... ok
+test_existing_output_is_preserved (test_actionbench_dataset_semantics.SemanticAdmissionTests) ... ok
+test_post_admission_surface_mutation_is_rejected (test_actionbench_dataset_semantics.SemanticAdmissionTests) ... ok
+test_complete_rgba_png_is_accepted (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_improper_camera_rotation_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_integer_surface_tensor_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_non_square_png_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_nonpositive_focal_length_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_png_crc_mismatch_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_required_camera_keys_are_required (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_rgb_png_without_alpha_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_small_surface_helper_checks_shape_dtype_finite_and_bounds (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_surface_nonfinite_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_surface_position_bound_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_truncated_png_is_rejected (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_valid_camera_is_accepted (test_actionbench_dataset_semantics.SemanticHelperTests) ... ok
+test_contract_population_ref_mismatch_is_rejected (test_actionbench_dataset_semantics.SemanticPlanTests) ... FAIL
+test_plan_is_cpu_only_single_attempt_and_binds_admission (test_actionbench_dataset_semantics.SemanticPlanTests) ... FAIL
+test_extra_image_or_mask_cannot_change_official_loader_inputs (test_actionbench_full128_unit.Full128UnitTests) ... ok
+test_mutated_selected_frame_is_rejected (test_actionbench_full128_unit.Full128UnitTests) ... ok
+test_priced_uid_freezes_exact_inputs_without_execution_claim (test_actionbench_full128_unit.Full128UnitTests) ... ok
+test_pricing_flags_cannot_claim_approval_or_dispatch (test_actionbench_full128_unit.Full128UnitTests) ... ok
+test_template_must_be_the_admission_bound_manifest (test_actionbench_full128_unit.Full128UnitTests) ... FAIL
+test_uid_must_belong_to_exact_priced_window (test_actionbench_full128_unit.Full128UnitTests) ... ok
+test_receipt_is_recomputed_from_its_three_pinned_sources (test_actionbench_full128_unit.PricingReceiptTests) ... ok
+test_receipt_rejects_a_divergent_recomputation (test_actionbench_full128_unit.PricingReceiptTests) ... ok
+test_receipt_rejects_noncanonical_source_locations (test_actionbench_full128_unit.PricingReceiptTests) ... ok
+test_assessment_rejects_a_weakened_decision_rule (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_contract_rejects_paper_values_in_place_of_current_readme_values (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_contract_requires_the_complete_released_population (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_contract_separates_generation_and_scorer_seeds (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_one_metric_outside_the_interval_fails_reproduction (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_published_interval_is_the_three_decimal_rounding_bin (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_reproduction_rejects_a_one_uid_or_success_only_denominator (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_reproduction_requires_every_uid_to_succeed (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_reproduction_uses_all_three_published_rounding_intervals (test_actionbench_full_reproduction.FullPopulationReproductionContractTests) ... ok
+test_consumer_sidecar_cannot_revert_the_verified_backend (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_cpu_backward_entry_preserves_all_official_arguments (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_manifest_preserves_frozen_denominator_and_path (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_manifest_rejects_case_escape (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_manifest_rejects_duplicate_case_id (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_official_cpu_rng_patch_is_exact_and_recorded (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_official_csv_rejects_failed_row (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_official_csv_requires_one_successful_uid (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_unknown_backend_policy_is_not_admitted (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_unreviewed_cpu_rng_source_is_rejected (test_actionbench_parity.OfficialAdapterContractTests) ... ok
+test_descriptor_paths_are_relative_to_staged_project (test_actionbench_parity.ParityReadoutTests) ... ok
+test_equivalence_contract_boundary_accepts_no_effect_rules (test_actionbench_parity.ParityReadoutTests) ... ok
+test_equivalence_contract_cannot_claim_scientific_qualification (test_actionbench_parity.ParityReadoutTests) ... ok
+test_exact_comparison_has_zero_tolerance (test_actionbench_parity.ParityReadoutTests) ... ok
+test_exact_comparison_rejects_small_difference (test_actionbench_parity.ParityReadoutTests) ... ok
+test_execution_binding_rejects_changed_command (test_actionbench_parity.ParityReadoutTests) ... ok
+test_finalization_origin_paths_include_canonical_runtime_records (test_actionbench_parity.ParityReadoutTests) ... ok
+test_finalization_raw_absolute_refs_are_hash_bound_and_nonescaping (test_actionbench_parity.ParityReadoutTests) ... ok
+test_finalization_reference_closure_follows_nested_refs (test_actionbench_parity.ParityReadoutTests) ... ok
+test_finalization_reference_closure_rejects_changed_nested_ref (test_actionbench_parity.ParityReadoutTests) ... ok
+test_finalizer_rejects_noncanonical_receipt_path (test_actionbench_parity.ParityReadoutTests) ... ok
+test_finalizer_rejects_partial_promoted_bundle (test_actionbench_parity.ParityReadoutTests) ... ok
+test_official_provenance_rejects_unbound_adapter_output (test_actionbench_parity.ParityReadoutTests) ... ok
+test_one_case_extracts_only_frozen_metrics (test_actionbench_parity.ParityReadoutTests) ... ok
+test_one_case_rejects_nonfinite_metric (test_actionbench_parity.ParityReadoutTests) ... ok
+test_one_case_rejects_wrong_denominator (test_actionbench_parity.ParityReadoutTests) ... ok
+test_parity_arm_inputs_bind_ordered_reports_and_predictions (test_actionbench_parity.ParityReadoutTests) ... ok
+test_runtime_identity_rejects_different_visible_gpu (test_actionbench_parity.ParityReadoutTests) ... ok
+test_admitted_measurement_prices_eight_equal_sixteen_uid_windows (test_actionbench_queue_pricing.ActionBenchQueuePricingTests) ... ok
+test_contract_cannot_approve_or_generate_a_queue (test_actionbench_queue_pricing.ActionBenchQueuePricingTests) ... ok
+test_pricing_rehashes_every_admission_evidence_reference (test_actionbench_queue_pricing.ActionBenchQueuePricingTests) ... ok
+test_pricing_rejects_population_reordering_or_success_only_subset (test_actionbench_queue_pricing.ActionBenchQueuePricingTests) ... ok
+test_pricing_rejects_unadmitted_or_scientific_claiming_sidecar (test_actionbench_queue_pricing.ActionBenchQueuePricingTests) ... ok
+test_sidecar_timing_cannot_diverge_from_retained_result (test_actionbench_queue_pricing.ActionBenchQueuePricingTests) ... ok
+test_output_is_the_single_canonical_pricing_target (test_actionbench_queue_pricing_plan.ActionBenchQueuePricingPlanTests) ... ok
+test_plan_source_validation_requires_completed_admission_without_queue_claim (test_actionbench_queue_pricing_plan.ActionBenchQueuePricingPlanTests) ... ok
+test_contract_forbids_silent_low_ram_fallback (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_contract_keeps_generation_and_scoring_seeds_distinct (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_escaping_required_source_path_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_existing_output_is_preserved (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_model_revision_mismatch_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_mutated_selected_frame_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_nonprospective_uid_selection_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_original_calibration_contract_cannot_select_second_member (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_population_contract_admits_exact_second_member (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_population_contract_rejects_index_uid_disagreement (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_semantic_manifest_mismatch_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_source_revision_mismatch_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_untracked_required_source_is_rejected (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_valid_manifest_binds_exact_three_arm_unit_without_execution (test_actionbench_unit_manifest.UnitManifestTests) ... ok
+test_candidate_c15 (unittest.loader._FailedTest) ... ERROR
+test_completed_result_freezes_measured_cost_without_scientific_claim (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_contract_is_prospective_and_cannot_claim_scientific_qualification (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_execution_binding_rejects_stage_or_context_disagreement (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_object_digest_is_canonical_and_rejects_non_json_numbers (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_output_closure_requires_exact_117_receipt_refs_and_nested_hashes (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_raw_official_report_rebinds_seed_denominator_and_three_rows (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_raw_telemetry_rebinds_counts_peaks_identity_and_errors (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_result_rejects_failure_claim_or_invalid_resource_measurement (test_complete_unit_admission.CompleteUnitAdmissionTests) ... ok
+test_origin_closure_includes_harness_native_and_attempt_records (test_complete_unit_admission_plan.CompleteUnitAdmissionPlanTests) ... ok
+test_origin_closure_rejects_more_than_one_attempt (test_complete_unit_admission_plan.CompleteUnitAdmissionPlanTests) ... ok
+test_reference_closure_skips_external_diagnostic_refs (test_complete_unit_admission_plan.CompleteUnitAdmissionPlanTests) ... ok
+test_runner_output_paths_stages_nested_files_not_in_receipt_outputs (test_complete_unit_admission_plan.CompleteUnitAdmissionPlanTests) ... FAIL
+test_all_three_distinct_successful_full_frame_rows_required (test_complete_unit_contract.CompleteUnitContractTests) ... ok
+test_complete_success_inventory_binds_every_arm_and_raw_official_output (test_complete_unit_contract.CompleteUnitContractTests) ... ok
+test_default_generation_does_not_silently_enable_fallback (test_complete_unit_contract.CompleteUnitContractTests) ... ok
+test_explicit_repair_uses_full_quality_fp16_low_ram (test_complete_unit_contract.CompleteUnitContractTests) ... ok
+test_profile_validation_rejects_silent_or_mixed_repairs (test_complete_unit_contract.CompleteUnitContractTests) ... ok
+test_inverse_official_axis_transform (test_complete_unit_export.CompleteUnitExportTests) ... ok
+test_preserves_identity_timeline_and_vertices (test_complete_unit_export.CompleteUnitExportTests) ... ok
+test_rejects_invalid_faces (test_complete_unit_export.CompleteUnitExportTests) ... ok
+test_rejects_nonfinite_or_missing_frames (test_complete_unit_export.CompleteUnitExportTests) ... ok
+test_failed_subprocess_retains_exit_and_logs (test_complete_unit_runner.CompleteUnitRunnerTests) ... ok
+test_full128_mode_requires_exact_argument_bundle_and_canonical_price (test_complete_unit_runner.CompleteUnitRunnerTests) ... ok
+test_full128_prerequisite_check_returns_selected_not_template_manifest (test_complete_unit_runner.CompleteUnitRunnerTests) ... ok
+test_full128_wall_limit_must_equal_admitted_unit_price (test_complete_unit_runner.CompleteUnitRunnerTests) ... ok
+test_official_export_requires_all_glbs_and_exact_agreement (test_complete_unit_runner.CompleteUnitRunnerTests) ... ERROR
+test_timeout_retains_typed_failure (test_complete_unit_runner.CompleteUnitRunnerTests) ... ERROR
+/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/subprocess.py:1052: ResourceWarning: subprocess 97706 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+test_timeout_terminates_descendant_process (test_complete_unit_runner.CompleteUnitRunnerTests) ... ERROR
+/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/subprocess.py:1052: ResourceWarning: subprocess 97707 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+test_contact_events (unittest.loader._FailedTest) ... ERROR
+test_acceptance_source_closure_includes_parity_finalizer (test_control_plan.ControlPlanTest) ... ok
+test_changed_source_report_blocks_plan (test_control_plan.ControlPlanTest) ... ERROR
+test_plan_output_cannot_overwrite_existing_work (test_control_plan.ControlPlanTest) ... ERROR
+test_plan_pins_both_source_files_and_cpu_only_resources (test_control_plan.ControlPlanTest) ... ERROR
+test_source_outside_project_rejected (test_control_plan.ControlPlanTest) ... ERROR
+test_anchor_change_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_arm_ids_cannot_be_counted_as_assets (test_control_scoring.ControlScoringContracts) ... ok
+test_boolean_metric_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_bound_native_output_is_only_a_parser_acceptance (test_control_scoring.ControlScoringContracts) ... ERROR
+test_bundle_excludes_ground_truth_but_keeps_all_raw_arms (test_control_scoring.ControlScoringContracts) ... ok
+test_command_runs_existing_scorer_with_full_native_options (test_control_scoring.ControlScoringContracts) ... FAIL
+test_complete_dependency_inventory_is_accepted_as_inventory_only (test_control_scoring.ControlScoringContracts) ... ok
+test_deltas_are_control_minus_native (test_control_scoring.ControlScoringContracts) ... ok
+test_different_contract_sampling_is_rejected_before_dispatch (test_control_scoring.ControlScoringContracts) ... ok
+test_error_twice_is_not_successful_replay (test_control_scoring.ControlScoringContracts) ... ok
+test_exact_full_timeline_and_topology_accepted (test_control_scoring.ControlScoringContracts) ... ok
+test_extra_native_array_change_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_fractional_frame_indices_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_initial_record_keeps_all_six_unattempted_passes (test_control_scoring.ControlScoringContracts) ... ok
+test_input_bundle_is_available_before_scoring (test_control_scoring.ControlScoringContracts) ... ok
+test_manifest_extra_arm_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_metadata_drop_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_missing_arm_retains_declared_denominator (test_control_scoring.ControlScoringContracts) ... ok
+test_missing_body_pose_dependency_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_missing_input_is_retained_as_transport_failure (test_control_scoring.ControlScoringContracts) ... ok
+test_missing_source_report_dependency_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_missing_summary_dependency_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_native_backend_error_remains_an_error_with_declared_asset (test_control_scoring.ControlScoringContracts) ... ERROR
+test_negative_score_cannot_be_a_successful_pair (test_control_scoring.ControlScoringContracts) ... ok
+test_nonescaping_symlink_refs_bind_canonical_scorer_paths (test_control_scoring.ControlScoringContracts) ... ERROR
+test_nonfinite_success_is_not_a_complete_pair (test_control_scoring.ControlScoringContracts) ... ok
+test_pass_records_do_not_alias_other_arms (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_changed_evaluator_hash_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_changed_gt_hash_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_changed_manifest_hash_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_changed_official_source_hash_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_changed_sampling_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_changed_sequence_hash_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_failed_preparation_cannot_score_as_success (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_invalid_metric_cannot_be_success (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_missing_generator_report_is_rejected_for_success (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_missing_official_source_is_rejected_for_success (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_nonzero_success_exit_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_structural_and_path_mismatches_are_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_wrong_device_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_wrong_sampling_seed_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_raw_output_wrong_uid_is_rejected_even_with_right_case_id (test_control_scoring.ControlScoringContracts) ... ok
+test_ref_rejects_absolute_path (test_control_scoring.ControlScoringContracts) ... ok
+test_ref_rejects_changed_bytes (test_control_scoring.ControlScoringContracts) ... ok
+test_ref_rejects_path_escape (test_control_scoring.ControlScoringContracts) ... ok
+test_replay_disagreement_is_not_widened_into_a_pass (test_control_scoring.ControlScoringContracts) ... ok
+test_sparse_contract_budget_is_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_successful_identical_replay_has_no_scientific_gate_effect (test_control_scoring.ControlScoringContracts) ... ok
+test_telemetry_requires_physical_device_uuid (test_control_scoring.ControlScoringContracts) ... ok
+test_three_arm_manifest_requires_exact_case_mapping (test_control_scoring.ControlScoringContracts) ... ok
+test_topology_change_rejected (test_control_scoring.ControlScoringContracts) ... ok
+test_constructed_demo_explicitly_allows_output_baseline_to_win (test_controllability.ControllabilityTests) ... ok
+test_contract_only_projector_can_leave_model_tangent (test_controllability.ControllabilityTests) ... ok
+test_contract_orthogonality_roundoff_does_not_destroy_nullspace (test_controllability.ControllabilityTests) ... ok
+test_full_spd_edit_metric_changes_optimum (test_controllability.ControllabilityTests) ... ok
+test_invalid_metrics_shapes_and_nonfinite_inputs_fail (test_controllability.ControllabilityTests) ... ok
+test_invertible_latent_reparameterization (test_controllability.ControllabilityTests) ... ok
+test_metric_projection_and_first_order_preservation (test_controllability.ControllabilityTests) ... ok
+test_nested_gap_and_false_nesting_refusal (test_controllability.ControllabilityTests) ... ok
+test_nonlinear_acceptance_backtracks_and_does_not_hide_rejection (test_controllability.ControllabilityTests) ... ok
+test_nullspace_rank_deficient_and_empty (test_controllability.ControllabilityTests) ... ok
+test_output_coordinates_and_metric_transform_together (test_controllability.ControllabilityTests) ... ok
+test_trust_solve_is_not_clipped_unbounded_solution (test_controllability.ControllabilityTests) ... ok
+test_unbounded_reachability_does_not_imply_bounded_success (test_controllability.ControllabilityTests) ... ok
+test_unreachable_rank_deficient_and_no_direction (test_controllability.ControllabilityTests) ... ok
+test_zero_radius_and_zero_target_are_not_nan_scores (test_controllability.ControllabilityTests) ... ok
+test_any_observed_group_worsening_rejects_step_and_preserves_zero (test_correlated.CorrectionTests) ... ok
+test_backtracking_honors_group_caps_and_trust_radius (test_correlated.CorrectionTests) ... ok
+test_bad_caps_nonfinite_jacobian_and_uncovered_groups_rejected (test_correlated.CorrectionTests) ... ok
+test_declared_budget_changes_precision_without_estimating_from_targets (test_correlated.CorrectionTests) ... ok
+test_seeded_benchmark_preserves_all_baselines_and_negative_controls (test_correlated.CorrectionTests) ... ok
+test_zero_residual_control_remains_exactly_unchanged (test_correlated.CorrectionTests) ... ok
+test_bad_covariance_inputs_are_rejected (test_correlated.CovarianceTests) ... ok
+test_repeated_shared_bias_precision_saturates (test_correlated.CovarianceTests) ... ok
+test_woodbury_matches_dense_inverse_for_vectors_and_matrices (test_correlated.CovarianceTests) ... ok
+test_byte_limit_rejects_capture_before_forward (test_decoder_observer.DecoderObserverTests) ... ok
+test_capture_is_bit_exact_nonmutating_and_preserves_rng (test_decoder_observer.DecoderObserverTests) ... ok
+test_existing_output_is_preserved_and_tampering_rejected (test_decoder_observer.DecoderObserverTests) ... ok
+test_forward_failure_keeps_inputs_and_detaches_hooks (test_decoder_observer.DecoderObserverTests) ... ok
+test_positional_inputs_and_bfloat16_roundtrip (test_decoder_observer.DecoderObserverTests) ... ok
+test_contract_preserves_middle_frame_and_edit_targets_late_frame (test_native_probe.NativeProbeTests) ... ok
+test_native_source_hash_mismatch_rejected (test_native_probe.NativeProbeTests) ... ok
+test_nonfinite_or_degenerate_controls_rejected (test_native_probe.NativeProbeTests) ... ok
+test_query_controls_keep_normals_unchanged (test_native_probe.NativeProbeTests) ... ok
+test_capture_binds_lock_bytes_at_the_final_project_relative_path (test_native_runtime.RuntimeTests) ... ok
+test_capture_records_venv_and_base_conda_prefixes (test_native_runtime.RuntimeTests) ... ok
+test_conda_capture_excludes_urls_channels_and_credentials (test_native_runtime.RuntimeTests) ... ok
+test_conflicting_distribution_versions_are_rejected (test_native_runtime.RuntimeTests) ... ok
+test_escaping_output_directory_is_rejected_before_write (test_native_runtime.RuntimeTests) ... ok
+test_existing_capture_is_preserved (test_native_runtime.RuntimeTests) ... ok
+test_missing_required_package_cannot_emit_ready_runtime (test_native_runtime.RuntimeTests) ... ok
+test_multiple_or_missing_gpu_identity_is_rejected_before_write (test_native_runtime.RuntimeTests) ... ok
+test_nonconda_interpreter_is_rejected (test_native_runtime.RuntimeTests) ... ok
+test_system_site_overlay_uses_active_venv_package_and_base_conda_records (test_native_runtime.RuntimeTests) ... ok
+test_contiguous_window_and_last_partial_window (test_population_window.PopulationWindowTests) ... ok
+test_rejects_overbudget_and_invalid_windows (test_population_window.PopulationWindowTests) ... ok
+test_coupled_metric_pins_and_action_constraint_share_full_objective (test_protected_projection.ProtectedProjectionTests) ... ok
+test_coupled_metric_pins_minimize_full_distance (test_protected_projection.ProtectedProjectionTests) ... ok
+test_pinned_coordinates_are_zero_and_never_reintroduced (test_protected_projection.ProtectedProjectionTests) ... ok
+test_redundant_constraints_use_a_stable_pseudoinverse (test_protected_projection.ProtectedProjectionTests) ... ok
+test_removes_the_component_seen_by_an_action_constraint (test_protected_projection.ProtectedProjectionTests) ... ok
+test_weighted_projection_satisfies_constraint_and_minimizes_change (test_protected_projection.ProtectedProjectionTests) ... ok
+test_ambiguous_reflection_pose_is_rejected (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_body_smoothing_is_equivariant_to_global_translation (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_body_smoothing_preserves_time_varying_rigid_motion (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_body_smoothing_removes_nonrigid_jitter (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_collinear_pose_is_rejected_instead_of_arbitrary_rotation (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_existing_evaluator_keeps_failed_arm_in_declared_inventory (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_export_preserves_native_arrays_and_reports_full_inventory (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_failed_body_arm_stays_in_manifest_and_prevents_completion (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_finite_extreme_input_cannot_emit_nonfinite_world_control (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_gaussian_boundary_renormalizes_without_wrapping (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_invalid_parameters_or_nonfinite_vertices_rejected (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_noninteger_identity_metadata_rejected_before_outputs (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_source_sequence_cli_works_from_a_staged_file_path (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_stale_source_hash_rejected_before_creating_outputs (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_world_smoothing_damps_isolated_displacement_and_pins_anchor (test_simple_mesh_controls.SimpleMeshControlsTest) ... ok
+test_additional_dataset_uid_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_complete_exact_revision_snapshots_emit_closed_manifest (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_dirty_or_wrong_git_source_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_downloaded_html_error_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_empty_snapshot_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_existing_output_is_preserved (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_file_hashes_and_aggregate_are_content_bound (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_lfs_pointer_is_rejected_instead_of_hashed_as_model (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_missing_dataset_frame_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_missing_hub_metadata_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_nested_metadata_parent_symlink_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_submodule_mismatch_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_symlink_is_rejected_even_when_target_stays_inside_root (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_wrong_hub_revision_metadata_is_rejected (test_snapshot_admission.SnapshotAdmissionTests) ... ok
+test_existing_plan_directory_is_preserved (test_snapshot_admission.SnapshotPlanTests) ... FAIL
+test_missing_snapshot_root_is_rejected_before_plan_write (test_snapshot_admission.SnapshotPlanTests) ... FAIL
+test_plan_binds_the_exact_population_file (test_snapshot_admission.SnapshotPlanTests) ... FAIL
+test_plan_is_single_attempt_cpu_only_and_runs_only_admission (test_snapshot_admission.SnapshotPlanTests) ... FAIL
+test_plan_output_inventory_comes_from_frozen_manifest_uid (test_unit_resources_plan.UnitResourcesPlanTests) ... ok
+test_resource_capture_records_process_ram_and_output_disk (test_unit_resources_plan.UnitResourcesPlanTests) ... ERROR
+test_unexecuted_admissions_do_not_allow_plan (test_unit_resources_plan.UnitResourcesPlanTests) ... ok
+
+======================================================================
+ERROR: test_candidate_c15 (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_candidate_c15
+Traceback (most recent call last):
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_candidate_c15.py", line 10, in <module>
+    from research_math.candidate_c15 import (
+ModuleNotFoundError: No module named 'research_math.candidate_c15'
+
+
+======================================================================
+ERROR: test_official_export_requires_all_glbs_and_exact_agreement (test_complete_unit_runner.CompleteUnitRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_complete_unit_runner.py", line 126, in test_official_export_requires_all_glbs_and_exact_agreement
+    import trimesh
+ModuleNotFoundError: No module named 'trimesh'
+
+======================================================================
+ERROR: test_timeout_retains_typed_failure (test_complete_unit_runner.CompleteUnitRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/complete_unit_runner.py", line 29, in run_stage
+    returncode=process.wait(timeout=timeout)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/subprocess.py", line 1925, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/yunbo/anaconda3/envs/Basic/bin/python', '-c', 'import time;time.sleep(2)']' timed out after 0.1 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_complete_unit_runner.py", line 100, in test_timeout_retains_typed_failure
+    run_stage('generation',[sys.executable,'-c','import time;time.sleep(2)'],root,root,.1)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/complete_unit_runner.py", line 33, in run_stage
+    try:children=psutil.Process(process.pid).children(recursive=True)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 278, in wrapper
+    return fun(self, *args, **kwargs)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 906, in children
+    ppid_map = _ppid_map()
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 258, in _ppid_map
+    for pid in pids():
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 1372, in pids
+    ret = sorted(_psplatform.pids())
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/_psosx.py", line 310, in pids
+    ls = cext.pids()
+PermissionError: [Errno 1] Operation not permitted (originated from sysctl(KERN_PROC_ALL))
+
+======================================================================
+ERROR: test_timeout_terminates_descendant_process (test_complete_unit_runner.CompleteUnitRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/complete_unit_runner.py", line 29, in run_stage
+    returncode=process.wait(timeout=timeout)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/subprocess.py", line 1925, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/yunbo/anaconda3/envs/Basic/bin/python', '-c', 'import subprocess,sys,time,pathlib;p=subprocess.Popen([sys.executable,"-c","import time;time.sleep(10)"]);pathlib.Path(sys.argv[1]).write_text(str(p.pid));time.sleep(10)', '/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw0000gn/T/tmp22z7s6vi/child.pid']' timed out after 1 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_complete_unit_runner.py", line 114, in test_timeout_terminates_descendant_process
+    run_stage('generation',[sys.executable,'-c',program,str(pid_path)],root,root,1)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/complete_unit_runner.py", line 33, in run_stage
+    try:children=psutil.Process(process.pid).children(recursive=True)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 278, in wrapper
+    return fun(self, *args, **kwargs)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 906, in children
+    ppid_map = _ppid_map()
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 258, in _ppid_map
+    for pid in pids():
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/__init__.py", line 1372, in pids
+    ret = sorted(_psplatform.pids())
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/site-packages/psutil/_psosx.py", line 310, in pids
+    ls = cext.pids()
+PermissionError: [Errno 1] Operation not permitted (originated from sysctl(KERN_PROC_ALL))
+
+======================================================================
+ERROR: test_contact_events (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_contact_events
+Traceback (most recent call last):
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/unittest/loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "/Users/yunbo/anaconda3/envs/Basic/lib/python3.9/unittest/loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_contact_events.py", line 9, in <module>
+    from research_math.contact_events import (
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/contact_events.py", line 34, in <module>
+    class ContactEvidence:
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/contact_events.py", line 35, in ContactEvidence
+    partner: str | None
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+
+
+======================================================================
+ERROR: test_changed_source_report_blocks_plan (test_control_plan.ControlPlanTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_plan.py", line 64, in test_changed_source_report_blocks_plan
+    planner.build_plans(root, source_sequence=seq, run_id='fixture', sigma=1., plan_dir=root/'plans', wall_seconds=120)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/prepare_mesh_controls.py", line 27, in build_plans
+    import run_experiments as native
+ModuleNotFoundError: No module named 'run_experiments'
+
+======================================================================
+ERROR: test_plan_output_cannot_overwrite_existing_work (test_control_plan.ControlPlanTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_plan.py", line 77, in test_plan_output_cannot_overwrite_existing_work
+    planner.build_plans(root, source_sequence=seq, run_id='fixture', sigma=1., plan_dir=root/'plans', wall_seconds=120)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/prepare_mesh_controls.py", line 27, in build_plans
+    import run_experiments as native
+ModuleNotFoundError: No module named 'run_experiments'
+
+======================================================================
+ERROR: test_plan_pins_both_source_files_and_cpu_only_resources (test_control_plan.ControlPlanTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_plan.py", line 49, in test_plan_pins_both_source_files_and_cpu_only_resources
+    native, outer = planner.build_plans(root, source_sequence=seq, run_id='fixture', sigma=1.,
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/prepare_mesh_controls.py", line 27, in build_plans
+    import run_experiments as native
+ModuleNotFoundError: No module named 'run_experiments'
+
+======================================================================
+ERROR: test_source_outside_project_rejected (test_control_plan.ControlPlanTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_plan.py", line 72, in test_source_outside_project_rejected
+    planner.build_plans(other, source_sequence=seq, run_id='fixture', sigma=1., plan_dir=other/'plans', wall_seconds=120)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/prepare_mesh_controls.py", line 27, in build_plans
+    import run_experiments as native
+ModuleNotFoundError: No module named 'run_experiments'
+
+======================================================================
+ERROR: test_bound_native_output_is_only_a_parser_acceptance (test_control_scoring.ControlScoringContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 262, in test_bound_native_output_is_only_a_parser_acceptance
+    row = self.validate_fixture_output(request, stage, raw)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 258, in validate_fixture_output
+    return scoring.validate_native_output(self.root, request, 'native', stage, 'cuda:0', raw, exit_code)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/control_scoring.py", line 298, in validate_native_output
+    raise ValueError('Scorer output pass manifest mismatch')
+ValueError: Scorer output pass manifest mismatch
+
+======================================================================
+ERROR: test_native_backend_error_remains_an_error_with_declared_asset (test_control_scoring.ControlScoringContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 327, in test_native_backend_error_remains_an_error_with_declared_asset
+    row = self.validate_fixture_output(request, stage, raw, exit_code=1)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 258, in validate_fixture_output
+    return scoring.validate_native_output(self.root, request, 'native', stage, 'cuda:0', raw, exit_code)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/control_scoring.py", line 298, in validate_native_output
+    raise ValueError('Scorer output pass manifest mismatch')
+ValueError: Scorer output pass manifest mismatch
+
+======================================================================
+ERROR: test_nonescaping_symlink_refs_bind_canonical_scorer_paths (test_control_scoring.ControlScoringContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 356, in test_nonescaping_symlink_refs_bind_canonical_scorer_paths
+    row = self.validate_fixture_output(request, stage, raw)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 258, in validate_fixture_output
+    return scoring.validate_native_output(self.root, request, 'native', stage, 'cuda:0', raw, exit_code)
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/control_scoring.py", line 298, in validate_native_output
+    raise ValueError('Scorer output pass manifest mismatch')
+ValueError: Scorer output pass manifest mismatch
+
+======================================================================
+ERROR: test_resource_capture_records_process_ram_and_output_disk (test_unit_resources_plan.UnitResourcesPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_unit_resources_plan.py", line 14, in test_resource_capture_records_process_ram_and_output_disk
+    sample.start();sample.close()
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/unit_resources.py", line 41, in start
+    if self.errors:raise RuntimeError('Host resource telemetry unavailable')
+RuntimeError: Host resource telemetry unavailable
+
+======================================================================
+FAIL: test_contract_population_ref_mismatch_is_rejected (test_actionbench_dataset_semantics.SemanticPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_actionbench_dataset_semantics.py", line 254, in setUp
+    self.assertIsNotNone(planner, "Dataset semantics plan builder missing")
+AssertionError: unexpectedly None : Dataset semantics plan builder missing
+
+======================================================================
+FAIL: test_plan_is_cpu_only_single_attempt_and_binds_admission (test_actionbench_dataset_semantics.SemanticPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_actionbench_dataset_semantics.py", line 254, in setUp
+    self.assertIsNotNone(planner, "Dataset semantics plan builder missing")
+AssertionError: unexpectedly None : Dataset semantics plan builder missing
+
+======================================================================
+FAIL: test_template_must_be_the_admission_bound_manifest (test_actionbench_full128_unit.Full128UnitTests)
+----------------------------------------------------------------------
+ValueError: Changed pinned file: unit-manifest.json
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_actionbench_full128_unit.py", line 174, in test_template_must_be_the_admission_bound_manifest
+    self.freeze()
+AssertionError: "template manifest" does not match "Changed pinned file: unit-manifest.json"
+
+======================================================================
+FAIL: test_runner_output_paths_stages_nested_files_not_in_receipt_outputs (test_complete_unit_admission_plan.CompleteUnitAdmissionPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_complete_unit_admission_plan.py", line 91, in test_runner_output_paths_stages_nested_files_not_in_receipt_outputs
+    self.assertEqual(runner_output_paths(root, receipt), [cache])
+AssertionError: Lists differ: [PosixPath('/private/var/folders/_y/0xw7_0ss0s3f4kfhj9[105 chars]yc')] != [PosixPath('/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw00[97 chars]yc')]
+
+First differing element 0:
+PosixPath('/private/var/folders/_y/0xw7_0ss0s3f4kfhj9[104 chars]pyc')
+PosixPath('/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw00[96 chars]pyc')
+
+- [PosixPath('/private/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw0000gn/T/tmpk3h5p386/runs/attempts/unit/attempt-1/workspace/actionmesh/unit-output/official/extra.pyc')]
+?             --------
+
++ [PosixPath('/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw0000gn/T/tmpk3h5p386/runs/attempts/unit/attempt-1/workspace/actionmesh/unit-output/official/extra.pyc')]
+
+======================================================================
+FAIL: test_command_runs_existing_scorer_with_full_native_options (test_control_scoring.ControlScoringContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_control_scoring.py", line 222, in test_command_runs_existing_scorer_with_full_native_options
+    self.assertEqual(command[command.index('--repo-root')+1], str(self.root/'actionmesh/repo'))
+AssertionError: '/private/var/folders/_y/0xw7_0ss0s3f4kfhj9[38 chars]repo' != '/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw00[30 chars]repo'
+- /private/var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw0000gn/T/tmp4ez2_sb0/actionmesh/repo
+? --------
++ /var/folders/_y/0xw7_0ss0s3f4kfhj9xl96zw0000gn/T/tmp4ez2_sb0/actionmesh/repo
+
+
+======================================================================
+FAIL: test_existing_plan_directory_is_preserved (test_snapshot_admission.SnapshotPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_snapshot_admission.py", line 246, in setUp
+    self.assertIsNotNone(snapshot_planner, "Snapshot plan builder missing")
+AssertionError: unexpectedly None : Snapshot plan builder missing
+
+======================================================================
+FAIL: test_missing_snapshot_root_is_rejected_before_plan_write (test_snapshot_admission.SnapshotPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_snapshot_admission.py", line 246, in setUp
+    self.assertIsNotNone(snapshot_planner, "Snapshot plan builder missing")
+AssertionError: unexpectedly None : Snapshot plan builder missing
+
+======================================================================
+FAIL: test_plan_binds_the_exact_population_file (test_snapshot_admission.SnapshotPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_snapshot_admission.py", line 246, in setUp
+    self.assertIsNotNone(snapshot_planner, "Snapshot plan builder missing")
+AssertionError: unexpectedly None : Snapshot plan builder missing
+
+======================================================================
+FAIL: test_plan_is_single_attempt_cpu_only_and_runs_only_admission (test_snapshot_admission.SnapshotPlanTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yunbo/Documents/Codex/2026-09-29/nihao/4d-longgoal/actionmesh/research_math/tests/test_snapshot_admission.py", line 246, in setUp
+    self.assertIsNotNone(snapshot_planner, "Snapshot plan builder missing")
+AssertionError: unexpectedly None : Snapshot plan builder missing
+
+----------------------------------------------------------------------
+Ran 259 tests in 2.479s
+
+FAILED (failures=9, errors=13)

@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T18:00:30Z",
+  "recorded_at": "2026-10-07T18:15:41Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. The retained engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T17:59:21.929Z with seven completed, one running and one pending unit; population-008 generation was at Stage I 27/30 and no failure was observed. Population-007 generation/scoring exited zero and all 117 receipt-declared output hashes were independently verified. These remain engineering baseline results, not candidate scientific outcomes. Full128 plan generation now requires the exact live r9 harness state and matching observer status to be frozen together at write-once archive paths before state-derived reconciliation. The immutable pair, current 290-method Local software acceptance and reconciliation sidecar are not yet returned, so generation and dispatch remain blocked. Candidate native results/formal outcomes remain 0/15 and 0.",
+  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The retained engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T18:15:41.051Z with eight completed, one running, zero pending and zero failed; population-009 generation was at Stage I 19/30 with GPU 100%, 10255 MiB used and no observed errors. Population-008 completed generation/scoring with exit code zero; its receipt/state agree and all 117 receipt-declared output hashes were independently verified. Its three engineering baseline rows are retained. These do not qualify the official native contract or any candidate. Full128 window generation still requires the immutable state/status evidence pair, current 290-method Local software acceptance and reconciliation sidecar. Candidate native results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -707,7 +707,7 @@
   },
   "actionbench_full128_immutable_snapshot": {
     "status": "generated_unexecuted_stable_pair_guard_authored",
-    "recorded_at": "2026-10-07T18:00:30Z",
+    "recorded_at": "2026-10-07T18:15:41Z",
     "base_commit": "e1e31e3b22651f7bdeb521fc73f49db5e453d479",
     "source_review_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-immutable-snapshot-source-review.json",
@@ -737,11 +737,11 @@
     "required_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json",
     "active_batch_run_id": "population-gpu-current-r9",
     "active_batch_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
-    "active_batch_last_observed_at": "2026-10-07T17:59:21.929Z",
+    "active_batch_last_observed_at": "2026-10-07T18:15:41.051Z",
     "active_batch_counts": {
-      "completed": 7,
+      "completed": 8,
       "running": 1,
-      "pending": 1,
+      "pending": 0,
       "failed": 0
     },
     "new_checks_authored": 2,
@@ -757,5 +757,16 @@
     "scientific_effect_qualification": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
+  },
+  "local_observer_compatibility": {
+    "status": "engineering_only",
+    "fix_commit": "8fad72154a97cc0998d75a363f80eaf8e52d76a5",
+    "targeted_tests": {
+      "torch_2_3_1": "5/5 passed",
+      "torch_2_10_0": "5/5 passed"
+    },
+    "harness_acceptance": false,
+    "native_context_qualified": false,
+    "candidate_native_results": 0
   }
 }

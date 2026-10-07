@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T17:59:22Z",
+  "updated_at": "2026-10-07T18:15:41Z",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Seven population units completed; population-008 Stage I generation active at 27/30 as of 17:59:21.929Z; population-009 pending; zero failures. Population-007 generation/scoring exited 0 and independent remote receipt audit verified 117/117 outputs. Engineering baseline only.",
+  "current_task": "Eight population units completed; population-009 Stage I generation active at 19/30 as of 2026-10-07T18:15:41.051Z; zero pending and failures. Population-008 generation/scoring exited 0; receipt and all 117 declared output hashes independently verified. Engineering baseline only.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -179,7 +179,7 @@
       "run_id": "parity-cpu-backward-r3",
       "comparisons_passed": 9,
       "comparisons_total": 9,
-      "absolute_differences": 0.0,
+      "absolute_differences": 0,
       "scope": "one UID, three prediction arms; engineering equivalence only",
       "finalization": {
         "status": "completed",
@@ -341,7 +341,36 @@
     "next_action": "Native observer integration and original-query replay still required",
     "native_context_qualified": false,
     "red_status": "failed_as_expected: all 5 observer tests import missing core; previous 228 unrelated tests passed",
-    "green_run": "observer-green-r8"
+    "green_run": "observer-green-r8",
+    "local_compatibility_fix": {
+      "status": "committed_and_read_back",
+      "commit": "8fad72154a97cc0998d75a363f80eaf8e52d76a5",
+      "issue": "first atomic GitHub patch replaced autocast fields but omitted local assignments; synced checkout tests exposed NameError; corrected in follow-up commit",
+      "verification": {
+        "torch_2_3_1": {
+          "passed": 5,
+          "failed": 0
+        },
+        "torch_2_10_0": {
+          "passed": 5,
+          "failed": 0
+        }
+      },
+      "formal_harness_acceptance": false,
+      "native_context_qualified": false,
+      "candidate_methods_tested": false
+    },
+    "local_full_suite_attempt": {
+      "status": "failed_local_only_not_harness_acceptance",
+      "python": "Anaconda Basic Python 3.9; Torch 2.3.1",
+      "command": "PYTHONPATH=actionmesh python -m unittest discover -s actionmesh/research_math/tests -v",
+      "tests_run": 259,
+      "failures": 9,
+      "errors": 13,
+      "exit_code": 1,
+      "preserved_log_path": "docs/research-math-20261006/longgoal-20261007/local-only-test-log-20261007T1802Z.txt",
+      "classification": "standalone macOS checkout run; failures include missing plan-builder files, /private/var symlink path mismatches, and unrelated local fixture/API errors; no native or scientific qualification"
+    }
   },
   "status_corrections": [
     {
@@ -404,19 +433,19 @@
     "gpu_launched": true,
     "run_id": "population-gpu-current-r9",
     "driver_pid": 3157,
-    "generation_pid": 3539,
+    "generation_pid": 77079,
     "monitor_pid": 3158,
     "monitor_interval_seconds": 1200,
     "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
     "launched_at": "2026-10-07T15:32:28.057578+00:00",
     "gpu_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
-    "observed_at": "2026-10-07T17:59:21.929Z",
-    "completed": 7,
+    "observed_at": "2026-10-07T18:15:41.051Z",
+    "completed": 8,
     "running": 1,
-    "pending": 1,
+    "pending": 0,
     "failed": 0,
     "previous_gpu_sample": {
-      "observed_at": "2026-10-07T15:39:08Z",
+      "observed_at": "2026-10-07T17:59:21.929Z",
       "utilization_percent": 100,
       "memory_used_mib": 10255
     },
@@ -443,7 +472,7 @@
       "device_memory": {
         "sample_interval_seconds": 1,
         "samples": 1084,
-        "observed_peak_mib": 10255.0,
+        "observed_peak_mib": 10255,
         "exact_peak": false,
         "errors": []
       },
@@ -451,51 +480,51 @@
       "scientific_effect_qualification": false
     },
     "verified_worker": {
-      "task": "population-008",
-      "pid": 66651,
-      "worker_start_ticks": "212102662",
+      "task": "population-009",
+      "pid": 76819,
+      "worker_start_ticks": "212216052",
       "proc_start_identity_match": true,
-      "latest_stage": "Stage I 27/30 at 2026-10-07T17:59:21.929Z",
-      "generation_pid": 66919,
-      "generation_start_ticks": "212106893",
-      "generation_process_status": "running; independently verified at 2026-10-07T17:59:21.929Z",
-      "generation_stage": "Stage I 27/30",
+      "latest_stage": "Stage I 19/30 at 2026-10-07T18:15:41.051Z",
+      "generation_pid": 77079,
+      "generation_start_ticks": "212219885",
+      "generation_process_status": "running; independently verified at 2026-10-07T18:15:41.051Z",
+      "generation_stage": "Stage I 19/30",
       "generation_state": "R",
-      "runner_pid": 66653,
-      "runner_start_ticks": "212102689",
-      "guard_pid": 66652,
-      "guard_start_ticks": "212102686",
+      "runner_pid": 76821,
+      "runner_start_ticks": "212216078",
+      "guard_pid": 76820,
+      "guard_start_ticks": "212216074",
       "driver_pid": 3157,
       "driver_start_ticks": "211281789"
     },
     "latest_completed_result": {
-      "task": "population-007",
-      "uid": "000-007_17ed60fbe8af47b69cbf45b97730e0ab",
-      "completed_at": "2026-10-07T17:49:15.829820Z",
-      "elapsed_seconds": 1163.102,
-      "result_path": "runs/attempts/population-gpu-current-r9-unit-007/complete-fp16-lowram-v1-three-arm-unit-a1-3b9c70c2ef6d4ea7b0c0d59c777e558e/workspace/actionmesh/unit-output/result.json",
-      "result_sha256": "11f9dcec7f09b6c426496c02255e3a3d47a134a8183a09058774bf96d36eb41a",
-      "receipt_path": "runs/attempts/population-gpu-current-r9-unit-007/receipt.json",
-      "receipt_sha256": "7eef01c4baa08fb2b00444001d8486c16afbad969a724a8583045d0660e66246",
+      "task": "population-008",
+      "uid": "000-007_84496dfddf6046ce9ec9fddace6f5ed3",
+      "completed_at": "2026-10-07T18:08:09.629613Z",
+      "elapsed_seconds": 1131.878,
+      "result_path": "runs/attempts/population-gpu-current-r9-unit-008/complete-fp16-lowram-v1-three-arm-unit-a1-217c5de588d94d898de41c92b11d6f3e/workspace/actionmesh/unit-output/result.json",
+      "result_sha256": "fd9609e630b39af5d18d2f54e86a9d0ed1e2d5b5dc5e2088dfe3fbfc6ba70dea",
+      "receipt_path": "runs/attempts/population-gpu-current-r9-unit-008/receipt.json",
+      "receipt_sha256": "d1abdd869d12aa394e0346630f4da11007aebfba6fece3b96835bf8dda1ff7a5",
       "receipt_hash_verified": true,
       "declared_output_hashes_verified": 117,
       "missing_or_mismatched_outputs": 0,
-      "hash_audit": "Independent watcher re-read all 117 remote files named by receipt.attempts[0].output_refs; all SHA-256 matched at 2026-10-07T17:50:33Z",
+      "hash_audit": "Independent watcher verified receipt/state consistency and all 117 receipt-declared output hashes at 2026-10-07T18:10:00Z",
       "scores": {
         "native": {
-          "cd_3d": 0.03799280258626064,
-          "cd_4d": 0.04013111218403455,
-          "cd_motion": 0.06528113782405853
+          "cd_3d": 0.04159317162973604,
+          "cd_4d": 0.0428163906414859,
+          "cd_motion": 0.05069758743047714
         },
         "world_gaussian": {
-          "cd_3d": 0.03802992866625521,
-          "cd_4d": 0.040168980754891184,
-          "cd_motion": 0.06528621166944504
+          "cd_3d": 0.04156793351309143,
+          "cd_4d": 0.042750349292631946,
+          "cd_motion": 0.05054894834756851
         },
         "body_gaussian": {
-          "cd_3d": 0.038000855613995244,
-          "cd_4d": 0.040153989197491344,
-          "cd_motion": 0.06529450416564941
+          "cd_3d": 0.04157822793650014,
+          "cd_4d": 0.04277415800249802,
+          "cd_motion": 0.05064421892166138
         }
       },
       "runtime_profile": "fp16-lowram-v1",
@@ -504,7 +533,7 @@
       "scientific_effect_qualification": false,
       "native_scientific_qualification": false,
       "candidate_methods_tested": false,
-      "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T17:50:33Z"
+      "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T18:10:00Z"
     },
     "completed_results": [
       {
@@ -653,11 +682,49 @@
         "native_scientific_qualification": false,
         "candidate_methods_tested": false,
         "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T17:50:33Z"
+      },
+      {
+        "task": "population-008",
+        "uid": "000-007_84496dfddf6046ce9ec9fddace6f5ed3",
+        "completed_at": "2026-10-07T18:08:09.629613Z",
+        "elapsed_seconds": 1131.878,
+        "result_path": "runs/attempts/population-gpu-current-r9-unit-008/complete-fp16-lowram-v1-three-arm-unit-a1-217c5de588d94d898de41c92b11d6f3e/workspace/actionmesh/unit-output/result.json",
+        "result_sha256": "fd9609e630b39af5d18d2f54e86a9d0ed1e2d5b5dc5e2088dfe3fbfc6ba70dea",
+        "receipt_path": "runs/attempts/population-gpu-current-r9-unit-008/receipt.json",
+        "receipt_sha256": "d1abdd869d12aa394e0346630f4da11007aebfba6fece3b96835bf8dda1ff7a5",
+        "receipt_hash_verified": true,
+        "declared_output_hashes_verified": 117,
+        "missing_or_mismatched_outputs": 0,
+        "hash_audit": "Independent watcher verified receipt/state consistency and all 117 receipt-declared output hashes at 2026-10-07T18:10:00Z",
+        "scores": {
+          "native": {
+            "cd_3d": 0.04159317162973604,
+            "cd_4d": 0.0428163906414859,
+            "cd_motion": 0.05069758743047714
+          },
+          "world_gaussian": {
+            "cd_3d": 0.04156793351309143,
+            "cd_4d": 0.042750349292631946,
+            "cd_motion": 0.05054894834756851
+          },
+          "body_gaussian": {
+            "cd_3d": 0.04157822793650014,
+            "cd_4d": 0.04277415800249802,
+            "cd_motion": 0.05064421892166138
+          }
+        },
+        "runtime_profile": "fp16-lowram-v1",
+        "generation_exit_code": 0,
+        "scoring_exit_code": 0,
+        "scientific_effect_qualification": false,
+        "native_scientific_qualification": false,
+        "candidate_methods_tested": false,
+        "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T18:10:00Z"
       }
     ],
     "gpu_utilization_percent": 100,
     "gpu_memory_used_mib": 10255,
-    "free_disk_bytes": 22300213248
+    "free_disk_bytes": 22233374720
   },
   "actionbench_full128_queue_pricing": {
     "status": "completed",
@@ -725,57 +792,54 @@
     "subagent_status": "independent SSH verification received; ongoing monitor",
     "monitor_authority": "read-only; main agent retains debugging and dispatch",
     "ssh_session": 87817,
-    "last_independent_check": "2026-10-07T17:59:21.929Z",
-    "generation_pid": 66919,
-    "generation_start_ticks": "212106893",
+    "last_independent_check": "2026-10-07T18:15:41.051Z",
+    "generation_pid": 77079,
+    "generation_start_ticks": "212219885",
     "driver_pid": 3157,
     "driver_start_ticks": "211281789",
-    "worker_pid": 66651,
-    "worker_start_ticks": "212102662",
+    "worker_pid": 76819,
+    "worker_start_ticks": "212216052",
     "gpu_utilization_percent": 100,
     "gpu_memory_mib": 10255,
-    "free_disk_bytes": 22300213248,
-    "latest_stage": "population-008 Stage I generation at 27/30; generation PID 66919 state R; problems=[]",
+    "free_disk_bytes": 22233374720,
+    "latest_stage": "population-009 Stage I generation at 19/30; generation PID 77079 state R; problems=[]",
     "watcher_pid": 23223,
-    "watcher_status": "live; next full check scheduled for 18:15:40Z; terminal/error alert enabled",
+    "watcher_status": "live; next full check scheduled for 2026-10-07T18:35:41Z; terminal/error alert enabled",
     "latest_queue_counts": {
-      "completed": 7,
+      "completed": 8,
       "running": 1,
-      "pending": 1,
+      "pending": 0,
       "failed": 0
     },
-    "latest_running_unit": "population-008; Stage I 27/30",
+    "latest_running_unit": "population-009; Stage I 19/30",
     "latest_scoring_pids": {
-      "official_wrapper": 63353,
-      "official_wrapper_start_ticks": "212057734",
-      "deterministic_scorer": 63487,
-      "deterministic_scorer_start_ticks": "212057859",
-      "deterministic_scorer_state": "R",
-      "observed_at": "2026-10-07T17:44:00Z",
-      "status": "population-007 scoring completed; no active scorer asserted by this field"
+      "official_wrapper": null,
+      "deterministic_scorer": null,
+      "observed_at": "2026-10-07T18:15:41.051Z",
+      "status": "no scorer active; population-009 generation in progress"
     },
     "latest_observed_errors": [],
     "latest_generation_process": {
-      "pid": 66919,
-      "start_ticks": "212106893",
+      "pid": 77079,
+      "start_ticks": "212219885",
       "state": "R"
     },
-    "latest_arm_progress": "population-007 completed 17:49:15.829820Z; exit 0 and 117/117 remote output hashes match; population-008 Stage I 27/30 healthy at 17:59:21.929Z",
-    "main_agent_check_at": "2026-10-07T17:59:21.929Z",
+    "latest_arm_progress": "population-008 completed 2026-10-07T18:08:09.629613Z; exit 0; 117/117 output hashes verified; population-009 Stage I 19/30 healthy at 2026-10-07T18:15:41.051Z",
+    "main_agent_check_at": "2026-10-07T18:15:41.051Z",
     "git_delivery_note": "Status checkpoint successfully written to GitHub main and read back at 2026-10-07T17:17Z; /Users/yunbo/Documents/4d fast-forwarded to 1318852.",
-    "latest_immediate_event_at": "2026-10-07T17:50:33Z",
-    "latest_immediate_event": "population-007 terminal success; population-008 worker launched; no error observed",
-    "last_completed_unit": "population-007; receipt sha256 7eef01c4baa08fb2b00444001d8486c16afbad969a724a8583045d0660e66246; 117/117 remote output hashes match",
-    "gpu_sample_at": "2026-10-07T17:59:21.929Z",
-    "runner_pid": 66653,
-    "runner_start_ticks": "212102689",
+    "latest_immediate_event_at": "2026-10-07T18:10:00Z",
+    "latest_immediate_event": "population-008 completed; receipt/state consistent and 117/117 output hashes verified; population-009 worker active",
+    "last_completed_unit": "population-008; receipt sha256 d1abdd869d12aa394e0346630f4da11007aebfba6fece3b96835bf8dda1ff7a5; 117/117 output hashes match",
+    "gpu_sample_at": "2026-10-07T18:15:41.051Z",
+    "runner_pid": 76821,
+    "runner_start_ticks": "212216078",
     "latest_worker_identity": {
-      "pid": 66651,
-      "start_ticks": "212102662",
-      "observed_at": "2026-10-07T17:59:21.929Z"
+      "pid": 76819,
+      "start_ticks": "212216052",
+      "observed_at": "2026-10-07T18:15:41.051Z"
     },
-    "guard_pid": 66652,
-    "guard_start_ticks": "212102686"
+    "guard_pid": 76820,
+    "guard_start_ticks": "212216074"
   },
   "next_window_preparation": {
     "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
