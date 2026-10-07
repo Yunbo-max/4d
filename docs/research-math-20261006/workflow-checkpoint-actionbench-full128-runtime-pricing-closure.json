@@ -1,0 +1,47 @@
+{
+  "checkpoint_id": "actionbench-full128-runtime-pricing-closure-review-r1",
+  "recorded_at": "2026-10-07T21:07:14Z",
+  "base_commit": "240bd0dd3556bdd64830b75ebde496bf0de8dc8d",
+  "status": "blocked_before_dispatch_runtime_pricing_closure_unproven",
+  "review_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-runtime-pricing-closure-review.json",
+    "sha256": "cf4cdad66b8d0d8ab80e85766eb6d3e0d7af33111ed24886a0623be2833fb2fd"
+  },
+  "local_receipt_ref": {
+    "path": "docs/research-math-20261006/longgoal-20261007/LOCAL_EXECUTION_RECEIPT_R2.md",
+    "sha256": "eabd78b841916b31bef0bef59337e39568400378840b0221b79ec56d41b938b8"
+  },
+  "accepted_as_reported": {
+    "software_checks": "304/304 passed in Local R6-green summary",
+    "window_02_plan_digest": "d7e5558a08aafcc1c996ebae558aa74b77eda42c9179ff1bb01291feccab6ab9",
+    "window_02_indices": [16, 31],
+    "window_02_units": 16,
+    "window_02_workload_seconds": 26624,
+    "window_02_execution_started": false,
+    "r9_terminal_completed": 9,
+    "r10_cpu_manifests": 118
+  },
+  "not_accepted": {
+    "raw_software_receipt_replay": "Raw r4/r5/r6 receipt JSON and logs are not committed.",
+    "runtime_double_root_closure": "Compiler-only historical verification is not carried into the unit runner/freezer call chain.",
+    "window_02_dispatch": "Blocked until the real runtime path revalidates historical evidence separately from current executable inputs.",
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "next_executable_steps": [
+    "Local adds and preserves a failing non-mocked CPU regression covering complete_unit_runner -> freeze_unit with distinct current and historical roots.",
+    "Local implements explicit runtime historical-root/archive-manifest plumbing or an equivalent hash-pinned attempt-local resolver.",
+    "Local reruns the complete CPU software harness and returns raw red/green receipts, logs, exact archive manifest, and regenerated Window-02 plan bytes.",
+    "Web independently rehashes and reviews the returned evidence before any GPU dispatch decision.",
+    "After acceptance, Local plans the no-omission indices 10-15 gap and only then schedules non-overlapping Full128 windows under the frozen 28,800/1,800-second budget."
+  ],
+  "web_actions": {
+    "project_tests_executed": 0,
+    "plan_builders_executed": 0,
+    "scorers_executed": 0,
+    "gpu_workloads_executed": 0,
+    "static_json_validation_required": true,
+    "source_hash_validation_required": true
+  }
+}

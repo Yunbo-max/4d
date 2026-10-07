@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T20:06:00Z",
+  "recorded_at": "2026-10-07T21:07:14Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Returned engineering evidence is independently reviewed: the archive SHA-256 and all 1,617 manifest files (5,448,428 bytes) verify; Linux harness software acceptance ran 294/294 checks successfully and all 72 pinned code refs match the current code tree; r9 is terminal at 9 completed with an immutable state/status pair and reconciliation; eight CPU-only r10 manifest batches cover 118/118 unique indices 10-127. Window-02 plan preparation is newly blocked because historical r7 admission refs are being traversed as current live inputs and the retained environment names a different GPU UUID. No GPU work was launched. Current-device native/scoring qualification, trusted replay and all candidate experiments remain open; candidate results/formal outcomes are 0/15 and 0.",
+  "status": "Local reports a repaired historical archive closure, a 304/304 CPU software pass, and an officially validated but unexecuted Window-02 plan for indices 16-31. Static source review accepts those only as returned engineering summaries: the raw r4/r5/r6 receipts and exact archive manifest are not committed for independent replay. More importantly, historical pricing verification is used by the compiler but is not carried into the emitted unit command; the real runner calls freeze_unit against the current attempt root, so runtime pricing closure is unproven and GPU dispatch remains blocked. Indices 10-15 are still a coverage gap. No GPU work was launched in this review. Current-device native/scoring qualification, trusted replay and all candidate experiments remain open; candidate results/formal outcomes are 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -850,6 +850,44 @@
     "gpu_workload_executed": false,
     "window_plan_preparation_blocked": true,
     "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_runtime_pricing_closure_review": {
+    "status": "plan_validated_runtime_closure_unproven_dispatch_blocked",
+    "recorded_at": "2026-10-07T21:07:14Z",
+    "reviewed_commit": "240bd0dd3556bdd64830b75ebde496bf0de8dc8d",
+    "review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-runtime-pricing-closure-review.json",
+      "sha256": "cf4cdad66b8d0d8ab80e85766eb6d3e0d7af33111ed24886a0623be2833fb2fd"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-runtime-pricing-closure.json",
+      "sha256": "cf2ada6d7949a08a6954cc230517218e3dae08333119c4864a6956cf9ea68829"
+    },
+    "local_receipt_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/LOCAL_EXECUTION_RECEIPT_R2.md",
+      "sha256": "eabd78b841916b31bef0bef59337e39568400378840b0221b79ec56d41b938b8"
+    },
+    "reported_software_checks_passed": 304,
+    "raw_software_receipts_committed": false,
+    "window_02_reported_plan_digest": "d7e5558a08aafcc1c996ebae558aa74b77eda42c9179ff1bb01291feccab6ab9",
+    "window_02_population_indices": [
+      16,
+      31
+    ],
+    "window_02_units": 16,
+    "window_02_execution_started": false,
+    "runtime_historical_resolver_in_native_command": false,
+    "runner_freezer_real_path_tested_across_distinct_roots": false,
+    "coverage_gap_indices": [
+      10,
+      15
+    ],
+    "queue_generated": true,
     "queue_approved": false,
     "dispatch_ready": false,
     "native_scientific_qualification": false,

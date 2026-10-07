@@ -1036,3 +1036,48 @@ then test-first separate validated opaque historical pricing evidence from the
 current live execution closure. A fresh GPU-4910 environment capture remains
 mandatory. Queue generation, approval and dispatch stay false; scientific
 qualification and all 15 candidate experiments remain open.
+
+## Continuation: audit repaired archive closure through the real unit runtime — 2026-10-07
+
+Local returned a substantive repair at `240bd0d`: the historical R7 archive
+closure now distinguishes exact old evidence from the current checkout, and the
+return reports a TDD sequence of 302/302 green, two expected new red cases, then
+304/304 green under the installed CPU-only harness. It also reports an officially
+validated, unexecuted Window-02 plan for canonical indices 16-31: 16 serial
+single-GPU units, 26,624 priced workload seconds inside the 28,800-second outer
+window, plan digest
+`d7e5558a08aafcc1c996ebae558aa74b77eda42c9179ff1bb01291feccab6ab9`.
+The plan keeps approval, dispatch and science flags false. The r9 terminal 9/9
+ledger and 118 CPU-only r10 manifests are unchanged, and indices 10-15 remain an
+explicit no-omission coverage gap.
+
+The new static review does not yet accept Window-02 for dispatch. The compiler
+validates the pricing receipt against the exact historical checkout and uses the
+archive manifest while collecting staged input refs. However, the emitted native
+command carries only `--root ..` and the current staged pricing path. At actual
+unit startup, `complete_unit_runner.verify_prerequisites` calls the real
+`freeze_unit` with that current attempt root, and `freeze_unit` immediately calls
+`verify_pricing_receipt(root, pricing)`. No historical root, archive manifest or
+equivalent resolver crosses that runtime boundary. Consequently, successful
+plan construction does not prove that a real unit can complete its pre-inference
+freeze. This is an inferred fail-closed prerequisite risk, not a claimed
+executed failure.
+
+The current tests leave the same boundary open: runner coverage mocks
+`freeze_unit`, while native-command coverage requires staged current paths but
+does not require runtime historical-evidence plumbing. The next legal step is a
+non-mocked CPU red test over the real runner-to-freezer path with distinct
+current and historical roots. The repair must revalidate the pinned historical
+revision, clean tracked state, archive-manifest hash and every consumed old byte
+inside each unit, while keeping current code, GPU UUID, environment, models,
+dataset and scorer bound to the current attempt. Only after the complete CPU
+suite returns raw red/green receipts and an exact regenerated plan may Web review
+dispatch again.
+
+The committed `LOCAL_EXECUTION_RECEIPT_R2.md` is a useful source-safe summary,
+but the three newly reported raw receipt JSON files/logs and exact historical
+archive manifest are not on `main`; their digests occur only in that summary.
+Independent receipt replay therefore remains pending. Web performed static
+source, JSON and SHA-256 review only: zero project tests, builders, scorers,
+models or GPU workloads. Native scientific qualification, trusted replay,
+candidate native results and formal outcomes remain **0/15** and **0**.

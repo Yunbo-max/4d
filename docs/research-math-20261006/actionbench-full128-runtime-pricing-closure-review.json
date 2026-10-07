@@ -1,0 +1,129 @@
+{
+  "kind": "actionbench-full128-runtime-pricing-closure-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T21:07:14Z",
+  "reviewed_commit": "240bd0dd3556bdd64830b75ebde496bf0de8dc8d",
+  "status": "plan_validated_runtime_closure_unproven_dispatch_blocked",
+  "scope": "Static source and committed-artifact review only. Web ran no project tests, plan builders, scorer, model, or GPU workload.",
+  "returned_local_evidence": {
+    "receipt": {
+      "path": "docs/research-math-20261006/longgoal-20261007/LOCAL_EXECUTION_RECEIPT_R2.md",
+      "sha256": "eabd78b841916b31bef0bef59337e39568400378840b0221b79ec56d41b938b8"
+    },
+    "reported_software_runs": [
+      {
+        "run_id": "closure-archive-acceptance-r4-20261007",
+        "reported_result": "302/302 passed",
+        "reported_receipt_sha256": "55dec8c677bef768a4ad4d11ae51920df35e9b9ff746240b2c25b6e22848653a"
+      },
+      {
+        "run_id": "closure-archive-acceptance-r5-red-20261007",
+        "reported_result": "302 passed; one expected failure and one expected error",
+        "reported_receipt_sha256": "dd378fb5de5b28d3360d304b6fa59882fd0c52a7d7f3e22f3f43222c7272144f"
+      },
+      {
+        "run_id": "closure-archive-acceptance-r6-green-20261007",
+        "reported_result": "304/304 passed",
+        "reported_receipt_sha256": "673c32ee701b84a57da85bc51c4bdb94e65366c890f51503c4d30a54499384c5"
+      }
+    ],
+    "raw_receipts_committed": false,
+    "raw_receipt_search_result": "The three reported receipt digests occur only in LOCAL_EXECUTION_RECEIPT_R2.md; their receipt JSON, attempt logs, and exact historical archive manifest bytes are not present on main for independent replay.",
+    "window_02": {
+      "reported_outer_plan_digest": "d7e5558a08aafcc1c996ebae558aa74b77eda42c9179ff1bb01291feccab6ab9",
+      "reported_population_indices": [16, 31],
+      "reported_unit_count": 16,
+      "reported_input_refs_per_unit": 232,
+      "reported_code_refs_per_unit": 60,
+      "reported_workload_seconds": 26624,
+      "outer_window_seconds": 28800,
+      "execution_started": false,
+      "official_validation_reported": true,
+      "dispatch_accepted_by_this_review": false
+    }
+  },
+  "source_findings": [
+    {
+      "id": "F1",
+      "severity": "critical_before_dispatch",
+      "finding": "The compiler validates the pricing receipt against the exact historical R7 root only while building the plan.",
+      "evidence": [
+        {
+          "path": "actionmesh/prepare_actionbench_full128_window.py",
+          "sha256": "f145925e391c6975692b3913365cc3e4b376af17e7aa72b9aadc3461884d5e95",
+          "lines": [551, 576]
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "severity": "critical_before_dispatch",
+      "finding": "The emitted native command passes only the current staged root and pricing path. It passes neither the historical root nor the historical archive manifest to the runner.",
+      "evidence": [
+        {
+          "path": "actionmesh/prepare_actionbench_full128_window.py",
+          "sha256": "f145925e391c6975692b3913365cc3e4b376af17e7aa72b9aadc3461884d5e95",
+          "lines": [448, 476]
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "severity": "critical_before_dispatch",
+      "finding": "At real unit startup, complete_unit_runner calls freeze_unit with args.root. freeze_unit immediately calls verify_pricing_receipt on that current attempt root; the runtime call chain has no historical resolver parameter.",
+      "evidence": [
+        {
+          "path": "actionmesh/research_math/complete_unit_runner.py",
+          "sha256": "416fe4ad1f51baa921735500499627a2b5c6e78cb786a452bb370c5ef2720850",
+          "lines": [94, 117]
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_full128_unit.py",
+          "sha256": "3f96b538c0d32adc82348c6dba032795d1395e07397725ec0c2918b1e9b46bcc",
+          "lines": [63, 82, 188, 205]
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "severity": "test_gap",
+      "finding": "The runner prerequisite test mocks freeze_unit, while native-command tests assert staged current paths and do not require a runtime historical resolver. No committed test exercises the real runner-to-freezer pricing verification with distinct current and historical roots.",
+      "evidence": [
+        {
+          "path": "actionmesh/research_math/tests/test_complete_unit_runner.py",
+          "sha256": "66a73fe180f694bc79e24e707712146537536decfdc5a99846e06305bd687702",
+          "lines": [56, 84]
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+          "sha256": "438f58ee2d6ff64327c65080f1e6ed20ac588e1f6f39b97656a6694a76b07812",
+          "lines": [1080, 1121]
+        }
+      ]
+    }
+  ],
+  "inference": "Because plan construction and unit execution use different pricing-evidence roots, the validated plan does not establish that the first real unit can pass pre-inference freeze/revalidation. The most likely result is a fail-closed prerequisite error before model execution, but this review does not claim an executed failure.",
+  "required_repair": {
+    "tdd_red_first": "Add a non-mocked CPU test that invokes the real Full128 prerequisite/freeze path with a current attempt root plus a distinct exact historical root and archive manifest. The test must fail on the reviewed commit before implementation.",
+    "runtime_contract": [
+      "Carry the exact historical R7 revision and hash-pinned archive manifest into every unit command, or materialize an equivalent attempt-local historical resolver whose bytes and mapping are independently revalidated.",
+      "Revalidate historical root revision, clean tracked state, archive-manifest SHA-256, and every consumed historical byte inside the unit before inference.",
+      "Keep current source, environment, dataset, weights, GPU UUID, scorer, and output paths bound to the current attempt; historical evidence must not replace executable/current-device inputs.",
+      "Reject missing, mutable, symlinked, ambiguous, unmatched, or current-byte-substituted historical evidence before creating the revalidated unit manifest.",
+      "Regenerate Window-02 only after the repaired code passes the complete CPU software harness and return the raw red/green receipts plus exact plan bytes for independent review."
+    ],
+    "dispatch_gate": "Do not execute Window-02 or any other Full128 GPU unit until the runtime double-root closure is implemented, tested without mocking freeze_unit, and independently reviewed.",
+    "coverage_gap": "Canonical indices 10-15 remain unplanned and must be covered without omission or overlap after the same runtime repair."
+  },
+  "claims": {
+    "software_receipt_summary_returned": true,
+    "raw_software_receipts_independently_verified": false,
+    "window_plan_reported_generated_and_validated": true,
+    "window_plan_independently_replayed": false,
+    "runtime_pricing_closure_proven": false,
+    "gpu_execution_started_in_this_review": false,
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}
