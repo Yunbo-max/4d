@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T16:25:42Z",
+  "updated_at": "2026-10-07T16:33:14Z",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Two population units completed; third worker identity checked live; six pending. The new canonical window compiler is source-reviewed but unexecuted and cannot overlap the active r9 run.",
+  "current_task": "Three population units completed; population-004 Stage I generation running normally; five pending. Independent watcher confirms live worker/GPU and no errors.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -410,10 +410,10 @@
     "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
     "launched_at": "2026-10-07T15:32:28.057578+00:00",
     "gpu_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
-    "observed_at": "2026-10-07T16:25:42Z",
-    "completed": 2,
+    "observed_at": "2026-10-07T16:33:14Z",
+    "completed": 3,
     "running": 1,
-    "pending": 6,
+    "pending": 5,
     "failed": 0,
     "previous_gpu_sample": {
       "observed_at": "2026-10-07T15:39:08Z",
@@ -424,14 +424,26 @@
       "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
       "elapsed_seconds": 1203.9668408543803,
       "scores": {
-        "native": {"cd_3d": 0.05499049531342125, "cd_4d": 0.05813780831827206, "cd_motion": 0.06586745381355286},
-        "world_gaussian": {"cd_3d": 0.055023380932516394, "cd_4d": 0.05831302472310834, "cd_motion": 0.066110759973526},
-        "body_gaussian": {"cd_3d": 0.0550265464452451, "cd_4d": 0.05810375509495849, "cd_motion": 0.06577248871326447}
+        "native": {
+          "cd_3d": 0.05499049531342125,
+          "cd_4d": 0.05813780831827206,
+          "cd_motion": 0.06586745381355286
+        },
+        "world_gaussian": {
+          "cd_3d": 0.055023380932516394,
+          "cd_4d": 0.05831302472310834,
+          "cd_motion": 0.066110759973526
+        },
+        "body_gaussian": {
+          "cd_3d": 0.0550265464452451,
+          "cd_4d": 0.05810375509495849,
+          "cd_motion": 0.06577248871326447
+        }
       },
       "device_memory": {
         "sample_interval_seconds": 1,
         "samples": 1084,
-        "observed_peak_mib": 10255,
+        "observed_peak_mib": 10255.0,
         "exact_peak": false,
         "errors": []
       },
@@ -439,13 +451,15 @@
       "scientific_effect_qualification": false
     },
     "verified_worker": {
-      "task": "population-003",
-      "pid": 21563,
+      "task": "population-004",
+      "pid": 29192,
       "proc_start_identity_match": true,
       "latest_stage": "official scoring in progress",
-      "generation_pid": null,
-      "generation_start_ticks": "211519477",
-      "generation_process_status": "completed and exited normally"
+      "generation_pid": 29458,
+      "generation_start_ticks": "211633784",
+      "generation_process_status": "completed and exited normally",
+      "generation_stage": "Stage I 2/30",
+      "generation_state": "R"
     }
   },
   "actionbench_full128_queue_pricing": {
@@ -483,63 +497,8 @@
     ],
     "next_action": "Prepare isolated two-job co-location qualification at next safe batch boundary; retain only if bounds and useful throughput pass; independent preparation may overlap."
   },
-  "supervision": {
-    "goal_status": "recreated after interface again returned null; active creation acknowledged",
-    "monitor_interval_seconds": 1200,
-    "agent_check_cadence": "approximately 20 minutes; investigate new errors and prepare following windows",
-    "goal_created_epoch": 1791388713,
-    "limitations": "Persistent goal requires host/client availability and tool access; remote journal alone is not an AI debugger. No claim of scientific completion.",
-    "subagent": "/root/gpu_watch_r9",
-    "subagent_status": "independent SSH verification received; ongoing monitor",
-    "monitor_authority": "read-only; main agent retains debugging and dispatch",
-    "ssh_session": 87817,
-    "last_independent_check": "2026-10-07T16:25:42Z",
-    "generation_pid": 21821,
-    "generation_start_ticks": "211519477",
-    "driver_pid": 3157,
-    "driver_start_ticks": "211281789",
-    "worker_pid": 21563,
-    "worker_start_ticks": "211515640",
-    "gpu_utilization_percent": 41,
-    "gpu_memory_mib": 395,
-    "free_disk_bytes": 22585651200,
-    "latest_stage": "population-003 official score; native arm Success=1 Failed=0, CD_3D≈0.056 CD_4D≈0.111 CD_motion≈0.285; remaining arms still scoring",
-    "watcher_pid": 23223,
-    "watcher_status": "live; next full check approximately 20 minutes later",
-    "latest_queue_counts": {
-      "completed": 2,
-      "running": 1,
-      "pending": 6,
-      "failed": 0
-    },
-    "latest_running_unit": "population-003; generation completed; official scoring in progress",
-    "latest_scoring_pids": {
-      "official_wrapper": 25883,
-      "official_wrapper_start_ticks": "211585585",
-      "deterministic_scorer": 26990,
-      "deterministic_scorer_start_ticks": "211599374",
-      "deterministic_scorer_state": "R"
-    },
-    "latest_observed_errors": []
-  },
-  "next_window_preparation": {
-    "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
-    "source_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
-    "software_plan": "plans/software-r10/harness.json",
-    "software_plan_digest": "5c6f38b196fef2d622d60484582f2936b8a5eae5bf41f4e2e05f12e5520c97d3",
-    "software_checks_executed": false,
-    "manifest_plans_record": "plans/CONTINUATION_MANIFESTS.json",
-    "population_indices": [10, 127],
-    "population_units": 118,
-    "batches": 8,
-    "static_validation": "all nine CPU-only harness plans accepted",
-    "workloads_started": false,
-    "prerequisites": "r9 host-pool release; software-r10 accepted before manifest workloads; promote receipt-bound inputs and review new GPU plans before dispatch",
-    "unit_timeout_seconds_proposed": 1664,
-    "timeout_evidence": "admitted r7 pricing; r9 first current-card complete unit 1203.9668408543803s; reassess further current-card units before GPU dispatch"
-  },
   "full128_per_uid_freeze": {
-    "status": "generated_unexecuted_source_pricing_observed",
+    "status": "prospective_freezer_and_runner_mode_authored_unexecuted",
     "contract": "docs/research-math-20261006/actionbench-full128-unit-freeze-contract.json",
     "freezer": "actionmesh/research_math/actionbench_full128_unit.py",
     "runner": "actionmesh/research_math/complete_unit_runner.py",
@@ -550,8 +509,8 @@
     "dataset_files_rehashed_per_uid": 18,
     "tests_authored": 12,
     "tests_executed": 0,
-    "window_plan_compiler_authored": true,
-    "queue_priced": true,
+    "window_plan_compiler_authored": false,
+    "queue_priced": false,
     "queue_approved": false,
     "queue_generated": false,
     "dispatch_ready": false,
@@ -559,41 +518,67 @@
     "native_scientific_qualification": false,
     "candidate_methods_tested": false
   },
-  "full128_window_compiler": {
-    "status": "generated_unexecuted_active_overlap_reconciliation_required",
-    "base_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
-    "contract": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
-    "compiler": "actionmesh/prepare_actionbench_full128_window.py",
-    "tests": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
-    "source_review": "docs/research-math-20261006/actionbench-full128-window-plan-source-review.json",
-    "checkpoint": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-window-plan.json",
-    "compiler_sha256": "207c1ea2890655824e1a01a2a98f6cd5dd78eaa9821156752ec93752c41dfa3c",
-    "tests_sha256": "b434c8a0107552f3d7cafd8e4975b6395872fecf42e09ec625f48549aa392450",
-    "tests_authored": 8,
-    "tests_executed": 0,
-    "expected_current_test_methods": 278,
-    "source_pricing_observed": true,
-    "pricing_sha256": "83a02e7e0f5609336de8c9fd6f93f1d0b0e6132cc916375f1a407ee47293ae5e",
-    "unit_timeout_seconds": 1664,
-    "units_per_window": 16,
-    "planned_workload_seconds": 26624,
-    "hard_window_seconds": 28800,
-    "harness_total_wall_seconds": 27000,
-    "collection_reserve_seconds": 1800,
-    "environment_path": "inputs/native-runtime/environment.json",
-    "attempt_relative_repository_paths": true,
-    "max_parallel_gpu_tasks": 1,
-    "active_overlap_run_id": "population-gpu-current-r9",
-    "active_overlap_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-    "active_overlap_last_observed_at": "2026-10-07T16:25:42Z",
-    "active_overlap_state": "two completed, one independently verified in official scoring, six pending at the returned checkpoint",
-    "overlap_policy": "reconcile the exact active run before generating or dispatching any overlapping window; never duplicate accepted/running UIDs",
-    "queue_priced": true,
-    "queue_generated": false,
-    "queue_approved": false,
-    "dispatch_ready": false,
-    "scientific_effect_qualification": false,
-    "native_scientific_qualification": false,
-    "candidate_methods_tested": false
+  "supervision": {
+    "goal_status": "recreated after interface again returned null; active creation acknowledged",
+    "monitor_interval_seconds": 1200,
+    "agent_check_cadence": "approximately 20 minutes; investigate new errors and prepare following windows",
+    "goal_created_epoch": 1791388713,
+    "limitations": "Persistent goal requires host/client availability and tool access; remote journal alone is not an AI debugger. No claim of scientific completion.",
+    "subagent": "/root/gpu_watch_r9",
+    "subagent_status": "independent SSH verification received; ongoing monitor",
+    "monitor_authority": "read-only; main agent retains debugging and dispatch",
+    "ssh_session": 87817,
+    "last_independent_check": "2026-10-07T16:33:14Z",
+    "generation_pid": 21821,
+    "generation_start_ticks": "211519477",
+    "driver_pid": 3157,
+    "driver_start_ticks": "211281789",
+    "worker_pid": 29192,
+    "worker_start_ticks": "211629949",
+    "gpu_utilization_percent": 100,
+    "gpu_memory_mib": 10255,
+    "free_disk_bytes": 22573731840,
+    "latest_stage": "population-004 generation Stage I 2/30; generation PID 29458 state R, matched parent runner; model-loading transition caused earlier transient 0 MiB; no OOM/Traceback",
+    "watcher_pid": 23223,
+    "watcher_status": "live; 20-minute checks and immediate error alert continue",
+    "latest_queue_counts": {
+      "completed": 3,
+      "running": 1,
+      "pending": 5,
+      "failed": 0
+    },
+    "latest_running_unit": "population-004; Stage I generation running",
+    "latest_scoring_pids": {
+      "official_wrapper": 25883,
+      "official_wrapper_start_ticks": "211585585",
+      "deterministic_scorer": 26990,
+      "deterministic_scorer_start_ticks": "211599374",
+      "deterministic_scorer_state": "R"
+    },
+    "latest_observed_errors": [],
+    "latest_generation_process": {
+      "pid": 29458,
+      "start_ticks": "211633784",
+      "state": "R"
+    }
+  },
+  "next_window_preparation": {
+    "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
+    "source_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+    "software_plan": "plans/software-r10/harness.json",
+    "software_plan_digest": "5c6f38b196fef2d622d60484582f2936b8a5eae5bf41f4e2e05f12e5520c97d3",
+    "software_checks_executed": false,
+    "manifest_plans_record": "plans/CONTINUATION_MANIFESTS.json",
+    "population_indices": [
+      10,
+      127
+    ],
+    "population_units": 118,
+    "batches": 8,
+    "static_validation": "all nine CPU-only harness plans accepted",
+    "workloads_started": false,
+    "prerequisites": "r9 host-pool release; software-r10 accepted before manifest workloads; promote receipt-bound inputs and review new GPU plans before dispatch",
+    "unit_timeout_seconds_proposed": 1664,
+    "timeout_evidence": "admitted r7 pricing; r9 first current-card complete unit 1203.9668408543803s; reassess further current-card units before GPU dispatch"
   }
 }
