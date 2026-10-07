@@ -1,0 +1,40 @@
+{
+  "kind": "source-review",
+  "status": "parity_finalization_harness_generated_unexecuted",
+  "recorded_at": "2026-10-07T04:02:18Z",
+  "base_commit": "32bef65ff6c8008e5692a5ab8bacde54a789a066",
+  "reviewed_sources": [
+    {"path": "actionmesh/prepare_actionbench_parity_finalization.py", "sha256": "d736cb12de58a2b6891e3f75d89ff263d23c266694b4ba5c99d503f777293db1"},
+    {"path": "actionmesh/prepare_control_scoring_checks.py", "sha256": "3d5d6a5cf470c10e28c6323526471623476fa00b85adc15f386bad71d6fe11bd"},
+    {"path": "actionmesh/research_math/tests/test_actionbench_parity.py", "sha256": "14aacdcd5d3c9afb4ff4899a230e33acba54357d16dabf8a5fbfcf0db1b3a370"},
+    {"path": "actionmesh/research_math/tests/test_control_plan.py", "sha256": "b900a5be4f66839df8fc7947e5dfdf67905c5bcd25cd2417995e0e6c6d847bab"},
+    {"path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md", "sha256": "4bd4614a4e431fd8c92aa90ac45475f68e4e74b2ff5721a897d5ba7b044a35cb"},
+    {"path": "LOCAL_AGENT_RUNBOOK.md", "sha256": "e0b2b06920f92240e1b312efa83ddfe2bedbd2eaf754145f82b8cbbf5c2f43db"},
+    {"path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md", "sha256": "803e8cd81ca91ac059526eb31db05f61e8469bf2a0d492bf6ad875be5d8e5f74"}
+  ],
+  "finding": {
+    "severity": "important_execution_boundary_gap",
+    "problem": "The documented post-promotion finalizer was invoked directly, outside the required single harness execution owner.",
+    "scientific_effect": "none; this closes engineering provenance only and does not qualify a score"
+  },
+  "resolution": {
+    "plan_builder": "actionmesh/prepare_actionbench_parity_finalization.py",
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "recursive_reference_closure": true,
+    "canonical_execution_origin_bound": true,
+    "single_declared_output": "actionmesh/actionbench-parity-output/faithful-harness-verification.json",
+    "direct_finalizer_execution_forbidden": true
+  },
+  "static_checks": {
+    "python_ast_parse": "passed",
+    "git_diff_check": "passed",
+    "authored_test_methods_observed": 152,
+    "new_checks_authored": 3,
+    "new_checks_executed": 0,
+    "repository_tests_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "next_executable_step": "Local runs current whole-suite acceptance, executes parity, promotes the complete bundle, generates the CPU-only finalization plan, executes its exact approved digest, and promotes the receipt-bound sidecar with a matching hash."
+}

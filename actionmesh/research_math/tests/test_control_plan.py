@@ -25,6 +25,8 @@ class ControlPlanTest(unittest.TestCase):
                  for path in acceptance.acceptance_sources(project_root)}
         self.assertIn('actionmesh/finalize_actionbench_parity.py', paths)
         self.assertIn(
+            'actionmesh/prepare_actionbench_parity_finalization.py', paths)
+        self.assertIn(
             'actionmesh/research_math/tests/test_actionbench_parity.py', paths)
 
     def project(self, root):

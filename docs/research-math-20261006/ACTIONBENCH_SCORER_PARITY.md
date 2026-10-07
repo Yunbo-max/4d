@@ -143,29 +143,50 @@ official/faithful output hash against the promoted tree; retain the original
 harness attempt and promotion receipt. A partial promotion leaves the sidecar
 inadmissible.
 
-Run the controller-side finalizer only after that complete copy:
+Do not run the finalizer directly. After that complete copy, generate a second,
+CPU-only engineering harness plan that pins the promoted bundle and the complete
+canonical parity execution record:
 
 ```bash
-"$python_bin" "$project_dir/actionmesh/finalize_actionbench_parity.py" \
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_parity_finalization.py" \
   --root "$project_dir" \
   --request "$project_dir/plans/control-scoring-request-000-048.json" \
   --contract "$project_dir/plans/actionbench-official-faithful-parity-001/actionbench-scorer-equivalence-contract.json" \
   --output "$project_dir/actionmesh/actionbench-parity-output" \
-  --harness-plan "$project_dir/plans/actionbench-official-faithful-parity-001/harness.json" \
-  --harness-report "$project_dir/runs/harness/actionbench-official-faithful-parity-001/report.json" \
-  --native-plan "$project_dir/plans/actionbench-official-faithful-parity-001/native.json" \
-  --native-receipt "$project_dir/runs/attempts/actionbench-official-faithful-parity-001/receipt.json" \
-  --approved-plan-digest <the-exact-digest-approved-for-the-harness-run>
+  --parity-harness-plan "$project_dir/plans/actionbench-official-faithful-parity-001/harness.json" \
+  --parity-harness-report "$project_dir/runs/harness/actionbench-official-faithful-parity-001/report.json" \
+  --parity-native-plan "$project_dir/plans/actionbench-official-faithful-parity-001/native.json" \
+  --parity-native-receipt "$project_dir/runs/attempts/actionbench-official-faithful-parity-001/receipt.json" \
+  --approved-parity-plan-digest <the-exact-digest-approved-for-the-parity-run> \
+  --skill-dir "$skill_dir" \
+  --run-id actionbench-parity-finalization-001 \
+  --plan-dir "$project_dir/plans/actionbench-parity-finalization-001" \
+  --wall-seconds 300 --ram-mib 2048 --cpu-cores 1
 ```
 
-The finalizer re-resolves every bound hash, requires the exact promoted target,
+Capture the newly printed finalization digest, inspect the generated plan, and
+execute that exact digest through `run_harness.py`. From the completed native
+receipt, locate the one declared output
+`faithful-harness-verification.json`; copy that receipt-bound file into the
+already promoted bundle target and verify the source/destination hashes match.
+Do not guess an attempt ID or rerun the finalizer directly.
+
+```bash
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/actionbench-parity-finalization-001/harness.json" \
+  --root "$project_dir" --execute \
+  --approved-plan-digest <the-exact-finalization-plan-digest>
+```
+
+The harnessed finalizer re-resolves every bound hash, requires the exact promoted target,
 and verifies the approved outer-plan digest, completed harness report, native
 plan/receipt, one engineering scorer-parity attempt, complete declared-output
 inventory and the harness-recorded attestation hash. It converts only the
 path-canonical parity descriptor into the unchanged
 absolute faithful descriptor required by `control_scoring.py`; its generated
 `faithful-harness-verification.json` is the only sidecar eligible for later
-scientific protocol admission.
+scientific protocol admission. This finalization task requests zero GPUs and
+does not qualify a scientific score.
 
 Then freeze a complete scientific protocol whose scorer is the
 faithful descriptor plus that `verification_ref`, whose sample manifest exactly

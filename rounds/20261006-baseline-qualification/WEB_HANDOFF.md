@@ -95,7 +95,8 @@ Confirm its `code_refs` includes the post-promotion parity finalizer; historical
 127/127 evidence predates that source and is not current acceptance.
 Then source-inspect and run the protocol-free engineering parity plan from
 `ACTIONBENCH_SCORER_PARITY.md`, promote its complete passed output bundle and run
-the committed post-promotion finalizer. Preserve its exact one-UID scope. Scientific
+the committed CPU-only post-promotion finalization harness; direct finalizer
+execution is forbidden. Preserve its exact one-UID scope. Scientific
 baseline scoring remains blocked until a genuine source-backed protocol exists.
 
 ## Runtime supplement — 2026-10-06

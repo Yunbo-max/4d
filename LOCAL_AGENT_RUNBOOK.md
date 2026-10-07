@@ -208,14 +208,17 @@ trusted nonce-bound replay.
 
 Run this engineering parity step before attempting to author the scientific
 qualification protocol. After a pass, promote and hash the **complete** output
-bundle to the exact project-relative target specified by the sidecar; copying the
-sidecar alone is invalid because its record, raw-output and prediction refs must
-remain resolvable. Then run `actionmesh/finalize_actionbench_parity.py` with the
-promoted target, exact request and generated equivalence contract. Only its
-post-promotion `faithful-harness-verification.json` may be referenced by a later
-scientific protocol. Supply the exact approved harness digest, harness
-plan/report and native plan/receipt; finalization must fail if the promoted
-attestation or any declared output is absent from those completed receipts.
+bundle to the exact project-relative target specified by the attestation; copying
+a summary alone is invalid because its record, raw-output and prediction refs must
+remain resolvable. Then follow the CPU-only finalization plan in
+`ACTIONBENCH_SCORER_PARITY.md`: use
+`actionmesh/prepare_actionbench_parity_finalization.py`, inspect its pinned input
+closure, and execute its exact digest through `run_harness.py`. Do not invoke the
+finalizer directly. Promote the receipt-bound
+`faithful-harness-verification.json` from that completed attempt into the already
+promoted bundle and verify its hash. Only that post-promotion sidecar may be
+referenced by a later scientific protocol. Finalization must fail if the promoted
+attestation or any declared output is absent from the completed parity receipts.
 
 ### 6b. Freeze the scientific qualification protocol
 

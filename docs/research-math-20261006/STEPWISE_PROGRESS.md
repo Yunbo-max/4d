@@ -374,3 +374,30 @@ official scores are zero, and candidate designs/results/verdicts remain **0/15**
 Next: Local regenerates the acceptance plan at the delivered revision, confirms
 the finalizer ref, runs its exact approved digest, then proceeds to parity only
 after that current-revision acceptance passes.
+
+## Continuation: harness the post-parity finalizer — 2026-10-07
+
+No new Local/GPU return followed `32bef65`. Source review found that the parity
+procedure still instructed Local to invoke `finalize_actionbench_parity.py`
+directly after bundle promotion. That is an executable evidence-collection step
+outside the required single harness owner, even though the parity scorer itself
+was already harnessed.
+
+The new `prepare_actionbench_parity_finalization.py` generates a second,
+CPU-only engineering plan. It recursively pins the promoted bundle, nested file
+references, canonical outer/native plans and receipts, task/state/result records,
+original attempt record, and every declared parity output. Its only declared
+output is the single-use `faithful-harness-verification.json`; Local must promote
+that receipt-bound sidecar back into the already complete bundle and verify its
+hash. Direct finalizer execution is now forbidden in the protocol, runbook and
+round handoff.
+
+Three focused regression checks were authored for nested-reference closure,
+canonical execution-origin paths, and the finalization source inventory. Web
+parsed the four changed Python files and observed 152 authored `test_*` methods
+statically; it did **not** execute them, the finalizer, either harness, a scorer,
+or a GPU workload. Scientific state remains unchanged: parity is unexecuted,
+official scores are zero, and candidate designs/results/verdicts remain **0/15**.
+Next: Local runs current software acceptance, parity, complete bundle promotion,
+then the new CPU-only finalization plan before any scientific protocol can cite
+the sidecar.

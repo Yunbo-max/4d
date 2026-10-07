@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T02:54:36Z",
+  "recorded_at": "2026-10-07T04:02:18Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). The current whole-suite plan's missing parity-finalizer import closure is repaired but unexecuted; the historical test result does not accept this revision. Official/faithful scorer equivalence remains a generated, unexecuted engineering plan. Scientific scoring still lacks a source-backed per-asset performance threshold; there is no official score, scorer parity result, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the new CPU-only post-promotion finalization harness are generated but unexecuted; the historical test result does not accept this revision. Scientific scoring still lacks a source-backed per-asset performance threshold; there is no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -235,6 +235,30 @@
     "historical_result_accepts_current_revision": false,
     "current_authored_test_methods_observed": 149,
     "new_checks_authored": 1,
+    "new_checks_executed": 0,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_parity_finalization_harness": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-07T04:02:18Z",
+    "base_commit": "32bef65ff6c8008e5692a5ab8bacde54a789a066",
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-parity-finalization-harness-source-review.json",
+      "sha256": "07a931372a140370ae7dc260ed59a44bfdd36f7a3391993879ce5dcefeac943b"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-parity-finalization-harness.json",
+      "sha256": "aa27f472d37e8056e6002e46c63f1edd87edf97c35b0e6b57f797ade575ff4ea"
+    },
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "recursive_reference_closure": true,
+    "canonical_execution_origin_bound": true,
+    "direct_finalizer_execution_allowed": false,
+    "current_authored_test_methods_observed": 152,
+    "new_checks_authored": 3,
     "new_checks_executed": 0,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,

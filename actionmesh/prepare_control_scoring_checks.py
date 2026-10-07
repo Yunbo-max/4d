@@ -15,6 +15,7 @@ ROOT_SOURCES = (
     'official_actionbench_adapter.py',
     'prepare_actionbench_parity.py',
     'finalize_actionbench_parity.py',
+    'prepare_actionbench_parity_finalization.py',
 )
 
 

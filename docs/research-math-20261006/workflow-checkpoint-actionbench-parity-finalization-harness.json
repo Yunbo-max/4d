@@ -1,0 +1,41 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "status": "parity_finalization_harness_generated_unexecuted",
+  "recorded_at": "2026-10-07T04:02:18Z",
+  "base_commit": "32bef65ff6c8008e5692a5ab8bacde54a789a066",
+  "decision": "Keep post-parity evidence finalization under the same bounded harness contract as every other executable project and collection step.",
+  "delivery": {
+    "finalization_builder_ref": {"path": "actionmesh/prepare_actionbench_parity_finalization.py", "sha256": "d736cb12de58a2b6891e3f75d89ff263d23c266694b4ba5c99d503f777293db1"},
+    "acceptance_builder_ref": {"path": "actionmesh/prepare_control_scoring_checks.py", "sha256": "3d5d6a5cf470c10e28c6323526471623476fa00b85adc15f386bad71d6fe11bd"},
+    "parity_tests_ref": {"path": "actionmesh/research_math/tests/test_actionbench_parity.py", "sha256": "14aacdcd5d3c9afb4ff4899a230e33acba54357d16dabf8a5fbfcf0db1b3a370"},
+    "acceptance_tests_ref": {"path": "actionmesh/research_math/tests/test_control_plan.py", "sha256": "b900a5be4f66839df8fc7947e5dfdf67905c5bcd25cd2417995e0e6c6d847bab"},
+    "protocol_ref": {"path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md", "sha256": "4bd4614a4e431fd8c92aa90ac45475f68e4e74b2ff5721a897d5ba7b044a35cb"},
+    "source_review_ref": {"path": "docs/research-math-20261006/actionbench-parity-finalization-harness-source-review.json", "sha256": "07a931372a140370ae7dc260ed59a44bfdd36f7a3391993879ce5dcefeac943b"},
+    "progress_ref": {"path": "docs/research-math-20261006/STEPWISE_PROGRESS.md", "sha256": "98d60b10dd8c2d919fc4e81fd3fa7f90bea782bd14a74592277cead43f221e1c"}
+  },
+  "acceptance_boundary": {
+    "finalization_plan_purpose": "engineering",
+    "finalization_gpu_count": 0,
+    "complete_promoted_bundle_required": true,
+    "canonical_parity_execution_origin_required": true,
+    "receipt_bound_sidecar_promotion_required": true,
+    "direct_finalizer_execution_allowed": false,
+    "current_suite_executed": false,
+    "scientific_gate_advanced": false
+  },
+  "verification": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "authored_test_methods_observed": 152,
+    "new_checks_authored": 3,
+    "new_checks_executed": 0,
+    "gpu_workloads_executed": 0,
+    "native_scorer_invocations": 0
+  },
+  "next_executable_step": "Local accepts the current suite, runs parity and complete bundle promotion, then generates and executes the exact CPU-only finalization harness plan before promoting its one receipt-bound sidecar.",
+  "official_scores_run": 0,
+  "candidate_validation_designs_complete": 0,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0
+}

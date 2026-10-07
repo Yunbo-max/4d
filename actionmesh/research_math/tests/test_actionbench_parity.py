@@ -12,6 +12,7 @@ if str(ACTIONMESH) not in sys.path:
 
 import official_actionbench_adapter as official
 import finalize_actionbench_parity as finalizer
+import prepare_actionbench_parity_finalization as finalization
 from research_math.actionbench_parity import (
     exact_comparison,
     one_case,
@@ -112,6 +113,54 @@ class OfficialAdapterContractTests(unittest.TestCase):
 
 
 class ParityReadoutTests(unittest.TestCase):
+    def test_finalization_reference_closure_follows_nested_refs(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            nested = root / "nested.txt"
+            nested.write_text("evidence")
+            document = root / "document.json"
+            document.write_text(json.dumps({"nested_ref": file_ref(root, nested)}))
+
+            refs = finalization.reference_closure(root, [document])
+
+            self.assertEqual(
+                {ref["path"] for ref in refs}, {"document.json", "nested.txt"})
+
+    def test_finalization_origin_paths_include_canonical_runtime_records(self):
+        root = Path("/project").resolve()
+        harness_plan = {
+            "output_root": "runs/harness", "batch_id": "parity",
+            "tasks": [{"task_id": "actionbench-official-faithful-parity"}],
+        }
+        native_plan = {"output_root": "runs/attempts", "run_id": "parity"}
+        receipt = {"attempts": [{
+            "attempt_id": "attempt-001",
+            "attempt_path": "runs/attempts/parity/attempt-001",
+        }]}
+
+        paths = set(finalization.canonical_origin_paths(
+            root, harness_plan, native_plan, receipt))
+
+        self.assertIn(root / "runs/harness/parity/report.json", paths)
+        self.assertIn(
+            root / "runs/harness/parity/tasks/"
+            "actionbench-official-faithful-parity/result.json", paths)
+        self.assertIn(root / "runs/attempts/parity/receipt.json", paths)
+        self.assertIn(
+            root / "runs/attempts/parity/attempt-001/attempt.json", paths)
+
+    def test_finalization_reference_closure_rejects_changed_nested_ref(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            nested = root / "nested.txt"
+            nested.write_text("original")
+            document = root / "document.json"
+            document.write_text(json.dumps({"nested_ref": file_ref(root, nested)}))
+            nested.write_text("changed")
+
+            with self.assertRaisesRegex(ValueError, "Changed pinned file"):
+                finalization.reference_closure(root, [document])
+
     def test_finalizer_rejects_noncanonical_receipt_path(self):
         with self.assertRaisesRegex(ValueError, "Canonical native receipt"):
             finalizer.require_canonical_path(
