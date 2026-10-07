@@ -4,20 +4,18 @@
 
 This runbook is the Local Codex entry point for round `20261006-baseline-qualification`. It covers acceptance of the committed control/scoring software, recovery and verification of one original development asset, construction of the three-arm baseline unit, native-scoring replay, integrity validation, and evidence return.
 
-Latest execution evidence is
-`docs/research-math-20261006/longgoal-20261007/README.md`. It records 258/258
-software checks on the pre-`a408422` r9 source, exact-zero official/faithful parity
-for all nine one-UID/three-arm metric comparisons under the explicit GPU-forward
-plus upstream CPU-backward compatibility policy, and successful CPU
-finalization. This is engineering scorer-equivalence evidence only: no native
-scientific contract was qualified and no candidate ran. A later direct macOS
-Python 3.9 discovery attempt ran 259 checks with 9 failures and 13 errors; it was
-outside the harness, used an incomplete/incompatible checkout and is not software
-acceptance. This revision adds new Full128 checks and fixes their harness import
-closure, so rerun current-revision software acceptance on the Linux GPU host, but do not
-repeat the already finalized parity unless one of its bound source/input hashes
-has changed. Continue from snapshot/data staging after verifying the retained
-evidence hashes.
+Latest execution evidence is summarized in
+`docs/research-math-20261006/actionbench-full128-r9-r10-return-review.json`.
+The returned archive passed a complete 1,617-file size/SHA-256 audit. The Linux
+harness ran 294/294 software checks successfully, and all 72 receipt-pinned
+`code_refs` match the current code tree. The immutable r9 pair is terminal at
+9/9 completed; its reconciliation and eight CPU-only r10 manifest batches
+covering indices 10-127 are returned. These are engineering/software/input facts
+only: no current-device native scientific contract was qualified and no
+candidate ran. Do not repeat the accepted suite or finalized parity unless a
+bound source/input hash changes. Window-plan preparation is currently blocked by
+historical-r7 reference closure and a stale GPU environment identity; do not
+launch GPU work while resolving it.
 
 There are 20 mathematical constructions and 15 conditionally selected candidates,
 but **0/15 candidate implementations have a complete validation design and 0/15
@@ -55,7 +53,7 @@ Read these files at the delivered commit before acting:
 | GPU | Current host is RTX 2080 Ti, UUID `GPU-4910bb04-2d00-ca81-f64a-2031568758ad`, 22,528 MiB total; the older calibration UUID is a different physical card. Recheck identity/free VRAM/processes before launch |
 | ActionBench revision | `2796071cbe6248422fcbeab3101fa9f9886cb7b9` |
 | Original sample and GT paths | Returned UID `000-048_45e57349f062416aaf11f2c31587da16`; GT remains host-only at SHA-256 `25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e` |
-| Time budget | 28,800 s hard window, 1,800 s collection reserve; current complete three-arm unit time is unmeasured |
+| Time budget | 28,800 s hard window, 1,800 s collection reserve; admitted complete-unit measurement 1,330.465551 s, frozen per-unit timeout 1,664 s, 16 units / 26,624 workload seconds |
 
 The packet's host/device/free-space values are observations from that completed
 setup window, not current telemetry. Recheck them before GPU work. If the
@@ -91,7 +89,12 @@ Confirm GPU count, timeout, device visibility, output directories, stop behavior
 
 The committed `prepare_*.py` builders below may be invoked directly only to emit/check their plans. Every test, control construction, native evaluation, and integrity workload represented by those plans must be launched by `run_harness.py`; a builder that performs its own scientific workload is not acceptable.
 
-### 3. Run the parser-only acceptance suite through the harness
+### 3. Reuse current parser-only acceptance; rerun only after source changes
+
+The current receipt `software-status-observation-r1` records 294/294 checks
+passing, and its 72 code hashes match the current code tree. Do not rerun it
+unchanged. If any bound software source changes, regenerate the plan from a clean
+delivered checkout and run the replacement exactly once:
 
 On the GPU host, from a clean delivered checkout:
 
@@ -124,10 +127,10 @@ checks: `prepare_actionbench_full128_window.py`,
 `prepare_actionbench_active_batch_reconciliation.py`. Missing any one would make
 the isolated harness workspace incomplete even if the controller checkout can
 import it.
-The returned 201/201 suite predates the unit-manifest checks added here. Run the
-current suite once; this does not invalidate or require repetition of the
-separately finalized scorer parity because this change does not modify its bound
-implementation or inputs.
+The returned 294/294 suite includes the unit-manifest, Full128 snapshot,
+reconciliation and import-closure checks. It remains engineering evidence only
+and does not require repetition of the finalized scorer parity. A later source
+change requires a new receipt whose complete `code_refs` match that revision.
 
 ### 3a. Capture the actual installed native environment
 
@@ -293,8 +296,8 @@ weights, current runtime/device qualification, full-unit timing, and trusted
 official replay are not bound. In particular, seed `42` is the ActionMesh
 generation seed; the official scorer sampling seed remains `44`. The paper-v2
 values are a different versioned target and may not be silently substituted.
-The nine new unit checks for the fail-closed contract helper are part of the
-current whole-suite acceptance and are unexecuted until Local runs step 3.
+The nine unit checks for the fail-closed contract helper are included in the
+returned 294/294 whole-suite acceptance.
 
 The bounded generation audit resolves the **current public release candidates**:
 ActionMesh Git `d5c01f5045df55819e337369c9617f603c667e00`, TripoSG submodule
@@ -627,13 +630,14 @@ second attempt for any of those UIDs and do not modify its frozen digest. First
 reconnect to the same host, inspect that exact run ID/digest and collect or carry
 its real state. A stale status file or SSH shell is not liveness evidence.
 
-After that reconciliation, run the current whole software suite through the
-software-acceptance harness. The newly authored window-plan checks must pass in
-addition to the prior 265 methods; the expected merged total is now 291 after
-the acceptance-closure regression check. The
-builder may then be invoked directly only
-to emit a plan; it performs no workload. For a non-overlapping future window,
-for example window 02 after the current r9 batch reaches a safe boundary:
+The returned reconciliation is immutable and hash-verified, and the current
+whole software suite passed 294/294 through the Linux harness. Do not repeat
+either unchanged. A plan-only window-02 attempt is now blocked because the
+historical r7 admission is recursively treated as current live input and because
+the environment binds the older GPU UUID. Preserve every historical hash, return
+the exact offending-ref list, and capture a fresh current-device environment.
+Only after a test-first closure repair is accepted may the builder emit window
+02; it performs no workload:
 
 Before invoking the compiler, freeze the live harness state and its matching
 aggregate status as one coherent immutable evidence pair. Do not copy only one
@@ -724,9 +728,10 @@ GPU, `max_parallel_tasks: 1`, `total_wall_seconds: 27000`, and
 Local actually emits such a plan; that does not set `queue_approved` or
 `dispatch_ready`. The 27,000-second driver cutoff is the operational workload
 boundary; the remaining 1,800 seconds of the 28,800-second reporting window are
-reserved for collection and cannot be consumed by task-start overhead. Do not
-execute it until Local source review/software acceptance
-and active-batch overlap reconciliation are recorded. Window 01 intersects the
+reserved for collection and cannot be consumed by task-start overhead. Do not dispatch it until the historical-evidence/live-input closure repair,
+fresh current-device environment, native/scoring qualification, trusted replay,
+and final device/disk admission are recorded. Software acceptance and active-batch
+reconciliation are already satisfied and should not be repeated unchanged. Window 01 intersects the
 retained r9 indices 1 through 9 and is rejected by code, including after those
 units complete or fail; never duplicate them. Any remaining indices in 0 through
 15 require a separate no-omission continuation rather than an outcome-selected

@@ -1,0 +1,138 @@
+{
+  "workflow_checkpoint": {
+    "policy_version": "1.3.0",
+    "policy_source": "Owner requires the fixed strict skill before code/experiment generation",
+    "skill_source_revision": "research-autopilot current package read 2026-10-07",
+    "loaded_module_refs": [
+      "references/workflow-harness.md",
+      "references/repository-round-trips.md",
+      "references/web-background-work.md",
+      "references/research-policy.md#start-and-resume",
+      "references/research-policy.md#research-loop",
+      "references/artifact-contracts.md"
+    ],
+    "execution_role": "web_supervisor",
+    "role_source": "Standing web/local split in user authorization and research-autopilot",
+    "web_github_delivery_branch": "main",
+    "delivery_target_policy_ref": "references/repository-round-trips.md#web-github-delivery-is-main",
+    "delivery_parent_commit": "712fb2969f25e26c2fe9de540dbafa0dc55a3c4b",
+    "delivered_commit_ref": null,
+    "main_readback_ref": null,
+    "controller_host_ref": null,
+    "execution_host_ref": "Linux RTX 2080 Ti GPU-4910... from returned receipt and 19:59 UTC monitor",
+    "execution_transport": "Local controller over SSH; Web read returned evidence only",
+    "ssh_target_ref": "redacted/host-local",
+    "local_remote_path_map_ref": "LOCAL_AGENT_RUNBOOK.md",
+    "remote_driver_locator": "r9 terminal; no experiment process",
+    "remote_record_transfer_refs": [
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/evidence/status-observation-evidence-r1.tar.gz",
+        "sha256": "34967a5fd1d259be0398aebd538e8f9347223ffd9128ee7ba63e84dda0f4a126"
+      },
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/LOCAL_EXECUTION_RECEIPT_R1.md",
+        "sha256": null
+      }
+    ],
+    "work_phase": "returned evidence verification and blocked Full128 window-plan preparation",
+    "web_background_preferred": true,
+    "web_background_host": "ChatGPT Work",
+    "web_background_capability_ref": null,
+    "web_background_task_locator": null,
+    "web_background_observed_state": "active automation run; no separate durable Work task identity exposed",
+    "web_background_observed_at": "2026-10-07T20:06:00Z",
+    "web_completion_criteria_refs": [
+      "docs/research-math-20261006/CURRENT.json",
+      "LOCAL_AGENT_RUNBOOK.md"
+    ],
+    "durable_progress_index_ref": "docs/research-math-20261006/STEPWISE_PROGRESS.md",
+    "last_verified_milestone_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-r9-r10-return-review.json",
+      "sha256": "0397b8e531a8f51ed109fd2cff7159776c1ce7fbafa825a1e523ffdf2f5317f0"
+    },
+    "nominal_soft_report_seconds": 28800,
+    "local_cycle_max_elapsed_seconds": 86400,
+    "time_policy_source": "Owner 2026-10-07: soft reporting, approved Local execution up to 24 elapsed hours",
+    "actual_remaining_execution_bounds_ref": "docs/research-math-20261006/longgoal-20261007/evidence/resource-estimate-20261007T194840Z.json",
+    "outer_native_attempt_timeout_review_ref": "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+    "generated_artifact_refs": [],
+    "local_acceptance_pending": [
+      "exact window-02 plan-only failure packet",
+      "historical-evidence/live-input closure repair with Local red/green receipt",
+      "fresh current-device environment capture",
+      "current-device native scientific baseline/scoring qualification",
+      "trusted official replay"
+    ],
+    "project_id": "Yunbo-max/4d",
+    "route_id": "mechanism-boundaries-r2",
+    "observed_at": "2026-10-07T20:06:00Z",
+    "canonical_ledger_ref": "docs/research-math-20261006/CURRENT.json",
+    "current_goal_ref": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
+    "user_message_effect": "Continue authorized long-term goal; no scope or resource policy change",
+    "policy_change": null,
+    "current_node": "G01 / returned-evidence review and Full128 plan-preparation repair",
+    "requested_action": "Verify returned r9/r10 evidence and continue the earliest unclosed prerequisite",
+    "required_deliverables": [
+      "hash-verified returned evidence review",
+      "current software acceptance determination",
+      "root-cause review of the new plan-preparation blocker",
+      "updated durable progress and Local continuation"
+    ],
+    "produced_deliverable_refs": [
+      {
+        "path": "docs/research-math-20261006/actionbench-full128-r9-r10-return-review.json",
+        "sha256": "0397b8e531a8f51ed109fd2cff7159776c1ce7fbafa825a1e523ffdf2f5317f0"
+      },
+      {
+        "path": "docs/research-math-20261006/STEPWISE_PROGRESS.md",
+        "sha256": null
+      },
+      {
+        "path": "docs/research-math-20261006/CURRENT.json",
+        "sha256": null
+      },
+      {
+        "path": "LOCAL_AGENT_RUNBOOK.md",
+        "sha256": null
+      }
+    ],
+    "remaining_coverage": [
+      "Full128 window-plan reference-closure repair and fresh environment",
+      "Full128 nonoverlapping GPU windows and index-0 continuation",
+      "current-device baseline/native-scoring qualification",
+      "15 candidate implementations, controls, ablations, protocols, native runs and conclusions"
+    ],
+    "candidate_id": null,
+    "earliest_unclosed_prerequisite": "Exact plan-only failure packet and test-first separation of historical evidence from current live input closure",
+    "prerequisite_evidence_refs": [
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/evidence/status-observation-evidence-r1.tar.gz",
+        "sha256": "34967a5fd1d259be0398aebd538e8f9347223ffd9128ee7ba63e84dda0f4a126"
+      },
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/GPU_MONITOR_20261007T1959Z.md",
+        "sha256": null
+      }
+    ],
+    "boundary_check_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-r9-r10-return-review.json",
+      "sha256": "0397b8e531a8f51ed109fd2cff7159776c1ce7fbafa825a1e523ffdf2f5317f0"
+    },
+    "readiness": "software_and_input_return_verified_plan_preparation_blocked",
+    "missing_requirements": [
+      "Return the exact window-02 plan-only failure and the five mismatched/historical absolute references; preserve their original hashes.",
+      "Author and Local-red-test the historical-evidence versus live-input closure separation before any production repair.",
+      "Capture a fresh environment for GPU-4910... and retain the exact current dependency inventory; the r7 environment is not reusable.",
+      "After the repair is accepted, generate and source-review the first nonoverlapping Full128 window without dispatching it.",
+      "Close current-device source-backed baseline/native scoring qualification and trusted official replay before dispatch.",
+      "Retain a no-omission continuation for population index 0 and never rerun retained indices 1 through 9.",
+      "All 15 candidates still require implementation, controls, ablations, protocols, native runs and conclusions."
+    ],
+    "next_legal_action": "Local completes the in-progress plan-only closure inspection and returns the exact failure packet. No GPU work. The subsequent code repair must be test-first on Local and must not relax current environment identity.",
+    "execution_harness_plan_ref": null,
+    "remaining_budget_ref": "docs/research-math-20261006/longgoal-20261007/evidence/resource-estimate-20261007T194840Z.json",
+    "continuation_refs": [
+      "LOCAL_AGENT_RUNBOOK.md"
+    ]
+  }
+}

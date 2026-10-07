@@ -994,3 +994,45 @@ at the delivered revision, inspect all three new `code_refs`, and obtain a clean
 291-method Linux harness receipt before the immutable r9 state/status capture and
 reconciliation sidecar can be accepted. Candidate native results and formal
 outcomes remain **0/15** and **0**.
+
+## Continuation: verify terminal r9/r10 return and isolate window-preparation blocker — 2026-10-07
+
+The returned archive at commit `04ea448` was downloaded and its SHA-256
+independently recomputed as
+`34967a5fd1d259be0398aebd538e8f9347223ffd9128ee7ba63e84dda0f4a126`.
+All 1,617 manifest payloads were checked for declared size and SHA-256:
+5,448,428 bytes total, zero missing or mismatched files. The archive excludes
+images and model weights by design; their admitted host manifests remain
+separate evidence.
+
+The Linux harness receipt records 294 software checks, zero failures/errors and
+exit code zero. Its 72 `code_refs` were compared one by one with the current
+code tree: zero mismatches. The later `712fb29` head adds only a monitor note,
+so this software acceptance still covers every executable ref. It closes
+engineering acceptance only, not scorer, benchmark or candidate qualification.
+
+The immutable r9 pair is terminal at
+`2026-10-07T19:12:37.209259Z`: 9 completed, 0 running, 0 pending, 0 failed.
+State, observer snapshot and reconciliation SHA-256 values are respectively
+`c6615919...b862`, `744c4b46...75b` and `4ad874da...97a`. Eight CPU-only
+r10 manifest batches cover 118 unique indices 10-127, with 236 log refs checked,
+no nonempty stderr, no inference and no GPU workload. These are engineering
+baseline/input facts; candidate results remain 0/15.
+
+The first plan-only window-02 attempt exposed the next real blocker before any
+GPU launch. The retained r7 admission recursively names five historical source
+files whose hashes differ from the current checkout, while the retained
+environment binds the older physical GPU. Source tracing shows that
+`build_input_ref_closure` currently sends both historical pricing/admission
+evidence and current executable inputs through the same live-root recursive
+closure. Rewriting the old hashes would invalidate the timing evidence; accepting
+the old GPU UUID would invalidate current-device admission. The generic closure
+also rejects historical absolute refs outside the current checkout.
+
+No production repair is committed in this checkpoint because the exact plan-only
+failure packet and a Local failing regression are not yet returned. The legal
+next step is to finish that read-only inspection, preserve the original bytes,
+then test-first separate validated opaque historical pricing evidence from the
+current live execution closure. A fresh GPU-4910 environment capture remains
+mandatory. Queue generation, approval and dispatch stay false; scientific
+qualification and all 15 candidate experiments remain open.

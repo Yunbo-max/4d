@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T18:52:16Z",
+  "recorded_at": "2026-10-07T20:06:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The retained engineering batch population-gpu-current-r9 was last independently observed at 2026-10-07T18:15:41.051Z with eight completed, one running, zero pending and zero failed; population-009 generation was at Stage I 19/30. Population-008 completed generation/scoring with exit code zero and all 117 receipt-declared outputs were independently verified. These are engineering baselines, not candidate or native scientific results. A standalone macOS Python 3.9 discovery attempt ran 259 checks with 9 failures and 13 errors and is retained only as diagnostic evidence. Source review found that the formal isolated acceptance plan omitted three Full128 root imports; the closure and one regression check are now authored, raising the expected current Linux harness suite to 291. That suite, the immutable r9 state/status pair and reconciliation sidecar remain unreturned, so plan generation and dispatch are blocked. Candidate native results/formal outcomes remain 0/15 and 0.",
+  "status": "Returned engineering evidence is independently reviewed: the archive SHA-256 and all 1,617 manifest files (5,448,428 bytes) verify; Linux harness software acceptance ran 294/294 checks successfully and all 72 pinned code refs match the current code tree; r9 is terminal at 9 completed with an immutable state/status pair and reconciliation; eight CPU-only r10 manifest batches cover 118/118 unique indices 10-127. Window-02 plan preparation is newly blocked because historical r7 admission refs are being traversed as current live inputs and the retained environment names a different GPU UUID. No GPU work was launched. Current-device native/scoring qualification, trusted replay and all candidate experiments remain open; candidate results/formal outcomes are 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -650,8 +650,8 @@
       8,
       9
     ],
-    "active_batch_last_observed_at": "2026-10-07T17:35:40Z",
-    "active_batch_current_liveness": "six completed, one running, two pending, zero failed; population-007 generation Stage I 12/30 at the independently observed timestamp; population-006 receipt-declared remote outputs verified 117/117; later liveness unknown to Web",
+    "active_batch_last_observed_at": "2026-10-07T19:12:37.209259Z",
+    "active_batch_current_liveness": "terminal: nine completed, zero running, zero pending, zero failed; immutable pair and reconciliation verified",
     "queue_priced": true,
     "queue_generated": false,
     "queue_approved": false,
@@ -659,11 +659,14 @@
     "scientific_effect_qualification": false,
     "native_scientific_qualification": false,
     "candidate_native_results": 0,
-    "candidate_formal_outcomes": 0
+    "candidate_formal_outcomes": 0,
+    "local_software_acceptance_passed": true,
+    "active_batch_reconciliation_returned": true,
+    "plan_preparation_status": "blocked_historical_reference_closure_and_stale_gpu_environment"
   },
   "actionbench_full128_state_reconciliation": {
-    "status": "generated_unexecuted_blocked_missing_retained_state_snapshot",
-    "recorded_at": "2026-10-07T17:41:52Z",
+    "status": "returned_verified_engineering_only",
+    "recorded_at": "2026-10-07T20:06:00Z",
     "base_commit": "c018fc4d89e60a2bc2bb5d6c7d5fb09ab64fcb0a",
     "builder": "actionmesh/prepare_actionbench_active_batch_reconciliation.py",
     "builder_sha256": "84919d52f6ce4b6bb62d14f9cf55cb39c013f2c17ea0f43e2a0a7a38539fef01",
@@ -690,12 +693,12 @@
       "sha256": "ca475b569842bd5a84cfb0f8e84401b8385f9170fe12b9b794cd11d9d1616042"
     },
     "required_state_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
-    "state_snapshot_observed": false,
+    "state_snapshot_observed": true,
     "per_task_state_binding_required": true,
     "same_count_state_swap_rejected": true,
     "new_checks_authored": 3,
     "current_authored_test_methods_observed": 288,
-    "local_software_acceptance_passed": false,
+    "local_software_acceptance_passed": true,
     "queue_priced": true,
     "queue_generated": false,
     "queue_approved": false,
@@ -703,11 +706,14 @@
     "scientific_effect_qualification": false,
     "native_scientific_qualification": false,
     "candidate_native_results": 0,
-    "candidate_formal_outcomes": 0
+    "candidate_formal_outcomes": 0,
+    "immutable_pair_returned": true,
+    "reconciliation_returned": true,
+    "reconciliation_sha256": "4ad874da468837a18c02b73d84322c6a9937255dda76d9175445decea877897a"
   },
   "actionbench_full128_immutable_snapshot": {
-    "status": "generated_unexecuted_stable_pair_guard_authored",
-    "recorded_at": "2026-10-07T18:15:41Z",
+    "status": "returned_verified_terminal_pair",
+    "recorded_at": "2026-10-07T20:06:00Z",
     "base_commit": "e1e31e3b22651f7bdeb521fc73f49db5e453d479",
     "source_review_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-immutable-snapshot-source-review.json",
@@ -737,10 +743,10 @@
     "required_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/status-snapshot.json",
     "active_batch_run_id": "population-gpu-current-r9",
     "active_batch_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
-    "active_batch_last_observed_at": "2026-10-07T18:15:41.051Z",
+    "active_batch_last_observed_at": "2026-10-07T19:12:37.209259Z",
     "active_batch_counts": {
-      "completed": 8,
-      "running": 1,
+      "completed": 9,
+      "running": 0,
       "pending": 0,
       "failed": 0
     },
@@ -748,9 +754,9 @@
     "current_window_test_methods_observed": 20,
     "expected_merged_test_methods": 291,
     "new_checks_executed_by_web": 0,
-    "local_software_acceptance_complete": false,
-    "immutable_pair_returned": false,
-    "reconciliation_returned": false,
+    "local_software_acceptance_complete": true,
+    "immutable_pair_returned": true,
+    "reconciliation_returned": true,
     "queue_generated": false,
     "queue_approved": false,
     "dispatch_ready": false,
@@ -770,8 +776,8 @@
     "candidate_native_results": 0
   },
   "software_acceptance_full128_import_closure": {
-    "status": "generated_unexecuted_closure_repaired",
-    "recorded_at": "2026-10-07T18:52:16Z",
+    "status": "accepted_current_code_tree",
+    "recorded_at": "2026-10-07T20:06:00Z",
     "base_commit": "03487174e10a7be0c623026eaeb711b448313c18",
     "builder": "actionmesh/prepare_control_scoring_checks.py",
     "builder_sha256": "d37de4e3c00dc9a5b826f4d622963f23cd5b8e2d043a81c83b3ffe39868907b0",
@@ -795,12 +801,58 @@
     "new_checks_authored": 1,
     "expected_merged_test_methods": 291,
     "new_checks_executed_by_web": 0,
-    "local_software_acceptance_complete": false,
+    "local_software_acceptance_complete": true,
     "direct_macos_discovery_accepted": false,
     "queue_generated": false,
     "queue_approved": false,
     "dispatch_ready": false,
     "scientific_effect_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "accepted_tests": 294,
+    "accepted_failures": 0,
+    "accepted_errors": 0,
+    "accepted_code_refs": 72,
+    "current_main_missing_or_mismatched_code_refs": 0
+  },
+  "actionbench_full128_r9_r10_return_review": {
+    "status": "verified_engineering_return_plan_preparation_blocked",
+    "recorded_at": "2026-10-07T20:06:00Z",
+    "review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-r9-r10-return-review.json",
+      "sha256": "0397b8e531a8f51ed109fd2cff7159776c1ce7fbafa825a1e523ffdf2f5317f0"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-r9-r10-return.json",
+      "sha256": "49381dc4b33e2e39fd29d58902d477a890dc57be820a045bbdc89a8a77be091d"
+    },
+    "archive_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/evidence/status-observation-evidence-r1.tar.gz",
+      "sha256": "34967a5fd1d259be0398aebd538e8f9347223ffd9128ee7ba63e84dda0f4a126"
+    },
+    "archive_manifest_files": 1617,
+    "archive_manifest_bytes": 5448428,
+    "software_checks_passed": 294,
+    "accepted_code_refs": 72,
+    "current_main_code_ref_mismatches": 0,
+    "r9_counts": {
+      "completed": 9,
+      "running": 0,
+      "pending": 0,
+      "failed": 0
+    },
+    "r10_cpu_manifest_assets": 118,
+    "r10_population_indices": [
+      10,
+      127
+    ],
+    "inference_executed": false,
+    "gpu_workload_executed": false,
+    "window_plan_preparation_blocked": true,
+    "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "native_scientific_qualification": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
   }

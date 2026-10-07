@@ -1,0 +1,133 @@
+{
+  "kind": "actionbench-full128-r9-r10-return-review",
+  "version": "1.0.0",
+  "reviewed_at": "2026-10-07T20:06:00Z",
+  "source_main_head": "712fb2969f25e26c2fe9de540dbafa0dc55a3c4b",
+  "evidence": {
+    "compact_receipt": {
+      "commit": "6934cd91a3147d1685e3c9b762054f224e5432bb",
+      "path": "docs/research-math-20261006/longgoal-20261007/LOCAL_EXECUTION_RECEIPT_R1.md"
+    },
+    "archive": {
+      "commit": "04ea448e05f89a8394382b911b527ffb3d89aaaf",
+      "path": "docs/research-math-20261006/longgoal-20261007/evidence/status-observation-evidence-r1.tar.gz",
+      "git_blob_sha": "64122dda95e190978189c6d2174154be04717d1f",
+      "sha256": "34967a5fd1d259be0398aebd538e8f9347223ffd9128ee7ba63e84dda0f4a126",
+      "manifest_file_count": 1617,
+      "manifest_payload_bytes": 5448428,
+      "manifest_missing_or_mismatched": 0,
+      "includes_images_or_weights": false
+    },
+    "gpu_monitor": {
+      "commit": "712fb2969f25e26c2fe9de540dbafa0dc55a3c4b",
+      "path": "docs/research-math-20261006/longgoal-20261007/GPU_MONITOR_20261007T1959Z.md",
+      "observed_at": "2026-10-07T19:59:12.945357Z"
+    },
+    "resource_snapshot": {
+      "commit": "2167d49c220cf05ae7623b086b4f3d6d570bd2a2",
+      "path": "docs/research-math-20261006/longgoal-20261007/evidence/resource-readonly-20261007T194840.json",
+      "sha256": "4abbbcd818ee57e030060b929ec9eaf5954b219dd0e0d48afa6584f95d4d9298"
+    },
+    "capacity_estimate": {
+      "commit": "a1b2332138e6bfe865647cde3e8dc154baae6c62",
+      "path": "docs/research-math-20261006/longgoal-20261007/evidence/resource-estimate-20261007T194840Z.json",
+      "observational_only": true,
+      "per_uid_max_allocated_bytes": 68378624,
+      "with_25_percent_headroom_bytes": 10085847040,
+      "overlay_free_bytes": 16728072192
+    }
+  },
+  "verification": {
+    "archive_sha256_verified": true,
+    "manifest_all_payload_sizes_and_sha256_verified": true,
+    "software_acceptance": {
+      "run_id": "software-status-observation-r1",
+      "harness_plan_digest": "de9cb12ea377fe39069393fa2094114fbf6b2e7aabe617627106984450278dc1",
+      "native_plan_digest": "f73c88381b31969b2fe286f28d3a487584a7e0266f51ad7eba9490e8d6f873cf",
+      "receipt_sha256": "db7c10ad84f799a423464d55eb17d567fb5568f974520d6ab214e743b6ce219d",
+      "tests_run": 294,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "code_refs": 72,
+      "compared_code_head": "a1b2332138e6bfe865647cde3e8dc154baae6c62",
+      "current_main_adds_code_files": false,
+      "current_main_missing_or_mismatched_code_refs": 0,
+      "scope": "engineering software acceptance only"
+    },
+    "r9_terminal": {
+      "run_id": "population-gpu-current-r9",
+      "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
+      "observed_at": "2026-10-07T19:12:37.209259Z",
+      "completed": 9,
+      "running": 0,
+      "pending": 0,
+      "failed": 0,
+      "state_sha256": "c6615919ff39b3c0445ccb0358f7c23af7026f4365b657c8e511ab27e564b862",
+      "status_snapshot_sha256": "744c4b4630113719a75194caf53a6f40d072eeb45c84c24ad766dc33080ab75b",
+      "reconciliation_sha256": "4ad874da468837a18c02b73d84322c6a9937255dda76d9175445decea877897a",
+      "scientific_effect_qualification": false,
+      "candidate_methods_tested": false
+    },
+    "r10_cpu_manifest_freeze": {
+      "completed_batches": 8,
+      "completed_assets": 118,
+      "population_indices": [
+        10,
+        127
+      ],
+      "unique_indices": true,
+      "log_refs_checked": 236,
+      "nonempty_stderr": 0,
+      "inference_executed": false,
+      "gpu_workload_executed": false,
+      "final_summary_sha256": "8f77eccbc29fa1e00a1835264877db623b0e711845b5d89e2570629d9938875b"
+    }
+  },
+  "plan_preparation_blocker": {
+    "status": "confirmed_by_read_only_monitor_source_review_pending_exact_failure_packet",
+    "observed_at": "2026-10-07T19:59:12.945357Z",
+    "symptoms": [
+      "The retained r7 admission recursively references five source files whose historical hashes differ from the current checkout.",
+      "The retained environment binds a different physical GPU UUID.",
+      "The generic reference-closure walk rejects historical absolute evidence paths outside the current checkout."
+    ],
+    "source_trace": {
+      "entry": "actionmesh/prepare_actionbench_full128_window.py: build_input_ref_closure",
+      "historical_path": "pricing.json -> complete-lowram-r7 admission -> nested historical run/code refs",
+      "current_path": "current unit source files and inputs",
+      "root_cause": "Historical pricing/admission evidence and current executable inputs are traversed by one generic live-root closure. The former must retain original hashes and location semantics; the latter must match the current checkout and current GPU environment."
+    },
+    "nonnegotiable_guards": [
+      "Do not rewrite historical r7 hashes to current source bytes.",
+      "Do not accept the old GPU UUID as current-device qualification.",
+      "Do not weaken the current environment UUID/dependency checks.",
+      "Do not launch GPU work while plan preparation is blocked."
+    ],
+    "repair_boundary": "Wait for the exact plan-only failure and offending-ref list. Then add a failing Local regression that separates validated opaque historical pricing evidence from current live execution closure, while requiring a fresh current-device environment capture."
+  },
+  "conclusions": {
+    "software_acceptance_current_code_tree": true,
+    "immutable_r9_pair_returned": true,
+    "active_batch_reconciliation_returned": true,
+    "input_manifest_population_10_through_127_complete": true,
+    "window_plan_preparation_blocked": true,
+    "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "current_device_native_scientific_qualification": false,
+    "candidate_validation_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "remaining_requirements": [
+    "Return the exact window-02 plan-only failure and the five mismatched/historical absolute references; preserve their original hashes.",
+    "Author and Local-red-test the historical-evidence versus live-input closure separation before any production repair.",
+    "Capture a fresh environment for GPU-4910... and retain the exact current dependency inventory; the r7 environment is not reusable.",
+    "After the repair is accepted, generate and source-review the first nonoverlapping Full128 window without dispatching it.",
+    "Close current-device source-backed baseline/native scoring qualification and trusted official replay before dispatch.",
+    "Retain a no-omission continuation for population index 0 and never rerun retained indices 1 through 9.",
+    "All 15 candidates still require implementation, controls, ablations, protocols, native runs and conclusions."
+  ],
+  "next_legal_action": "Local completes the in-progress plan-only closure inspection and returns the exact failure packet. No GPU work. The subsequent code repair must be test-first on Local and must not relax current environment identity."
+}
