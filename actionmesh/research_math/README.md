@@ -18,6 +18,7 @@ The output directory must be new. The CPU controls require NumPy only. They pres
 | contact_events.py | Typed event alignment and endpoint contact repair | Constructed endpoint problem, not complete multi-body physics |
 | native_probe.py | Cached frozen ActionMesh decoder, finite differences, actual redecoding and GPU telemetry | Sparse query-interface probe with constructed edit requests; no full mesh or natural quality gain claim |
 | protected_projection.py | C02 weighted action-subspace projection with redundant-constraint and pin handling | Declared action observations are not ground-truth motion; native qualification is still pending |
+| actionbench_full_reproduction.py | Fail-closed checking for the conditional full-128 current-README reproduction contract | Runs no scorer, does not qualify one UID or a candidate effect, and cannot authorize dispatch |
 
 C02 implementation status (2026-10-06): four local NumPy tests and the same four
 tests in the remote inference environment pass. No candidate GPU generation or

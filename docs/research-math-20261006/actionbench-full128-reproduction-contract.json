@@ -1,0 +1,130 @@
+{
+  "kind": "actionbench-full-population-reproduction-contract",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T06:34:00Z",
+  "status": "conditional_generated_unexecuted",
+  "purpose": "official-full-population-baseline-reproduction",
+  "scope": "Reproduce the current official ActionMesh row over the complete released ActionBench population. This is a baseline/evaluator qualification path, not a candidate-method effect test.",
+  "benchmark": {
+    "id": "facebook/actionbench",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "population_size": 128,
+    "frames_per_sample": 16,
+    "population_ref": {
+      "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+      "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+    },
+    "selection": "complete released population; no subset, exclusions, retries-as-selection, or success-only denominator"
+  },
+  "method": {
+    "name": "ActionMesh",
+    "variant": "current official README ActionMesh row",
+    "generation_seed": 42,
+    "generation_source_revision": "not_yet_bound",
+    "weights_revision": "not_yet_bound",
+    "prediction_manifest_ref": null
+  },
+  "official_scorer": {
+    "repository": "facebookresearch/actionmesh",
+    "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "entrypoint": "actionmesh/repo/actionbench/evaluate_dataset.py",
+    "sampling_seed": 44,
+    "n_pts_icp": 10000,
+    "n_pts_chamfer": 100000,
+    "icp_iterations": 200,
+    "metrics": [
+      "cd_3d",
+      "cd_4d",
+      "cd_motion"
+    ],
+    "direction": "lower_is_better",
+    "code_refs": [
+      {"path": "actionmesh/repo/actionbench/evaluate_dataset.py", "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"},
+      {"path": "actionmesh/repo/actionbench/benchmark.py", "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"},
+      {"path": "actionmesh/repo/actionbench/chamfer.py", "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"},
+      {"path": "actionmesh/repo/actionbench/icp.py", "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"},
+      {"path": "actionmesh/repo/actionbench/sample_mesh.py", "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"},
+      {"path": "actionmesh/repo/actionbench/sample_point_cloud.py", "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"}
+    ]
+  },
+  "published_target": {
+    "source_path": "actionmesh/repo/actionbench/README.md",
+    "source_ref": {
+      "path": "actionmesh/repo/actionbench/README.md",
+      "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"
+    },
+    "source_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "population": "all 128 animated objects",
+    "method_seed": 42,
+    "decimal_places": 3,
+    "metrics": {
+      "cd_3d": 0.054,
+      "cd_4d": 0.085,
+      "cd_motion": 0.153
+    },
+    "paper_v2_values_are_not_target": {
+      "cd_3d": 0.053,
+      "cd_4d": 0.081,
+      "cd_motion": 0.148
+    },
+    "discrepancy_policy": "This revision qualifies only reproduction of the current official README row with its current scorer source. It makes no claim to reproduce the distinct paper-v2 row."
+  },
+  "decision_rule": {
+    "complete_population_required": true,
+    "required_total": 128,
+    "required_successes": 128,
+    "required_failures": 0,
+    "metric_rule": "published_rounding_interval",
+    "all_metrics_required": true,
+    "uncertainty": "finite_population_reproduction_no_sampling_ci"
+  },
+  "metric_intervals": {
+    "cd_3d": {"lower_inclusive": 0.0535, "upper_exclusive": 0.0545},
+    "cd_4d": {"lower_inclusive": 0.0845, "upper_exclusive": 0.0855},
+    "cd_motion": {"lower_inclusive": 0.1525, "upper_exclusive": 0.1535}
+  },
+  "interpretation": {
+    "pass": "All 128 released UIDs succeed with 16 frames; the retained official CSV and summary agree; and all three official means lie in the decimal intervals represented by the current official README values.",
+    "fail": "The complete valid official output is outside at least one predeclared interval. Retain the negative reproduction result; do not tune the scorer or select successful UIDs.",
+    "insufficient_evidence": "Any missing/failed UID, source/input/runtime mismatch, absent current-revision software acceptance, absent matching official-versus-faithful parity, missing trusted replay, or incomplete prediction/GT manifest.",
+    "scope_limit": "A pass may qualify this exact ActionMesh baseline/scorer/full-population path. It is not a per-UID threshold, candidate comparison, effect claim, or evidence that any selected method works."
+  },
+  "source_refs": [
+    {"path": "docs/research-math-20261006/actionbench-qualification-source-audit.json", "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"},
+    {"path": "docs/research-math-20261006/actionbench-official-source-evidence.json", "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"},
+    {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"}
+  ],
+  "validator_refs": [
+    {"path": "actionmesh/research_math/actionbench_full_reproduction.py", "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"},
+    {"path": "actionmesh/research_math/tests/test_actionbench_full_reproduction.py", "sha256": "d3ad5664d1733cf24ba897166e378db2c9bee9dab865880d50859966629e7fec"}
+  ],
+  "execution_prerequisites": {
+    "current_revision_software_acceptance": "pending",
+    "one_uid_official_faithful_parity_and_finalization": "pending",
+    "complete_128_gt_manifest_with_hashes": "pending",
+    "complete_128_prediction_manifest_with_16_glbs_per_uid": "pending",
+    "actionmesh_generation_source_weights_and_config": "pending",
+    "native_conda_runtime_and_device_manifest": "pending",
+    "installed_verifier_native_protocol": "pending",
+    "nonce_bound_official_scorer_replay": "pending",
+    "complete_current_multi_arm_unit_timing_and_peak_vram": "pending"
+  },
+  "queue_policy": {
+    "queue_generated": false,
+    "reason": "The reproduction unit has not been staged or timed on the current RTX 2080 Ti. One-UID parity timing and old two-arm diagnostics are not transferable.",
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800
+  },
+  "scientific_effect_qualification": false,
+  "candidate_methods_tested": false,
+  "dispatch_ready": false,
+  "execution_status": {
+    "authored_checks": 9,
+    "checks_executed_by_web": 0,
+    "official_scorer_invocations": 0,
+    "gpu_workloads": 0,
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

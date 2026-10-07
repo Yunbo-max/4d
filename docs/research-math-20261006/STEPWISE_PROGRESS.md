@@ -432,3 +432,36 @@ remain **0/15**. The immediate Local order is unchanged: current software
 acceptance, one-UID engineering parity, complete bundle promotion and CPU-only
 finalization. Scientific scoring then remains blocked unless the full-population
 protocol prerequisites are deliberately completed.
+
+## Continuation: freeze the full-128 reproduction rule — 2026-10-07
+
+No newer Local/GPU packet followed `af4d36b`. The current official README,
+evaluator, retained 128-UID population and prior source audit were joined to close
+one specific gap in the source-matched alternative: its prospective agreement
+rule. The official source's seed 42 is the ActionMesh **generation** seed; the
+pinned evaluator's sampling seed remains 44. The contract now keeps those
+identities separate instead of using 42 for both.
+
+The generated conditional contract requires the complete released population:
+128 total, 128 successful, zero failed, 16-frame rows. All three official means
+must fall inside the half-open three-decimal intervals represented by the current
+README row: CD-3D `[0.0535,0.0545)`, CD-4D `[0.0845,0.0855)`, and CD-M
+`[0.1525,0.1535)`. This is a full finite-population reproduction check, so it
+claims no sampling confidence interval; the decision is the intersection of all
+three metrics. The distinct paper-v2 values are retained as a non-target version,
+not silently reconciled.
+
+Added `actionbench_full_reproduction.py` plus nine authored rejection/decision
+checks. The helper rejects incomplete/success-only denominators, one-UID reuse,
+seed conflation, paper-target substitution, nonfinite/failed rows, CSV-summary
+inconsistency and any missed metric interval. It never runs the scorer and always
+returns `scientific_effect_qualification=false`.
+
+This freezes a rule, not a runnable native protocol. Complete 128-object GT and
+prediction manifests, ActionMesh source/weights/effective configuration, current
+Conda/device qualification, installed-verifier protocol, full-unit timing/VRAM,
+and nonce-bound official replay remain missing. Therefore no 28,800-second queue
+was generated. Web performed only source/static review; it executed **0** tests,
+scorer calls or GPU workloads. The current observed authored test-method count is
+161, but only Local harness execution can accept it. Candidate designs, native
+results and formal outcomes remain **0/15**, **0/15**, and **0**.

@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T04:57:16Z",
+  "recorded_at": "2026-10-07T06:34:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical test result does not accept this revision. A fresh audit of the complete current official ActionBench repository tree/history found no per-sample result or one-asset threshold. One-UID scientific scoring remains blocked; the only source-matched alternative identified is a new full-128 seed-42 aggregate reproduction protocol, still conditional and not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical result does not accept this revision. One-UID scientific scoring remains blocked. The full-128 current-README alternative now has a prospective complete-population/three-decimal reproduction rule and fail-closed checker, but lacks full GT/prediction/generation/runtime/timing/replay bindings and is not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -50,15 +50,15 @@
     "round_id": "20261006-baseline-qualification",
     "root_rules_ref": {
       "path": "AGENTS.md",
-      "sha256": "a410ea84abfe470e3868a0c49c56f3a90835983f8008d090f2ef8bc65d3a52cb"
+      "sha256": "93b5ff7710a2303e4800d55cd8863c44af102d970d15c25d201cda86290dc8a1"
     },
     "runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "6fe91fd03064113f84036898c045b4330c8819c98f606eb6b1d530e1cfd44155"
+      "sha256": "a23055bbd09221c255fa9d2b1da68d492956537d1694f65af121486f3c95ccb2"
     },
     "round_handoff_ref": {
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
-      "sha256": "824e5f2ee966d55bce464060690da9b3db7afb445517497304fe7f21f5b12608"
+      "sha256": "797ac7b343b3b419f16d87f0450a054cb1fb4f749bc7183a69fee9864044e397"
     },
     "checkpoint_ref": {
       "path": "docs/research-math-20261006/workflow-checkpoint-local-agent-handoff.json",
@@ -81,11 +81,11 @@
     },
     "repaired_runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "6fe91fd03064113f84036898c045b4330c8819c98f606eb6b1d530e1cfd44155"
+      "sha256": "a23055bbd09221c255fa9d2b1da68d492956537d1694f65af121486f3c95ccb2"
     },
     "repaired_round_handoff_ref": {
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
-      "sha256": "824e5f2ee966d55bce464060690da9b3db7afb445517497304fe7f21f5b12608"
+      "sha256": "797ac7b343b3b419f16d87f0450a054cb1fb4f749bc7183a69fee9864044e397"
     },
     "candidate_designs_verified": 0,
     "candidate_native_results": 0
@@ -108,11 +108,11 @@
     },
     "current_runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "6fe91fd03064113f84036898c045b4330c8819c98f606eb6b1d530e1cfd44155"
+      "sha256": "a23055bbd09221c255fa9d2b1da68d492956537d1694f65af121486f3c95ccb2"
     },
     "current_round_handoff_ref": {
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
-      "sha256": "824e5f2ee966d55bce464060690da9b3db7afb445517497304fe7f21f5b12608"
+      "sha256": "797ac7b343b3b419f16d87f0450a054cb1fb4f749bc7183a69fee9864044e397"
     },
     "current_baseline_scoring_ref": {
       "path": "docs/research-math-20261006/BASELINE_SCORING.md",
@@ -145,7 +145,7 @@
     "base_commit": "c6d20a0acd2a39be03d9351a86381051d39c94d3",
     "entry_ref": {
       "path": "docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md",
-      "sha256": "24322dac454bd1155125b4c7944d8e4f039fc4f6da90bb199b04846545c019de"
+      "sha256": "4fa6b8fa6e8a30024c26f0dbbf9fd6134ac9aef422ddf4e3192ea44bfc9d78f0"
     },
     "checkpoint_ref": {
       "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-scorer-parity.json",
@@ -157,7 +157,7 @@
     },
     "runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "6fe91fd03064113f84036898c045b4330c8819c98f606eb6b1d530e1cfd44155"
+      "sha256": "a23055bbd09221c255fa9d2b1da68d492956537d1694f65af121486f3c95ccb2"
     },
     "baseline_scoring_ref": {
       "path": "docs/research-math-20261006/BASELINE_SCORING.md",
@@ -282,6 +282,39 @@
     "published_per_sample_results": false,
     "one_uid_scientific_protocol_ready": false,
     "full_population_reproduction_protocol_ready": false,
+    "official_scores_run": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_reproduction": {
+    "status": "conditional_rule_frozen_generated_unexecuted",
+    "recorded_at": "2026-10-07T06:34:00Z",
+    "base_commit": "af4d36b236f3ebae0f20cf9211f3515dc9d92b1d",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json",
+      "sha256": "d94b68cc5d2bf28c8f67335c07d987376b1ac6cd654576a5c2d3e933a70a6705"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-reproduction-source-review.json",
+      "sha256": "bc1d87ea70e4cac6eaeceb55cb06e0ae8c07eb82d8e44c0dd49802110c0f5cb8"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-reproduction.json",
+      "sha256": "91a9ec5aeb107562c3601164c67a3e551ef64998a4734a50da1e97c47e05a495"
+    },
+    "published_target": "current official README ActionMesh row over all 128 objects",
+    "generation_seed": 42,
+    "official_scorer_sampling_seed": 44,
+    "required_total": 128,
+    "required_successes": 128,
+    "required_failures": 0,
+    "all_three_published_rounding_intervals_required": true,
+    "sampling_confidence_interval_claimed": false,
+    "current_authored_test_methods_observed": 161,
+    "new_checks_authored": 9,
+    "new_checks_executed": 0,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,
     "candidate_native_results": 0

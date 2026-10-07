@@ -256,6 +256,32 @@ Create the admitted scientific plan with the actual resolved values:
 
 Review `native.json` and `harness.json`, capture the printed digest, and execute that exact harness plan. Plan generation or request generation is not a score.
 
+### 6b. Conditional full-population reproduction path
+
+Read `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
+and its source review before preparing any dataset-wide replacement for the
+blocked one-UID scientific protocol. The contract now fixes the previously
+missing prospective agreement rule: require all 128 released UIDs, 128 successes,
+zero failures, and all three official aggregate means within the half-open
+three-decimal intervals represented by the current official README row. This is
+full finite-population reproduction, so it claims no sampling confidence interval.
+
+Do not dispatch it yet. It intentionally has no run-plan builder because the
+complete GT/prediction manifests, official ActionMesh generation source and
+weights, current runtime/device qualification, full-unit timing, and trusted
+official replay are not bound. In particular, seed `42` is the ActionMesh
+generation seed; the official scorer sampling seed remains `44`. The paper-v2
+values are a different versioned target and may not be silently substituted.
+The nine new unit checks for the fail-closed contract helper are part of the
+current whole-suite acceptance and are unexecuted until Local runs step 3.
+
+After the current one-UID engineering parity/finalization chain, inventory these
+full-population prerequisites without launching generation or scoring. Return
+their exact paths/revisions/hashes and measured storage requirements. Only after
+the 128-by-16 prediction inventory and GT closure are complete may a later Web
+revision author the installed-verifier native protocol and a representative
+complete-unit timing plan. One-UID parity timing cannot price that unit.
+
 ### 7. Native replay and strict output binding
 
 The admitted plan already uses `python -m research_math.control_scoring score` as its inner executor. That command starts a fresh `research_census_eval.py` process for each of two passes over each arm; the wrapper in turn calls the pinned official ActionBench source. Do not launch either command outside the admitted plan and do not replace it with another scorer.

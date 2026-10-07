@@ -13,6 +13,8 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 5. `rounds/20261006-baseline-qualification/windows/20261006T2316Z-baseline-qualification/REVIEW_PACKET.md`
 6. `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
 7. `docs/research-math-20261006/actionbench-qualification-source-audit.json`
+8. `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
+9. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
@@ -25,6 +27,7 @@ Do not infer current status from older receipts. Mathematical construction, a ge
 - Run every test, experiment, evaluation, or other scientific workload through the installed `research-autopilot` `scripts/run_harness.py`, using the committed plan builder and its printed approved-plan digest. A plan builder may be invoked directly only to emit and validate the plan; it must not perform the workload itself.
 - Do not dispatch a candidate merely because it is mathematically selected. Candidate execution requires baseline/native-scoring qualification, Natural Gate 0, IPCG, code/design verification, a simple baseline, and an ablation.
 - Do not convert missing results into zeroes or successes. Record `generated_unexecuted`, `insufficient_evidence`, or the observed failure.
+- Keep ActionMesh generation seed `42` distinct from the pinned official evaluator sampling seed `44`. The conditional full-128 reproduction contract is not a one-UID threshold, a candidate protocol, or a dispatch-ready queue.
 
 ## Runtime and evidence contract
 

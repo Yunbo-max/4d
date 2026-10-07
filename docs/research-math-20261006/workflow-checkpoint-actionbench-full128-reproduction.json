@@ -1,0 +1,45 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T06:34:00Z",
+  "role": "web_supervisor",
+  "decision": "Freeze a conditional full-128 current-README reproduction rule and fail-closed checker; keep dispatch blocked until complete source, prediction, runtime, timing, parity and live-replay evidence exists.",
+  "rationale": "The exhaustive one-asset audit found no legitimate per-object threshold. The official README does provide a source-matched full-population target with three-decimal precision. A complete-population intersection rule can therefore be fixed prospectively without converting the aggregate into a one-UID threshold or inventing an efficacy margin.",
+  "evidence_refs": [
+    {"path": "docs/research-math-20261006/actionbench-qualification-source-audit.json", "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"},
+    {"path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json", "sha256": "d94b68cc5d2bf28c8f67335c07d987376b1ac6cd654576a5c2d3e933a70a6705"},
+    {"path": "docs/research-math-20261006/actionbench-full128-reproduction-source-review.json", "sha256": "bc1d87ea70e4cac6eaeceb55cb06e0ae8c07eb82d8e44c0dd49802110c0f5cb8"},
+    {"path": "actionmesh/research_math/actionbench_full_reproduction.py", "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"},
+    {"path": "actionmesh/research_math/tests/test_actionbench_full_reproduction.py", "sha256": "d3ad5664d1733cf24ba897166e378db2c9bee9dab865880d50859966629e7fec"}
+  ],
+  "current_node": "Baseline and evaluator qualification preparation",
+  "next_node": "Local current-revision software acceptance and one-UID scorer parity; in parallel, inventory the exact official ActionMesh generation source/weights/predictions required by the conditional full-population path.",
+  "state": {
+    "math_candidates_verified": 20,
+    "selected_candidates": 15,
+    "candidate_implementations_verified": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "one_uid_scientific_protocol_ready": false,
+    "full_population_reproduction_rule_frozen": true,
+    "full_population_protocol_dispatch_ready": false,
+    "queue_generated": false
+  },
+  "resource_limits": {
+    "gpu_count_user_stated": 1,
+    "gpu_model_user_stated": "RTX 2080 Ti",
+    "native_conda": true,
+    "docker_allowed": false,
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "full_unit_timing": "unmeasured"
+  },
+  "web_execution": {
+    "repository_tests": 0,
+    "official_scorer_invocations": 0,
+    "gpu_workloads": 0,
+    "status": "generated_unexecuted"
+  },
+  "next_discriminating_action": "Local runs the current whole-suite acceptance and existing engineering parity/finalization chain. Before any full-128 plan, bind all 128 GT and prediction artifacts plus the exact ActionMesh seed-42 generation source/weights/config, then measure one complete current reproduction unit."
+}

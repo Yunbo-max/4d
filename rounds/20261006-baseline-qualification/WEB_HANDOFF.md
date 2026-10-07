@@ -36,7 +36,9 @@ The historical software-test receipts are engineering evidence only. They do not
 7. `docs/research-math-20261006/SCORING_OUTPUT_INTEGRITY.md`
 8. `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
 9. `docs/research-math-20261006/actionbench-qualification-source-audit.json`
-10. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
+10. `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
+11. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
+12. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
 
@@ -51,6 +53,7 @@ Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_R
 | Acceptance plan builder | `actionmesh/prepare_control_scoring_checks.py` | emits parser-only unit-test plan |
 | Scoring plan builder | `actionmesh/prepare_control_scoring.py` | emits native-scoring request/integrity plan |
 | Scorer parity | `actionmesh/prepare_actionbench_parity.py`, `actionmesh/research_math/actionbench_parity.py` | emits/runs protocol-free engineering equivalence with exact source/input/output binding |
+| Full-128 reproduction guard | `actionmesh/research_math/actionbench_full_reproduction.py` | checks the frozen complete-population/current-README rule; never runs the scorer or authorizes dispatch |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
@@ -104,10 +107,14 @@ The bounded primary-source audit at
 `docs/research-math-20261006/actionbench-qualification-source-audit.json`
 confirms that the current official repository tree and history publish no
 per-sample results or one-asset threshold. Do not repeat that search or invent a
-rule. The only source-matched scientific alternative identified so far is a new
-full-128, seed-42 official-scorer reproduction protocol; it is not part of this
-one-UID parity unit and remains conditional on a prospective tolerance/statistical
-rule, full manifests/predictions, current resource measurement and fresh replay.
+rule. The source-matched full-128 alternative now has a prospective reproduction
+rule: all 128 objects must succeed and all three official means must fall within
+the three-decimal intervals represented by the current README row. This closes
+the rule-definition gap only. It is not part of the one-UID parity unit and
+remains non-dispatchable until complete GT/prediction manifests, exact ActionMesh
+seed-42 generation source/weights/config, current resource measurement,
+installed-verifier protocol acceptance and fresh replay are bound. The official
+scorer sampling seed remains 44; do not replace it with the generation seed.
 
 ## Runtime supplement — 2026-10-06
 

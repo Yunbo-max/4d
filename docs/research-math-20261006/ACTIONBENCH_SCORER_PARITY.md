@@ -213,9 +213,15 @@ identities, queries, returned paths, and scope adjudication.
 
 This closes the bounded source search without changing the gate: the returned
 one-UID development asset still has no primary-source absolute qualification
-rule. A legitimate source-matched alternative would be a new prospective
-full-population reproduction protocol: all 128 released objects, ActionMesh
-seed 42, the official scorer, the published aggregate values, a separately
-justified frozen tolerance/uncertainty rule, complete per-sample retention and
-fresh replay. It is not dispatch-ready. It cannot reuse this one-UID parity
-sidecar, this one-UID timing, or either aggregate table as a per-asset threshold.
+rule. The source-matched alternative now has a conditional prospective rule in
+`actionbench-full128-reproduction-contract.json`: all 128 released objects must
+succeed, and all three current-README means must lie in their published
+three-decimal intervals. ActionMesh generation seed 42 and official evaluator
+sampling seed 44 are separate identities. This finite-population reproduction
+rule has no sampling confidence interval and is not an efficacy threshold.
+
+The path remains non-dispatchable until it binds complete per-sample GT and
+prediction manifests, exact generation source/weights/configuration, current
+runtime and full-unit resource measurements, an installed-verifier native
+protocol, and fresh trusted official replay. It cannot reuse this one-UID parity
+sidecar or timing, or apply either aggregate table as a per-asset threshold.

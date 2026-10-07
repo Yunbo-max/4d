@@ -1,0 +1,67 @@
+{
+  "kind": "source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T06:34:00Z",
+  "subject": "Prospective full-population ActionBench baseline reproduction contract and fail-closed checker",
+  "status": "generated_unexecuted",
+  "inputs": [
+    {"path": "docs/research-math-20261006/actionbench-qualification-source-audit.json", "sha256": "194f3ed17a22b36f81f3b8421d38c51318bf13ab3840770272974cf7100e2079"},
+    {"path": "docs/research-math-20261006/actionbench-official-source-evidence.json", "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"},
+    {"path": "actionmesh/research_overnight/assets/actionbench_population.json", "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"},
+    {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"},
+    {"path": "actionmesh/repo/actionbench/evaluate_dataset.py", "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"}
+  ],
+  "review": [
+    {
+      "check": "population_and_denominator",
+      "finding": "The current official README reports an average over all 128 animated objects. The official evaluator otherwise averages successful rows only, so the reproduction contract prospectively requires 128 total, 128 successful and zero failed rows to prevent omission from changing the denominator."
+    },
+    {
+      "check": "seed_identity",
+      "finding": "The leaderboard's seed 42 identifies the ActionMesh generation row. The pinned evaluator default and the existing scorer request use sampling seed 44. The contract freezes these as distinct fields and rejects substituting 42 for the scorer seed."
+    },
+    {
+      "check": "target_version",
+      "finding": "The current official README row is 0.054/0.085/0.153, while paper v2 records 0.053/0.081/0.148. This contract deliberately targets only the current README revision and cannot be described as reproducing the paper-v2 row."
+    },
+    {
+      "check": "prospective_tolerance",
+      "finding": "Each displayed three-decimal target defines a pre-result half-open rounding interval of width 0.001. All three intervals and the complete-population condition must pass. This is a reproduction agreement rule derived from the source's report precision, not an efficacy threshold or a per-object rule."
+    },
+    {
+      "check": "uncertainty_and_multiplicity",
+      "finding": "The target is the complete finite released population rather than a sample from it, so no sampling confidence interval is claimed for reproduction. The decision is an intersection over all three predeclared metrics; no result-selected metric or multiplicity shortcut is allowed."
+    },
+    {
+      "check": "scientific_boundary",
+      "finding": "A future pass could qualify this exact ActionMesh baseline/scorer/full-population path only after trusted official replay. It cannot qualify the existing one UID, any candidate effect, or any of the 15 selected constructions."
+    }
+  ],
+  "generated_artifacts": [
+    {"path": "docs/research-math-20261006/actionbench-full128-reproduction-contract.json", "sha256": "d94b68cc5d2bf28c8f67335c07d987376b1ac6cd654576a5c2d3e933a70a6705"},
+    {"path": "actionmesh/research_math/actionbench_full_reproduction.py", "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"},
+    {"path": "actionmesh/research_math/tests/test_actionbench_full_reproduction.py", "sha256": "d3ad5664d1733cf24ba897166e378db2c9bee9dab865880d50859966629e7fec"}
+  ],
+  "static_review": {
+    "json_parse_required": true,
+    "python_ast_parse_required": true,
+    "reference_hash_check_required": true,
+    "repository_tests_executed_by_web": 0,
+    "official_scorer_invocations": 0,
+    "gpu_workloads": 0
+  },
+  "remaining_blockers": [
+    "current-revision Local software acceptance, including the nine new authored checks",
+    "completed one-UID official/faithful parity bundle and receipt-bound finalization sidecar",
+    "hash-bound GT and prediction manifests for all 128 UIDs and 16 frames",
+    "pinned ActionMesh generation source, weights and effective configuration for the published seed-42 row",
+    "native Conda/runtime/device qualification and a complete installed-verifier protocol",
+    "measured complete current full-population/multi-arm unit wall time and peak VRAM",
+    "fresh nonce-bound official replay with retained per-object CSV, summary and failures"
+  ],
+  "scientific_counters": {
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}
