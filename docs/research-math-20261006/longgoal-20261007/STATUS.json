@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T10:25:46.506198+00:00",
+  "updated_at": "2026-10-07T10:33:30.290799+00:00",
   "software_acceptance": {
-    "run_id": "export-green-r3",
-    "tests_passed": 205,
+    "run_id": "unit-contract-green-r4",
+    "tests_passed": 218,
     "tests_failed": 0,
-    "plan_digest": "93c24fc61279809a9e66234de129e18326c94d51fa9133538a964f6e13e61842",
-    "scope": "205 passed before merging concurrent upstream 87f99d2; 11 newly merged unit-manifest checks still unexecuted"
+    "plan_digest": "6ea150c5160a09d0f3a1ebd6b0aa06eba2b792e6f6161ca1dc7dcb5774782319",
+    "scope": "latest merged unit-manifest checks plus default generation/three-arm completeness checks; CPU software evidence only"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "full dataset and Git source transfer running; export coordinate adapter implemented and 205 checks passed; complete-unit runner still needs integration",
+  "current_task": "full dataset and source transfer running; fixed generation argv and strict three-arm completion checks implemented; complete execution adapter and plan builder still pending",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -130,7 +130,7 @@
     }
   ],
   "next_checkpoint": "complete pinned snapshot download/admission, dataset semantics, versioned low-RAM FP16 complete generation/export/scoring unit",
-  "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r3",
+  "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r4",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
     "parity_first_attempt": "failed: official CLI missing pandas",
@@ -195,7 +195,7 @@
   },
   "concurrent_upstream": {
     "revision": "87f99d275a07a11a7fb9081596bb24ac33c2af86",
-    "status": "merged, latest software acceptance required",
+    "status": "merged; all 11 unit-manifest checks passed in software-unit-r4 (216 total), subsequently 218 passed",
     "first_unit_policy": "preserve default BF16 non-low-RAM natural failure before separately versioned repair"
   }
 }
