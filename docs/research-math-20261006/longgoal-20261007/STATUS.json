@@ -672,8 +672,8 @@
       "start_ticks": "211868021",
       "state": "R"
     },
-    "main_agent_check_at": "2026-10-07T16:53:09Z",
-    "git_delivery_note": "Checkpoint updates through the connected GitHub write tools have repeatedly returned MCP internal errors since 2026-10-07T16:53Z; latest result and supervision evidence retained in local worktree; retry after external connector recovers."
+    "main_agent_check_at": "2026-10-07T17:15:40Z",
+    "git_delivery_note": "Status checkpoint successfully written to GitHub main and read back at 2026-10-07T17:17Z; /Users/yunbo/Documents/4d fast-forwarded to 1318852."
   },
   "next_window_preparation": {
     "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
@@ -688,7 +688,7 @@
     ],
     "population_units": 118,
     "batches": 8,
-    "static_validation": "all nine CPU-only harness plans accepted",
+    "static_validation": "all nine CPU-only harness plans accepted; local re-audit at 17:18 UTC verified all 375 exported hashes, all 8 manifest plan digests, exact unique indices 10-127 and 118 contracts; no software workloads executed",
     "workloads_started": false,
     "prerequisites": "r9 host-pool release; software-r10 accepted before manifest workloads; promote receipt-bound inputs and review new GPU plans before dispatch",
     "unit_timeout_seconds_proposed": 1664,
