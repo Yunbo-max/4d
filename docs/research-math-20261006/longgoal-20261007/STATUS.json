@@ -10,7 +10,7 @@
     "tests_passed": 205,
     "tests_failed": 0,
     "plan_digest": "93c24fc61279809a9e66234de129e18326c94d51fa9133538a964f6e13e61842",
-    "scope": "software checks only; four new checks cover inverse official deformation coordinate transform and mesh validation"
+    "scope": "205 passed before merging concurrent upstream 87f99d2; 11 newly merged unit-manifest checks still unexecuted"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -192,5 +192,10 @@
       "actionmesh_bundle_sha256": "25bf3aa9acbb15b0ed417b746308cd4cbd2819790cf06d314bea86dea17c0fac",
       "triposg_bundle_sha256": "7497a38f54f6564a959c966b8668bddb12f7dbeaee4ad116dd60a5d01b73c1ef"
     }
+  },
+  "concurrent_upstream": {
+    "revision": "87f99d275a07a11a7fb9081596bb24ac33c2af86",
+    "status": "merged, latest software acceptance required",
+    "first_unit_policy": "preserve default BF16 non-low-RAM natural failure before separately versioned repair"
   }
 }

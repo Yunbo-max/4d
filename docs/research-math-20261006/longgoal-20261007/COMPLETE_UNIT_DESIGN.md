@@ -23,7 +23,14 @@ the all-128 benchmark agreement rule or the 15 candidate outcomes.
 
 ## Generation
 
-Use official `inference/video_to_animated_mesh.py` with seed 42, non-fast mode,
+Follow the concurrently delivered `actionbench-current-release-unit-contract.json`
+at upstream commit 87f99d2. First run its exact default non-fast BF16, non-low-RAM
+configuration and retain any unsupported operation or OOM as a natural failure.
+The low-RAM FP16 configuration below is a separately versioned repair proposal,
+not an automatic fallback and not the currently frozen unit.
+
+For that later explicitly versioned repair, use official
+`inference/video_to_animated_mesh.py` with seed 42, non-fast mode,
 16 original RGBA frames, stage 0=100, stage 1=30, faces=40000,
 floaters threshold=.02, guidance=7.5, anchor=0. Set `--low_ram --dtype float16`
 explicitly as the versioned RTX-2080-Ti current-release configuration. This is not
