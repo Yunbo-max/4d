@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T10:52:22.591592+00:00",
+  "updated_at": "2026-10-07T11:03:15.311868+00:00",
   "software_acceptance": {
     "run_id": "timeout-green-r5",
     "tests_passed": 224,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "dataset and Git source transfer remain live; timeout cleanup repaired; all 15 input prerequisites audited; admissions still pending",
+  "current_task": "r6 clean overlay checkout ready with promoted runtime; dataset PID22918 and TripoSG bundle transfer active; source/data admission next",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -130,7 +130,7 @@
     }
   ],
   "next_checkpoint": "complete pinned snapshot download/admission, dataset semantics, versioned low-RAM FP16 complete generation/export/scoring unit",
-  "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r5",
+  "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r6",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
     "parity_first_attempt": "failed: official CLI missing pandas",
@@ -174,7 +174,7 @@
   "data_staging": {
     "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
     "remote_target": "/root/actionmesh-research-staging/actionbench-full128-direct",
-    "status": "download PID 22918 observed live, 686/2309 files reported at 10:37 UTC; 52 surfaces incl reused cache; complete admission pending",
+    "status": "official HF CLI resume initiated after verified terminal CDN interruption; existing completed bytes and partial files preserved; see full128-direct-r2.log",
     "old_models_deleted": false,
     "transport": "loopback pinned public Hub metadata bridge; direct GPU-to-official-CDN object download",
     "first_direct_object_sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284",
@@ -190,7 +190,18 @@
       "triposg_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
       "bundle_transfer_session": 22301,
       "actionmesh_bundle_sha256": "25bf3aa9acbb15b0ed417b746308cd4cbd2819790cf06d314bea86dea17c0fac",
-      "triposg_bundle_sha256": "7497a38f54f6564a959c966b8668bddb12f7dbeaee4ad116dd60a5d01b73c1ef"
+      "triposg_bundle_sha256": "7497a38f54f6564a959c966b8668bddb12f7dbeaee4ad116dd60a5d01b73c1ef",
+      "actionmesh_bundle_status": "complete, exact SHA-256 verified",
+      "remote_source_root": "/root/actionmesh-research-staging/actionmesh-source-d5c01f5",
+      "triposg_bundle_status": "transfer started; do not initialize submodule until hash matches"
+    },
+    "download_first_attempt": {
+      "pid": 22918,
+      "terminal": "failed",
+      "error": "ChunkedEncodingError: IncompleteRead(33398122 bytes read, 5002006 more expected)",
+      "last_progress": "1731/2309, 75%",
+      "old_process_confirmed_absent": true,
+      "log": "/root/actionmesh-research-staging/full128-direct.log"
     }
   },
   "concurrent_upstream": {
@@ -220,5 +231,6 @@
     "repair": "enumerate descendants while parent is alive, kill descendants, then kill/wait parent",
     "green_run": "timeout-green-r5"
   },
-  "candidate_input_audit": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json"
+  "candidate_input_audit": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+  "remote_source_revision": "b3a4782996ae7162faace0a419cf64e9e3edcdd7"
 }
