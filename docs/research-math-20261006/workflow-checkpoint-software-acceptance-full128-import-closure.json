@@ -1,0 +1,42 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T18:52:16Z",
+  "project_id": "4d-mechanism-boundaries",
+  "route_id": "baseline-qualification",
+  "role": "web_supervisor",
+  "current_node": "B/S native baseline qualification and safe Full128 scheduling",
+  "decision": "Repair the canonical software-acceptance source closure before using it to qualify the immutable r9 snapshot and reconciliation path.",
+  "evidence": {
+    "latest_r9_observed_at": "2026-10-07T18:15:41.051Z",
+    "latest_r9_counts": {
+      "completed": 8,
+      "running": 1,
+      "pending": 0,
+      "failed": 0
+    },
+    "direct_local_discovery": "259 run, 9 failures, 13 errors; diagnostic only",
+    "missing_acceptance_sources": 3
+  },
+  "completed": [
+    "identified every missing root import used by the Full128 window test module",
+    "authored one focused regression check before changing the source inventory",
+    "added exactly the three required root modules to the CPU-only acceptance closure",
+    "updated the Local command acceptance conditions and expected method count"
+  ],
+  "pending": [
+    "population-gpu-current-r9 reaches a terminal safe boundary",
+    "Local runs the current 291-method Linux harness acceptance",
+    "Local freezes the coherent r9 state/status pair and derives reconciliation",
+    "Web verifies returned immutable evidence before any window compilation",
+    "official full-population baseline reproduction and scorer replay remain incomplete"
+  ],
+  "scientific_status": {
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "queue_approved": false,
+    "dispatch_ready": false
+  },
+  "next_discriminating_action": "After r9 reaches a terminal boundary, Local uses a fresh Linux checkout to generate and inspect the CPU-only acceptance plan, verifies the three new code refs, and runs its exact digest."
+}

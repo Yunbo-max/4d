@@ -956,7 +956,41 @@ only author-side acceptance intended for this round.
 
 The current Local software receipt still covers only 258 pre-a408422 checks, so
 it cannot qualify this code. At the next safe r9 boundary Local must refresh the
-observer ledger, run all 290 current checks, execute the immutable snapshot
+observer ledger, run the then-current suite (subsequently superseded by 291 checks
+below), execute the immutable snapshot
 builder and then the reconciliation builder. Window generation remains blocked
 until Web reads back that exact pair and sidecar. Candidate native results and
 formal outcomes remain **0/15** and **0**.
+
+## Continuation: close the Full128 software-acceptance import set — 2026-10-07
+
+The newest retained observer record reports eight completed r9 engineering units,
+one running unit and no pending or failed units at 2026-10-07T18:15:41.051Z.
+Population-008 completed generation and scoring with exit code zero, and all 117
+receipt-declared outputs were independently rehashed. Population-009 was at Stage
+I 19/30. These remain current-release engineering baseline attempts rather than
+candidate-method or native scientific evidence.
+
+New Local feedback also preserved a direct macOS/Python 3.9 discovery attempt:
+259 checks ran with 9 failures and 13 errors. The attempt used neither the Linux
+harness acceptance path nor a complete compatible checkout, so it is retained as
+diagnostic evidence only. Two following commits corrected the one genuinely stale
+Full128 rejection assertion; the remaining output includes platform, dependency,
+missing-source and fixture mismatches and cannot be converted into acceptance.
+
+Source inspection then found a deterministic failure in the *formal* isolated
+acceptance plan: its explicit root-source inventory did not include
+`prepare_actionbench_full128_window.py`,
+`prepare_actionbench_active_batch_snapshot.py`, or
+`prepare_actionbench_active_batch_reconciliation.py`, although the current window
+test module imports all three. Added a focused closure check first, then added
+exactly those modules to `ROOT_SOURCES`. The plan remains CPU-only, single-attempt,
+and fail-closed when any source is missing.
+
+The new check raises the expected current suite from 290 to 291 methods. Web
+performed source/AST/JSON/hash review only and did not execute the check or any
+project suite, model, scorer or GPU work. Local must regenerate the software plan
+at the delivered revision, inspect all three new `code_refs`, and obtain a clean
+291-method Linux harness receipt before the immutable r9 state/status capture and
+reconciliation sidecar can be accepted. Candidate native results and formal
+outcomes remain **0/15** and **0**.

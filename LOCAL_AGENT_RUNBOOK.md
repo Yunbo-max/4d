@@ -5,13 +5,16 @@
 This runbook is the Local Codex entry point for round `20261006-baseline-qualification`. It covers acceptance of the committed control/scoring software, recovery and verification of one original development asset, construction of the three-arm baseline unit, native-scoring replay, integrity validation, and evidence return.
 
 Latest execution evidence is
-`docs/research-math-20261006/longgoal-20261007/README.md`. It records 201/201
-software checks at the returned revision, exact-zero official/faithful parity
+`docs/research-math-20261006/longgoal-20261007/README.md`. It records 258/258
+software checks on the pre-`a408422` r9 source, exact-zero official/faithful parity
 for all nine one-UID/three-arm metric comparisons under the explicit GPU-forward
 plus upstream CPU-backward compatibility policy, and successful CPU
 finalization. This is engineering scorer-equivalence evidence only: no native
-scientific contract was qualified and no candidate ran. This revision adds new
-unit-manifest checks, so rerun current-revision software acceptance, but do not
+scientific contract was qualified and no candidate ran. A later direct macOS
+Python 3.9 discovery attempt ran 259 checks with 9 failures and 13 errors; it was
+outside the harness, used an incomplete/incompatible checkout and is not software
+acceptance. This revision adds new Full128 checks and fixes their harness import
+closure, so rerun current-revision software acceptance on the Linux GPU host, but do not
 repeat the already finalized parity unless one of its bound source/input hashes
 has changed. Continue from snapshot/data staging after verifying the retained
 evidence hashes.
@@ -45,11 +48,11 @@ Read these files at the delivered commit before acting:
 | Controller | Local Codex on the user's computer, with the authenticated Git checkout and configured SSH access |
 | Compute | Separate Linux GPU host; ordinary Conda processes; no remote Codex/GPT required |
 | Repository checkout | Resolve an absolute fresh path locally; do not reuse a dirty or running tree |
-| GPU-host project path | Last returned as `/root/rivermind-data/actionmesh-repro`; verify the current clean checkout and exact delivered commit before use |
+| GPU-host project path | The running r9 tree is `/root/actionmesh-research-staging/4d-longgoal-r9`; preserve it unchanged and create a separate clean checkout at the delivered revision for acceptance |
 | SSH alias/endpoint | Unknown. Reuse the user's already configured authorized target; do not guess or extract credentials |
 | Installed skill directory | Unknown. Locate the complete current installed `research-autopilot` package and record its absolute path |
 | Conda env/interpreter | Last returned as `/root/rivermind-data/actionmesh-repro/inference-env/bin/python`, a Conda-backed venv; revalidate captured package/dependency hashes; no Docker |
-| GPU | Last observed RTX 2080 Ti, UUID `GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740`, driver 580.119.02, 22,528 MiB total; recheck identity/free VRAM/processes before launch |
+| GPU | Current host is RTX 2080 Ti, UUID `GPU-4910bb04-2d00-ca81-f64a-2031568758ad`, 22,528 MiB total; the older calibration UUID is a different physical card. Recheck identity/free VRAM/processes before launch |
 | ActionBench revision | `2796071cbe6248422fcbeab3101fa9f9886cb7b9` |
 | Original sample and GT paths | Returned UID `000-048_45e57349f062416aaf11f2c31587da16`; GT remains host-only at SHA-256 `25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e` |
 | Time budget | 28,800 s hard window, 1,800 s collection reserve; current complete three-arm unit time is unmeasured |
@@ -115,6 +118,12 @@ The generated native plan must list `actionmesh/finalize_actionbench_parity.py`
 in `code_refs`; the parity rejection tests import that controller finalizer. If
 it is absent, reject the plan rather than treating an earlier 127-test run as
 acceptance of the current revision.
+It must also list all three root modules imported by the current Full128 window
+checks: `prepare_actionbench_full128_window.py`,
+`prepare_actionbench_active_batch_snapshot.py`, and
+`prepare_actionbench_active_batch_reconciliation.py`. Missing any one would make
+the isolated harness workspace incomplete even if the controller checkout can
+import it.
 The returned 201/201 suite predates the unit-manifest checks added here. Run the
 current suite once; this does not invalidate or require repetition of the
 separately finalized scorer parity because this change does not modify its bound
@@ -620,7 +629,8 @@ its real state. A stale status file or SSH shell is not liveness evidence.
 
 After that reconciliation, run the current whole software suite through the
 software-acceptance harness. The newly authored window-plan checks must pass in
-addition to the prior 265 methods; the expected merged total is now 290. The
+addition to the prior 265 methods; the expected merged total is now 291 after
+the acceptance-closure regression check. The
 builder may then be invoked directly only
 to emit a plan; it performs no workload. For a non-overlapping future window,
 for example window 02 after the current r9 batch reaches a safe boundary:

@@ -1,0 +1,48 @@
+{
+  "kind": "software-acceptance-full128-import-closure-source-review",
+  "version": "1.0.0",
+  "status": "reviewed_generated_unexecuted",
+  "reviewed_at": "2026-10-07T18:52:16Z",
+  "finding": "The canonical CPU-only acceptance plan staged all research_math Python files but omitted three root modules imported by the current Full128 window tests, so the isolated harness workspace would fail before exercising those tests.",
+  "affected_modules": [
+    "actionmesh/prepare_actionbench_full128_window.py",
+    "actionmesh/prepare_actionbench_active_batch_snapshot.py",
+    "actionmesh/prepare_actionbench_active_batch_reconciliation.py"
+  ],
+  "selected_design": "Keep the explicit fail-closed root inventory and add only the three newly imported Full128 modules. Protect the closure with a behavior-focused acceptance_sources regression check.",
+  "rejected_alternatives": [
+    "Stage every root-level Python file: this expands the accepted execution surface beyond the suite's reviewed import closure.",
+    "Set PYTHONPATH to the controller checkout: this would let isolated tests read mutable, unpinned files outside the attempt workspace.",
+    "Treat the direct macOS discovery run as acceptance: it did not use the harness, Linux target, complete checkout, or current source closure."
+  ],
+  "authored_check": {
+    "name": "test_acceptance_source_closure_includes_full128_root_imports",
+    "expected_merged_test_methods": 291,
+    "executed_by_web": 0
+  },
+  "local_feedback_classification": {
+    "direct_discovery_tests_run": 259,
+    "failures": 9,
+    "errors": 13,
+    "accepted": false,
+    "reason": "standalone macOS Python 3.9 diagnostic run outside the admitted Linux harness"
+  },
+  "static_validation": {
+    "python_ast_files_parsed": 2,
+    "json_documents_parsed": 2,
+    "required_root_sources_observed": 3,
+    "control_plan_test_methods_observed": 6,
+    "git_diff_check_passed": true,
+    "project_tests_accepted": false,
+    "gpu_workloads_started": 0,
+    "official_scorer_runs": 0
+  },
+  "remaining_preconditions": [
+    "Local regenerates the current software-acceptance plan on the Linux GPU host",
+    "the native plan contains the exact three new root-module code references",
+    "all 291 current methods pass under the approved CPU-only harness digest",
+    "the returned receipt is hash-checked before snapshot or reconciliation promotion"
+  ],
+  "scientific_effect_qualification": false,
+  "candidate_methods_tested": false
+}

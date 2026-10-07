@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T18:15:41Z",
+  "recorded_at": "2026-10-07T18:52:16Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The retained engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T18:15:41.051Z with eight completed, one running, zero pending and zero failed; population-009 generation was at Stage I 19/30 with GPU 100%, 10255 MiB used and no observed errors. Population-008 completed generation/scoring with exit code zero; its receipt/state agree and all 117 receipt-declared output hashes were independently verified. Its three engineering baseline rows are retained. These do not qualify the official native contract or any candidate. Full128 window generation still requires the immutable state/status evidence pair, current 290-method Local software acceptance and reconciliation sidecar. Candidate native results/formal outcomes remain 0/15 and 0.",
+  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The retained engineering batch population-gpu-current-r9 was last independently observed at 2026-10-07T18:15:41.051Z with eight completed, one running, zero pending and zero failed; population-009 generation was at Stage I 19/30. Population-008 completed generation/scoring with exit code zero and all 117 receipt-declared outputs were independently verified. These are engineering baselines, not candidate or native scientific results. A standalone macOS Python 3.9 discovery attempt ran 259 checks with 9 failures and 13 errors and is retained only as diagnostic evidence. Source review found that the formal isolated acceptance plan omitted three Full128 root imports; the closure and one regression check are now authored, raising the expected current Linux harness suite to 291. That suite, the immutable r9 state/status pair and reconciliation sidecar remain unreturned, so plan generation and dispatch are blocked. Candidate native results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -746,7 +746,7 @@
     },
     "new_checks_authored": 2,
     "current_window_test_methods_observed": 20,
-    "expected_merged_test_methods": 290,
+    "expected_merged_test_methods": 291,
     "new_checks_executed_by_web": 0,
     "local_software_acceptance_complete": false,
     "immutable_pair_returned": false,
@@ -768,5 +768,40 @@
     "harness_acceptance": false,
     "native_context_qualified": false,
     "candidate_native_results": 0
+  },
+  "software_acceptance_full128_import_closure": {
+    "status": "generated_unexecuted_closure_repaired",
+    "recorded_at": "2026-10-07T18:52:16Z",
+    "base_commit": "03487174e10a7be0c623026eaeb711b448313c18",
+    "builder": "actionmesh/prepare_control_scoring_checks.py",
+    "builder_sha256": "d37de4e3c00dc9a5b826f4d622963f23cd5b8e2d043a81c83b3ffe39868907b0",
+    "tests_ref": {
+      "path": "actionmesh/research_math/tests/test_control_plan.py",
+      "sha256": "7d10d0503740d50c32af5394a6235b2cfedcc7c0dfea39b1dcf1fb153fa08fc0"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/software-acceptance-full128-import-closure-source-review.json",
+      "sha256": "43b30ef88e872ec13a88ee7d746331a11f3ab9c612d82cd71e475dca06b32729"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-software-acceptance-full128-import-closure.json",
+      "sha256": "d67a033fe3575905fc963ab56af754ff19eefb0ed2bd75be3c602a6af30e19f1"
+    },
+    "required_root_sources": [
+      "actionmesh/prepare_actionbench_full128_window.py",
+      "actionmesh/prepare_actionbench_active_batch_snapshot.py",
+      "actionmesh/prepare_actionbench_active_batch_reconciliation.py"
+    ],
+    "new_checks_authored": 1,
+    "expected_merged_test_methods": 291,
+    "new_checks_executed_by_web": 0,
+    "local_software_acceptance_complete": false,
+    "direct_macos_discovery_accepted": false,
+    "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
   }
 }

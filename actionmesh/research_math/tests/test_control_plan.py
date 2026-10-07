@@ -33,6 +33,17 @@ class ControlPlanTest(unittest.TestCase):
         self.assertIn(
             'actionmesh/research_math/tests/test_actionbench_dataset_semantics.py', paths)
 
+    def test_acceptance_source_closure_includes_full128_root_imports(self):
+        """Catch isolated acceptance omitting modules imported by window tests."""
+        project_root = Path(__file__).resolve().parents[3]
+        paths = {path.relative_to(project_root).as_posix()
+                 for path in acceptance.acceptance_sources(project_root)}
+        for path in (
+                'actionmesh/prepare_actionbench_full128_window.py',
+                'actionmesh/prepare_actionbench_active_batch_snapshot.py',
+                'actionmesh/prepare_actionbench_active_batch_reconciliation.py'):
+            self.assertIn(path, paths)
+
     def project(self, root):
         code = root/'actionmesh/research_math'; code.mkdir(parents=True)
         (code/'__init__.py').write_text('')
