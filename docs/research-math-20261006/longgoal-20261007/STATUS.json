@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T17:44:00Z",
+  "updated_at": "2026-10-07T17:50:33Z",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Six population units completed; population-007 native scoring active; two pending; zero failures. 007 generation/rendering completed at 17:41:44Z; native arm scorer is running; result not yet flushed. Engineering baseline only.",
+  "current_task": "Seven population units completed; population-008 worker launched, one pending; zero failures. Population-007 generation and all three scoring arms exited 0; independent remote receipt audit verified 117/117 declared outputs. Engineering baseline only.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -410,10 +410,10 @@
     "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
     "launched_at": "2026-10-07T15:32:28.057578+00:00",
     "gpu_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
-    "observed_at": "2026-10-07T17:44:00Z",
-    "completed": 6,
+    "observed_at": "2026-10-07T17:50:33Z",
+    "completed": 7,
     "running": 1,
-    "pending": 2,
+    "pending": 1,
     "failed": 0,
     "previous_gpu_sample": {
       "observed_at": "2026-10-07T15:39:08Z",
@@ -451,47 +451,47 @@
       "scientific_effect_qualification": false
     },
     "verified_worker": {
-      "task": "population-007",
-      "pid": 59088,
+      "task": "population-008",
+      "pid": 66651,
+      "worker_start_ticks": "212102662",
       "proc_start_identity_match": true,
-      "latest_stage": "native arm scoring at 2026-10-07T17:44:00Z",
-      "generation_pid": 59358,
-      "generation_start_ticks": "211990591",
-      "generation_process_status": "generation/rendering completed at 2026-10-07T17:41:44Z; scoring active",
-      "generation_stage": "complete",
-      "generation_state": "completed",
-      "runner_pid": 59090,
-      "runner_start_ticks": "211986184",
-      "worker_start_ticks": "211986033"
+      "latest_stage": "worker launched; awaiting full process-chain check",
+      "generation_pid": null,
+      "generation_start_ticks": null,
+      "generation_process_status": "not yet observed",
+      "generation_stage": "pending/launch",
+      "generation_state": "unknown",
+      "runner_pid": null,
+      "runner_start_ticks": null
     },
     "latest_completed_result": {
-      "task": "population-006",
-      "uid": "000-004_ab9192b6bc8f49e3baed63e984c7073a",
-      "completed_at": "2026-10-07T17:29:48.975353Z",
-      "elapsed_seconds": 1219.257,
-      "result_path": "runs/attempts/population-gpu-current-r9-unit-006/complete-fp16-lowram-v1-three-arm-unit-a1-8b7c5dd42e86414889b8e196f9f7a708/workspace/actionmesh/unit-output/result.json",
-      "result_sha256": "ea2d00b13e60ac2414a291f34b9f97aa38e3889266f0b036251e302c820d9ec1",
-      "receipt_path": "runs/attempts/population-gpu-current-r9-unit-006/receipt.json",
-      "receipt_sha256": "1a2b67f418a5efc408116e9f79e2c645c5304638683077cc99ad832c96ac5581",
-      "receipt_ref_match": true,
+      "task": "population-007",
+      "uid": "000-007_17ed60fbe8af47b69cbf45b97730e0ab",
+      "completed_at": "2026-10-07T17:49:15.829820Z",
+      "elapsed_seconds": 1163.102,
+      "result_path": "runs/attempts/population-gpu-current-r9-unit-007/complete-fp16-lowram-v1-three-arm-unit-a1-3b9c70c2ef6d4ea7b0c0d59c777e558e/workspace/actionmesh/unit-output/result.json",
+      "result_sha256": "11f9dcec7f09b6c426496c02255e3a3d47a134a8183a09058774bf96d36eb41a",
+      "receipt_path": "runs/attempts/population-gpu-current-r9-unit-007/receipt.json",
+      "receipt_sha256": "7eef01c4baa08fb2b00444001d8486c16afbad969a724a8583045d0660e66246",
+      "receipt_hash_verified": true,
       "declared_output_hashes_verified": 117,
       "missing_or_mismatched_outputs": 0,
-      "hash_audit": "Independent watcher re-read all 117 remote files named by receipt.attempts[0].output_refs; mismatches=[]",
+      "hash_audit": "Independent watcher re-read all 117 remote files named by receipt.attempts[0].output_refs; all SHA-256 matched at 2026-10-07T17:50:33Z",
       "scores": {
         "native": {
-          "cd_3d": 0.07401796782810763,
-          "cd_4d": 0.4973353601957209,
-          "cd_motion": 0.7842167019844055
+          "cd_3d": 0.03799280258626064,
+          "cd_4d": 0.04013111218403455,
+          "cd_motion": 0.06528113782405853
         },
         "world_gaussian": {
-          "cd_3d": 0.07227603506199262,
-          "cd_4d": 0.4916580612537987,
-          "cd_motion": 0.7840313911437988
+          "cd_3d": 0.03802992866625521,
+          "cd_4d": 0.040168980754891184,
+          "cd_motion": 0.06528621166944504
         },
         "body_gaussian": {
-          "cd_3d": 0.07343402961932527,
-          "cd_4d": 0.4953395148313475,
-          "cd_motion": 0.7840940356254578
+          "cd_3d": 0.038000855613995244,
+          "cd_4d": 0.040153989197491344,
+          "cd_motion": 0.06529450416564941
         }
       },
       "runtime_profile": "fp16-lowram-v1",
@@ -500,7 +500,7 @@
       "scientific_effect_qualification": false,
       "native_scientific_qualification": false,
       "candidate_methods_tested": false,
-      "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T17:31:49Z"
+      "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T17:50:33Z"
     },
     "completed_results": [
       {
@@ -611,6 +611,44 @@
         "native_scientific_qualification": false,
         "candidate_methods_tested": false,
         "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T17:31:49Z"
+      },
+      {
+        "task": "population-007",
+        "uid": "000-007_17ed60fbe8af47b69cbf45b97730e0ab",
+        "completed_at": "2026-10-07T17:49:15.829820Z",
+        "elapsed_seconds": 1163.102,
+        "result_path": "runs/attempts/population-gpu-current-r9-unit-007/complete-fp16-lowram-v1-three-arm-unit-a1-3b9c70c2ef6d4ea7b0c0d59c777e558e/workspace/actionmesh/unit-output/result.json",
+        "result_sha256": "11f9dcec7f09b6c426496c02255e3a3d47a134a8183a09058774bf96d36eb41a",
+        "receipt_path": "runs/attempts/population-gpu-current-r9-unit-007/receipt.json",
+        "receipt_sha256": "7eef01c4baa08fb2b00444001d8486c16afbad969a724a8583045d0660e66246",
+        "receipt_hash_verified": true,
+        "declared_output_hashes_verified": 117,
+        "missing_or_mismatched_outputs": 0,
+        "hash_audit": "Independent watcher re-read all 117 remote files named by receipt.attempts[0].output_refs; all SHA-256 matched at 2026-10-07T17:50:33Z",
+        "scores": {
+          "native": {
+            "cd_3d": 0.03799280258626064,
+            "cd_4d": 0.04013111218403455,
+            "cd_motion": 0.06528113782405853
+          },
+          "world_gaussian": {
+            "cd_3d": 0.03802992866625521,
+            "cd_4d": 0.040168980754891184,
+            "cd_motion": 0.06528621166944504
+          },
+          "body_gaussian": {
+            "cd_3d": 0.038000855613995244,
+            "cd_4d": 0.040153989197491344,
+            "cd_motion": 0.06529450416564941
+          }
+        },
+        "runtime_profile": "fp16-lowram-v1",
+        "generation_exit_code": 0,
+        "scoring_exit_code": 0,
+        "scientific_effect_qualification": false,
+        "native_scientific_qualification": false,
+        "candidate_methods_tested": false,
+        "audit_source": "gpu_watch_r9 independent remote receipt and output-ref audit at 2026-10-07T17:50:33Z"
       }
     ]
   },
@@ -692,14 +730,14 @@
     "free_disk_bytes": 22325809152,
     "latest_stage": "population-007 generation/rendering completed 17:41:44Z; native arm scoring; no observed errors",
     "watcher_pid": 23223,
-    "watcher_status": "live; next full check scheduled for 17:55:40Z",
+    "watcher_status": "live; next full check scheduled for 17:55:40Z; immediate terminal/error alerts enabled",
     "latest_queue_counts": {
-      "completed": 6,
+      "completed": 7,
       "running": 1,
-      "pending": 2,
+      "pending": 1,
       "failed": 0
     },
-    "latest_running_unit": "population-007; native scoring",
+    "latest_running_unit": "population-008; worker PID 66651 start_ticks 212102662",
     "latest_scoring_pids": {
       "official_wrapper": 63353,
       "official_wrapper_start_ticks": "212057734",
@@ -712,15 +750,20 @@
     "latest_generation_process": {
       "status": "generation/rendering completed at 2026-10-07T17:41:44Z"
     },
-    "latest_arm_progress": "population-007 native scoring in progress at 17:44:00Z; score output not flushed; population-006 complete and independently output-hash-verified 117/117",
-    "main_agent_check_at": "2026-10-07T17:44:00Z",
+    "latest_arm_progress": "population-007 completed with generation/scoring exit 0 and 117/117 remote output hashes matching; population-008 worker launched, process chain pending full check",
+    "main_agent_check_at": "2026-10-07T17:50:33Z",
     "git_delivery_note": "Status checkpoint successfully written to GitHub main and read back at 2026-10-07T17:17Z; /Users/yunbo/Documents/4d fast-forwarded to 1318852.",
-    "latest_immediate_event_at": "2026-10-07T17:44:00Z",
-    "latest_immediate_event": "population-007 generation/rendering complete; native scorer active; no errors observed",
-    "last_completed_unit": "population-006; receipt sha256 1a2b67f418a5efc408116e9f79e2c645c5304638683077cc99ad832c96ac5581; 117/117 remote output hashes match",
+    "latest_immediate_event_at": "2026-10-07T17:50:33Z",
+    "latest_immediate_event": "population-007 terminal success; population-008 worker launched; no error observed",
+    "last_completed_unit": "population-007; receipt sha256 7eef01c4baa08fb2b00444001d8486c16afbad969a724a8583045d0660e66246; 117/117 remote output hashes match",
     "gpu_sample_at": "2026-10-07T17:44:00Z",
     "runner_pid": 59090,
-    "runner_start_ticks": "211986184"
+    "runner_start_ticks": "211986184",
+    "latest_worker_identity": {
+      "pid": 66651,
+      "start_ticks": "212102662",
+      "observed_at": "2026-10-07T17:50:33Z"
+    }
   },
   "next_window_preparation": {
     "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
