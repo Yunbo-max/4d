@@ -1,0 +1,1 @@
+{"depends_on":[],"idea_id":"baseline-qualification","plan_ref":{"path":"plans/lowram-green-r6/native.json","sha256":"8903c353f864d0be084af0aa23458c8052be07736f0e6ca46825a1092e6ae8df"},"priority":1,"resources":{"allow_gpu_share":false,"cpu_cores":1,"exclusive_keys":[],"gpu_count":0,"gpu_peak_mib":null,"memory_profile_ref":null,"ram_mib":2048},"task_id":"all-research-math-checks"}

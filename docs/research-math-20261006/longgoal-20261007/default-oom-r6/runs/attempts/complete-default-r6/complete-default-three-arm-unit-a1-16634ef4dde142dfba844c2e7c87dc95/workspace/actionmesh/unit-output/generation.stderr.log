@@ -1,0 +1,81 @@
+/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/utils.py:56: Hydra14MigrationWarning: 
+version_base="1.1" selects Hydra 1.1 compatibility behavior.
+Hydra 1.4 will remove this compatibility behavior.
+Before upgrading to Hydra 1.4, set version_base="1.3" and test your application.
+See https://hydra.cc/docs/upgrades/1.3_to_1.4/prepare_for_1_4/ for preparation instructions.
+  with initialize_config_dir(
+2026-10-07 11:25:16,312 - actionmesh.pipeline - INFO - Downloading external models if missing...
+2026-10-07 11:25:16,312 - actionmesh.pipeline - INFO - Downloading external models if missing... Done
+2026-10-07 11:25:16,325 - actionmesh.pipeline - INFO - Loading background removal model from disk...
+2026-10-07 11:25:17,005 - actionmesh.pipeline - INFO - Loading image-to-3D (TripoSG) model from disk...
+Loading pipeline components...:   0%|          | 0/5 [00:00<?, ?it/s]Loading pipeline components...:  40%|████      | 2/5 [00:00<00:00, 11.40it/s]Loading pipeline components...:  80%|████████  | 4/5 [00:00<00:00, 13.45it/s]Loading pipeline components...: 100%|██████████| 5/5 [00:00<00:00, 12.85it/s]
+There are modules in TripoSGDiTModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+There are modules in TripoSGVAEModel that should be kept in float32: []. Casting directly with `to()` can lead to inconsistent results; set `torch_dtype` in `from_pretrained()` instead to keep these modules in float32.
+2026-10-07 11:25:20,221 - actionmesh.pipeline - INFO - Loading image encoder from disk...
+2026-10-07 11:25:20,648 - actionmesh.pipeline - INFO - Loading temporal 3D denoiser (Stage I) from disk...
+2026-10-07 11:25:34,023 - actionmesh.pipeline - INFO - Loading temporal 3D VAE (Stage II) from disk...
+2026-10-07 11:25:35,822 - actionmesh.io.video_input - INFO - Loaded 16 frames from image folder: /root/actionmesh-research-staging/actionbench-full128-direct/data/000-000_03b69da8d2c94b5999bcf2605ee2ecd9/imgs
+  0%|          | 0/100 [00:00<?, ?it/s]  1%|          | 1/100 [00:00<00:41,  2.38it/s]  2%|▏         | 2/100 [00:00<00:23,  4.18it/s]  3%|▎         | 3/100 [00:00<00:27,  3.47it/s]  4%|▍         | 4/100 [00:01<00:29,  3.20it/s]  5%|▌         | 5/100 [00:01<00:30,  3.07it/s]  6%|▌         | 6/100 [00:01<00:31,  3.00it/s]  7%|▋         | 7/100 [00:02<00:31,  2.95it/s]  8%|▊         | 8/100 [00:02<00:31,  2.92it/s]  9%|▉         | 9/100 [00:02<00:31,  2.90it/s] 10%|█         | 10/100 [00:03<00:31,  2.89it/s] 11%|█         | 11/100 [00:03<00:30,  2.88it/s] 12%|█▏        | 12/100 [00:04<00:30,  2.87it/s] 13%|█▎        | 13/100 [00:04<00:30,  2.87it/s] 14%|█▍        | 14/100 [00:04<00:30,  2.87it/s] 15%|█▌        | 15/100 [00:05<00:29,  2.86it/s] 16%|█▌        | 16/100 [00:05<00:29,  2.86it/s] 17%|█▋        | 17/100 [00:05<00:29,  2.86it/s] 18%|█▊        | 18/100 [00:06<00:28,  2.86it/s] 19%|█▉        | 19/100 [00:06<00:28,  2.85it/s] 20%|██        | 20/100 [00:06<00:28,  2.85it/s] 21%|██        | 21/100 [00:07<00:27,  2.85it/s] 22%|██▏       | 22/100 [00:07<00:27,  2.85it/s] 23%|██▎       | 23/100 [00:07<00:26,  2.85it/s] 24%|██▍       | 24/100 [00:08<00:26,  2.85it/s] 25%|██▌       | 25/100 [00:08<00:26,  2.85it/s] 26%|██▌       | 26/100 [00:08<00:25,  2.85it/s] 27%|██▋       | 27/100 [00:09<00:25,  2.85it/s] 28%|██▊       | 28/100 [00:09<00:25,  2.85it/s] 29%|██▉       | 29/100 [00:09<00:24,  2.84it/s] 30%|███       | 30/100 [00:10<00:24,  2.84it/s] 31%|███       | 31/100 [00:10<00:24,  2.84it/s] 32%|███▏      | 32/100 [00:11<00:23,  2.84it/s] 33%|███▎      | 33/100 [00:11<00:23,  2.84it/s] 34%|███▍      | 34/100 [00:11<00:23,  2.84it/s] 35%|███▌      | 35/100 [00:12<00:22,  2.84it/s] 36%|███▌      | 36/100 [00:12<00:22,  2.84it/s] 37%|███▋      | 37/100 [00:12<00:22,  2.84it/s] 38%|███▊      | 38/100 [00:13<00:21,  2.84it/s] 39%|███▉      | 39/100 [00:13<00:21,  2.83it/s] 40%|████      | 40/100 [00:13<00:21,  2.83it/s] 41%|████      | 41/100 [00:14<00:20,  2.83it/s] 42%|████▏     | 42/100 [00:14<00:20,  2.83it/s] 43%|████▎     | 43/100 [00:14<00:20,  2.83it/s] 44%|████▍     | 44/100 [00:15<00:19,  2.83it/s] 45%|████▌     | 45/100 [00:15<00:19,  2.83it/s] 46%|████▌     | 46/100 [00:15<00:19,  2.83it/s] 47%|████▋     | 47/100 [00:16<00:18,  2.83it/s] 48%|████▊     | 48/100 [00:16<00:18,  2.83it/s] 49%|████▉     | 49/100 [00:17<00:18,  2.83it/s] 50%|█████     | 50/100 [00:17<00:17,  2.82it/s] 51%|█████     | 51/100 [00:17<00:17,  2.82it/s] 52%|█████▏    | 52/100 [00:18<00:17,  2.82it/s] 53%|█████▎    | 53/100 [00:18<00:16,  2.82it/s] 54%|█████▍    | 54/100 [00:18<00:16,  2.82it/s] 55%|█████▌    | 55/100 [00:19<00:15,  2.82it/s] 56%|█████▌    | 56/100 [00:19<00:15,  2.82it/s] 57%|█████▋    | 57/100 [00:19<00:15,  2.82it/s] 58%|█████▊    | 58/100 [00:20<00:14,  2.82it/s] 59%|█████▉    | 59/100 [00:20<00:14,  2.82it/s] 60%|██████    | 60/100 [00:20<00:14,  2.82it/s] 61%|██████    | 61/100 [00:21<00:13,  2.81it/s] 62%|██████▏   | 62/100 [00:21<00:13,  2.81it/s] 63%|██████▎   | 63/100 [00:22<00:13,  2.81it/s] 64%|██████▍   | 64/100 [00:22<00:12,  2.81it/s] 65%|██████▌   | 65/100 [00:22<00:12,  2.81it/s] 66%|██████▌   | 66/100 [00:23<00:12,  2.81it/s] 67%|██████▋   | 67/100 [00:23<00:11,  2.81it/s] 68%|██████▊   | 68/100 [00:23<00:11,  2.81it/s] 69%|██████▉   | 69/100 [00:24<00:11,  2.81it/s] 70%|███████   | 70/100 [00:24<00:10,  2.81it/s] 71%|███████   | 71/100 [00:24<00:10,  2.81it/s] 72%|███████▏  | 72/100 [00:25<00:09,  2.81it/s] 73%|███████▎  | 73/100 [00:25<00:09,  2.81it/s] 74%|███████▍  | 74/100 [00:25<00:09,  2.80it/s] 75%|███████▌  | 75/100 [00:26<00:08,  2.80it/s] 76%|███████▌  | 76/100 [00:26<00:08,  2.80it/s] 77%|███████▋  | 77/100 [00:27<00:08,  2.80it/s] 78%|███████▊  | 78/100 [00:27<00:07,  2.80it/s] 79%|███████▉  | 79/100 [00:27<00:07,  2.80it/s] 80%|████████  | 80/100 [00:28<00:07,  2.80it/s] 81%|████████  | 81/100 [00:28<00:06,  2.80it/s] 82%|████████▏ | 82/100 [00:28<00:06,  2.80it/s] 83%|████████▎ | 83/100 [00:29<00:06,  2.80it/s] 84%|████████▍ | 84/100 [00:29<00:05,  2.79it/s] 85%|████████▌ | 85/100 [00:29<00:05,  2.79it/s] 86%|████████▌ | 86/100 [00:30<00:05,  2.79it/s] 87%|████████▋ | 87/100 [00:30<00:04,  2.79it/s] 88%|████████▊ | 88/100 [00:30<00:04,  2.79it/s] 89%|████████▉ | 89/100 [00:31<00:03,  2.79it/s] 90%|█████████ | 90/100 [00:31<00:03,  2.79it/s] 91%|█████████ | 91/100 [00:32<00:03,  2.79it/s] 92%|█████████▏| 92/100 [00:32<00:02,  2.79it/s] 93%|█████████▎| 93/100 [00:32<00:02,  2.79it/s] 94%|█████████▍| 94/100 [00:33<00:02,  2.79it/s] 95%|█████████▌| 95/100 [00:33<00:01,  2.79it/s] 96%|█████████▌| 96/100 [00:33<00:01,  2.79it/s] 97%|█████████▋| 97/100 [00:34<00:01,  2.79it/s] 98%|█████████▊| 98/100 [00:34<00:00,  2.78it/s] 99%|█████████▉| 99/100 [00:34<00:00,  2.78it/s]100%|██████████| 100/100 [00:35<00:00,  2.78it/s]100%|██████████| 100/100 [00:35<00:00,  2.84it/s]
+/root/actionmesh-research-staging/actionmesh-source-d5c01f5/third_party/TripoSG/triposg/inference_utils.py:259: UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:347.)
+  sliced = padded[slice_dims]
+2026-10-07 11:26:29,388 - actionmesh.preprocessing.mesh_processor - INFO - [Decimation] Before: 1,191,864 faces
+2026-10-07 11:26:31,482 - actionmesh.preprocessing.mesh_processor - INFO - [Decimation] After: 40,000 faces
+2026-10-07 11:26:31,671 - actionmesh.preprocessing.mesh_processor - INFO - [Floaters] Removed 1 component(s): 2 -> 1
+2026-10-07 11:26:31,674 - actionmesh.model.utils.storage - INFO - [LATENTBANK] Added timesteps [0.0]
+2026-10-07 11:26:31,675 - actionmesh.model.utils.storage - INFO - [MESHBANK] Added timesteps [0.0]
+Temporal 3D Denoising (Stage I):   0%|          | 0/30 [00:00<?, ?it/s]Temporal 3D Denoising (Stage I):   0%|          | 0/30 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/inference/video_to_animated_mesh.py", line 236, in <module>
+    run_actionmesh(
+  File "/opt/conda/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/inference/video_to_animated_mesh.py", line 79, in run_actionmesh
+    meshes = pipeline(
+             ^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/pipeline.py", line 672, in __call__
+    latent_bank = self.generate_3d_latents(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/pipeline.py", line 494, in generate_3d_latents
+    window_latents = self._denoise_latents(
+                     ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/pipeline.py", line 302, in _denoise_latents
+    latents = self.scheduler.denoise(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/scheduler/scheduler.py", line 291, in denoise
+    for step_idx, (sample, t) in enumerate(sample_loop):
+                                 ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/scheduler/scheduler.py", line 224, in _flow_sample
+    output_pred, freqs_rot = self._diffusion_forward(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/scheduler/scheduler.py", line 151, in _diffusion_forward
+    return diffusion_model.forward(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/model/temporal_denoiser.py", line 224, in forward
+    hidden_states = block(
+                    ^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/model/utils/block.py", line 137, in forward
+    hidden_states = hidden_states + self.s_attn(
+                                    ^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/actionmesh-repro/inference-env/lib/python3.12/site-packages/diffusers/models/attention_processor.py", line 607, in forward
+    return self.processor(
+           ^^^^^^^^^^^^^^^
+  File "/root/actionmesh-research-staging/actionmesh-source-d5c01f5/actionmesh/model/utils/attention_processor.py", line 133, in __call__
+    hidden_states = F.scaled_dot_product_attention(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.13 GiB. GPU 0 has a total capacity of 21.49 GiB of which 2.49 GiB is free. Including non-PyTorch memory, this process has 18.99 GiB memory in use. Of the allocated memory 17.59 GiB is allocated by PyTorch, and 543.14 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

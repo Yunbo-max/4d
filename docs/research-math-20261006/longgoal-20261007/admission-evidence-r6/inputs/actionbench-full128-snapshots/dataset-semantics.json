@@ -1,0 +1,5532 @@
+{
+  "kind": "actionbench-full128-dataset-semantics-admission",
+  "version": "1.0.0",
+  "status": "admitted_engineering_dataset_semantics",
+  "scope": "Byte-bound tensor/camera/RGBA structure validation for the pinned current-public-release ActionBench inputs; not inference, scoring, tracked-correspondence proof, runtime qualification, or scientific effect evidence",
+  "dataset": "facebook/actionbench",
+  "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "population_size": 128,
+  "frames_per_sample": 16,
+  "snapshot_dataset_manifest_sha256": "489b8a95284bbddd322231e31e1935e8c1b23394fc56e6f87db6409dd1e77785",
+  "image_encodings": [
+    {
+      "width": 512,
+      "height": 512,
+      "bit_depth": 8,
+      "colour_type": 6,
+      "interlace": 0,
+      "sample_count": 128
+    }
+  ],
+  "samples": [
+    {
+      "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+      "input_manifest_sha256": "28d05df1ac4da6f7d7b080aa0e5db783417b0b61008b2ab06d59c1402cca6776",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968946806848997e-09,
+          -8.911828860565645e-08,
+          -2.990313554974874
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.998157262802124,
+        "normal_norm_min": 0.9999999550908595,
+        "normal_norm_max": 1.0000001081034333,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-000_f15298421b3d4e0fab4c43863a7e72fd",
+      "input_manifest_sha256": "7c0dd6a97ea2178d1ab0d5123b55d5c0c030c25880c16b752c1bc444191cd4ea",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.990723424103153e-09,
+          -8.936182076973652e-08,
+          -2.9984851384143116
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9931071996688843,
+        "normal_norm_min": 0.9999999554777642,
+        "normal_norm_max": 1.0000001064081732,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-001_095641b042f049c3aa86792836f8993d",
+      "input_manifest_sha256": "c6c7f5750d1816bc616483ab898475a561deaf19597415525113baadc1fff0ee",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963818829512475e-09,
+          -8.906094143352491e-08,
+          -2.988389303187194
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9994363188743591,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999551944886,
+        "normal_norm_max": 1.0000001082058616,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-003_90288386ca914411ab648f08db734fea",
+      "input_manifest_sha256": "1a354221fdee73413ecb8f8d7a0c9baf00c7ae687d0b99021167b144d179dd5e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968702512796156e-09,
+          -8.911555661754895e-08,
+          -2.9902218846656963
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9057703018188477,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999540685589,
+        "normal_norm_max": 1.0000001093721036,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-004_28e4d4e402a64d5697e7eeae5212bd32",
+      "input_manifest_sha256": "7e33ae5a947cfec9c8aab0c597f3d28ccb93a4e5a868e1acd38b0ef42c9b0bd8",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960466835093954e-09,
+          -8.902345542524368e-08,
+          -2.98713148147137
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9996340274810791,
+        "normal_norm_min": 0.9999999566215108,
+        "normal_norm_max": 1.0000001078381042,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-004_59599287510e43649360b850d56119d5",
+      "input_manifest_sha256": "3f4e62978ca23b3f4a94631786d889ae9e233aa1816aca00abb27d7775119c35",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962151932412674e-09,
+          -8.904230019768578e-08,
+          -2.987763807106834
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998144507408142,
+        "normal_norm_min": 0.9999999543222583,
+        "normal_norm_max": 1.0000001083828187,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-004_ab9192b6bc8f49e3baed63e984c7073a",
+      "input_manifest_sha256": "05c909119b40253a299722b768dc1fe7aab80866ef56383472dd9a2efd9724fe",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.967059125135853e-09,
+          -8.909717829236348e-08,
+          -2.9896052104029867
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998484253883362,
+        "normal_norm_min": 0.9999999579709367,
+        "normal_norm_max": 1.0000001069844333,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-007_17ed60fbe8af47b69cbf45b97730e0ab",
+      "input_manifest_sha256": "03170dfeffd47febc6a1bee7f00159c26fec4a93ce7fece6eff6de82d2652f93",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.011893807662262e-09,
+          -8.959857330399756e-08,
+          -3.0064292352260016
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9167330265045166,
+        "normal_norm_min": 0.9999999555390858,
+        "normal_norm_max": 1.0000001080180598,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-007_84496dfddf6046ce9ec9fddace6f5ed3",
+      "input_manifest_sha256": "3866894b8be0b99e306e718a371bc1b9e35736922dd173eb4c35d58a4ccba6b7",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96774820517106e-09,
+          -8.910488440898572e-08,
+          -2.9898637847691716
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9395886659622192,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999547646475,
+        "normal_norm_max": 1.0000001090824757,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-008_95878b202a624ae88a021fe5ca99b335",
+      "input_manifest_sha256": "7930c5e8069af35e7fdf9b235fcfb8a034f7f9be55872fba072444673cb19c6e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961104687637421e-09,
+          -8.903058865482022e-08,
+          -2.9873708329381365
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9702905416488647,
+        "normal_norm_min": 0.9999999564398444,
+        "normal_norm_max": 1.000000107766407,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-010_2615938e94304eec9ecd3dccfeafe306",
+      "input_manifest_sha256": "a2bea46cb500d6a06b0bf265d246d886f0f10678dffc7b1d82b80d6ff6eeacbe",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965234774562768e-09,
+          -8.907677622357938e-08,
+          -2.988920630573311
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9993411898612976,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999551220221,
+        "normal_norm_max": 1.000000109199877,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-012_2546097d0ea94ba88452ce62c041fb87",
+      "input_manifest_sha256": "77b21b913f2e249815a1df177bddef8b12ef2bd9446ed4ad4906c2395afeb06d",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.970967067684606e-09,
+          -8.91408815771708e-08,
+          -2.9910716493012304
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9988303780555725,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999560207219,
+        "normal_norm_max": 1.0000001087164023,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-012_c931610884f2409eacda0b049df160d8",
+      "input_manifest_sha256": "dec73f62184082922218ab32ac732052b439c1b1c6b4542291d4e90537706593",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96645817049662e-09,
+          -8.909045769925675e-08,
+          -2.989379704718587
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9967651963233948,
+        "normal_norm_min": 0.9999999572965033,
+        "normal_norm_max": 1.0000001064452433,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-014_6cf7de7d14064b23be17811d19a63f13",
+      "input_manifest_sha256": "53cf0c7bdcb2b10b18d73e900170092d7d75398ecdb69ec13184f31791b0aac9",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.95931895805006e-09,
+          -8.90106184920628e-08,
+          -2.986700745469864
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9997910261154175,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999554894775,
+        "normal_norm_max": 1.0000001084122405,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-014_8e4844bbd8ed4b958701e562db52e744",
+      "input_manifest_sha256": "c45ba83e32c94f3e1861d94429e7fa3a6f6edb15cc4c37f6986c9e9301eb62d0",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960683221019135e-09,
+          -8.902587531130865e-08,
+          -2.9872126793737848
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9885350465774536,
+        "normal_norm_min": 0.999999956909627,
+        "normal_norm_max": 1.0000001083251848,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-015_0a8d7f0bd073460ba573e3fbb73091e1",
+      "input_manifest_sha256": "86fed3c10a55af701c2d42dcd8fb4570fd30f236f2b921b3357f5d53ae01f59e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963480287981209e-09,
+          -8.905715545745811e-08,
+          -2.988262266910707
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9782070517539978,
+        "normal_norm_min": 0.9999999555408533,
+        "normal_norm_max": 1.0000001079336474,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-015_fcd1afa49d944cd5bfe5d3cd3a153efe",
+      "input_manifest_sha256": "09fae7930df2bf7ea87d30db470c19dead5ea78f87535ecce05945ee57baa663",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96097710895133e-09,
+          -8.902916191745549e-08,
+          -2.98732295957625
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9954831600189209,
+        "normal_norm_min": 0.9999999565677635,
+        "normal_norm_max": 1.000000108099362,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-017_6130f5686df241d3bd8a1324d63781d2",
+      "input_manifest_sha256": "1d91e3d4f935029451e7eda94d49b889320dae74e5575d2a89f5244f987c3100",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.016973691774412e-09,
+          -8.965538264020757e-08,
+          -3.0083354402348252
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9946247935295105,
+        "normal_norm_min": 0.9999999579588912,
+        "normal_norm_max": 1.0000001069346065,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-019_6fd5b59e02fc4856aa534018ba64db3e",
+      "input_manifest_sha256": "2ee47eca1419554efb70329ab2bacbd9603f73a60ad1820e87b98807cc14e90f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961069721220389e-09,
+          -8.903019761854905e-08,
+          -2.987357711938166
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999779462814331,
+        "normal_norm_min": 0.9999999551222939,
+        "normal_norm_max": 1.0000001071142068,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-020_13b06d0843d94b179c1d9dc2c67e5ed4",
+      "input_manifest_sha256": "b19ca47c54d0ac2e7d8fa69a4725b37b846f8b90bbb7490a6b7e79ec50cc8fb4",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.950527668097063e-09,
+          -8.891230377943679e-08,
+          -2.9834018511304548
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.882457435131073,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999526042138,
+        "normal_norm_max": 1.0000001094649467,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-020_6127e45c2381402986050e5d420f9515",
+      "input_manifest_sha256": "d54cda612f4e10f4d0b99445558c75db2a2c2ec6a1845f27c5d03352c348be21",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961202028199829e-09,
+          -8.903167723334182e-08,
+          -2.9874073595721162
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9997395277023315,
+        "normal_norm_min": 0.9999999544127939,
+        "normal_norm_max": 1.0000001084367347,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-022_d09f333cb04e4bbdb715d099f3446fc2",
+      "input_manifest_sha256": "e9838ab400df233a6fe93677c8f30be89c7ed610784b9e80b57f11f7661b3467",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.972051971582114e-09,
+          -8.915301426935598e-08,
+          -2.991478754896135
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.7405621409416199,
+        "normal_norm_min": 0.9999999551097741,
+        "normal_norm_max": 1.0000001076183813,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-025_15cf86e1e586453ca66d97d49edd7246",
+      "input_manifest_sha256": "58b315446ee889ce04338edc8fb20a041465b8664167f93f9467b64c08ea1f41",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964410873545017e-09,
+          -8.906756237757664e-08,
+          -2.9886114652041535
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998226761817932,
+        "normal_norm_min": 0.9999999560304865,
+        "normal_norm_max": 1.0000001089393173,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-030_258ca1a535f74bfc845bd8ef2eedbbe0",
+      "input_manifest_sha256": "d13b0da43d8d4246e112ed5ee854b062a9ff2c0684802b2fedcd236471861819",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965295320510827e-09,
+          -8.907745332074214e-08,
+          -2.9889433501840164
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9876729846000671,
+        "normal_norm_min": 0.9999999546166433,
+        "normal_norm_max": 1.0000001098896576,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-031_cc1f905b148c4378ad46a40da72e839f",
+      "input_manifest_sha256": "50ebeb9c47ce35398a7f107b64077603780bcfb0412b9fbee6e68b76c638fe58",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.981719217716744e-09,
+          -8.926112497104964e-08,
+          -2.995106348084587
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.6800568699836731,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999532552557,
+        "normal_norm_max": 1.0000001088969086,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-035_0ec701a445b84eb6bd0ea16a20e0fa4a",
+      "input_manifest_sha256": "30b0463df8fd7dcf205ced2546d41b1a7c5347db576e612d69696018ee3c068e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969246987104983e-09,
+          -8.912164558008922e-08,
+          -2.9904261963452043
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.924124002456665,
+        "normal_norm_min": 0.9999999543693051,
+        "normal_norm_max": 1.000000108141481,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-035_5478ddd14bf044e59e02bda57ec46edb",
+      "input_manifest_sha256": "74235a837ef49c038392f2bbb95ce3945fcc3ebc8df7cfc5f8e7db2e98079ec8",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962544247547234e-09,
+          -8.904668753446107e-08,
+          -2.9879110217003215
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9989246726036072,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999533646864,
+        "normal_norm_max": 1.0000001083926011,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-036_43d8e3b84094479e9ff6f98c033a8e6b",
+      "input_manifest_sha256": "e7c8bfbb92b35c0059b339aa0616b80af51b4840655e4a1e166c6e659f75821a",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.97072738639193e-09,
+          -8.913820117446117e-08,
+          -2.9909817099107774
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9987362623214722,
+        "normal_norm_min": 0.9999999557877705,
+        "normal_norm_max": 1.000000108093134,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-037_1358c424008a43cbaa35eba5e58551ac",
+      "input_manifest_sha256": "d0ea83dcefefb1025030047146a07fa79a5ebbed41b5b4f3321db973500cf9f7",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96178990238445e-09,
+          -8.903825154516981e-08,
+          -2.9876279568712953
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9876179099082947,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999562031573,
+        "normal_norm_max": 1.00000010859102,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-037_2cfeaa8f6ae54663b67e40e16077c78c",
+      "input_manifest_sha256": "12df8109d860838983b889a3667350b91b3a63ec978b1a27f26d7c6e0d6f8f90",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961346625856628e-09,
+          -8.903329429718008e-08,
+          -2.9874616192307166
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999885082244873,
+        "normal_norm_min": 0.9999999554579188,
+        "normal_norm_max": 1.0000001088520911,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-037_5c73c1e1ed654642bb5df7065e648711",
+      "input_manifest_sha256": "f59698f9d550efe671b813ecb66507aee0e0b36e989f4a17e426071664fcc9e8",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960691725509721e-09,
+          -8.902597041868795e-08,
+          -2.9872158706478764
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.998853325843811,
+        "normal_norm_min": 0.999999954954279,
+        "normal_norm_max": 1.0000001087728123,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-039_3c3f457b7d064646ac04e01004c52ed5",
+      "input_manifest_sha256": "1f61befa1b5a9101c6c195a35fb509eee58c0c189a2a93664c3ee576dbb71c7a",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.03450331987105e-09,
+          -8.985141989503318e-08,
+          -3.014913358971338
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9798818230628967,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999536226614,
+        "normal_norm_max": 1.0000001097524003,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-039_d65a6d1e87bf444088a0e8168e34e9e0",
+      "input_manifest_sha256": "e26d33e4af62aee10e13f538030d0a28cdb280f48480592865a80fc2967e02f2",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969261191778413e-09,
+          -8.91218044337266e-08,
+          -2.9904315265887775
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9995946884155273,
+        "normal_norm_min": 0.9999999558454683,
+        "normal_norm_max": 1.0000001083591346,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-040_827aa2c7951747599629700703050673",
+      "input_manifest_sha256": "1e1d51f92a68ad396bd657c830a5b67f5e878c17a95faa5264f6f991b76ed1d3",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.970473510466745e-09,
+          -8.913536203040372e-08,
+          -2.9908864440445635
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9978461265563965,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999552191302,
+        "normal_norm_max": 1.0000001083789658,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-040_e114132dd22b43b5be17ae543697c9e8",
+      "input_manifest_sha256": "5591a8cba19fd8a18f63132f0d076211f067f2621b403f3345d291430cbf3092",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.164776539648367e-09,
+          -9.130829075627736e-08,
+          -3.063797833217737
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8638532757759094,
+        "normal_norm_min": 0.9999999571879288,
+        "normal_norm_max": 1.0000001061637158,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-042_7644ff801d38454d92ff5de65dcbea31",
+      "input_manifest_sha256": "036e9ee04c90a1416e3088d5714864ce6aedc093d7e9ee64d46674569353c381",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960584948223838e-09,
+          -8.902477630744457e-08,
+          -2.98717580292336
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9997996091842651,
+        "normal_norm_min": 0.9999999563018943,
+        "normal_norm_max": 1.0000001096896256,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-043_061697e330d44524bd11f8cf95772e2d",
+      "input_manifest_sha256": "9c448f36386e48a2d80f6c322fcf219b35a99747649b672bc2f02769d93d0009",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.14260475637176e-09,
+          -9.106033937338588e-08,
+          -3.055477965401199
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9588326215744019,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999533945398,
+        "normal_norm_max": 1.0000001090035966,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-045_41f4f23fe590439ab5ce85fe6730aee5",
+      "input_manifest_sha256": "c638a28bf810b9572e1a755152393412ca30fb86b44d5fb9262a94272cd5ae04",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.966427888567796e-09,
+          -8.909011905053215e-08,
+          -2.9893683415529857
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.945736289024353,
+        "normal_norm_min": 0.9999999574517568,
+        "normal_norm_max": 1.000000106444476,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-046_3bb11febd0624d7f8b30f491fb317d58",
+      "input_manifest_sha256": "efe3fa7562aab8b5fc830dbb834b65b0bd3da1092b03990ee28c77efb4948248",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.9692877073043e-09,
+          -8.912210096203149e-08,
+          -2.99044147642762
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9953891634941101,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999548975563,
+        "normal_norm_max": 1.0000001088253179,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-046_eb363ab481b14dcf859f5208e1684d7c",
+      "input_manifest_sha256": "57c149b2e5c162d8534851934d8152e94a71ea534095dadcbd5ae99463a2b0a1",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.966948391246936e-09,
+          -8.90959399336556e-08,
+          -2.9895636579799314
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9997273683547974,
+        "normal_norm_min": 0.9999999552678965,
+        "normal_norm_max": 1.0000001072931997,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+      "input_manifest_sha256": "35e2f19dff2090a341bf1d4cfd0e6e5680863b7e6738b6d0de62a6292d7b661e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96318621520834e-09,
+          -8.905386678420194e-08,
+          -2.9881519173475626
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9999545216560364,
+        "normal_norm_min": 0.9999999550528241,
+        "normal_norm_max": 1.000000109234665,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-049_f50b8e5f13e2498c907cbbe20bf7cf95",
+      "input_manifest_sha256": "1593cc09228275cf2143ff43d121770c816895bb2ea4d9ae4aa86f33da393744",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962970638677096e-09,
+          -8.905145594974744e-08,
+          -2.9880710231667957
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9997036457061768,
+        "normal_norm_min": 0.9999999546790289,
+        "normal_norm_max": 1.0000001080281637,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-050_9b99d900f8004fbe88bb5c3f08ded4de",
+      "input_manifest_sha256": "0005503b4bb84004c29d7351a59901271142ae02377847e0131700e2a19f3990",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969968648573704e-09,
+          -8.912971606124614e-08,
+          -2.9906969967563914
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8806481957435608,
+        "normal_norm_min": 0.9999999542557177,
+        "normal_norm_max": 1.0000001081573902,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-051_008f8b5fe9544dffb4bd2522af248789",
+      "input_manifest_sha256": "5c04866b4bbaf49cb84004f420bb105c22b5de1ef33beec3519f797437d32846",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.974923416980712e-09,
+          -8.918512620408839e-08,
+          -2.992556252626502
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.757304310798645,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999546132682,
+        "normal_norm_max": 1.0000001096696949,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-051_e607cac1413a45e499bffa50f26ea00e",
+      "input_manifest_sha256": "7f93e4a99ff15182d24227ede15ac49434ef84984a65a512b863893a4c00ba4b",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964463840240049e-09,
+          -8.906815471447244e-08,
+          -2.988631340732245
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9990503191947937,
+        "normal_norm_min": 0.9999999546760642,
+        "normal_norm_max": 1.0000001080180971,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-053_4e70865fd83c4a4d8e1990dd68de41cd",
+      "input_manifest_sha256": "64e0d8c74b38432a35682aef0fded23eacf13c33e5f1b75da2018aa7801efea6",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969202479456144e-09,
+          -8.912114784235919e-08,
+          -2.990409495038388
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9994479417800903,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999558680671,
+        "normal_norm_max": 1.000000107301851,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-056_ae07595d444e490786b5e75a0900f65f",
+      "input_manifest_sha256": "5d3cfac4f1b6b75903a50cbb15c8da6983615961647633f8ee3592b28629cce1",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.972757080545276e-09,
+          -8.916089964061024e-08,
+          -2.991743344049681
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9996867775917053,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999567781641,
+        "normal_norm_max": 1.0000001082946706,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-057_12937950456a4013a7daf6677b397a25",
+      "input_manifest_sha256": "7855a9faf524eeff4a7fcbcb798c39ffba9751fee078f3544917fe5c3b5f9d23",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965697406799548e-09,
+          -8.90819499302429e-08,
+          -2.98909423136174
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9998053312301636,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999581233054,
+        "normal_norm_max": 1.000000107945032,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-057_a061f78eee0042ce88ef6ec24ec0779a",
+      "input_manifest_sha256": "0d77700a4df89dca06f4d62d016868c5de12291c25ab3817dfcc7a5df8c3d38b",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96512787537049e-09,
+          -8.907558074903299e-08,
+          -2.9888805171039365
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9995526075363159,
+        "normal_norm_min": 0.9999999546557267,
+        "normal_norm_max": 1.0000001076731961,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-057_e8872ef199124f32a157d177fb124163",
+      "input_manifest_sha256": "58b8c4e8cfa544ce92f9b3d634dd02eedd2c6da1f98c7f7b8a3301b269ac83cc",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964102545700633e-09,
+          -8.906411428707146e-08,
+          -2.9884957664857676
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9989817142486572,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999545521597,
+        "normal_norm_max": 1.0000001081894232,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-058_1cb59946558d41ccbe1719c13238afd9",
+      "input_manifest_sha256": "d6bddda6d5a4a685fd0da75e97feceedcfabf561d7c154a48f5926ec920024ee",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.994925766791224e-09,
+          -8.940881638880294e-08,
+          -3.000062049718574
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9299574494361877,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999565114476,
+        "normal_norm_max": 1.0000001078059024,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-058_3d6e324c291041da9b792a9efd7cb806",
+      "input_manifest_sha256": "e729a71369573359c39471af96475608aa517d08d9ecc5c5108d0ce7181cccf0",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.973305900847497e-09,
+          -8.91670372052435e-08,
+          -2.991949286544813
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9999074935913086,
+        "normal_norm_min": 0.9999999560594873,
+        "normal_norm_max": 1.0000001070844298,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-059_0f142eaa4ab94740ba9e5d074f306a15",
+      "input_manifest_sha256": "8da456b3c368de6744fcebeaac0a1f6e9fbb39db97e805c8cb71d93d3218cbee",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965725790894992e-09,
+          -8.90822673551261e-08,
+          -2.9891048823733986
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999547004699707,
+        "normal_norm_min": 0.9999999549080724,
+        "normal_norm_max": 1.000000106819836,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-059_ee85486b41c1442aaf35fc2563381ad0",
+      "input_manifest_sha256": "7451eae03310596d1468598975115966d11fe851bf8dec9e1a58fd9f9ce05a43",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964672876395032e-09,
+          -8.907049240662177e-08,
+          -2.9887097806645064
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8726416826248169,
+        "normal_norm_min": 0.9999999528750674,
+        "normal_norm_max": 1.0000001082544805,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-059_f942225f2aee4635900430b95829ae4d",
+      "input_manifest_sha256": "86248e27be29c945806c4cabdd3542fdc309afba6b28141589f3260fb2abf262",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960211722694705e-09,
+          -8.902060245345528e-08,
+          -2.987035751623498
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9999997615814209,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999585572978,
+        "normal_norm_max": 1.0000001054068581,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-061_a59dbd60a5cc4675a45a1fe7bc548cdd",
+      "input_manifest_sha256": "8778f70dfcf88226c02916ecd0f8f07ce986a06242d05773062d57e2d6febad0",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.971223817391096e-09,
+          -8.914375285928587e-08,
+          -2.9911679935417133
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9999728798866272,
+        "normal_norm_min": 0.9999999564796295,
+        "normal_norm_max": 1.0000001070930096,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-063_2f305a7ad6784a3b9c5db480362ebc02",
+      "input_manifest_sha256": "ccbe7ea2fb0ce3831f7075e56c1799cba5fd75189e16b8f78f81264d91c5a2d8",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961087676909687e-09,
+          -8.90303984205295e-08,
+          -2.9873644497345646
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9987258911132812,
+        "normal_norm_min": 0.999999955297567,
+        "normal_norm_max": 1.00000010618713,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-063_ab2270d2455242fd856e269e59c426c4",
+      "input_manifest_sha256": "465938d53cd75eb3bbeaf5535b1cbecb9a8fcfbae475723122f45830c4c7b32f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963745066614646e-09,
+          -8.90601165286314e-08,
+          -2.9883616239720383
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.998184859752655,
+        "normal_norm_min": 0.999999955159013,
+        "normal_norm_max": 1.0000001097336952,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-063_dd9b3744c30e4bf58aa6f57da00c1eb0",
+      "input_manifest_sha256": "600a377b5d666137bad11375cdd5966ebc081bc9af9cbf1dce783c2184a78490",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.97113096872463e-09,
+          -8.914271451451393e-08,
+          -2.9911331524726705
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9766883850097656,
+        "normal_norm_min": 0.9999999545526926,
+        "normal_norm_max": 1.0000001087601593,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-065_bc982b8da22a4a2ba8097b1e424ae38b",
+      "input_manifest_sha256": "7c44f2894c25b56f2d0c43816e1a74c6d9b2ab9cd9f13d22db3fea07b72d980f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.97553134032873e-09,
+          -8.919192472962657e-08,
+          -2.992784373289373
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998298287391663,
+        "normal_norm_min": 0.9999999538939501,
+        "normal_norm_max": 1.0000001089728159,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-066_bbd48d23435c4254a618e3ff45e9bffa",
+      "input_manifest_sha256": "10c67a6bc782cee96bbf8d9d50ac5026277e0cfd5f42e760e3bcbfbeccdcd08d",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965397493885403e-09,
+          -8.907859594554613e-08,
+          -2.9889816903103035
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9942799210548401,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999569477973,
+        "normal_norm_max": 1.0000001086288688,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-066_d97aa2a9b82b4284a6a560287f422772",
+      "input_manifest_sha256": "6ca551e9064a64483d064d9736fabb5454ead698a6e261a65deab3806922e1b3",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.967220972510759e-09,
+          -8.909898826316847e-08,
+          -2.9896659429452845
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9961846470832825,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999553280511,
+        "normal_norm_max": 1.0000001083846946,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-067_09a05166420843fab423047a799c87da",
+      "input_manifest_sha256": "ee880243406f04bb5249ec6305811d1ddcb1075f1c203ac7119c2c43f4d1ec98",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962441201997238e-09,
+          -8.9045535155949e-08,
+          -2.9878723542939003
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9997131824493408,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999585827917,
+        "normal_norm_max": 1.0000001070073394,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-067_154f0df8019b44f5ab7b195a170c0c0d",
+      "input_manifest_sha256": "63da54eae5df7f9627fc7d8bbb88986ad9de8e2a23207c650e1d03de36e4967e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961835272489524e-09,
+          -8.903875892791635e-08,
+          -2.987644981811162
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9686573147773743,
+        "normal_norm_min": 0.999999954919306,
+        "normal_norm_max": 1.0000001095062327,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-068_6a8dd9ece8b6458db8986c06e94ab582",
+      "input_manifest_sha256": "2e6ec041b24239698b52e4c98791383c05bd6519a06ac91d3d26569f1a5c5d31",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969158919259944e-09,
+          -8.912066070017707e-08,
+          -2.9903931492591638
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9941765069961548,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999543243988,
+        "normal_norm_max": 1.000000109286366,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-069_9a963b3d8d6343c9add862a211bfbec9",
+      "input_manifest_sha256": "fc08500e7794cd857b2a4448f248d98d5ed0bdad2b0098323211a20e422ce04a",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961199193004161e-09,
+          -8.90316455267949e-08,
+          -2.987406295676944
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9998424649238586,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999569083213,
+        "normal_norm_max": 1.000000108111848,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-073_1008f82a1e4b4a5ea61e878803b997d0",
+      "input_manifest_sha256": "332f03644633e5beece48b0d0619eadd51c5a3f8283dc9040569bca466199644",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969985697275198e-09,
+          -8.912990672020482e-08,
+          -2.9907033942094556
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9946995377540588,
+        "normal_norm_min": 0.999999956349641,
+        "normal_norm_max": 1.0000001079823018,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-073_ac92c18fd2f4490e9fe3c38aa152d6cb",
+      "input_manifest_sha256": "8495d2318303962a769ff988fe18dd3a63478e31ee09a203732a2931af8ef4ff",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964793006208954e-09,
+          -8.907183584179417e-08,
+          -2.9887548588686452
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.913438618183136,
+        "normal_norm_min": 0.9999999561821536,
+        "normal_norm_max": 1.0000001092915742,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-075_46f5711e3ac04900a49732d78f4f64d8",
+      "input_manifest_sha256": "13cfd4c3c5a0befca9e493303e3217f56f26ddc06492569562d8eea9cd382340",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.973192149500132e-09,
+          -8.916576510170842e-08,
+          -2.9919066018332483
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.7503259778022766,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999566677209,
+        "normal_norm_max": 1.0000001096735176,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-075_8fd55a0dcd8042168e7ffa57d7f279a5",
+      "input_manifest_sha256": "f6dc642ec76c994026e880956e02ec52b1d22921c1472300ea9a123cffbba8f5",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963955956479378e-09,
+          -8.906247495117892e-08,
+          -2.9884407595010365
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9999425411224365,
+        "normal_norm_min": 0.999999954720132,
+        "normal_norm_max": 1.0000001084496684,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-076_6ef94285eb3e467ebc3128110b325a1d",
+      "input_manifest_sha256": "db537708840dc6b6fdec67b1f62895cbdb8250c033d8e676fdcb392de54603cc",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968734705729197e-09,
+          -8.911591663740695e-08,
+          -2.99023396492754
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9996418952941895,
+        "normal_norm_min": 0.9999999558073299,
+        "normal_norm_max": 1.0000001085272576,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-078_b0b646eb731848f7837ab8257dfc658c",
+      "input_manifest_sha256": "9af15b343f293ec98acb32b39a8502ce2b9a5f47faf823b9050832c6701a295e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963281715560255e-09,
+          -8.905493478329016e-08,
+          -2.9881877534503443
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.993451714515686,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999542128045,
+        "normal_norm_max": 1.0000001083298975,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-081_3883b063fa004210a72198f7dd9bfec7",
+      "input_manifest_sha256": "aa93c2411d0d7c9cb1837834dd43d72dec7814678f0a91a234d3f48b3ab6ace0",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965815675198403e-09,
+          -8.908327254884703e-08,
+          -2.9891386110777542
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999844491481781,
+        "position_max": 1.0,
+        "normal_norm_min": 0.999999956466925,
+        "normal_norm_max": 1.0000001087515262,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-081_988d07afce1a4d7895efe9abee3c0f1b",
+      "input_manifest_sha256": "f1eaa6b0770721c3586b47aa5d39b719b3fd5369d99799255587da374d9c30e2",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.985238407528394e-09,
+          -8.930048075806821e-08,
+          -2.996426909163908
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9946447014808655,
+        "normal_norm_min": 0.9999999540364957,
+        "normal_norm_max": 1.0000001090644777,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-083_9a13e1cfa6cd4ecb855dbea11877a52b",
+      "input_manifest_sha256": "95495b5b002136f425b06bc51d1920aadf5cb165d6c51223602aaeac448c75af",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961281414498401e-09,
+          -8.903256502582419e-08,
+          -2.987437148944596
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.997409999370575,
+        "normal_norm_min": 0.999999954137423,
+        "normal_norm_max": 1.0000001091054884,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-084_e3bb8509d2324df38b5a61b17228feeb",
+      "input_manifest_sha256": "7c720baca46649ccb9fd273e48d616a4d5292fb0464fa62d1232fa09ac3b13f6",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964347503603402e-09,
+          -8.906685369914238e-08,
+          -2.9885876859018214
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9995943307876587,
+        "normal_norm_min": 0.9999999554422833,
+        "normal_norm_max": 1.0000001088689896,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-087_abee7aec930b4dcb86e157b7fcf07f77",
+      "input_manifest_sha256": "e9435b8ec4af6ffae3ef59b036cd1079100a9a97c8dddf49eed81342402543f9",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965448581555654e-09,
+          -8.907916726894082e-08,
+          -2.9890008607423004
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9665964245796204,
+        "normal_norm_min": 0.9999999576728777,
+        "normal_norm_max": 1.0000001085297516,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-088_f693945214b14df7bf442da1229a6a60",
+      "input_manifest_sha256": "5c701624e3ddf8e907d3caee85ef2faa00c8263e1b5e9babd42807223af46285",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963920019300399e-09,
+          -8.906207305868728e-08,
+          -2.9884272742267544
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9355494379997253,
+        "normal_norm_min": 0.9999999538863118,
+        "normal_norm_max": 1.0000001079312404,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-089_e71320db19864983bb6f3ef7dad040ae",
+      "input_manifest_sha256": "015a418e1c9aa8e3d1606469e63eba8c6b66c958afaba81bddd048a3fe315d57",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962429857695993e-09,
+          -8.904540829041246e-08,
+          -2.987868097392881
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9921206831932068,
+        "normal_norm_min": 0.999999957843742,
+        "normal_norm_max": 1.0000001082337167,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-090_fbf9b4d7b6e742b78671997cf6e7e807",
+      "input_manifest_sha256": "6d4237500d2c8a82e543400ce70c01e1722649c9b1a2eed1d4e68b3899ec191b",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963974870914377e-09,
+          -8.90626864749998e-08,
+          -2.9884478570627007
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9994574189186096,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999551250863,
+        "normal_norm_max": 1.0000001079547949,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-091_7503367b467c450c8ecb2789bef3eb1e",
+      "input_manifest_sha256": "f74b7ae4426610180b72c1743be5c87a62048b206b158532399cb850ee8f9a10",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96803504147096e-09,
+          -8.910809215535129e-08,
+          -2.9899714188764683
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9892514944076538,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999561958884,
+        "normal_norm_max": 1.0000001080041616,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-091_83a95a49bb52487fa64f66aeb358f8b4",
+      "input_manifest_sha256": "4d0b45060ca0e8e445443272c81fa29cdfd9de490dfd7e54ae1b2b3b3a06c53f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.97276087179078e-09,
+          -8.916094203884921e-08,
+          -2.991744766698507
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.796920895576477,
+        "normal_norm_min": 0.9999999559142648,
+        "normal_norm_max": 1.0000001082435168,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-091_b3a4a83591a9485fac5c2d4a28f8861a",
+      "input_manifest_sha256": "e0f1b2375ebfbdc57e9c8d2b4ebcf906b86f1044957b5f841e01bbe55140cf63",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963346014117157e-09,
+          -8.905565384661054e-08,
+          -2.988211881211632
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999919593334198,
+        "normal_norm_min": 0.9999999529007588,
+        "normal_norm_max": 1.0000001090462682,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-092_cd2a2d7fe1134a40a4fe65eb422fe736",
+      "input_manifest_sha256": "50d89910d0232f78f01aeb2931f8e6b519096f0e56232842ec000c5ab7702c87",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.971125284182665e-09,
+          -8.914265094317085e-08,
+          -2.991131019372362
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998181462287903,
+        "normal_norm_min": 0.9999999552817752,
+        "normal_norm_max": 1.0000001089162638,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-093_a93edd5fb2594e4480dca1c37951f9f0",
+      "input_manifest_sha256": "18ee6993ab977efad936747594b854335d81e69489c0b3c8459db0cab47bb4c1",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.972436733324694e-09,
+          -8.915731713507345e-08,
+          -2.991623135111257
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.885479211807251,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999538406008,
+        "normal_norm_max": 1.0000001082136971,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-094_2066afa87c7240d3b74b2ee6116fe0d7",
+      "input_manifest_sha256": "22616179c8b1b96dd53d00d03d71107321cc4a2889d0211165ec3056b714bdc5",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961769107925768e-09,
+          -8.903801899667686e-08,
+          -2.987620153838702
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998940825462341,
+        "normal_norm_min": 0.9999999578401111,
+        "normal_norm_max": 1.0000001077619447,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-094_5b203279ff3d46a6b152e2b064774e67",
+      "input_manifest_sha256": "b3005871300591952d9c097f8c737320575ad858bacd8b37d1f295d2663a90df",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96616482399824e-09,
+          -8.908717714807002e-08,
+          -2.9892696276868693
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9995192885398865,
+        "normal_norm_min": 0.9999999553544051,
+        "normal_norm_max": 1.0000001081046288,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-095_737f1fd90ea54047a61f02ee0b2d2a13",
+      "input_manifest_sha256": "a0aec8050c5c82ea9194235348512792fea1735ec7aad4e206831494c5514d45",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968570903216454e-09,
+          -8.911408480191365e-08,
+          -2.990172498728045
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9894841909408569,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999555069817,
+        "normal_norm_max": 1.0000001098014473,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-098_da7e622b80384876af5d2745a1cb7332",
+      "input_manifest_sha256": "cacbe8f4a73f5e24e7b16a5c22a25917d871ee69d1209f46edf417931c033b4c",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.975025837511466e-09,
+          -8.918627159288822e-08,
+          -2.9925946854970995
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9996697902679443,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999547994339,
+        "normal_norm_max": 1.0000001085668757,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-099_f1a38af37cb14b6abb896fdee40d7b3c",
+      "input_manifest_sha256": "fd09d54c53ad872def8a1299d9727b4fdb5a1965b215a4d1477743519ddea00e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965879068505874e-09,
+          -8.908398148858621e-08,
+          -2.9891623991480247
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9889650940895081,
+        "normal_norm_min": 0.9999999571334586,
+        "normal_norm_max": 1.000000107626878,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-100_1ab265b60d074769b62d6e87851a257b",
+      "input_manifest_sha256": "ae4ade86e67c34a46442e4b0edfc0a0616ac5a818122b43695d1ddafb403ee6e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.970159029880732e-09,
+          -8.913184513258718e-08,
+          -2.9907684365359275
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9994694590568542,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999564852996,
+        "normal_norm_max": 1.0000001076630247,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-100_1edbd18df3b6435c8ff7800628265edb",
+      "input_manifest_sha256": "b14bc02f92f60b1ac8601654354fe96cf51da7e4088ea62ae3b0fbef5b14a183",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968515988274385e-09,
+          -8.911347067739071e-08,
+          -2.9901518921285004
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999617874622345,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999535864397,
+        "normal_norm_max": 1.000000108162833,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-102_7806e18e09ed4dd4a87c611bde4b96bc",
+      "input_manifest_sha256": "4c16ce76c117e9766949dc63e98450d4838b6e34fae4b4f6f5517eda8e257c8e",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.169376452417593e-09,
+          -9.135973247921323e-08,
+          -3.0655239310119518
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8993690609931946,
+        "normal_norm_min": 0.9999999552935898,
+        "normal_norm_max": 1.000000109006794,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-107_2cb4d07f6d9b449193e0b39684a2b683",
+      "input_manifest_sha256": "823860a37f12d62ac7fe2d723d1232e79fe152fa47ec90025faad2a47b1939df",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964084576409113e-09,
+          -8.90639133329747e-08,
+          -2.988489023585193
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999477744102478,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999529321293,
+        "normal_norm_max": 1.0000001095086273,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-108_8560f555469a46e085952a890ce9785b",
+      "input_manifest_sha256": "fca70210092c69d905cede4bf42ae3606a00efd65f262e3b0b500c34715b8bf6",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961912780948565e-09,
+          -8.903962572015249e-08,
+          -2.987674066532308
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999779999256134,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999583429995,
+        "normal_norm_max": 1.0000001062966797,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-113_0fa47c0b4a224aa19774b3ef6a29a0b6",
+      "input_manifest_sha256": "80aa506fc45d37b5b0101056fc440ad15bdd87b9d7d8e160f695a104d8d7859a",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.966599173759337e-09,
+          -8.909203456628394e-08,
+          -2.989432615596024
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9907650351524353,
+        "normal_norm_min": 0.9999999532689567,
+        "normal_norm_max": 1.0000001093779958,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-116_9421ee17a06044d390ca7355f77732f7",
+      "input_manifest_sha256": "f6f65376534024fd5ee824b9e2a118a42ef449beb6c556f496413a2f0924be80",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.9621708382795e-09,
+          -8.904251162568713e-08,
+          -2.9877709014533282
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999894917011261,
+        "position_max": 1.0,
+        "normal_norm_min": 0.999999955258242,
+        "normal_norm_max": 1.0000001083270837,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-117_ce7ae539d3814b4083a3493a27f98189",
+      "input_manifest_sha256": "2c85ca8cfef4d9aba83f97b40caa0236cda8275fca92f326064fcd634bb8ec13",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.000521454445843e-09,
+          -8.947139405677318e-08,
+          -3.0021618078232
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9705600738525391,
+        "normal_norm_min": 0.9999999532382347,
+        "normal_norm_max": 1.0000001092634847,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-118_2957d5c06a154703a36cd9b82b797a48",
+      "input_manifest_sha256": "8936898ed11d0e16f3bc53f220d9147b26dbff9b889ca8f7e6eb969272feb693",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.978625503069923e-09,
+          -8.922652735590154e-08,
+          -2.993945444759738
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9345917701721191,
+        "normal_norm_min": 0.9999999552904012,
+        "normal_norm_max": 1.0000001080133347,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-122_5f276b4b9f87440ebb907cd17e80a06a",
+      "input_manifest_sha256": "986563fb5bbf7298d9f384aef1e21c3985dc3489cd9b793828c15e7e93aec222",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962378808740411e-09,
+          -8.904483739997148e-08,
+          -2.9878489414883997
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999586820602417,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999573942473,
+        "normal_norm_max": 1.0000001082413568,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-123_31a088d8ab11498e81815f58dcc9834e",
+      "input_manifest_sha256": "f4a6698277cb87509b874b2891bbf8e521e0ec28bbfb5cc0929decbb7b9e6074",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.962306963171086e-09,
+          -8.904403393693712e-08,
+          -2.987821981742649
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9812448024749756,
+        "normal_norm_min": 0.9999999559326803,
+        "normal_norm_max": 1.000000108832807,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-123_906157fbe85240818a92d284df832c2d",
+      "input_manifest_sha256": "93129801058bb1461adeb338a667c130146b0dd4c2a90c3ff6270bea967083d5",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960277861376258e-09,
+          -8.902134209524904e-08,
+          -2.9870605698837713
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999752402305603,
+        "normal_norm_min": 0.9999999556575226,
+        "normal_norm_max": 1.0000001091466786,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-125_c1db1b10f9b14717ba731d7f49d25443",
+      "input_manifest_sha256": "7ef62242bfd14104ac13bf21580f2985672167b728875775555fe926ce094202",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96982847312673e-09,
+          -8.912814845184406e-08,
+          -2.9906443965133067
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.4700406789779663,
+        "normal_norm_min": 0.9999999544116428,
+        "normal_norm_max": 1.0000001098099311,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-125_f8836c67db574661844e1d3bd42833d3",
+      "input_manifest_sha256": "a9eb95a9d2948ca8fb9400ce3bcc35fcb71cced8f2d953b06939ea74b340cadb",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961952480987624e-09,
+          -8.904006969344336e-08,
+          -2.987688963803906
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9983195066452026,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999552188282,
+        "normal_norm_max": 1.0000001080086611,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-126_0211a7f80bdc48f784af6796913af96b",
+      "input_manifest_sha256": "44a546ba061268e27e5676dbf28f30728ea98390034e2d2c7c8a5fdb5c68a59a",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.961741697214372e-09,
+          -8.903771245733758e-08,
+          -2.9876098680852867
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999131441116333,
+        "normal_norm_min": 0.9999999584344695,
+        "normal_norm_max": 1.0000001055884533,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-128_030d9e43df9840dbb57f599843d6953a",
+      "input_manifest_sha256": "bdaf431a3f9f5df26772666cc3e6c3819c6369336dc2a9ad8b7814f6b30b2421",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96256504605512e-09,
+          -8.904692012823706e-08,
+          -2.9879188262523617
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.999883770942688,
+        "normal_norm_min": 0.9999999529636703,
+        "normal_norm_max": 1.0000001090151234,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-128_09a3632365344a99bb88e3dd0b684c89",
+      "input_manifest_sha256": "22867c1872e087f31596df0e37d37f65183adf89018759c15565a744cdc12774",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969650419533513e-09,
+          -8.912615724373437e-08,
+          -2.9905775826561922
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9990236759185791,
+        "normal_norm_min": 0.9999999542544779,
+        "normal_norm_max": 1.0000001092159565,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-129_d24fdff106fd4894b01d737ac6044180",
+      "input_manifest_sha256": "46ae42ad2156c888285246ddf9054112153be21c0a8588c327145afcb6857d6f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.978690998871865e-09,
+          -8.922725980824705e-08,
+          -2.9939700217821588
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8738358616828918,
+        "normal_norm_min": 0.999999955301713,
+        "normal_norm_max": 1.0000001088200066,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-129_e03907f5f0b14c53b5d27b7ad87b14fa",
+      "input_manifest_sha256": "5f41300b59b9af0ea69abcf10bff79eb242046ac60fa3c1f75285c47ed875c79",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963808426969762e-09,
+          -8.906082509985796e-08,
+          -2.9883853996770773
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9985197186470032,
+        "normal_norm_min": 0.999999952308628,
+        "normal_norm_max": 1.0000001083546404,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-129_f6e7e1701bd742a3b2de2be84be5a117",
+      "input_manifest_sha256": "e9e9fbe1388866c91c391a2c48abdef1ff8a210794ee8a9f50958bd16b94ef18",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.979224497481952e-09,
+          -8.923322602740459e-08,
+          -2.9941702148771774
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9920706748962402,
+        "normal_norm_min": 0.9999999546859336,
+        "normal_norm_max": 1.0000001083345142,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-130_94be397f8db74f7c9c06263aaf988532",
+      "input_manifest_sha256": "c2af556d181520393f569f4c15811768d9da727c299b272fe172d7f629fa7044",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.963747903623911e-09,
+          -8.906014825546013e-08,
+          -2.9883626885477557
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9762256145477295,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999532571191,
+        "normal_norm_max": 1.0000001084470003,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-132_8b3c5f19aa004fe4a39325fe20e25411",
+      "input_manifest_sha256": "2b7215e875b190e297c4e52a0b452ee65553d5b7e094103d81228f5b544c981f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.964910301807194e-09,
+          -8.907314758137901e-08,
+          -2.9887988735453463
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9993691444396973,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999587450481,
+        "normal_norm_max": 1.0000001060610335,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-132_f18b6609047d4183a4d7c72abca9e553",
+      "input_manifest_sha256": "4b176dc3516d722f1db5d086f8d9fd454f7592941d1687c97db0608b66849f95",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.04599427392834e-09,
+          -8.997992547862572e-08,
+          -3.019225290837614
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9755340814590454,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999551384356,
+        "normal_norm_max": 1.0000001082165144,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-136_1d5f546cd4454e2d921dc15594921524",
+      "input_manifest_sha256": "78c6243f24e75bf3f01ca6980fe6d15c823bce919d7fafef1e86b87b74cf7f86",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.970983173268527e-09,
+          -8.914106168906147e-08,
+          -2.9910776928534184
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9998022317886353,
+        "normal_norm_min": 0.9999999574883272,
+        "normal_norm_max": 1.0000001083009624,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-137_1e5638dfe2df4c55852dee97f3c0b48d",
+      "input_manifest_sha256": "80faec5e79f1951b58234dd8f403ef3ab3db19867cc069b84251a9cc305e6576",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.972648083779008e-09,
+          -8.915968070848422e-08,
+          -2.9917024434745456
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8934333324432373,
+        "normal_norm_min": 0.9999999549455855,
+        "normal_norm_max": 1.0000001081407777,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-138_bfea81740eec4c13b9fce2958b7a39a7",
+      "input_manifest_sha256": "7607cba83ee4ae51f893e22caed419036bdf1e45e94b4895fca606a2331389fa",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.973628213958469e-09,
+          -8.917064169571649e-08,
+          -2.9920702331752835
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.7436090111732483,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999536707385,
+        "normal_norm_max": 1.0000001079914305,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-141_239400fa91ef46ccab6101301e6e5b19",
+      "input_manifest_sha256": "f3434df3c3f5aa3c7fdf9cb12cc5aa7d15d8a8fc1c277f05156b47c1b1b25b27",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.969300018144154e-09,
+          -8.912223863655808e-08,
+          -2.990446096018161
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9995800852775574,
+        "normal_norm_min": 0.9999999549852036,
+        "normal_norm_max": 1.0000001082054033,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-144_0c7abbb8b0e34a34bf1fb783da518664",
+      "input_manifest_sha256": "3fdf19e078fe032a7f5c85590f364a8c0972e06f45a6f39a234c5c30c458f7ff",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.951250656628517e-09,
+          -8.892038910139544e-08,
+          -2.9836731495163145
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9981862902641296,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999567214894,
+        "normal_norm_max": 1.0000001086501318,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-146_82f393a2e6c048ad80c171ce3b3a7b87",
+      "input_manifest_sha256": "a71c7ed71b801a9fe7c7b87fb3815f225e6186f7fb67cb1164d4965efaab0a30",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -8.058978743697754e-09,
+          -9.012513334013478e-08,
+          -3.024097658152485
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.9992350935935974,
+        "position_max": 1.0,
+        "normal_norm_min": 0.99999995675305,
+        "normal_norm_max": 1.0000001089384611,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-149_5de15f7398fa4cf08a232f649cbcda8d",
+      "input_manifest_sha256": "2c807309a6a17e8f099a162bab2f635598e082dfe4d7bd15dcd2c39c2d181e1b",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.965596171839803e-09,
+          -8.908081779991522e-08,
+          -2.9890562433716448
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9747589826583862,
+        "normal_norm_min": 0.9999999530292765,
+        "normal_norm_max": 1.0000001082028098,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-150_d38a22a9703143bbbd73bad756606d05",
+      "input_manifest_sha256": "fcd6613dd777772659abf6fc6082c9965bbaea5bab1d803dc51e5c17874e7862",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.960426204987502e-09,
+          -8.90230010508275e-08,
+          -2.98711623519592
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9997933506965637,
+        "normal_norm_min": 0.9999999558107086,
+        "normal_norm_max": 1.000000107982291,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-151_7a1d4f15132743eab34e42641767d0cd",
+      "input_manifest_sha256": "4ddd0c86e2383b6d6bdd037455763ea4c6e838e605e77586c60eedb6327fbe85",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96955855456751e-09,
+          -8.912512989987684e-08,
+          -2.990543110716584
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.8147163391113281,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999552782793,
+        "normal_norm_max": 1.000000109280495,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-151_f8ecf3f985d84be7b1cb5501f45bc688",
+      "input_manifest_sha256": "28474dc6cc987b40b8ad0cb04b965b28b1cffcd77edd4b0010ad23952a6bca8f",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968360715637381e-09,
+          -8.911173423316382e-08,
+          -2.9900936267287674
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9996381998062134,
+        "normal_norm_min": 0.9999999548791941,
+        "normal_norm_max": 1.0000001078270908,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-155_a7c0e728930d4cbc9fbe9264bf09e8bf",
+      "input_manifest_sha256": "6f4a8002b1a52d029704bca737853883e3df1d6af57493e69a593b7a04e4481b",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.967497358668712e-09,
+          -8.910207914355556e-08,
+          -2.9897696556810534
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9981725811958313,
+        "normal_norm_min": 0.9999999578178,
+        "normal_norm_max": 1.0000001070070499,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-155_ebbace31c2154fbdacd82d3f299138ad",
+      "input_manifest_sha256": "bc550bcb7a69a60290cef9983bcbbc6ed06fe4c98453f97523c536fae8d9cc82",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96278249150712e-09,
+          -8.90493518631974e-08,
+          -2.9880004217377305
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -0.999996542930603,
+        "position_max": 1.0,
+        "normal_norm_min": 0.9999999557017344,
+        "normal_norm_max": 1.000000108995667,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-157_1c48916a8eec4b04b1073181026a1b86",
+      "input_manifest_sha256": "27d0a0edf56645a795e95ba199fbfd83671b4e8c532be2fdce31fa936760b18d",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.968659904902381e-09,
+          -8.911508012515084e-08,
+          -2.9902058962339253
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.8837364315986633,
+        "normal_norm_min": 0.9999999547394002,
+        "normal_norm_max": 1.0000001093446784,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-158_b7090137d2394fff9b3ed5363227a818",
+      "input_manifest_sha256": "5ea385f570b266e65224b80179969352c976bbaa7329ab4479d63eb074230184",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.96207441929735e-09,
+          -8.904143335337755e-08,
+          -2.987734720638439
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9999076128005981,
+        "normal_norm_min": 0.9999999593705564,
+        "normal_norm_max": 1.0000001076378555,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    },
+    {
+      "uid": "000-159_7e92797f30684437a061c132d5dd77c6",
+      "input_manifest_sha256": "3847c6bfab4ae197da3de0d60d674e912b6848ccae1ec2e0ee0ad6a3c8e83fdc",
+      "camera": {
+        "rotation_orthogonal_max_abs_error": 3.808302340146952e-08,
+        "rotation_determinant": 1.0000000125524193,
+        "translation": [
+          -7.959212217586796e-09,
+          -8.900942479261397e-08,
+          -2.9866606915628795
+        ],
+        "focal_length_ndc": [
+          2.1875,
+          2.1875
+        ],
+        "principal_point_ndc": [
+          0.0,
+          0.0
+        ],
+        "extra_keys": []
+      },
+      "surfaces": {
+        "shape": [
+          16,
+          100000,
+          6
+        ],
+        "dtype": "<f4",
+        "position_min": -1.0,
+        "position_max": 0.9997125864028931,
+        "normal_norm_min": 0.9999999550599793,
+        "normal_norm_max": 1.0000001067479043,
+        "zero_normal_count": 0
+      },
+      "frames": {
+        "count": 16,
+        "width": 512,
+        "height": 512,
+        "bit_depth": 8,
+        "colour_type": 6,
+        "interlace": 0
+      }
+    }
+  ],
+  "sample_semantics_sha256": "5cfce7fcc0b5689221762dbe8a59454560a85bef0d13af185aa593e1aca52d74",
+  "all_consumed_bytes_revalidated": true,
+  "scientific_effect_qualification": false,
+  "dispatch_ready": false,
+  "queue_generated": false
+}

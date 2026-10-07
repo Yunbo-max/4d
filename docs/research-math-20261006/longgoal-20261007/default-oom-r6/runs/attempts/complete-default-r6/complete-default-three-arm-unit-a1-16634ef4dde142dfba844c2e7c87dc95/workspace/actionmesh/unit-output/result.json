@@ -1,0 +1,64 @@
+{
+  "status": "failed",
+  "scientific_effect_qualification": false,
+  "candidate_methods_tested": false,
+  "source_root": "/root/actionmesh-research-staging/actionmesh-source-d5c01f5",
+  "gpu_uuid": "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740",
+  "stages": {},
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "PYTHONPATH": "/root/actionmesh-research-staging/actionmesh-source-d5c01f5:/root/actionmesh-research-staging/actionmesh-source-d5c01f5/third_party/TripoSG"
+  },
+  "error": "RuntimeError: generation exited 1",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/actionmesh-research-staging/4d-longgoal-r6/runs/attempts/complete-default-r6/complete-default-three-arm-unit-a1-16634ef4dde142dfba844c2e7c87dc95/workspace/actionmesh/research_math/complete_unit_runner.py\", line 131, in execute\n    result['stages']['generation']=run_stage('generation',command,args.source_root,output,\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/actionmesh-research-staging/4d-longgoal-r6/runs/attempts/complete-default-r6/complete-default-three-arm-unit-a1-16634ef4dde142dfba844c2e7c87dc95/workspace/actionmesh/research_math/complete_unit_runner.py\", line 43, in run_stage\n    if returncode:raise RuntimeError(name+' exited '+str(returncode))\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: generation exited 1\n",
+  "host_resources": {
+    "sample_interval_seconds": 1,
+    "samples": 137,
+    "exact_peak": false,
+    "observed_peak_rss_bytes": 11231936512,
+    "observed_peak_output_bytes": 65169,
+    "minimum_free_disk_bytes": 25480187904,
+    "errors": []
+  },
+  "device_memory": {
+    "sample_interval_seconds": 1,
+    "samples": 90,
+    "observed_peak_mib": 20673.0,
+    "exact_peak": false,
+    "errors": []
+  },
+  "outputs": [
+    {
+      "path": "device-samples.jsonl",
+      "bytes": 19183,
+      "sha256": "ce9832c0275edc805708add4236fafa1d4e6626c79586d3d4cdcf86ccf5f7e69"
+    },
+    {
+      "path": "generation.execution.json",
+      "bytes": 1025,
+      "sha256": "0b6e76a9d2d9de875c7355ee3a33478e484b67fdbd56cebff91aa46d12a5b1d9"
+    },
+    {
+      "path": "generation.stderr.log",
+      "bytes": 13647,
+      "sha256": "280fc74b6f2b9de24b63f23ddad3b501619d18e77b31ea5ba6167804a507a4ec"
+    },
+    {
+      "path": "generation.stdout.log",
+      "bytes": 123,
+      "sha256": "69dbf8fd8738ccdd436799e2ea99a5e9a3f3b14c56afe28d0d88892fa2616d10"
+    },
+    {
+      "path": "host-samples.jsonl",
+      "bytes": 16707,
+      "sha256": "7e6cde583edf6e57454f11acebeb0b65543a6f72960814e9a7f3ed079ae894ef"
+    },
+    {
+      "path": "revalidated-unit-manifest.json",
+      "bytes": 14605,
+      "sha256": "1dea0b90ec87807ca3065df8011d94620e323a7cb9e38961e25e7ba25e2badb0"
+    }
+  ],
+  "elapsed_seconds": 135.9401434371248
+}

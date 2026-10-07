@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T11:03:15.311868+00:00",
+  "updated_at": "2026-10-07T11:33:45.424707+00:00",
   "software_acceptance": {
-    "run_id": "timeout-green-r5",
-    "tests_passed": 224,
+    "run_id": "lowram-green-r6",
+    "tests_passed": 226,
     "tests_failed": 0,
-    "plan_digest": "ce43414e2d4a678bbf7c951e10447dfdb924ae48730e83cc36ad85308cd67706",
-    "scope": "CPU software only; real descendant timeout leak reproduced and fixed"
+    "plan_digest": "fbadebe58a4db14da3cce26a603805654d4ee95746bc667820cb25c218e13aea",
+    "scope": "software acceptance only, explicit low-RAM profile; red run failed 2/226 as expected"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "r6 clean overlay checkout ready with promoted runtime; dataset PID22918 and TripoSG bundle transfer active; source/data admission next",
+  "current_task": "Default BF16 unit failed CUDA OOM; prepare separately versioned FP16 low-RAM repair",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,7 +129,7 @@
       "comparator_and_ablation": "required"
     }
   ],
-  "next_checkpoint": "complete pinned snapshot download/admission, dataset semantics, versioned low-RAM FP16 complete generation/export/scoring unit",
+  "next_checkpoint": "versioned FP16 low-RAM repair acceptance, manifest, complete three-arm GPU unit",
   "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r6",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
@@ -174,7 +174,7 @@
   "data_staging": {
     "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
     "remote_target": "/root/actionmesh-research-staging/actionbench-full128-direct",
-    "status": "official HF CLI resume initiated after verified terminal CDN interruption; existing completed bytes and partial files preserved; see full128-direct-r2.log",
+    "status": "complete: 2309 files, all 128 assets; official source and submodule pinned; snapshot-r6 passed",
     "old_models_deleted": false,
     "transport": "loopback pinned public Hub metadata bridge; direct GPU-to-official-CDN object download",
     "first_direct_object_sha256": "8584ac060305f54e71d7937f2611b10de9e7a3b296625d8752c6f787ee2cc284",
@@ -182,7 +182,7 @@
     "download_log": "/root/actionmesh-research-staging/full128-direct.log",
     "metadata_log": "/root/actionmesh-research-staging/model-metadata-direct.log",
     "gpu_job_currently_running": false,
-    "model_metadata_status": "completed all four repositories; 33/33 existing files now have official HF download metadata; full byte admission pending",
+    "model_metadata_status": "All four model repositories fully admitted with byte hashes",
     "source_staging": {
       "old_remote_source": "extracted source lacks Git metadata; preserved",
       "local_verified_source": "/private/tmp/4d-actionmesh-pinned-source",
@@ -193,7 +193,7 @@
       "triposg_bundle_sha256": "7497a38f54f6564a959c966b8668bddb12f7dbeaee4ad116dd60a5d01b73c1ef",
       "actionmesh_bundle_status": "complete, exact SHA-256 verified",
       "remote_source_root": "/root/actionmesh-research-staging/actionmesh-source-d5c01f5",
-      "triposg_bundle_status": "transfer started; do not initialize submodule until hash matches"
+      "triposg_bundle_status": "complete; SHA-256 verified; fixed submodule initialized"
     },
     "download_first_attempt": {
       "pid": 22918,
@@ -202,6 +202,30 @@
       "last_progress": "1731/2309, 75%",
       "old_process_confirmed_absent": true,
       "log": "/root/actionmesh-research-staging/full128-direct.log"
+    },
+    "snapshot_admission": {
+      "run_id": "snapshot-r6",
+      "status": "completed",
+      "wall_seconds": 68.26497437478974,
+      "sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04",
+      "files": {
+        "dataset": 2309,
+        "actionmesh": 10,
+        "triposg": 10,
+        "dinov2": 4,
+        "rmbg": 9
+      }
+    },
+    "dataset_semantics": {
+      "run_id": "semantics-r6",
+      "status": "completed",
+      "wall_seconds": 42.38656806200743,
+      "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+    },
+    "unit_manifest": {
+      "run_id": "unit-manifest-r6",
+      "status": "completed",
+      "sha256": "1dea0b90ec87807ca3065df8011d94620e323a7cb9e38961e25e7ba25e2badb0"
     }
   },
   "concurrent_upstream": {
@@ -211,11 +235,10 @@
   },
   "complete_unit_runner": {
     "path": "actionmesh/research_math/complete_unit_runner.py",
-    "status": "runner_and_plan_builder_implemented_not_dispatched",
+    "status": "default_failed_cuda_oom",
     "remaining": [
-      "review emitted real-input harness plan after admissions",
-      "full snapshot + semantics + unit manifest admissions",
-      "actual GPU integration"
+      "complete actual GPU integration",
+      "three-arm official scoring and integrity collection"
     ]
   },
   "runtime_capture": {
@@ -232,5 +255,22 @@
     "green_run": "timeout-green-r5"
   },
   "candidate_input_audit": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
-  "remote_source_revision": "b3a4782996ae7162faace0a419cf64e9e3edcdd7"
+  "remote_source_revision": "b3a4782996ae7162faace0a419cf64e9e3edcdd7",
+  "gpu_execution": {
+    "run_id": "complete-default-r6",
+    "harness_pid": 26280,
+    "runner_pid": 26287,
+    "generation_pid": 26559,
+    "plan_digest": "083286494ade7d595997903eeae8f7f991c7b35fb96a2f11a73122ff83f6c98f",
+    "last_observed_gpu_memory_mib": 0,
+    "last_observed_utilization_percent": 0,
+    "stage_observed": "Stage 0 completed; Stage I 0/30 attention OOM",
+    "status": "failed",
+    "log": "/root/actionmesh-research-staging/complete-default-r6.log",
+    "attempt": "runs/attempts/complete-default-r6/complete-default-three-arm-unit-a1-16634ef4dde142dfba844c2e7c87dc95",
+    "observed_peak_mib": 20673,
+    "elapsed_seconds": 135.9401434371248,
+    "error": "Attention requested 128.13 GiB on 21.49 GiB device",
+    "receipt_sha256": "7b4223a3fdcf4a738c1cec646ecb8f8172ece850a46aa8936aa96d8626cd62f9"
+  }
 }
