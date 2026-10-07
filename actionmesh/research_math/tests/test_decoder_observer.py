@@ -31,6 +31,10 @@ class DecoderObserverTests(unittest.TestCase):
             self.assertTrue(all(torch.equal(saved[k],v) for k,v in args.items()))
             self.assertEqual(record['status'],'captured_unqualified')
             self.assertFalse(record['scientific_effect_qualification'])
+            self.assertIn('cuda_autocast_enabled',record)
+            self.assertIn('cuda_autocast_dtype',record)
+            self.assertIn('cpu_autocast_enabled',record)
+            self.assertIn('cpu_autocast_dtype',record)
             self.assertEqual(len(model._forward_pre_hooks),0);self.assertEqual(len(model._forward_hooks),0)
 
     def test_existing_output_is_preserved_and_tampering_rejected(self):

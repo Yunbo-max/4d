@@ -27,6 +27,18 @@ def tensor_inventory(tensors):
             for name,value in tensors.items()}
 
 
+def autocast_state(torch,device):
+    """Read autocast metadata across PyTorch's pre-device and device APIs."""
+    try:
+        return (torch.is_autocast_enabled(device),torch.get_autocast_dtype(device))
+    except TypeError:
+        if device=='cuda':
+            return (torch.is_autocast_enabled(),torch.get_autocast_gpu_dtype())
+        if device=='cpu':
+            return (torch.is_autocast_cpu_enabled(),torch.get_autocast_cpu_dtype())
+        raise
+
+
 class DecoderObserver:
     """Save actual forward arguments/output without substituting either.
 
@@ -65,10 +77,10 @@ class DecoderObserver:
                 'identity_sha256':sha256(self.root/'identity.json'),
                 'prediction_mode':getattr(module,'prediction_mode',None),
                 'training':bool(module.training),'inference_mode':torch.is_inference_mode_enabled(),
-                'cuda_autocast_enabled':torch.is_autocast_enabled('cuda'),
-                'cuda_autocast_dtype':str(torch.get_autocast_dtype('cuda')),
-                'cpu_autocast_enabled':torch.is_autocast_enabled('cpu'),
-                'cpu_autocast_dtype':str(torch.get_autocast_dtype('cpu')),
+                'cuda_autocast_enabled':cuda_autocast_enabled,
+                'cuda_autocast_dtype':str(cuda_autocast_dtype),
+                'cpu_autocast_enabled':cpu_autocast_enabled,
+                'cpu_autocast_dtype':str(cpu_autocast_dtype),
                 'input_devices':{k:str(v.device) for k,v in values.items()},
                 'step_callback_present':bound.arguments.get('step_callback') is not None,
                 'inputs_sha256':sha256(path/'inputs.safetensors'),
