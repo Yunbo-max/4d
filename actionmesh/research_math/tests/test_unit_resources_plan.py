@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from types import SimpleNamespace
 from research_math.unit_resources import HostSamples
-from research_math.complete_unit_plan import validate_inventory
+from research_math.complete_unit_plan import complete_output_inventory, validate_inventory
 
 class UnitResourcesPlanTests(unittest.TestCase):
     def test_resource_capture_records_process_ram_and_output_disk(self):
@@ -26,3 +26,13 @@ class UnitResourcesPlanTests(unittest.TestCase):
             for name in ('snapshot_admission','dataset_semantics','unit_manifest'):
                 paths[name]=root/(name+'.json');paths[name].write_text(json.dumps({'status':'generated_unexecuted'}))
             with self.assertRaises(ValueError):validate_inventory(SimpleNamespace(**paths))
+
+    def test_plan_output_inventory_comes_from_frozen_manifest_uid(self):
+        uid='000-000_frozen'
+        paths=complete_output_inventory({'unit_manifest': {
+            'calibration_unit': {'uid': uid}}})
+        self.assertIn('actionmesh/unit-output/result.json',paths)
+        self.assertIn('actionmesh/unit-output/official-scores.json.official/'
+                      +uid+'-native/official.csv',paths)
+        self.assertIn('actionmesh/unit-output/official-scores.json.official/'
+                      +uid+'-body_gaussian/predictions/'+uid+'/mesh_00015.glb',paths)

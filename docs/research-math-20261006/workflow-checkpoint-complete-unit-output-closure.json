@@ -1,0 +1,58 @@
+{
+  "kind": "research-autopilot-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T10:58:49Z",
+  "base_commit": "b3a4782996ae7162faace0a419cf64e9e3edcdd7",
+  "status": "generated_unexecuted_after_224_base_checks",
+  "decision": "Require the complete-unit native receipt to bind every deterministic successful output, rather than accepting result.json plus an internally asserted hash inventory.",
+  "gap_closed": "The prior complete-unit plan declared only actionmesh/unit-output/result.json. Raw generator outputs, all three control arms, all official scorer CSV/summary/backend records, copied official sources and resource logs therefore lacked direct native-receipt membership.",
+  "code_refs": [
+    {
+      "path": "actionmesh/research_math/complete_unit_contract.py",
+      "sha256": "a1f7935590ba94ee5ba9d88e7aff8b401b2d371d41d01a4c0381721ee88c1463"
+    },
+    {
+      "path": "actionmesh/research_math/complete_unit_plan.py",
+      "sha256": "95351ccbca9d1d3e94fa84c7f76fa2156c79382f5559270827e1534511d93495"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_complete_unit_contract.py",
+      "sha256": "0787cb4d628b65497b9a96a9e6ff4fb306c4a73ecf0150a74bc23e6b962871ea"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_unit_resources_plan.py",
+      "sha256": "d8dd2c989d7bd1f09e34b6a327c92c0272c23da24a12e33ee8af2c0ce6a0a277"
+    }
+  ],
+  "successful_output_classes_bound": [
+    "complete result and generation/scoring execution logs",
+    "host and device resource samples",
+    "two revalidated unit manifests",
+    "generation deformation arrays, report, sequence, 16 GLBs and grid_normal.mp4 preview",
+    "three control reports and sequences plus body poses",
+    "three official raw CSVs, summaries, backend records and subprocess logs",
+    "48 official-export GLBs",
+    "six copied official evaluator source files"
+  ],
+  "successful_output_file_count": 117,
+  "failure_policy": "A natural failure may retain a partial prefix and a failed attempt. It must not fabricate missing successful outputs or be promoted as a completed unit.",
+  "execution": {
+    "base_revision_software_checks_passed": 224,
+    "new_checks_authored": 2,
+    "current_authored_test_methods_observed": 226,
+    "new_checks_executed_by_web": 0,
+    "inference_units_executed_by_web": 0,
+    "official_scorer_invocations_by_web": 0,
+    "gpu_workloads_by_web": 0
+  },
+  "scientific_state": {
+    "snapshot_admission_complete": false,
+    "dataset_semantics_admission_complete": false,
+    "unit_manifest_executed": false,
+    "complete_unit_executed": false,
+    "queue_generated": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "next_executable_step": "Local reruns whole-suite software acceptance at the delivered revision, completes snapshot/dataset-semantics/unit-manifest admissions, source-inspects the emitted default-BF16 plan and then executes its exact harness digest on the single physical GPU."
+}

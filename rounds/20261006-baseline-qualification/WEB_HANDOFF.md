@@ -145,9 +145,12 @@ precision. No eight-hour queue may be generated from one-UID parity timing.
 The unit contract fixes UID
 `000-000_03b69da8d2c94b5999bcf2605ee2ecd9` before outcomes and defines a later
 complete boundary with native, world-Gaussian and body-Gaussian arms plus all
-three official score rows. Its current plan is CPU-only manifest admission; the
-GPU complete-unit runner is not yet authored, so neither the manifest nor its
-timing authorizes inference or queue construction.
+three official score rows. The GPU complete-unit runner and single-GPU plan
+builder are now authored but unexecuted. The delivered plan must bind the entire
+successful output closure in its native receipt, not only `result.json`. It may
+be generated only after snapshot, dataset-semantic and unit-manifest admission;
+its actual timing/VRAM receipt, not its code or the old parity timing, is the
+first evidence eligible to price a later queue.
 
 ## Runtime supplement — 2026-10-06
 

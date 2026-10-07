@@ -5,6 +5,7 @@ from pathlib import Path
 import subprocess
 import sys
 from research_math.control_scoring import file_ref
+from research_math.complete_unit_contract import complete_unit_output_paths
 
 INPUT_NAMES=('contract','population','snapshot_contract','snapshot_admission',
              'dataset_semantics','unit_manifest','environment')
@@ -20,6 +21,12 @@ def validate_inventory(args):
         if record.get('status')!=status:raise ValueError('Successful prerequisite required: '+key)
         records[key]=record
     return records
+
+
+def complete_output_inventory(records):
+    manifest=records.get('unit_manifest',{})
+    unit=manifest.get('calibration_unit',{})
+    return complete_unit_output_paths(unit.get('uid'))
 
 
 def build_plan(args):
@@ -51,7 +58,7 @@ def build_plan(args):
     revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
     plan=native.make_plan(root,run_id=args.run_id,purpose='engineering',evidence_mode='developmental',
         jobs=[{'trial_id':'complete-default-three-arm-unit','command':command,'cwd':'actionmesh',
-            'input_refs':inputs,'code_refs':code,'output_paths':['actionmesh/unit-output/result.json'],
+            'input_refs':inputs,'code_refs':code,'output_paths':complete_output_inventory(records),
             'seed':42,'group':'engineering','arm_role':'complete-current-release-calibration'}],
         provenance={'git_revision':revision,'model_revision':'four immutable manifests in snapshot admission',
             'data_revision':records['unit_manifest']['population']['revision'],

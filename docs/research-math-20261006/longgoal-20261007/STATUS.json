@@ -2,7 +2,7 @@
   "kind": "long-goal-task-ledger",
   "version": 1,
   "status": "active",
-  "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
+  "delivered_revision": "b3a4782996ae7162faace0a419cf64e9e3edcdd7",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
   "updated_at": "2026-10-07T11:03:15.311868+00:00",
   "software_acceptance": {
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "r6 clean overlay checkout ready with promoted runtime; dataset PID22918 and TripoSG bundle transfer active; source/data admission next",
+  "current_task": "r6 clean overlay checkout is ready with promoted runtime; resumed dataset and TripoSG transfers remain active; admissions are next, and the default-BF16 unit plan now binds its full successful output closure",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,7 +129,7 @@
       "comparator_and_ablation": "required"
     }
   ],
-  "next_checkpoint": "complete pinned snapshot download/admission, dataset semantics, versioned low-RAM FP16 complete generation/export/scoring unit",
+  "next_checkpoint": "complete pinned snapshot admission, dataset semantics and unit manifest; then execute the frozen default non-low-RAM BF16 complete generation/export/three-arm scoring unit and retain any natural failure",
   "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r6",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
@@ -211,7 +211,17 @@
   },
   "complete_unit_runner": {
     "path": "actionmesh/research_math/complete_unit_runner.py",
-    "status": "runner_and_plan_builder_implemented_not_dispatched",
+    "plan_path": "actionmesh/research_math/complete_unit_plan.py",
+    "status": "runner_and_plan_builder_implemented_not_dispatched_full_success_output_closure_bound",
+    "receipt_policy": "native plan enumerates all 117 successful generator (including grid_normal.mp4), control, official raw-score/source, integrity and resource files; result.json alone is insufficient",
+    "default_attempt_first": "non-fast non-low-RAM bfloat16; preserve OOM or unsupported dtype without automatic repair",
+    "software_acceptance_at_base_revision": {
+      "revision": "b3a4782996ae7162faace0a419cf64e9e3edcdd7",
+      "passed": 224,
+      "failed": 0
+    },
+    "new_output_closure_checks_authored_after_base": 2,
+    "new_output_closure_checks_executed": 0,
     "remaining": [
       "review emitted real-input harness plan after admissions",
       "full snapshot + semantics + unit manifest admissions",

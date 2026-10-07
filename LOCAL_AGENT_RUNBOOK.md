@@ -473,15 +473,56 @@ scoring remains seed 44. The manifest freezes a later boundary containing
 non-fast/non-low-RAM bfloat16 generation, native/world-Gaussian/body-Gaussian
 arms, all three official score rows, integrity collection, wall time and peak
 VRAM. It emits no GPU plan. OOM or unsupported bfloat16 must be preserved; do
-not silently enable low-RAM, float16 or fast mode. The complete-unit runner is
-still unimplemented and requires a later reviewed commit before GPU dispatch.
+not silently enable low-RAM, float16 or fast mode.
+
+After the three promoted admissions and a fresh runtime capture match the active
+interpreter/GPU UUID, generate (but do not yet execute) the complete-unit plan:
+
+```bash
+complete_unit_run_id=actionbench-default-complete-unit-001
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.complete_unit_plan \
+  --root "$project_dir" \
+  --skill-dir "$skill_dir" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-current-release-unit-contract.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --snapshot-contract "$project_dir/docs/research-math-20261006/actionbench-full128-snapshot-contract.json" \
+  --snapshot-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --unit-manifest "$project_dir/inputs/actionbench-full128-snapshots/unit-manifest.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --source-root "$actionmesh_source" \
+  --dataset-root "$project_dir/inputs/actionbench-2796071c" \
+  --weights-root "$weights_root" \
+  --run-id "$complete_unit_run_id" \
+  --gpu-uuid "$gpu_uuid" \
+  --wall-seconds 27000 \
+  --plan-dir "$project_dir/plans/$complete_unit_run_id"
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$complete_unit_run_id/harness.json" \
+  --root "$project_dir" \
+  --execute \
+  --approved-plan-digest "$approved_plan_digest"
+```
+
+Before approving the digest, inspect that the plan has one exclusive physical-
+GPU task, a 27,000-second workload limit inside a 28,800-second window, no retry,
+and the default non-fast/non-low-RAM BF16 argv. Its native receipt must enumerate
+the full deterministic success closure: generator logs/arrays/16 GLBs and the
+PyTorch3D `grid_normal.mp4` preview, all three
+control sequences/reports, 48 official exported GLBs, three raw CSV/summary/
+backend records, copied official scorer sources, integrity manifests and host/
+device telemetry. A plan declaring only `result.json` is obsolete and must be
+rejected. Preserve any partial failure rather than manufacturing the absent
+success files.
 
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.
 Inventory these full-population prerequisites without launching generation or scoring. Return
 their exact paths/revisions/hashes, snapshot and semantic admissions, and measured
-storage/semantic-pass requirements plus the unit manifest. Generation still
-requires a later reviewed complete-unit runner; only its full
+storage/semantic-pass requirements plus the unit manifest. The complete-unit
+runner and plan builder are now authored but unexecuted; only their full
 generation/three-arm export/scoring receipt can price the eight-hour queue.
 One-UID parity timing or any CPU admission timing cannot.
 

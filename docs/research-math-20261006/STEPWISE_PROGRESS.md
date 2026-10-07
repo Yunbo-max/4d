@@ -638,3 +638,39 @@ admissions. A later reviewed runner must return the
 actual full three-arm unit time and peak VRAM before any 28,800-second queue can
 reserve 1,800 seconds for collection. Candidate designs/results/verdicts remain
 **0/15**, **0/15**, and **0**.
+
+## Continuation: bind the complete-unit raw evidence closure — 2026-10-07
+
+Concurrent work after the unit-manifest commit implemented the default non-fast,
+non-low-RAM BF16 generation/export/three-arm official-scoring runner, a one-GPU
+harness plan, host/device telemetry and descendant cleanup on timeout. Local's
+latest returned software acceptance at base revision `b3a4782` is 224/224. No
+complete GPU unit has been dispatched: snapshot, dataset-semantic and unit-
+manifest admissions remain prerequisites.
+
+Review found one pre-dispatch evidence defect. The native plan declared only
+`actionmesh/unit-output/result.json` as an output. The runner's JSON contained a
+nested hash list, but that did not make the raw generation arrays/GLBs, three
+control sequences, three official CSV/summary/backend bundles, copied evaluator
+sources and telemetry direct members of the harness/native receipt. A successful
+summary could therefore not by itself prove complete promotion of the raw unit.
+
+The plan now derives an exhaustive 117-file deterministic successful-output
+inventory from the prospectively frozen UID. It binds generator logs, arrays,
+16 GLBs and the PyTorch3D `grid_normal.mp4` preview;
+the three control arms; all 48 official-export GLBs; three raw official score
+bundles; six copied evaluator files; integrity manifests; and host/device logs.
+Two new rejection checks exercise exact set equality and prove the plan derives
+the closure from the frozen manifest UID. They are authored but unexecuted by
+Web, so current-revision Local acceptance is required. Natural failures remain
+valid failed attempts with partial retained evidence; absent success files must
+not be fabricated.
+
+The Local runbook and handoff now contain the exact complete-unit plan/harness
+commands. The first attempt remains the frozen default BF16 configuration. The
+ledger's earlier low-RAM FP16 next-step wording was corrected: that variant is a
+separately reviewed repair only after an observed default failure, never an
+automatic fallback. This change executes **0** tests, inference, scorer or GPU
+workloads and does not change candidate designs/results/outcomes from **0/15**,
+**0/15**, and **0**. No queue is generated until the full receipt returns actual
+wall time and observed peak VRAM.
