@@ -1,6 +1,6 @@
 import unittest
 from pathlib import Path
-from research_math.complete_unit_contract import generation_argv, require_three_scores
+from research_math.complete_unit_contract import generation_argv, require_three_scores, complete_unit_output_paths
 
 class CompleteUnitContractTests(unittest.TestCase):
     def test_default_generation_does_not_silently_enable_fallback(self):
@@ -46,3 +46,39 @@ class CompleteUnitContractTests(unittest.TestCase):
             with self.assertRaises(ValueError):validate_generation_profile({**repair,key:value})
         with self.assertRaises(ValueError):validate_generation_profile({**base,'dtype':'float16'})
         with self.assertRaises(ValueError):generation_argv(Path('/s'),Path('/d'),Path('/o'),profile='unknown')
+
+    def test_complete_success_inventory_binds_every_arm_and_raw_official_output(self):
+        uid='000-000_sample'
+        paths=complete_unit_output_paths(uid)
+        root='actionmesh/unit-output/'
+        expected={root+name for name in (
+            'result.json','device-samples.jsonl','host-samples.jsonl',
+            'revalidated-unit-manifest.json','generation.stdout.log',
+            'generation.stderr.log','generation.execution.json',
+            'official-scoring.stdout.log','official-scoring.stderr.log',
+            'official-scoring.execution.json','official-scores.json',
+            'final-integrity/revalidated-unit-manifest.json',
+            'native-generation/deformations_vertices.npy',
+            'native-generation/deformations_faces.npy',
+            'native-generation/sequence.npz','native-generation/report.json',
+            'native-generation/grid_normal.mp4','controls/manifest.json',
+            'controls/controls.json','controls/native/sequence.npz',
+            'controls/native/report.json','controls/world_gaussian/sequence.npz',
+            'controls/world_gaussian/report.json',
+            'controls/body_gaussian/sequence.npz',
+            'controls/body_gaussian/report.json','controls/body_gaussian/poses.npz')}
+        expected.update(root+f'native-generation/mesh_{i:02d}.glb' for i in range(16))
+        source=root+'official-scores.json.official/official-source/'
+        expected.update(source+name for name in (
+            'benchmark.py','chamfer.py','icp.py','sample_mesh.py',
+            'sample_point_cloud.py','evaluate_dataset.py'))
+        for arm in ('native','world_gaussian','body_gaussian'):
+            case=uid+'-'+arm
+            base=root+'official-scores.json.official/'+case+'/'
+            expected.update(base+name for name in (
+                'execution.json','export-manifest.json','official.csv',
+                'official.summary.json','official.backend.json','stdout.log','stderr.log'))
+            expected.update(base+'predictions/'+uid+f'/mesh_{i:05d}.glb'
+                            for i in range(16))
+        self.assertEqual(len(expected),117)
+        self.assertEqual(set(paths),expected)
