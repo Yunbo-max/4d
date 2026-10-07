@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T10:38:48.284409+00:00",
+  "updated_at": "2026-10-07T10:44:48.444508+00:00",
   "software_acceptance": {
-    "run_id": "unit-runner-green-r4",
-    "tests_passed": 221,
+    "run_id": "unit-resources-green-r4",
+    "tests_passed": 223,
     "tests_failed": 0,
-    "plan_digest": "c1fa7001d0433318d48dd8f0ae560d2e63467837e87e48c7e261c7e622de03bc",
-    "scope": "CPU software checks including real tiny GLB roundtrip and subprocess failure/timeout; no model inference"
+    "plan_digest": "05fbe78279e554546452477d1594a840c605647378c6db6151c1bc9a010eb71b",
+    "scope": "CPU software only; host telemetry and rejection of unexecuted admissions verified"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "complete_unit_runner authored and software-checked; GPU plan builder, host resource telemetry and end-to-end admission validation still pending; dataset and source transfers continue",
+  "current_task": "prepare roomy overlay worktree; dataset and official Git bundles still transferring; complete unit runner/plan/resources implemented and 223 software checks passed",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -200,12 +200,11 @@
   },
   "complete_unit_runner": {
     "path": "actionmesh/research_math/complete_unit_runner.py",
-    "status": "implemented_partial_admission_not_dispatched",
+    "status": "runner_and_plan_builder_implemented_not_dispatched",
     "remaining": [
-      "committed harness plan builder",
-      "host RAM/disk telemetry",
-      "review source/runtime binding and complete wall timeout",
+      "review emitted real-input harness plan after admissions",
       "full snapshot + semantics + unit manifest admissions",
+      "fresh runtime capture",
       "actual GPU integration"
     ]
   }

@@ -97,11 +97,14 @@ def verify_prerequisites(args,output):
 def execute(args):
     from research_math.control_scoring import DeviceSamples
     from research_math.simple_mesh_controls import export_controls
+    from research_math.unit_resources import HostSamples
     output=args.output.resolve();output.mkdir(parents=True,exist_ok=False)
     started=time.monotonic();monitor=DeviceSamples(args.gpu_uuid,output/'device-samples.jsonl')
+    host=HostSamples(output,output/'host-samples.jsonl')
     result={'status':'failed','scientific_effect_qualification':False,'candidate_methods_tested':False,
             'source_root':str(args.source_root),'gpu_uuid':args.gpu_uuid,'stages':{}}
     try:
+        host.start()
         manifest=verify_prerequisites(args,output)
         monitor.start()
         uid=manifest['calibration_unit']['uid']
@@ -112,7 +115,7 @@ def execute(args):
         native=output/'native-generation'
         command=generation_argv(args.source_root,args.dataset_root/'data'/uid/'imgs',native)
         result['stages']['generation']=run_stage('generation',command,args.source_root,output,
-                                                args.wall_seconds,environment)
+                                                max(1,args.wall_seconds-(time.monotonic()-started)),environment)
         begin=time.monotonic();collect_native_sequence(native,uid)
         result['stages']['export']={'elapsed_seconds':time.monotonic()-begin,'status':'completed'}
         begin=time.monotonic();controls=output/'controls'
@@ -136,12 +139,15 @@ def execute(args):
         result.update(error=type(error).__name__+': '+str(error),traceback=traceback.format_exc())
     finally:
         monitor.close()
-        result['elapsed_seconds']=time.monotonic()-started
+        host.close()
+        result['host_resources']=host.summary()
         result['device_memory']={'sample_interval_seconds':1,'samples':len(monitor.memory),
             'observed_peak_mib':max(monitor.memory,default=None),'exact_peak':False,'errors':monitor.errors}
         result['outputs']=[{'path':str(p.relative_to(output)),'bytes':p.stat().st_size,'sha256':digest(p)}
                            for p in sorted(output.rglob('*')) if p.is_file()]
-        if monitor.errors:result['status']='failed'
+        if monitor.errors or host.errors:result['status']='failed'
+        result['elapsed_seconds']=time.monotonic()-started
+        if result['elapsed_seconds']>args.wall_seconds:result.update(status='failed',budget_exceeded=True)
         write_json(output/'result.json',result)
     return 0 if result['status']=='completed' else 1
 
