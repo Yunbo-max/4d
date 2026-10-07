@@ -1,0 +1,1 @@
+{"environment": "../inputs/native-runtime/environment.json", "dependency_lock_refs": [{"path": "inputs/native-runtime/dependencies.json", "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"}], "native_contract_qualified": false, "gpu_identity_verified": false}

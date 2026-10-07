@@ -1,0 +1,46 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "cpu-backward-r3",
+  "tasks": [
+    {
+      "task_id": "strict-backend-determinism",
+      "idea_id": "scorer-reproducibility",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/cpu-backward-r3/native.json",
+        "sha256": "421ce28d36d57e05098d2a3f49354ad611e7723b07b06243b209ad2d94e27c27"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 8192,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-native-scorer"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 630,
+    "window_seconds": 630,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 8,
+    "ram_mib": 8192,
+    "max_gpu_task_seconds": 600
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [
+      "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740"
+    ],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "aea8ef3b47c894e1fe1315719591260b435c43efe71eb10c24c5fef1ab95a8c6"
+}

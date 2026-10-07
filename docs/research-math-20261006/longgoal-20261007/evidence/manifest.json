@@ -1,0 +1,1415 @@
+{
+  "scope": "completed engineering attempts, no candidate results",
+  "files": [
+    {
+      "path": "4d-8d2f1e7/plans/software-8d2f1e7-001/harness.json",
+      "bytes": 1109,
+      "sha256": "7dd6a29575f76bb11c76ed60581e9ecef15a95d6d61908b0da416cc89ffae647"
+    },
+    {
+      "path": "4d-8d2f1e7/plans/software-8d2f1e7-001/native.json",
+      "bytes": 8102,
+      "sha256": "d04d75f78801a46ed37bef2bf438d19731d91d2e75ddaabc089d7a6a10827f28"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/software-8d2f1e7-001/all-research-math-checks-a1-68412fabeceb4bbd815881929f1b5bbe/attempt.json",
+      "bytes": 7020,
+      "sha256": "dab8ebd6e37143f1f26f34c322bdc34083810902c56521b8ddc7c22aa3f373de"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/software-8d2f1e7-001/all-research-math-checks-a1-68412fabeceb4bbd815881929f1b5bbe/process-guard.json",
+      "bytes": 748,
+      "sha256": "1c3356093e06ba2b69389ff59d759365a335c060b4c9c2535aa52ef4da10016c"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/software-8d2f1e7-001/all-research-math-checks-a1-68412fabeceb4bbd815881929f1b5bbe/stderr.log",
+      "bytes": 28011,
+      "sha256": "cf98c982abad5d83088f2cdec33683361e358eb1e47af2e71d47951482bd56d3"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/software-8d2f1e7-001/all-research-math-checks-a1-68412fabeceb4bbd815881929f1b5bbe/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/software-8d2f1e7-001/plan.json",
+      "bytes": 6307,
+      "sha256": "24584607de6adf6dba5917d57b4c0da8236861e948c74a57fbbdebf51444ff02"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/software-8d2f1e7-001/receipt.json",
+      "bytes": 7730,
+      "sha256": "de1fa19bbce374d27d6cbff75aa040145e15477258176ded144d63c274d068e2"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/events.jsonl",
+      "bytes": 507,
+      "sha256": "7d97f642a5283153b960ffb5765e98934d2a98c858e5a79519e3537a2320aff8"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/plan.json",
+      "bytes": 847,
+      "sha256": "c0225f33c96a3d28f939770e91719aaf44ab9c7fa94dfaa976e7a011919ed0d2"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/report.json",
+      "bytes": 1805,
+      "sha256": "5fc8c9d243610e444b721a12421d5410e35e5a9c1377b99b5989606b0765282f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/state.json",
+      "bytes": 1418,
+      "sha256": "0ce308fef4d7a39b9d950149e4d056e87abfcb2515659771a39427376deca6eb"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/tasks/all-research-math-checks/execution-context.json",
+      "bytes": 574,
+      "sha256": "0b4bfbb2ff47026b662520301246aa589f688fb819385b69e6baab4edbf11793"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/tasks/all-research-math-checks/process.json",
+      "bytes": 89,
+      "sha256": "e44ba38b2fcd1d3f6d59edbbea3b7d202350c5838da7b7b40d2ef044305fcdf2"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/tasks/all-research-math-checks/result.json",
+      "bytes": 521,
+      "sha256": "80fb72d097094c6c7b12530dd473757e7aa0ea3c2ef659f04e5c868bddc9dfb6"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/tasks/all-research-math-checks/task.json",
+      "bytes": 387,
+      "sha256": "668549a54c3f693ea3894f170181a4e1cd9909b77a5a25780f3fe0f8a2e00fa9"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/tasks/all-research-math-checks/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/software-8d2f1e7-001/tasks/all-research-math-checks/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/plans/parity-8d2f1e7-001/actionbench-parity-sample-manifest.json",
+      "bytes": 4877,
+      "sha256": "7bd438395592737a4f5236e64c879c7a61c1fc18e5cd728a3fdfe3c5edb07513"
+    },
+    {
+      "path": "4d-8d2f1e7/plans/parity-8d2f1e7-001/actionbench-scorer-equivalence-contract.json",
+      "bytes": 13117,
+      "sha256": "f28bf95cf7681273a1bf7bc8105477ea35ee6389280d3ee672c22f9b31815ac1"
+    },
+    {
+      "path": "4d-8d2f1e7/plans/parity-8d2f1e7-001/dirty.patch",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/plans/parity-8d2f1e7-001/harness.json",
+      "bytes": 1237,
+      "sha256": "d73cf0491e5ec017cc558522ef477cef8d289d4647543932331700b66a634fbf"
+    },
+    {
+      "path": "4d-8d2f1e7/plans/parity-8d2f1e7-001/native.json",
+      "bytes": 24943,
+      "sha256": "68610fefe19d690cf8805088438c491ea6ce4dc7cfab49034b3891f4ea7876c6"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/attempt.json",
+      "bytes": 42475,
+      "sha256": "a0136539a1c521c79dbeca6eec3c48730e2af2bbde7d10dfc85c3476724baf55"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/process-guard.json",
+      "bytes": 1375,
+      "sha256": "2bda0fbb696a38d81d569ad1b090043418741e3d19dcb595a360b56bbdbf3451"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/faithful.json",
+      "bytes": 6387,
+      "sha256": "534fd3947b02f5762d321739b1feb467d65047e6e5b076d54ef7150522fa3651"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/faithful.stderr.log",
+      "bytes": 1321,
+      "sha256": "32e1543a672604770467b86f807fb940dcef6fde05f30304a250622dde2e18a0"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/faithful.stdout.log",
+      "bytes": 251,
+      "sha256": "cd48d91766638e4bee4b4f87a7d62a93b5a00953fea8aadceed9a9dd8a8066db"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/manifest.json",
+      "bytes": 265,
+      "sha256": "c548980436219b0b1d893ebe93c39f9f24902c5a8808330919a3aa60ff2bd1ce"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json",
+      "bytes": 3380,
+      "sha256": "9b5851e1e16733dfd9446164f73b1eee6e178514ce6d0ccd0f2adb3e236ef37b"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/execution.json",
+      "bytes": 1920,
+      "sha256": "121909ab96082d9585b7d4c5366cc83e6709fdc08ee939750aed6a918950e22f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/export-manifest.json",
+      "bytes": 9026,
+      "sha256": "74e07f6374aef9bfca4b27370a564f218d46cd66bc0704f5f162e55af6dc5d3f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/stderr.log",
+      "bytes": 419,
+      "sha256": "643d38fcee9dbc6367bd050f34e6974f7ff4f58dbd5abf389e10c59582ebc972"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/benchmark.py",
+      "bytes": 4672,
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/chamfer.py",
+      "bytes": 2334,
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/evaluate_dataset.py",
+      "bytes": 15219,
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/icp.py",
+      "bytes": 3292,
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/sample_mesh.py",
+      "bytes": 7185,
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/sample_point_cloud.py",
+      "bytes": 1004,
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/device-samples.jsonl",
+      "bytes": 41906,
+      "sha256": "d8ed88ba3850bac4f64bae2433d49639675f146903457580db2ab2520d8300af"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/faithful.json",
+      "bytes": 6331,
+      "sha256": "ebb25a706b072156400f3d5d72e6e0c15fb07998752d2128a529965d8fc08c00"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/faithful.stderr.log",
+      "bytes": 1321,
+      "sha256": "70ba0261a8966726976eb93ffe1e15aeb4b3ef22d01b03c63b5463711cb3be77"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/faithful.stdout.log",
+      "bytes": 244,
+      "sha256": "a937a4f0bf6a37c6412e0504c4da2f498e2667558f7829f061b94689f760d859"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/manifest.json",
+      "bytes": 251,
+      "sha256": "e49eb02ad0d5ea4af99879e8d05e712fd5ae448396aba0e5c038f3838569f5af"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json",
+      "bytes": 3358,
+      "sha256": "609113242a3dc05ef7bfb0dbc89dc82d6fa165f1c28cc95b7f5a98f502c37a0f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/execution.json",
+      "bytes": 1878,
+      "sha256": "29bfdec4f5db58f96d339b2c9de2e92123e88a096840554671df0a8af4592772"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/export-manifest.json",
+      "bytes": 8795,
+      "sha256": "06ef7205979129dccfce565c6efa448550f9718807bec613e49979c805e85ed7"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/stderr.log",
+      "bytes": 412,
+      "sha256": "44871427d66a149678537b59dcce63c5bd98ee6ba17500fd306cd516b1184f6e"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/benchmark.py",
+      "bytes": 4672,
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/chamfer.py",
+      "bytes": 2334,
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/evaluate_dataset.py",
+      "bytes": 15219,
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/icp.py",
+      "bytes": 3292,
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/sample_mesh.py",
+      "bytes": 7185,
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/sample_point_cloud.py",
+      "bytes": 1004,
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/native/official.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/parity-evidence.json",
+      "bytes": 8595,
+      "sha256": "5cd82a57f96a6c96ceaa0f1a7709bf1cc0d65dcdcde0e690305a3fea61a7935b"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/record.json",
+      "bytes": 26926,
+      "sha256": "0197045b0ebca8a5e503d5b044b99179677263be85bc23fc840c27237a083339"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/faithful.json",
+      "bytes": 6391,
+      "sha256": "170cc1c2acd0e33008717c79f553acf423ffb920effc4a42aad656412f68112f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/faithful.stderr.log",
+      "bytes": 1321,
+      "sha256": "8e5fa319dd35c49aa21f05595c3a48e454b4cc2b01ab793ad2577e6c624d6ee3"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/faithful.stdout.log",
+      "bytes": 251,
+      "sha256": "1bc18173e5a2d3afa0e7122e914f7b5aa29cc0a49aaec5bc4d029ea2eb67b543"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/manifest.json",
+      "bytes": 267,
+      "sha256": "943bde30fd168c607445fad6e6605122455e9653902e44d46dc667e73d1db4ce"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json",
+      "bytes": 3383,
+      "sha256": "82abeb78af49a21356aa435db0bf1191eebc892d65993de6c29016abe609201d"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/execution.json",
+      "bytes": 1926,
+      "sha256": "f55f8f57a0d09fc2e1438b0d9a5b148762ff4da7e854b84cbf0d55ecbe11a5bc"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/export-manifest.json",
+      "bytes": 9059,
+      "sha256": "4a500b46cce2a8f61ab13de34e65de4f4ba00aa3965acf80b0292cf6a7793562"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/stderr.log",
+      "bytes": 420,
+      "sha256": "a73253bb6d1ee7aded3a1fbc45fbe8f0b811874eee9e3b07a5f7b9d07eedfe10"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/benchmark.py",
+      "bytes": 4672,
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/chamfer.py",
+      "bytes": 2334,
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/evaluate_dataset.py",
+      "bytes": 15219,
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/icp.py",
+      "bytes": 3292,
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/sample_mesh.py",
+      "bytes": 7185,
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/sample_point_cloud.py",
+      "bytes": 1004,
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/inputs/native-runtime/dependencies.json",
+      "bytes": 26932,
+      "sha256": "9e10d71f787adaa4e68af9084f51db1c04409df540973b0f1b658b9f14320a25"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/inputs/native-runtime/environment.json",
+      "bytes": 1042,
+      "sha256": "40326cc1e8ff263858f17c9a1bbd851215e0d3a523ffad9ebf906827b58233d3"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/plan.json",
+      "bytes": 22011,
+      "sha256": "a5d9e8cf3d72b710979ed933e5914579419c16fe4d1e334f62bb8ace43e49b5e"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/receipt.json",
+      "bytes": 43611,
+      "sha256": "071eb18fb98a63e047dd1f8b3413b3f08bd5b4932c07b3aac5ec6fc0e06936ef"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/events.jsonl",
+      "bytes": 570,
+      "sha256": "5a9131e1de57869950f8f1266fa8c7e481335db3fb6b310a55234b80b1007acb"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/plan.json",
+      "bytes": 943,
+      "sha256": "b2813fd8550f04d8f2821b75d9b7b82f996c9586768773b6a4c7a87073fc213d"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/report.json",
+      "bytes": 1993,
+      "sha256": "aca01b9370a863c0dcff728c26ba17b135107c40e0795050673edb5863a3e95a"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/state.json",
+      "bytes": 1585,
+      "sha256": "d24b2109f6405579796ec202faaedea7bea5efa355a22b6ab3168a9742eaed1b"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/tasks/actionbench-official-faithful-parity/execution-context.json",
+      "bytes": 695,
+      "sha256": "41bd1b923597950050ea9e11c15b44efb1276dee5f4eacc114f960baa757f22d"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/tasks/actionbench-official-faithful-parity/process.json",
+      "bytes": 89,
+      "sha256": "f624bcbb96763085e44d314e66a2513d4cc91e5b0431fcf2aac9f0b42ac86daa"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/tasks/actionbench-official-faithful-parity/result.json",
+      "bytes": 523,
+      "sha256": "d7e92371763b4223891aa86e05016d7afed204ea8647cade65ebe307422d55b4"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/tasks/actionbench-official-faithful-parity/task.json",
+      "bytes": 438,
+      "sha256": "6aab6738358fb5c86f2101d2633b6e5994d123b8cf31db72c9b75bce8915e011"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/tasks/actionbench-official-faithful-parity/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-8d2f1e7/runs/harness/parity-8d2f1e7-001/tasks/actionbench-official-faithful-parity/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/runtime-r2/harness.json",
+      "bytes": 1088,
+      "sha256": "6993e82c042660e173aadf62438201e15953eb3854cd4f61952e678e336481d9"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/runtime-r2/native.json",
+      "bytes": 1858,
+      "sha256": "780a852b6b30369953f2bc1a0da7adab51d6091b466b33f2a7296c56380f06c6"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/native-runtime-metadata-a1-06d893a9140c462a95aaff52e16b107a/attempt.json",
+      "bytes": 2487,
+      "sha256": "f9eca5ee881628e89bf3586986bf3381c9af0caef18a073bae09eb6787319c72"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/native-runtime-metadata-a1-06d893a9140c462a95aaff52e16b107a/process-guard.json",
+      "bytes": 583,
+      "sha256": "a6e7524cc441a6a610db5d7cb9b59fea5d63ecef9bf92db5b992e1033fe544dc"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/native-runtime-metadata-a1-06d893a9140c462a95aaff52e16b107a/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/native-runtime-metadata-a1-06d893a9140c462a95aaff52e16b107a/stdout.log",
+      "bytes": 286,
+      "sha256": "866d87e60d46105ca2e5e4634bc7ae16ec5c19bc81a97a2f0a942c01be2726a8"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/native-runtime-metadata-a1-06d893a9140c462a95aaff52e16b107a/workspace/inputs/native-runtime/dependencies.json",
+      "bytes": 26977,
+      "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/native-runtime-metadata-a1-06d893a9140c462a95aaff52e16b107a/workspace/inputs/native-runtime/environment.json",
+      "bytes": 1042,
+      "sha256": "43ffa4362a77933a14007b2876886ec9282eda320a80c952dd686c459c52b5ca"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/plan.json",
+      "bytes": 1454,
+      "sha256": "1459bc0a65eb1a5389475ea066deece1fe3fde3146bd0c7bd389255af8f2ba99"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/runtime-r2/receipt.json",
+      "bytes": 3165,
+      "sha256": "f9bfccedfbfaa1e009081c1e907187e8a6d8078747d5835457bb6c8b70fab7fa"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/events.jsonl",
+      "bytes": 505,
+      "sha256": "9b101ebfbd47a671ce8c2494e33910235957c8344f6049a01cb047c806876d76"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/plan.json",
+      "bytes": 826,
+      "sha256": "a8b5742f5ffa78df60187ee59127913eeec27e5f430294070f02c5725e10131e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/report.json",
+      "bytes": 2219,
+      "sha256": "b7bdec414760bbb18dac115179c0d7342994f59b569fc0e86ca86dab06263532"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/state.json",
+      "bytes": 1831,
+      "sha256": "4f02b06f418661febf9ca332cce8fde878618d067290f7aff1219634c412e68a"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/tasks/native-runtime-metadata/execution-context.json",
+      "bytes": 573,
+      "sha256": "05f68475a6937fa408fa9a813afbf801ce0b78bb314ae94d0e54c4abee1d138f"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/tasks/native-runtime-metadata/process.json",
+      "bytes": 89,
+      "sha256": "f190455462f4fa34a116db9373bae0b9b27fb5a700a5c785b9711d9509c528e6"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/tasks/native-runtime-metadata/result.json",
+      "bytes": 942,
+      "sha256": "8f2d1db22d10ccf05e2eda463e9ea2edb348efd53a12927ba9eef108b1ea3133"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/tasks/native-runtime-metadata/task.json",
+      "bytes": 376,
+      "sha256": "d067a4259a0bfbde049bd50efe6f76751fda072b816b28e7946c2c318ab82f35"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/tasks/native-runtime-metadata/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/runtime-r2/tasks/native-runtime-metadata/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/determinism-r2/harness.json",
+      "bytes": 1202,
+      "sha256": "af1f4da34655a9123acc5b995249e523f0b30f7b1920874524c20b27fc3a4a03"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/determinism-r2/manifest.json",
+      "bytes": 185,
+      "sha256": "8347afc6f219e4d9ac9fb59a0c0bc735ffe305ceb2ea4112ecd3aa066b3936e3"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/determinism-r2/native.json",
+      "bytes": 7154,
+      "sha256": "9f7b458e159d28415d4fd22c071609f09af172b2be667b4834f082b10608721e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/plan.json",
+      "bytes": 5579,
+      "sha256": "617ce24049e5c854aa74c79f8e4faba07db2214aecffcbf94a5b5b48be8613b4"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/receipt.json",
+      "bytes": 7375,
+      "sha256": "fdf1709604ac4c2a3db2ce983f655e8667e28851fb8eb948f9123e78b8fc2e31"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/attempt.json",
+      "bytes": 6671,
+      "sha256": "db8c11e6fcc8571ed2fe6a44e7d9ddfac594c212c4992294df1972746351ae18"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/process-guard.json",
+      "bytes": 1519,
+      "sha256": "661a022ba34ae730d98932a4f45839c8da4091e87020cfb344cb81fab466cdfa"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/stderr.log",
+      "bytes": 109,
+      "sha256": "6ca980ab30e2ddbcb66b062072aeafff7b4c254140928fe60887b48c7b9333c0"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/stdout.log",
+      "bytes": 687,
+      "sha256": "b7c65373131760d8a231957f50d0cdbf1e658950cd9ddad8df336173d7e58341"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/workspace/actionmesh/deterministic-probe/scores.json",
+      "bytes": 8726,
+      "sha256": "6afc2a9e78074e696549f73f641b3f00c36dbed37322e54471283251e54b2b4b"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/workspace/inputs/native-runtime/dependencies.json",
+      "bytes": 26977,
+      "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/workspace/inputs/native-runtime/environment.json",
+      "bytes": 1042,
+      "sha256": "43ffa4362a77933a14007b2876886ec9282eda320a80c952dd686c459c52b5ca"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/events.jsonl",
+      "bytes": 550,
+      "sha256": "4ec9780fd3582c96c530786c56171651591bcc8219e282a9486652a06ac6c327"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/plan.json",
+      "bytes": 908,
+      "sha256": "72650fb737875f137d6e0b64365ada53cb7144a119f2a4ceb02c2fbffc7ead6e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/report.json",
+      "bytes": 1961,
+      "sha256": "36c016f0d7bf76db3eb610d54fd9ff8dbc734baa4526ed52a6f53fb88d472002"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/state.json",
+      "bytes": 1557,
+      "sha256": "c09f678724feb4cc87603913d7e8edbd155edd8544859f57184118040c4ad58c"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/tasks/strict-backend-determinism/execution-context.json",
+      "bytes": 685,
+      "sha256": "46ca41cc6ed429b17ac0fc488b965bd6964fe2fe2f4b0127dabe96b527c44458"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/tasks/strict-backend-determinism/process.json",
+      "bytes": 89,
+      "sha256": "9a8a81f3df1d812404eaf76b29e51d5bfbc638b9d4f759335891db4ba4c1ad58"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/tasks/strict-backend-determinism/result.json",
+      "bytes": 505,
+      "sha256": "f4e2a4870179d6a1beebe40234038a115ac26c5e72b00a19732a6c5672c92bfd"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/tasks/strict-backend-determinism/task.json",
+      "bytes": 410,
+      "sha256": "280325269527635fd641a618d43f3abb6f4dd89689789f1d98c68b1e134609d6"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/tasks/strict-backend-determinism/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/determinism-r2/tasks/strict-backend-determinism/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/parity-r2/actionbench-parity-sample-manifest.json",
+      "bytes": 4877,
+      "sha256": "7bd438395592737a4f5236e64c879c7a61c1fc18e5cd728a3fdfe3c5edb07513"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/parity-r2/actionbench-scorer-equivalence-contract.json",
+      "bytes": 13108,
+      "sha256": "cda8923276672f156771b96775805cab5087c644dcea49505ea079f99e4580ae"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/parity-r2/dirty.patch",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/parity-r2/harness.json",
+      "bytes": 1219,
+      "sha256": "a04565d24b40680b565380ef6dc669214b900dbece171f041f738015b3845f9d"
+    },
+    {
+      "path": "4d-longgoal-r2/plans/parity-r2/native.json",
+      "bytes": 24901,
+      "sha256": "de64ac5c2532be7b5239f3b108f32bd412f93a51947338bed531d535ed1b08c1"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/attempt.json",
+      "bytes": 43462,
+      "sha256": "0701af1382e42849455b1bd9f01b74b0c20197316d054791d98fbed88bbe2fa2"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/process-guard.json",
+      "bytes": 1346,
+      "sha256": "6cca64134b14411574e429c6c91b35acae4ee15e486458ac4fdee88b4652b1f7"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/faithful.json",
+      "bytes": 6348,
+      "sha256": "e98b3300994f362917b4d76f42874ea12c772d99f8db0a9cc4f7d06f7bea6f84"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/faithful.stderr.log",
+      "bytes": 1321,
+      "sha256": "b91ca51cf8face31a2b6a3b39ffbe752dccdab31799652fb73cbe88678186c0d"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/faithful.stdout.log",
+      "bytes": 249,
+      "sha256": "077f05d37e66fd45e5a72d9e5e6e813da2d9cbf9f38b53c19969d06d99b9a365"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/manifest.json",
+      "bytes": 265,
+      "sha256": "c548980436219b0b1d893ebe93c39f9f24902c5a8808330919a3aa60ff2bd1ce"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json",
+      "bytes": 5618,
+      "sha256": "2c2c23c2b55c7731e7d61cb19cd844042651e435ab85543648c463d8198bd3c8"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/execution.json",
+      "bytes": 1895,
+      "sha256": "7c72740ddad3e10cede2fb22a4936d651e15edb069c6ffc7dee77de1acb0e59a"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/export-manifest.json",
+      "bytes": 8941,
+      "sha256": "86d6efdde5610d7b816633fd659ac1c43e5b07aef3a374faa41d3f94261e613f"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/official.csv",
+      "bytes": 170,
+      "sha256": "3c1b7f169ddac143e180bd60d47a4a6e6c1b0be7b8cb0931972ba9aa167b1a49"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/official.summary.json",
+      "bytes": 192,
+      "sha256": "5319a8bf517a901d5a420b435a55ba1fd5775f66cde3b7d810e27f6dfdccb235"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/stderr.log",
+      "bytes": 2531,
+      "sha256": "93ae6be5f231d794a45966b1dd9b6f8fdafd31488bdec87490c2eb92876c263e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/stdout.log",
+      "bytes": 345,
+      "sha256": "5d94ac2b025bbb91470a528ce77e1838c661098dd3f470099da42b07d8457016"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/benchmark.py",
+      "bytes": 4672,
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/chamfer.py",
+      "bytes": 2334,
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/evaluate_dataset.py",
+      "bytes": 15219,
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/icp.py",
+      "bytes": 3292,
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/sample_mesh.py",
+      "bytes": 7185,
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/official-source/sample_point_cloud.py",
+      "bytes": 1004,
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/device-samples.jsonl",
+      "bytes": 84671,
+      "sha256": "0328aa4e1c56721fac1ed3e78d56aab1d59cd6d4e2a344f1dd2fb36f71303508"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/faithful.json",
+      "bytes": 6301,
+      "sha256": "48d86b6ac4142af5106d05f37b4a8edb8e2cf4d2dba7df0b1e4efbd88aba6ee6"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/faithful.stderr.log",
+      "bytes": 1321,
+      "sha256": "82fdd20f631bf5d4ba6b1b6b6e6c11956e7411fe2d003c322a7756c4c6a4a21a"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/faithful.stdout.log",
+      "bytes": 244,
+      "sha256": "ccd1f4cdaeb13b1c7d22c3ad94a877ce94e4ed3d11ca8509fcd98f773b5a7f1e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/manifest.json",
+      "bytes": 251,
+      "sha256": "e49eb02ad0d5ea4af99879e8d05e712fd5ae448396aba0e5c038f3838569f5af"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json",
+      "bytes": 5533,
+      "sha256": "3520d367096879f60801ed615cdc2e27390f32441d0fa9f40a9fd8c8296d66b2"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/execution.json",
+      "bytes": 1853,
+      "sha256": "54b3a89c9ef1a14d853689e66d43ce7821ed381671bbe1d1c9b427ce00c4b05e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/export-manifest.json",
+      "bytes": 8710,
+      "sha256": "aa9c4dc89ca03b2de4c476a994d0644122bc169587ed1bc21d5932c2f9c6f2b4"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/official.csv",
+      "bytes": 169,
+      "sha256": "75f6ebbb9777d7363f1ff530d8b6d04a6a9412e7ef9959e3a85f3a9e0f3c9bd6"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/official.summary.json",
+      "bytes": 191,
+      "sha256": "858c2b40645d30ebdcd6dd5b0e168539079c6c6f2d54fc8f17b18f2a5f0ff73b"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/stderr.log",
+      "bytes": 2503,
+      "sha256": "3796e7df914d430474f43d7ed67e42535bfcaa4f9aa28d13dab9b9a841cd13b2"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/stdout.log",
+      "bytes": 345,
+      "sha256": "5d94ac2b025bbb91470a528ce77e1838c661098dd3f470099da42b07d8457016"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/benchmark.py",
+      "bytes": 4672,
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/chamfer.py",
+      "bytes": 2334,
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/evaluate_dataset.py",
+      "bytes": 15219,
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/icp.py",
+      "bytes": 3292,
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/sample_mesh.py",
+      "bytes": 7185,
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/sample_point_cloud.py",
+      "bytes": 1004,
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/parity-evidence.json",
+      "bytes": 10286,
+      "sha256": "592009f83b911cd52f2f361a3b7f6169b16fd18a4af1489cbcdf5b1f3bdb5662"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/record.json",
+      "bytes": 27930,
+      "sha256": "fd911629437bd19d2b5e4a84d9947ded3dcce9da98979ac1d00b5a55edd0c43a"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/faithful.json",
+      "bytes": 6369,
+      "sha256": "55695f8ee68977c0d30b29b25666d5aa2f98f2181b650deacc89cb2794aa124c"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/faithful.stderr.log",
+      "bytes": 1321,
+      "sha256": "f835cbbc55d2841320f89c35536ad7cf1aa8936299fda0e78f85305ae8e3c6ae"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/faithful.stdout.log",
+      "bytes": 253,
+      "sha256": "c999e0827f2f444a20234d88a136fc45e68d6f4b61085e330a02bb20b81b7927"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/manifest.json",
+      "bytes": 267,
+      "sha256": "943bde30fd168c607445fad6e6605122455e9653902e44d46dc667e73d1db4ce"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json",
+      "bytes": 5629,
+      "sha256": "a5f9245762a760c63c2154cb8a07b0f03be684e9934102ba11e98ded1da40b44"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/execution.json",
+      "bytes": 1901,
+      "sha256": "a3fb3e37cac00748733b4ad71cb33f46c0fbb9fbede50a76e8bcbd3737f4a78f"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/export-manifest.json",
+      "bytes": 8974,
+      "sha256": "218f1bc09fe9fde200b2811aea45ae91f20d5726846c1f66d01a93fdafee7933"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/official.csv",
+      "bytes": 169,
+      "sha256": "4c53fdba680c83c8c51a30fb276dfeb2a7f7ed983d49da420fe6fce34746d803"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/official.summary.json",
+      "bytes": 191,
+      "sha256": "f3b232e3fd85c09b4b69983f224e87ed7ea6f9ad0a1a10820c78827c91ce0e5e"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/stderr.log",
+      "bytes": 2535,
+      "sha256": "ddecd3b5b3cee7aa9977cc90e1ab89f93c894e545119870ef8064e418e45b49c"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-world_gaussian/stdout.log",
+      "bytes": 345,
+      "sha256": "5d94ac2b025bbb91470a528ce77e1838c661098dd3f470099da42b07d8457016"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/benchmark.py",
+      "bytes": 4672,
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/chamfer.py",
+      "bytes": 2334,
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/evaluate_dataset.py",
+      "bytes": 15219,
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/icp.py",
+      "bytes": 3292,
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/sample_mesh.py",
+      "bytes": 7185,
+      "sha256": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.json.official/official-source/sample_point_cloud.py",
+      "bytes": 1004,
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/world_gaussian/official.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/inputs/native-runtime/dependencies.json",
+      "bytes": 26977,
+      "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/inputs/native-runtime/environment.json",
+      "bytes": 1042,
+      "sha256": "43ffa4362a77933a14007b2876886ec9282eda320a80c952dd686c459c52b5ca"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/plan.json",
+      "bytes": 21969,
+      "sha256": "81d8fa22f3b941e52249bcb5b372e84ae53a62bb49ba027121d83917cf8378cc"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/attempts/parity-r2/receipt.json",
+      "bytes": 44579,
+      "sha256": "2021f83fee07635451aaa4f566d756bee0c6ff62fd1fd51bf6488b3f744c34c1"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/events.jsonl",
+      "bytes": 570,
+      "sha256": "27d5d76d77ff7eac09b8be1aed2fd0563b62ad26ec982cf35bf125c7b56e1554"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/plan.json",
+      "bytes": 925,
+      "sha256": "22190d6a5df7638d228f4959a5bc10ab4522fadbc44a0ccdaab74a19aacf84c5"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/report.json",
+      "bytes": 1968,
+      "sha256": "38c64fa69c650140e264fe6890c5f1f739a7a54a75ea09338c0543cc605ed1c6"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/state.json",
+      "bytes": 1561,
+      "sha256": "64c6d98afd0fc734c60e41af8b92caf6a788dfa98a346b7c97ae9a007d7a0369"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/tasks/actionbench-official-faithful-parity/execution-context.json",
+      "bytes": 695,
+      "sha256": "bc1051d1a1c7a30f20ad70ab48fcf239cf3d940eafa7415ee86b35dd83c3ca45"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/tasks/actionbench-official-faithful-parity/process.json",
+      "bytes": 89,
+      "sha256": "3fa5d1d76dea6f2b202e7438dd54e812340122d895f68f66e2767b9e2d1c13ed"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/tasks/actionbench-official-faithful-parity/result.json",
+      "bytes": 505,
+      "sha256": "bd3dd2bea31f3e1b03c2668440d9333778f410c094422e741962c8a4ce58dd6c"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/tasks/actionbench-official-faithful-parity/task.json",
+      "bytes": 429,
+      "sha256": "576622c2106379ff15b543efa0c998f912161f8b12761f7804c602d2d470bcd3"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/tasks/actionbench-official-faithful-parity/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r2/runs/harness/parity-r2/tasks/actionbench-official-faithful-parity/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/cpu-backward-r3/harness.json",
+      "bytes": 1204,
+      "sha256": "a62d2b435b81aec7d7a4ee8780dad7178c575b9fb9f25c207289959b0f82e834"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/cpu-backward-r3/manifest.json",
+      "bytes": 185,
+      "sha256": "8347afc6f219e4d9ac9fb59a0c0bc735ffe305ceb2ea4112ecd3aa066b3936e3"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/cpu-backward-r3/native.json",
+      "bytes": 6907,
+      "sha256": "421ce28d36d57e05098d2a3f49354ad611e7723b07b06243b209ad2d94e27c27"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/plan.json",
+      "bytes": 5257,
+      "sha256": "caf6a100868321d2afad782e41884397c4698446cfc0c88583c577315769a876"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/receipt.json",
+      "bytes": 6864,
+      "sha256": "98737c5d8b064000461249876b64b43444fc1f3bda63b37be8465b4602888bae"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/attempt.json",
+      "bytes": 6155,
+      "sha256": "58f86f0d5bfeb730e65a9a851c75a09b8271f6a8e8b497b5efdfef4695f67ac2"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/process-guard.json",
+      "bytes": 728,
+      "sha256": "cad107bb7002c127d2233cbe67df17c36d551a1880f5b37bb7433b1536e545e3"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/stderr.log",
+      "bytes": 1321,
+      "sha256": "c27157bd16349eaadd4d84709e8d90e5f901c6a37123979bb7efbd51bdc9c831"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/stdout.log",
+      "bytes": 245,
+      "sha256": "1e54b6a3f30705da569c6f6fe9ea35945e8e9f4aff7795157690c8057770365a"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/workspace/actionmesh/deterministic-probe/scores.json",
+      "bytes": 6156,
+      "sha256": "e35a632d0a4b80a816f4d766768df02f560e11d48622f768cbc29dce4d8ddbdd"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/workspace/inputs/native-runtime/dependencies.json",
+      "bytes": 26977,
+      "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3/strict-backend-determinism-a1-c864f5f262b346b899e6c9d74ca36bff/workspace/inputs/native-runtime/environment.json",
+      "bytes": 1042,
+      "sha256": "43ffa4362a77933a14007b2876886ec9282eda320a80c952dd686c459c52b5ca"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/events.jsonl",
+      "bytes": 553,
+      "sha256": "ef497b6a837ff0799b08f22ccc69fd2c61877cce31e00a963cfe94b9db28ba7a"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/plan.json",
+      "bytes": 910,
+      "sha256": "abe41223aba8e0e3ef72b82640f19cae6d8ef16c38e89ebfb905f59b8a454933"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/report.json",
+      "bytes": 2209,
+      "sha256": "b146b689e7d38ad29d9e49e5a944f1aebf11dfbdaf1c2041406dc29202fe5307"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/state.json",
+      "bytes": 1802,
+      "sha256": "ddaa99260c6b80f9219b9145cbe2117b98ff5ec61a97db6dde0a653f38a8db65"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/tasks/strict-backend-determinism/execution-context.json",
+      "bytes": 685,
+      "sha256": "f23dcc970d162a7a596004d77e774457e2643fd60bee8c52f2a7c3bdf2ec5064"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/tasks/strict-backend-determinism/process.json",
+      "bytes": 89,
+      "sha256": "696ca195c0f6b4456f01bed0a826c6cfbaa9d0b091b54d7818fae11d6378fb36"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/tasks/strict-backend-determinism/result.json",
+      "bytes": 744,
+      "sha256": "478b44d0a0ca966a0388045064743ea0e734e7819fcc29cef84fec5e2cf85051"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/tasks/strict-backend-determinism/task.json",
+      "bytes": 411,
+      "sha256": "f6bb346e7f53eab0e6c54df39ea957a0fb8f82cd3e28dd909073d0070b4c732b"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/tasks/strict-backend-determinism/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3/tasks/strict-backend-determinism/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/cpu-backward-r3-repeat/harness.json",
+      "bytes": 1218,
+      "sha256": "3be1a0259d02b2314fa0210835d982227854629e3e13521a69843a34d6364b18"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/cpu-backward-r3-repeat/manifest.json",
+      "bytes": 185,
+      "sha256": "8347afc6f219e4d9ac9fb59a0c0bc735ffe305ceb2ea4112ecd3aa066b3936e3"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/cpu-backward-r3-repeat/native.json",
+      "bytes": 6928,
+      "sha256": "e2d9ece505251231a3a9d224ee5d6471309ec016bcdd9e5b00b7a1a37e602789"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/plan.json",
+      "bytes": 5278,
+      "sha256": "cd505988569c85c2e72fa861574dcff4524f92497e083cc259edb0bfff44ce0b"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/receipt.json",
+      "bytes": 6927,
+      "sha256": "48bfa8f56ea33d55ff64b262afb7d4eb7192af3b10a1efdb6d96c5548effe61e"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/attempt.json",
+      "bytes": 6211,
+      "sha256": "b95610b9d325ae549ee57a3258c51bb4f64c241ba94845932e3c0bba037f2e0a"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/process-guard.json",
+      "bytes": 740,
+      "sha256": "8f84cd12795792aa9bfff70ba909eadb2cf92f6075542125db3a2e9fb32062b2"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/stderr.log",
+      "bytes": 1321,
+      "sha256": "dc885c4936e66d2ff699a1d8acd2ab98dd2c2e268ef90ca5d30008439010005c"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/stdout.log",
+      "bytes": 245,
+      "sha256": "1e54b6a3f30705da569c6f6fe9ea35945e8e9f4aff7795157690c8057770365a"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/workspace/actionmesh/deterministic-probe/scores.json",
+      "bytes": 6170,
+      "sha256": "e90617470037b0ff4824d4d7b04361f72c554e6b5dbdf40646120fbb3896fab8"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/workspace/inputs/native-runtime/dependencies.json",
+      "bytes": 26977,
+      "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/cpu-backward-r3-repeat/strict-backend-determinism-a1-821ae10e4f8f4e4492d535a5ad682543/workspace/inputs/native-runtime/environment.json",
+      "bytes": 1042,
+      "sha256": "43ffa4362a77933a14007b2876886ec9282eda320a80c952dd686c459c52b5ca"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/events.jsonl",
+      "bytes": 553,
+      "sha256": "7db5ef0a2a1b638631dc683125cd9ba216e31919f0df10a670ffff522e3691fc"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/plan.json",
+      "bytes": 924,
+      "sha256": "31660a147db74660a93e271c97020cd72b28478d0ba07d3f9d6295ed6aa5f1b7"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/report.json",
+      "bytes": 2238,
+      "sha256": "785c282fd2fde5dd51bfb8cc5180389c010edb70ecb885878c7470558d1b7c28"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/state.json",
+      "bytes": 1831,
+      "sha256": "5f922386756977ea35f45f2b8d704b9149b104a1db855598e5ebe12fbbff258c"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/tasks/strict-backend-determinism/execution-context.json",
+      "bytes": 685,
+      "sha256": "7df1ea91b88007e80295f569e8a0def347ce3372261e6839444430394af78450"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/tasks/strict-backend-determinism/process.json",
+      "bytes": 89,
+      "sha256": "a972446f9fd1db7ccf89b3bd74a2d66592f1a0d2dc38ece10102042406ac11be"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/tasks/strict-backend-determinism/result.json",
+      "bytes": 766,
+      "sha256": "26d807744d9f3531253680e5cdbf584f35b6df3d5ab5bc8b6bec2eee3f5fd2fc"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/tasks/strict-backend-determinism/task.json",
+      "bytes": 418,
+      "sha256": "28b2315142d2202a8b07e2b1477c863280cf9a1879b566112b243578ffdb03d5"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/tasks/strict-backend-determinism/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/cpu-backward-r3-repeat/tasks/strict-backend-determinism/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/software-backend-r3/harness.json",
+      "bytes": 1107,
+      "sha256": "b584c43ecdb3e6f66537bc9d2de8f3310e776280607d24e63bdbec3e6f82a8ad"
+    },
+    {
+      "path": "4d-longgoal-r3/plans/software-backend-r3/native.json",
+      "bytes": 8627,
+      "sha256": "7dbbf0acea844a9b17976a3a5195130fef60d266407d982cc60fc2d56cf34961"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/software-backend-r3/all-research-math-checks-a1-a4a6f02b61d846aa976a595bf60cc884/attempt.json",
+      "bytes": 7420,
+      "sha256": "5f0fe7605effda7da0aec93959b0a10832ed6cade2d06a3d8640e74613bf548d"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/software-backend-r3/all-research-math-checks-a1-a4a6f02b61d846aa976a595bf60cc884/process-guard.json",
+      "bytes": 751,
+      "sha256": "5c03bc6bfe640fbce1c898266d178e00cf71585d42651763bc1012ac459c3a07"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/software-backend-r3/all-research-math-checks-a1-a4a6f02b61d846aa976a595bf60cc884/stderr.log",
+      "bytes": 28337,
+      "sha256": "3e459d12aa7e35b71312f89cabc59815c7411171071ecf359750d29b80eb722a"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/software-backend-r3/all-research-math-checks-a1-a4a6f02b61d846aa976a595bf60cc884/stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/software-backend-r3/plan.json",
+      "bytes": 6706,
+      "sha256": "f221e6d90853ca1508b733f3b9b4275c5655bcc868b9f7e9eae18a03c5f18023"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/attempts/software-backend-r3/receipt.json",
+      "bytes": 8129,
+      "sha256": "6c61802adb90a1935bfbc302ad46055cf6f3b7631d9505507bd35296ce47b3dc"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/events.jsonl",
+      "bytes": 507,
+      "sha256": "c96d78962aee727958dcffbc327fdd97d4dcf1672687f5e4e7c80037da588aa5"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/plan.json",
+      "bytes": 845,
+      "sha256": "398573355ee6751ea7e03eea15cce85f1f606b828d2c25edce190d7ec3da2d4c"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/report.json",
+      "bytes": 1802,
+      "sha256": "46705400a8a6eed5d5d261cfb1d79e7e6d93a844a7d4b9a18e60b129c1113437"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/state.json",
+      "bytes": 1415,
+      "sha256": "92e762f5e33134902d32a5740afbc72c5dacdefc4fa58135d5f60899f8891c26"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/tasks/all-research-math-checks/execution-context.json",
+      "bytes": 574,
+      "sha256": "bff14f12fd01b85e1a8f56d43ae42610de4ec8ea1f2c4f9927b048607bbcd53a"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/tasks/all-research-math-checks/process.json",
+      "bytes": 89,
+      "sha256": "a2f90dbed8a63158fd44e05870c9c0fb7bc3579aec1e64cbaa474a6921d4d3c4"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/tasks/all-research-math-checks/result.json",
+      "bytes": 518,
+      "sha256": "0cac935032168dd483f2186b11eceea1842b643b9337c8e533756271174b1864"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/tasks/all-research-math-checks/task.json",
+      "bytes": 386,
+      "sha256": "a1bb596b625d680ab3008657c0a99e3deed33d3a08fb589ae0f395044b37ec3c"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/tasks/all-research-math-checks/worker.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "4d-longgoal-r3/runs/harness/software-backend-r3/tasks/all-research-math-checks/worker.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

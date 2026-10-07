@@ -18,6 +18,16 @@ def object_digest(value: dict) -> str:
     return hashlib.sha256(payload.encode()).hexdigest()
 
 
+def consumer_scorer_descriptor(root: Path, request: dict, contract: dict) -> dict:
+    """Preserve the actually compared backend when resolving consumer paths."""
+    harness = dict(contract['harness_scorer'])
+    command = contract_scorer_command(root, request)
+    if parity.uses_cpu_backward(contract):
+        command[1] = str(Path(root).resolve()/'actionmesh/deterministic_actionbench_entry.py')
+    harness['command'] = command
+    return harness
+
+
 def require_canonical_path(actual: Path, expected: Path, label: str) -> None:
     if Path(actual).resolve() != Path(expected).resolve():
         raise ValueError("Canonical " + label + " path required")
@@ -219,8 +229,7 @@ def finalize(root: Path, request_path: Path, contract_path: Path, output: Path,
                              if ref["path"] == expected_path), None)
             if original is None or original["sha256"] != arm_evidence[key]["sha256"]:
                 raise ValueError("Arm evidence is not harness-recorded: " + arm)
-    harness = dict(contract["harness_scorer"])
-    harness["command"] = contract_scorer_command(root, request)
+    harness = consumer_scorer_descriptor(root, request, contract)
     finalizer_ref = file_ref(root, Path(__file__).resolve())
     verification = {
         "official_scorer": contract["official_scorer"],

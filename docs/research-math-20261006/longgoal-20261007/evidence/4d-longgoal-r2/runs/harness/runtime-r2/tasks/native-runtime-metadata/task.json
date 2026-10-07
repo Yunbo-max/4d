@@ -1,0 +1,1 @@
+{"depends_on":[],"idea_id":"baseline-qualification","plan_ref":{"path":"plans/runtime-r2/native.json","sha256":"780a852b6b30369953f2bc1a0da7adab51d6091b466b33f2a7296c56380f06c6"},"priority":1,"resources":{"allow_gpu_share":false,"cpu_cores":1,"exclusive_keys":[],"gpu_count":0,"gpu_peak_mib":null,"memory_profile_ref":null,"ram_mib":1024},"task_id":"native-runtime-metadata"}

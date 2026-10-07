@@ -1,0 +1,26 @@
+{
+  "execution_mode": "native_host",
+  "python_executable": "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+  "python_version": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:20:58) [GCC 14.3.0]",
+  "python_prefix": "/root/rivermind-data/actionmesh-repro/inference-env",
+  "conda_prefix": "/opt/conda",
+  "gpu_uuid": "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "scipy": "1.17.1",
+    "pytorch3d": "0.7.9"
+  },
+  "dependency_lock_refs": [
+    {
+      "path": "inputs/native-runtime/dependencies.json",
+      "sha256": "51029b4e210cdea549aed3faea84ae3905c3c38fe5f1f25d3141d2eeaa6d3a96"
+    }
+  ],
+  "captured_at": "2026-10-07T09:10:55.486526+00:00",
+  "gpu_identity_source": "Controller-supplied; retain separate current host inventory",
+  "gpu_identity_verified": false,
+  "native_contract_qualified": false,
+  "scope": "Installed environment metadata only; no CUDA, compatibility or scorer parity established"
+}

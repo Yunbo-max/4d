@@ -1,0 +1,355 @@
+{
+  "kind": "actionbench-scorer-equivalence-contract",
+  "version": "1.0.0",
+  "purpose": "scorer-equivalence-only",
+  "scientific_effect_qualification": false,
+  "native_contract_qualified": false,
+  "benchmark_id": "facebook/actionbench",
+  "benchmark_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "split": "released-single-asset-parity-only",
+  "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+  "request_ref": {
+    "path": "plans/control-scoring-request-000-048.json",
+    "sha256": "99f0c2f1526cb98584d6e37ff7fa45f71ed804f13366685ed44c6e1bcf493d22"
+  },
+  "request_digest": "49a27caf9f160d364b1e64e246aa1d9fb345f9185c7f4d54204c51713258c3e8",
+  "population_ref": {
+    "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+    "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+  },
+  "arm_inputs": [
+    {
+      "arm": "native",
+      "preparation_status": "completed",
+      "report_ref": {
+        "path": "inputs/three-arm-case/native/report.json",
+        "sha256": "c1b5d8010e3e9b941aa35de28373a9c7e2b1ae57a5ce0f39fa6e97225e511ad3"
+      },
+      "prediction_ref": {
+        "path": "inputs/three-arm-case/native/sequence.npz",
+        "sha256": "0b4edd55f8b49ca8d821eb99606d9ca8e556c0f48883f88e23cd272cc867dad1"
+      }
+    },
+    {
+      "arm": "world_gaussian",
+      "preparation_status": "completed",
+      "report_ref": {
+        "path": "inputs/three-arm-case/world_gaussian/report.json",
+        "sha256": "150972abd5a76171ef860a84ef0fdb610f0758b906c4d6aa86b4368475333efa"
+      },
+      "prediction_ref": {
+        "path": "inputs/three-arm-case/world_gaussian/sequence.npz",
+        "sha256": "075df86599a2c749b396d67dbb66f888dd0520157bd35a6b76ef0915b41d4855"
+      }
+    },
+    {
+      "arm": "body_gaussian",
+      "preparation_status": "completed",
+      "report_ref": {
+        "path": "inputs/three-arm-case/body_gaussian/report.json",
+        "sha256": "ce03a5533337ccba6f2a37fe172ef09e8df3dbd6fb4da9fe64fb1d47f67afa41"
+      },
+      "prediction_ref": {
+        "path": "inputs/three-arm-case/body_gaussian/sequence.npz",
+        "sha256": "a87d0b635abb942e7fbf4ec56e6303a8fc628a0580ddb0f80e4a4bc9eb7911fc"
+      }
+    }
+  ],
+  "source_evidence_ref": {
+    "path": "docs/research-math-20261006/actionbench-official-source-evidence.json",
+    "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"
+  },
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/actionbench-official-source-evidence.json",
+      "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/icp.py",
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/sample_mesh.py",
+      "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "actionmesh/official_actionbench_adapter.py",
+      "sha256": "604f072b51cd2b2772785b76d7556b570b8191821434867d5e32a46ecb22594b"
+    },
+    {
+      "path": "actionmesh/research_census_eval.py",
+      "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+    }
+  ],
+  "environment_ref": {
+    "path": "inputs/native-runtime/environment.json",
+    "sha256": "40326cc1e8ff263858f17c9a1bbd851215e0d3a523ffad9ebf906827b58233d3"
+  },
+  "sample_manifest_ref": {
+    "path": "plans/parity-8d2f1e7-001/actionbench-parity-sample-manifest.json",
+    "sha256": "7bd438395592737a4f5236e64c879c7a61c1fc18e5cd728a3fdfe3c5edb07513"
+  },
+  "labels_or_tests_ref": {
+    "path": "inputs/gt/000-048_45e57349f062416aaf11f2c31587da16/surfaces.npy",
+    "sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e"
+  },
+  "metrics": [
+    "cd_3d",
+    "cd_4d",
+    "cd_motion"
+  ],
+  "sampling": {
+    "policy": "official-actionbench-full-sequence",
+    "parameters": {
+      "n_pts_chamfer": 100000,
+      "n_pts_icp": 10000,
+      "icp_initial_rotations": 24,
+      "icp_iterations": 200,
+      "icp_learning_rate": 0.01,
+      "icp_transform": "rotation + translation + anisotropic scale (official)",
+      "cd_query_points_per_direction": 10000,
+      "cd_query_subsampling_seeds": {
+        "predicted": 44,
+        "ground_truth": 45
+      },
+      "cd_reference_tree_points": 100000,
+      "cd_distance": "unsquared Euclidean; sum of both directional means",
+      "cd_3d_alignment": "independent ICP each frame",
+      "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+      "cd_motion_alignment": "same first-frame ICP as CD4D",
+      "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+      "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+      "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+      "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+      "sampling_seed": 44
+    }
+  },
+  "budget": {
+    "frames": 16,
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "arms": [
+    "native",
+    "world_gaussian",
+    "body_gaussian"
+  ],
+  "official_scorer": {
+    "kind": "official",
+    "identity": "facebook/actionbench evaluate_dataset.py via format-only NPZ-to-GLB adapter",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "source_refs": [
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      }
+    ],
+    "code_refs": [
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      },
+      {
+        "path": "actionmesh/official_actionbench_adapter.py",
+        "sha256": "604f072b51cd2b2772785b76d7556b570b8191821434867d5e32a46ecb22594b"
+      }
+    ],
+    "command": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "actionmesh/official_actionbench_adapter.py",
+      "--case-dir",
+      "inputs/three-arm-case",
+      "--gt-dir",
+      "inputs/gt",
+      "--output",
+      "{output}",
+      "--manifest",
+      "{predictions}",
+      "--repo-root",
+      "actionmesh/repo",
+      "--device",
+      "cuda:0",
+      "--seed",
+      "{seed}"
+    ],
+    "cwd": ".",
+    "output": {
+      "format": "json",
+      "source": "file",
+      "path": "{output}"
+    },
+    "denominator_path": [
+      "denominator",
+      "n_declared"
+    ]
+  },
+  "harness_scorer": {
+    "kind": "faithful_harness",
+    "identity": "4d/research_census_eval.py ActionBench faithful harness",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "source_refs": [
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      }
+    ],
+    "code_refs": [
+      {
+        "path": "actionmesh/research_census_eval.py",
+        "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      }
+    ],
+    "command": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "actionmesh/research_census_eval.py",
+      "--case-dir",
+      "inputs/three-arm-case",
+      "--gt-dir",
+      "inputs/gt",
+      "--output",
+      "{output}",
+      "--manifest",
+      "{predictions}",
+      "--repo-root",
+      "actionmesh/repo",
+      "--device",
+      "cuda:0",
+      "--seed",
+      "44"
+    ],
+    "cwd": ".",
+    "output": {
+      "format": "json",
+      "source": "file",
+      "path": "{output}"
+    },
+    "denominator_path": [
+      "denominator",
+      "n_declared"
+    ]
+  },
+  "metric_tolerances": {
+    "cd_3d": 0.0,
+    "cd_4d": 0.0,
+    "cd_motion": 0.0
+  }
+}

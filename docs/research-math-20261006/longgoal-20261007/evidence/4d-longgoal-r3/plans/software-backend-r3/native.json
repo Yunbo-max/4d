@@ -1,0 +1,203 @@
+{
+  "schema_id": "experiment-run-plan",
+  "schema_version": "1.0.0",
+  "run_id": "software-backend-r3",
+  "purpose": "engineering",
+  "evidence_mode": "developmental",
+  "protocol_ref": null,
+  "protocol_digest": null,
+  "output_root": "runs/attempts",
+  "provenance": {
+    "git_revision": "All current software sources pinned by code_refs",
+    "model_revision": "none; no model or scorer execution",
+    "data_revision": "engineering fixtures only; no benchmark evidence",
+    "environment_digest": "430f06e8d2ab4bb3b93aad10bb69e59ed5afbc09633ebb543f97ce82fec5a4a4"
+  },
+  "limits": {
+    "max_attempts": 1,
+    "max_development_trials": 1,
+    "max_confirmation_trials": 0,
+    "max_retries_per_trial": 0,
+    "wall_time_seconds": 120,
+    "attempt_timeout_seconds": 120
+  },
+  "jobs": [
+    {
+      "trial_id": "all-research-math-checks",
+      "command": [
+        "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+        "-c",
+        "import sys,unittest;sys.path.insert(0,'/root/rivermind-data/actionmesh-repro/tools/research-autopilot/scripts');suite=unittest.defaultTestLoader.discover(\"research_math/tests\",pattern=\"test_*.py\");result=unittest.TextTestRunner(verbosity=2).run(suite);raise SystemExit(not result.wasSuccessful())"
+      ],
+      "cwd": "actionmesh",
+      "input_refs": [],
+      "code_refs": [
+        {
+          "path": "actionmesh/research_math/__init__.py",
+          "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_full_reproduction.py",
+          "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_parity.py",
+          "sha256": "41274a0ce70008cc151649dba52ad8de8c2af391c9e518812c1796c77778de73"
+        },
+        {
+          "path": "actionmesh/research_math/contact_events.py",
+          "sha256": "dbb64f4817b17e695601de1d9f521a55ce038ae95be001d06368a40b45d1a073"
+        },
+        {
+          "path": "actionmesh/research_math/control_scoring.py",
+          "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+        },
+        {
+          "path": "actionmesh/research_math/controllability.py",
+          "sha256": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc"
+        },
+        {
+          "path": "actionmesh/research_math/correlated.py",
+          "sha256": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395"
+        },
+        {
+          "path": "actionmesh/research_math/deterministic_knn.py",
+          "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+        },
+        {
+          "path": "actionmesh/research_math/knn_backend_checks.py",
+          "sha256": "e118c9faf6bc4e0c179ef0cbae53167ba8d56a7c8b3e529a9d968ba4530bc057"
+        },
+        {
+          "path": "actionmesh/research_math/native_probe.py",
+          "sha256": "06641222f25fdf12e7a92f7765638a48aed5d68bac43f351f9b327b987f310b3"
+        },
+        {
+          "path": "actionmesh/research_math/native_runtime.py",
+          "sha256": "c13de3122f51847438ee15ccdc406e28e29da074491c4732de03ed76669c0398"
+        },
+        {
+          "path": "actionmesh/research_math/protected_projection.py",
+          "sha256": "b85827f75a738544c5ca4cd6a5bf817eea9034777058742288953901c601d1a6"
+        },
+        {
+          "path": "actionmesh/research_math/run_controls.py",
+          "sha256": "cc9bf7579dd8bd24423e21149773cc23f88dd0e26ec41b416212fb5f2fa207e7"
+        },
+        {
+          "path": "actionmesh/research_math/simple_mesh_controls.py",
+          "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+        },
+        {
+          "path": "actionmesh/research_math/snapshot_admission.py",
+          "sha256": "59b4e4e61f1a5eaae330bf9550bda0e603a6d2876659e63173eb168e55eabeef"
+        },
+        {
+          "path": "actionmesh/research_math/tests/__init__.py",
+          "sha256": "e35706ab31b38faa4054555ab76506b124b88f62c0ca6b548e0775b5f0b1fe64"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_full_reproduction.py",
+          "sha256": "d3ad5664d1733cf24ba897166e378db2c9bee9dab865880d50859966629e7fec"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_actionbench_parity.py",
+          "sha256": "55711a08d503be813c0909db796f6bf27957d413ff707a5340766833c6d1876e"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_contact_events.py",
+          "sha256": "cfc6344043ba763125ed7bfe841d53ae2ab49c572b4a98ded0ec266516ac2f9b"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_control_plan.py",
+          "sha256": "b900a5be4f66839df8fc7947e5dfdf67905c5bcd25cd2417995e0e6c6d847bab"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_control_scoring.py",
+          "sha256": "7cfbeccb99afac2ef96ef3ae38da9086ad4c1dea2c42761294d960f1fec83d3d"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_controllability.py",
+          "sha256": "b6fac43458906b8142553e84fe7792c4c554685a81934e3988a8b567e2f8b536"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_correlated.py",
+          "sha256": "613c08e13fcb7909908d6db3fd3f73326e3e166264cdbd6084738eba9ab5b5a7"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_native_probe.py",
+          "sha256": "c211a346b4da4092fc90acbdf62e45f980347e3f2ad16a58eac90bfd4f7f832e"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_native_runtime.py",
+          "sha256": "4a349b8b8c2cf781df7bb24f921342e6b12b909a1a9b6a22e1287f102ea9340b"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_protected_projection.py",
+          "sha256": "ef9bb4f86b65869bde1df264b8510a75f3adc0c0366c2656103679792114eed0"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_simple_mesh_controls.py",
+          "sha256": "cdfa7b712aad3e9ef1757ee217c47f378c025c43c8e8ced3a6857f8b12869bc6"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_snapshot_admission.py",
+          "sha256": "9753470dac656049d50075eec2a6d9badb8fe6e747d000348b6afdb1999b6f19"
+        },
+        {
+          "path": "actionmesh/research_math/tests/write_control_fixture.py",
+          "sha256": "b51ce59d82a2eb49e184f44000e882f44f22e08de0ea0bcf8fd33b2baf747dbe"
+        },
+        {
+          "path": "actionmesh/research_census_eval.py",
+          "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+        },
+        {
+          "path": "actionmesh/prepare_mesh_controls.py",
+          "sha256": "a89ff94f2bd900b3d25e746aaac4b8521a03cdfead5fd831927762a900f53535"
+        },
+        {
+          "path": "actionmesh/prepare_control_scoring.py",
+          "sha256": "2ae11800f5cae8eb0d6cc17565917b71f2ddcb4fed4b8b6efc38d573883cb215"
+        },
+        {
+          "path": "actionmesh/prepare_control_scoring_checks.py",
+          "sha256": "1e03e01f8ac38174553ea73724881927be39f3a2599c48559b0f67bd237c4013"
+        },
+        {
+          "path": "actionmesh/prepare_native_runtime.py",
+          "sha256": "c878ebba2924c1c7171868b38a27f2361df590e343ddddd2a73499a36510e986"
+        },
+        {
+          "path": "actionmesh/official_actionbench_adapter.py",
+          "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+        },
+        {
+          "path": "actionmesh/prepare_actionbench_parity.py",
+          "sha256": "5de5bbe6f2153464b8c5e4e4f13851b5fd31b7d04594aa6945d446e17281d2a1"
+        },
+        {
+          "path": "actionmesh/prepare_actionbench_snapshots.py",
+          "sha256": "0557e1f29085bc750edbc75d36b7d68e21b557416a702457fcbbb7528945dddc"
+        },
+        {
+          "path": "actionmesh/finalize_actionbench_parity.py",
+          "sha256": "f9e0a38ff1a4c583a4a987c09dea37cb0c70f1f5dacc909f21c7eaea55cbb7cd"
+        },
+        {
+          "path": "actionmesh/prepare_actionbench_parity_finalization.py",
+          "sha256": "d736cb12de58a2b6891e3f75d89ff263d23c266694b4ba5c99d503f777293db1"
+        },
+        {
+          "path": "actionmesh/deterministic_actionbench_entry.py",
+          "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+        }
+      ],
+      "output_paths": [],
+      "seed": 0,
+      "group": "engineering",
+      "arm_role": "software-only"
+    }
+  ],
+  "plan_digest": "c090437aae68384d4a7b94f3cf3859482ac18f696c7bfe215ac9b419be4a2496"
+}

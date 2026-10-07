@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T09:11:49.734553Z","plan_digest":"989469ba9ff696706fe7e87b703f11fafa8fb5df0d868e9de88c7a69a707a66f"}
+{"devices":["GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740"],"event":"task_started","launcher_pid":12815,"native_plan_digest":"846943a4b097cb9867947b4fc2f000dd86934071822d49c788dcce110e0219a5","observed_at":"2026-10-07T09:11:50.032399Z","task_id":"strict-backend-determinism"}
+{"event":"task_finished","observed_at":"2026-10-07T09:11:57.801775Z","status":"failed","task_id":"strict-backend-determinism"}

@@ -27,6 +27,18 @@ from research_math.control_scoring import file_ref
 
 
 class OfficialAdapterContractTests(unittest.TestCase):
+    def test_consumer_sidecar_cannot_revert_the_verified_backend(self):
+        from unittest.mock import patch
+        root=Path('/workspace')
+        original={'command':['python','relative/entry.py'], 'identity':'verified'}
+        contract={'harness_scorer':original,
+                  'runtime_policy':'strict-cuda-forward-upstream-cpu-knn-backward-v1'}
+        with patch.object(finalizer, 'contract_scorer_command',
+                          return_value=['python','/workspace/unverified.py','--seed','44']):
+            result=finalizer.consumer_scorer_descriptor(root,{},contract)
+        self.assertEqual(result['command'],['python','/workspace/actionmesh/deterministic_actionbench_entry.py','--seed','44'])
+        self.assertEqual(original['command'],['python','relative/entry.py'])
+
     def test_cpu_backward_entry_preserves_all_official_arguments(self):
         args = (Path('/source/evaluate_dataset.py'), Path('/gt'), Path('/pred'),
                 Path('/out/score.csv'), 'cuda:0', 44)

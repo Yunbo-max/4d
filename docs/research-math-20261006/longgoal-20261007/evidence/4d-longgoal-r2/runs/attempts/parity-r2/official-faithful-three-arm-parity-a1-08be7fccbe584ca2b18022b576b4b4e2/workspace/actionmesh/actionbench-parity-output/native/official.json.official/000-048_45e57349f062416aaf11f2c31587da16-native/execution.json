@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+    "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source/evaluate_dataset.py",
+    "--gt_root",
+    "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/inputs/gt",
+    "--pred_root",
+    "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/predictions",
+    "--output_csv",
+    "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-native/official.csv",
+    "--device",
+    "cuda:0",
+    "--n_pts_icp",
+    "10000",
+    "--n_pts_chamfer",
+    "100000",
+    "--seed",
+    "44",
+    "--mesh_pattern",
+    "mesh_*.glb",
+    "--recompute"
+  ],
+  "cwd": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/native/official.json.official/official-source",
+  "exit_code": 0,
+  "stdout_sha256": "5d94ac2b025bbb91470a528ce77e1838c661098dd3f470099da42b07d8457016",
+  "stderr_sha256": "3796e7df914d430474f43d7ed67e42535bfcaa4f9aa28d13dab9b9a841cd13b2"
+}

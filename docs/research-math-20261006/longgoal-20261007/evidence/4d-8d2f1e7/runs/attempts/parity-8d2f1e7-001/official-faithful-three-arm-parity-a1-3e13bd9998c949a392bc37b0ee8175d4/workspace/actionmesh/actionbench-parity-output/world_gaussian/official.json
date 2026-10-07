@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "adapter_role": "format-only wrapper around official evaluate_dataset.py",
+  "metric_implementation": "none; metrics come from the official CLI subprocess",
+  "denominator": {
+    "frozen": true,
+    "manifest": "/root/rivermind-data/actionmesh-repro/checkouts/4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/actionbench-parity-output/world_gaussian/manifest.json",
+    "manifest_sha256": "943bde30fd168c607445fad6e6605122455e9653902e44d46dc667e73d1db4ce",
+    "n_declared": 1
+  },
+  "device": "cuda:0",
+  "seed": 44,
+  "python": "3.12.13",
+  "adapter_sha256": "604f072b51cd2b2772785b76d7556b570b8191821434867d5e32a46ecb22594b",
+  "official_source": {
+    "original_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "patched_source_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "compatibility_patch": {
+      "file": "sample_mesh.py",
+      "function": "get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU surface sampler must not query CUDA RNG state for a CPU device",
+      "metric_or_draw_change": false
+    }
+  },
+  "cases": [
+    {
+      "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+      "case_id": "000-048_45e57349f062416aaf11f2c31587da16-world_gaussian",
+      "case_dir": "/root/rivermind-data/actionmesh-repro/checkouts/4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/inputs/three-arm-case/world_gaussian",
+      "status": "error",
+      "error": "RuntimeError: Official ActionBench CLI exited 1",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/actionmesh-repro/checkouts/4d-8d2f1e7/runs/attempts/parity-8d2f1e7-001/official-faithful-three-arm-parity-a1-3e13bd9998c949a392bc37b0ee8175d4/workspace/actionmesh/official_actionbench_adapter.py\", line 248, in evaluate\n    raise RuntimeError(f\"Official ActionBench CLI exited {completed.returncode}\")\nRuntimeError: Official ActionBench CLI exited 1\n",
+      "elapsed_seconds": 1.1192042061593384
+    }
+  ],
+  "summary": {
+    "n_total": 1,
+    "n_success": 0,
+    "n_failed": 1,
+    "success_rate": 0.0
+  }
+}

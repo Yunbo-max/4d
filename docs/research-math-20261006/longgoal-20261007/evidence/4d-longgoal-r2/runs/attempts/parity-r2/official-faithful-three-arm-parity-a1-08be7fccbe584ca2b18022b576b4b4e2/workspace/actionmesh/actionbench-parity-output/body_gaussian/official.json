@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "adapter_role": "format-only wrapper around official evaluate_dataset.py",
+  "metric_implementation": "none; metrics come from the official CLI subprocess",
+  "denominator": {
+    "frozen": true,
+    "manifest": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/manifest.json",
+    "manifest_sha256": "c548980436219b0b1d893ebe93c39f9f24902c5a8808330919a3aa60ff2bd1ce",
+    "n_declared": 1
+  },
+  "device": "cuda:0",
+  "seed": 44,
+  "python": "3.12.13",
+  "adapter_sha256": "604f072b51cd2b2772785b76d7556b570b8191821434867d5e32a46ecb22594b",
+  "official_source": {
+    "original_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "patched_source_sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "7721c949f71a6c64f79841e9f602faa6140adff42fc88989deb29d15ccf87a32",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "compatibility_patch": {
+      "file": "sample_mesh.py",
+      "function": "get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU surface sampler must not query CUDA RNG state for a CPU device",
+      "metric_or_draw_change": false
+    }
+  },
+  "cases": [
+    {
+      "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+      "case_id": "000-048_45e57349f062416aaf11f2c31587da16-body_gaussian",
+      "case_dir": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/inputs/three-arm-case/body_gaussian",
+      "status": "success",
+      "n_frames": 16,
+      "cd_3d": 0.054697792360099626,
+      "cd_4d": 0.05586151428154672,
+      "cd_motion": 0.06360511481761932,
+      "inputs": {
+        "sequence": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/inputs/three-arm-case/body_gaussian/sequence.npz",
+          "sha256": "a87d0b635abb942e7fbf4ec56e6303a8fc628a0580ddb0f80e4a4bc9eb7911fc"
+        },
+        "ground_truth": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/inputs/gt/000-048_45e57349f062416aaf11f2c31587da16/surfaces.npy",
+          "sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e"
+        }
+      },
+      "official_outputs": {
+        "csv": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/official.csv",
+          "sha256": "3c1b7f169ddac143e180bd60d47a4a6e6c1b0be7b8cb0931972ba9aa167b1a49"
+        },
+        "summary": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/official.summary.json",
+          "sha256": "5319a8bf517a901d5a420b435a55ba1fd5775f66cde3b7d810e27f6dfdccb235"
+        },
+        "export_manifest": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/export-manifest.json",
+          "sha256": "86d6efdde5610d7b816633fd659ac1c43e5b07aef3a374faa41d3f94261e613f"
+        },
+        "execution": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/execution.json",
+          "sha256": "7c72740ddad3e10cede2fb22a4936d651e15edb069c6ffc7dee77de1acb0e59a"
+        }
+      },
+      "elapsed_seconds": 72.51490122685209
+    }
+  ],
+  "summary": {
+    "n_total": 1,
+    "n_success": 1,
+    "n_failed": 0,
+    "success_rate": 1.0
+  }
+}

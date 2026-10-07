@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T09:12:33.758382Z","plan_digest":"713afc81aa63a58903b0bde8689ffd1a53f2dd3ad28a984d6fc4176ab4bd1c95"}
+{"devices":["GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740"],"event":"task_started","launcher_pid":12950,"native_plan_digest":"8e7dee02de4293b4d8c0a108004af953b07d92c5614271da8d6c9c09f13a779f","observed_at":"2026-10-07T09:12:34.142741Z","task_id":"actionbench-official-faithful-parity"}
+{"event":"task_finished","observed_at":"2026-10-07T09:19:33.786088Z","status":"failed","task_id":"actionbench-official-faithful-parity"}

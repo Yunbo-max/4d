@@ -1,0 +1,46 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "determinism-r2",
+  "tasks": [
+    {
+      "task_id": "strict-backend-determinism",
+      "idea_id": "scorer-reproducibility",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/determinism-r2/native.json",
+        "sha256": "9f7b458e159d28415d4fd22c071609f09af172b2be667b4834f082b10608721e"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 8192,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-native-scorer"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 210,
+    "window_seconds": 210,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 8,
+    "ram_mib": 8192,
+    "max_gpu_task_seconds": 180
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [
+      "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740"
+    ],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "989469ba9ff696706fe7e87b703f11fafa8fb5df0d868e9de88c7a69a707a66f"
+}

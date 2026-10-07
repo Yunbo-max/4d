@@ -1,0 +1,46 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "parity-r2",
+  "tasks": [
+    {
+      "task_id": "actionbench-official-faithful-parity",
+      "idea_id": "evaluator-implementation-equivalence",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/parity-r2/native.json",
+        "sha256": "de64ac5c2532be7b5239f3b108f32bd412f93a51947338bed531d535ed1b08c1"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 8192,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-native-scorer"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 1800,
+    "window_seconds": 1800,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 8,
+    "ram_mib": 8192,
+    "max_gpu_task_seconds": 1800
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [
+      "GPU-b544b42e-15d3-c9c8-1bdb-4c339775a740"
+    ],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "713afc81aa63a58903b0bde8689ffd1a53f2dd3ad28a984d6fc4176ab4bd1c95"
+}

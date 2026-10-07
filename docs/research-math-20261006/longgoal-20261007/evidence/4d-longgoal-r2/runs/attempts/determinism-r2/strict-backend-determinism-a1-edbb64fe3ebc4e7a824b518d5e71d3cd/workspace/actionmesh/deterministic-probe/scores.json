@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "protocol": {
+    "n_pts_chamfer": 100000,
+    "n_pts_icp": 10000,
+    "icp_initial_rotations": 24,
+    "icp_iterations": 200,
+    "icp_learning_rate": 0.01,
+    "icp_transform": "rotation + translation + anisotropic scale (official)",
+    "cd_query_points_per_direction": 10000,
+    "cd_query_subsampling_seeds": {
+      "predicted": 44,
+      "ground_truth": 45
+    },
+    "cd_reference_tree_points": 100000,
+    "cd_distance": "unsquared Euclidean; sum of both directional means",
+    "cd_3d_alignment": "independent ICP each frame",
+    "cd_4d_alignment": "one ICP from frame zero, applied to all frames",
+    "cd_motion_alignment": "same first-frame ICP as CD4D",
+    "cd_motion_correspondence": "predicted points share frame-zero face IDs and barycentric coordinates; nearest-neighbor matches to GT established only in frame zero",
+    "units": "raw GT coordinate units; no extra normalization or scale multiplier",
+    "gt_correspondence_assumption": "surfaces.npy point index is a material correspondence across time, as assumed by the official evaluator",
+    "no_extra_preprocessing": "no crop, camera fit, axis flip, interpolation, or frame truncation",
+    "sampling_seed": 44
+  },
+  "denominator": {
+    "frozen": true,
+    "manifest": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/workspace/plans/determinism-r2/manifest.json",
+    "manifest_sha256": "8347afc6f219e4d9ac9fb59a0c0bc735ffe305ceb2ea4112ecd3aa066b3936e3",
+    "n_declared": 1
+  },
+  "cases": [
+    {
+      "case_id": "000-048_45e57349f062416aaf11f2c31587da16-native",
+      "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+      "case_dir": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/inputs/three-arm-case/native",
+      "manifest_entry": {
+        "case_id": "000-048_45e57349f062416aaf11f2c31587da16-native",
+        "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+        "case_dir": "native"
+      },
+      "status": "error",
+      "generation_status": "completed",
+      "inputs": {
+        "sequence": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/inputs/three-arm-case/native/sequence.npz",
+          "sha256": "0b4edd55f8b49ca8d821eb99606d9ca8e556c0f48883f88e23cd272cc867dad1"
+        },
+        "ground_truth": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/inputs/gt/000-048_45e57349f062416aaf11f2c31587da16/surfaces.npy",
+          "sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e"
+        },
+        "generation_report": {
+          "path": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/inputs/three-arm-case/native/report.json",
+          "sha256": "c1b5d8010e3e9b941aa35de28373a9c7e2b1ae57a5ce0f39fa6e97225e511ad3"
+        }
+      },
+      "shapes": {
+        "vertices": [
+          16,
+          19936,
+          3
+        ],
+        "faces": [
+          39956,
+          3
+        ],
+        "gt_positions": [
+          16,
+          100000,
+          3
+        ]
+      },
+      "error": "RuntimeError: KNearestNeighborBackwardCuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.",
+      "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/determinism-r2/strict-backend-determinism-a1-edbb64fe3ebc4e7a824b518d5e71d3cd/workspace/actionmesh/research_census_eval.py\", line 284, in evaluate\n    values = backend(torch.from_numpy(gt), meshes, device=args.device, is_4D=True,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/actionmesh/repo/actionbench/benchmark.py\", line 116, in compute_chamfer_3d_4d\n    icp_list = _compute_per_frame_icp(gt_pc_icp, pred_pc_icp)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/actionmesh/repo/actionbench/benchmark.py\", line 35, in _compute_per_frame_icp\n    gradient_icp(\n  File \"/opt/conda/lib/python3.12/site-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/actionmesh/repo/actionbench/icp.py\", line 96, in gradient_icp\n    loss.mean().backward()\n  File \"/opt/conda/lib/python3.12/site-packages/torch/_tensor.py\", line 631, in backward\n    torch.autograd.backward(\n  File \"/opt/conda/lib/python3.12/site-packages/torch/autograd/__init__.py\", line 379, in backward\n    _engine_run_backward(\n  File \"/opt/conda/lib/python3.12/site-packages/torch/autograd/graph.py\", line 882, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.12/site-packages/torch/autograd/function.py\", line 317, in apply\n    return user_fn(self, *args)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.12/site-packages/torch/autograd/function.py\", line 623, in wrapper\n    outputs = fn(ctx, *args, **kwargs)\n              ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/actionmesh-repro/inference-env/lib/python3.12/site-packages/pytorch3d/ops/knn.py\", line 109, in backward\n    grad_p1, grad_p2 = _C.knn_points_backward(\n                       ^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: KNearestNeighborBackwardCuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.\n",
+      "elapsed_seconds": 2.1136936070397496
+    }
+  ],
+  "device": "cuda:0",
+  "python": "3.12.13",
+  "evaluator_sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a",
+  "official_source": {
+    "source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/actionmesh/repo",
+    "sha256": {
+      "benchmark.py": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543",
+      "chamfer.py": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778",
+      "icp.py": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7",
+      "sample_mesh.py": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef",
+      "sample_point_cloud.py": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
+      "evaluate_dataset.py": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    "runtime_compatibility_patch": {
+      "function": "sample_mesh.get_baryc_sampling_mesh",
+      "old": "devices=[verts.device], enabled=True",
+      "new": "devices=([verts.device] if verts.is_cuda else []), enabled=True",
+      "reason": "CPU sampler must not ask CUDA for the RNG state of a CPU device",
+      "patched_function_sha256": "db2fdcd9c7642f4092e8e13589abadf7e31e0acaac635bc2a04ad4b1c88e1fee"
+    }
+  },
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.12.1+cu130",
+    "trimesh": "5.1.0",
+    "scipy": "1.17.1",
+    "pytorch3d": "0.7.9"
+  },
+  "summary": {
+    "n_total": 1,
+    "n_success": 0,
+    "n_failed": 1,
+    "n_pending": 0,
+    "n_validated_only": 0,
+    "success_rate": 0.0,
+    "mean_scope": "successful cases only; never treat failures as zero",
+    "means_weighting": "case/run weighted; asset-balanced means also provided",
+    "n_unique_assets": 1,
+    "n_assets_with_success": 0,
+    "asset_results": [
+      {
+        "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+        "n_runs": 1,
+        "n_success": 0,
+        "means": {
+          "cd_3d": null,
+          "cd_4d": null,
+          "cd_motion": null
+        }
+      }
+    ],
+    "asset_balanced_means": {
+      "cd_3d": null,
+      "cd_4d": null,
+      "cd_motion": null
+    },
+    "successful_case_ids": [],
+    "means": {
+      "cd_3d": null,
+      "cd_4d": null,
+      "cd_motion": null
+    }
+  }
+}

@@ -4,11 +4,12 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T09:15:47.054991+00:00",
+  "updated_at": "2026-10-07T09:46:29.692850+00:00",
   "software_acceptance": {
-    "run_id": "software-8d2f1e7-001",
-    "tests_passed": 179,
-    "tests_failed": 0
+    "run_id": "software-backend-r3",
+    "tests_passed": 181,
+    "tests_failed": 0,
+    "post_merge_recheck": "pending"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -17,7 +18,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "official parity after pandas repair; strict CUDA KNN backward failure reproduced; diagnostic CPU-backward variant prepared",
+  "current_task": "three-arm exact official/faithful parity passed with explicit deterministic backend; finalize receipts, restore data staging and complete remaining prerequisites",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -140,7 +141,35 @@
     "strict_determinism_run": "determinism-r2",
     "strict_determinism_observed_error": "KNearestNeighborBackwardCuda does not have a deterministic implementation",
     "strict_determinism_scope": "full native input, unchanged official metric budgets; diagnostic failure",
-    "parity_second_attempt": "parity-r2 running; native official and faithful both succeeded but exact values differ",
-    "proposed_backend": "GPU forward unchanged; upstream CPU KNN backward; experimental, not admitted"
+    "parity_second_attempt": "all six scorer processes succeeded; three comparisons failed exact equality",
+    "proposed_backend": "GPU forward unchanged; upstream CPU KNN backward; experimental, not admitted",
+    "cpu_backward_repeats": {
+      "runs": [
+        "cpu-backward-r3",
+        "cpu-backward-r3-repeat"
+      ],
+      "exact_equal": true,
+      "metrics": {
+        "cd_3d": 0.05475840200709477,
+        "cd_4d": 0.055920042813267366,
+        "cd_motion": 0.06364533305168152
+      },
+      "calls_per_run": 6800
+    },
+    "parity_third_attempt": {
+      "run_id": "parity-cpu-backward-r3",
+      "comparisons_passed": 9,
+      "comparisons_total": 9,
+      "absolute_differences": 0.0,
+      "scope": "one UID, three prediction arms; engineering equivalence only",
+      "finalization": "pending"
+    }
+  },
+  "native_qualification": "not_complete",
+  "data_staging": {
+    "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "remote_target": "/root/actionmesh-research-staging/actionbench-full128",
+    "status": "incomplete; direct mirror timed out; first local relay asset downloaded, transfer interrupted",
+    "old_models_deleted": false
   }
 }

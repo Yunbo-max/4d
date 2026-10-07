@@ -1,0 +1,44 @@
+2026-10-07 09:17:13,272 - INFO - Found 1 GT, 1 pred, 1 common
+
+Evaluating samples:   0%|          | 0/1 [00:00<?, ?it/s]
+
+ICP per-frame:   0%|          | 0/16 [00:00<?, ?it/s][A
+
+ICP per-frame:   6%|▋         | 1/16 [00:04<01:13,  4.90s/it][A
+
+ICP per-frame:  12%|█▎        | 2/16 [00:08<00:55,  3.97s/it][A
+
+ICP per-frame:  19%|█▉        | 3/16 [00:11<00:48,  3.69s/it][A
+
+ICP per-frame:  25%|██▌       | 4/16 [00:14<00:42,  3.55s/it][A
+
+ICP per-frame:  31%|███▏      | 5/16 [00:18<00:38,  3.49s/it][A
+
+ICP per-frame:  38%|███▊      | 6/16 [00:21<00:34,  3.46s/it][A
+
+ICP per-frame:  44%|████▍     | 7/16 [00:25<00:30,  3.44s/it][A
+
+ICP per-frame:  50%|█████     | 8/16 [00:28<00:27,  3.44s/it][A
+
+ICP per-frame:  56%|█████▋    | 9/16 [00:32<00:24,  3.45s/it][A
+
+ICP per-frame:  62%|██████▎   | 10/16 [00:35<00:20,  3.45s/it][A
+
+ICP per-frame:  69%|██████▉   | 11/16 [00:38<00:17,  3.46s/it][A
+
+ICP per-frame:  75%|███████▌  | 12/16 [00:42<00:13,  3.47s/it][A
+
+ICP per-frame:  81%|████████▏ | 13/16 [00:45<00:10,  3.47s/it][A
+
+ICP per-frame:  88%|████████▊ | 14/16 [00:49<00:06,  3.48s/it][A
+
+ICP per-frame:  94%|█████████▍| 15/16 [00:52<00:03,  3.48s/it][A
+
+ICP per-frame: 100%|██████████| 16/16 [00:56<00:00,  3.48s/it][A
+ICP per-frame: 100%|██████████| 16/16 [00:56<00:00,  3.52s/it]
+2026-10-07 09:18:20,734 - INFO - [000-048_45e57349f062416aaf11f2c31587da16] CD_3D=0.055, CD_4D=0.056, CD_Motion=0.064
+
+Evaluating samples: 100%|██████████| 1/1 [01:07<00:00, 67.47s/it]
+Evaluating samples: 100%|██████████| 1/1 [01:07<00:00, 67.47s/it]
+2026-10-07 09:18:20,747 - INFO - Results saved to: /root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/official.csv
+2026-10-07 09:18:20,747 - INFO - Summary saved to: /root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r2/runs/attempts/parity-r2/official-faithful-three-arm-parity-a1-08be7fccbe584ca2b18022b576b4b4e2/workspace/actionmesh/actionbench-parity-output/body_gaussian/official.json.official/000-048_45e57349f062416aaf11f2c31587da16-body_gaussian/official.summary.json
