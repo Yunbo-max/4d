@@ -1,0 +1,41 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T17:41:52Z",
+  "project_id": "4d-mechanism-boundaries",
+  "route_id": "baseline-qualification",
+  "role": "web_supervisor",
+  "current_node": "B/S native baseline qualification and safe Full128 scheduling",
+  "decision": "Replace aggregate-only active-batch reconciliation with a reproducible sidecar derived from immutable per-task harness state.",
+  "rationale": "The latest verified r9 ledger has six completed tasks, one running task and two pending tasks, but the archived evidence lacks the live harness state.json. Aggregate counts cannot prove which exact task owns each status. Plan generation must remain blocked until the task map is byte-bound.",
+  "completed": [
+    "authored a canonical state-derived reconciliation builder",
+    "made the exact r9 harness state snapshot mandatory in the window compiler",
+    "bound all nine task IDs and statuses to the retained campaign digest",
+    "added a same-count state-swap rejection check",
+    "updated reconciliation and window contracts with the sole legal builder command"
+  ],
+  "pending": [
+    "Local copies the exact r9 state.json to the canonical retained archive path without modification",
+    "Local runs the current merged software-acceptance suite",
+    "Local runs the reconciliation builder and preserves its immutable sidecar",
+    "Local generates and freezes only a nonoverlapping Full128 window after r9 reaches a safe boundary",
+    "official full-population baseline reproduction and scorer replay remain incomplete"
+  ],
+  "scientific_status": {
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "queue_approved": false,
+    "dispatch_ready": false
+  },
+  "resource_limits": {
+    "gpu_count": 1,
+    "gpu_model": "NVIDIA GeForce RTX 2080 Ti",
+    "unit_timeout_seconds": 1664,
+    "workload_budget_seconds": 27000,
+    "collection_reserve_seconds": 1800,
+    "max_parallel_gpu_tasks": 1
+  },
+  "next_discriminating_action": "After the r9 harness reaches the next safe observed boundary, Local archives its exact state.json, runs current software acceptance, then invokes the state-derived reconciliation builder. No queue approval or GPU dispatch is implied."
+}

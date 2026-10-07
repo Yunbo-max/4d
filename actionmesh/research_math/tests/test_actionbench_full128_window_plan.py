@@ -11,6 +11,7 @@ import unittest
 
 from prepare_actionbench_full128_window import (
     R9_CAMPAIGN_PLAN_PATH,
+    R9_STATE_SNAPSHOT_PATH,
     R9_STATUS_SNAPSHOT_PATH,
     _plan_digest,
     build_input_ref_closure,
@@ -119,6 +120,19 @@ def evidence_fixture(root, pricing):
             "failed": 0,
         },
     }))
+    state_path = root / R9_STATE_SNAPSHOT_PATH
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    statuses = ["completed"] * 3 + ["running"] + ["pending"] * 5
+    state_path.write_text(json.dumps({
+        "format": "research-harness-state-v1",
+        "batch_id": "population-gpu-current-r9",
+        "plan_digest": campaign["plan_digest"],
+        "status": "running",
+        "tasks": {
+            f"population-{index:03d}": {"status": task_status}
+            for index, task_status in zip(range(1, 10), statuses)
+        },
+    }))
     refs = tuple({
         "path": path.resolve().relative_to(root.resolve()).as_posix(),
         "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
@@ -129,12 +143,24 @@ def evidence_fixture(root, pricing):
         "plan_digest": campaign["plan_digest"],
         "campaign_plan_path": R9_CAMPAIGN_PLAN_PATH,
         "status_snapshot_path": R9_STATUS_SNAPSHOT_PATH,
+        "state_snapshot_path": R9_STATE_SNAPSHOT_PATH,
     }
     return (*refs, profile, native_paths)
 
 
 def reconciliation_fixture(pricing, pricing_ref, campaign_ref, status_ref,
                            profile):
+    statuses = ["completed"] * 3 + ["running"] + ["pending"] * 5
+    state = {
+        "format": "research-harness-state-v1",
+        "batch_id": "population-gpu-current-r9",
+        "plan_digest": profile["plan_digest"],
+        "status": "running",
+        "tasks": {
+            f"population-{index:03d}": {"status": task_status}
+            for index, task_status in zip(range(1, 10), statuses)
+        },
+    }
     return {
         "kind": "actionbench-full128-active-batch-reconciliation",
         "version": "1.0.0",
@@ -149,6 +175,10 @@ def reconciliation_fixture(pricing, pricing_ref, campaign_ref, status_ref,
             "population_stop_index_exclusive": 10,
             "campaign_plan_ref": campaign_ref,
             "status_snapshot_ref": status_ref,
+            "state_snapshot_ref": {
+                "path": profile["state_snapshot_path"],
+                "sha256": hashlib.sha256(json.dumps(state).encode()).hexdigest(),
+            },
             "dispositions": [{
                 "population_index": index,
                 "uid": f"uid-{index:03d}",
@@ -164,6 +194,97 @@ def reconciliation_fixture(pricing, pricing_ref, campaign_ref, status_ref,
 
 
 class Full128WindowPlanTests(unittest.TestCase):
+    def test_reconciliation_builder_derives_every_disposition_from_harness_state(self):
+        """Catch a builder that copies unverified caller-supplied statuses."""
+        from tempfile import TemporaryDirectory
+        try:
+            from prepare_actionbench_active_batch_reconciliation import (
+                build_reconciliation,
+            )
+        except ModuleNotFoundError as error:
+            self.fail(f"reconciliation builder is missing: {error}")
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            output = root / (
+                "inputs/actionbench-full128-queue/"
+                "active-batch-reconciliation.json")
+
+            built = build_reconciliation(
+                root=root,
+                pricing_path=root / pricing_ref["path"],
+                campaign_path=root / campaign_ref["path"],
+                state_path=root / profile["state_snapshot_path"],
+                status_path=root / status_ref["path"],
+                output_path=output,
+                required_profile=profile,
+            )
+
+            self.assertEqual(
+                [row["status"] for row in built["source_runs"][0]["dispositions"]],
+                ["completed"] * 3 + ["running"] + ["pending"] * 5,
+            )
+            self.assertEqual(json.loads(output.read_text()), built)
+
+    def test_active_batch_reconciliation_is_derived_from_exact_harness_state(self):
+        """Catch accepting caller-authored dispositions without task state."""
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            state_path = root / "docs/archive/runs/harness/population-r9/state.json"
+            state_path.parent.mkdir(parents=True)
+            statuses = ["completed"] * 3 + ["running"] + ["pending"] * 5
+            state_path.write_text(json.dumps({
+                "format": "research-harness-state-v1",
+                "batch_id": "population-gpu-current-r9",
+                "plan_digest": profile["plan_digest"],
+                "status": "running",
+                "tasks": {
+                    f"population-{index:03d}": {"status": status}
+                    for index, status in zip(range(1, 10), statuses)
+                },
+            }))
+            state_ref = {
+                "path": state_path.relative_to(root).as_posix(),
+                "sha256": hashlib.sha256(state_path.read_bytes()).hexdigest(),
+            }
+            profile["state_snapshot_path"] = state_ref["path"]
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            reconciliation["source_runs"][0]["state_snapshot_ref"] = state_ref
+
+            try:
+                refs = validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][1], profile)
+            except ValueError as error:
+                self.fail(f"valid harness state snapshot was rejected: {error}")
+
+            self.assertIn(state_path.resolve(), refs)
+
+    def test_active_batch_reconciliation_rejects_per_task_state_swaps(self):
+        """Catch aggregate-count agreement masking wrong task dispositions."""
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            rows = reconciliation["source_runs"][0]["dispositions"]
+            rows[0]["status"], rows[3]["status"] = (
+                rows[3]["status"], rows[0]["status"])
+
+            with self.assertRaisesRegex(
+                    ValueError, "exact retained harness task state"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][1], profile)
+
     def test_archived_reconciliation_evidence_is_staged_without_root_rebinding(self):
         from tempfile import TemporaryDirectory
         with TemporaryDirectory() as temporary:
@@ -196,6 +317,7 @@ class Full128WindowPlanTests(unittest.TestCase):
                 (root / pricing_ref["path"]).resolve(),
                 (root / campaign_ref["path"]).resolve(),
                 (root / status_ref["path"]).resolve(),
+                (root / profile["state_snapshot_path"]).resolve(),
                 *(path.resolve() for path in native_paths),
             }))
             with self.assertRaisesRegex(ValueError, "overlaps retained work"):
@@ -210,6 +332,14 @@ class Full128WindowPlanTests(unittest.TestCase):
             reconciliation["source_runs"][0]["status_snapshot_ref"] = {
                 "path": status_ref["path"],
                 "sha256": hashlib.sha256(status_path.read_bytes()).hexdigest(),
+            }
+            state_path = root / profile["state_snapshot_path"]
+            state = json.loads(state_path.read_text())
+            state["tasks"]["population-001"]["status"] = "failed"
+            state_path.write_text(json.dumps(state))
+            reconciliation["source_runs"][0]["state_snapshot_ref"] = {
+                "path": profile["state_snapshot_path"],
+                "sha256": hashlib.sha256(state_path.read_bytes()).hexdigest(),
             }
             with self.assertRaisesRegex(ValueError, "overlaps retained work"):
                 validate_active_batch_reconciliation(

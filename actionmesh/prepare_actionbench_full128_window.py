@@ -36,12 +36,16 @@ R9_CAMPAIGN_PLAN_PATH = (
     "4d-longgoal-r9/plans/population-gpu-current-r9/harness.json")
 R9_STATUS_SNAPSHOT_PATH = (
     "docs/research-math-20261006/longgoal-20261007/STATUS.json")
+R9_STATE_SNAPSHOT_PATH = (
+    "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
+    "4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json")
 R9_RECONCILIATION_PROFILE = {
     "run_id": "population-gpu-current-r9",
     "population_range": R9_RETAINED_RANGE,
     "plan_digest": R9_PLAN_DIGEST,
     "campaign_plan_path": R9_CAMPAIGN_PLAN_PATH,
     "status_snapshot_path": R9_STATUS_SNAPSHOT_PATH,
+    "state_snapshot_path": R9_STATE_SNAPSHOT_PATH,
 }
 
 
@@ -126,7 +130,7 @@ def validate_active_batch_reconciliation(root: Path, pricing: dict,
                else required_profile)
     profile_keys = {
         "run_id", "population_range", "plan_digest", "campaign_plan_path",
-        "status_snapshot_path",
+        "status_snapshot_path", "state_snapshot_path",
     }
     if set(profile) != profile_keys:
         raise ValueError("Exact retained-run validation profile required")
@@ -174,7 +178,7 @@ def validate_active_batch_reconciliation(root: Path, pricing: dict,
     run_keys = {
         "run_id", "plan_digest", "population_start_index",
         "population_stop_index_exclusive", "campaign_plan_ref",
-        "status_snapshot_ref", "dispositions",
+        "status_snapshot_ref", "state_snapshot_ref", "dispositions",
     }
     disposition_keys = {"population_index", "uid", "status"}
     for run in source_runs:
@@ -193,13 +197,18 @@ def validate_active_batch_reconciliation(root: Path, pricing: dict,
             raise ValueError("Exact retained r9 range and plan digest required")
         campaign_ref = run["campaign_plan_ref"]
         status_ref = run["status_snapshot_ref"]
+        state_ref = run["state_snapshot_ref"]
         if (not isinstance(campaign_ref, dict) or
                 campaign_ref.get("path") != profile["campaign_plan_path"] or
                 not isinstance(status_ref, dict) or
-                status_ref.get("path") != profile["status_snapshot_path"]):
-            raise ValueError("Canonical campaign plan and status evidence required")
+                status_ref.get("path") != profile["status_snapshot_path"] or
+                not isinstance(state_ref, dict) or
+                state_ref.get("path") != profile["state_snapshot_path"]):
+            raise ValueError(
+                "Canonical campaign plan, status, and harness-state evidence required")
         campaign_path = resolve_ref(root, campaign_ref)
         status_path = resolve_ref(root, status_ref)
+        state_path = resolve_ref(root, state_ref)
         campaign = json.loads(campaign_path.read_text())
         expected_task_ids = [f"population-{index:03d}"
                              for index in range(start, stop)]
@@ -240,7 +249,16 @@ def validate_active_batch_reconciliation(root: Path, pricing: dict,
                 population_window.get("indices") != list(range(start, stop)) or
                 population_window.get("observed_at") != observed_at):
             raise ValueError("Status snapshot does not bind the retained run")
-        resolved.extend((campaign_path.resolve(), status_path.resolve()))
+        state = json.loads(state_path.read_text())
+        task_states = state.get("tasks")
+        if (state.get("format") != "research-harness-state-v1" or
+                state.get("batch_id") != run["run_id"] or
+                state.get("plan_digest") != digest or
+                not isinstance(task_states, dict) or
+                set(task_states) != set(expected_task_ids)):
+            raise ValueError("Harness state does not bind every retained task")
+        resolved.extend((campaign_path.resolve(), status_path.resolve(),
+                         state_path.resolve()))
         dispositions = run["dispositions"]
         expected_indices = list(range(start, stop))
         if (not isinstance(dispositions, list) or
@@ -259,6 +277,12 @@ def validate_active_batch_reconciliation(root: Path, pricing: dict,
                     status not in RETAINED_DISPOSITIONS):
                 raise ValueError("Disposition differs from canonical population")
             actual_indices.append(index)
+            task_id = f"population-{index:03d}"
+            task_state = task_states.get(task_id)
+            if (not isinstance(task_state, dict) or
+                    task_state.get("status") != status):
+                raise ValueError(
+                    "Disposition differs from exact retained harness task state")
             if uid in occupied_uids:
                 raise ValueError("Duplicate retained UID disposition")
             occupied_uids.add(uid)

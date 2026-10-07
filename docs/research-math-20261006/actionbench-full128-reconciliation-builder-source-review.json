@@ -1,0 +1,47 @@
+{
+  "kind": "actionbench-full128-reconciliation-builder-source-review",
+  "version": "1.0.0",
+  "status": "reviewed_generated_unexecuted",
+  "reviewed_at": "2026-10-07T17:41:52Z",
+  "scope": [
+    "actionmesh/prepare_actionbench_active_batch_reconciliation.py",
+    "actionmesh/prepare_actionbench_full128_window.py",
+    "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+    "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+    "docs/research-math-20261006/actionbench-full128-window-plan-contract.json"
+  ],
+  "finding": "The prior compiler bound aggregate counts and caller-authored dispositions but had no immutable per-task state evidence. Two task states could be exchanged without changing any aggregate count, leaving an unverifiable task-to-outcome mapping.",
+  "resolution": [
+    "require the canonical archived r9 research-harness state.json path and SHA-256",
+    "require the state batch ID and plan digest to match the retained campaign",
+    "require the state task-key set to equal population-001 through population-009",
+    "require every sidecar disposition to equal the corresponding harness task status",
+    "provide one canonical builder that derives all dispositions from state.json and self-validates the result before writing",
+    "fail closed when the state snapshot is absent, incomplete, changed, aggregate-inconsistent, or an output already exists"
+  ],
+  "authored_checks": {
+    "new_test_methods": 3,
+    "final_full128_window_test_methods": 18,
+    "behaviors": [
+      "accept a complete hash-bound task-state snapshot",
+      "derive all nine dispositions without caller-supplied statuses",
+      "reject per-task state swaps even when aggregate counts are unchanged"
+    ]
+  },
+  "author_side_observation": {
+    "isolated_test_methods_observed_green": 18,
+    "test_environment": "transient author workspace with import-only stubs for source files absent from the partial checkout",
+    "is_local_software_acceptance": false,
+    "is_native_scientific_qualification": false
+  },
+  "static_validation": {
+    "python_compile": "passed",
+    "json_parse": "passed",
+    "project_tests_accepted": false,
+    "gpu_workloads_started": 0,
+    "official_scorer_runs": 0
+  },
+  "remaining_blocker": "The repository archive does not yet contain runs/harness/population-gpu-current-r9/state.json. Local must copy the exact live or terminal state snapshot to the canonical path before the builder can emit the reconciliation sidecar.",
+  "scientific_effect_qualification": false,
+  "candidate_methods_tested": false
+}

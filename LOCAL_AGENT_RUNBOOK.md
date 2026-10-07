@@ -620,22 +620,38 @@ its real state. A stale status file or SSH shell is not liveness evidence.
 
 After that reconciliation, run the current whole software suite through the
 software-acceptance harness. The newly authored window-plan checks must pass in
-addition to the prior 265 methods. The builder may then be invoked directly only
+addition to the prior 265 methods; the expected merged total is now 288. The
+builder may then be invoked directly only
 to emit a plan; it performs no workload. For a non-overlapping future window,
 for example window 02 after the current r9 batch reaches a safe boundary:
 
-Before invoking the compiler, promote the immutable Local reconciliation to
-`inputs/actionbench-full128-queue/active-batch-reconciliation.json`. Follow
+Before invoking the compiler, copy the exact Local harness state from
+`runs/harness/population-gpu-current-r9/state.json` without modification to the
+retained canonical path
+`docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json`.
+Do not infer individual tasks from the aggregate ledger. Then generate the
+immutable reconciliation at
+`inputs/actionbench-full128-queue/active-batch-reconciliation.json` with the
+sole canonical builder:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_active_batch_reconciliation.py" \
+  --root "$project_dir"
+```
+
+Follow
 `docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json`:
 bind the exact pricing receipt, include `population-gpu-current-r9`, its frozen
 plan digest `6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1`,
 the fixed range `[1,10)`, all nine ordered canonical UID dispositions, and SHA-256
-references to the retained canonical campaign plan plus `STATUS.json` snapshot.
+references to the retained canonical campaign plan, `STATUS.json` snapshot and
+research-harness `state.json` snapshot.
 This compiler revision accepts exactly that one r9 source run; do not append a
 later retained run without a reviewed compiler revision. The compiler parses
-both sources, recomputes the campaign digest, verifies every task's native-plan
+all three sources, recomputes the campaign digest, verifies every task's native-plan
 SHA-256 and native plan digest, and matches the run, task IDs, exact indices,
-observation time and disposition counts. All nine native plans are retained in
+observation time, disposition counts and every per-task status. A swap between
+two task states is rejected even when aggregate counts are unchanged. All nine native plans are retained in
 each newly generated unit's transitive input closure.
 These retained JSON files are staged as already-validated opaque evidence: do
 not re-resolve their original run-relative inner paths against the current

@@ -879,3 +879,44 @@ later execution decision. Window 01 remains blocked by construction; remaining
 indices in 0 through 15 require a no-omission continuation rather than a
 success-selected replacement. Candidate native results and formal outcomes stay
 **0/15** and **0**.
+
+## Continuation: derive retained task dispositions from harness state — 2026-10-07
+
+The newest verified remote checkpoint reports six completed r9 engineering
+units, one running unit and two pending units. Population-006 has a successful
+117-file engineering receipt, while population-007 is the active generation
+process. These remain baseline engineering attempts; they neither qualify the
+official full-population benchmark nor test a candidate method.
+
+Review of the overlap guard found one remaining evidence gap. The canonical
+`STATUS.json` carries aggregate counts, but the retained repository archive does
+not yet contain `runs/harness/population-gpu-current-r9/state.json`. Aggregate
+counts cannot prove which exact task owns which status: swapping a completed and
+running task preserves all four totals. Therefore a manually written
+`dispositions` list is not sufficient evidence for plan generation.
+
+Added `prepare_actionbench_active_batch_reconciliation.py`. It has no status-list
+input. It reads the exact canonical pricing, r9 campaign, aggregate status and
+research-harness state snapshot; derives all nine ordered dispositions from the
+state task map; hashes every source; then invokes the window compiler's complete
+reconciliation validator before writing the sidecar. The compiler now requires
+that same state reference, exact batch ID and plan digest, the complete task-key
+set `population-001` through `population-009`, and equality between every
+disposition and its corresponding task status. A per-task state swap is rejected
+even when aggregate counts remain unchanged.
+
+Three focused checks cover complete state admission, state-derived sidecar
+generation and same-count task swaps, raising the Full128 window test module to
+18 methods and the expected merged `research_math` total from 285 to 288. The
+author-side isolated checks were observed green in the transient partial checkout
+using import-only stubs for source modules absent from that checkout; this is not
+the required Local whole-suite software acceptance. Python compilation and JSON
+parsing passed. No plan was generated, no GPU or official scorer was invoked, and
+queue/science flags remain false.
+
+The new guard intentionally blocks today: the exact r9 state snapshot is not in
+the retained archive. At the next safe r9 boundary, Local must copy that file
+without modification to its canonical archive path, run current whole-suite
+acceptance, then invoke the sole builder command recorded in the reconciliation
+contract. Only the resulting immutable sidecar may feed a nonoverlapping Full128
+window. Candidate native results and formal outcomes remain **0/15** and **0**.

@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T17:35:40Z",
+  "recorded_at": "2026-10-07T17:41:52Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. The frozen Local engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T17:35:40Z with six completed, one running and two pending units on task indices 1 through 9; population-007 generation was at Stage I 12/30, with no observed errors. Population-006 exited generation and scoring successfully; all 117 receipt-declared remote output refs matched, result SHA-256 ea2d00b13e60ac2414a291f34b9f97aa38e3889266f0b036251e302c820d9ec1. These are engineering baseline results, not candidate scientific outcomes. The Full128 window compiler now requires the exact retained r9 batch reconciliation and rejects overlap. No canonical next window plan has been generated or approved; baseline reproduction/formal qualification remains incomplete, and candidate native results/formal outcomes remain 0/15 and 0.",
+  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. The frozen Local engineering batch population-gpu-current-r9 was independently observed at 2026-10-07T17:35:40Z with six completed, one running and two pending units on task indices 1 through 9; population-007 generation was at Stage I 12/30, with no observed errors. Population-006 exited generation and scoring successfully; all 117 receipt-declared remote output refs matched. These remain engineering baseline results, not candidate scientific outcomes. Full128 plan generation now additionally requires an immutable per-task r9 harness state snapshot and a reconciliation sidecar derived by the canonical builder; the retained archive does not yet contain that state.json, so generation remains blocked. No canonical next window plan has been generated or approved; baseline reproduction/formal qualification remains incomplete, and candidate native results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -652,6 +652,50 @@
     ],
     "active_batch_last_observed_at": "2026-10-07T17:35:40Z",
     "active_batch_current_liveness": "six completed, one running, two pending, zero failed; population-007 generation Stage I 12/30 at the independently observed timestamp; population-006 receipt-declared remote outputs verified 117/117; later liveness unknown to Web",
+    "queue_priced": true,
+    "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_state_reconciliation": {
+    "status": "generated_unexecuted_blocked_missing_retained_state_snapshot",
+    "recorded_at": "2026-10-07T17:41:52Z",
+    "base_commit": "c018fc4d89e60a2bc2bb5d6c7d5fb09ab64fcb0a",
+    "builder": "actionmesh/prepare_actionbench_active_batch_reconciliation.py",
+    "builder_sha256": "84919d52f6ce4b6bb62d14f9cf55cb39c013f2c17ea0f43e2a0a7a38539fef01",
+    "compiler": "actionmesh/prepare_actionbench_full128_window.py",
+    "compiler_sha256": "dbf9464ea8c72f80380bf762b2cbb619f04cc4b28cdbf70d65962a353a908ffb",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+      "sha256": "1b05be8d3a79f02d4f4e2802502ade5f5bf619d3be02836a0526e5d53ce61cd6"
+    },
+    "window_contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+      "sha256": "cc3346d95e9312332d186f429b7e8bbf2127fa7da4b08b12a8a01130eb4f6102"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-reconciliation-builder-source-review.json",
+      "sha256": "c15edce7e1a3afc49f0fa9ee2d56f93ee5b49edca0a21a08f79545f2c47afbf9"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-state-reconciliation.json",
+      "sha256": "7edc62d86d885f810bd24043129e8819f8238cb2074bf9b729ef4e453ca7bf76"
+    },
+    "tests_ref": {
+      "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+      "sha256": "ca475b569842bd5a84cfb0f8e84401b8385f9170fe12b9b794cd11d9d1616042"
+    },
+    "required_state_snapshot_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/runs/harness/population-gpu-current-r9/state.json",
+    "state_snapshot_observed": false,
+    "per_task_state_binding_required": true,
+    "same_count_state_swap_rejected": true,
+    "new_checks_authored": 3,
+    "current_authored_test_methods_observed": 288,
+    "local_software_acceptance_passed": false,
     "queue_priced": true,
     "queue_generated": false,
     "queue_approved": false,
