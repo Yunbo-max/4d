@@ -1,0 +1,133 @@
+{
+  "kind": "long-goal-task-ledger",
+  "version": 1,
+  "status": "active",
+  "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
+  "task_scope": "evaluator qualification then all 15 selected native method comparisons",
+  "updated_at": "2026-10-07T08:57:26.780924+00:00",
+  "software_acceptance": {
+    "run_id": "software-8d2f1e7-001",
+    "tests_passed": 179,
+    "tests_failed": 0
+  },
+  "previous_scoring": {
+    "run_id": "native-controls-development-20261007T000735Z",
+    "successful_scorer_processes": 6,
+    "exact_replay": "failed",
+    "native_contract_qualified": false,
+    "candidate_methods_tested": false
+  },
+  "current_task": "repair generated-run source admission then run independent official/faithful parity",
+  "completed_native_methods": 0,
+  "required_native_methods": 15,
+  "methods": [
+    {
+      "candidate_id": "4d-math-20261006-c02",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c10",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c13",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c14",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c04",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c20",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c11",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c15",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c06",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "implementation": "requires_current_design_audit",
+      "native_comparison": "not_started",
+      "outcome": "pending",
+      "comparator_and_ablation": "required"
+    }
+  ],
+  "next_checkpoint": "parity receipt and source-bound diagnosis",
+  "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-8d2f1e7",
+  "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git"
+}
