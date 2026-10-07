@@ -1,0 +1,353 @@
+{
+  "kind": "actionbench-parity-bundle-attestation",
+  "bundle_target": "actionmesh/actionbench-parity-output",
+  "bundle_promotion_required": true,
+  "official_scorer": {
+    "kind": "official",
+    "identity": "facebook/actionbench evaluate_dataset.py via format-only NPZ-to-GLB adapter; strict CUDA forward / upstream CPU KNN backward v1",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "source_refs": [
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      }
+    ],
+    "code_refs": [
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      },
+      {
+        "path": "actionmesh/official_actionbench_adapter.py",
+        "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+      },
+      {
+        "path": "actionmesh/deterministic_actionbench_entry.py",
+        "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+      },
+      {
+        "path": "actionmesh/research_math/deterministic_knn.py",
+        "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+      },
+      {
+        "path": "actionmesh/research_math/knn_backend_checks.py",
+        "sha256": "e118c9faf6bc4e0c179ef0cbae53167ba8d56a7c8b3e529a9d968ba4530bc057"
+      },
+      {
+        "path": "actionmesh/research_math/__init__.py",
+        "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+      }
+    ],
+    "command": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "actionmesh/official_actionbench_adapter.py",
+      "--case-dir",
+      "inputs/three-arm-case",
+      "--gt-dir",
+      "inputs/gt",
+      "--output",
+      "{output}",
+      "--manifest",
+      "{predictions}",
+      "--repo-root",
+      "actionmesh/repo",
+      "--device",
+      "cuda:0",
+      "--seed",
+      "{seed}",
+      "--cpu-knn-backward"
+    ],
+    "cwd": ".",
+    "output": {
+      "format": "json",
+      "source": "file",
+      "path": "{output}"
+    },
+    "denominator_path": [
+      "denominator",
+      "n_declared"
+    ]
+  },
+  "harness_scorer": {
+    "kind": "faithful_harness",
+    "identity": "4d/research_census_eval.py ActionBench faithful harness; strict CUDA forward / upstream CPU KNN backward v1",
+    "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "source_refs": [
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      }
+    ],
+    "code_refs": [
+      {
+        "path": "actionmesh/research_census_eval.py",
+        "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/benchmark.py",
+        "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/chamfer.py",
+        "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/icp.py",
+        "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_mesh.py",
+        "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+        "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+      },
+      {
+        "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+        "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+      },
+      {
+        "path": "actionmesh/deterministic_actionbench_entry.py",
+        "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+      },
+      {
+        "path": "actionmesh/research_math/deterministic_knn.py",
+        "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+      },
+      {
+        "path": "actionmesh/research_math/knn_backend_checks.py",
+        "sha256": "e118c9faf6bc4e0c179ef0cbae53167ba8d56a7c8b3e529a9d968ba4530bc057"
+      },
+      {
+        "path": "actionmesh/research_math/__init__.py",
+        "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+      }
+    ],
+    "command": [
+      "/root/rivermind-data/actionmesh-repro/inference-env/bin/python",
+      "actionmesh/deterministic_actionbench_entry.py",
+      "--case-dir",
+      "inputs/three-arm-case",
+      "--gt-dir",
+      "inputs/gt",
+      "--output",
+      "{output}",
+      "--manifest",
+      "{predictions}",
+      "--repo-root",
+      "actionmesh/repo",
+      "--device",
+      "cuda:0",
+      "--seed",
+      "44"
+    ],
+    "cwd": ".",
+    "output": {
+      "format": "json",
+      "source": "file",
+      "path": "{output}"
+    },
+    "denominator_path": [
+      "denominator",
+      "n_declared"
+    ]
+  },
+  "sample_manifest_ref": {
+    "path": "plans/parity-cpu-backward-r3/actionbench-parity-sample-manifest.json",
+    "sha256": "7bd438395592737a4f5236e64c879c7a61c1fc18e5cd728a3fdfe3c5edb07513"
+  },
+  "parity_contract_ref": {
+    "path": "plans/parity-cpu-backward-r3/actionbench-scorer-equivalence-contract.json",
+    "sha256": "eec6e3d8ebe9c8a021b16493866572dcb14ec5061111349c37c852f07d8b0382"
+  },
+  "request_ref": {
+    "path": "plans/control-scoring-request-000-048.json",
+    "sha256": "99f0c2f1526cb98584d6e37ff7fa45f71ed804f13366685ed44c6e1bcf493d22"
+  },
+  "population_ref": {
+    "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+    "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+  },
+  "ground_truth_ref": {
+    "path": "inputs/gt/000-048_45e57349f062416aaf11f2c31587da16/surfaces.npy",
+    "sha256": "25881f0d7a9f41578f77ba6be70f810ddcbcf4236a6834713ea197ea2916823e"
+  },
+  "environment_ref": {
+    "path": "inputs/native-runtime/environment.json",
+    "sha256": "43ffa4362a77933a14007b2876886ec9282eda320a80c952dd686c459c52b5ca"
+  },
+  "record_ref": {
+    "path": "actionmesh/actionbench-parity-output/record.json",
+    "sha256": "bf23574a174040b71b04d0a9427c52d56d99cba47ba52713af99f0cdf225524d"
+  },
+  "parity_evidence_ref": {
+    "path": "actionmesh/actionbench-parity-output/parity-evidence.json",
+    "sha256": "bea0a9ec165f98a6777a2ca144de8f38e863506606f2c4cf32c5e5b81c39c1d8"
+  },
+  "arm_evidence": {
+    "native": {
+      "prediction_ref": {
+        "path": "inputs/three-arm-case/native/sequence.npz",
+        "sha256": "0b4edd55f8b49ca8d821eb99606d9ca8e556c0f48883f88e23cd272cc867dad1"
+      },
+      "official_output_ref": {
+        "path": "actionmesh/actionbench-parity-output/native/official.json",
+        "sha256": "1df36e3ea651486215c515fd6eed6e56ee6de7b10bd8be3a0e85cd4602b8cc42"
+      },
+      "faithful_output_ref": {
+        "path": "actionmesh/actionbench-parity-output/native/faithful.json",
+        "sha256": "7c360b5fd440ad87a4ad7af6fabcb4fe3d846b9cc820f22ebc7eda50b4e1230a"
+      }
+    },
+    "world_gaussian": {
+      "prediction_ref": {
+        "path": "inputs/three-arm-case/world_gaussian/sequence.npz",
+        "sha256": "075df86599a2c749b396d67dbb66f888dd0520157bd35a6b76ef0915b41d4855"
+      },
+      "official_output_ref": {
+        "path": "actionmesh/actionbench-parity-output/world_gaussian/official.json",
+        "sha256": "68916860e4986faba5f79733d877cd3160895971caf33f55df5a5674201e9304"
+      },
+      "faithful_output_ref": {
+        "path": "actionmesh/actionbench-parity-output/world_gaussian/faithful.json",
+        "sha256": "18adf5945dbb617f169fc874cfd7399a3b1a59dc2cd01885c587b7ccf2bffc24"
+      }
+    },
+    "body_gaussian": {
+      "prediction_ref": {
+        "path": "inputs/three-arm-case/body_gaussian/sequence.npz",
+        "sha256": "a87d0b635abb942e7fbf4ec56e6303a8fc628a0580ddb0f80e4a4bc9eb7911fc"
+      },
+      "official_output_ref": {
+        "path": "actionmesh/actionbench-parity-output/body_gaussian/official.json",
+        "sha256": "5224a3fb77f7f4382324d31d023ff9a0802bc940633f53f8fabed4785a788f27"
+      },
+      "faithful_output_ref": {
+        "path": "actionmesh/actionbench-parity-output/body_gaussian/faithful.json",
+        "sha256": "c02c97dea6318a4539d4cd7984b6ef6abc5178df77db6167f4c552f7ea45891a"
+      }
+    }
+  },
+  "source_refs": [
+    {
+      "path": "docs/research-math-20261006/actionbench-official-source-evidence.json",
+      "sha256": "23517c2e9085948efaa8af2eea4afae352c615797914158de29220a006d472ce"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/benchmark.py",
+      "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/chamfer.py",
+      "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/icp.py",
+      "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/sample_mesh.py",
+      "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+      "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+    },
+    {
+      "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+      "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+    },
+    {
+      "path": "actionmesh/official_actionbench_adapter.py",
+      "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+    },
+    {
+      "path": "actionmesh/deterministic_actionbench_entry.py",
+      "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+    },
+    {
+      "path": "actionmesh/research_math/deterministic_knn.py",
+      "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+    },
+    {
+      "path": "actionmesh/research_math/knn_backend_checks.py",
+      "sha256": "e118c9faf6bc4e0c179ef0cbae53167ba8d56a7c8b3e529a9d968ba4530bc057"
+    },
+    {
+      "path": "actionmesh/research_math/__init__.py",
+      "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+    },
+    {
+      "path": "actionmesh/research_census_eval.py",
+      "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+    }
+  ],
+  "metric_tolerances": {
+    "cd_3d": 0.0,
+    "cd_4d": 0.0,
+    "cd_motion": 0.0
+  },
+  "scientific_effect_qualification": false,
+  "native_contract_qualified": false
+}

@@ -1,0 +1,42 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "software-paths-r3-b",
+  "tasks": [
+    {
+      "task_id": "all-research-math-checks",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/software-paths-r3-b/native.json",
+        "sha256": "7b28f5a80cfe961fc0907a2753be8607007cd2fd6e8a3b136409c9c894319a60"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": []
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 180,
+    "window_seconds": 180,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 2048,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "3b0fe4046182d1bbcb570c8c7e32f904f1a9b0d066c00c18a1ef5372503314ab"
+}

@@ -1,0 +1,3 @@
+{"event":"batch_started","observed_at":"2026-10-07T09:54:23.174970Z","plan_digest":"b1a29db02923dfcc0c43f897ce38e2fed6ad42d595848d0b71d6ccdeaf303295"}
+{"devices":[],"event":"task_started","launcher_pid":22810,"native_plan_digest":"14ae0778b8a5c4c32913e8c62838304bb90b222bd14e9a7686c78f3c1dda585a","observed_at":"2026-10-07T09:54:23.909865Z","task_id":"actionbench-parity-finalization"}
+{"event":"task_finished","observed_at":"2026-10-07T09:54:28.022154Z","status":"completed","task_id":"actionbench-parity-finalization"}

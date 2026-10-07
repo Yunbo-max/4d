@@ -1,0 +1,10 @@
+{
+  "cases": [
+    {
+      "case_id": "000-048_45e57349f062416aaf11f2c31587da16-body_gaussian",
+      "uid": "000-048_45e57349f062416aaf11f2c31587da16",
+      "case_dir": "body_gaussian"
+    }
+  ],
+  "scope": "same single prediction for official/faithful parity"
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "experimental-knn-backward-cpu-compatibility",
+  "scope": "engineering-only; native qualification remains false",
+  "forward": "unchanged installed PyTorch3D CUDA KNN",
+  "backward": "installed upstream PyTorch3D CPU KNN primitive",
+  "source_sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771",
+  "extension_sha256": "e003c4048f34bd46f0a92f59b87d1951fe82b0c3df856826a02d4efb790965ce",
+  "cpu_backward_calls": 6800
+}

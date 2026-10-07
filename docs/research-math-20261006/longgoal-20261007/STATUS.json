@@ -4,12 +4,11 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T09:46:29.692850+00:00",
+  "updated_at": "2026-10-07T10:00:32.591182+00:00",
   "software_acceptance": {
-    "run_id": "software-backend-r3",
-    "tests_passed": 181,
-    "tests_failed": 0,
-    "post_merge_recheck": "pending"
+    "run_id": "software-paths-r3-b",
+    "tests_passed": 201,
+    "tests_failed": 0
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -18,7 +17,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "three-arm exact official/faithful parity passed with explicit deterministic backend; finalize receipts, restore data staging and complete remaining prerequisites",
+  "current_task": "scorer engineering parity and finalization complete; stage full128 dataset and pinned model metadata, then complete formal baseline/native protocol and all 15 methods",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,7 +128,7 @@
     }
   ],
   "next_checkpoint": "parity receipt and source-bound diagnosis",
-  "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-8d2f1e7",
+  "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-longgoal-r3",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
     "parity_first_attempt": "failed: official CLI missing pandas",
@@ -162,14 +161,18 @@
       "comparisons_total": 9,
       "absolute_differences": 0.0,
       "scope": "one UID, three prediction arms; engineering equivalence only",
-      "finalization": "pending"
+      "finalization": {
+        "status": "completed",
+        "run_id": "finalize-parity-r3",
+        "verification_sha256": "98edab3bab313f390349538570f3e2b91e8aafe8639a12443d151dee17afee28"
+      }
     }
   },
   "native_qualification": "not_complete",
   "data_staging": {
     "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
     "remote_target": "/root/actionmesh-research-staging/actionbench-full128",
-    "status": "incomplete; direct mirror timed out; first local relay asset downloaded, transfer interrupted",
+    "status": "incomplete; first asset downloaded locally; SSH relay active but slow; no full dataset admission",
     "old_models_deleted": false
   }
 }
