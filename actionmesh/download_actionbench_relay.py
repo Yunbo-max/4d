@@ -48,6 +48,7 @@ def main():
     for key in ('population', 'stage', 'ssh-target', 'control-path', 'known-hosts', 'remote-root'):
         parser.add_argument('--'+key, required=True)
     parser.add_argument('--port', type=int, required=True)
+    parser.add_argument('--upload-kib-per-second', type=int, default=512)
     args = parser.parse_args()
     os.environ['HF_HUB_DISABLE_IMPLICIT_TOKEN'] = '1'
     os.environ['HF_HUB_DISABLE_XET'] = '1'
@@ -93,11 +94,29 @@ def main():
         with tarfile.open(archive,'w') as t:
             for name in members:t.add(batch/name,arcname=name,recursive=False)
         digest=sha(archive); remote_archive=incoming+'/'+archive.name
-        subprocess.run(['scp',*common,'-P',str(args.port),str(archive),
-                        args.ssh_target+':'+remote_archive],check=True)
-        result=subprocess.run([*ssh,shlex.join(['python3','-c',REMOTE_EXTRACT,
-            remote_archive,args.remote_root,digest])],check=True,capture_output=True,text=True)
-        remote=json.loads(result.stdout)
+        # Bound traffic and avoid SFTP multiplexing stalls observed on this host.
+        # EOF closes an upload; the remote acknowledgement follows full checksum validation.
+        if args.upload_kib_per_second < 16:
+            raise ValueError('Upload rate must be at least 16 KiB/s')
+        receiver = ('import pathlib,sys;'
+                    'p=pathlib.Path(sys.argv[1]+".part");'
+                    'f=p.open("wb");'
+                    'import shutil;shutil.copyfileobj(sys.stdin.buffer,f,65536);f.close();'
+                    'p.replace(sys.argv[1]);\n') + REMOTE_EXTRACT
+        process=subprocess.Popen([*ssh,shlex.join(['python3','-c',receiver,
+            remote_archive,args.remote_root,digest])],stdin=subprocess.PIPE,stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE)
+        transferred=0; upload_started=time.monotonic()
+        with archive.open('rb') as source:
+            for block in iter(lambda:source.read(65536),b''):
+                process.stdin.write(block);process.stdin.flush();transferred+=len(block)
+                delay=transferred/(args.upload_kib_per_second*1024)-(time.monotonic()-upload_started)
+                if delay>0:time.sleep(delay)
+        process.stdin.close();process.stdin=None
+        stdout,stderr=process.communicate(timeout=300)
+        if process.returncode:
+            raise RuntimeError('SSH relay failed: '+stderr.decode(errors='replace')[-1500:])
+        remote=json.loads(stdout)
         assert remote=={'archive_sha256':digest,'extracted':True}
         row={'uid':uid,'revision':revision,'files':evidence,'transfer':remote,
              'elapsed_seconds':time.monotonic()-started,'scope':'download and transfer only'}
