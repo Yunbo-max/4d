@@ -19,6 +19,8 @@ def main():
         parser.add_argument('--'+key, type=Path, required=True)
     parser.add_argument('--run-id', required=True)
     parser.add_argument('--gpu-uuid', required=True)
+    parser.add_argument('--cpu-knn-backward', action='store_true',
+                        help='Experimental upstream CPU backward; engineering evidence only')
     args = parser.parse_args()
     root = args.root.resolve()
     plan_dir = args.plan_dir.resolve()
@@ -42,16 +44,24 @@ def main():
                'import torch;torch.use_deterministic_algorithms(True);'
                'print("Strict deterministic guard enabled; no accepted benchmark score",flush=True);'
                'sys.argv=sys.argv[1:];runpy.run_path(sys.argv[0],run_name="__main__")')
-    command = [sys.executable, '-c', program, str(root/'actionmesh/research_census_eval.py'),
-        '--case-dir', str(resolve_ref(root,request['manifest_ref']).parent),
-        '--gt-dir', str(resolve_ref(root,request['ground_truth_ref']).parent.parent),
-        '--repo-root', str(root/request['repo_root']), '--manifest', str(manifest),
+    # Paths relative to the attempt cwd prevent accidental reads from the controller checkout.
+    def relative(path):
+        return '../'+path.relative_to(root).as_posix()
+    entry = (['-m', 'research_math.deterministic_knn'] if args.cpu_knn_backward else
+             ['-c', program, 'research_census_eval.py'])
+    command = [sys.executable, *entry,
+        '--case-dir', relative(resolve_ref(root,request['manifest_ref']).parent),
+        '--gt-dir', relative(resolve_ref(root,request['ground_truth_ref']).parent.parent),
+        '--repo-root', relative(root/request['repo_root']), '--manifest', relative(manifest),
         '--output', 'deterministic-probe/scores.json', '--device', 'cuda:0', '--seed', '44']
     inputs = request['input_refs']+[file_ref(root,request_path), file_ref(root,manifest),
         file_ref(root,args.environment)]+environment['dependency_lock_refs']
     for ref in inputs:
         resolve_ref(root,ref)
     code = request['code_refs']+[file_ref(root,Path(__file__).resolve())]
+    if args.cpu_knn_backward:
+        code.append(file_ref(root,root/'actionmesh/research_math/deterministic_knn.py'))
+        code.append(file_ref(root,root/'actionmesh/research_math/knn_backend_checks.py'))
     revision = subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()
     plan = native.make_plan(root,run_id=args.run_id,purpose='engineering',evidence_mode='developmental',
         jobs=[{'trial_id':'strict-backend-determinism','command':command,'cwd':'actionmesh',
@@ -62,7 +72,7 @@ def main():
             'data_revision':request['ground_truth_ref']['sha256'],
             'environment_digest':file_ref(root,args.environment)['sha256']},
         limits={'max_attempts':1,'max_development_trials':1,'max_confirmation_trials':0,
-            'max_retries_per_trial':0,'wall_time_seconds':180,'attempt_timeout_seconds':180})
+            'max_retries_per_trial':0,'wall_time_seconds':600,'attempt_timeout_seconds':600})
     native_path=plan_dir/'native.json'
     native_path.write_text(json.dumps(plan,indent=2)+'\n')
     outer=harness.make_plan(root,batch_id=args.run_id,
@@ -71,8 +81,8 @@ def main():
             'resources':{'cpu_cores':8,'ram_mib':8192,'gpu_count':1,'gpu_peak_mib':None,
                 'allow_gpu_share':False,'memory_profile_ref':None,
                 'exclusive_keys':['actionbench-native-scorer']}}],
-        limits={'total_wall_seconds':210,'window_seconds':210,'max_parallel_tasks':1,
-            'cpu_cores':8,'ram_mib':8192,'max_gpu_task_seconds':180},
+        limits={'total_wall_seconds':630,'window_seconds':630,'max_parallel_tasks':1,
+            'cpu_cores':8,'ram_mib':8192,'max_gpu_task_seconds':600},
         gpus={'uuids':[args.gpu_uuid],'safety_margin_mib':1024,'max_tasks_per_gpu':1})
     (plan_dir/'harness.json').write_text(json.dumps(outer,indent=2)+'\n')
     print(json.dumps({'plan':str(plan_dir/'harness.json'),

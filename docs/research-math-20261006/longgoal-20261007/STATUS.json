@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T08:57:26.780924+00:00",
+  "updated_at": "2026-10-07T09:15:47.054991+00:00",
   "software_acceptance": {
     "run_id": "software-8d2f1e7-001",
     "tests_passed": 179,
@@ -17,7 +17,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "repair generated-run source admission then run independent official/faithful parity",
+  "current_task": "official parity after pandas repair; strict CUDA KNN backward failure reproduced; diagnostic CPU-backward variant prepared",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,5 +129,18 @@
   ],
   "next_checkpoint": "parity receipt and source-bound diagnosis",
   "remote_source_root": "/root/rivermind-data/actionmesh-repro/checkouts/4d-8d2f1e7",
-  "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git"
+  "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
+  "engineering_diagnosis": {
+    "parity_first_attempt": "failed: official CLI missing pandas",
+    "dependency_repair": {
+      "pandas": "2.2.3",
+      "pytz": "2025.2",
+      "location": "project inference-env only"
+    },
+    "strict_determinism_run": "determinism-r2",
+    "strict_determinism_observed_error": "KNearestNeighborBackwardCuda does not have a deterministic implementation",
+    "strict_determinism_scope": "full native input, unchanged official metric budgets; diagnostic failure",
+    "parity_second_attempt": "parity-r2 running; native official and faithful both succeeded but exact values differ",
+    "proposed_backend": "GPU forward unchanged; upstream CPU KNN backward; experimental, not admitted"
+  }
 }
