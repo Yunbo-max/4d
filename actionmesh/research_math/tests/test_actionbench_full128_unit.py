@@ -169,9 +169,20 @@ class Full128UnitTests(unittest.TestCase):
             path.unlink()
 
     def test_template_must_be_the_admission_bound_manifest(self):
+        output = self.root / f"{UID}-manifest.json"
+        original_ref = copy.deepcopy(self.admission["unit_manifest_ref"])
         self.admission["unit_manifest_ref"]["sha256"] = "0" * 64
-        with self.assertRaisesRegex(ValueError, "template manifest"):
+        with self.assertRaisesRegex(
+                ValueError, r"Changed pinned file: unit_manifest\\.json"):
             self.freeze()
+        self.assertFalse(output.exists())
+
+        self.admission["unit_manifest_ref"] = original_ref
+        self.template["required_outputs"] = {"unbound": True}
+        with self.assertRaisesRegex(
+                ValueError, "Admission-bound template manifest reference"):
+            self.freeze()
+        self.assertFalse(output.exists())
 
     def test_pricing_flags_cannot_claim_approval_or_dispatch(self):
         for key in ("queue_approved", "queue_generated", "dispatch_ready"):
