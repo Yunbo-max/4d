@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T15:59:02.362777+00:00",
+  "updated_at": "2026-10-07T16:14:19.773882+00:00",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "population-gpu-current-r9: unit 001 completed, unit 002 running, seven pending; task transition verified at 15:58:11 UTC. Native candidates remain 0/15.",
+  "current_task": "Two population units completed; third worker identity checked live; six pending. Independent monitor subagent gpu_watch_r9 dispatched at user request.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -410,10 +410,10 @@
     "plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
     "launched_at": "2026-10-07T15:32:28.057578+00:00",
     "gpu_uuid": "GPU-4910bb04-2d00-ca81-f64a-2031568758ad",
-    "observed_at": "2026-10-07T15:58:11Z",
-    "completed": 1,
+    "observed_at": "2026-10-07T16:12:51Z",
+    "completed": 2,
     "running": 1,
-    "pending": 7,
+    "pending": 6,
     "failed": 0,
     "previous_gpu_sample": {
       "observed_at": "2026-10-07T15:39:08Z",
@@ -449,6 +449,11 @@
       },
       "evidence_directory": "docs/research-math-20261006/longgoal-20261007/population-001-evidence",
       "scientific_effect_qualification": false
+    },
+    "verified_worker": {
+      "task": "population-003",
+      "pid": 21563,
+      "proc_start_identity_match": true
     }
   },
   "actionbench_full128_queue_pricing": {
@@ -470,7 +475,7 @@
     "cancelled_empty_scheduler": "population-gpu-r9; all tasks pending; no experiment launched or stopped",
     "historical_calibration_measurement_is_other_physical_card": true
   },
-  "goal_service_status_last_observed": "active; prior goal returned null at 2026-10-07T15:58Z; a new goal with the existing user-authorized objective was created and read back active",
+  "goal_service_status_last_observed": "active creation acknowledged; prior active goal unexpectedly returned null at 16:12 UTC. Original all-15 task scope retained.",
   "parallel_scheduling": {
     "status": "qualification_pending_no_additional_gpu_jobs_launched",
     "requested_by_user": true,
@@ -508,11 +513,26 @@
     "candidate_methods_tested": false
   },
   "supervision": {
-    "goal_status": "active_read_back",
+    "goal_status": "recreated after interface again returned null; active creation acknowledged",
     "monitor_interval_seconds": 1200,
     "agent_check_cadence": "approximately 20 minutes; investigate new errors and prepare following windows",
     "goal_created_epoch": 1791388713,
-    "limitations": "Persistent goal requires host/client availability and tool access; remote journal alone is not an AI debugger. No claim of scientific completion."
+    "limitations": "Persistent goal requires host/client availability and tool access; remote journal alone is not an AI debugger. No claim of scientific completion.",
+    "subagent": "/root/gpu_watch_r9",
+    "subagent_status": "independent SSH verification received; ongoing monitor",
+    "monitor_authority": "read-only; main agent retains debugging and dispatch",
+    "ssh_session": 87817,
+    "last_independent_check": "2026-10-07T16:14:43Z",
+    "generation_pid": 21821,
+    "generation_start_ticks": "211519477",
+    "driver_pid": 3157,
+    "driver_start_ticks": "211281789",
+    "worker_pid": 21563,
+    "worker_start_ticks": "211515640",
+    "gpu_utilization_percent": 100,
+    "gpu_memory_mib": 10255,
+    "free_disk_bytes": 22640062464,
+    "latest_stage": "population-003 Stage I 5/30; log updated 16:14:40Z; no observed errors"
   },
   "next_window_preparation": {
     "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r10",
