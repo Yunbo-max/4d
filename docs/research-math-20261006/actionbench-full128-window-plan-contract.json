@@ -1,0 +1,51 @@
+{
+  "kind": "actionbench-full128-window-plan-contract",
+  "version": "1.0.0",
+  "status": "generated_unexecuted",
+  "scope": "Compile one exact pricing window into a serial single-GPU engineering harness; no dispatch, baseline qualification, candidate test, or scientific claim.",
+  "pricing": {
+    "path": "inputs/actionbench-full128-queue/pricing.json",
+    "sha256_from_local_return": "83a02e7e0f5609336de8c9fd6f93f1d0b0e6132cc916375f1a407ee47293ae5e",
+    "unit_timeout_seconds": 1664,
+    "units_per_full_window": 16,
+    "planned_workload_seconds": 26624
+  },
+  "budget": {
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "workload_budget_seconds": 27000,
+    "extra_workload_slack_seconds": 376
+  },
+  "execution": {
+    "gpu_count": 1,
+    "max_parallel_tasks": 1,
+    "max_tasks_per_gpu": 1,
+    "max_attempts_per_uid": 1,
+    "max_retries_per_uid": 0,
+    "generation_seed": 42,
+    "official_scorer_seed": 44,
+    "runtime_profile": "fp16-lowram-v1",
+    "harness_total_wall_seconds": 27000,
+    "reporting_window_seconds": 28800,
+    "environment_path": "inputs/native-runtime/environment.json",
+    "environment_policy": "exact current native schema, interpreter, GPU UUID, package identities, and hashed dependency inventory"
+  },
+  "required_guards": [
+    "recompute the canonical pricing receipt and its transitive evidence before plan creation",
+    "retain exact priced UID order and window membership",
+    "run every UID through the Full128 complete-unit runner mode",
+    "use attempt-relative repository paths after harness staging",
+    "stop workload scheduling at 27000 seconds so the final 1800 seconds remain unavailable to tasks",
+    "retain all failed and timed-out UIDs in the denominator",
+    "do not emit into an existing plan directory",
+    "reconcile population-gpu-current-r9 before generating or dispatching an overlapping window",
+    "freeze and inspect the exact harness digest before any later Local execution"
+  ],
+  "queue_priced": true,
+  "queue_generated": false,
+  "queue_approved": false,
+  "dispatch_ready": false,
+  "scientific_effect_qualification": false,
+  "native_scientific_qualification": false,
+  "candidate_methods_tested": false
+}

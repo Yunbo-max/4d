@@ -605,22 +605,66 @@ seconds), leaving 376 seconds of workload slack in addition to the separate
 1,800-second collection reserve. The complete population must appear exactly
 once in canonical order across eight 16-UID windows.
 
-The pricing output must still say `queue_approved: false`,
+The returned pricing output still says `queue_approved: false`,
 `queue_generated: false`, `dispatch_ready: false`, and all scientific/candidate
 qualification flags false. It is a capacity and partition freeze, not an
-executable queue. Do not dispatch these windows until a later revision provides
-and admits the per-UID generation/export/three-arm scoring runner, binds all
-full-population prerequisites and qualifies the official baseline/replay path.
+executable queue.
 
-The per-UID input freezer and runner mode are now authored, but there is still no
-admitted harness window compiler. After updating to this revision, run the full
-software acceptance suite and confirm 265 tests are collected and pass. Do not
-invoke `research_math.actionbench_full128_unit` or the new runner mode directly.
-Once pricing returns, send back its canonical JSON and receipts so the next
-revision can build a harness-owned window compiler. That compiler must bind each
-UID to its priced window, use exactly the returned `unit_timeout_seconds`, and
-retain the 1,800-second collection reserve. Until that compiler is reviewed and
-admitted, `queue_generated` and `dispatch_ready` remain false.
+The per-UID freezer, Full128 runner mode, and a fail-closed harness window
+compiler are now authored. They are **unexecuted by Web**. The concurrently
+returned Local ledger also records the already-running engineering batch
+`population-gpu-current-r9` over population indices 1 through 9. Do not create a
+second attempt for any of those UIDs and do not modify its frozen digest. First
+reconnect to the same host, inspect that exact run ID/digest and collect or carry
+its real state. A stale status file or SSH shell is not liveness evidence.
+
+After that reconciliation, run the current whole software suite through the
+software-acceptance harness. The newly authored window-plan checks must pass in
+addition to the prior 265 methods. The builder may then be invoked directly only
+to emit a plan; it performs no workload. For a non-overlapping future window,
+for example window 02 after the current r9 batch reaches a safe boundary:
+
+```bash
+window_id=full128-window-02
+window_run_id=full128-window-02-r10
+
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_full128_window.py" \
+  --root "$project_dir" \
+  --plan-dir "$project_dir/plans/$window_run_id" \
+  --skill-dir "$skill_dir" \
+  --pricing "$project_dir/inputs/actionbench-full128-queue/pricing.json" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-current-release-unit-contract.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --snapshot-contract "$project_dir/docs/research-math-20261006/actionbench-full128-snapshot-contract.json" \
+  --snapshot-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --unit-manifest "$project_dir/inputs/actionbench-full128-snapshots/unit-manifest.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --source-root "$source_root" \
+  --dataset-root "$dataset_root" \
+  --weights-root "$weights_root" \
+  --run-id "$window_run_id" \
+  --window-id "$window_id" \
+  --gpu-uuid "$gpu_uuid"
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$window_run_id/harness.json" \
+  --root "$project_dir" \
+  --freeze > "$project_dir/plans/$window_run_id/reviewed-harness.json"
+```
+
+Inspect exact equality of the reviewed plan digest, 16 canonical UIDs, sixteen
+1664-second no-retry native plans, `max_gpu_task_seconds: 26624`, one physical
+GPU, `max_parallel_tasks: 1`, `total_wall_seconds: 27000`, and
+`window_seconds: 28800`. The compiler reports `queue_generated: true` only when
+Local actually emits such a plan; that does not set `queue_approved` or
+`dispatch_ready`. The 27,000-second driver cutoff is the operational workload
+boundary; the remaining 1,800 seconds of the 28,800-second reporting window are
+reserved for collection and cannot be consumed by task-start overhead. Do not
+execute it until Local source review/software acceptance
+and active-batch overlap reconciliation are recorded. Window 01 overlaps the
+current r9 work and remains blocked until every index 0 through 15 has an explicit
+accepted, failed, running, or pending disposition without outcome-based omission.
 
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.

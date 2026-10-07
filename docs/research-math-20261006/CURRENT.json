@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T14:07:55Z",
+  "recorded_at": "2026-10-07T16:21:11Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local evidence includes 228/228 software checks, finalized one-UID engineering scorer parity, runtime capture, and completed Full128 snapshot, dataset-semantic and unit-manifest admissions. The frozen default BF16 unit failed naturally at Stage I with a sampled 20673 MiB peak. Its separately reviewed non-fast FP16 low-RAM repair completed all three official score rows in 1330.47 seconds with a sampled 10255 MiB peak. A prospective CPU-only finalizer is authored to admit that engineering unit only after rehashing the exact 117 receipt outputs and exact 121 nested pre-result files. A second fail-closed CPU-only pass is now authored to price, but never approve or generate, eight ordered 16-UID Full128 windows from that admission using a 1664-second headroom-adjusted unit timeout. Both passes are unexecuted; no complete-unit admission, approved/executable queue, candidate native result or formal outcome exists.",
+  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. A concurrent Local engineering batch population-gpu-current-r9 was last reported active on indices 1 through 9 using an earlier population builder; it has no candidate scientific result and must be reconciled before overlapping work. Web has now authored, but not executed, a fail-closed canonical 16-UID window compiler that recomputes pricing, requires the exact current interpreter/GPU/dependency closure, uses attempt-relative staged paths, binds every UID to Full128 runner mode, permits one GPU task at a time, and sets no approval or dispatch flag. No canonical window plan has been generated or approved, baseline reproduction is incomplete, and candidate native results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -54,7 +54,7 @@
     },
     "runbook_ref": {
       "path": "LOCAL_AGENT_RUNBOOK.md",
-      "sha256": "a23055bbd09221c255fa9d2b1da68d492956537d1694f65af121486f3c95ccb2"
+      "sha256": "1661ec95ea6562b41806e2438e3acc63bffa7bba6c5a7ed56048d1d12e9b7997"
     },
     "round_handoff_ref": {
       "path": "rounds/20261006-baseline-qualification/WEB_HANDOFF.md",
@@ -500,7 +500,7 @@
     "candidate_formal_outcomes": 0
   },
   "complete_unit_admission": {
-    "status": "prospective_contract_and_finalizer_authored_unexecuted",
+    "status": "completed_by_local_return_engineering_only",
     "recorded_at": "2026-10-07T12:48:13Z",
     "source_run_id": "complete-lowram-r7",
     "source_approved_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
@@ -519,19 +519,21 @@
     "new_checks_authored": 12,
     "current_authored_test_methods_observed": 245,
     "new_checks_executed_by_web": 0,
-    "complete_unit_admitted": false,
-    "eligible_for_queue_pricing": false,
+    "local_run_id": "admit-complete-r9b",
+    "admission_sha256": "74ae411497af727eb5ccb6ae66fb803f856362956688c8b5aeea793193700144",
+    "complete_unit_admitted": true,
+    "eligible_for_queue_pricing": true,
     "queue_approved": false,
     "queue_generated": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
   },
   "actionbench_full128_queue_pricing": {
-    "status": "prospective_contract_and_cpu_plan_authored_unexecuted",
+    "status": "completed_by_local_return_engineering_only",
     "recorded_at": "2026-10-07T14:07:55Z",
     "source_run_id": "complete-lowram-r7",
     "source_admission_required": true,
-    "source_admission_observed": false,
+    "source_admission_observed": true,
     "contract_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
       "sha256": "af26ce6636b0c27f10e13f48c488d3b3b83ef0a555654ef5cdfb4f122301648c"
@@ -551,7 +553,9 @@
     "new_checks_authored": 8,
     "current_authored_test_methods_observed": 253,
     "new_checks_executed_by_web": 0,
-    "queue_priced": false,
+    "local_run_id": "price-full128-r9",
+    "pricing_sha256": "83a02e7e0f5609336de8c9fd6f93f1d0b0e6132cc916375f1a407ee47293ae5e",
+    "queue_priced": true,
     "queue_approved": false,
     "queue_generated": false,
     "dispatch_ready": false,
@@ -559,10 +563,10 @@
     "candidate_formal_outcomes": 0
   },
   "actionbench_full128_per_uid_freeze": {
-    "status": "prospective_freezer_and_runner_mode_authored_unexecuted",
+    "status": "generated_unexecuted_source_pricing_observed",
     "recorded_at": "2026-10-07T15:30:00Z",
     "source_pricing_required": true,
-    "source_pricing_observed": false,
+    "source_pricing_observed": true,
     "contract_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-unit-freeze-contract.json",
       "sha256": "c397b1d219b0164d0b04aea1a8d5889f634f09d20c9c2bccb3c49d796735f240"
@@ -579,11 +583,59 @@
     "new_checks_authored": 12,
     "current_authored_test_methods_observed": 265,
     "new_checks_executed_by_web": 0,
-    "window_plan_compiler_authored": false,
-    "queue_priced": false,
+    "window_plan_compiler_authored": true,
+    "queue_priced": true,
     "queue_approved": false,
     "queue_generated": false,
     "dispatch_ready": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_window_compiler": {
+    "status": "generated_unexecuted_active_overlap_reconciliation_required",
+    "recorded_at": "2026-10-07T16:21:11Z",
+    "base_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+      "sha256": "69906e0de804c21add4278871afead8e24a4eae8b325c739688167e01f1f1b64"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-window-plan-source-review.json",
+      "sha256": "412cfb25bcd26d223cd6ac669bd8ce96c8bd7aafc089de49cf79685985f6fad6"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-window-plan.json",
+      "sha256": "bf20f40014f8d0d1453bb298002a857fb8cd700f900e6b520ad0939b33d291d6"
+    },
+    "compiler": "actionmesh/prepare_actionbench_full128_window.py",
+    "compiler_sha256": "207c1ea2890655824e1a01a2a98f6cd5dd78eaa9821156752ec93752c41dfa3c",
+    "tests_ref": {
+      "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+      "sha256": "b434c8a0107552f3d7cafd8e4975b6395872fecf42e09ec625f48549aa392450"
+    },
+    "new_checks_authored": 8,
+    "current_authored_test_methods_observed": 278,
+    "new_checks_executed_by_web": 0,
+    "pricing_recomputed_before_plan": true,
+    "units_per_full_window": 16,
+    "unit_timeout_seconds": 1664,
+    "planned_workload_seconds": 26624,
+    "hard_window_seconds": 28800,
+    "harness_total_wall_seconds": 27000,
+    "collection_reserve_seconds": 1800,
+    "environment_path": "inputs/native-runtime/environment.json",
+    "attempt_relative_repository_paths": true,
+    "max_parallel_gpu_tasks": 1,
+    "active_batch_run_id": "population-gpu-current-r9",
+    "active_batch_overlap_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "active_batch_last_observed_at": "2026-10-07T16:25:42Z",
+    "active_batch_current_liveness": "independently verified in official scoring at the timestamp; later liveness unknown to Web",
+    "queue_priced": true,
+    "queue_generated": false,
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
   }

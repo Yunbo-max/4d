@@ -1,0 +1,55 @@
+{
+  "kind": "workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T16:21:11Z",
+  "stage": "canonical-full128-window-compiler-authored",
+  "status": "generated_unexecuted_active_overlap_reconciliation_required",
+  "base_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+  "source_review_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-window-plan-source-review.json",
+    "sha256": "412cfb25bcd26d223cd6ac669bd8ce96c8bd7aafc089de49cf79685985f6fad6"
+  },
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+    "sha256": "69906e0de804c21add4278871afead8e24a4eae8b325c739688167e01f1f1b64"
+  },
+  "compiler_ref": {
+    "path": "actionmesh/prepare_actionbench_full128_window.py",
+    "sha256": "207c1ea2890655824e1a01a2a98f6cd5dd78eaa9821156752ec93752c41dfa3c"
+  },
+  "tests_ref": {
+    "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+    "sha256": "b434c8a0107552f3d7cafd8e4975b6395872fecf42e09ec625f48549aa392450"
+  },
+  "accepted_inputs": {
+    "pricing_sha256": "83a02e7e0f5609336de8c9fd6f93f1d0b0e6132cc916375f1a407ee47293ae5e",
+    "unit_timeout_seconds": 1664,
+    "units_per_window": 16,
+    "planned_gpu_task_seconds": 26624,
+    "workload_cutoff_seconds": 27000,
+    "reporting_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "environment_path": "inputs/native-runtime/environment.json"
+  },
+  "active_overlap": {
+    "run_id": "population-gpu-current-r9",
+    "indices": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "last_observed_at": "2026-10-07T16:25:42Z",
+    "current_liveness": "independently verified in official scoring at the timestamp; later liveness unknown to Web",
+    "policy": "reconcile the exact run and digest before generating or dispatching overlapping work"
+  },
+  "authored_test_methods": 8,
+  "expected_current_test_methods": 278,
+  "tests_executed_by_web": 0,
+  "plan_builds_executed_by_web": 0,
+  "gpu_workloads_executed_by_web": 0,
+  "queue_priced": true,
+  "queue_generated": false,
+  "queue_approved": false,
+  "dispatch_ready": false,
+  "scientific_effect_qualification": false,
+  "native_scientific_qualification": false,
+  "candidate_native_results": 0,
+  "candidate_formal_outcomes": 0,
+  "next_action": "Local reconciles population-gpu-current-r9, runs all 278 software checks, then emits and freezes one non-overlapping window for exact digest review."
+}

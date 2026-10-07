@@ -798,3 +798,43 @@ or admitted, and baseline/replay qualification remains outstanding. Local's next
 step remains the full 265-test software acceptance, complete-unit admission and
 CPU-only pricing pass in that order. Candidate native results and formal outcomes
 remain **0/15** and **0**.
+
+## Continuation: compile canonical Full128 windows without duplicating active work — 2026-10-07
+
+The newest Local return supersedes the earlier prospective admission/pricing
+status. `admit-complete-r9b` admitted the historical three-arm engineering unit,
+and `price-full128-r9` produced the canonical pricing receipt: 1,664 seconds per
+unit, 16 units and 26,624 workload seconds per 28,800-second window, plus the
+separate 1,800-second collection reserve. These remain engineering receipts, not
+official full-population qualification or candidate evidence.
+
+The same return reports `population-gpu-current-r9` already launched on the
+single GPU for canonical indices 1 through 9 using the concurrent population
+builder. Web last sees its state at 2026-10-07T15:39:08Z with one running and
+eight pending. That timestamp is not current liveness evidence. No second attempt
+or overlapping window is generated here; Local must reconnect to the same run ID
+and digest, then collect, carry, fail, or accept each UID explicitly.
+
+Added `prepare_actionbench_full128_window.py`, the missing canonical harness
+compiler for later windows. It recomputes the pricing receipt and its transitive
+evidence before plan creation, checks the exact current 8 × 16 partition, emits
+one no-retry native plan per UID using the Full128 complete-unit runner mode, and
+places all 16 tasks under one single-GPU outer harness. The frozen limits are
+`max_parallel_tasks=1`, `max_tasks_per_gpu=1`,
+`max_gpu_task_seconds=26624`, `total_wall_seconds=27000`, and
+`window_seconds=28800`. The 27,000-second driver cutoff makes the final 1,800
+seconds unavailable to new work and therefore preserves it for collection.
+Every native timeout equals the admitted 1,664-second
+price; no fast/dtype/low-RAM fallback or outcome-based UID omission is introduced.
+
+Eight focused checks were authored first for exact UID order, false approval and
+dispatch flags, operational budget/collection-reserve closure, attempt-relative
+staged argv, exact current environment/dependency closure, and the complete
+sixteen-plan no-retry set. They raise the statically inferred merged-tree method
+count from 270 to 278. Web
+executed **0** tests, plan builders, scorers or GPU workloads. A canonical window
+plan therefore remains ungenerated and unapproved. Local's next legal step is to
+reconcile the live r9 batch, run all 278 current software checks, and only then
+emit/freeze a non-overlapping window plan for source review. Window 01 stays
+blocked until indices 0 through 15 have explicit dispositions. Candidate native
+results and formal outcomes remain **0/15** and **0**.

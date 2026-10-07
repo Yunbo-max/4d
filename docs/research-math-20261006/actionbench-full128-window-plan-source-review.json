@@ -1,0 +1,67 @@
+{
+  "kind": "source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T16:21:11Z",
+  "status": "accepted_after_repair_generated_unexecuted",
+  "base_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+  "scope": "Independent source review of the canonical priced Full128 window compiler; no project test, plan build, scorer, or GPU workload was executed by Web.",
+  "artifacts": [
+    {
+      "path": "actionmesh/prepare_actionbench_full128_window.py",
+      "sha256": "207c1ea2890655824e1a01a2a98f6cd5dd78eaa9821156752ec93752c41dfa3c"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+      "sha256": "b434c8a0107552f3d7cafd8e4975b6395872fecf42e09ec625f48549aa392450"
+    },
+    {
+      "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+      "sha256": "69906e0de804c21add4278871afead8e24a4eae8b325c739688167e01f1f1b64"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "critical",
+      "finding": "Repository paths originally pointed at the controller checkout after harness staging.",
+      "disposition": "repaired",
+      "evidence": "All in-repository runner arguments now use attempt-relative ../ paths; external native source, dataset, and weight roots remain explicit host paths."
+    },
+    {
+      "severity": "important",
+      "finding": "A 28800-second driver deadline left the 1800-second collection reserve available to scheduler overhead.",
+      "disposition": "repaired",
+      "evidence": "The driver total wall limit is 27000 seconds while the reporting window remains 28800 seconds and GPU task reservations remain 26624 seconds."
+    },
+    {
+      "severity": "important",
+      "finding": "The environment input was neither canonical nor closed over an exact dependency inventory.",
+      "disposition": "repaired",
+      "evidence": "The compiler requires inputs/native-runtime/environment.json, the current interpreter and GPU UUID, exact manifest keys, required package identities, and a verified single dependency inventory reference."
+    },
+    {
+      "severity": "important",
+      "finding": "Initial checks did not directly bind the sixteen-plan count and no-retry limits.",
+      "disposition": "repaired",
+      "evidence": "A validation helper now rejects incomplete, reordered, retried, or fallback-bearing plan sets and has an authored focused check."
+    }
+  ],
+  "static_verification": {
+    "python_ast_parse": "passed",
+    "json_parse": "passed",
+    "git_diff_check": "passed",
+    "project_tests_executed_by_web": 0,
+    "plan_builds_executed_by_web": 0,
+    "gpu_workloads_executed_by_web": 0
+  },
+  "remaining_gates": [
+    "reconcile population-gpu-current-r9 without duplicating any UID",
+    "run the complete 278-method software acceptance on Local",
+    "emit and freeze one non-overlapping canonical window plan",
+    "review the exact emitted harness digest before execution"
+  ],
+  "queue_generated": false,
+  "queue_approved": false,
+  "dispatch_ready": false,
+  "native_scientific_qualification": false,
+  "candidate_methods_tested": false
+}
