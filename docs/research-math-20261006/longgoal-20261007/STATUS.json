@@ -6,11 +6,11 @@
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
   "updated_at": "2026-10-07T15:09:06.624807+00:00",
   "software_acceptance": {
-    "run_id": "population-green-r9",
-    "tests_passed": 238,
+    "run_id": "upstream-green-r9",
+    "tests_passed": 258,
     "tests_failed": 0,
-    "plan_digest": "3a91c1be43e9c3daf5eb108e92173a99758b76cf18662946924e6e0344450834",
-    "scope": "population indexed-selection and bounded-window regression checks plus prior suite"
+    "plan_digest": "6ebb9d9454595d72b91000fc95babc6323a420a27bb3c24d00ec575688089feb",
+    "scope": "upstream complete-unit and queue-pricing tests plus population-window checks"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "r8 parity finalization completed; implementing a fixed-order full-population baseline window; no GPU run launched yet",
+  "current_task": "Nine population manifests admitted; executing upstream completed-unit admission and queue pricing before GPU dispatch",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",

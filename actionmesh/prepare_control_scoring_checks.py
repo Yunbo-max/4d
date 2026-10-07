@@ -18,6 +18,8 @@ ROOT_SOURCES = (
     'prepare_actionbench_dataset_semantics.py',
     'finalize_actionbench_parity.py',
     'prepare_actionbench_parity_finalization.py',
+    'prepare_complete_unit_admission.py',
+    'prepare_actionbench_queue_pricing.py',
     'deterministic_actionbench_entry.py',
 )
 
