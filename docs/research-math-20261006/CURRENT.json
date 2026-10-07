@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T16:21:11Z",
+  "recorded_at": "2026-10-07T16:58:42Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. A concurrent Local engineering batch population-gpu-current-r9 was last reported active on indices 1 through 9 using an earlier population builder; it has no candidate scientific result and must be reconciled before overlapping work. Web has now authored, but not executed, a fail-closed canonical 16-UID window compiler that recomputes pricing, requires the exact current interpreter/GPU/dependency closure, uses attempt-relative staged paths, binds every UID to Full128 runner mode, permits one GPU task at a time, and sets no approval or dispatch flag. No canonical window plan has been generated or approved, baseline reproduction is incomplete, and candidate native results/formal outcomes remain 0/15 and 0.",
+  "status": "Local returned completed engineering admission and CPU-only Full128 pricing for complete-lowram-r7. The canonical price is 1664 seconds per complete three-arm unit, 16 units and 26624 workload seconds per 28800-second reporting window, with a 27000-second operational workload cutoff that leaves 1800 seconds unavailable to tasks for collection. A concurrent Local engineering batch population-gpu-current-r9 was last observed with five completed, one running and three pending units on indices 1 through 9; it has no candidate scientific result. Web has now repaired the generated-unexecuted canonical window compiler so the sole accepted r9 reconciliation has complete ordered dispositions, a recomputed campaign digest, and nine hash-verified native plans; every intersecting completed, running, pending or failed UID blocks plan generation. No canonical window plan has been generated or approved, baseline reproduction is incomplete, and candidate native results/formal outcomes remain 0/15 and 0.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -592,29 +592,33 @@
     "candidate_formal_outcomes": 0
   },
   "actionbench_full128_window_compiler": {
-    "status": "generated_unexecuted_active_overlap_reconciliation_required",
-    "recorded_at": "2026-10-07T16:21:11Z",
-    "base_commit": "6cc7c4ae52c39e18c62bd2b827961a1ce930a3ac",
+    "status": "generated_unexecuted_hash_bound_overlap_guard_authored",
+    "recorded_at": "2026-10-07T16:58:42Z",
+    "base_commit": "b0471148cf9fa471a0f71458f022009871ce98a1",
     "contract_ref": {
       "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
-      "sha256": "69906e0de804c21add4278871afead8e24a4eae8b325c739688167e01f1f1b64"
+      "sha256": "610e9425429356735444d70cb035972bb672852cd9a5cef3cec24ea6e8d95dda"
     },
     "source_review_ref": {
-      "path": "docs/research-math-20261006/actionbench-full128-window-plan-source-review.json",
-      "sha256": "412cfb25bcd26d223cd6ac669bd8ce96c8bd7aafc089de49cf79685985f6fad6"
+      "path": "docs/research-math-20261006/actionbench-full128-overlap-guard-source-review.json",
+      "sha256": "4da0ce9901067f2711a55fd3b66cda5f95e059a9fc404dbe7a711f75f379cbf9"
     },
     "checkpoint_ref": {
-      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-window-plan.json",
-      "sha256": "bf20f40014f8d0d1453bb298002a857fb8cd700f900e6b520ad0939b33d291d6"
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-overlap-guard.json",
+      "sha256": "0dfba4987b76e8f314f58785bee13618a881f4e66d304bc31be4ad6ff8fe1fc9"
+    },
+    "active_batch_reconciliation_contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+      "sha256": "336ac0b5a8b9b69f91498ea6539952991ddf0277067a9d0a8074f8f2d49a3b99"
     },
     "compiler": "actionmesh/prepare_actionbench_full128_window.py",
-    "compiler_sha256": "207c1ea2890655824e1a01a2a98f6cd5dd78eaa9821156752ec93752c41dfa3c",
+    "compiler_sha256": "22c4f2b392ace03fe40d860d74a74cf7f2b5dc63bece461929ec359b3d986b76",
     "tests_ref": {
       "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
-      "sha256": "b434c8a0107552f3d7cafd8e4975b6395872fecf42e09ec625f48549aa392450"
+      "sha256": "3f8563afdcfb1bdcf5888370e46c104e30630370f7cb405ac81d1733f4413a19"
     },
-    "new_checks_authored": 8,
-    "current_authored_test_methods_observed": 278,
+    "new_checks_authored": 15,
+    "current_authored_test_methods_observed": 285,
     "new_checks_executed_by_web": 0,
     "pricing_recomputed_before_plan": true,
     "units_per_full_window": 16,
@@ -626,10 +630,13 @@
     "environment_path": "inputs/native-runtime/environment.json",
     "attempt_relative_repository_paths": true,
     "max_parallel_gpu_tasks": 1,
+    "active_batch_reconciliation_path": "inputs/actionbench-full128-queue/active-batch-reconciliation.json",
+    "overlap_guard_enforced_before_plan_directory_creation": true,
+    "retained_dispositions": ["completed", "running", "pending", "failed"],
     "active_batch_run_id": "population-gpu-current-r9",
     "active_batch_overlap_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9],
-    "active_batch_last_observed_at": "2026-10-07T16:25:42Z",
-    "active_batch_current_liveness": "independently verified in official scoring at the timestamp; later liveness unknown to Web",
+    "active_batch_last_observed_at": "2026-10-07T17:24:50Z",
+    "active_batch_current_liveness": "five completed, one running and three pending at the independently observed timestamp; later liveness unknown to Web",
     "queue_priced": true,
     "queue_generated": false,
     "queue_approved": false,

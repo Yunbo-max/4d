@@ -1,0 +1,52 @@
+{
+  "kind": "actionbench-full128-active-batch-reconciliation-contract",
+  "version": "1.0.0",
+  "status": "generated_unexecuted",
+  "scope": "Fail-closed plan-generation guard for retained Full128 engineering work; not a dispatch approval or scientific result.",
+  "canonical_output": "inputs/actionbench-full128-queue/active-batch-reconciliation.json",
+  "required_source_run_ids": [
+    "population-gpu-current-r9"
+  ],
+  "source_run_cardinality": "Exactly one source run is accepted by this compiler revision. Any later retained run requires a reviewed compiler revision before a new target window can be compiled.",
+  "source_run_schema": {
+    "required_fields": [
+      "run_id",
+      "plan_digest",
+      "population_start_index",
+      "population_stop_index_exclusive",
+      "campaign_plan_ref",
+      "status_snapshot_ref",
+      "dispositions"
+    ],
+    "required_r9_range": [
+      1,
+      10
+    ],
+    "allowed_dispositions": [
+      "completed",
+      "running",
+      "pending",
+      "failed"
+    ],
+    "required_r9_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
+    "required_campaign_plan_path": "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/4d-longgoal-r9/plans/population-gpu-current-r9/harness.json",
+    "required_status_snapshot_path": "docs/research-math-20261006/longgoal-20261007/STATUS.json",
+    "coverage_rule": "The r9 range is fixed independently to [1,10). Dispositions must appear exactly once in canonical population order for every index in that range.",
+    "evidence_rule": "The compiler rehashes and parses the exact retained campaign harness and status snapshot, independently recomputes the canonical harness plan digest, resolves every task's exact path/sha256 native-plan reference beneath the archived campaign root, and recomputes each native plan digest. It requires matching run ID, fixed plan digest, task IDs 001 through 009, native-plan paths, status indices, observation time and disposition counts. The validated historical JSON files are then staged as opaque byte-pinned evidence so their original run-relative inner paths cannot be rebound against the current project root. Claimed digests, path-only native references, changed native files, arbitrary same-hash files or pricing-only references are rejected."
+  },
+  "plan_generation_rule": "A target window is rejected when any target UID appears in any retained source-run disposition, regardless of outcome. This prevents success-selected omission, retry of a natural failure, or duplicate live work.",
+  "nonoverlap_rule": "A nonoverlapping target may be compiled only after the sole required r9 source run and its complete retained range are present, the campaign digest recomputes, and every campaign, status and native-plan reference resolves with matching SHA-256.",
+  "freshness_rule": "The observation timestamp describes the evidence snapshot used for plan generation. It does not prove later liveness and cannot authorize dispatch; Local must re-reconcile host state immediately before any execution approval.",
+  "required_false_claims": {
+    "queue_approved": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "candidate_methods_tested": false
+  },
+  "web_execution": {
+    "project_tests_run": 0,
+    "plans_generated": 0,
+    "gpu_workloads_started": 0,
+    "official_scorer_runs": 0
+  }
+}

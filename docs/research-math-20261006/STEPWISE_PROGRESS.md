@@ -838,3 +838,44 @@ reconcile the live r9 batch, run all 278 current software checks, and only then
 emit/freeze a non-overlapping window plan for source review. Window 01 stays
 blocked until indices 0 through 15 have explicit dispositions. Candidate native
 results and formal outcomes remain **0/15** and **0**.
+
+## Continuation: make active-batch overlap protection executable — 2026-10-07
+
+The latest remote `main` observed for this continuation is `b047114`. Its r9
+engineering ledger reports five completed units, one running unit and three
+pending units over canonical indices 1 through 9. These are retained engineering
+baseline attempts, not candidate results. Their changing status does not permit
+another plan to duplicate, retry or outcome-select any of those UIDs.
+
+Source review found one fail-open boundary in the newly authored canonical
+window compiler: the runbook required overlap reconciliation, but the compiler
+did not consume a reconciliation artifact. A caller could therefore emit window
+01 even though it intersected r9. This continuation adds a mandatory canonical
+sidecar, exact schema and SHA-256 closure. The sidecar must include
+`population-gpu-current-r9`, a 64-hex plan digest, the complete ordered range
+`[1,10)`, one canonical disposition per UID, and immutable source references.
+Only `completed`, `running`, `pending` and `failed` are accepted. Every one of
+those states reserves the UID: a target-window intersection now fails before the
+plan directory is created.
+
+Seven focused checks were authored before the implementation for nonoverlap,
+missing/incomplete/duplicate retained ranges, identity/claim drift, canonical
+campaign/status binding, campaign/native-plan digest closure, and rejection of
+additional unreviewed source runs, and archive-root-safe closure. The expected merged-tree total becomes 285
+methods after Local merges this revision. The sole r9 campaign digest is
+independently recomputed; all nine native plans require exact SHA-256 references
+and independently recomputed plan digests, and are retained in every new unit's
+input closure. Validated historical JSON is staged as opaque byte-pinned evidence
+so its original run-relative inner paths cannot be rebound to current-root files.
+This compiler revision intentionally accepts exactly one retained
+r9 handoff; supporting any later retained run requires reviewed code.
+Under the Web/Local role split, Web executed **0** project tests, plan builders,
+scorers or GPU workloads; the code and checks remain `generated_unexecuted`.
+Static AST, JSON, hash-reference and diff validation are the only Web checks.
+
+The sidecar permits plan generation only. It does not approve a queue or prove
+current liveness, so Local must re-reconcile the host immediately before any
+later execution decision. Window 01 remains blocked by construction; remaining
+indices in 0 through 15 require a no-omission continuation rather than a
+success-selected replacement. Candidate native results and formal outcomes stay
+**0/15** and **0**.

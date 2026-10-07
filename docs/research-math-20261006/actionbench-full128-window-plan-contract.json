@@ -28,7 +28,13 @@
     "harness_total_wall_seconds": 27000,
     "reporting_window_seconds": 28800,
     "environment_path": "inputs/native-runtime/environment.json",
-    "environment_policy": "exact current native schema, interpreter, GPU UUID, package identities, and hashed dependency inventory"
+    "environment_policy": "exact current native schema, interpreter, GPU UUID, package identities, and hashed dependency inventory",
+    "active_batch_reconciliation_path": "inputs/actionbench-full128-queue/active-batch-reconciliation.json",
+    "required_reconciled_run_ids": [
+      "population-gpu-current-r9"
+    ],
+    "required_r9_range": [1, 10],
+    "required_r9_plan_digest": "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1"
   },
   "required_guards": [
     "recompute the canonical pricing receipt and its transitive evidence before plan creation",
@@ -38,7 +44,13 @@
     "stop workload scheduling at 27000 seconds so the final 1800 seconds remain unavailable to tasks",
     "retain all failed and timed-out UIDs in the denominator",
     "do not emit into an existing plan directory",
-    "reconcile population-gpu-current-r9 before generating or dispatching an overlapping window",
+    "require a hash-bound reconciliation for population-gpu-current-r9 before every plan generation",
+    "accept exactly the retained r9 handoff in this compiler revision; require reviewed code before adding any later retained run",
+    "require ordered complete dispositions for every retained source-run population range",
+    "parse the canonical r9 campaign plan and status snapshot, recompute the harness digest, verify each native-plan SHA-256 and plan digest, and match run ID, range, tasks, observation time and disposition counts",
+    "reject a target window that intersects any completed, running, pending, or failed retained UID",
+    "retain all reconciliation source references in every native input closure",
+    "stage validated historical campaign/native JSON as opaque byte-pinned evidence rather than rebasing original inner paths against the current project root",
     "freeze and inspect the exact harness digest before any later Local execution"
   ],
   "queue_priced": true,

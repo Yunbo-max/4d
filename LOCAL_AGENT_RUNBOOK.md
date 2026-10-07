@@ -624,6 +624,28 @@ addition to the prior 265 methods. The builder may then be invoked directly only
 to emit a plan; it performs no workload. For a non-overlapping future window,
 for example window 02 after the current r9 batch reaches a safe boundary:
 
+Before invoking the compiler, promote the immutable Local reconciliation to
+`inputs/actionbench-full128-queue/active-batch-reconciliation.json`. Follow
+`docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json`:
+bind the exact pricing receipt, include `population-gpu-current-r9`, its frozen
+plan digest `6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1`,
+the fixed range `[1,10)`, all nine ordered canonical UID dispositions, and SHA-256
+references to the retained canonical campaign plan plus `STATUS.json` snapshot.
+This compiler revision accepts exactly that one r9 source run; do not append a
+later retained run without a reviewed compiler revision. The compiler parses
+both sources, recomputes the campaign digest, verifies every task's native-plan
+SHA-256 and native plan digest, and matches the run, task IDs, exact indices,
+observation time and disposition counts. All nine native plans are retained in
+each newly generated unit's transitive input closure.
+These retained JSON files are staged as already-validated opaque evidence: do
+not re-resolve their original run-relative inner paths against the current
+project root.
+Use only `completed`, `running`, `pending`, or `failed`; do not omit a failure or
+completed UID to make a target window available. The compiler rehashes these
+sources and rejects every target window that intersects any retained UID. This
+sidecar permits plan generation only; refresh host state again before any later
+dispatch decision.
+
 ```bash
 window_id=full128-window-02
 window_run_id=full128-window-02-r10
@@ -640,6 +662,7 @@ window_run_id=full128-window-02-r10
   --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
   --unit-manifest "$project_dir/inputs/actionbench-full128-snapshots/unit-manifest.json" \
   --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --active-batch-reconciliation "$project_dir/inputs/actionbench-full128-queue/active-batch-reconciliation.json" \
   --source-root "$source_root" \
   --dataset-root "$dataset_root" \
   --weights-root "$weights_root" \
@@ -662,9 +685,11 @@ Local actually emits such a plan; that does not set `queue_approved` or
 boundary; the remaining 1,800 seconds of the 28,800-second reporting window are
 reserved for collection and cannot be consumed by task-start overhead. Do not
 execute it until Local source review/software acceptance
-and active-batch overlap reconciliation are recorded. Window 01 overlaps the
-current r9 work and remains blocked until every index 0 through 15 has an explicit
-accepted, failed, running, or pending disposition without outcome-based omission.
+and active-batch overlap reconciliation are recorded. Window 01 intersects the
+retained r9 indices 1 through 9 and is rejected by code, including after those
+units complete or fail; never duplicate them. Any remaining indices in 0 through
+15 require a separate no-omission continuation rather than an outcome-selected
+replacement window.
 
 The one-UID engineering parity/finalization chain is now complete and retained at
 `00b30fd`; do not rerun it merely because the downstream manifest is new.

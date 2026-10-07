@@ -7,6 +7,7 @@ one no-retry native plan per UID under one serial outer harness.
 from __future__ import annotations
 
 import argparse
+from datetime import datetime
 import hashlib
 import json
 from pathlib import Path
@@ -27,6 +28,57 @@ COLLECTION_RESERVE_SECONDS = 1800
 WORKLOAD_BUDGET_SECONDS = 27000
 CURRENT_UNIT_TIMEOUT_SECONDS = 1664
 CURRENT_UNITS_PER_WINDOW = 16
+RETAINED_DISPOSITIONS = {"completed", "running", "pending", "failed"}
+R9_RETAINED_RANGE = (1, 10)
+R9_PLAN_DIGEST = "6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1"
+R9_CAMPAIGN_PLAN_PATH = (
+    "docs/research-math-20261006/longgoal-20261007/resumed-evidence-r9/"
+    "4d-longgoal-r9/plans/population-gpu-current-r9/harness.json")
+R9_STATUS_SNAPSHOT_PATH = (
+    "docs/research-math-20261006/longgoal-20261007/STATUS.json")
+R9_RECONCILIATION_PROFILE = {
+    "run_id": "population-gpu-current-r9",
+    "population_range": R9_RETAINED_RANGE,
+    "plan_digest": R9_PLAN_DIGEST,
+    "campaign_plan_path": R9_CAMPAIGN_PLAN_PATH,
+    "status_snapshot_path": R9_STATUS_SNAPSHOT_PATH,
+}
+
+
+def _plan_digest(plan: dict) -> str:
+    """Match research-autopilot's canonical plan-digest algorithm."""
+    payload = {key: value for key, value in plan.items()
+               if key != "plan_digest"}
+    encoded = json.dumps(
+        payload, sort_keys=True, separators=(",", ":"), ensure_ascii=False,
+        allow_nan=False).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
+def extend_with_opaque_refs(root: Path, refs: list[dict],
+                            paths: list[Path]) -> list[dict]:
+    """Add already-validated archived evidence without rebasing nested refs.
+
+    Historical campaign/native JSON keeps paths relative to its original run
+    root.  The dedicated reconciliation validator resolves and verifies that
+    campaign-to-native edge against the retained archive root.  Rewalking those
+    immutable bytes with the current project root would bind a different path.
+    """
+    merged = {ref["path"]: ref for ref in refs}
+    for path in paths:
+        ref = file_ref(root, Path(path).resolve())
+        if ref["path"] in merged and merged[ref["path"]] != ref:
+            raise ValueError("Conflicting archived reconciliation reference")
+        merged[ref["path"]] = ref
+    return [merged[path] for path in sorted(merged)]
+
+
+def build_input_ref_closure(root: Path, traversed_paths: list[Path],
+                            opaque_paths: list[Path]) -> list[dict]:
+    """Build the live closure plus the separately validated archive closure."""
+    refs = reference_closure(
+        root, [Path(path).resolve() for path in traversed_paths])
+    return extend_with_opaque_refs(root, refs, opaque_paths)
 
 
 def select_priced_window(pricing: dict, window_id: str) -> dict:
@@ -62,6 +114,166 @@ def select_priced_window(pricing: dict, window_id: str) -> dict:
             window["planned_workload_seconds"] > WORKLOAD_BUDGET_SECONDS):
         raise ValueError("Exact complete priced Full128 window required")
     return window
+
+
+def validate_active_batch_reconciliation(root: Path, pricing: dict,
+                                         reconciliation: dict,
+                                         target_window: dict,
+                                         required_profile: dict | None = None
+                                         ) -> list[Path]:
+    """Bind known earlier work and reject any target-window duplication."""
+    profile = (R9_RECONCILIATION_PROFILE if required_profile is None
+               else required_profile)
+    profile_keys = {
+        "run_id", "population_range", "plan_digest", "campaign_plan_path",
+        "status_snapshot_path",
+    }
+    if set(profile) != profile_keys:
+        raise ValueError("Exact retained-run validation profile required")
+    required = {
+        "kind", "version", "status", "pricing_ref",
+        "population_uid_sha256", "observed_at", "source_runs",
+        "queue_approved", "dispatch_ready", "scientific_effect_qualification",
+        "candidate_methods_tested",
+    }
+    if (set(reconciliation) != required or
+            reconciliation.get("kind") !=
+            "actionbench-full128-active-batch-reconciliation" or
+            reconciliation.get("version") != "1.0.0" or
+            reconciliation.get("status") != "reconciled_for_plan_generation" or
+            reconciliation.get("population_uid_sha256") !=
+            pricing.get("population_uid_sha256") or
+            any(reconciliation.get(key) is not False for key in (
+                "queue_approved", "dispatch_ready",
+                "scientific_effect_qualification", "candidate_methods_tested"))):
+        raise ValueError("Exact non-scientific active-batch reconciliation required")
+    try:
+        observed_at = reconciliation["observed_at"]
+        if not isinstance(observed_at, str) or not observed_at.endswith("Z"):
+            raise ValueError
+        datetime.fromisoformat(observed_at.removesuffix("Z") + "+00:00")
+    except (KeyError, TypeError, ValueError):
+        raise ValueError("UTC reconciliation observation time required") from None
+
+    pricing_path = resolve_ref(root, reconciliation["pricing_ref"])
+    if json.loads(pricing_path.read_text()) != pricing:
+        raise ValueError("Reconciliation pricing identity mismatch")
+    flattened = [uid for window in pricing["windows"] for uid in window["uids"]]
+    source_runs = reconciliation["source_runs"]
+    if not isinstance(source_runs, list) or len(source_runs) != 1:
+        raise ValueError(
+            "This compiler revision accepts exactly the retained r9 handoff; "
+            "additional retained runs require a reviewed compiler revision")
+    run_ids = [run.get("run_id") for run in source_runs
+               if isinstance(run, dict)]
+    if run_ids != [profile["run_id"]]:
+        raise ValueError("Known active batch is absent from reconciliation")
+
+    resolved = [pricing_path.resolve()]
+    occupied_uids: set[str] = set()
+    run_keys = {
+        "run_id", "plan_digest", "population_start_index",
+        "population_stop_index_exclusive", "campaign_plan_ref",
+        "status_snapshot_ref", "dispositions",
+    }
+    disposition_keys = {"population_index", "uid", "status"}
+    for run in source_runs:
+        if set(run) != run_keys:
+            raise ValueError("Exact source-run reconciliation schema required")
+        digest = run["plan_digest"]
+        start = run["population_start_index"]
+        stop = run["population_stop_index_exclusive"]
+        if (not isinstance(digest, str) or len(digest) != 64 or
+                any(character not in "0123456789abcdef" for character in digest) or
+                not isinstance(start, int) or not isinstance(stop, int) or
+                not 0 <= start < stop <= len(flattened)):
+            raise ValueError("Valid source-run identity and population range required")
+        if ((start, stop) != tuple(profile["population_range"]) or
+                digest != profile["plan_digest"]):
+            raise ValueError("Exact retained r9 range and plan digest required")
+        campaign_ref = run["campaign_plan_ref"]
+        status_ref = run["status_snapshot_ref"]
+        if (not isinstance(campaign_ref, dict) or
+                campaign_ref.get("path") != profile["campaign_plan_path"] or
+                not isinstance(status_ref, dict) or
+                status_ref.get("path") != profile["status_snapshot_path"]):
+            raise ValueError("Canonical campaign plan and status evidence required")
+        campaign_path = resolve_ref(root, campaign_ref)
+        status_path = resolve_ref(root, status_ref)
+        campaign = json.loads(campaign_path.read_text())
+        expected_task_ids = [f"population-{index:03d}"
+                             for index in range(start, stop)]
+        tasks = campaign.get("tasks")
+        if (campaign.get("schema_id") != "harness-plan" or
+                campaign.get("schema_version") != "1.0.0" or
+                campaign.get("batch_id") != run["run_id"] or
+                campaign.get("plan_digest") != digest or
+                _plan_digest(campaign) != digest or
+                not isinstance(tasks, list) or
+                [task.get("task_id") for task in tasks
+                 if isinstance(task, dict)] != expected_task_ids):
+            raise ValueError("Campaign plan does not bind the retained run")
+        archive_root = campaign_path.parent.parent.parent
+        for index, task in zip(range(start, stop), tasks):
+            expected_path = f"plans/{run['run_id']}/{index:03d}/native.json"
+            plan_ref = task.get("plan_ref")
+            if (not isinstance(plan_ref, dict) or
+                    set(plan_ref) != {"path", "sha256"} or
+                    plan_ref.get("path") != expected_path):
+                raise ValueError("Exact hash-bound retained native plan required")
+            native_path = resolve_ref(archive_root, plan_ref)
+            native_plan = json.loads(native_path.read_text())
+            if (native_plan.get("schema_id") != "experiment-run-plan" or
+                    native_plan.get("schema_version") != "1.0.0" or
+                    native_plan.get("run_id") !=
+                    f"{run['run_id']}-unit-{index:03d}" or
+                    native_plan.get("purpose") != "engineering" or
+                    native_plan.get("evidence_mode") != "developmental" or
+                    native_plan.get("plan_digest") != _plan_digest(native_plan)):
+                raise ValueError("Retained native plan identity or digest mismatch")
+            resolved.append(native_path.resolve())
+        status = json.loads(status_path.read_text())
+        population_window = status.get("population_window")
+        if (not isinstance(population_window, dict) or
+                population_window.get("run_id") != run["run_id"] or
+                population_window.get("plan_digest") != digest or
+                population_window.get("indices") != list(range(start, stop)) or
+                population_window.get("observed_at") != observed_at):
+            raise ValueError("Status snapshot does not bind the retained run")
+        resolved.extend((campaign_path.resolve(), status_path.resolve()))
+        dispositions = run["dispositions"]
+        expected_indices = list(range(start, stop))
+        if (not isinstance(dispositions, list) or
+                len(dispositions) != len(expected_indices)):
+            raise ValueError("Complete source-run dispositions required")
+        actual_indices = []
+        for disposition in dispositions:
+            if (not isinstance(disposition, dict) or
+                    set(disposition) != disposition_keys):
+                raise ValueError("Exact source-run disposition schema required")
+            index = disposition["population_index"]
+            uid = disposition["uid"]
+            status = disposition["status"]
+            if (not isinstance(index, int) or index < 0 or
+                    index >= len(flattened) or uid != flattened[index] or
+                    status not in RETAINED_DISPOSITIONS):
+                raise ValueError("Disposition differs from canonical population")
+            actual_indices.append(index)
+            if uid in occupied_uids:
+                raise ValueError("Duplicate retained UID disposition")
+            occupied_uids.add(uid)
+        if actual_indices != expected_indices:
+            raise ValueError("Ordered complete source-run range required")
+        counts = {status: 0 for status in RETAINED_DISPOSITIONS}
+        for disposition in dispositions:
+            counts[disposition["status"]] += 1
+        if any(population_window.get(status) != count
+               for status, count in counts.items()):
+            raise ValueError("Disposition counts differ from observed status")
+
+    if occupied_uids.intersection(target_window["uids"]):
+        raise ValueError("Target Full128 window overlaps retained work")
+    return sorted(set(resolved))
 
 
 def window_limits(pricing: dict, window: dict) -> dict:
@@ -164,6 +376,8 @@ def _canonical_paths(root: Path, args) -> None:
         "unit_manifest": root /
             "inputs/actionbench-full128-snapshots/unit-manifest.json",
         "environment": root / "inputs/native-runtime/environment.json",
+        "active_batch_reconciliation": root /
+            "inputs/actionbench-full128-queue/active-batch-reconciliation.json",
     }
     for name, path in expected.items():
         if Path(getattr(args, name)).resolve() != path:
@@ -234,6 +448,9 @@ def build_plan(args) -> dict:
     pricing = json.loads(args.pricing.read_text())
     verified, admission = verify_pricing_receipt(root, pricing)
     window = select_priced_window(verified, args.window_id)
+    reconciliation = json.loads(args.active_batch_reconciliation.read_text())
+    reconciliation_paths = validate_active_batch_reconciliation(
+        root, verified, reconciliation, window)
     environment = json.loads(args.environment.read_text())
     environment_paths = validate_environment_closure(
         root, args.environment, environment, args.gpu_uuid)
@@ -250,8 +467,9 @@ def build_plan(args) -> dict:
         args.snapshot_admission, args.dataset_semantics, args.unit_manifest,
     ]
     seed_paths.extend(environment_paths)
-    input_refs = reference_closure(root, [Path(path).resolve()
-                                          for path in seed_paths])
+    input_refs = build_input_ref_closure(
+        root, seed_paths,
+        [args.active_batch_reconciliation, *reconciliation_paths])
 
     sources = sorted((root / "actionmesh/research_math").rglob("*.py"))
     sources.extend(root / "actionmesh" / name for name in (
@@ -367,6 +585,8 @@ def build_plan(args) -> dict:
         "native_scientific_qualification": False,
         "candidate_methods_tested": False,
         "source_admission_run_id": admission["run_id"],
+        "reconciled_source_run_ids": [
+            run["run_id"] for run in reconciliation["source_runs"]],
     }
 
 
@@ -376,6 +596,7 @@ def main() -> int:
             "root", "plan-dir", "skill-dir", "pricing", "contract",
             "population", "snapshot-contract", "snapshot-admission",
             "dataset-semantics", "unit-manifest", "environment",
+            "active-batch-reconciliation",
             "source-root", "dataset-root", "weights-root"):
         parser.add_argument("--" + name, type=Path, required=True)
     parser.add_argument("--run-id", required=True)

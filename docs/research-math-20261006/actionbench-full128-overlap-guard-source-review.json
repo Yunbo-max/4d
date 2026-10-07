@@ -1,0 +1,69 @@
+{
+  "kind": "actionbench-full128-overlap-guard-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T16:58:42Z",
+  "status": "generated_unexecuted",
+  "base_remote_main": "b0471148cf9fa471a0f71458f022009871ce98a1",
+  "problem": "The prior compiler documented overlap reconciliation but did not require or validate a reconciliation input, so a caller could emit a window containing UIDs already completed, running, pending, or failed in population-gpu-current-r9.",
+  "reviewed_change": {
+    "compiler": {
+      "path": "actionmesh/prepare_actionbench_full128_window.py",
+      "sha256": "22c4f2b392ace03fe40d860d74a74cf7f2b5dc63bece461929ec359b3d986b76"
+    },
+    "tests": {
+      "path": "actionmesh/research_math/tests/test_actionbench_full128_window_plan.py",
+      "sha256": "3f8563afdcfb1bdcf5888370e46c104e30630370f7cb405ac81d1733f4413a19"
+    },
+    "window_contract": {
+      "path": "docs/research-math-20261006/actionbench-full128-window-plan-contract.json",
+      "sha256": "610e9425429356735444d70cb035972bb672852cd9a5cef3cec24ea6e8d95dda"
+    },
+    "reconciliation_contract": {
+      "path": "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+      "sha256": "336ac0b5a8b9b69f91498ea6539952991ddf0277067a9d0a8074f8f2d49a3b99"
+    }
+  },
+  "guards": [
+    "canonical reconciliation path is mandatory before plan-directory creation",
+    "population and pricing identities must match the admitted pricing receipt",
+    "population-gpu-current-r9 must be present with a 64-hex plan digest",
+    "population-gpu-current-r9 is independently fixed to indices [1,10) and plan digest 6bfec342ca9b2eb5b3f8174e2cf9be597d4b540da6615f62cd13bb48a0011ac1",
+    "this compiler revision accepts exactly the one retained r9 handoff; any later retained run requires reviewed code",
+    "the canonical campaign plan digest is independently recomputed rather than trusted as a claimed string",
+    "all nine campaign native-plan references require path plus SHA-256, resolve below the archived campaign root, and have independently recomputed native plan digests",
+    "validated historical JSON is staged as opaque byte-pinned evidence so its original run-relative inner paths cannot bind unrelated current-root files",
+    "the canonical campaign plan and status snapshot are rehashed, parsed and matched to the run, tasks, indices, observation and disposition counts",
+    "every retained source range must have exactly one ordered disposition per canonical UID",
+    "completed, running, pending and failed are the only dispositions",
+    "all reconciliation source references are SHA-256 verified and staged into every native input closure",
+    "any target-window intersection fails before a plan is emitted",
+    "queue approval, dispatch, scientific effect and candidate-test claims remain false"
+  ],
+  "authored_checks": 7,
+  "expected_current_test_methods_after_local_merge": 285,
+  "verification_performed_by_web": [
+    "Python AST parse",
+    "JSON parse",
+    "reference SHA-256 inspection",
+    "git diff --check"
+  ],
+  "verification_not_performed_by_web": [
+    "project software tests",
+    "plan generation",
+    "harness execution",
+    "official scoring",
+    "GPU workload"
+  ],
+  "independent_source_review": {
+    "status": "ready_to_deliver_generated_unexecuted",
+    "critical_findings_remaining": 0,
+    "important_findings_remaining": 0,
+    "scope": "Static source, tests and contracts only; Local software acceptance and runtime behavior remain unjudged."
+  },
+  "limitations": [
+    "A reconciliation snapshot permits plan generation only and does not prove later host liveness.",
+    "This compiler revision intentionally handles only the retained r9 handoff; a later retained run must not be squeezed into this schema without source review.",
+    "Local must copy and hash the exact campaign plan and observed status evidence, run the current whole software suite, and re-reconcile immediately before any dispatch decision.",
+    "The guard prevents duplicate retained UIDs; it does not convert engineering baselines into candidate scientific results."
+  ]
+}

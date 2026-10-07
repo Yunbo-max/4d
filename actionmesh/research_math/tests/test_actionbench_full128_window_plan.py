@@ -10,9 +10,14 @@ from types import SimpleNamespace
 import unittest
 
 from prepare_actionbench_full128_window import (
+    R9_CAMPAIGN_PLAN_PATH,
+    R9_STATUS_SNAPSHOT_PATH,
+    _plan_digest,
+    build_input_ref_closure,
     build_native_command,
     native_limits,
     select_priced_window,
+    validate_active_batch_reconciliation,
     validate_environment_closure,
     validate_native_plan_set,
     window_limits,
@@ -60,7 +65,325 @@ def pricing_fixture():
     }
 
 
+def evidence_fixture(root, pricing):
+    pricing_path = root / "inputs/actionbench-full128-queue/pricing.json"
+    pricing_path.parent.mkdir(parents=True, exist_ok=True)
+    pricing_path.write_text(json.dumps(pricing))
+    campaign_path = root / R9_CAMPAIGN_PLAN_PATH
+    campaign_path.parent.mkdir(parents=True, exist_ok=True)
+    archive_root = campaign_path.parent.parent.parent
+    tasks = []
+    native_paths = []
+    for index in range(1, 10):
+        relative = Path(
+            f"plans/population-gpu-current-r9/{index:03d}/native.json")
+        native_path = archive_root / relative
+        native_path.parent.mkdir(parents=True, exist_ok=True)
+        native = {
+            "schema_id": "experiment-run-plan",
+            "schema_version": "1.0.0",
+            "run_id": f"population-gpu-current-r9-unit-{index:03d}",
+            "purpose": "engineering",
+            "evidence_mode": "developmental",
+            "jobs": [],
+        }
+        native["plan_digest"] = _plan_digest(native)
+        native_path.write_text(json.dumps(native))
+        native_paths.append(native_path)
+        tasks.append({
+            "task_id": f"population-{index:03d}",
+            "plan_ref": {
+                "path": relative.as_posix(),
+                "sha256": hashlib.sha256(native_path.read_bytes()).hexdigest(),
+            },
+        })
+    campaign = {
+        "schema_id": "harness-plan",
+        "schema_version": "1.0.0",
+        "batch_id": "population-gpu-current-r9",
+        "tasks": tasks,
+    }
+    campaign["plan_digest"] = _plan_digest(campaign)
+    campaign_path.write_text(json.dumps(campaign))
+    status_path = root / R9_STATUS_SNAPSHOT_PATH
+    status_path.parent.mkdir(parents=True, exist_ok=True)
+    status_path.write_text(json.dumps({
+        "population_window": {
+            "run_id": "population-gpu-current-r9",
+            "plan_digest": campaign["plan_digest"],
+            "indices": list(range(1, 10)),
+            "observed_at": "2026-10-07T16:35:40Z",
+            "completed": 3,
+            "running": 1,
+            "pending": 5,
+            "failed": 0,
+        },
+    }))
+    refs = tuple({
+        "path": path.resolve().relative_to(root.resolve()).as_posix(),
+        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+    } for path in (pricing_path, campaign_path, status_path))
+    profile = {
+        "run_id": "population-gpu-current-r9",
+        "population_range": (1, 10),
+        "plan_digest": campaign["plan_digest"],
+        "campaign_plan_path": R9_CAMPAIGN_PLAN_PATH,
+        "status_snapshot_path": R9_STATUS_SNAPSHOT_PATH,
+    }
+    return (*refs, profile, native_paths)
+
+
+def reconciliation_fixture(pricing, pricing_ref, campaign_ref, status_ref,
+                           profile):
+    return {
+        "kind": "actionbench-full128-active-batch-reconciliation",
+        "version": "1.0.0",
+        "status": "reconciled_for_plan_generation",
+        "pricing_ref": pricing_ref,
+        "population_uid_sha256": pricing["population_uid_sha256"],
+        "observed_at": "2026-10-07T16:35:40Z",
+        "source_runs": [{
+            "run_id": "population-gpu-current-r9",
+            "plan_digest": profile["plan_digest"],
+            "population_start_index": 1,
+            "population_stop_index_exclusive": 10,
+            "campaign_plan_ref": campaign_ref,
+            "status_snapshot_ref": status_ref,
+            "dispositions": [{
+                "population_index": index,
+                "uid": f"uid-{index:03d}",
+                "status": "completed" if index < 4 else (
+                    "running" if index == 4 else "pending"),
+            } for index in range(1, 10)],
+        }],
+        "queue_approved": False,
+        "dispatch_ready": False,
+        "scientific_effect_qualification": False,
+        "candidate_methods_tested": False,
+    }
+
+
 class Full128WindowPlanTests(unittest.TestCase):
+    def test_archived_reconciliation_evidence_is_staged_without_root_rebinding(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            archived = root / "docs/archive/plans/r9/harness.json"
+            archived.parent.mkdir(parents=True)
+            archived.write_text(json.dumps({
+                "plan_ref": {"path": "plans/r9/001/native.json",
+                             "sha256": "a" * 64},
+            }))
+            refs = build_input_ref_closure(root, [], [archived])
+            self.assertEqual(refs, [{
+                "path": "docs/archive/plans/r9/harness.json",
+                "sha256": hashlib.sha256(archived.read_bytes()).hexdigest(),
+            }])
+            self.assertFalse((root / "plans/r9/001/native.json").exists())
+
+    def test_active_batch_reconciliation_allows_only_nonoverlapping_window(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             native_paths) = evidence_fixture(root, pricing)
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            refs = validate_active_batch_reconciliation(
+                root, pricing, reconciliation, pricing["windows"][1], profile)
+            self.assertEqual(refs, sorted({
+                (root / pricing_ref["path"]).resolve(),
+                (root / campaign_ref["path"]).resolve(),
+                (root / status_ref["path"]).resolve(),
+                *(path.resolve() for path in native_paths),
+            }))
+            with self.assertRaisesRegex(ValueError, "overlaps retained work"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][0], profile)
+            reconciliation["source_runs"][0]["dispositions"][0]["status"] = "failed"
+            status_path = root / status_ref["path"]
+            status = json.loads(status_path.read_text())
+            status["population_window"]["completed"] = 2
+            status["population_window"]["failed"] = 1
+            status_path.write_text(json.dumps(status))
+            reconciliation["source_runs"][0]["status_snapshot_ref"] = {
+                "path": status_ref["path"],
+                "sha256": hashlib.sha256(status_path.read_bytes()).hexdigest(),
+            }
+            with self.assertRaisesRegex(ValueError, "overlaps retained work"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][0], profile)
+
+    def test_active_batch_reconciliation_requires_r9_and_complete_range(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            valid = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            validate_active_batch_reconciliation(
+                root, pricing, valid, pricing["windows"][1], profile)
+            for mutation in ("missing-run", "missing-index", "duplicate-index",
+                             "shifted-range", "short-range"):
+                reconciliation = reconciliation_fixture(
+                    pricing, pricing_ref, campaign_ref, status_ref, profile)
+                if mutation == "missing-run":
+                    reconciliation["source_runs"] = []
+                elif mutation == "missing-index":
+                    reconciliation["source_runs"][0]["dispositions"].pop()
+                else:
+                    run = reconciliation["source_runs"][0]
+                    if mutation == "duplicate-index":
+                        run["dispositions"][-1] = dict(run["dispositions"][0])
+                    elif mutation == "shifted-range":
+                        run["population_start_index"] = 16
+                        run["population_stop_index_exclusive"] = 25
+                        run["dispositions"] = [{
+                            "population_index": index,
+                            "uid": f"uid-{index:03d}",
+                            "status": "pending",
+                        } for index in range(16, 25)]
+                    else:
+                        run["population_stop_index_exclusive"] = 9
+                        run["dispositions"].pop()
+                with self.subTest(mutation=mutation), self.assertRaisesRegex(
+                        ValueError,
+                        "exactly the retained r9|Known active batch|"
+                        "Complete source-run|Duplicate retained|"
+                        "Exact retained r9 range"):
+                    validate_active_batch_reconciliation(
+                        root, pricing, reconciliation, pricing["windows"][1],
+                        profile)
+
+    def test_active_batch_reconciliation_rejects_identity_or_claim_drift(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            cases = (
+                ("population_uid_sha256", "b" * 64),
+                ("queue_approved", True),
+                ("dispatch_ready", True),
+                ("candidate_methods_tested", True),
+            )
+            for key, value in cases:
+                reconciliation = reconciliation_fixture(
+                    pricing, pricing_ref, campaign_ref, status_ref, profile)
+                reconciliation[key] = value
+                with self.subTest(key=key), self.assertRaises(ValueError):
+                    validate_active_batch_reconciliation(
+                        root, pricing, reconciliation, pricing["windows"][1],
+                        profile)
+
+    def test_rejects_unbound_campaign_status_or_plan_digest(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             native_paths) = evidence_fixture(root, pricing)
+            for mutation in ("campaign-path", "status-path", "plan-digest",
+                             "status-counts"):
+                reconciliation = reconciliation_fixture(
+                    pricing, pricing_ref, campaign_ref, status_ref, profile)
+                run = reconciliation["source_runs"][0]
+                if mutation == "campaign-path":
+                    run["campaign_plan_ref"] = pricing_ref
+                elif mutation == "status-path":
+                    run["status_snapshot_ref"] = pricing_ref
+                elif mutation == "plan-digest":
+                    run["plan_digest"] = "b" * 64
+                else:
+                    status_path = root / status_ref["path"]
+                    status = json.loads(status_path.read_text())
+                    status["population_window"]["completed"] = 2
+                    status_path.write_text(json.dumps(status))
+                    run["status_snapshot_ref"] = {
+                        "path": status_ref["path"],
+                        "sha256": hashlib.sha256(status_path.read_bytes()).hexdigest(),
+                    }
+                with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                    validate_active_batch_reconciliation(
+                        root, pricing, reconciliation, pricing["windows"][1],
+                        profile)
+
+    def test_rejects_unhashed_or_changed_retained_native_plans(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             native_paths) = evidence_fixture(root, pricing)
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            native_paths[0].write_text("{}")
+            with self.assertRaisesRegex(ValueError, "Changed pinned file"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][1], profile)
+
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            campaign_path = root / campaign_ref["path"]
+            campaign = json.loads(campaign_path.read_text())
+            campaign["tasks"][0]["plan_ref"].pop("sha256")
+            campaign["plan_digest"] = _plan_digest(campaign)
+            campaign_path.write_text(json.dumps(campaign))
+            profile["plan_digest"] = campaign["plan_digest"]
+            reconciliation["source_runs"][0]["plan_digest"] = campaign["plan_digest"]
+            reconciliation["source_runs"][0]["campaign_plan_ref"] = {
+                "path": campaign_ref["path"],
+                "sha256": hashlib.sha256(campaign_path.read_bytes()).hexdigest(),
+            }
+            status_path = root / status_ref["path"]
+            status = json.loads(status_path.read_text())
+            status["population_window"]["plan_digest"] = campaign["plan_digest"]
+            status_path.write_text(json.dumps(status))
+            reconciliation["source_runs"][0]["status_snapshot_ref"] = {
+                "path": status_ref["path"],
+                "sha256": hashlib.sha256(status_path.read_bytes()).hexdigest(),
+            }
+            with self.assertRaisesRegex(ValueError, "hash-bound retained native"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][1], profile)
+
+    def test_rejects_campaign_digest_tampering_or_additional_source_runs(self):
+        from tempfile import TemporaryDirectory
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            pricing = pricing_fixture()
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            campaign_path = root / campaign_ref["path"]
+            campaign = json.loads(campaign_path.read_text())
+            campaign["unbound_field"] = "tamper"
+            campaign_path.write_text(json.dumps(campaign))
+            reconciliation["source_runs"][0]["campaign_plan_ref"] = {
+                "path": campaign_ref["path"],
+                "sha256": hashlib.sha256(campaign_path.read_bytes()).hexdigest(),
+            }
+            with self.assertRaisesRegex(ValueError, "Campaign plan does not bind"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][1], profile)
+
+            (pricing_ref, campaign_ref, status_ref, profile,
+             _) = evidence_fixture(root, pricing)
+            reconciliation = reconciliation_fixture(
+                pricing, pricing_ref, campaign_ref, status_ref, profile)
+            reconciliation["source_runs"].append(
+                dict(reconciliation["source_runs"][0]))
+            with self.assertRaisesRegex(ValueError, "exactly the retained r9"):
+                validate_active_batch_reconciliation(
+                    root, pricing, reconciliation, pricing["windows"][1], profile)
+
     def test_selects_one_exact_priced_window_without_changing_order(self):
         pricing = pricing_fixture()
         selected = select_priced_window(pricing, "full128-window-02")

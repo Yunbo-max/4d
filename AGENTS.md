@@ -21,6 +21,7 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 13. `docs/research-math-20261006/actionbench-current-release-unit-contract.json`
 14. `docs/research-math-20261006/actionbench-complete-unit-admission-contract.json`
 15. `docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json`
+16. `docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
@@ -52,6 +53,13 @@ Do not infer current status from older receipts. Mathematical construction, a ge
   headroom to the admitted complete-unit elapsed time and partitions all 128 UIDs
   without selection. Its output is not an executable queue and must retain
   `queue_approved=false`, `queue_generated=false` and `dispatch_ready=false`.
+- Before compiling a Full128 window, promote a hash-bound active-batch
+  reconciliation at the canonical path. This compiler revision accepts exactly
+  the complete retained `population-gpu-current-r9` handoff: the canonical
+  harness digest must recompute, and every referenced native plan must resolve
+  with its own SHA-256 and valid plan digest. Any intersecting completed,
+  running, pending, or failed UID blocks plan generation and may not be retried
+  or omitted. A later retained run requires a reviewed compiler revision.
 - Bind each native score to the sample UID, protocol/device manifest, evaluator/source hashes, mesh/GT/report hashes, and pass manifest. Re-run the committed integrity validator before accepting a score.
 - Debug from the earliest causal source or configuration and the attempt log. Do not patch only the final symptom.
 
@@ -60,3 +68,4 @@ Do not infer current status from older receipts. Mathematical construction, a ge
 - Fill the actual window ID and result paths in the round review packet; never invent future attempt paths.
 - Push reviewable summaries, receipts, and source-safe logs to `main` with expected-head/concurrent-update protection. Do not commit private credentials or large raw assets.
 - Read back the final commit and report the exact commit plus result locator. Until that readback exists, the scientific state remains unchanged.
+

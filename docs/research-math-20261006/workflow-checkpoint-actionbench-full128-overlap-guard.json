@@ -1,0 +1,57 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T16:58:42Z",
+  "project_id": "4d-mechanism-boundaries",
+  "route_id": "baseline-qualification",
+  "role": "web_supervisor",
+  "current_node": "B/S native baseline qualification and safe Full128 scheduling",
+  "decision": "Repair the canonical window compiler so active-batch reconciliation is a fail-closed executable precondition rather than a documentation-only instruction.",
+  "rationale": "The latest verified remote checkpoint has five r9 units completed, one running and three pending. Generating a target window without byte-bound retained dispositions and the nine exact native plans could duplicate live work, retry natural failures or omit completed outcomes.",
+  "evidence_refs": [
+    {
+      "path": "docs/research-math-20261006/actionbench-full128-overlap-guard-source-review.json"
+    },
+    {
+      "path": "docs/research-math-20261006/actionbench-full128-active-batch-reconciliation-contract.json",
+      "sha256": "336ac0b5a8b9b69f91498ea6539952991ddf0277067a9d0a8074f8f2d49a3b99"
+    },
+    {
+      "path": "actionmesh/prepare_actionbench_full128_window.py",
+      "sha256": "22c4f2b392ace03fe40d860d74a74cf7f2b5dc63bece461929ec359b3d986b76"
+    }
+  ],
+  "completed": [
+    "authored strict reconciliation schema and target-overlap validator",
+    "made the canonical reconciliation path mandatory",
+    "independently recomputed the campaign and all nine native-plan digests",
+    "restricted this compiler revision to the sole retained r9 handoff",
+    "made archived reconciliation closure root-safe by staging validated historical JSON as opaque byte-pinned evidence",
+    "staged verified campaign, status and nine native plans into every native unit input closure",
+    "authored seven focused fail-closed checks",
+    "updated Local exact invocation and repository execution rules"
+  ],
+  "pending": [
+    "Local runs the current merged software-acceptance suite",
+    "Local promotes an immutable r9 reconciliation with exact source refs",
+    "Local generates and freezes a nonoverlapping window plan",
+    "Local re-reconciles the host immediately before any later dispatch",
+    "official full-population baseline reproduction and scorer replay remain incomplete"
+  ],
+  "scientific_status": {
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0,
+    "queue_approved": false,
+    "dispatch_ready": false
+  },
+  "resource_limits": {
+    "gpu_count": 1,
+    "gpu_model": "NVIDIA GeForce RTX 2080 Ti",
+    "unit_timeout_seconds": 1664,
+    "workload_budget_seconds": 27000,
+    "collection_reserve_seconds": 1800,
+    "max_parallel_gpu_tasks": 1
+  },
+  "next_discriminating_action": "After r9 reaches a safe observed boundary, Local validates all 285 expected checks, freezes the exact r9 reconciliation, and emits only a nonoverlapping window for source review; no GPU execution is implied."
+}
