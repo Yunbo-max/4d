@@ -41,7 +41,9 @@ The historical software-test receipts are engineering evidence only. They do not
 12. `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
 13. `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
 14. `docs/research-math-20261006/actionbench-current-release-unit-contract.json`
-15. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
+15. `docs/research-math-20261006/actionbench-complete-unit-admission-contract.json`
+16. `docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json`
+17. `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md) before resolving the runtime JSON. Its new CPU-only capture is pending Local acceptance.
 
@@ -60,6 +62,8 @@ Also read [NATIVE_RUNTIME_CAPTURE.md](../../docs/research-math-20261006/NATIVE_R
 | Full-128 snapshot admission | `actionmesh/prepare_actionbench_snapshots.py`, `actionmesh/research_math/snapshot_admission.py` | CPU-only immutable revision/byte/file closure; generated, unexecuted |
 | Full-128 dataset semantics | `actionmesh/prepare_actionbench_dataset_semantics.py`, `actionmesh/research_math/actionbench_dataset_semantics.py` | revalidates admitted bytes and all 128 tensor/camera/RGBA structures; generated, unexecuted, no scientific qualification |
 | Current-release unit manifest | `actionmesh/prepare_actionbench_unit_manifest.py`, `actionmesh/research_math/actionbench_unit_manifest.py` | freezes the first canonical UID, exact input/source/model identities and later three-arm output/timing boundary; CPU-only, generated, unexecuted |
+| Complete-unit admission | `actionmesh/prepare_complete_unit_admission.py`, `actionmesh/research_math/complete_unit_admission.py` | rehashes returned terminal unit records, outputs and telemetry; CPU-only, generated, unexecuted |
+| Full-128 queue pricing | `actionmesh/prepare_actionbench_queue_pricing.py`, `actionmesh/research_math/actionbench_queue_pricing.py` | consumes only an admitted complete unit and freezes eight ordered capacity windows; CPU-only, generated, unexecuted, never dispatches |
 | Unit tests | `actionmesh/research_math/tests/` | software acceptance only |
 | Evidence exporter | `scripts/research_evidence_20261006/export_feedback.py` | full historical closure exporter; not required for the three-file controller transfer |
 
@@ -145,12 +149,31 @@ precision. No eight-hour queue may be generated from one-UID parity timing.
 The unit contract fixes UID
 `000-000_03b69da8d2c94b5999bcf2605ee2ecd9` before outcomes and defines a later
 complete boundary with native, world-Gaussian and body-Gaussian arms plus all
-three official score rows. The GPU complete-unit runner and single-GPU plan
-builder are now authored but unexecuted. The delivered plan must bind the entire
-successful output closure in its native receipt, not only `result.json`. It may
-be generated only after snapshot, dataset-semantic and unit-manifest admission;
-its actual timing/VRAM receipt, not its code or the old parity timing, is the
-first evidence eligible to price a later queue.
+three official score rows. The GPU complete-unit runner and single-GPU plan are
+authored. The default BF16 attempt is a retained Stage-I OOM; the separately
+versioned FP16 low-RAM repair completed its 16-frame generation after 792.54
+seconds and subsequently completed all three official rows in 1,330.47 seconds
+with a sampled 10,255 MiB peak. The delivered plan
+binds the entire successful output closure in its native receipt, not only
+`result.json`. Snapshot, dataset-semantic and unit-manifest admission have now
+returned successfully. Its timing/VRAM cannot
+price a queue until the CPU-only `prepare_complete_unit_admission.py` path
+verifies the prospective contract, canonical run records, exact 117 receipt
+outputs, exact 121 nested outputs (116 declared plus five retained evaluator
+caches), three score rows and resource telemetry. That
+admitted measurement—not code, live progress or old parity timing—is the first
+evidence eligible to price a later queue.
+
+The next conditional CPU-only pass is now authored. After the complete-unit
+admission succeeds, run `prepare_actionbench_queue_pricing.py` exactly as shown
+in `LOCAL_AGENT_RUNBOOK.md`. It applies 25% operational headroom to the measured
+1,330.465551-second unit, yielding a 1,664-second unit timeout, 16 complete units
+per 27,000-second workload budget, 26,624 planned seconds, 376 seconds of extra
+workload slack, and eight ordered windows for the 128 UIDs. The generated
+pricing manifest explicitly keeps queue approval, queue generation, dispatch,
+native scientific qualification and candidate testing false. A later admitted
+per-UID runner and official baseline/replay qualification are still required
+before any window is executable.
 
 ## Runtime supplement — 2026-10-06
 

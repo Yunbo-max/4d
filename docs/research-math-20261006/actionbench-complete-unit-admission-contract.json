@@ -1,0 +1,92 @@
+{
+  "kind": "actionbench-complete-unit-admission-contract",
+  "version": "1.1.0",
+  "recorded_at": "2026-10-07T11:54:00Z",
+  "amended_at": "2026-10-07T12:48:13Z",
+  "amendment_reason": "Terminal inventory reconciliation only: retain the prospective 117-file receipt closure and additionally bind the five CPython 3.12 evaluator caches observed in the runner's pre-result inventory. No score threshold or scientific decision changed.",
+  "scope": "Prospective fail-closed admission of the first successful full FP16 low-RAM current-release generation, export, three-arm control and official-scoring unit. This prices one engineering unit only.",
+  "source_unit": {
+    "run_id": "complete-lowram-r7",
+    "task_id": "complete-fp16-lowram-v1-three-arm-unit",
+    "trial_id": "complete-fp16-lowram-v1-three-arm-unit",
+    "approved_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+    "uid": "000-000_03b69da8d2c94b5999bcf2605ee2ecd9",
+    "runtime_profile": "fp16-lowram-v1",
+    "generation_seed": 42,
+    "official_scoring_seed": 44,
+    "successful_output_file_count": 117,
+    "nested_pre_result_output_count": 121,
+    "incidental_python_cache_paths": [
+      "official-scores.json.official/official-source/__pycache__/benchmark.cpython-312.pyc",
+      "official-scores.json.official/official-source/__pycache__/chamfer.cpython-312.pyc",
+      "official-scores.json.official/official-source/__pycache__/icp.cpython-312.pyc",
+      "official-scores.json.official/official-source/__pycache__/sample_mesh.cpython-312.pyc",
+      "official-scores.json.official/official-source/__pycache__/sample_point_cloud.cpython-312.pyc"
+    ]
+  },
+  "required_origin": {
+    "harness_status": "completed",
+    "native_receipt_status": "completed",
+    "attempt_status": "completed",
+    "attempt_exit_code": 0,
+    "task_count": 1,
+    "job_count": 1,
+    "attempt_count": 1,
+    "purpose": "engineering",
+    "evidence_mode": "developmental",
+    "arm_role": "complete-current-release-calibration"
+  },
+  "required_closure": {
+    "plan_output_paths": "exact ordered output of complete_unit_output_paths(uid)",
+    "receipt_output_refs": "exactly the same 117 paths, each rehashed",
+    "runner_nested_outputs": "exactly the 121 files present before result.json is written: 116 declared non-result files plus five CPython 3.12 evaluator caches, all staged and rechecked by byte count and SHA-256",
+    "origin_records": [
+      "harness plan, state, report, task, result and execution context",
+      "native plan, receipt, attempt and process guard",
+      "generation and official-scoring execution records"
+    ]
+  },
+  "required_measurement": {
+    "stages": [
+      "generation",
+      "export",
+      "controls",
+      "official_scoring"
+    ],
+    "stage_status": "completed",
+    "maximum_elapsed_seconds": 27000,
+    "gpu_sample_interval_seconds": 1,
+    "gpu_errors": [],
+    "gpu_peak_rule": "finite, positive and no larger than the single harness GPU total memory",
+    "host_sample_interval_seconds": 1,
+    "host_errors": [],
+    "raw_telemetry_rule": "Reparse retained JSONL, reject malformed/error/nonfinite rows, and reproduce counts, device identity, peaks, minimum free disk, cadence and host coverage.",
+    "score_arms": [
+      "native",
+      "world_gaussian",
+      "body_gaussian"
+    ],
+    "score_metrics": [
+      "cd_3d",
+      "cd_4d",
+      "cd_motion"
+    ],
+    "score_rule": "Retain finite nonnegative official outputs. No performance threshold or scientific winner is inferred from this calibration unit."
+  },
+  "required_status": "admitted_engineering_complete_unit",
+  "output_target": "inputs/complete-unit-admissions/complete-lowram-r7.json",
+  "queue_policy": {
+    "eligible_for_queue_pricing_only_after_admission": true,
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "workload_budget_seconds": 27000,
+    "queue_must_use_this_complete_multi_arm_measurement": true,
+    "queue_generated_here": false
+  },
+  "failure_policy": "Any missing or changed origin record, output, nested hash, stage, score arm or resource sample rejects admission. Preserve the source attempt; do not repair evidence in place.",
+  "scientific_effect_qualification": false,
+  "native_scientific_qualification": false,
+  "candidate_methods_tested": false,
+  "queue_approved": false,
+  "queue_generated": false
+}

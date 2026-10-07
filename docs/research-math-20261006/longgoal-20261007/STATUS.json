@@ -6,11 +6,11 @@
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
   "updated_at": "2026-10-07T15:09:06.624807+00:00",
   "software_acceptance": {
-    "run_id": "observer-green-r8",
-    "tests_passed": 233,
+    "run_id": "population-green-r9",
+    "tests_passed": 238,
     "tests_failed": 0,
-    "plan_digest": "34dc630eaad3bf59da7075c42972ea407732306e39f076e13336510741ae94d8",
-    "scope": "prior 228 checks plus five decoder observer engineering checks"
+    "plan_digest": "3a91c1be43e9c3daf5eb108e92173a99758b76cf18662946924e6e0344450834",
+    "scope": "population indexed-selection and bounded-window regression checks plus prior suite"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -247,9 +247,8 @@
     }
   },
   "concurrent_upstream": {
-    "revision": "87f99d275a07a11a7fb9081596bb24ac33c2af86",
-    "status": "merged; all 11 unit-manifest checks passed in software-unit-r4 (216 total), subsequently 218 passed",
-    "first_unit_policy": "preserve default BF16 non-low-RAM natural failure before separately versioned repair"
+    "revision": "de608b1",
+    "status": "merged authored admission and pricing checks; execution pending"
   },
   "complete_unit_runner": {
     "path": "actionmesh/research_math/complete_unit_runner.py",
@@ -349,5 +348,71 @@
       "recorded_at": "2026-10-07T15:09:06.624807+00:00",
       "correction": "A live SSH shell was incorrectly treated as evidence of a running experiment. r8 parity actually completed at 2026-10-07T12:41:56.372766Z. No native candidate experiment has run."
     }
-  ]
+  ],
+  "complete_unit_admission": {
+    "status": "prospective_contract_and_finalizer_authored_unexecuted",
+    "contract": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+    "plan_builder": "actionmesh/prepare_complete_unit_admission.py",
+    "finalizer": "actionmesh/research_math/complete_unit_admission.py",
+    "source_run_id": "complete-lowram-r7",
+    "source_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+    "source_status": "terminal_completed_engineering_only",
+    "source_elapsed_seconds": 1330.4655511886813,
+    "source_observed_peak_mib": 10255,
+    "required_receipt_outputs": 117,
+    "required_nested_pre_result_outputs": 121,
+    "tests_authored": 12,
+    "tests_executed": 0,
+    "gpu_count": 0,
+    "complete_unit_admitted": false,
+    "eligible_for_queue_pricing": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
+    "queue_approved": false,
+    "queue_generated": false
+  },
+  "full128_queue_pricing": {
+    "status": "prospective_contract_and_cpu_plan_authored_unexecuted",
+    "contract": "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+    "plan_builder": "actionmesh/prepare_actionbench_queue_pricing.py",
+    "finalizer": "actionmesh/research_math/actionbench_queue_pricing.py",
+    "source_admission": "inputs/complete-unit-admissions/complete-lowram-r7.json",
+    "source_admission_observed": false,
+    "source_elapsed_seconds": 1330.4655511886813,
+    "headroom_numerator": 5,
+    "headroom_denominator": 4,
+    "unit_timeout_seconds_if_admitted": 1664,
+    "units_per_window_if_admitted": 16,
+    "planned_workload_seconds_per_full_window": 26624,
+    "unallocated_workload_seconds_per_full_window": 376,
+    "collection_reserve_seconds": 1800,
+    "window_count_if_admitted": 8,
+    "tests_authored": 8,
+    "tests_executed": 0,
+    "gpu_count": 0,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
+    "scientific_effect_qualification": false,
+    "native_scientific_qualification": false,
+    "candidate_methods_tested": false
+  },
+  "population_window": {
+    "remote_root": "/root/actionmesh-research-staging/4d-longgoal-r9",
+    "manifest_run": "population-manifests-r9",
+    "indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "manifests_admitted": 9,
+    "gpu_launched": false
+  }
 }

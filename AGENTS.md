@@ -19,6 +19,8 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 11. `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
 12. `docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json`
 13. `docs/research-math-20261006/actionbench-current-release-unit-contract.json`
+14. `docs/research-math-20261006/actionbench-complete-unit-admission-contract.json`
+15. `docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
@@ -40,6 +42,16 @@ Do not infer current status from older receipts. Mathematical construction, a ge
 - The hard window is 28,800 seconds with 1,800 seconds reserved for collection. Measure a complete current multi-arm unit before budgeting; do not reuse old two-arm or sparse-diagnostic timing.
 - Source-inspect the harness, plan, and execution code before approval. Confirm exact commands, write targets, timeout behavior, GPU count, device policy, and evidence outputs.
 - Retain the plan, attempts, stdout/stderr, status snapshots, runtime/device samples, output hashes, native evaluator sources, requests, reports, and raw per-pass score outputs.
+- Before using a completed calibration unit for queue pricing, run the committed
+  CPU-only complete-unit admission plan. It must rehash the exact 117 receipt
+  outputs, the runner's 121-file pre-result inventory (116 declared outputs plus
+  five exact retained evaluator caches), canonical harness/native
+  records, all three score rows, and resource telemetry. A completed runner
+  summary or receipt alone is insufficient.
+- Queue pricing is a separate CPU-only admitted pass. It applies the frozen 5/4
+  headroom to the admitted complete-unit elapsed time and partitions all 128 UIDs
+  without selection. Its output is not an executable queue and must retain
+  `queue_approved=false`, `queue_generated=false` and `dispatch_ready=false`.
 - Bind each native score to the sample UID, protocol/device manifest, evaluator/source hashes, mesh/GT/report hashes, and pass manifest. Re-run the committed integrity validator before accepting a score.
 - Debug from the earliest causal source or configuration and the attempt log. Do not patch only the final symptom.
 

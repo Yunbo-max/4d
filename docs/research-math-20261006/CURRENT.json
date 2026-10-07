@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T10:58:49Z",
+  "recorded_at": "2026-10-07T14:07:55Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Local evidence now includes 224/224 software checks at base b3a4782, finalized one-UID engineering scorer parity, current runtime capture, and live pinned-source/data staging. The default non-fast non-low-RAM BF16 complete-unit runner and one-GPU plan are authored but unexecuted; the plan now binds the exhaustive successful raw-output closure rather than result.json alone. Full128 snapshot/dataset-semantic/unit-manifest admissions, the actual complete-unit timing/VRAM result, formal baseline/native qualification and all 15 candidate comparisons remain pending. There is no candidate native result, formal outcome or queue.",
+  "status": "Local evidence includes 228/228 software checks, finalized one-UID engineering scorer parity, runtime capture, and completed Full128 snapshot, dataset-semantic and unit-manifest admissions. The frozen default BF16 unit failed naturally at Stage I with a sampled 20673 MiB peak. Its separately reviewed non-fast FP16 low-RAM repair completed all three official score rows in 1330.47 seconds with a sampled 10255 MiB peak. A prospective CPU-only finalizer is authored to admit that engineering unit only after rehashing the exact 117 receipt outputs and exact 121 nested pre-result files. A second fail-closed CPU-only pass is now authored to price, but never approve or generate, eight ordered 16-UID Full128 windows from that admission using a 1664-second headroom-adjusted unit timeout. Both passes are unexecuted; no complete-unit admission, approved/executable queue, candidate native result or formal outcome exists.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -213,7 +213,7 @@
     "installed_scientific_protocol_generated": false,
     "native_contract_qualified": false,
     "parity_module_checks_total": 21,
-    "new_checks_authored": 7,
+    "new_checks_authored": 8,
     "new_checks_executed": 0,
     "official_scores_run": 0,
     "candidate_designs_verified": 0,
@@ -348,7 +348,7 @@
     "candidate_native_results": 0
   },
   "actionbench_full128_snapshot_admission": {
-    "status": "generated_unexecuted_prior_parity_still_pending",
+    "status": "completed_snapshot_r6",
     "recorded_at": "2026-10-07T07:59:45Z",
     "base_commit": "3fb78a5f790b5e5be72bbef49fa418dce7d61323",
     "contract_ref": {
@@ -368,7 +368,7 @@
     "immutable_hub_revisions_bound": 5,
     "official_git_and_submodule_bound": true,
     "exact_released_uid_and_frame_closure_bound": true,
-    "snapshot_admission_executed": false,
+    "snapshot_admission_executed": true,
     "current_authored_test_methods_observed": 179,
     "new_checks_authored": 18,
     "tests_executed_by_web": 0,
@@ -380,7 +380,7 @@
     "candidate_native_results": 0
   },
   "actionbench_full128_dataset_semantics": {
-    "status": "generated_unexecuted_prior_parity_and_snapshot_admission_pending",
+    "status": "completed_semantics_r6",
     "recorded_at": "2026-10-07T09:05:28Z",
     "base_commit": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
     "contract_ref": {
@@ -401,7 +401,7 @@
     "frames_checked_when_executed": 2048,
     "snapshot_bytes_revalidated_before_parse": true,
     "tracked_correspondence_proved": false,
-    "dataset_semantics_executed": false,
+    "dataset_semantics_executed": true,
     "current_authored_test_methods_observed": 197,
     "new_checks_authored": 18,
     "tests_executed_by_web": 0,
@@ -417,14 +417,14 @@
     "status": "engineering_parity_finalized_native_science_pending",
     "ledger_path": "docs/research-math-20261006/longgoal-20261007/STATUS.json",
     "report_path": "docs/research-math-20261006/longgoal-20261007/README.md",
-    "software_checks_passed": 201,
+    "software_checks_passed": 228,
     "one_uid_parity_comparisons_passed": 9,
     "native_contract_qualified": false,
     "candidate_native_results": 0,
     "candidate_count": 15
   },
   "actionbench_current_release_unit_manifest": {
-    "status": "generated_unexecuted_parity_complete_snapshot_and_semantics_pending",
+    "status": "completed_unit_manifest_r6",
     "recorded_at": "2026-10-07T10:15:00Z",
     "base_commit": "00b30fd3dfc75678839b6fe8dc1f6060a14b5a84",
     "contract_ref": {
@@ -455,8 +455,8 @@
     "official_scorer_sampling_seed": 44,
     "arms_bound": 3,
     "default_nonfast_bfloat16_natural_failure_preserved": true,
-    "unit_manifest_executed": false,
-    "complete_unit_runner_authored": false,
+    "unit_manifest_executed": true,
+    "complete_unit_runner_authored": true,
     "complete_unit_executed": false,
     "current_authored_test_methods_observed": 212,
     "new_checks_authored": 11,
@@ -471,8 +471,8 @@
     "candidate_native_results": 0
   },
   "complete_unit_output_closure": {
-    "status": "generated_unexecuted_after_224_base_checks",
-    "recorded_at": "2026-10-07T10:58:49Z",
+    "status": "fp16_lowram_complete_three_arm_engineering_unit_unadmitted",
+    "recorded_at": "2026-10-07T12:48:13Z",
     "base_commit": "b3a4782996ae7162faace0a419cf64e9e3edcdd7",
     "checkpoint_ref": {
       "path": "docs/research-math-20261006/workflow-checkpoint-complete-unit-output-closure.json",
@@ -484,15 +484,77 @@
     "successful_output_file_count": 117,
     "first_attempt_configuration": "non-fast non-low-RAM bfloat16",
     "automatic_low_ram_or_float16_fallback": false,
-    "base_revision_software_checks_passed": 224,
+    "base_revision_software_checks_passed": 228,
     "new_checks_authored": 2,
     "current_authored_test_methods_observed": 226,
     "new_checks_executed_by_web": 0,
-    "snapshot_admission_complete": false,
-    "dataset_semantics_admission_complete": false,
-    "unit_manifest_executed": false,
-    "complete_unit_executed": false,
+    "snapshot_admission_complete": true,
+    "dataset_semantics_admission_complete": true,
+    "unit_manifest_executed": true,
+    "complete_unit_executed": true,
+    "complete_unit_elapsed_seconds": 1330.4655511886813,
+    "complete_unit_observed_peak_mib": 10255,
+    "runner_pre_result_output_count": 121,
     "queue_generated": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "complete_unit_admission": {
+    "status": "prospective_contract_and_finalizer_authored_unexecuted",
+    "recorded_at": "2026-10-07T12:48:13Z",
+    "source_run_id": "complete-lowram-r7",
+    "source_approved_plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+    "source_run_last_observed": "terminal completed; all three official rows succeeded; elapsed 1330.4655511886813 seconds; sampled peak 10255 MiB",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-complete-unit-admission-contract.json",
+      "sha256": "37b115bee75d20a72ec028718a7ec1e047b6c69e458e697197b8445a3fd3fb0d"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-complete-unit-admission.json",
+      "sha256": "e57fbf89d6f739f42d652c09c2d2e8d055f9e28d1e18a40846dbdce191563790"
+    },
+    "successful_output_file_count_required": 117,
+    "nested_pre_result_output_count_required": 121,
+    "gpu_count": 0,
+    "new_checks_authored": 12,
+    "current_authored_test_methods_observed": 245,
+    "new_checks_executed_by_web": 0,
+    "complete_unit_admitted": false,
+    "eligible_for_queue_pricing": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  },
+  "actionbench_full128_queue_pricing": {
+    "status": "prospective_contract_and_cpu_plan_authored_unexecuted",
+    "recorded_at": "2026-10-07T14:07:55Z",
+    "source_run_id": "complete-lowram-r7",
+    "source_admission_required": true,
+    "source_admission_observed": false,
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-queue-pricing-contract.json",
+      "sha256": "af26ce6636b0c27f10e13f48c488d3b3b83ef0a555654ef5cdfb4f122301648c"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-queue-pricing.json",
+      "sha256": "9f391ec479331aa1fe49f45efcddc3aee9011dd5c3cf21be23ee19062e972b64"
+    },
+    "measured_complete_unit_seconds": 1330.4655511886813,
+    "unit_runtime_headroom": "5/4",
+    "unit_timeout_seconds_if_admitted": 1664,
+    "units_per_window_if_admitted": 16,
+    "planned_workload_seconds_per_full_window": 26624,
+    "unallocated_workload_seconds_per_full_window": 376,
+    "collection_reserve_seconds": 1800,
+    "window_count_if_admitted": 8,
+    "new_checks_authored": 8,
+    "current_authored_test_methods_observed": 253,
+    "new_checks_executed_by_web": 0,
+    "queue_priced": false,
+    "queue_approved": false,
+    "queue_generated": false,
+    "dispatch_ready": false,
     "candidate_native_results": 0,
     "candidate_formal_outcomes": 0
   }
