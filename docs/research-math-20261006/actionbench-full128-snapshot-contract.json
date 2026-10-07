@@ -1,0 +1,111 @@
+{
+  "kind": "actionbench-full128-snapshot-contract",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T07:59:45Z",
+  "status": "generated_unexecuted",
+  "scope": "Fail-closed byte, revision and released-population file-closure admission for the pinned current-public-release ActionMesh reproduction path. This is engineering staging only, not inference, scoring, runtime compatibility, exact published-run provenance or scientific qualification.",
+  "source": {
+    "repository": "facebookresearch/actionmesh",
+    "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "tracked_worktree_clean_required": true,
+    "submodules": {
+      "third_party/TripoSG": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c"
+    }
+  },
+  "snapshots": {
+    "dataset": {
+      "repository": "facebook/actionbench",
+      "repository_type": "dataset",
+      "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+      "intended_local_role": "ActionBench released inputs and ground truth"
+    },
+    "actionmesh": {
+      "repository": "facebook/ActionMesh",
+      "repository_type": "model",
+      "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+      "intended_local_role": "pretrained_weights/ActionMesh"
+    },
+    "triposg": {
+      "repository": "VAST-AI/TripoSG",
+      "repository_type": "model",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+      "intended_local_role": "pretrained_weights/TripoSG"
+    },
+    "dinov2": {
+      "repository": "facebook/dinov2-large",
+      "repository_type": "model",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "intended_local_role": "pretrained_weights/dinov2"
+    },
+    "rmbg": {
+      "repository": "briaai/RMBG-1.4",
+      "repository_type": "model",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+      "intended_local_role": "pretrained_weights/RMBG"
+    }
+  },
+  "dataset_layout": {
+    "population_size": 128,
+    "frames_per_sample": 16,
+    "data_directory": "data",
+    "frame_directory": "imgs",
+    "frame_pattern": "{index:02d}.png",
+    "required_sample_files": [
+      "camera.json",
+      "surfaces.npy"
+    ],
+    "uid_source_ref": {
+      "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+      "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+    },
+    "uid_set_sha256": "ced97606907c703e99da4abd4066ed462a4c6e2d4cdbe82124bce8a1695df932",
+    "exact_uid_set_required": true,
+    "exact_per_uid_file_set_required": true
+  },
+  "hub_local_directory_policy": {
+    "required_revision_evidence": "Every admitted content file has a .cache/huggingface/download/<relative-path>.metadata sidecar whose first line is the declared immutable revision and whose second line is a nonempty ETag.",
+    "excluded_from_content_manifest": ".cache/huggingface metadata bytes",
+    "reason": "The metadata proves how hf download resolved each local file; the content manifest separately binds every admitted byte by size and SHA-256.",
+    "forbidden": [
+      "missing or revision-mismatched file metadata",
+      "unresolved Git LFS pointer content",
+      "downloaded HTML response content",
+      "symlink or non-regular content entry",
+      "empty content snapshot",
+      "file mutation during hashing"
+    ]
+  },
+  "admission_output": {
+    "kind": "actionbench-full128-snapshot-admission",
+    "version": "1.0.0",
+    "single_use_project_target": "inputs/actionbench-full128-snapshots/admission.json",
+    "required_status": "admitted_engineering_snapshot",
+    "complete_recursive_regular_file_manifests": true,
+    "per_file_fields": [
+      "path",
+      "bytes",
+      "sha256",
+      "etag"
+    ],
+    "scientific_effect_qualification": false,
+    "dispatch_ready": false,
+    "queue_generated": false
+  },
+  "execution": {
+    "plan_builder": "actionmesh/prepare_actionbench_snapshots.py",
+    "inner_module": "research_math.snapshot_admission",
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "network_required_by_admission": false,
+    "download_execution_is_separate": true,
+    "direct_inner_module_execution_allowed": false,
+    "tests_executed_by_web": 0
+  },
+  "limitations": [
+    "The current public revisions are not evidence of the unpublished revisions used for the official leaderboard row.",
+    "A matching snapshot admission does not prove that default bfloat16 or low-RAM/float16 execution is supported or leaderboard-equivalent on an RTX 2080 Ti.",
+    "File closure does not validate NumPy tensor shapes, camera semantics, model deserialization, dependency compatibility, inference, mesh export or the official scorer.",
+    "No complete-unit timing or peak VRAM exists; this contract cannot authorize or size the 28,800-second queue."
+  ]
+}

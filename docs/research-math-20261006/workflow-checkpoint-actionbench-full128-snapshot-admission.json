@@ -1,0 +1,97 @@
+{
+  "kind": "research-workflow-checkpoint",
+  "version": "1.0.0",
+  "checkpoint_id": "actionbench-full128-snapshot-admission-20261007",
+  "recorded_at": "2026-10-07T07:59:45Z",
+  "base_remote_commit": "3fb78a5f790b5e5be72bbef49fa418dce7d61323",
+  "workflow": "research-autopilot",
+  "status": "snapshot_admission_generated_unexecuted_prior_parity_still_pending",
+  "objective": "Turn the resolved current-public-release ActionMesh/data/model revisions into a reproducible, fail-closed Local byte/revision/file-closure admission step without launching inference or claiming unpublished leaderboard provenance.",
+  "contract_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+    "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+  },
+  "source_review_ref": {
+    "path": "docs/research-math-20261006/actionbench-full128-snapshot-source-review.json",
+    "sha256": "a0ef71f3328d9d1bc5071cf0810dcab1bc1daa8366c5cb5d6e86961341c47dc4"
+  },
+  "generated_refs": [
+    {
+      "path": "actionmesh/prepare_actionbench_snapshots.py",
+      "sha256": "0557e1f29085bc750edbc75d36b7d68e21b557416a702457fcbbb7528945dddc"
+    },
+    {
+      "path": "actionmesh/research_math/snapshot_admission.py",
+      "sha256": "59b4e4e61f1a5eaae330bf9550bda0e603a6d2876659e63173eb168e55eabeef"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_snapshot_admission.py",
+      "sha256": "9753470dac656049d50075eec2a6d9badb8fe6e747d000348b6afdb1999b6f19"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "f4fea27f9b91f7602ba8df2e93d5386ea4a97d2996fd539dfc966a2106f3ba71"
+    }
+  ],
+  "handoff_refs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "feee30c88bdc0018b33c9e23e973a9389c6c92738c61207e8cfaff757e831527"
+    },
+    {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "ef697cd0bbf2d977a944d9c8aa38177e88f9c228e40b37148c785ed4ab9600dd"
+    }
+  ],
+  "skill_reference_snapshot": {
+    "workflow-harness.md": "b2ab91c130e81871edc0e4815bd807e12c2baa245de704fe12356d8f3d585f77",
+    "repository-round-trips.md": "080c7cb185be241bf521180ddc4f88217711c27afc506744d2aa36ef4e593403",
+    "local-code-handoff.md": "eb4e402c498019a4c89f1fc73a8037ada85fe9d90a572ee568425cad6a0102f3",
+    "native-runner.md": "711aefad52429e6d3c5412b23bd8499f29972ca061f76b58a9b7901d1e9528c3",
+    "gpu-host-runtime.md": "a50a6614cb22b67615d3e5b73233f3a4be636385477d26fb61b2b28b8182bd1c",
+    "full-validation-and-review.md": "f705d04a7b836ec8eaa6121d8da708c76b903c5342a834a0a2d6a9e1835afe14",
+    "rolling-research-batches.md": "a43997f1309dcfdf1cafa77742e4051520e0686b7b19e6473fd698d74411c9a1",
+    "native-evaluation.md": "6262d90670f1ca667669f4b208a44df6aab748956b2360527e94f80b500c9a80"
+  },
+  "admission_scope": {
+    "official_git_revision_and_tree": true,
+    "triposg_submodule_revision": true,
+    "five_hub_revisions": true,
+    "per_file_hub_revision_metadata": true,
+    "recursive_content_size_sha256_etag_manifest": true,
+    "exact_128_uid_set": true,
+    "exact_16_frames_camera_and_surfaces_per_uid": true,
+    "gpu_count": 0,
+    "network_during_admission": false,
+    "inference": false,
+    "scoring": false
+  },
+  "fixed_rejections": [
+    "wrong or dirty official source tree",
+    "wrong TripoSG submodule",
+    "missing or mismatched Hub revision metadata",
+    "metadata parent symlink",
+    "content symlink or special file",
+    "unresolved LFS pointer or HTML response",
+    "empty or changed-while-hashing snapshot",
+    "UID-set or per-UID file closure mismatch",
+    "existing admission output overwrite"
+  ],
+  "execution": {
+    "current_authored_test_methods_observed": 179,
+    "new_test_methods_authored": 18,
+    "repository_tests_executed_by_web": 0,
+    "official_scorer_invocations": 0,
+    "inference_units": 0,
+    "gpu_workloads": 0,
+    "local_acceptance": "pending"
+  },
+  "scientific_boundary": "A future admitted manifest will establish only the exact local bytes and released ActionBench file closure for a newly versioned current-public-release reproduction. It cannot establish model/runtime compatibility, exact leaderboard provenance, official score reproduction, any candidate effect, or dispatch readiness.",
+  "earliest_unclosed_prerequisite": "Local current-revision whole-suite acceptance followed by the already-generated one-UID engineering official/faithful parity, complete-bundle promotion and CPU-only finalization.",
+  "next_executable_step": "After those earlier steps and the five pinned downloads, Local generates, source-inspects and executes the committed CPU-only snapshot plan, then returns its exact receipts, output hash and five manifest summaries. No GPU unit or 28,800-second queue is authorized by this checkpoint.",
+  "counters": {
+    "candidate_validation_designs_complete": 0,
+    "candidate_native_results": 0,
+    "candidate_formal_outcomes": 0
+  }
+}

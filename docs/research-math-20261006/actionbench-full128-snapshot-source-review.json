@@ -1,0 +1,88 @@
+{
+  "kind": "actionbench-full128-snapshot-source-review",
+  "version": "1.0.0",
+  "recorded_at": "2026-10-07T07:59:45Z",
+  "base_main_commit": "3fb78a5f790b5e5be72bbef49fa418dce7d61323",
+  "status": "source_review_complete_local_acceptance_pending",
+  "scope": "Static source review of the generated CPU-only snapshot plan builder, fail-closed admission implementation, engineering fixtures, contract and Local handoff. No generated source, test, download, inference, scorer or GPU workload was executed by Web.",
+  "reviewed_refs": [
+    {
+      "path": "actionmesh/prepare_actionbench_snapshots.py",
+      "sha256": "0557e1f29085bc750edbc75d36b7d68e21b557416a702457fcbbb7528945dddc"
+    },
+    {
+      "path": "actionmesh/research_math/snapshot_admission.py",
+      "sha256": "59b4e4e61f1a5eaae330bf9550bda0e603a6d2876659e63173eb168e55eabeef"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_snapshot_admission.py",
+      "sha256": "9753470dac656049d50075eec2a6d9badb8fe6e747d000348b6afdb1999b6f19"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "f4fea27f9b91f7602ba8df2e93d5386ea4a97d2996fd539dfc966a2106f3ba71"
+    },
+    {
+      "path": "docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+      "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+    },
+    {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "ef697cd0bbf2d977a944d9c8aa38177e88f9c228e40b37148c785ed4ab9600dd"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "feee30c88bdc0018b33c9e23e973a9389c6c92738c61207e8cfaff757e831527"
+    }
+  ],
+  "review_questions": {
+    "does_the_plan_download_or_use_network": false,
+    "does_the_plan_import_models_or_initialize_cuda": false,
+    "does_the_plan_run_inference_or_scoring": false,
+    "does_the_plan_request_a_gpu": false,
+    "does_the_plan_have_one_finite_attempt": true,
+    "does_the_output_claim_scientific_qualification": false,
+    "does_the_output_authorize_dispatch_or_generate_a_queue": false,
+    "are_content_paths_relative_and_every_content_file_size_sha256_etag_bound": true,
+    "is_the_released_128_uid_set_and_exact_16_frame_layout_bound": true,
+    "are_current_public_revisions_kept_distinct_from_unpublished_leaderboard_revisions": true
+  },
+  "findings_repaired": [
+    {
+      "severity": "important",
+      "finding": "The first draft rejected a symlink at the metadata file itself but did not reject symlinked .cache/huggingface/download parent directories, so revision evidence could resolve outside the declared snapshot root.",
+      "repair": "Every metadata parent is now required to be a real directory and not a symlink before the sidecar is read; the metadata file is also required to be regular and stable across the read."
+    },
+    {
+      "severity": "important",
+      "finding": "The harness pinned the population JSON, but the first admission draft did not independently compare the exact ordered UID-list digest with the snapshot contract.",
+      "repair": "The contract now binds the canonical ordered UID-list SHA-256; the admission module rejects a mismatch, and the plan builder separately requires the contract's complete path/SHA-256 reference to equal the actual population file."
+    }
+  ],
+  "remaining_source_findings": {
+    "critical": [],
+    "important": [],
+    "minor": [
+      "The harness stages only the small contract, population and code references. The large external snapshot directories remain explicit absolute read-only command inputs and are bound by the resulting per-file manifest, not copied into the attempt workspace. This is suitable only for engineering staging; future scientific consumers must pin and revalidate the admitted manifest and selected bytes."
+    ]
+  },
+  "static_verification": {
+    "python_files_ast_parsed": 4,
+    "top_level_research_json_documents_parsed": true,
+    "git_diff_check_passed": true,
+    "current_authored_test_methods_observed": 179,
+    "new_test_methods_authored": 18,
+    "tests_executed_by_web": 0,
+    "scorer_invocations": 0,
+    "inference_units": 0,
+    "gpu_workloads": 0
+  },
+  "local_acceptance_required": [
+    "Run the current whole-suite software acceptance at the delivered revision and record the observed method count/outcome.",
+    "Complete the existing one-UID parity/promotion/finalization chain before treating the full-population path as scientifically usable.",
+    "Download all five repositories at the contract revisions, then generate, inspect and run the exact CPU-only harness plan.",
+    "Return the native/outer receipts, logs, admitted manifest hash, five file counts/byte totals/manifest digests and any rejection without inventing replacement bytes.",
+    "Do not create a generation/timing/queue plan until snapshot admission, current device/runtime evidence and the earlier parity chain are accepted."
+  ],
+  "scientific_state_change": false
+}

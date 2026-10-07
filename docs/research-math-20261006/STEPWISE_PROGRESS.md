@@ -506,3 +506,48 @@ and **0**. The immediate Local order remains current whole-suite acceptance,
 one-UID engineering parity, complete-bundle promotion and CPU-only finalization;
 then return device/disk facts and pinned snapshot manifests before any full-128
 timing plan is authored.
+
+## Continuation: make current-release snapshot staging fail closed — 2026-10-07
+
+No newer Local/GPU packet followed `3fb78a5`. The resolved current-public-release
+chain previously had commands to download immutable revisions, but no executable
+admission step that could reject a partial cache, moving-revision residue or an
+incorrect 128-object layout. Added a versioned snapshot contract, a CPU-only
+harness plan builder and `research_math.snapshot_admission` to close that
+engineering gap without launching inference or scoring.
+
+The generated admission binds the official ActionMesh Git revision/tree and
+TripoSG submodule, the ActionBench dataset revision and all four model revisions.
+Every admitted Hugging Face content file must have matching local-dir revision
+metadata and is recorded by relative path, size, SHA-256 and ETag. It rejects
+missing/wrong metadata, metadata-parent or content symlinks, special files,
+unresolved LFS pointers, downloaded HTML, empty snapshots and mutation during
+hashing. For ActionBench it additionally requires the exact ordered 128-UID
+digest and exactly `camera.json`, `surfaces.npy`, and `imgs/00.png` through
+`15.png` for every released UID.
+
+Static review caught and repaired two important first-draft defects: metadata
+parent symlinks were not initially rejected, and the contract did not initially
+recheck the canonical UID-list digest independently of the harness input ref.
+The plan builder now also requires the contract's population path/SHA-256 to
+equal the actual committed file. The only remaining source-level caveat is
+explicit: the large external directories are read by their reviewed absolute
+paths and bound by the resulting manifest rather than copied into the attempt
+workspace, so this step is engineering staging and later scientific consumers
+must revalidate the admitted bytes.
+
+Eighteen rejection/closure and plan-admission checks were authored, raising the
+static observed `research_math` test-method count from 161 to 179. Web performed
+AST/JSON/hash and diff checks only; it executed **0** project tests, downloads, inference
+units, scorer calls or GPU workloads. The plan remains `generated_unexecuted`.
+Local must first run current whole-suite acceptance and the existing one-UID
+parity/promotion/finalization chain, then download the five pinned snapshots,
+inspect and execute the new CPU-only plan, and return its receipts plus five
+file-count/byte-total/manifest-digest summaries.
+
+Even a successful `admitted_engineering_snapshot` will not identify the
+unpublished leaderboard environment, prove model/runtime compatibility, create
+the missing 128-by-16 prediction inventory, or qualify an official result.
+Therefore candidate validation designs/results/verdicts remain **0/15**,
+**0/15**, and **0**; complete-unit timing/VRAM and the 28,800-second queue remain
+blocked.

@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T06:55:59Z",
+  "recorded_at": "2026-10-07T07:59:45Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical result does not accept this revision. One-UID scientific scoring remains blocked. The full-128 current-README alternative has a prospective complete-population/three-decimal reproduction rule. Its current public Git/submodule/dataset/four-model release candidates are now resolved, but the published leaderboard's exact generation revisions, dtype, low-RAM choice, hardware, dependency lock and batch/failure policy were not published; full GT/prediction/runtime/timing/replay bindings remain absent and the path is not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
+  "status": "20 conditional mathematical self-reviews and 15 conditional specs; Local setup accepted (127/127 historical software checks, native runtime, three simple arms, scoring request). Current whole-suite acceptance, official/faithful parity and the CPU-only post-promotion finalization harness are generated but unexecuted; the historical result does not accept this revision. One-UID scientific scoring remains blocked. The full-128 current-README alternative has a prospective complete-population/three-decimal reproduction rule and now a generated fail-closed CPU-only snapshot admission path for the resolved current public Git/submodule/dataset/four-model revisions. That admission is unexecuted and would prove only local byte/revision/file closure. The published leaderboard's exact generation revisions, dtype, low-RAM choice, hardware, dependency lock and batch/failure policy were not published; full prediction/runtime/timing/replay bindings remain absent and the path is not dispatch-ready. There is no official score, scorer parity result, candidate native comparison, or formal outcome.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -344,6 +344,38 @@
     "tests_executed_by_web": 0,
     "official_scores_run": 0,
     "gpu_workloads": 0,
+    "candidate_designs_verified": 0,
+    "candidate_native_results": 0
+  },
+  "actionbench_full128_snapshot_admission": {
+    "status": "generated_unexecuted_prior_parity_still_pending",
+    "recorded_at": "2026-10-07T07:59:45Z",
+    "base_commit": "3fb78a5f790b5e5be72bbef49fa418dce7d61323",
+    "contract_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+      "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+    },
+    "source_review_ref": {
+      "path": "docs/research-math-20261006/actionbench-full128-snapshot-source-review.json",
+      "sha256": "a0ef71f3328d9d1bc5071cf0810dcab1bc1daa8366c5cb5d6e86961341c47dc4"
+    },
+    "checkpoint_ref": {
+      "path": "docs/research-math-20261006/workflow-checkpoint-actionbench-full128-snapshot-admission.json",
+      "sha256": "172827ea169cc1e7a7fea8f3e79c8e91d6cee682b4dc1ea4cc6db0db508d3197"
+    },
+    "purpose": "engineering",
+    "gpu_count": 0,
+    "immutable_hub_revisions_bound": 5,
+    "official_git_and_submodule_bound": true,
+    "exact_released_uid_and_frame_closure_bound": true,
+    "snapshot_admission_executed": false,
+    "current_authored_test_methods_observed": 179,
+    "new_checks_authored": 18,
+    "tests_executed_by_web": 0,
+    "official_scores_run": 0,
+    "gpu_workloads": 0,
+    "full_population_protocol_ready": false,
+    "queue_generated": false,
     "candidate_designs_verified": 0,
     "candidate_native_results": 0
   }

@@ -16,6 +16,7 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 8. `docs/research-math-20261006/actionbench-full128-reproduction-contract.json`
 9. `docs/research-math-20261006/actionbench-full128-reproduction-source-review.json`
 10. `docs/research-math-20261006/actionbench-full128-generation-source-audit.json`
+11. `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 

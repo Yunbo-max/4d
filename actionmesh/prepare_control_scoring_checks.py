@@ -14,6 +14,7 @@ ROOT_SOURCES = (
     'prepare_native_runtime.py',
     'official_actionbench_adapter.py',
     'prepare_actionbench_parity.py',
+    'prepare_actionbench_snapshots.py',
     'finalize_actionbench_parity.py',
     'prepare_actionbench_parity_finalization.py',
 )

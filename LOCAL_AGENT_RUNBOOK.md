@@ -30,6 +30,7 @@ Read these files at the delivered commit before acting:
 - `docs/research-math-20261006/NATIVE_RUNTIME_CAPTURE.md`
 - `docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md`
 - `docs/research-math-20261006/actionbench-qualification-source-audit.json`
+- `docs/research-math-20261006/actionbench-full128-snapshot-contract.json`
 - `docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json`
 
 ## Roles and unresolved host facts
@@ -330,6 +331,55 @@ recursive regular-file manifest with size and SHA-256. Reject an HTML response,
 LFS pointer, empty/nonmatching directory, moving branch, or submodule mismatch.
 These acquisition commands do not authorize inference; they only stage the
 candidate current-release bytes for a later harness-owned plan.
+
+After all five `hf download` commands finish, admit the exact local bytes with
+the committed CPU-only plan. This is the only approved snapshot-manifest path;
+do not invoke `research_math.snapshot_admission` directly:
+
+```bash
+snapshot_run_id=actionbench-full128-snapshot-admission-001
+"$python_bin" "$project_dir/actionmesh/prepare_actionbench_snapshots.py" \
+  --root "$project_dir" \
+  --skill-dir "$skill_dir" \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-full128-snapshot-contract.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --source-root "$actionmesh_source" \
+  --dataset-root "$project_dir/inputs/actionbench-2796071c" \
+  --actionmesh-root "$actionmesh_source/pretrained_weights/ActionMesh" \
+  --triposg-root "$actionmesh_source/pretrained_weights/TripoSG" \
+  --dinov2-root "$actionmesh_source/pretrained_weights/dinov2" \
+  --rmbg-root "$actionmesh_source/pretrained_weights/RMBG" \
+  --run-id "$snapshot_run_id" \
+  --wall-seconds 1800 \
+  --ram-mib 2048 \
+  --cpu-cores 1 \
+  --plan-dir "$project_dir/plans/$snapshot_run_id"
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/$snapshot_run_id/harness.json" \
+  --root "$project_dir" \
+  --execute \
+  --approved-plan-digest "$approved_plan_digest"
+```
+
+Before execution, inspect both emitted plans and confirm the command contains the
+five resolved absolute roots above, `gpu_count: 0`, exactly one attempt, and no
+network/download/inference/scorer command. The admission rejects a dirty or wrong
+official Git tree/submodule; missing or wrong per-file Hugging Face revision
+metadata; unresolved LFS pointers; HTML responses; links/special files; empty
+snapshots; changed-while-hashing files; any UID difference; and any UID without
+exactly `camera.json`, `surfaces.npy`, and frames `00.png` through `15.png`.
+
+The successful attempt output is
+`inputs/actionbench-full128-snapshots/admission.json` inside that attempt's
+isolated workspace and is located by the native receipt's `output_refs`. Preserve
+the receipt, logs, plan digests and output SHA-256. Promote it to the same
+project-relative target only if that target is absent; if it already exists,
+compare hashes and stop on any difference rather than overwriting it. Return the
+actual file counts, byte totals and manifest digests for all five snapshots.
+`admitted_engineering_snapshot` proves only local byte/revision/file closure. It
+does not prove model loading, runtime compatibility, inference, scoring,
+leaderboard identity, a complete prediction inventory, or dispatch readiness.
 
 After the current one-UID engineering parity/finalization chain, inventory these
 full-population prerequisites without launching generation or scoring. Return
