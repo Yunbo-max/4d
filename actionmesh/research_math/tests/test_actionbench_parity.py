@@ -27,6 +27,23 @@ from research_math.control_scoring import file_ref
 
 
 class OfficialAdapterContractTests(unittest.TestCase):
+    def test_cpu_backward_entry_preserves_all_official_arguments(self):
+        args = (Path('/source/evaluate_dataset.py'), Path('/gt'), Path('/pred'),
+                Path('/out/score.csv'), 'cuda:0', 44)
+        original = official.official_command(*args)
+        configured = official.official_command(*args, cpu_knn_backward=True)
+        self.assertEqual(configured[0], original[0])
+        self.assertEqual(Path(configured[1]).name, 'deterministic_actionbench_entry.py')
+        self.assertEqual(configured[2:4], ['--official-script', original[1]])
+        self.assertEqual(configured[4:], original[2:])
+
+    def test_unknown_backend_policy_is_not_admitted(self):
+        from research_math.actionbench_parity import uses_cpu_backward
+        self.assertFalse(uses_cpu_backward({}))
+        self.assertTrue(uses_cpu_backward({'runtime_policy': 'strict-cuda-forward-upstream-cpu-knn-backward-v1'}))
+        with self.assertRaisesRegex(ValueError, 'Unknown scorer runtime'):
+            uses_cpu_backward({'runtime_policy': 'relax-tolerances'})
+
     def test_manifest_preserves_frozen_denominator_and_path(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

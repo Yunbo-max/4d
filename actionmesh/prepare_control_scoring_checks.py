@@ -17,6 +17,7 @@ ROOT_SOURCES = (
     'prepare_actionbench_snapshots.py',
     'finalize_actionbench_parity.py',
     'prepare_actionbench_parity_finalization.py',
+    'deterministic_actionbench_entry.py',
 )
 
 

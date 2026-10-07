@@ -13,7 +13,7 @@ from research_math.control_scoring import file_ref, resolve_ref, verify_request
 
 def build_plans(root: Path, *, request_path: Path, environment_path: Path,
                 skill_dir: Path, plan_dir: Path, run_id: str, gpu_uuid: str,
-                wall_seconds: int, ram_mib: int, cpu_cores: int):
+                wall_seconds: int, ram_mib: int, cpu_cores: int, cpu_knn_backward=False):
     root, request_path, environment_path, plan_dir = map(
         lambda value: Path(value).resolve(),
         (root, request_path, environment_path, plan_dir))
@@ -53,7 +53,7 @@ def build_plans(root: Path, *, request_path: Path, environment_path: Path,
         parity_contract, parity_sample_manifest, scorer_descriptors,
         validate_parity_contract, verify_source_evidence,
     )
-    descriptors = scorer_descriptors(root, request)
+    descriptors = scorer_descriptors(root, request, cpu_knn_backward)
     population = json.loads(resolve_ref(root, request["population_ref"]).read_text())
     if (population.get("dataset"), population.get("revision")) != (
             "facebook/actionbench", descriptors["official_scorer"]["revision"]):
@@ -72,6 +72,9 @@ def build_plans(root: Path, *, request_path: Path, environment_path: Path,
     for path in new_sources:
         ref = file_ref(root, path)
         code_refs[ref["path"]] = ref
+    for descriptor in descriptors.values():
+        for ref in descriptor['code_refs']:
+            code_refs[ref['path']] = ref
     revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=root, check=True,
                               capture_output=True, text=True).stdout.strip()
     dirty = subprocess.run(["git", "diff", "HEAD", "--binary"], cwd=root, check=True,
@@ -91,7 +94,7 @@ def build_plans(root: Path, *, request_path: Path, environment_path: Path,
     sample_manifest_ref = file_ref(root, sample_manifest_path)
     contract_path = plan_dir / "actionbench-scorer-equivalence-contract.json"
     contract = parity_contract(root, request, request_ref, sample_manifest_ref,
-                               source_evidence_ref, environment_ref)
+                               source_evidence_ref, environment_ref, cpu_knn_backward)
     contract_path.write_text(json.dumps(contract, indent=2) + "\n")
     validate_parity_contract(root, request, request_path, contract_path)
     published_refs = [
@@ -134,6 +137,8 @@ def build_plans(root: Path, *, request_path: Path, environment_path: Path,
                     f"{official_root}/{official_case}/stderr.log"]
         outputs += [f"{official_root}/{official_case}/predictions/{request['uid']}/mesh_{index:05d}.glb"
                     for index in range(16)]
+        if cpu_knn_backward:
+            outputs.append(f"{official_root}/{official_case}/official.backend.json")
         outputs += [f"{official_root}/official-source/{name}"
                     for name in ("benchmark.py", "chamfer.py", "icp.py", "sample_mesh.py",
                                  "sample_point_cloud.py", "evaluate_dataset.py")]
@@ -183,12 +188,13 @@ def main() -> int:
         parser.add_argument("--" + name, required=True)
     for name in ("wall-seconds", "ram-mib", "cpu-cores"):
         parser.add_argument("--" + name, type=int, required=True)
+    parser.add_argument('--cpu-knn-backward', action='store_true')
     args = parser.parse_args()
     plan = build_plans(args.root, request_path=args.request,
         environment_path=args.environment, skill_dir=args.skill_dir,
         plan_dir=args.plan_dir, run_id=args.run_id, gpu_uuid=args.gpu_uuid,
         wall_seconds=args.wall_seconds, ram_mib=args.ram_mib,
-        cpu_cores=args.cpu_cores)
+        cpu_cores=args.cpu_cores, cpu_knn_backward=args.cpu_knn_backward)
     print(json.dumps({"plan": str(args.plan_dir / "harness.json"),
                       "approved_plan_digest": plan["plan_digest"],
                       "execution_started": False,

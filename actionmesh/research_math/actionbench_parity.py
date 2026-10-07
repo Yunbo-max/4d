@@ -56,10 +56,12 @@ def project_path_arg(root: Path, path: Path) -> str:
     return Path(path).resolve().relative_to(Path(root).resolve()).as_posix()
 
 
-def parity_harness_scorer_command(root: Path, request: dict) -> list[str]:
+def parity_harness_scorer_command(root: Path, request: dict, cpu_knn_backward=False) -> list[str]:
     """Describe the faithful scorer independently of checkout location."""
     root = Path(root).resolve()
-    return [sys.executable, project_path_arg(root, Path(census.__file__)),
+    entry = (root/'actionmesh/deterministic_actionbench_entry.py' if cpu_knn_backward
+             else Path(census.__file__))
+    return [sys.executable, project_path_arg(root, entry),
             "--case-dir", project_path_arg(
                 root, resolve_ref(root, request["manifest_ref"]).parent),
             "--gt-dir", project_path_arg(
@@ -132,15 +134,16 @@ def parity_sample_manifest(request: dict, request_ref: dict, revision: str) -> d
 
 def parity_contract(root: Path, request: dict, request_ref: dict,
                     sample_manifest_ref: dict,
-                    source_evidence_ref: dict, environment_ref: dict) -> dict:
-    descriptors = scorer_descriptors(root, request)
+                    source_evidence_ref: dict, environment_ref: dict,
+                    cpu_knn_backward=False) -> dict:
+    descriptors = scorer_descriptors(root, request, cpu_knn_backward)
     revision = descriptors["official_scorer"]["revision"]
     refs = [source_evidence_ref]
     for scorer in descriptors.values():
         refs.extend(scorer["source_refs"])
         refs.extend(scorer["code_refs"])
     source_refs = {ref["path"]: ref for ref in refs}
-    return {
+    contract = {
         "kind": "actionbench-scorer-equivalence-contract",
         "version": "1.0.0",
         "purpose": "scorer-equivalence-only",
@@ -168,6 +171,16 @@ def parity_contract(root: Path, request: dict, request_ref: dict,
         "harness_scorer": descriptors["harness_scorer"],
         "metric_tolerances": {metric: 0.0 for metric in METRICS},
     }
+    if cpu_knn_backward:
+        contract['runtime_policy'] = 'strict-cuda-forward-upstream-cpu-knn-backward-v1'
+    return contract
+
+
+def uses_cpu_backward(contract):
+    policy = contract.get('runtime_policy')
+    if policy not in (None, 'strict-cuda-forward-upstream-cpu-knn-backward-v1'):
+        raise ValueError('Unknown scorer runtime policy')
+    return policy is not None
 
 
 def validate_parity_contract(root: Path, request: dict, request_path: Path,
@@ -192,7 +205,7 @@ def validate_parity_contract(root: Path, request: dict, request_path: Path,
     if census.read_json(sample_path) != expected_sample:
         raise ValueError("Parity sample manifest differs from the released request")
     expected = parity_contract(root, request, request_ref, sample_ref, evidence_ref,
-                               environment_ref)
+                               environment_ref, uses_cpu_backward(contract))
     if contract != expected:
         raise ValueError("Parity equivalence contract identity mismatch")
     return contract
@@ -253,7 +266,7 @@ def verify_source_evidence(root: Path, request: dict, evidence_path: Path) -> di
     return evidence
 
 
-def scorer_descriptors(root: Path, request: dict) -> dict:
+def scorer_descriptors(root: Path, request: dict, cpu_knn_backward=False) -> dict:
     """Return the exact official-adapter and faithful-harness identities."""
     root = Path(root).resolve()
     official_adapter = root / "actionmesh" / "official_actionbench_adapter.py"
@@ -287,11 +300,19 @@ def scorer_descriptors(root: Path, request: dict) -> dict:
         "revision": population["revision"],
         "source_refs": official_refs,
         "code_refs": faithful_refs,
-        "command": parity_harness_scorer_command(root, request),
+        "command": parity_harness_scorer_command(root, request, cpu_knn_backward),
         "cwd": ".",
         "output": {"format": "json", "source": "file", "path": "{output}"},
         "denominator_path": ["denominator", "n_declared"],
     }
+    if cpu_knn_backward:
+        backend_refs = [file_ref(root, root/'actionmesh'/name) for name in (
+            'deterministic_actionbench_entry.py', 'research_math/deterministic_knn.py',
+            'research_math/knn_backend_checks.py', 'research_math/__init__.py')]
+        official['command'].append('--cpu-knn-backward')
+        for descriptor in (official, faithful):
+            descriptor['code_refs'] += backend_refs
+            descriptor['identity'] += '; strict CUDA forward / upstream CPU KNN backward v1'
     return {"official_scorer": official, "harness_scorer": faithful}
 
 
@@ -332,7 +353,8 @@ def _absolute_ref(root: Path, ref: dict) -> dict:
 
 
 def validate_official_output(root: Path, request: dict, arm: str, stage: Path,
-                             device: str, raw: dict, exit_code: int) -> dict:
+                             device: str, raw: dict, exit_code: int,
+                             cpu_knn_backward=False) -> dict:
     """Require complete official adapter/source/input/output provenance."""
     root, stage = Path(root).resolve(), Path(stage).resolve()
     manifest_path = stage / "manifest.json"
@@ -424,7 +446,7 @@ def validate_official_output(root: Path, request: dict, arm: str, stage: Path,
     expected_command = official.official_command(
         source_root / "evaluate_dataset.py", resolve_ref(root, request["ground_truth_ref"]).parent.parent,
         case_work / "predictions", case_work / "official.csv", device,
-        request["scoring_seed"])
+        request["scoring_seed"], cpu_knn_backward)
     if (execution.get("command") != expected_command or
             execution.get("cwd") != str(source_root) or execution.get("exit_code") != 0 or
             execution.get("stdout_sha256") != official.digest(case_work / "stdout.log") or
@@ -446,6 +468,7 @@ def evaluate(root: Path, request_path: Path, contract_path: Path,
     request = json.loads(request_path.read_text())
     verify_request(root, request)
     contract = validate_parity_contract(root, request, request_path, contract_path)
+    cpu_knn_backward = uses_cpu_backward(contract)
     if file_ref(root, environment_path) != contract["environment_ref"]:
         raise ValueError("Parity runtime environment differs from frozen contract")
     environment = census.read_json(environment_path)
@@ -469,6 +492,8 @@ def evaluate(root: Path, request_path: Path, contract_path: Path,
     output.mkdir(parents=True, exist_ok=False)
     official_adapter = root / "actionmesh" / "official_actionbench_adapter.py"
     faithful_adapter = Path(census.__file__).resolve()
+    if cpu_knn_backward:
+        faithful_adapter = root/'actionmesh/deterministic_actionbench_entry.py'
     control_root = resolve_ref(root, request["manifest_ref"]).parent
     gt_root = resolve_ref(root, request["ground_truth_ref"]).parent.parent
     repo_root = (root / request["repo_root"]).resolve()
@@ -515,6 +540,8 @@ def evaluate(root: Path, request_path: Path, contract_path: Path,
                 "--output", str(faithful_output), "--manifest", str(manifest_path),
                 "--repo-root", str(repo_root), "--device", device,
                 "--seed", str(request["scoring_seed"])]
+            if cpu_knn_backward:
+                official_command.append('--cpu-knn-backward')
             executions = {}
             executions["official"] = run_scorer(
                 official_command, root, root, timeout_seconds,
@@ -532,10 +559,21 @@ def evaluate(root: Path, request_path: Path, contract_path: Path,
                 faithful_raw = census.read_json(faithful_output)
                 official_row = validate_official_output(
                     root, request, arm, arm_root, device, official_raw,
-                    executions["official"]["exit_code"])
+                    executions["official"]["exit_code"], cpu_knn_backward)
                 faithful_row = validate_native_output(
                     root, request, arm, arm_root, device, faithful_raw,
                     executions["faithful"]["exit_code"])
+                if cpu_knn_backward:
+                    lhs = official_raw['cases'][0].get('additional_runtime_compatibility', {})
+                    rhs = faithful_raw.get('additional_runtime_compatibility', {})
+                    source_hash = file_ref(root, root/'actionmesh/research_math/deterministic_knn.py')['sha256']
+                    for meta in (lhs, rhs):
+                        if (meta.get('source_sha256') != source_hash or
+                                meta.get('cpu_backward_calls') != 6800 or
+                                meta.get('kind') != 'experimental-knn-backward-cpu-compatibility'):
+                            raise ValueError('Missing or inconsistent executed KNN backend provenance')
+                    if lhs.get('extension_sha256') != rhs.get('extension_sha256'):
+                        raise ValueError('Different installed PyTorch3D extensions')
                 official_metrics = {metric: official_row[metric] for metric in METRICS}
                 faithful_metrics = {metric: faithful_row[metric] for metric in METRICS}
                 comparison = exact_comparison(official_metrics, faithful_metrics)

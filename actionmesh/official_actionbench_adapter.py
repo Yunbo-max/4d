@@ -149,8 +149,11 @@ def export_official_prediction(sequence: Path, destination: Path) -> dict:
 
 
 def official_command(script: Path, gt_root: Path, pred_root: Path,
-                     output_csv: Path, device: str, seed: int) -> list[str]:
-    return [sys.executable, str(script), "--gt_root", str(gt_root),
+                     output_csv: Path, device: str, seed: int,
+                     cpu_knn_backward: bool = False) -> list[str]:
+    entry = ([str(Path(__file__).with_name('deterministic_actionbench_entry.py')),
+              '--official-script', str(script)] if cpu_knn_backward else [str(script)])
+    return [sys.executable, *entry, "--gt_root", str(gt_root),
             "--pred_root", str(pred_root), "--output_csv", str(output_csv),
             "--device", device, "--n_pts_icp", "10000",
             "--n_pts_chamfer", "100000", "--seed", str(seed),
@@ -233,7 +236,8 @@ def evaluate(args: argparse.Namespace) -> int:
                 raise FileNotFoundError("Released GT missing for requested UID")
             csv_path = case_work / "official.csv"
             command = official_command(executed_source / "evaluate_dataset.py", gt_root,
-                                       pred_root, csv_path, args.device, args.seed)
+                                       pred_root, csv_path, args.device, args.seed,
+                                       getattr(args, 'cpu_knn_backward', False))
             environment = os.environ.copy()
             completed = subprocess.run(command, cwd=executed_source, env=environment,
                                        capture_output=True, text=True, timeout=args.timeout_seconds)
@@ -248,6 +252,8 @@ def evaluate(args: argparse.Namespace) -> int:
                 raise RuntimeError(f"Official ActionBench CLI exited {completed.returncode}")
             values = parse_official_csv(csv_path, result["uid"])
             result.update(values)
+            if getattr(args, 'cpu_knn_backward', False):
+                result['additional_runtime_compatibility'] = read_json(csv_path.with_suffix('.backend.json'))
             result["inputs"] = {"sequence": {"path": str(sequence), "sha256": digest(sequence)},
                                 "ground_truth": {"path": str(gt), "sha256": digest(gt)}}
             result["official_outputs"] = {
@@ -279,6 +285,7 @@ def main() -> int:
     parser.add_argument("--device", choices=("cuda", "cuda:0"), required=True)
     parser.add_argument("--seed", type=int, default=44)
     parser.add_argument("--timeout-seconds", type=int, default=7200)
+    parser.add_argument('--cpu-knn-backward', action='store_true')
     args = parser.parse_args()
     if args.seed != 44 or not 1 <= args.timeout_seconds <= 27000:
         parser.error("Frozen scorer seed 44 and finite timeout <=27000 required")
