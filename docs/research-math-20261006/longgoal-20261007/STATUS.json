@@ -4,13 +4,13 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T11:33:45.424707+00:00",
+  "updated_at": "2026-10-07T11:42:41.722482+00:00",
   "software_acceptance": {
-    "run_id": "lowram-green-r6",
-    "tests_passed": 226,
+    "run_id": "lowram-closure-r6",
+    "tests_passed": 228,
     "tests_failed": 0,
-    "plan_digest": "fbadebe58a4db14da3cce26a603805654d4ee95746bc667820cb25c218e13aea",
-    "scope": "software acceptance only, explicit low-RAM profile; red run failed 2/226 as expected"
+    "plan_digest": "1f30dbeef936686004beced2a336ac0b24ca2b6da97165bbe3781339829ddade",
+    "scope": "merged FP16 low-RAM profile plus exhaustive raw-output receipt closure"
   },
   "previous_scoring": {
     "run_id": "native-controls-development-20261007T000735Z",
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Default BF16 unit failed CUDA OOM; prepare separately versioned FP16 low-RAM repair",
+  "current_task": "Monitor complete-lowram-r7 generation, export and all three official score rows",
   "completed_native_methods": 0,
   "required_native_methods": 15,
   "methods": [
@@ -129,8 +129,8 @@
       "comparator_and_ablation": "required"
     }
   ],
-  "next_checkpoint": "versioned FP16 low-RAM repair acceptance, manifest, complete three-arm GPU unit",
-  "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r6",
+  "next_checkpoint": "Complete actual FP16 low-RAM three-arm unit and inspect all 117 receipt-bound outputs",
+  "remote_source_root": "/root/actionmesh-research-staging/4d-longgoal-r7",
   "git_metadata_parent_do_not_delete": "/root/rivermind-data/actionmesh-repro/checkouts/4d-c6d20a0/.git",
   "engineering_diagnosis": {
     "parity_first_attempt": "failed: official CLI missing pandas",
@@ -235,7 +235,7 @@
   },
   "complete_unit_runner": {
     "path": "actionmesh/research_math/complete_unit_runner.py",
-    "status": "default_failed_cuda_oom",
+    "status": "running_fp16_lowram_v1",
     "remaining": [
       "complete actual GPU integration",
       "three-arm official scoring and integrity collection"
@@ -255,8 +255,8 @@
     "green_run": "timeout-green-r5"
   },
   "candidate_input_audit": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
-  "remote_source_revision": "b3a4782996ae7162faace0a419cf64e9e3edcdd7",
-  "gpu_execution": {
+  "remote_source_revision": "84a94a60779b86e477c3488929097b76fdcebfec",
+  "default_gpu_failure": {
     "run_id": "complete-default-r6",
     "harness_pid": 26280,
     "runner_pid": 26287,
@@ -272,5 +272,19 @@
     "elapsed_seconds": 135.9401434371248,
     "error": "Attention requested 128.13 GiB on 21.49 GiB device",
     "receipt_sha256": "7b4223a3fdcf4a738c1cec646ecb8f8172ece850a46aa8936aa96d8626cd62f9"
+  },
+  "gpu_execution": {
+    "run_id": "complete-lowram-r7",
+    "status": "running; generation process observed, no result yet",
+    "started_at": "2026-10-07T11:41:35.416607Z",
+    "runner_pid": 28235,
+    "generation_pid": 28509,
+    "source_revision": "84a94a60779b86e477c3488929097b76fdcebfec",
+    "plan_digest": "a94aa69f8605266587f56f0977740001bbd21971463bb5b78d4e20eaf2bf574b",
+    "attempt": "runs/attempts/complete-lowram-r7/complete-fp16-lowram-v1-three-arm-unit-a1-198b8d1db25543eb968e2189bc7d9739",
+    "log": "/root/actionmesh-research-staging/complete-lowram-r7.log",
+    "last_observed_gpu_memory_mib": 4497,
+    "last_observed_utilization_percent": 100,
+    "stage_observed": "Stage 0 53/100"
   }
 }

@@ -1,0 +1,44 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "lowram-manifest-r7",
+  "tasks": [
+    {
+      "task_id": "actionbench-current-release-unit-manifest",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/lowram-manifest-r7/native.json",
+        "sha256": "54cfd1f445d679ce86e8196f44ce5aaa6fc885c54276b778c50c8289a58ce771"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 1024,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-current-release-unit-manifest"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 960,
+    "window_seconds": 960,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 1024,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "dfa330cd04b1b81aba25d4eb464730ef7fb4f6832f694445a107d728d09314ad"
+}
