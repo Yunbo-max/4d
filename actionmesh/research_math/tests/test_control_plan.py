@@ -6,13 +6,17 @@ from pathlib import Path
 import tempfile
 import unittest
 
+import numpy as np
+
 try:
     planner = importlib.import_module('prepare_mesh_controls')
     quadratic_planner = importlib.import_module('prepare_quadratic_acceleration_control')
+    group_planner = importlib.import_module('prepare_group_acceleration_candidate')
     acceptance = importlib.import_module('prepare_control_scoring_checks')
 except ModuleNotFoundError:
     planner = None
     quadratic_planner = None
+    group_planner = None
     acceptance = None
 
 
@@ -20,6 +24,7 @@ class ControlPlanTest(unittest.TestCase):
     def setUp(self):
         self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
         self.assertIsNotNone(quadratic_planner, 'Quadratic control plan builder missing')
+        self.assertIsNotNone(group_planner, 'C13 group candidate plan builder missing')
         self.assertIsNotNone(acceptance, 'Acceptance plan builder missing')
 
     def test_acceptance_source_closure_includes_parity_finalizer(self):
@@ -70,6 +75,15 @@ class ControlPlanTest(unittest.TestCase):
         self.assertIn(
             'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json', paths)
         self.assertIn('actionmesh/prepare_native_context_consumption.py', paths)
+
+    def test_acceptance_stages_c13_candidate_and_plan(self):
+        project_root = Path(__file__).resolve().parents[3]
+        paths = {path.relative_to(project_root).as_posix()
+                 for path in acceptance.acceptance_sources(project_root)}
+        self.assertIn('actionmesh/prepare_group_acceleration_candidate.py', paths)
+        self.assertIn('actionmesh/research_math/group_acceleration_candidate.py', paths)
+        self.assertIn(
+            'actionmesh/research_math/tests/test_group_acceleration_candidate.py', paths)
 
     def test_delivery_inventory_attaches_quadratic_control_only_to_c13(self):
         project_root = Path(__file__).resolve().parents[3]
@@ -143,6 +157,75 @@ class ControlPlanTest(unittest.TestCase):
                 'actionmesh/quadratic-control-output/manifest.json',
                 'actionmesh/quadratic-control-output/quadratic_acceleration/sequence.npz',
                 'actionmesh/quadratic-control-output/quadratic_acceleration/report.json'])
+
+    def test_group_candidate_plan_uses_identity_metric_and_zero_gpu(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); seq = self.project(root)
+            (root/'actionmesh/research_math/group_acceleration_candidate.py').write_text(
+                'fixture not executable\n')
+            (root/'actionmesh/research_math/quadratic_acceleration_control.py').write_text(
+                'fixture not executable\n')
+            native, outer = group_planner.build_plans(
+                root, source_sequence=seq, observation_metric=None,
+                run_id='c13-fixture', group_weight=.25, rho=1.,
+                absolute_tolerance=1e-8, relative_tolerance=1e-7,
+                gap_tolerance=1e-7, max_iterations=1000,
+                plan_dir=root/'c13-plans', wall_seconds=600)
+            job = native['jobs'][0]
+            self.assertEqual(native['purpose'], 'engineering')
+            self.assertEqual(job['arm_role'], 'candidate-artifact-no-scorer-no-admission')
+            self.assertEqual({x['path'] for x in job['input_refs']},
+                             {'inputs/case/sequence.npz', 'inputs/case/report.json'})
+            self.assertIn('--identity-observation-metric', job['command'])
+            self.assertEqual(outer['tasks'][0]['resources']['gpu_count'], 0)
+            self.assertEqual(job['output_paths'], [
+                'actionmesh/c13-group-output/candidate.json',
+                'actionmesh/c13-group-output/manifest.json',
+                'actionmesh/c13-group-output/group_acceleration/sequence.npz',
+                'actionmesh/c13-group-output/group_acceleration/certificate.npz',
+                'actionmesh/c13-group-output/group_acceleration/report.json'])
+
+    def test_group_candidate_plan_hash_pins_explicit_metric(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); seq = self.project(root)
+            (root/'actionmesh/research_math/group_acceleration_candidate.py').write_text(
+                'fixture not executable\n')
+            (root/'actionmesh/research_math/quadratic_acceleration_control.py').write_text(
+                'fixture not executable\n')
+            metric = root/'inputs/metric.npz'
+            np.savez(metric, observation_metric=np.eye(16))
+            native, _ = group_planner.build_plans(
+                root, source_sequence=seq, observation_metric=metric,
+                run_id='c13-metric-fixture', group_weight=.25, rho=1.,
+                absolute_tolerance=1e-8, relative_tolerance=1e-7,
+                gap_tolerance=1e-7, max_iterations=1000,
+                plan_dir=root/'c13-metric-plans', wall_seconds=600)
+            job = native['jobs'][0]
+            refs = {x['path']: x['sha256'] for x in job['input_refs']}
+            self.assertEqual(set(refs), {
+                'inputs/case/sequence.npz', 'inputs/case/report.json',
+                'inputs/metric.npz'})
+            self.assertIn('--observation-metric', job['command'])
+            self.assertIn('--expected-metric-sha256', job['command'])
+            self.assertEqual(
+                job['command'][job['command'].index('--expected-metric-sha256') + 1],
+                refs['inputs/metric.npz'])
+
+    def test_group_candidate_plan_keeps_outer_cpu_budget_within_work_window(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); seq = self.project(root)
+            (root/'actionmesh/research_math/group_acceleration_candidate.py').write_text(
+                'fixture not executable\n')
+            (root/'actionmesh/research_math/quadratic_acceleration_control.py').write_text(
+                'fixture not executable\n')
+            with self.assertRaises(ValueError):
+                group_planner.build_plans(
+                    root, source_sequence=seq, observation_metric=None,
+                    run_id='c13-over-budget', group_weight=.25, rho=1.,
+                    absolute_tolerance=1e-8, relative_tolerance=1e-7,
+                    gap_tolerance=1e-7, max_iterations=1000,
+                    plan_dir=root/'c13-over-budget-plans', wall_seconds=27000)
+            self.assertFalse((root/'c13-over-budget-plans').exists())
 
 
 if __name__ == '__main__': unittest.main()

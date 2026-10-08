@@ -290,3 +290,50 @@ the current common CPU software acceptance, then uses the exact command in
 `LOCAL_AGENT_RUNBOOK.md` after a real three-file producer receipt exists. This
 closes a shared artifact-consumption interface only. Candidate source complete
 and native results remain 0/15; GPU STOP remains effective.
+
+## Continuation: C13 group-acceleration candidate core — 2026-10-08
+
+Resumed exact remote main `30ceaa06d0426aeda7ce6de591182c666e7af689`.
+The maintained revised selection ranks C13 fourth and its exact complete-mesh
+input is available without inventing sparse modes, transport supports, hidden
+model state or labels. This continuation therefore closes the solver/export
+portion of C13 while retaining every scientific gate and the GPU STOP.
+
+`actionmesh/research_math/group_acceleration_candidate.py` now implements the
+reviewed convex objective over the complete float32 native trajectory. Its
+explicit temporal SPD metric is replicated over vertex/XYZ columns, retaining
+non-diagonal temporal and anchor/free cross terms without a dense `3TV x 3TV`
+allocation. It eliminates complete pinned frames exactly, applies the
+nonsmooth norm to each `(time,vertex)` 3-vector, and uses scaled ADMM with an
+exact reduced linear update. Completion requires both ADMM residual thresholds
+and a dual-feasible Fenchel lower-bound gap; the exported certificate retains
+the feasible dual, timestamp-scaled second differences, metric and pinned-frame
+identity. The native specialization records `M=I` and actual frame-zero
+anchoring; an optional reviewed metric NPZ is independently hash-pinned.
+
+The exporter validates the same receipt-bound `sequence.npz`/`report.json`
+boundary as the existing quadratic control, preserves every non-vertex array,
+topology, 16-frame order, float32 dtype and vertex identity, and emits one
+`group_acceleration` case consumable by the generic official adapter. It fails
+with an explicit incomplete arm on nonconvergence and never substitutes a
+quadratic/Gaussian fallback. `actionmesh/prepare_group_acceleration_candidate.py`
+adds a single-use existing-harness CPU plan with all solver parameters explicit,
+one attempt, zero retry and zero GPUs. Its five declared outputs are the summary,
+manifest, full sequence, report and numerical certificate.
+
+Tests were authored before implementation for nonuniform-time affine nullspace,
+exact anchoring, 3D rotation equivariance, off-diagonal SPD behavior, dual gap,
+invalid metrics/parameters, full native identity preservation, input hashes and
+single-use plans. Web performed AST/diff/static source review only; it did not
+run project tests, the builder, solver, model, scorer or GPU. All new source is
+`generated_unexecuted`. Local first executes the common CPU acceptance at the
+delivered commit, then freezes the supplied-time interpretation and every
+positive solver parameter before emitting/executing the CPU candidate plan in
+`LOCAL_AGENT_RUNBOOK.md`.
+
+C13 is still not a complete/admitted method: the hash-bound B0/B*/Gaussian/
+quadratic/group native scoring and collection plan, Local observed acceptance,
+Natural Gate 0, IPCG, natural event-preservation evidence, parameter/time-unit
+freeze, family split/effect/NI criteria and official scores remain absent.
+Candidate source completion and native results therefore remain 0/15; this
+continuation materially closes only the C13 solver/full-sequence export gap.

@@ -218,13 +218,14 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
         "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
       },
-      "source_status": "specification_only",
-      "code_entry": null,
+      "source_status": "generated_unexecuted_candidate_core_and_full_sequence_export; scientific admission and multi-arm native scoring remain open",
+      "code_entry": "actionmesh/research_math/group_acceleration_candidate.py:repair_group_acceleration,export_group_candidate",
+      "candidate_plan_entry": "actionmesh/prepare_group_acceleration_candidate.py",
       "strong_control_code_entry": "actionmesh/research_math/quadratic_acceleration_control.py:export_quadratic_control",
       "strong_control_plan_entry": "actionmesh/prepare_quadratic_acceleration_control.py",
       "strong_control_status": "generated_unexecuted",
       "strong_control_local_acceptance": "Run current CPU software acceptance, then build the quadratic-control plan with the exact retained sequence, inspect its pinned refs/digest, and execute that plan through the installed run_harness.py. Native official scoring remains separately gated.",
-      "real_input_and_model_interface": "Full native Y with physical-time D2, SPD observation metric and actual anchor affine term",
+      "real_input_and_model_interface": "ActionMesh complete-unit sequence.npz/report.json: float32 Yhat[16,V,3], unchanged faces/frame_indices/query_vertex_ids, strictly increasing supplied native loader-clock timesteps; explicit temporal SPD M[T,T] shared over vertex/XYZ columns (identity is the recorded native specialization, optional reviewed metric NPZ is hash-pinned); exact complete-frame anchor uses actual Yhat[0]. No GT, event label, scorer state, decoder latent or model reload.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -238,15 +239,31 @@
         "quadratic_acceleration",
         "group_acceleration"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate accepts the emitted one-arm manifest; candidate-specific hash-bound B0/B*/Gaussian/quadratic/group scoring and collection plan is not yet integrated",
+      "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_group_acceleration_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --identity-observation-metric --run-id c13-group-candidate-001 --plan-dir $project_dir/plans/c13-group-candidate-001 --group-weight $frozen_group_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --gap-tolerance $frozen_gap_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c13_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
+      "acceptance_command_gap": "The CPU command can accept the generated solver/export source only. Candidate-specific multi-arm official scoring, Natural Gate 0/IPCG, parameter/time-unit freeze, Local observed acceptance and native result collection remain absent.",
+      "completion_evidence": [
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/research_math/group_acceleration_candidate.py",
+          "scope": "Reviewed-objective source draft with temporal SPD cross terms, exact whole-frame affine anchor, 3D group dual balls, ADMM residuals, dual-feasible Fenchel lower bound/gap, fail-closed full-sequence/certificate export"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/prepare_group_acceleration_candidate.py",
+          "scope": "Single-use CPU-only existing-harness plan; explicit parameters, one attempt, zero retry, zero GPU"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_group_acceleration_candidate.py",
+          "scope": "Affine fixed point, exact anchor, 3D rotation equivariance, off-diagonal SPD cross term, dual certificate, metadata/hash/single-use failures and full identity-preserving export"
+        }
+      ],
       "remaining_implementation_gaps": [
-        "group acceleration solver",
-        "primal/dual diagnostics",
-        "candidate native entry and Gaussian/group multi-arm collection",
-        "Local execution and official scoring of the delivered quadratic control"
+        "candidate-specific hash-bound B0/B*/Gaussian/quadratic/group multi-arm native scoring and result collection plan",
+        "Local CPU software acceptance and real-sequence execution of the generated candidate source",
+        "Local execution and official scoring of the delivered quadratic control and group candidate",
+        "observed resource/cost qualification for the new solver plus complete multi-arm unit"
       ],
       "scientific_prerequisites": [
         "native gap not closed by Gaussian/quadratic baselines",

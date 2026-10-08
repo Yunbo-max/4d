@@ -8,6 +8,8 @@
 
 C13 规格要求的强简单对照现已有独立源码入口：`actionmesh/prepare_quadratic_acceleration_control.py` 通过现有单一 harness 按输入序列时间戳单位生成二阶差分、精确固定第 0 帧的二次加速度控制臂。它保留完整 16 帧、拓扑和顶点身份，输出清单可交给既有官方评分适配器。该交付是 **generated_unexecuted** 的对照，不是 C13 group-trend 候选本身，也不关闭 Natural Gate 0；先按运行手册完成当前 CPU 软件验收，再在精确保留的真实 `sequence.npz` 上执行其 CPU 计划。GPU 仍停止。
 
+C13 group-trend 候选现在另有 `actionmesh/prepare_group_acceleration_candidate.py`：消费同一完整原生序列，按 supplied native loader clock 构造非均匀二阶差分，支持显式 hash 固定的非对角 temporal SPD metric（原生首个特化明确选择 identity），通过自由帧消元精确固定第 0 帧，并导出 3D group dual-ball、Fenchel 下界、primal/dual gap、ADMM residual 与完整原身份序列。源码和验收测试仍是 **generated_unexecuted**；尚未完成 Local 验收、B*／多臂收集、官方评分、Natural Gate 0 或 IPCG，所以 C13 仍不计完整候选，native 结果仍为 0/15。GPU 仍停止。
+
 本轮新增[完整原生 decoder capture 入口](docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md)：`complete_unit_plan --capture-decoder` 可生成独立观测单元计划，接入官方生成、完整上下文归档和三臂评分。新增源码为 **generated_unexecuted**，需要 Local CPU harness 验收；GPU 实验保持停止，尚无完整原生 capture 或 replay 结果。新增观测单元不能沿用旧队列定价。
 
 最新交付继续补齐独立成对生成验证、完整上下文回放、源时间查询和有限批次 supervisor。源码与验收测试已编写，仍须 Local 验收；supervisor 尚未安装或启动。共享接口不等于 15 个候选方法实现完成。环境与资产沿用[运行手册的固定数据/模型来源](LOCAL_AGENT_RUNBOOK.md#download-datasets-and-models)，优先复用仍匹配的已有资产。

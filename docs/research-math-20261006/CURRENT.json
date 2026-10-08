@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T02:10:10Z",
+  "recorded_at": "2026-10-08T02:49:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "The paired native-context result/manifest/archive now have a separate CPU-only downstream consumer that uses three explicit harness-staged inputs, producer identity/config binding, an immutable private snapshot, exact unqualified schema checks and frozen expansion ceilings. Replay mismatch propagation is repaired. This shared transport interface and the earlier C13 quadratic control remain generated_unexecuted; neither is a candidate method or scientific admission. Paired native-context/supervisor source remains uninstalled and unexecuted. GPU execution remains stopped. The maintained inventory still reports zero source-complete candidate methods and 0/15 native results; indices 10–15 and scientific prerequisites remain open.",
+  "status": "C13 now has a generated_unexecuted group-l2 acceleration solver/core export and a zero-GPU existing-harness plan: explicit temporal SPD metric with off-diagonal anchor terms, exact float32 whole-frame anchors, 3D group dual balls, ADMM residuals, an exported-float32 Fenchel certificate, and full identity-preserving sequence output. Independent static source review found no remaining P0/P1. This does not close its missing B0/B*/Gaussian/quadratic/group native scoring/collection plan, Local acceptance, Natural Gate 0/IPCG or scientific prerequisites, so source-complete candidates and native results remain 0/15. The paired-context consumer and earlier quadratic control remain generated_unexecuted. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -1147,5 +1147,60 @@
     "candidate_methods_completed": 0,
     "candidate_native_results": 0,
     "next_step": "Local current-source CPU acceptance, then use the runbook command only after a real terminal producer receipt exists; freeze exact producer identity/configuration and expansion limits."
+  },
+  "c13_group_acceleration_candidate_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-08T02:49:00Z",
+    "base_commit": "30ceaa06d0426aeda7ce6de591182c666e7af689",
+    "scope": "C13 solver, exact native full-sequence export and CPU artifact plan only; no scientific admission, multi-arm scoring or native result",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/group_acceleration_candidate.py",
+        "sha256": "fa70f5a7f7183d72193bde8e5eae53c5339eaec12f025df3db49345264c5bb07"
+      },
+      {
+        "path": "actionmesh/prepare_group_acceleration_candidate.py",
+        "sha256": "4734c1a8fab9f07c4348cc57e729c60de32c0a29170a621c542063a43bda80aa"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_group_acceleration_candidate.py",
+        "sha256": "5ae397e1cf18e2576419564227b82692d4fb35495d6d88a98435b8f46c50ce33"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_control_plan.py",
+        "sha256": "3baaedf2f3b72f2bdbb4dbec0b6f4e7f7b4e9d2d7883faa91e1b105a42038952"
+      },
+      {
+        "path": "actionmesh/prepare_control_scoring_checks.py",
+        "sha256": "0bc236d257bcf9a91b43ba9d511c4392ff954d195fef17b033c2abc9b2113610"
+      }
+    ],
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "7524e725f7ccad69b6b286352bdf38b26d8df9ea22c631a7903706c5d8ce79aa"
+    },
+    "source_review": {
+      "mode": "independent read-only source review; no execution",
+      "findings_closed": [
+        "generic anchor input initially collapsed to native X=Yhat specialization and did not exercise the pinned/free metric cross term",
+        "initial certificate described the internal float64 iterate instead of exact exported float32 bytes",
+        "inner CPU ceiling plus outer allowance could exceed the 27000-second work window",
+        "an intermediate inventory edit misattributed C13 source to C10",
+        "generic multi-pin order could silently rebind explicit anchors"
+      ],
+      "final_state": "No remaining P0/P1 found; Local execution remains required"
+    },
+    "project_tests_executed_by_web": false,
+    "plan_builder_executed": false,
+    "solver_executed": false,
+    "official_scoring_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "local_software_acceptance_complete": false,
+    "natural_gate_0_passed": false,
+    "ipcg_passed": false,
+    "full_method_source_complete": false,
+    "candidate_methods_completed": 0,
+    "candidate_native_results": 0,
+    "next_step": "Local runs current common CPU acceptance, then freezes supplied-time interpretation and every positive solver parameter before emitting/executing the zero-GPU C13 artifact plan. Web next authors the candidate-specific hash-bound B0/B*/Gaussian/quadratic/group native scoring and collection path; GPU STOP remains effective."
   }
 }

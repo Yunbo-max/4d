@@ -98,6 +98,62 @@ After later native authorization and scorer qualification, the manifest is an
 input to `official_actionbench_adapter.py`; official scoring is not included in
 this CPU plan.
 
+### C13 candidate source — anchored group acceleration
+
+The distinct C13 candidate source is
+`actionmesh/research_math/group_acceleration_candidate.py`; its plan-only entry
+is `actionmesh/prepare_group_acceleration_candidate.py`. It implements the
+reviewed convex group-l2 acceleration objective rather than reusing the
+quadratic control. The scalable observation metric is an explicit temporal SPD
+matrix shared over vertex/XYZ columns, so non-diagonal temporal and anchor/free
+cross terms are retained without allocating a dense `3TV x 3TV` matrix. Whole
+pinned frames are eliminated exactly. The solver exports a dual-feasible 3D
+group-ball certificate, Fenchel lower bound/gap, ADMM residuals and termination
+reason. The current native specialization deliberately freezes `M=I` and frame
+zero; a separate metric NPZ is also supported and hash-pinned when a reviewed
+metric exists.
+
+This source is **generated_unexecuted**. First run the current common CPU
+software-acceptance plan and retain its actual result. Then restore and verify a
+receipt-bound real `sequence.npz`/`report.json` pair. Before plan emission,
+freeze every positive parameter and the supplied timestamp-unit interpretation
+in the development protocol; there are no silent solver defaults:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_group_acceleration_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --identity-observation-metric \
+  --run-id c13-group-candidate-001 \
+  --plan-dir "$project_dir/plans/c13-group-candidate-001" \
+  --group-weight "$frozen_group_weight" --rho "$frozen_admm_rho" \
+  --absolute-tolerance "$frozen_abs_tolerance" \
+  --relative-tolerance "$frozen_rel_tolerance" \
+  --gap-tolerance "$frozen_gap_tolerance" \
+  --max-iterations "$frozen_max_iterations" \
+  --wall-seconds "$c13_cpu_wall_seconds"
+```
+
+For a reviewed external metric, replace `--identity-observation-metric` with
+`--observation-metric "$project_dir/inputs/c13/metric.npz"`; that NPZ must
+contain only `observation_metric[T,T]` and becomes a third input ref. Inspect
+the printed plan for the exact sequence/report (and optional metric) refs,
+three code refs, five declared outputs, zero GPUs, one attempt and zero retry.
+Execute only its reviewed digest through `run_harness.py`. Retain
+`candidate.json`, `manifest.json`, the complete group sequence, report and
+`certificate.npz`. A nonconverged solver is an incomplete retained attempt; do
+not substitute the quadratic/Gaussian arm or retry it as the same frozen trial.
+The builder caps `c13_cpu_wall_seconds` at 26,940 so its 60-second outer harness
+allowance keeps the complete CPU artifact plan within 27,000 seconds.
+
+The emitted manifest contains only `group_acceleration`; existing native,
+Gaussian, quadratic and prospectively frozen B* artifacts remain separate and
+must be combined later by a candidate-specific, hash-bound native scoring plan.
+That multi-arm/scoring plan is not yet delivered. Do not call the official GPU
+adapter while STOP is effective. CPU artifact completion would still not prove
+Natural Gate 0, IPCG, event preservation, Local method verification or a native
+effect.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**

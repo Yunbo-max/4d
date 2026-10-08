@@ -1279,3 +1279,37 @@ AST/JSON/hash/diff review; no plan builder, project test, archive consumption,
 model, scorer or GPU was run. Local next runs common CPU acceptance, then the
 new consumption plan against an actual receipt-bound three-file bundle. This
 does not change 0/15 candidate source completion or 0/15 native results.
+
+## Continuation: C13 group-acceleration candidate core — 2026-10-08
+
+Resumed literal remote main `30ceaa06d0426aeda7ce6de591182c666e7af689`
+and preserved the revised 15-candidate identities/order. C13 was selected for
+the next legal source increment because its complete native mesh/timestamp
+boundary already exists and no sparse mode, Markov kernel, GT/event label or
+hidden decoder input must be invented.
+
+Authored the reviewed group-l2 acceleration solver with an explicit shared
+temporal SPD metric, retained off-diagonal anchor/free terms, exact whole-frame
+anchor elimination, true 3D group proximal/dual balls, scaled-ADMM residuals and
+a dual-feasible Fenchel lower bound/gap. Added a fail-closed full-sequence and
+certificate exporter plus a one-attempt/zero-retry/zero-GPU plan builder using
+the existing harness. The source preserves all 16 frames, topology, vertex
+mapping, non-vertex arrays and float32 official-export dtype. Identity metric is
+the explicit native specialization; a reviewed external metric is a separately
+hash-pinned NPZ input. Supplied `0..15` native loader time is not described as
+physical video wall-clock time.
+
+Authored acceptance coverage before implementation for affine fixed points,
+anchor exactness, 3D rotation equivariance, non-diagonal SPD influence, dual
+gap/feasibility, malformed inputs, stale hashes, single-use output and plan
+closure. Web ran only AST/diff/static checks, not project tests, builders, solver,
+model, scorer or GPU. The implementation and tests are
+`generated_unexecuted`; Local acceptance is pending.
+
+Updated the maintained 15-item table and Local handoff. C13 no longer lacks its
+core solver, primal/dual diagnostics or one-arm complete-sequence export, but it
+still lacks a candidate-specific hash-bound B0/B*/Gaussian/quadratic/group
+native scoring/collection plan, observed Local execution, Natural Gate 0/IPCG,
+natural event evidence, frozen parameters/statistics and official results.
+Accordingly `full_method_source_complete=false`, complete candidates remain
+0/15 and native candidate results remain 0/15. GPU STOP remains effective.

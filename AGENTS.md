@@ -21,6 +21,13 @@ The C13-required quadratic strong control has a separate CPU-only plan entry at
 group-trend method and must not be reported as candidate admission or a native
 result. Its current source and tests are `generated_unexecuted`; use the common
 software-acceptance plan before its single-use real-sequence harness plan.
+The C13 group-trend source draft now has the distinct CPU-only entry
+`actionmesh/prepare_group_acceleration_candidate.py`. It supports an explicit
+temporal SPD metric (including off-diagonal anchor cross terms), exact complete-
+frame pins, 3D group dual balls and a primal/dual certificate. Its native
+specialization records identity metric and frame-zero anchoring. This remains
+`generated_unexecuted`, scientifically unadmitted and unscored; its one-arm
+manifest does not freeze B* or authorize the official GPU scorer.
 Completed paired-context evidence is consumed only through the CPU-only
 `actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
 the result, manifest and tar as three explicit staged paths, bind the expected
