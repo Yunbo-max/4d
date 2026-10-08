@@ -1346,3 +1346,47 @@ implementation gap is the admitted official runner plus receipt-bound raw
 collection, but its scientific plan must continue to fail closed until the
 named gate/design/protocol artifacts exist. Candidate completeness and native
 results remain 0/15; GPU STOP remains effective.
+
+## Continuation: C13 official scoring/collection chain — 2026-10-08
+
+Resumed literal remote main `b90a853a03abf4d569ba7773c489e712ea147b95` and
+continued the concrete C13 gap rather than repeating historical pricing/root
+repairs. Added `research_math.c13_native_scoring`, its source-level behavior
+tests, and `prepare_c13_native_scoring.py` with plan-boundary tests.
+
+The runner creates a second hash-bound request for the released population, GT,
+current adapter, deterministic CPU-kNN entry and six official source files. At
+execution it stages each unique physical case once, invokes the existing
+official adapter once, validates source/compatibility/seed/device/16-frame/input/
+output identities, preserves all failed cases, expands B* aliases without a
+second measurement, and computes only available descriptive group-minus-control
+deltas. It never imputes a failed metric, computes a confidence interval, or
+issues a scientific verdict.
+
+Collection now has a deterministic regular-file tar, sorted SHA-256 inventory,
+fixed file/member/expanded/archive/metadata limits, exact request/comparison/GT
+cross-links and a standalone delivery validator. The released GT is referenced
+but not redistributed. A scorer error or interruption leaves its actual partial
+raw tree for collection; the same experiment is not silently retried.
+
+The plan builder uses the installed method verifier at C13 `before dispatch`,
+the installed native protocol verifier, the exact five-role contract, base plus
+selected one-UID sample/GT/scorer closure, strict native dependency lock and
+actual physical GPU UUID. Independent plan review found that the first draft
+used a non-contract arm role, downgraded confirmation evidence, omitted the base
+sample when a selected sample existed, and described admission without enforcing
+it. The repaired boundary now binds every arm revision/implementation to the
+frozen comparison, preserves the protocol's confirmation mode, emits one
+`treatment` confirmation attempt with zero retry, and requires one hash-bound
+admission containing Gate 0 PASS, compatible IPCG, a nonoverlapping independent-
+family split, positive/numeric outcome criteria and explicit exact-UID/GPU
+single-attempt resume authorization. With GPU STOP active that authorization is
+absent, so no runnable digest can be emitted. Only `result.json`,
+`raw-manifest.json` and `raw-evidence.tar` form the returned interface.
+
+Tests were authored before production source but could not be run under the Web
+execution boundary; therefore there is no RED/GREEN evidence and no test-pass
+claim. Static AST/JSON/diff inspection only; no project code, model, scorer or
+GPU ran. C13 is now source-chain complete but `generated_unexecuted` and Local
+unverified. Source-chain complete candidates are 1/15; Local-verified candidates
+and native candidate results remain 0/15. GPU STOP remains effective.

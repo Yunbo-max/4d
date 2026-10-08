@@ -199,6 +199,128 @@ split/IDs, non-null effect and noninferiority criteria, fixed runtime policy and
 Local GPU identity. Those artifacts do not currently exist; GPU STOP remains
 effective.
 
+### C13 official scoring and raw collection — source complete, not admitted
+
+The candidate-specific scorer/collector is now
+`actionmesh/research_math/c13_native_scoring.py`; its only plan entry is
+`actionmesh/prepare_c13_native_scoring.py`. First create the scorer closure in
+the compatible Local environment without executing the GPU scorer:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c13_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c13/c13-native-comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c13_uid/surfaces.npy" \
+  --population "$project_dir/inputs/native-runtime/actionbench-population.json" \
+  --repo-root "$source_root" \
+  --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c13/c13-native-scoring-request.json"
+```
+
+This revalidates the complete comparison request and pins the released
+population/revision, exact UID GT, existing adapter, deterministic CPU-kNN
+entry and all six official ActionBench source files. The per-case timeout times
+the number of unique physical cases must be at most 27,000 seconds. The output
+still has `generated_unexecuted=true`, `native_qualified=false`,
+`scientific_verdict=not_computed` and `dispatch_ready=false`.
+
+Do not build or run the scientific plan while GPU STOP is active. After an
+explicit later resume, the actual C13 Natural Gate 0/IPCG, prospective B*,
+family split/IDs, numeric effect/noninferiority criteria, method implementation
+and design reviews must be present. Freeze them in one
+`c13-scientific-dispatch-admission` record whose path/SHA references bind the
+Natural Gate 0 record, importance decision, nonoverlapping family split,
+positive primary effect plus both numeric guardrail margins, and an explicit
+`single_c13_scoring_attempt` GPU-resume authorization. That authorization must
+name the same candidate, UID, comparison, protocol digest, physical GPU UUID
+and at least the requested wall budget. It is not permission to resume any
+other task. Then use the exact native runtime receipt and physical GPU UUID:
+
+The custom records use canonical SHA-256 of sorted compact JSON with their own
+digest field omitted. `c13-family-split` version 1 carries `candidate_id`,
+`benchmark_revision`, nonempty disjoint `development_ids` and
+`confirmation_ids`, a complete `family_by_uid`, `frozen_at`, and
+`split_digest`; no family may cross the two sets and the scoring UID is in the
+confirmation set. `c13-outcome-criteria` version 1 carries `candidate_id`, the
+comparison-file SHA as `comparison_digest`, `primary_metric=cd_motion`, ordered
+`guardrail_metrics=[cd_3d,cd_4d]`, positive finite `min_effect`, finite
+nonnegative margins for both guardrails, `independent_unit=asset_family`,
+`frozen_at`, and `criteria_digest`. `c13-gpu-resume-authorization` version 1
+carries the same candidate/UID/comparison, exact `protocol_digest`, GPU UUID,
+`scope=single_c13_scoring_attempt`, integer `max_gpu_task_seconds`,
+`status=authorized`, timezone-aware `authorized_at`, and
+`authorization_digest`. The outer admission has an exact schema: kind/version,
+candidate/UID/benchmark/comparison, exact protocol and method-batch refs, the
+five evidence refs, `status=admitted`, timezone-aware `admitted_at`, and
+`admission_digest`. Do not fabricate any of these records to satisfy the parser.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c13_native_scoring.py" \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c13/c13-native-scoring-request.json" \
+  --protocol "$project_dir/inputs/c13/c13-native-protocol.json" \
+  --method-batch "$project_dir/inputs/c13/c13-method-verification-batch.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --admission "$project_dir/inputs/c13/c13-scientific-dispatch-admission.json" \
+  --skill-dir "$skill_dir" \
+  --plan-dir "$project_dir/plans/c13-native-scoring-001" \
+  --run-id c13-native-scoring-001 --group "$frozen_c13_group" \
+  --gpu-uuid "$actual_gpu_uuid" --wall-seconds "$c13_scoring_wall_seconds" \
+  --ram-mib "$confirmed_ram_mib" --cpu-cores "$confirmed_cpu_cores"
+```
+
+The builder calls the installed method boundary at `--before dispatch`, requires
+the protocol's exact `group_acceleration` treatment, prospective `b_star`
+baseline, and `b0`/Gaussian/quadratic controls, verifies the official scorer
+source closure, binds each contract arm's revision/implementation to the frozen
+comparison, validates the strict native dependency inventory, and reserves 300
+seconds for validation/collection. It preserves the protocol's confirmation
+mode and emits one treatment task, one confirmation attempt and zero retries.
+The base sample manifest and any selected manifest are both retained. While
+GPU STOP is active the required authorization is absent, so no runnable digest
+can be emitted. Inspect both plan files and execute only
+the printed digest through the installed `run_harness.py`; never invoke
+`research_math.c13_native_scoring score` directly.
+
+The retained attempt output is exactly:
+
+- `actionmesh/c13-scoring-output/result.json`
+- `actionmesh/c13-scoring-output/raw-manifest.json`
+- `actionmesh/c13-scoring-output/raw-evidence.tar`
+
+After the harness copies those three files out, take their exact SHA-256 values
+from the retained attempt/output refs and validate the transported bytes before
+opening or reporting them:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c13_native_scoring validate-delivery \
+  --result "$returned_c13_dir/result.json" \
+  --manifest "$returned_c13_dir/raw-manifest.json" \
+  --archive "$returned_c13_dir/raw-evidence.tar" \
+  --expected-request-digest "$frozen_c13_request_digest" \
+  --expected-result-sha256 "$receipt_result_sha256" \
+  --expected-manifest-sha256 "$receipt_manifest_sha256" \
+  --expected-archive-sha256 "$receipt_archive_sha256"
+```
+
+On failure, preserve the attempt directory. Inspect harness `state.json`,
+`events.jsonl`, task stdout/stderr and the archived `adapter-execution.json`,
+`validation.exception.log` and per-case official execution files. Do not rerun
+the same frozen scientific attempt; a code repair requires a new source version,
+new reviewed plan and separate authorization while retaining the failed bytes.
+
+The archive contains the staged unique physical cases, scorer request,
+comparison request, official report/work tree, GLBs, CSV/summary, execution and
+stdout/stderr evidence. Released GT is excluded but hash-bound. The external
+manifest fixes member count, per-member, total-expanded, archive and metadata
+limits; `validate-delivery` rehashes every regular tar member and all cross-links.
+Aliased B* shares the physical measurement but remains a fifth logical role.
+Preparation/scoring errors remain failures in the denominator and are never
+imputed as zero. Even a validated bundle remains unqualified and carries no
+confidence interval or scientific verdict until E04/live native replay.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**

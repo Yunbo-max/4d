@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8, maintained through b4923b4; shared plan/collection/consumer additions do not complete a candidate.",
+  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; current authoring base is b90a853. C13 alone has a complete generated_unexecuted method-to-official-score source chain; shared plan/collection/consumer additions do not complete any other candidate.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -12,7 +12,7 @@
   ],
   "existing_implementation_notes": {
     "C02": "protected_projection.py implements mathematical projection primitive; not complete native method",
-    "C13": "quadratic_acceleration_control.py implements the required quadratic strong control only; the group-l2 candidate remains absent and Local execution/scoring are pending",
+    "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
     "C14": "simple_mesh_controls.py has body Gaussian baseline; not full candidate qualification"
   },
   "required_next_sequence": [
@@ -218,9 +218,10 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
         "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
       },
-      "source_status": "generated_unexecuted_candidate_core_full_sequence_export_and_five_role_request_assembler; scientific admission and official native scoring remain open",
-      "code_entry": "actionmesh/research_math/group_acceleration_candidate.py:repair_group_acceleration,export_group_candidate; actionmesh/research_math/c13_native_comparison.py:make_request,verify_request",
+      "source_status": "source_chain_complete_generated_unexecuted: distinct candidate core/full-sequence export, five-role freeze, official scoring runner, bounded raw collection and common-harness plan are authored; Local/scientific verification and native results remain open",
+      "code_entry": "actionmesh/research_math/group_acceleration_candidate.py:repair_group_acceleration,export_group_candidate; actionmesh/research_math/c13_native_comparison.py:make_request,verify_request; actionmesh/research_math/c13_native_scoring.py:make_scoring_request,score_request,validate_delivery",
       "candidate_plan_entry": "actionmesh/prepare_group_acceleration_candidate.py",
+      "native_scoring_plan_entry": "actionmesh/prepare_c13_native_scoring.py (fail-closed until hash-bound Gate 0/IPCG/family split/numeric criteria/single-attempt GPU authorization, the design-verified confirmation protocol/method batch, exact arm implementations and strict Local runtime/GPU identity exist)",
       "strong_control_code_entry": "actionmesh/research_math/quadratic_acceleration_control.py:export_quadratic_control",
       "strong_control_plan_entry": "actionmesh/prepare_quadratic_acceleration_control.py",
       "strong_control_status": "generated_unexecuted",
@@ -239,9 +240,9 @@
         "quadratic_acceleration",
         "group_acceleration"
       ],
-      "native_scoring_entry": "actionmesh/research_math/c13_native_comparison.py assembles and validates the hash-bound B0/B*/Gaussian/quadratic/group engineering request, including B* alias de-duplication and failed-role denominator retention; actionmesh/official_actionbench_adapter.py remains the fixed scorer, but the scientifically admitted scorer runner/plan and raw collection are not yet delivered",
+      "native_scoring_entry": "actionmesh/research_math/c13_native_comparison.py freezes the five roles; actionmesh/research_math/c13_native_scoring.py stages each unique physical case, invokes actionmesh/official_actionbench_adapter.py once, validates official source/input/output identity, expands aliases without duplicate measurements, retains failures and emits result.json/raw-manifest.json/raw-evidence.tar; actionmesh/prepare_c13_native_scoring.py is the only admitted common-harness plan entry",
       "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_group_acceleration_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --identity-observation-metric --run-id c13-group-candidate-001 --plan-dir $project_dir/plans/c13-group-candidate-001 --group-weight $frozen_group_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --gap-tolerance $frozen_gap_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c13_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
-      "acceptance_command_gap": "The CPU method command and five-role request command can accept the generated solver/export and comparison-identity source only. Candidate-specific official scorer runner/plan/raw collection, Natural Gate 0/IPCG, parameter/time-unit freeze, Local observed acceptance and native results remain absent.",
+      "acceptance_command_gap": "No scoring-source gap remains for C13. The committed plan builder deliberately blocks until real comparison inputs, Natural Gate 0/IPCG, prospective B*, frozen independent-family split/IDs and numeric effect/noninferiority criteria, a design-verified confirmation protocol/method batch, exact five-arm implementation refs, strict current runtime/dependency lock and an explicit single-attempt authorization for the actual GPU UUID exist. Local observed acceptance and native results remain absent.",
       "completion_evidence": [
         {
           "status": "generated_unexecuted",
@@ -267,10 +268,29 @@
           "status": "authored_not_run",
           "source": "actionmesh/research_math/tests/test_c13_native_comparison.py",
           "scope": "B* freeze/alias, topology and timeline rejection, physical-case de-duplication and failed-role denominator contracts"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/research_math/c13_native_scoring.py",
+          "scope": "Exact released GT/population/official-source closure, one-pass unique physical scoring, five-role alias/failure readout and bounded receipt-bound raw collection/validation"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/prepare_c13_native_scoring.py",
+          "scope": "Existing-harness confirmation plan gated by C13 design verification, frozen five-role method identities/implementations, Gate 0/IPCG/family split/numeric criteria, strict Local runtime/dependency identity and exact single-attempt GPU authorization; one attempt and zero retry"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_c13_native_scoring.py",
+          "scope": "Alias expansion, failure denominator, exact staging, official provenance and deterministic tamper-evident archive contracts"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_c13_native_scoring_plan.py",
+          "scope": "Design-verified dispatch boundary, exact treatment/B*/three-control method bindings, confirmation mode, admission/GPU STOP enforcement and three-file return interface"
         }
       ],
       "remaining_implementation_gaps": [
-        "candidate-specific admitted official scorer runner/plan plus receipt-bound raw result collection",
         "Local CPU software acceptance and real-sequence execution of the generated candidate source",
         "Local execution and official scoring of the delivered quadratic control and group candidate",
         "observed resource/cost qualification for the new solver plus complete multi-arm unit"
@@ -285,7 +305,7 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -951,11 +971,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "7266cd5441266dab03a5e728cc3ef0d9a429a306",
-  "independent_source_review": "Separate read-only C13 scoring, protocol and final code reviewers inspected the selected specification, current artifact schemas and five-role request diff; no execution. Final review findings on B* identity/time/method binding, control-only aliasing, duplicate physical B*, failed-role identity/error propagation, unsafe result expansion and unsigned timestamps were repaired before delivery; result validation remains explicitly outside this engineering-only layer.",
+  "maintained_base_commit": "b90a853a03abf4d569ba7773c489e712ea147b95",
+  "independent_source_review": "Separate read-only C13 comparison, scoring, plan, math, interface and protocol reviewers inspected the selected specification, current artifact schemas and source diffs; no execution. Comparison findings on B* identity/time/method binding, control-only aliasing, duplicate physical B*, failed-role propagation and unsafe expansion were closed. Scoring findings on complete delivery validation, invalid-metric suppression, exact official output/provenance checks, physical GPU identity and pre-archive ceilings were closed. Plan findings on valid treatment role, confirmation evidence, strict runtime closure, base-plus-selected samples, exact arm implementation binding and enforceable Gate0/IPCG/family/criteria/GPU authorization were closed. Local execution remains required.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 0,
+    "full_method_source_complete": 1,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

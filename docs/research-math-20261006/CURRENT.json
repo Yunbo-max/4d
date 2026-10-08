@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T02:49:00Z",
+  "recorded_at": "2026-10-08T05:49:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C13 now has a generated_unexecuted group-l2 acceleration solver/core export and a zero-GPU existing-harness plan: explicit temporal SPD metric with off-diagonal anchor terms, exact float32 whole-frame anchors, 3D group dual balls, ADMM residuals, an exported-float32 Fenchel certificate, and full identity-preserving sequence output. Independent static source review found no remaining P0/P1. This does not close its missing B0/B*/Gaussian/quadratic/group native scoring/collection plan, Local acceptance, Natural Gate 0/IPCG or scientific prerequisites, so source-complete candidates and native results remain 0/15. The paired-context consumer and earlier quadratic control remain generated_unexecuted. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
+  "status": "C13 now has a source-complete but generated_unexecuted chain: distinct group-l2 candidate/full-sequence export, prospective five-role request, one-pass official ActionBench scoring, failure/alias-aware logical collection, bounded receipt-bound raw bundle validation and a fail-closed existing-harness plan. Web performed static source checks only. Real inputs, Local acceptance, Natural Gate 0/IPCG, design-verified protocol/batch, family split, numeric effect/noninferiority rules and native results are absent. Source-chain complete candidates are 1/15; Local-verified candidates and native candidate results remain 0/15. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -1201,6 +1201,65 @@
     "full_method_source_complete": false,
     "candidate_methods_completed": 0,
     "candidate_native_results": 0,
-    "next_step": "Local runs current common CPU acceptance, then freezes supplied-time interpretation and every positive solver parameter before emitting/executing the zero-GPU C13 artifact plan. Web next authors the candidate-specific hash-bound B0/B*/Gaussian/quadratic/group native scoring and collection path; GPU STOP remains effective."
+    "next_step": "Local runs current common CPU acceptance, then freezes supplied-time interpretation and every positive solver parameter before emitting/executing the zero-GPU C13 artifact plan. The downstream scorer/collector source now exists but remains blocked by real scientific admission and GPU STOP."
+  },
+  "c13_native_scoring_handoff": {
+    "status": "source_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T05:49:00Z",
+    "base_commit": "b90a853a03abf4d569ba7773c489e712ea147b95",
+    "scope": "C13 official scorer runner, bounded receipt-bound raw collection/validator and existing-harness plan only; no Local acceptance, scientific admission, execution or result",
+    "automation_host": {
+      "id": "6ac527ad50cc8191a4964d35ae0b826e",
+      "conversation_id": "6ac0b6a1-5e28-83e9-98d6-30f1536deef1",
+      "continuous_managed_process_verified": false
+    },
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/c13_native_scoring.py",
+        "sha256": "95b4eac7468072d96c7c195c2c8f8b653f1fdfd779ea26e9ee4a3d9b5872f75c"
+      },
+      {
+        "path": "actionmesh/prepare_c13_native_scoring.py",
+        "sha256": "8747a94b1018e2f8c7ef0f754a26f0187af15aeadc36c4f8689126d3decca239"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c13_native_scoring.py",
+        "sha256": "8a463ea0db2c09bcfeef13a65cd781e8d3ce0874123a8e67e6ac46dfba4a4fe7"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c13_native_scoring_plan.py",
+        "sha256": "f9036d8c8a7b036d4d2520b6a16609a0963c585d3f424bf6b1dabd25fcfd411f"
+      }
+    ],
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "0e1df0fa21538aa2dbfa34d82619a6f5532dfe20e6e650e39818687c6f158f4f"
+    },
+    "source_review": {
+      "mode": "independent read-only scoring and plan review; no execution",
+      "findings_closed": [
+        "full result/manifest/archive schema and cross-link validation was initially shallow",
+        "invalid official values could initially remain machine-readable after validation failure",
+        "official CSV/summary/export/command/log/backend/source provenance checks were incomplete",
+        "GPU identity initially relied on caller-controlled strings rather than a retained physical observation",
+        "raw count/member/expanded/archive/disk ceilings were initially applied too late",
+        "the first plan used an undeclared arm role and omitted all-arm implementation proof",
+        "the first plan downgraded confirmation evidence and omitted the base sample manifest",
+        "Gate0/IPCG/family/criteria/GPU resume requirements were prose-only and runtime closure was incomplete"
+      ],
+      "final_state": "Findings repaired in generated_unexecuted source; Local execution remains required"
+    },
+    "project_tests_executed_by_web": false,
+    "plan_builder_executed": false,
+    "official_scoring_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "local_software_acceptance_complete": false,
+    "natural_gate_0_passed": false,
+    "ipcg_passed": false,
+    "full_method_source_complete": true,
+    "candidate_source_complete": 1,
+    "candidate_methods_local_verified": 0,
+    "candidate_native_results": 0,
+    "next_step": "Keep GPU stopped. Local first runs current-source CPU acceptance. Only after explicit GPU resume and real C13 comparison inputs, Gate 0/IPCG, frozen design-verified confirmation protocol/method batch, independent-family split, numeric criteria, exact arm implementation bindings and an exact UID/GPU single-attempt authorization exist may Local build and inspect the scoring plan."
   }
 }

@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c13",
   "name_zh": "稀疏加速度的事件保留修复",
   "priority_rank": 4,
-  "status": "Candidate core/export and five-role engineering request assembler are generated_unexecuted; scientific admission, Local acceptance and frozen native protocol remain absent; not dispatchable.",
+  "status": "Candidate core/export, five-role request, official scoring/receipt-bound raw collection and common-harness plan source are complete but generated_unexecuted; scientific admission, Local acceptance and frozen native protocol remain absent; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
@@ -108,6 +108,12 @@
       "status": "requires task/precision-based numeric freeze, not run ready"
     },
     "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
+    "implementation_entries": {
+      "comparison_freeze": "actionmesh/research_math/c13_native_comparison.py",
+      "official_scoring_and_collection": "actionmesh/research_math/c13_native_scoring.py",
+      "admitted_harness_plan": "actionmesh/prepare_c13_native_scoring.py",
+      "status": "generated_unexecuted; Local method/design acceptance and native results absent"
+    },
     "proposed_decisions": [
       "PASS for complete qualified/native-confirmed frozen claims",
       "KILL for qualified and adequately precise refutation of this construction/necessity",

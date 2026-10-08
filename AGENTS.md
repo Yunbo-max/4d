@@ -28,12 +28,26 @@ frame pins, 3D group dual balls and a primal/dual certificate. Its native
 specialization records identity metric and frame-zero anchoring. This remains
 `generated_unexecuted`, scientifically unadmitted and unscored; its one-arm
 manifest does not freeze B* or authorize the official GPU scorer.
-The next engineering-only C13 boundary is
+The C13 comparison-freeze boundary is
 `python -m research_math.c13_native_comparison request`. It validates an
 externally frozen five-role comparison and never selects B* from outcomes,
 scores ActionBench, or emits a scientific dispatch plan. Alias B* roles share
 one physical score; failed preparations remain in the five-role denominator.
 Its current source/tests are `generated_unexecuted` and `dispatch_ready=false`.
+The following source-complete but unexecuted scoring boundary is
+`python -m research_math.c13_native_scoring request`, followed only after full
+scientific admission by `actionmesh/prepare_c13_native_scoring.py`. The runner
+stages unique physical roles, invokes the existing official adapter once,
+expands aliases only in the logical readout, retains every preparation/scoring
+failure, and emits receipt-bound `result.json`, `raw-manifest.json` and
+`raw-evidence.tar`. Never call its `score` operation directly: the plan builder
+must first verify C13 `design_verified`, the frozen five-role native contract,
+strict runtime/dependency locks, exact arm revisions/implementation refs, the
+base plus selected sample manifests, and a hash-bound scientific admission that
+contains Gate 0/IPCG, independent-family split, numeric outcome criteria and an
+explicit single-attempt GPU-resume authorization for the exact GPU UUID.
+Execution must use the common harness.
+No such admission or Local acceptance currently exists; GPU STOP remains in force.
 Completed paired-context evidence is consumed only through the CPU-only
 `actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
 the result, manifest and tar as three explicit staged paths, bind the expected

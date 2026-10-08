@@ -361,3 +361,59 @@ design-verified method batch, B*, actual independent units/split and numerical
 effect/NI rules remain missing. Do not synthesize them, run ActionBench, or
 resume GPU. Official runner/raw bundle source is the next implementation gap;
 candidate completeness and native results remain 0/15.
+
+## Continuation: C13 official scoring and raw collection — 2026-10-08
+
+Based on literal remote main `b90a853a03abf4d569ba7773c489e712ea147b95`,
+the C13 source chain now continues from the frozen five-role request to an
+official scorer runner, bounded raw bundle, bundle validator and common-harness
+plan builder. `research_math.c13_native_scoring` stages each unique completed
+physical case exactly once, calls the existing `official_actionbench_adapter.py`
+with the fixed seed-44 CUDA-forward/CPU-kNN-backward policy, checks the exact
+six-file upstream source plus compatibility patch, binds every success to the
+16-frame sequence and released GT hashes, and retains adapter/case failures.
+B* aliases are expanded only in the five-role readout and are explicitly marked
+as a shared measurement; missing/error roles stay in the denominator without
+zero imputation. Descriptive group-minus-control deltas are emitted only when
+both measurements exist; confidence intervals and verdicts remain absent.
+
+The collector returns `result.json`, `raw-manifest.json` and deterministic
+`raw-evidence.tar`. It inventories and rehashes every regular member, rejects
+links/sparse files/escape paths, freezes member/archive/expanded/metadata limits,
+excludes released GT bytes while retaining its exact ref, and validates the
+result/request/comparison/archive cross-links. The archive includes partial raw
+state after a scorer failure; it is not reconstructed as success.
+
+`prepare_c13_native_scoring.py` connects this runner to the existing native and
+outer harness. It fails closed unless the installed skill verifies C13 at
+`before dispatch`, the frozen native protocol names group as treatment, B* as
+baseline and B0/Gaussian/quadratic as controls, the one-UID manifest/GT/scorer
+closure matches, all arm revisions/implementations match the frozen comparison,
+the strict Local environment/dependency lock matches the active interpreter and
+the outer harness allocates the exact physical GPU UUID. It also requires a
+hash-bound admission tying Gate 0 PASS, IPCG, independent-family confirmation
+split, positive/numeric effect/guardrail criteria and an explicit exact-UID/GPU
+single-attempt resume authorization to this comparison and protocol. It creates
+one treatment task, one confirmation attempt, zero retry and the three
+receipt-bound outputs; it preserves the frozen single-use protocol and does not
+create a parallel executor. GPU STOP therefore blocks plan emission rather than
+being a prose-only warning.
+
+Independent scoring-source review also found that the first draft accepted only
+shallow result fields, could expose invalid official values after a validation
+error, weakly checked official CSV/summary/export/command provenance, treated GPU
+identity as a string, and applied archive limits after construction. The repair
+rehashes and semantically cross-checks the complete result/manifest/archive,
+suppresses untrusted official metrics on failed validation, compares exact
+official files and command/log/backend/source identities, records a physical
+`nvidia-smi` UUID receipt, and preflights member/count/expanded/disk ceilings
+before deterministic streaming archive construction.
+
+All new source and tests are `generated_unexecuted`/`authored_not_run`. Web ran
+only static AST/JSON/diff inspection: no project test, plan builder, official
+scorer, model, inference or GPU task ran. The real comparison request, Gate 0,
+IPCG, design-verified method batch, family split, numeric effect/NI criteria and
+single-attempt GPU-resume authorization are absent, so current plan creation
+correctly remains blocked. C13 is now
+recorded as source-chain complete but Local-unverified; native candidate results
+remain 0/15, and GPU STOP remains effective.
