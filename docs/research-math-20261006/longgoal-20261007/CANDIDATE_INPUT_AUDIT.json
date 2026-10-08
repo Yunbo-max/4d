@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design inventory. C01,C02,C13,C14 have generated_unexecuted source chains within their current native input scopes. No Local-verified candidate or native candidate result. Complete G01, wider producer scopes and remaining eleven source chains are still pending.",
+  "scope": "Maintained 15-item source/design inventory. C01,C02,C10,C13,C14 have generated_unexecuted source chains within their current native input scopes. No Local-verified candidate or native candidate result. Complete G01, wider producer scopes and remaining ten source chains are still pending.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -165,9 +165,11 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c10-math.json",
         "sha256": "e64132a47b3331ae5b701a01eff9bd94fe319b07b1853d7db43f94ae32c1a54f"
       },
-      "source_status": "specification_only",
-      "code_entry": null,
-      "real_input_and_model_interface": "Native mesh and independently estimated legal differential targets; fixed G/W and pins",
+      "source_status": "source_complete_generated_unexecuted",
+      "code_entry": "actionmesh/research_math/integrable_gradient_candidate.py; actionmesh/prepare_integrable_gradient_candidate.py",
+      "candidate_plan_entry": "actionmesh/prepare_integrable_gradient_candidate.py",
+      "native_scoring_plan_entry": "actionmesh/prepare_c10_native_scoring.py; actionmesh/launch_c10_native_scoring.py",
+      "real_input_and_model_interface": "One completed receipt-bound native ActionMesh sequence.npz plus colocated report.json: float32 vertices[16,V,3], fixed triangle faces, frame_indices 0..15, retained timesteps and query_vertex_ids. The model is upstream only: C10 reads the retained predicted mesh, derives one geometry/topology-only h and anchor-derived positive W, and never reads GT, text/event labels, cameras or scorer state.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -176,21 +178,22 @@
       ],
       "controls_and_ablations": [
         "B0",
-        "B_star",
+        "B_star (prospectively selected before outcomes)",
         "direct_common_lift",
-        "independent_local_repair",
+        "qualified face-local ARAP (independent_local_repair)",
         "pinned_integrable_solve"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
-      "remaining_implementation_gaps": [
-        "qualified differential target generator",
-        "common lift",
-        "sparse pinned integrable solver",
-        "native entry"
+      "native_scoring_entry": "research_math.c10_native_comparison request -> research_math.c10_native_scoring request -> actionmesh/prepare_c10_native_scoring.py -> actionmesh/launch_c10_native_scoring.py -> official_actionbench_adapter.py",
+      "local_method_acceptance_command": "First run the current-source zero-GPU prepare_control_scoring_checks.py harness plan; then follow LOCAL_AGENT_RUNBOOK.md C10 section to build and execute the zero-GPU prepare_integrable_gradient_candidate.py plan against an exact retained sequence/report pair, materialize its bounded archive, run validate_candidate_artifact, and only after scientific admission build the one-shot official scoring plan.",
+      "acceptance_command_gap": "Commands and validation source are complete, but no Local command has been executed and no real C10 freeze/input/admission/authorization packet exists.",
+      "completion_evidence": [
+        "common geometry-only h, fixed positive W, per-component pins, exact frame-zero/full-identity export and float32 certificate recomputation are implemented",
+        "direct lift, qualified face-local ARAP and matrix-free pinned solve are distinct constructions sharing h and evaluated under the same W",
+        "terminal failed arms remain in the fixed artifact and logical denominator; comparison deduplicates only byte-identical physical sequences",
+        "official ActionBench request/scoring/raw-closure/authorization-gated single-owner launch source is connected",
+        "independent read-only source reviews closed artifact settlement, method identity, source-symlink, exact-report and failed-arm issues"
       ],
+      "remaining_implementation_gaps": [],
       "scientific_prerequisites": [
         "task-relevant natural nonintegrable field",
         "qualified common target generator and reconstruction comparators",
@@ -201,7 +204,7 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -1031,7 +1034,7 @@
   "independent_source_review": "Independent read-only C01 math/context and scoring/plan reviews; no execution. Core and source closure reviewed, exact query cast retained, unclipped control separated, full context/failure raw archive bound. Fixed shared profile import closure, deterministic-kNN staging and protocol/analysis hash cycle; authored real staging/native acceptance and acyclic binding tests. Final source review does not establish Local test pass.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 4,
+    "full_method_source_complete": 5,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

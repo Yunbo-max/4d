@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C13,C14 have generated_unexecuted method-to-official-score source chains within their current native input scopes (4/15); Local-verified and native-result candidates remain 0/15. C01 covers the existing seed42 complete native 16-frame window only; the originally proposed additional seeds need producer extension. Eleven source chains and complete G01 remain pending. No project code/tests, plan builder, model, scoring or GPU work was executed on Web. Supervisor remains uninstalled/unstarted; GPU STOP and frozen budget/protocol remain effective.",
+  "status": "C01,C02,C10,C13,C14 have generated_unexecuted method-to-official-score source chains within their current native input scopes (5/15); Local-verified and native-result candidates remain 0/15. C01 covers the existing seed42 complete native 16-frame window only; the originally proposed additional seeds need producer extension. Ten source chains and complete G01 remain pending. No project code/tests, plan builder, model, scoring or GPU work was executed on Web. Supervisor remains uninstalled/unstarted and is still a finite pre-frozen campaign controller rather than the required persistent continuation service; GPU STOP and frozen budget/protocol remain effective.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -1505,10 +1505,11 @@
       "plan_builder_executed": false,
       "official_scoring_executed": false
     },
-    "source_complete_candidate_count": 4,
+    "source_complete_candidate_count": 5,
     "source_complete_candidates": [
       "C01",
       "C02",
+      "C10",
       "C13",
       "C14"
     ],
@@ -1520,12 +1521,69 @@
     "supervisor_installed": false,
     "supervisor_running": false,
     "remaining_gaps": [
-      "eleven selected candidates still lack complete source chains",
+      "ten selected candidates still lack complete source chains",
       "C01 original inference seeds314/2718 require native producer extension; no silent substitution",
       "complete reviewed G01/family splits/numeric criteria and scientific admission remain pending",
       "Local current-source CPU and real native interface acceptance pending; required raw native input closure absent",
       "baseline indices10–15 coverage and UID008 full raw bundle remain unproven; do not overwrite or rerun old records"
     ],
-    "next_step": "Continue independent ready C10 differential-target/common-lift implementation and pinned solver, maintaining this same inventory and single harness. Local may use runbook CPU acceptance and retained-native acceptance plans when actual inputs exist. Keep GPU STOP; no new budget or scientific retry."
+    "next_step": "Continue the next independent ready retained candidate source chain (C04 by the maintained order), while Local may separately use the runbook CPU acceptance and retained-native C10 artifact plan when actual inputs exist. Keep GPU STOP; no new budget or scientific retry."
+  },
+  "c10_integrable_gradient_handoff": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T10:40:00Z",
+    "base_commit": "4d5269a3e8815089d4d6a60769a8d762374ae4e8",
+    "scope": "C10 geometry-only common differential target, anchor-derived fixed positive W, per-component pins, direct common lift, qualified face-local ARAP, matrix-free pinned integrable solve, exact full16frame identity-preserving export, bounded terminal artifact collection, prospective five-role comparison, official ActionBench scoring/raw closure and authorization-gated single-owner plan/launcher source. No Local execution, scientific admission or native result claimed.",
+    "automation_host": {
+      "id": "6ac527ad50cc8191a4964d35ae0b826e",
+      "conversation_id": "6ac0b6a1-5e28-83e9-98d6-30f1536deef1",
+      "continuous_managed_process_verified": false
+    },
+    "source_refs": [
+      {"path": "actionmesh/research_math/integrable_gradient_candidate.py", "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"},
+      {"path": "actionmesh/prepare_integrable_gradient_candidate.py", "sha256": "961371579ed4e21dc07e6fa68971ab23f1c00637f84fea2dde6c0539e78312b9"},
+      {"path": "actionmesh/research_math/c10_native_comparison.py", "sha256": "af0f4256e700c853ee552ffd2373caf1bc5c2730841081ce7c514914dd9c3e25"},
+      {"path": "actionmesh/research_math/c10_native_scoring.py", "sha256": "4805e8ff6cdcc424e7e4f0aeb205830eb1175a53e185eee8aac1cbb18556b67d"},
+      {"path": "actionmesh/prepare_c10_native_scoring.py", "sha256": "874b290315d163abf9a206e69f4541ac2aa160f6042743099916ad13eddde46b"},
+      {"path": "actionmesh/launch_c10_native_scoring.py", "sha256": "9aaada8e6ce6c0240f90c616a5de60133bfd9134247e8f80abcb183302285b26"}
+    ],
+    "validation": {
+      "read_only_installed_method_validator": "code-boundary ready; math20/20, selected15, selection_verified true; code/design/results authorization remains false/not_granted in evidence",
+      "batch_sha256": "f8d4a834db8d017465b6234d05b4ec545c5a01c04118c173026fd425a938fb72",
+      "web_checks": "AST parsing, JSON parsing, diff whitespace and independent source inspection only",
+      "project_tests_executed_by_web": false,
+      "plan_builder_executed": false,
+      "solver_executed": false,
+      "official_scoring_executed": false
+    },
+    "source_review": {
+      "findings_closed": [
+        "fixed positive W is anchor-derived and shared across all 16 frames",
+        "frame zero, component pins and final float32 certificate are exact",
+        "qualified ARAP is a distinct common-target comparator rather than an alias for the candidate",
+        "terminal failed arms are collectable without becoming scoreable success",
+        "candidate embedded arms exactly bind disk reports and source symlinks are rejected",
+        "raw frozen inputs and logical failed-role denominator survive official scoring collection"
+      ],
+      "final_state": "No remaining concrete source blocker found in the C10 reviewed scope; static review does not establish Local acceptance."
+    },
+    "source_complete_candidate_count": 5,
+    "source_complete_candidates": ["C01", "C02", "C10", "C13", "C14"],
+    "candidate_methods_local_verified": 0,
+    "candidate_native_results": 0,
+    "g01_complete": false,
+    "gpu_execution": "stopped_by_user",
+    "supervisor_installed": false,
+    "supervisor_running": false,
+    "supervisor_source_status": "finite pre-frozen campaign controller only",
+    "supervisor_remaining_source_gaps": [
+      "per-plan missing-input isolation",
+      "periodic owner/status heartbeat and GPU-idle anomaly observation",
+      "restart/lost-ack active-state reconciliation",
+      "safe request-stop/resume/status entrypoints",
+      "continued waiting for newly ready items within a reviewed manifest revision",
+      "non-mocked two-batch, failure-isolation, interruption and lost-ack integration tests"
+    ],
+    "next_step": "Keep GPU stopped. Continue C04 source implementation independently. Local C10 acceptance begins with current-source CPU checks and the zero-GPU retained-native artifact plan; scientific scoring remains blocked on real input, Gate 0/IPCG, family split, complete G01 criteria, strict runtime closure and an explicit exact-attempt resume authorization."
   }
 }

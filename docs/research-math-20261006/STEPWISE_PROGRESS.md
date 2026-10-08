@@ -1542,3 +1542,49 @@ automation `6ac527ad50cc8191a4964d35ae0b826e`, not a verified continuously runni
 process. Continue the retained selection at C10's legal differential target/common
 lift/pinned solver or another independently ready missing component; do not
 restart ranking or count Local-unexecuted source as method verification.
+
+## Continuation: C10 integrable-gradient full source chain — 2026-10-08
+
+Resumed literal main `4d5269a3e8815089d4d6a60769a8d762374ae4e8` and preserved
+the existing 20-card pool, 15 selected identities and priority order. The
+installed read-only method validator reported math20/20, selected15 and the C10
+code boundary ready; code/design/results authorization remained absent. Primary
+source review confirmed that gradient-domain/Poisson editing and ARAP are
+classical solver classes, so this delivery makes no novelty claim.
+
+Implemented a geometry/topology-only common differential target from one exact
+receipt-bound native prediction. Edge orientation, anchor-derived positive
+weights and per-component lowest-ID pins are deterministic; `h[0]=0` and the
+same W is held across all 16 frames. Three distinct physical constructions now
+exist: spanning-forest direct lift, qualified per-face proper-rotation ARAP with
+independent local reconstruction, and the actual C10 matrix-free pinned weighted
+Poisson solve. All complete arms preserve every non-vertex source array, exact
+frame zero and pins, and recompute projection certificates from the final
+float32 output. No clipping or hidden fallback converts a method failure into a
+result.
+
+Added the zero-GPU, zero-retry artifact plan with a fixed bounded deterministic
+archive so terminal failed arms can be collected successfully while retaining
+candidate `status=incomplete`. Validation rejects source symlinks, requires the
+sibling completed report, binds the installed implementation and exactly matches
+embedded arms to physical reports. Added the prospective five-role comparison,
+qualified-ARAP method identity, physical content deduplication, failed-role
+denominator, official ActionBench scoring/raw closure, full frozen-input
+snapshot, admission-gated plan and stable single-owner launcher.
+
+Independent static review closed earlier frame-zero, fixed-W, final-float32,
+failed-artifact settlement, exact-report, source-path and qualified-ARAP issues.
+Only AST/JSON/diff/source inspection was performed. No project test, builder,
+solver, model, scorer, download, inference or GPU task ran. C10 is therefore
+source-chain complete but `generated_unexecuted`; Local acceptance and native
+result remain absent.
+
+The maintained count is now 5/15 source-complete (C01,C02,C10,C13,C14), 0/15
+Local-verified and 0/15 native results. Ten method source chains, complete G01
+and the persistent supervisor continuation layer remain. The current supervisor
+source is only a finite pre-frozen campaign controller: per-item missing-input
+isolation, periodic owner/status heartbeat, GPU-idle anomaly observation,
+lost-ack restart reconciliation, safe stop/resume/status commands, continued
+waiting for newly ready reviewed items and non-mocked recovery coverage remain
+open. It is not installed or running. GPU STOP and the frozen budget/protocol
+remain unchanged; continue the next independently ready method (C04).

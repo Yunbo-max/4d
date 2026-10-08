@@ -594,11 +594,63 @@ Local tests only; no project imports, tests, builders, methods, model, official
 scorer or GPU workload ran on Web. A read-only installed evidence-validator call,
 AST/JSON/diff/hash checks do not change that status.
 
-Current source-chain coverage is 4/15 (C01,C02,C13,C14), within the documented
+Before the C10 continuation below, source-chain coverage was 4/15
+(C01,C02,C13,C14), within the documented
 native input scopes; Local candidate verification and native results are 0/15.
 C01 seed314/2718 repeats require a reviewed producer extension (current producer
 is seed42 only). Complete G01 still lacks actual independent-family assignments,
 prospective numeric effect/NI/precision decisions and complete-unit measurement;
-Natural Gate0/IPCG and native qualification remain open. Eleven other source
+Natural Gate0/IPCG and native qualification remain open. At that checkpoint eleven source
 chains retain concrete gaps in the maintained inventory. Supervisor remains
 uninstalled/unstarted and GPU remains stopped. The stage is not complete.
+
+## C10 integrable-gradient continuation
+
+Source base for this continuation was literal main
+`4d5269a3e8815089d4d6a60769a8d762374ae4e8`. C10 now has a complete
+`generated_unexecuted` source chain. The zero-GPU artifact entry is
+`actionmesh/prepare_integrable_gradient_candidate.py`; it consumes one exact
+completed native `sequence.npz` and sibling receipt, constructs a deterministic
+geometry-only common differential target, holds an anchor-derived positive W
+fixed over all 16 frames and pins each connected component. It exports three
+real constructions: deterministic direct lift, qualified face-local ARAP and
+the matrix-free pinned integrable candidate. The latter is the C10 method;
+neither control is relabelled as the candidate.
+
+Every completed output preserves source topology, frame/time/vertex identities,
+frame zero and pins, and recomputes the projection certificate from the final
+float32 sequence. Failed arms retain bounded terminal reports without scoreable
+sequence bytes. A deterministic bounded archive gives the existing harness a
+fixed terminal output contract even when a method arm fails; candidate status
+remains `incomplete`. Safe materialization does not use `tar.extract`, enforces
+regular relative members and byte ceilings, and validation reopens the exact
+source/report pair, rejects symlinks and exact-binds all disk reports.
+
+Prospective comparison/scoring continues through
+`research_math.c10_native_comparison`, `research_math.c10_native_scoring`,
+`actionmesh/prepare_c10_native_scoring.py` and
+`actionmesh/launch_c10_native_scoring.py`. B0, preselected B*, direct lift,
+qualified local ARAP and the pinned candidate form the five-role denominator.
+Physical byte-identical sequences are scored once; every failed logical role is
+retained and never zero-imputed. The scoring archive snapshots the complete
+common-target/source/failure closure and remains bound to the official
+ActionBench adapter, dataset semantics, GT and exact 16-frame export.
+
+Local starts at the [C10 command card](../../LOCAL_AGENT_RUNBOOK.md#c10-integrable-gradient-chain--source-complete-not-executed).
+Run current-source CPU acceptance first, then the CPU artifact plan only on an
+actual retained native pair. Scientific scoring remains fail-closed until
+design verification, Gate 0/IPCG, source-derived family split, complete
+protocol-equal G01 criteria, strict runtime closure and an exact expiring
+single-attempt GPU authorization exist. No such packet exists now. No project
+test, builder, method, solver, scorer, model or GPU workload ran during Web
+authoring.
+
+Coverage is now 5/15 source-complete (C01,C02,C10,C13,C14), 0/15 Local-verified
+and 0/15 native results. Ten candidate source chains and complete G01 remain.
+The current supervisor source is still only a finite pre-frozen campaign
+controller, not the required persistent continuation layer. Per-plan missing
+input isolation, periodic owner/status heartbeat, GPU-idle anomaly observation,
+lost-ack restart reconciliation, safe stop/resume/status entrypoints, waiting
+for newly ready reviewed tasks and non-mocked two-batch/recovery tests remain
+open. It is not installed or running. GPU STOP and the frozen budget/protocol
+are unchanged; the next independent source target is C04.

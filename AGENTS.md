@@ -74,6 +74,23 @@ delegates to the existing harness. Never execute the C14 plan through the generi
 harness CLI or call the scorer directly.
 C14 is source-chain complete but remains Local-unverified, scientifically
 unadmitted and unscored; GPU STOP remains in force.
+The C10 source-complete chain starts with the CPU-only artifact plan
+`actionmesh/prepare_integrable_gradient_candidate.py`. It binds one completed
+native `sequence.npz`/sibling `report.json`, derives one geometry-only common
+differential target, fixes anchor-derived positive edge weights across all 16
+frames and exports direct common lift, qualified face-local ARAP and the pinned
+matrix-free integrable solve. Failed method arms retain terminal reports in a
+fixed bounded artifact archive and remain failures; they are never converted to
+scoreable output or silently retried. Continue only through
+`python -m research_math.c10_native_comparison request`,
+`python -m research_math.c10_native_scoring request`, then the admitted plan
+builder `actionmesh/prepare_c10_native_scoring.py` and single-owner launcher
+`actionmesh/launch_c10_native_scoring.py`. The five logical roles are
+B0/B*/direct/qualified local ARAP/pinned candidate; B* is chosen prospectively,
+physical arrays are deduplicated, and all failed roles stay in the denominator.
+Do not call a constructor, scorer or generic harness CLI directly. C10 remains
+generated_unexecuted, Local-unverified, scientifically unadmitted and unscored;
+GPU STOP remains in force.
 C01's actual direct decoder correction now has a source chain at
 `prepare_self_map_candidate.py`, `prepare_c01_native_acceptance.py`,
 `research_math.c01_native_comparison`, `research_math.c01_native_scoring`,

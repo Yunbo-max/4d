@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c10",
   "name_zh": "形变梯度的可积投影",
   "priority_rank": 3,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Source-complete generated_unexecuted method-to-official-score chain; Local acceptance, scientific admission, frozen native protocol and native results remain pending; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
@@ -54,26 +54,26 @@
     {
       "derivation_step": "s1",
       "statement": "Minimize .5||G S z-h||_W^2.",
-      "planned_function": "4d_math_20261006_c10.form_pinned_integrability_objective",
-      "status": "not_implemented"
+      "planned_function": "research_math.integrable_gradient_candidate.generate_common_differential_target",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "(S^T G^T W G S)z=S^T G^T W h.",
-      "planned_function": "4d_math_20261006_c10.solve_reduced_poisson",
-      "status": "not_implemented"
+      "planned_function": "research_math.integrable_gradient_candidate.pinned_integrable_solve",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "(G S)^T W(G S z-h)=0 at the solution.",
-      "planned_function": "4d_math_20261006_c10.check_weighted_projection",
-      "status": "not_implemented"
+      "planned_function": "research_math.integrable_gradient_candidate._exported_projection_diagnostics",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s4",
       "statement": "Uniqueness requires a positive definite reduced operator or an explicitly fixed gauge/pseudoinverse.",
-      "planned_function": "4d_math_20261006_c10.fix_component_gauges",
-      "status": "not_implemented"
+      "planned_function": "research_math.integrable_gradient_candidate.connected_components",
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -97,7 +97,7 @@
     "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
     "distinguishing_prediction": "Benefit should track the inconsistent component of h; already integrable fields should require no projection change apart from numerical error.",
     "falsifier": "Reject necessity if direct landmark/geodesic rigid lifting matches the native geometry/motion frontier at equal cost.",
-    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "actual_ids_and_group_split": "source supports receipt-bound native UID and prospective independent-family freeze; actual IDs/family assignments remain pending scientific admission",
     "seed_policy": {
       "inference": [
         42,
@@ -120,6 +120,21 @@
       "REVISE for prespecified child hypothesis",
       "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
     ]
+  },
+  "implementation_delivery": {
+    "status": "source_complete_generated_unexecuted",
+    "candidate_entry": "actionmesh/prepare_integrable_gradient_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c10_native_comparison.py",
+    "official_scoring_entry": "actionmesh/research_math/c10_native_scoring.py",
+    "admitted_plan_entry": "actionmesh/prepare_c10_native_scoring.py",
+    "single_owner_launch_entry": "actionmesh/launch_c10_native_scoring.py",
+    "common_target_controls": [
+      "direct_common_lift",
+      "qualified face-local ARAP (independent_local_repair)",
+      "pinned_integrable_solve"
+    ],
+    "failure_contract": "terminal failed arms retain bounded reports and stay in the five-role denominator; no zero imputation or same-experiment retry",
+    "authoring_validation": "read-only method boundary plus independent static source review; no project test, builder, solver, scorer or GPU execution"
   },
   "outstanding_requirements": [
     "task-relevant natural nonintegrable field",

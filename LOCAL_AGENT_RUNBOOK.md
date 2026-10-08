@@ -798,6 +798,73 @@ harness and has not been installed or started. No candidate is promoted.
 
 ### Latest source handoff — decoder capture
 
+### C10 integrable-gradient chain — source complete, not executed
+
+C10 now has a distinct method-to-official-score source chain. It does not reuse
+the older external `d/C/W` projection as the candidate. The CPU artifact builder
+consumes one completed receipt-bound native `sequence.npz` and its sibling
+`report.json`, constructs a single geometry-only differential target, and holds
+one anchor-derived positive edge-weight vector fixed across all 16 frames. It
+exports deterministic direct lift, qualified face-local ARAP and the pinned
+matrix-free integrable solve. All use the same `h` and are evaluated under the
+same `W`; direct lift does not use `W` in its construction. Per-component
+lowest-ID pins, frame zero, topology, timing arrays and vertex identities are
+preserved exactly. A method failure remains a failed logical role but is still
+collectable through the bounded terminal archive.
+
+First run the common current-source CPU acceptance plan described above. Then,
+with an actual retained native source and a new single-use directory, prepare
+the candidate artifact plan only; the example numbers are design inputs that
+must be reviewed and frozen, not defaults to copy silently:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_integrable_gradient_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$source_sequence" \
+  --run-id c10-artifact-001 --plan-dir "$project_dir/plans/c10-artifact-001" \
+  --target-strength 0.25 --max-relative-change 0.10 \
+  --absolute-tolerance 1e-10 --relative-tolerance 1e-8 \
+  --max-iterations 2000 --coordinate-bounds -2 2 \
+  --bounds-policy preserve_and_report --max-artifact-bytes 1073741824 \
+  --wall-seconds 7200
+```
+
+Inspect the emitted `harness.json`, its exact digest, zero-GPU resources and
+three stable receipt outputs before Local decides whether to execute it through
+the installed harness. Never call `research_math.integrable_gradient_candidate`
+directly. On return, retain `candidate.json`, `artifact-archive.json` and
+`artifact.tar`; materialize the archive only with
+`materialize_candidate_archive`, using explicit archive/member byte ceilings,
+then run the validator against the materialized `candidate.json`. `incomplete`
+means one or more physical methods failed and must stay in the five-role
+denominator; it is not a successful candidate outcome.
+
+After prospective B* selection and an exact C10 freeze exist, build the logical
+comparison request without scoring:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c10_native_comparison request \
+  --root "$project_dir" --freeze "$c10_freeze" --output "$c10_request"
+"$python_bin" -m research_math.c10_native_scoring request \
+  --root "$project_dir" --freeze "$c10_freeze" --output "$c10_scoring_request"
+```
+
+The request fixes B0, prospective B*, direct lift, qualified local ARAP and the
+pinned candidate; content-identical physical arrays are scored once, while all
+five logical roles and terminal preparation failures remain in the analysis
+denominator. Official scoring still requires C10 `design_verified`, installed
+validator evidence for Gate 0/IPCG, source-bound independent family split,
+protocol-equal G01 numeric criteria, strict runtime closure, exact ActionBench
+snapshot/GT/scorer identities and an explicit expiring
+`single_c10_scoring_attempt` authorization for the named physical GPU. Only
+then may Local invoke `actionmesh/prepare_c10_native_scoring.py` using its
+`--root/--request/--protocol/--method-batch/--environment/--admission/--skill-dir`
+and plan/resource arguments, inspect the emitted digest, and launch through
+`actionmesh/launch_c10_native_scoring.py`. Direct scorer or generic harness CLI
+execution is forbidden. Current status is `generated_unexecuted`: no Local
+test, candidate computation, scorer or GPU execution has occurred.
+
 The latest implementation entry is
 [NATIVE_DECODER_CAPTURE.md](docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md).
 It adds the opt-in `complete_unit_plan --capture-decoder` path around the actual
@@ -836,8 +903,8 @@ historical-r7 reference closure and a stale GPU environment identity; do not
 launch GPU work while resolving it.
 
 There are 20 mathematical constructions and 15 conditionally selected candidates.
-C01, C02, C13 and C14 now have **source-complete, generated_unexecuted** method-to-
-official-score chains, so source completion is **4/15**; **0/15 are Local-verified
+C01, C02, C10, C13 and C14 now have **source-complete, generated_unexecuted** method-to-
+official-score chains, so source completion is **5/15**; **0/15 are Local-verified
 and 0/15 have native results**. C02's new complete chain remains unadmitted and
 unexecuted; the earlier dense operator alone is still only a reference primitive.
 
@@ -1657,4 +1724,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C10, C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
