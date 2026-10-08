@@ -10,6 +10,8 @@ C13 规格要求的强简单对照现已有独立源码入口：`actionmesh/prep
 
 C13 group-trend 候选现在另有 `actionmesh/prepare_group_acceleration_candidate.py`：消费同一完整原生序列，按 supplied native loader clock 构造非均匀二阶差分，支持显式 hash 固定的非对角 temporal SPD metric（原生首个特化明确选择 identity），通过自由帧消元精确固定第 0 帧，并导出 3D group dual-ball、Fenchel 下界、primal/dual gap、ADMM residual 与完整原身份序列。源码和验收测试仍是 **generated_unexecuted**；尚未完成 Local 验收、B*／多臂收集、官方评分、Natural Gate 0 或 IPCG，所以 C13 仍不计完整候选，native 结果仍为 0/15。GPU 仍停止。
 
+C13 五角色比较现在有独立的工程装配入口 `python -m research_math.c13_native_comparison request`。它只消费并重哈希已经保留的 B0、事前固定 B*、Gaussian、quadratic 与 group 报告/序列，核对同一 UID、seed、源字节、完整 16 帧拓扑与身份；B* 可显式别名到既有物理臂并只评分一次，准备失败仍留在五角色分母。当前缺少真实 B* 决策与科学准入，因此该入口固定输出 `dispatch_ready=false`，不运行官方评分，也不恢复 GPU。
+
 本轮新增[完整原生 decoder capture 入口](docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md)：`complete_unit_plan --capture-decoder` 可生成独立观测单元计划，接入官方生成、完整上下文归档和三臂评分。新增源码为 **generated_unexecuted**，需要 Local CPU harness 验收；GPU 实验保持停止，尚无完整原生 capture 或 replay 结果。新增观测单元不能沿用旧队列定价。
 
 最新交付继续补齐独立成对生成验证、完整上下文回放、源时间查询和有限批次 supervisor。源码与验收测试已编写，仍须 Local 验收；supervisor 尚未安装或启动。共享接口不等于 15 个候选方法实现完成。环境与资产沿用[运行手册的固定数据/模型来源](LOCAL_AGENT_RUNBOOK.md#download-datasets-and-models)，优先复用仍匹配的已有资产。

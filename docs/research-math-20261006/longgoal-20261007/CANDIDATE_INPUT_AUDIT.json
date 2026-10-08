@@ -218,8 +218,8 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
         "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
       },
-      "source_status": "generated_unexecuted_candidate_core_and_full_sequence_export; scientific admission and multi-arm native scoring remain open",
-      "code_entry": "actionmesh/research_math/group_acceleration_candidate.py:repair_group_acceleration,export_group_candidate",
+      "source_status": "generated_unexecuted_candidate_core_full_sequence_export_and_five_role_request_assembler; scientific admission and official native scoring remain open",
+      "code_entry": "actionmesh/research_math/group_acceleration_candidate.py:repair_group_acceleration,export_group_candidate; actionmesh/research_math/c13_native_comparison.py:make_request,verify_request",
       "candidate_plan_entry": "actionmesh/prepare_group_acceleration_candidate.py",
       "strong_control_code_entry": "actionmesh/research_math/quadratic_acceleration_control.py:export_quadratic_control",
       "strong_control_plan_entry": "actionmesh/prepare_quadratic_acceleration_control.py",
@@ -239,9 +239,9 @@
         "quadratic_acceleration",
         "group_acceleration"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate accepts the emitted one-arm manifest; candidate-specific hash-bound B0/B*/Gaussian/quadratic/group scoring and collection plan is not yet integrated",
+      "native_scoring_entry": "actionmesh/research_math/c13_native_comparison.py assembles and validates the hash-bound B0/B*/Gaussian/quadratic/group engineering request, including B* alias de-duplication and failed-role denominator retention; actionmesh/official_actionbench_adapter.py remains the fixed scorer, but the scientifically admitted scorer runner/plan and raw collection are not yet delivered",
       "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_group_acceleration_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --identity-observation-metric --run-id c13-group-candidate-001 --plan-dir $project_dir/plans/c13-group-candidate-001 --group-weight $frozen_group_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --gap-tolerance $frozen_gap_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c13_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
-      "acceptance_command_gap": "The CPU command can accept the generated solver/export source only. Candidate-specific multi-arm official scoring, Natural Gate 0/IPCG, parameter/time-unit freeze, Local observed acceptance and native result collection remain absent.",
+      "acceptance_command_gap": "The CPU method command and five-role request command can accept the generated solver/export and comparison-identity source only. Candidate-specific official scorer runner/plan/raw collection, Natural Gate 0/IPCG, parameter/time-unit freeze, Local observed acceptance and native results remain absent.",
       "completion_evidence": [
         {
           "status": "generated_unexecuted",
@@ -257,10 +257,20 @@
           "status": "authored_not_run",
           "source": "actionmesh/research_math/tests/test_group_acceleration_candidate.py",
           "scope": "Affine fixed point, exact anchor, 3D rotation equivariance, off-diagonal SPD cross term, dual certificate, metadata/hash/single-use failures and full identity-preserving export"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/research_math/c13_native_comparison.py",
+          "scope": "Five logical roles with exact source/native identity checks, explicit prospective B* decision, physical alias de-duplication, failed-preparation denominator retention and dispatch_ready=false request"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_c13_native_comparison.py",
+          "scope": "B* freeze/alias, topology and timeline rejection, physical-case de-duplication and failed-role denominator contracts"
         }
       ],
       "remaining_implementation_gaps": [
-        "candidate-specific hash-bound B0/B*/Gaussian/quadratic/group multi-arm native scoring and result collection plan",
+        "candidate-specific admitted official scorer runner/plan plus receipt-bound raw result collection",
         "Local CPU software acceptance and real-sequence execution of the generated candidate source",
         "Local execution and official scoring of the delivered quadratic control and group candidate",
         "observed resource/cost qualification for the new solver plus complete multi-arm unit"
@@ -941,8 +951,8 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "b4923b4d3a1efd3936982ded85f8be2a1bfa05af",
-  "independent_source_review": "Separate read-only delivery_inventory, candidate-gap and runtime-integration reviewers inspected selected specifications, actual entries and the C13 control diff; no execution. Final review found no remaining P0/P1 after C13 attribution, float32/unit/provenance wording and isolated-acceptance source-closure repairs.",
+  "maintained_base_commit": "7266cd5441266dab03a5e728cc3ef0d9a429a306",
+  "independent_source_review": "Separate read-only C13 scoring, protocol and final code reviewers inspected the selected specification, current artifact schemas and five-role request diff; no execution. Final review findings on B* identity/time/method binding, control-only aliasing, duplicate physical B*, failed-role identity/error propagation, unsafe result expansion and unsigned timestamps were repaired before delivery; result validation remains explicitly outside this engineering-only layer.",
   "stage_goal": {
     "selected_methods": 15,
     "full_method_source_complete": 0,

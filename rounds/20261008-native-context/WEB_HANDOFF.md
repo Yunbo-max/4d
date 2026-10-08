@@ -337,3 +337,27 @@ Natural Gate 0, IPCG, natural event-preservation evidence, parameter/time-unit
 freeze, family split/effect/NI criteria and official scores remain absent.
 Candidate source completion and native results therefore remain 0/15; this
 continuation materially closes only the C13 solver/full-sequence export gap.
+
+## Continuation: C13 five-role comparison request — 2026-10-08
+
+Base: literal remote main `7266cd5441266dab03a5e728cc3ef0d9a429a306`.
+`actionmesh/research_math/c13_native_comparison.py` now supplies the engineering
+boundary between separately retained C13 artifacts and a future scientifically
+admitted scorer plan. It does not run the scorer.
+
+Local first creates a prospective freeze exactly as specified in
+`LOCAL_AGENT_RUNBOOK.md`, including an independent B* decision. The request
+command then verifies the complete five-role logical inventory, shared source
+identity and full native array contract. Physical aliases are scored once while
+remaining visible as logical roles; failed preparations remain in the fixed
+denominator. The emitted request always records `generated_unexecuted=true`,
+`native_qualified=false`, `scientific_verdict=not_computed` and
+`dispatch_ready=false`.
+
+The authored tests were not executed by Web. Static AST/JSON/diff inspection is
+not Local acceptance. The repository still has no valid inputs for a candidate
+scientific plan: Natural Gate 0/IPCG, prospective Gate-A/G01 protocol,
+design-verified method batch, B*, actual independent units/split and numerical
+effect/NI rules remain missing. Do not synthesize them, run ActionBench, or
+resume GPU. Official runner/raw bundle source is the next implementation gap;
+candidate completeness and native results remain 0/15.

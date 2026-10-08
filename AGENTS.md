@@ -28,6 +28,12 @@ frame pins, 3D group dual balls and a primal/dual certificate. Its native
 specialization records identity metric and frame-zero anchoring. This remains
 `generated_unexecuted`, scientifically unadmitted and unscored; its one-arm
 manifest does not freeze B* or authorize the official GPU scorer.
+The next engineering-only C13 boundary is
+`python -m research_math.c13_native_comparison request`. It validates an
+externally frozen five-role comparison and never selects B* from outcomes,
+scores ActionBench, or emits a scientific dispatch plan. Alias B* roles share
+one physical score; failed preparations remain in the five-role denominator.
+Its current source/tests are `generated_unexecuted` and `dispatch_ready=false`.
 Completed paired-context evidence is consumed only through the CPU-only
 `actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
 the result, manifest and tar as three explicit staged paths, bind the expected

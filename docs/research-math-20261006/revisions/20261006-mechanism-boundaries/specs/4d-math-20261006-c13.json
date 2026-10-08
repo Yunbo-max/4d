@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c13",
   "name_zh": "稀疏加速度的事件保留修复",
   "priority_rank": 4,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Candidate core/export and five-role engineering request assembler are generated_unexecuted; scientific admission, Local acceptance and frozen native protocol remain absent; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
@@ -54,20 +54,20 @@
     {
       "derivation_step": "s1",
       "statement": "Solve min_y .5||y-yhat||_M^2 + lambda sum_(t,v)||D2 y||_2, with A y=X.",
-      "planned_function": "4d_math_20261006_c13.form_anchored_group_trend_problem",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.group_acceleration_candidate.form_anchored_group_trend_problem",
+      "status": "generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "lambda||a||_2=sup_{||p||_2<=lambda} p^T a.",
-      "planned_function": "4d_math_20261006_c13.form_group_dual_balls",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.group_acceleration_candidate.form_group_dual_balls",
+      "status": "generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "Write y=y_p+S z, A y_p=X, A S=0. Stationarity is S^T M(y_p+S z-yhat)+(D2 S)^T p=0.",
-      "planned_function": "4d_math_20261006_c13.solve_affine_anchor_stationarity",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.group_acceleration_candidate.solve_affine_anchor_stationarity",
+      "status": "generated_unexecuted"
     }
   ],
   "native_experiment": {

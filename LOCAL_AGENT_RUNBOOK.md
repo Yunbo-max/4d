@@ -148,11 +148,56 @@ allowance keeps the complete CPU artifact plan within 27,000 seconds.
 
 The emitted manifest contains only `group_acceleration`; existing native,
 Gaussian, quadratic and prospectively frozen B* artifacts remain separate and
-must be combined later by a candidate-specific, hash-bound native scoring plan.
-That multi-arm/scoring plan is not yet delivered. Do not call the official GPU
+must first be combined by the candidate-specific engineering request assembler
+below. The scientific scoring plan is not yet admissible. Do not call the official GPU
 adapter while STOP is effective. CPU artifact completion would still not prove
 Natural Gate 0, IPCG, event preservation, Local method verification or a native
 effect.
+
+### C13 five-role comparison request — engineering only
+
+After the real B0/Gaussian/quadratic/group artifacts exist, create a prospective
+`c13-native-comparison-freeze` JSON. It must have `version=1`, candidate ID
+`4d-math-20261006-c13`, `frozen_at`, the exact UID/inference seed, scoring seed
+44, primary `cd_motion`, guardrails `[cd_3d,cd_4d]`, exact source sequence/report
+refs, and the ordered roles `b0,b_star,gaussian,quadratic_acceleration,
+group_acceleration`. Each physical role supplies nonempty `method_id` plus exact
+`report_ref` and `sequence_ref`; an observed preparation failure supplies its
+report ref and `sequence_ref:null`. B* may instead carry only `alias_of` to a
+named simple-control role (B0, Gaussian or quadratic). The separate
+`b_star_decision_ref` uses exact kind/version/candidate/UID/inference-seed and
+timezone-aware `decided_at`, names the selected role and method, records
+`selected_without_c13_native_outcomes=true`, and includes nonempty pinned
+`selection_basis_refs`; it carries its own canonical `decision_digest`. Compute
+both digests over each object before adding its digest field. A physical B* must
+have a matching report `method_id`, and byte-identical physical B* output must
+instead use `alias_of`. Do not derive B* from official scores.
+
+Then, inside the compatible Local environment and still without GPU execution:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c13_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c13/c13-native-comparison-freeze.json" \
+  --output "$project_dir/inputs/c13/c13-native-comparison-request.json"
+```
+
+The command rehashes the complete closure, requires exact B0 source bytes,
+checks each completed arm against the same 16-frame float32 topology, timeline,
+vertex identity and frame-zero anchor, and requires the group certificate.
+Aliased B* maps to the same physical case and does not create a second
+measurement. A failed physical preparation remains a logical role with no
+scoring case. The output must retain `generated_unexecuted=true`,
+`native_qualified=false`, `scientific_verdict=not_computed` and
+`dispatch_ready=false`.
+
+This is not a harness execution plan and it does not call ActionBench. The later
+scientific builder must additionally receive real Natural Gate 0/IPCG evidence,
+a frozen Gate-A/G01 candidate protocol, verified method design, actual family
+split/IDs, non-null effect and noninferiority criteria, fixed runtime policy and
+Local GPU identity. Those artifacts do not currently exist; GPU STOP remains
+effective.
 
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
