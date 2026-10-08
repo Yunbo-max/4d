@@ -106,3 +106,116 @@ logs, failures, resource observations and the distinct software/native statuses.
 All 15 candidate native outcomes remain pending. The existing hourly authoring
 automation is separate from a running Local supervisor and does not prove that
 any native task is active.
+
+## Paired instrument plan and raw collection continuation
+
+Source base: `ece1ce883ea106e7d2d30ef23a3712a81cba9e49`. Still
+**generated_unexecuted**, with GPU STOP effective and no additional budget.
+`actionmesh/prepare_native_context.py` now supplies the missing plan-only entry.
+It accepts only the existing calibration-unit manifest, never a Full128 UID or
+historical pricing plan. The old 117-/119-output contracts are unchanged.
+
+`research_math.native_context_delivery` gives the paired plan three direct
+receipt outputs: `actionmesh/context-output/result.json`, `raw-manifest.json`
+and `raw-evidence.tar`. On successful comparison the runner requires all native
+raw files, packages every regular raw output (including optional renders),
+rehashes archive members and detects source-file changes during collection.
+The raw tree includes two complete 16-frame generations, exact captured inputs
+and outputs, topology/time mapping, replay, requests/logs/reports, environment/
+dependency bytes, initial/final input verification and resource samples.
+The result remains scientifically unqualified even when every comparison agrees.
+
+A failure or hard timeout may leave only a partial raw tree. Retain it under the
+actual harness attempt workspace. Missing archive is a collection gap on a
+failed attempt, never permission to recreate a success or rerun the same unit.
+Source-time bytes are required only for a successful instrument that requested
+them; a paired/replay disagreement remains `comparison_mismatch`.
+
+### Local acceptance and plan-only commands
+
+Use the existing CPU acceptance builder, with the new source-specific identity:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_control_scoring_checks.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --run-id native-context-delivery-acceptance-001 \
+  --plan-dir "$project_dir/plans/native-context-delivery-acceptance-001"
+
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/native-context-delivery-acceptance-001/harness.json" \
+  --root "$project_dir" --execute --approved-plan-digest "$approved_plan_digest"
+```
+
+Set `approved_plan_digest` to the builder's actual printed digest after reviewing
+its CPU-only source closure. Record observed outcomes; Web ran none of these
+checks. New tests cover the actual installed `make_plan` and `_stage` path,
+input/dependency relocation, output closure, corrupt/missing/link evidence,
+conditional source-time output and collection footprint. Fixtures qualify
+software behavior only.
+
+After current software acceptance, Local may prepare the instrument **without
+executing it**. Restore absolute `source_root`, `dataset_root`, `weights_root`,
+`gpu_uuid`, `project_dir`, `skill_dir` and `python_bin` from the runbook/actual
+host. The environment must be the current canonical
+`inputs/native-runtime/environment.json`, with its matching dependency inventory.
+Before emission, set `instrument_wall_seconds`, `instrument_cpu_cores` and
+`instrument_ram_mib` from a reviewed allocation within the remaining existing
+budget. No paired-instrument timing measurement exists; do not derive this
+allocation from the old 1,664-second single-unit price. The hard maximum is
+27,000 seconds, with 1,800 seconds reserved for controller collection/return.
+The two generations, replay, verification, raw tar writing and hashes all count
+inside the instrument budget. Raw collection duplicates disk payload; retain
+space for both the tree and tar in addition to existing assets.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_native_context.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --plan-dir "$project_dir/plans/paired-native-context-001" \
+  --run-id paired-native-context-001 \
+  --contract "$project_dir/docs/research-math-20261006/actionbench-fp16-lowram-unit-contract-v1.json" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --snapshot-contract "$project_dir/docs/research-math-20261006/actionbench-full128-snapshot-contract.json" \
+  --snapshot-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --unit-manifest "$project_dir/inputs/actionbench-full128-snapshots/unit-manifest.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --source-root "$source_root" --dataset-root "$dataset_root" --weights-root "$weights_root" \
+  --gpu-uuid "$gpu_uuid" --instrument-wall-seconds "$instrument_wall_seconds" \
+  --cpu-cores "$instrument_cpu_cores" --ram-mib "$instrument_ram_mib" \
+  --atol 0 --rtol 0 --max-capture-bytes 67108864 --source-time-query
+```
+
+The unit-manifest path above must contain the exact retained calibration manifest
+for the explicit FP16 child profile (R7 manifest SHA-256
+`b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6`); if it is absent, restore its receipt-bound
+bytes to that absent target or retain the missing-input failure. Never substitute
+a Full128 manifest or silently change precision. Zero tolerances prospectively
+ask whether replay is exact; a mismatch is retained and does not permit
+post-result tolerance relaxation. Source review of this command is not evidence
+that a plan has been emitted. Do not execute or enqueue this GPU plan while STOP
+remains in force. No `--execute` command for it is issued by this handoff.
+
+The outer harness's `total_wall_seconds` equals the instrument budget;
+`window_seconds` is that budget plus 1,800 and is reporting cadence, not a second
+timeout enforcement mechanism. Supervisor campaign limits must independently
+preserve the actual overall deadline/reserve. Sampled host telemetry stops before
+raw packaging so its archived bytes remain immutable. `result.json` separately
+retains before/after collection disk/RSS observations, explicitly not exact peaks.
+
+### Delivery inventory and next authoring work
+
+The maintained [15-item inventory](../../docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)
+now records each exact selected ID, math/review reference, real source entry,
+legal input/model interface, required output and all named controls/ablations,
+shared official scorer, absent candidate acceptance command, completion evidence
+and separate implementation/scientific gaps. No complete candidate method is
+claimed: C02 is a dense projection primitive; C14 is a simple baseline; C01 has
+a shared input instrument; the other 12 lack their complete method entries.
+No command is invented for an unimplemented method.
+
+Next Web work continues legal-input adapters and complete method/design
+obligations where their scientific premises exist. Sparse modes, legal motion
+surrogates and native gap/importance/collision evidence remain genuine missing
+prerequisites for affected candidates. Current-source Local CPU acceptance is
+pending independently. Full128 indices 10–15 remain an explicit coverage gap;
+the calibration instrument neither fills that gap nor retries r9.

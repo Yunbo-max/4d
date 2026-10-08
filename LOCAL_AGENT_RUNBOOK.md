@@ -4,6 +4,16 @@
 
 ### Current source delivery — paired replay and supervisor
 
+The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
+plan-only command, raw archive/manifest collection and current CPU acceptance
+commands. Read its **Paired instrument plan and raw collection continuation**
+section. The new runner requires the canonical environment and pinned dependency
+inventory before model loading and at final verification. Plan emission remains
+unapproved; GPU STOP and the existing budget remain unchanged. The maintained
+[15-item delivery inventory](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)
+separates concrete implementation gaps from scientific prerequisites and has no
+invented candidate acceptance commands.
+
 Read [the native-context/supervisor handoff](rounds/20261008-native-context/WEB_HANDOFF.md)
 first for this revision. GPU STOP is still effective. New source is
 `generated_unexecuted`; Web ran no project tests, generation, scoring or GPU work.

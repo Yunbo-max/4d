@@ -1174,3 +1174,48 @@ Preserved the concurrent `1bc3c97` capture-only unit and added a separate paired
 Added a finite campaign controller around the installed `run_harness.py`: pinned dependencies, verified terminal receipts, bounded preapproved repair children, same-task recovery, an unchanged overall deadline, driver-lock waiting and STOP handoff. It is source only, not an installed or running supervisor. CPU acceptance stages both capture entries, new replay modules, supervisor and test sources with the selected installed skill path.
 
 Source review, AST/JSON parsing and whitespace checks are distinct from runtime acceptance. No project test, builder, model, scorer, supervisor campaign or GPU task was executed by this authoring round. All new source remains `generated_unexecuted`. The paired instrument needs its own budget and output closure; old calibration pricing is not reused. The 15 candidate implementations/full designs are not complete, and no scientific gate or native result advances. See `rounds/20261008-native-context/WEB_HANDOFF.md` for the concrete next Local acceptance step.
+
+## Continuation: make paired native context deliverable through the harness — 2026-10-08
+
+Resumed exact main `ece1ce883ea106e7d2d30ef23a3712a81cba9e49` in a new
+clean detached worktree; preserved prior dirty workspaces. The historical
+pricing-root fix is present and was not reimplemented. GPU STOP remains in force.
+
+Added the missing plan-only `prepare_native_context.py` for the existing
+calibration UID. It pins current environment/dependency records, all actual
+runtime source imports and six native prerequisites; emits one engineering
+attempt with no retry; preserves an explicit separate two-generation/replay
+budget and collection reserve; and never consumes the Full128 queue price.
+Runner runtime metadata is checked before loading and again at final verification.
+
+Closed raw-output delivery: the runner now validates a complete successful raw
+inventory and binds every emitted regular file into a tar plus manifest, with
+archive-member rehash and change detection. Result/manifest/archive are direct
+native receipt outputs. Failed or forcibly interrupted work retains its partial
+attempt tree. Independent review found collection disk/RSS was outside the old
+telemetry interval; added separate before/after collection observations and
+explicitly scoped sampled telemetry, without claiming exact peaks.
+
+Authored Local tests using the actual installed plan/staging code (no mock at
+that boundary), raw archive round-trip, required/missing/link outputs, source-time
+conditions, dependency tamper, budget admission and archive disk accounting.
+Static parsing and whitespace checks only were performed; no project test,
+plan builder, model, scorer, supervisor or GPU task was executed by Web.
+Independent final source review found no remaining critical issue; Local
+acceptance is still pending.
+
+Expanded the existing CANDIDATE_INPUT_AUDIT.json into the maintained 15-item
+source/design delivery inventory after a separate read-only audit. It preserves
+all selected IDs and actual math references, names actual entries and missing
+adapters, required outputs and control arms, scorer linkage, absent candidate
+acceptance commands and separate implementation/scientific obligations. C02 is
+still a dense primitive, C14 a baseline, C01 has only shared capture/replay, and
+no candidate is marked complete. Native candidate results remain 0/15.
+
+Current host remains the existing hourly authoring task
+`6ac527ad50cc8191a4964d35ae0b826e`, not an installed continuous Local supervisor.
+This is a partial code delivery toward the unchanged full-source stage goal;
+the task must remain enabled. Next: Local CPU acceptance at the delivered
+revision; Web continues legal input adapters and method/design work without
+inventing natural-gap/importance/collision evidence. Full128 10–15 coverage,
+UID008 raw/repeat/trusted replay and all scientific gates remain explicit gaps.

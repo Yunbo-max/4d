@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Read-only audit of existing 15 specifications; no methods executed or promoted",
+  "scope": "Maintained 15-item source/design delivery inventory. Read-only source audit at ece1ce8; shared plan/collection additions do not complete a candidate.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -15,11 +15,11 @@
     "C14": "simple_mesh_controls.py has body Gaussian baseline; not full candidate qualification"
   },
   "required_next_sequence": [
-    "finish complete current-release calibration and baseline qualification",
-    "measure natural failure prevalence and strong simple alternatives",
-    "qualify observer capture of full decoder context without changing native outputs",
-    "freeze per-candidate legal input, baseline, ablation and decision rules",
-    "implement and run all 15 separately, preserving invalid-input/failure outcomes"
+    "Continue independent shared interface/source work; current CPU software acceptance remains Local-only.",
+    "Retain GPU STOP; no execution or new budget from source delivery.",
+    "Close genuine natural-gap/importance/collision and legal-input obligations per selected construction without inventing them.",
+    "Complete each method with real inputs, distinct mathematics, native outputs and all specified control/scoring paths.",
+    "Freeze complete G01 development/confirmation/sensitivity/statistical design and exact candidate acceptance command, then Local verifies the delivered revision."
   ],
   "candidates": [
     {
@@ -32,7 +32,56 @@
         "SPD W operator and anchor pins"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c02.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
+        "sha256": "e984124ecd4018d1329eb111730b8bcfc0ab3251488c5e1a551bf0616f26c61c"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-review.json",
+        "sha256": "8230d4bf18c06c4b4997c427c5888b68451f9ca3abdf5b3fc28ba7fe9bf8fd33"
+      },
+      "source_status": "primitive_only",
+      "code_entry": "actionmesh/research_math/protected_projection.py:project_protected_step",
+      "real_input_and_model_interface": "Native trajectory plus fixed anchor patch-centroid/velocity operator and area weights",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "geometry_only",
+        "strength_matched_blend",
+        "protected_step"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "common geometry repair",
+        "native C/W builder",
+        "scalable matrix-free solve",
+        "full native export/scoring"
+      ],
+      "scientific_prerequisites": [
+        "Natural repair gap after strongest simple baseline",
+        "fixed inference-available protection operator with nontrivial nullspace",
+        "common repair and matrix-free implementation",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "same d/W equal-W-norm scalar comparator",
+        "legal task-relevant C and nonlinear remainder boundary",
+        "rho diagnosis is not a native evaluation metric"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c01",
@@ -44,7 +93,52 @@
         "coordinate bounds policy without hidden clipping"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c01.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
+        "sha256": "6df45ce3122df46c583231602a41f92eb0f32cea06e81dd2b1d6c02eb762a93e"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c01-math.json",
+        "sha256": "013a9c561c0e194aa2171f69f6bad95f610822a2756c30ec6ec9054ad9267ac0"
+      },
+      "source_status": "shared_input_capture_source_delivered",
+      "code_entry": "actionmesh/research_math/pipeline_decoder_observer.py:replay_window",
+      "real_input_and_model_interface": "Complete direct decoder context and same anchor/query/normals; source-time diagnostic",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "mean_bias",
+        "self_map_subtraction"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "full-window correction/reassembly",
+        "coordinate bound policy",
+        "mean-bias control",
+        "native scoring"
+      ],
+      "scientific_prerequisites": [
+        "same-context self-query qualification and latent availability",
+        "natural reference/downstream shared-error evidence",
+        "SFG/old correlated functional delta; currently diagnostic baseline",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c10",
@@ -56,7 +150,53 @@
         "positive W and per-component pins"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c10.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c10.json",
+        "sha256": "a92d7331b59e1e9c78e3d8811d3240c1ab1137dfac97da142acd63ee1f72d173"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c10-math.json",
+        "sha256": "e64132a47b3331ae5b701a01eff9bd94fe319b07b1853d7db43f94ae32c1a54f"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Native mesh and independently estimated legal differential targets; fixed G/W and pins",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "direct_common_lift",
+        "independent_local_repair",
+        "pinned_integrable_solve"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "qualified differential target generator",
+        "common lift",
+        "sparse pinned integrable solver",
+        "native entry"
+      ],
+      "scientific_prerequisites": [
+        "task-relevant natural nonintegrable field",
+        "qualified common target generator and reconstruction comparators",
+        "gauge/connectivity and sparse solver qualification",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c13",
@@ -68,7 +208,52 @@
         "second differences D2 at actual native timestep units"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c13.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c13.json",
+        "sha256": "53be8f274d0c4a9327b3c4500b3a8b5e6ce4c6a9a928e3aea5982be7b945f391"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
+        "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Full native Y with physical-time D2, SPD observation metric and actual anchor affine term",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "gaussian",
+        "quadratic_acceleration",
+        "group_acceleration"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "group acceleration solver",
+        "primal/dual diagnostics",
+        "native entry and controls"
+      ],
+      "scientific_prerequisites": [
+        "native gap not closed by Gaussian/quadratic baselines",
+        "event-preservation prediction supported on natural development cases",
+        "group primal/dual gap and parameter/time-unit freeze",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c14",
@@ -80,7 +265,52 @@
         "declared zero-preserving anchored residual repair"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c14.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
+        "sha256": "4e8eabce07534f07382ddbd0b4433d4ad9d9589abf3cd1690187de72b1bcffbb"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c14-math.json",
+        "sha256": "52fbceeb3ffdd8230274c0154c4aea9f57921ba90ead1d8275bb3fb137ee81a8"
+      },
+      "source_status": "simple_baseline_only",
+      "code_entry": "actionmesh/research_math/simple_mesh_controls.py:smooth_body",
+      "real_input_and_model_interface": "Native Y/X and input/model pose factors without GT or evaluator alignment",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "world_smoothing",
+        "simple_rigid_aligned_smoothing",
+        "declared_body_residual_repair"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "separately declared zero-preserving residual repair",
+        "candidate/ablation entry",
+        "native scoring"
+      ],
+      "scientific_prerequisites": [
+        "qualified pose fit without GT or evaluator ICP",
+        "rigid/articulated regime of applicability",
+        "SFG/STAC/basic rigid-aligned smoothing collision; baseline role unless extra delta",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c04",
@@ -93,7 +323,53 @@
         "anchor pins and Hessian/trust-region obligation"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c04.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
+        "sha256": "d22fa4a56610b3abaee5ba863729431bf06b59386c67fe9948c8061bc07d98fa"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c04-math.json",
+        "sha256": "2578c6f63c4eb7cff70921301cdd4325785aa8d79530a0fe2214f391d476987d"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Shared geometry repair and legal motion-surrogate gradient with uncertainty set",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "deterministic_protection",
+        "strength_matched_repair",
+        "robust_conic_protection"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "qualified surrogate/uncertainty adapter",
+        "conic optimizer",
+        "nonlinear remainder checks",
+        "native entry"
+      ],
+      "scientific_prerequisites": [
+        "legal motion surrogate and meaningful uncertainty set",
+        "held-out semantic/coverage check if probability coverage claimed",
+        "nonlinear remainder bounds and fair solver budget",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c03",
@@ -107,7 +383,61 @@
         "fixed weights, tau, lambda and stop conditions; no confirmation fitting"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c03.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-math.json",
+        "sha256": "bbd3157a1f7071ee6b033bdea10e825976a60944c68c1a72f451017b75559517"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
+        "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
+      },
+      "source_status": "specification_only_historical_prototype",
+      "code_entry": null,
+      "real_input_and_model_interface": "C01 residual and development-only labeled errors with qualified correspondence/lift",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "intercept_squared",
+        "intercept_unsquared",
+        "unit_C01",
+        "diagonal_squared",
+        "diagonal_unsquared",
+        "full_squared",
+        "full_smoothed_unsquared"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "revised unsquared IRLS",
+        "full/diagonal/intercept fits",
+        "frozen fit identity",
+        "confirmation-label isolation",
+        "native entry"
+      ],
+      "scientific_prerequisites": [
+        "legal development error/moment calibration and family-split transfer",
+        "fitted means and covariance conditioning",
+        "no confirmation label access",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "explicit pointwise-to-native metric bridge or stated surrogate limitation",
+        "matched unsquared intercept/diagonal comparators",
+        "data-calibrated versus zero-shot claim boundary"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c20",
@@ -119,7 +449,58 @@
         "original time IDs, derivative bounds, positive amplitude ridge"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
+        "sha256": "42f72f09accc3afffe3e3f0e4d75bd4cbbdeb35c92917730bbd0ee55613a9f10"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-review.json",
+        "sha256": "9253b377b9adaf4e8173595673e2fea36c89b17dda71d82437336a296cbe69a9"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Legal model/input motion target and original times with fixed phase/amplitude bases",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "phase_only",
+        "amplitude_only",
+        "simple_lag",
+        "joint_monotone_phase_amplitude"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "motion-target adapter",
+        "bounded monotone solver",
+        "identifiability/noise diagnostics",
+        "original-time reconstruction"
+      ],
+      "scientific_prerequisites": [
+        "qualified legal motion target and camera/information permission",
+        "phase/amplitude identifiability",
+        "small-warp regime, monotonicity and nonlinear residual check",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "legal target and phase gauge",
+        "rank/kappa/noise/interpolation qualification",
+        "ridge inversion is not data identifiability",
+        "full constrained analysis when warp inequalities activate"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c11",
@@ -131,7 +512,54 @@
         "original native mesh and anchor pins"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c11.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c11.json",
+        "sha256": "fa863defd6620c99aa0767b1df2dde8f57e50dc1b54385b7b2dba05d7026f3b3"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c11-math.json",
+        "sha256": "236bba4ea916003e3060c1c8faef6db4976704a3ddd79233cd4353d6df95bb42"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Native full-rank square local maps with explicit frame/normal completion",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "arap_repair",
+        "elastic_repair",
+        "rotation_preserving_stretch_projection"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "frame/map construction",
+        "degeneracy/reflection policy",
+        "rotation-preserving stretch projection",
+        "common lift",
+        "native entry"
+      ],
+      "scientific_prerequisites": [
+        "natural strain artifacts distinct from legitimate stretching",
+        "square-map construction and degenerate/reflection handling",
+        "classical polar/old m01/STAC functional delta",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c12",
@@ -143,7 +571,53 @@
         "common constraint checking, scalar-root and numerical-margin policy"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c12.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
+        "sha256": "893238c0e767ccff25dd1b82c4770b6373c0e8a71c62d3c3a1fefe34ad354500"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c12-math.json",
+        "sha256": "1a3bab65f877119e9eb0e43adcf31d4b157f9c1f577fd3e70eb1b871e8078032"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Shared real full-mesh update and original faces/normals",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "fixed_damping",
+        "generic_backtracking",
+        "exact_quadratic_admission"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "common update producer",
+        "safe-interval quadratic roots/tangencies/margins",
+        "same-check controls",
+        "native entry"
+      ],
+      "scientific_prerequisites": [
+        "meaningful natural repair-safety gap and permitted large-rotation boundary",
+        "exact first crossing versus tangent root handling",
+        "ordinary line-search necessity; potentially engineering baseline only",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c15",
@@ -155,7 +629,53 @@
         "frozen lambda and residual-rank policy"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c15.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c15.json",
+        "sha256": "b57035b5d65e922d0c0f6b1fd7f7734a2fc622841fb83337099fee122fce8241"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c15-math.json",
+        "sha256": "c077b09546bc9783ad974c7ad295d640f9645b2372de97aff86bc147ac7e7eac"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Native trajectory matrix and fixed legal orthogonal Q including actual anchor basis",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "gaussian",
+        "unprotected_svt",
+        "protected_residual_svt"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "Q builder",
+        "complementary SVT",
+        "same-rank control",
+        "native export/scoring"
+      ],
+      "scientific_prerequisites": [
+        "legal fixed protection basis and meaningful residual low-rank prior",
+        "Mesh4D/classical SVT functional delta",
+        "same rank/tuning budget and true fine-motion failure boundary",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c05",
@@ -167,7 +687,56 @@
         "identical output lift for every mode reduction"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
+        "sha256": "7f4e512061a6054ef69cd099ccc78fc55f0d3ced610a26f24a0464677cf546ee"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-review.json",
+        "sha256": "e7ad3567922d57d4c9beef78469efd6acdd4b7d9b0d0ec7caf0cf6442a360747"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Actual model-exposed sparse material modes with normalized scores; anchor graph and legal hints",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "localized_mean",
+        "temperature_matched_mean",
+        "independent_top1",
+        "joint_spatial_labels"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "qualified sparse-mode adapter (context capture does not supply modes)",
+        "budgeted joint search",
+        "common lift"
+      ],
+      "scientific_prerequisites": [
+        "actual exposed sparse mode interface",
+        "natural mode ambiguity with task consequence",
+        "m03/STAC functional collision and capture equivalence",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "actual coordinate bank rather than latent-attention entropy",
+        "STAC-compatible common support/lift qualification",
+        "score versus posterior-calibration claim boundary"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c08",
@@ -179,7 +748,55 @@
         "support feasibility and common path-decision/lift policy"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c08.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
+        "sha256": "c5330edd1272340566a9bbadf080d7791914366912521c176cd834986aaeae01"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c08-math.json",
+        "sha256": "8662ec642b8d778740bc7ff5586e4e60559a47c4a0e05a9660cacc5d38788372"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Qualified sparse Markov kernels/initial probabilities and model endpoint distributions",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "local_transition_tracker",
+        "coordinate_smoother",
+        "decoder_cycle_control",
+        "endpoint_bridge"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "chain/endpoint adapter",
+        "support feasibility",
+        "bridge/IPF",
+        "path decision",
+        "common lift"
+      ],
+      "scientific_prerequisites": [
+        "actual sparse reference chain and informative endpoints",
+        "support-feasible endpoint bridge",
+        "same-information local/cycle comparators and whole-path decision",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c06",
@@ -191,7 +808,54 @@
         "positive entropy epsilon and original vertex mapping"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c06.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
+        "sha256": "4b38b4752d81535725f96f513b5d4fb585d52308efda44a331fc90c14c8d03f9"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c06-math.json",
+        "sha256": "791e03d35227cb16c50dd2c68552bb59d34c312d0d7460d8334f2bd6e03db656"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Qualified legal surface features/cost/support with equal-total area mass",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "row_softmax",
+        "vertex_density_transport",
+        "area_marginal_transport"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "feature/support adapter",
+        "log-domain transport",
+        "both marginal checks",
+        "zero-area handling",
+        "common lift"
+      ],
+      "scientific_prerequisites": [
+        "qualified legal surface features and feasible support",
+        "area-marginal assumption versus real stretch",
+        "fair sparse-bank/lift and area-zero handling",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     },
     {
       "id": "4d-math-20261006-c07",
@@ -203,7 +867,77 @@
         "full native output available for unmatched fallback"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c07.json",
-      "native_result": "not_started"
+      "native_result": "not_started",
+      "math_card_ref": {
+        "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
+        "sha256": "826927ea65fd9e98de81bfe8a0799e85266773b3225ff4df14c345f4583b5f11"
+      },
+      "math_review_ref": {
+        "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c07-math.json",
+        "sha256": "4bdeef6356922e50c5f476668b30ab5026c02923f8409a7d438892127ebaa163"
+      },
+      "source_status": "specification_only",
+      "code_entry": null,
+      "real_input_and_model_interface": "Same features/areas/cost/support as C06 plus native fallback and frozen slack penalty",
+      "required_outputs": [
+        "full original-identity mesh sequence at every original frame",
+        "unchanged faces and retained vertex mapping",
+        "parameters, fallback/rejection/termination logs",
+        "solver residuals, input/source hashes and end-to-end costs"
+      ],
+      "controls_and_ablations": [
+        "B0",
+        "B_star",
+        "full_mass_transport",
+        "confidence_threshold_fallback",
+        "partial_mass_native_fallback"
+      ],
+      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
+      "local_method_acceptance_command": null,
+      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
+      "completion_evidence": [],
+      "remaining_implementation_gaps": [
+        "partial/slack transport",
+        "exact mass accounting",
+        "full-vertex fallback",
+        "threshold comparator",
+        "native entry"
+      ],
+      "scientific_prerequisites": [
+        "task-relevant unsupported matches on natural cases",
+        "mass/slack solver and complete fallback semantics",
+        "ordinary threshold-fallback comparator not deliberately disadvantaged",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "full_method_source_complete": false,
+      "local_method_verified": false
     }
-  ]
+  ],
+  "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
+  "independent_source_review": "Separate read-only delivery_inventory agent inspected selected specifications and actual entries; no execution.",
+  "stage_goal": {
+    "selected_methods": 15,
+    "full_method_source_complete": 0,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",
+    "gpu_execution": "stopped_by_user"
+  },
+  "common_shared_acceptance": {
+    "builder": "actionmesh/prepare_control_scoring_checks.py",
+    "command": "\"$python_bin\" \"$project_dir/actionmesh/prepare_control_scoring_checks.py\" --root \"$project_dir\" --skill-dir \"$skill_dir\" --run-id native-context-delivery-acceptance-001 --plan-dir \"$project_dir/plans/native-context-delivery-acceptance-001\"",
+    "execution": "Installed run_harness.py with exact emitted approved-plan digest; CPU-only, Local only.",
+    "scope": "Shared software acceptance only; does not count as any of the 15 methods."
+  },
+  "shared_native_input_instrument": {
+    "builder": "actionmesh/prepare_native_context.py",
+    "runner": "actionmesh/research_math/native_context_runner.py",
+    "raw_collection": "actionmesh/research_math/native_context_delivery.py",
+    "status": "generated_unexecuted",
+    "dispatch_ready": false
+  }
 }

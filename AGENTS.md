@@ -11,6 +11,11 @@ run, enable an existing campaign, or install a running supervisor. Read the
 and the new handoff before accepting the changed software. Keep source authored,
 Local software acceptance, native instrumentation replay and scientific method
 evidence as separate states.
+The paired instrument's plan-only entry is `actionmesh/prepare_native_context.py`.
+Its complete raw archive, manifest and result must all be receipt-bound. On a
+failure/timeout retain the actual partial attempt tree; never reconstruct success
+or retry to fill a missing bundle. See the current handoff's continuation section
+and the maintained `longgoal-20261007/CANDIDATE_INPUT_AUDIT.json` delivery inventory.
 
 Before setup, acceptance, execution, repair, collection, or delivery, read at the exact delivered commit:
 

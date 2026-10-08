@@ -22,9 +22,9 @@ import traceback
 
 PREREQUISITE_PATHS = (
     "contract", "population", "snapshot_contract", "snapshot_admission",
-    "dataset_semantics", "unit_manifest", "source_root", "dataset_root", "weights_root",
+    "dataset_semantics", "unit_manifest", "environment", "source_root", "dataset_root", "weights_root",
 )
-INPUT_FILES = PREREQUISITE_PATHS[:6]
+INPUT_FILES = PREREQUISITE_PATHS[:7]
 SOURCE_FILES = (
     "inference/video_to_animated_mesh.py", "actionmesh/pipeline.py",
     "actionmesh/model/temporal_autoencoder.py", "actionmesh/model/utils/embeddings.py",
@@ -331,6 +331,8 @@ def _identity(args, manifest, output):
         target = inputs / (name + ".json")
         target.write_bytes(source.read_bytes())
         refs[name] = {"path": target.relative_to(output).as_posix(), "sha256": digest(target)}
+    dependency = args.environment.parent / "dependencies.json"
+    (inputs / "dependencies.json").write_bytes(dependency.read_bytes())
     project = Path(__file__).resolve().parents[1]
     code_paths = sorted((project / "research_math").glob("*.py"))
     code_paths += [project / name for name in
@@ -350,6 +352,28 @@ def _identity(args, manifest, output):
     }
     save(output / "generation-identity.json", identity)
     return identity
+
+
+def verify_environment(args):
+    """Recheck the pinned Conda metadata and effective interpreter before loading."""
+    from importlib import metadata
+    from research_math.actionbench_parity import validate_runtime_identity
+    from research_math.control_scoring import resolve_ref
+    environment = load(physical_file(args.environment))
+    validate_runtime_identity(environment, gpu_uuid=args.gpu_uuid,
+        visible_gpu=os.environ.get("CUDA_VISIBLE_DEVICES"), python_executable=sys.executable,
+        package_versions={name: metadata.version(name)
+                          for name in ("numpy", "torch", "trimesh", "scipy", "pytorch3d")})
+    # The builder fixes this canonical layout; staging preserves it.
+    path = args.environment.resolve()
+    if path.parts[-3:] != ("inputs", "native-runtime", "environment.json"):
+        raise ValueError("Canonical staged native environment required")
+    refs = environment.get("dependency_lock_refs")
+    if (not isinstance(refs, list) or len(refs) != 1 or
+            refs[0].get("path") != "inputs/native-runtime/dependencies.json"):
+        raise ValueError("Canonical pinned dependency inventory required")
+    resolve_ref(path.parents[2], refs[0])
+    return environment
 
 
 def execute(args):
@@ -373,6 +397,7 @@ def execute(args):
     try:
         host = HostSamples(output, output / "host-samples.jsonl")
         host.start()
+        verify_environment(args)
         manifest = verify_prerequisites(args, output)
         generation_settings(manifest["generation"], args.source_root, Path("unused"), Path("unused"))
         identity = _identity(args, manifest, output)
@@ -431,6 +456,7 @@ def execute(args):
                 final_dir = output / "final-integrity"
                 final_dir.mkdir()
                 checked = verify_prerequisites(args, final_dir)
+                verify_environment(args)
                 if checked != manifest:
                     raise ValueError("Prerequisite manifest changed across instrument stages")
                 if identity is not None:
@@ -457,13 +483,27 @@ def execute(args):
             # Keep error samples too; HostSamples.summary assumes all rows
             # have successful measurement fields, which errors do not have.
             result["host_resources"] = {"sample_interval_seconds": 1, "samples": len(host.rows),
-                "exact_peak": False, "errors": host.errors}
+                "exact_peak": False, "errors": host.errors,
+                "scope": "generation/replay/final input verification; before raw bundle collection"}
             for key, reducer in (("process_tree_rss_bytes", max), ("output_bytes", max),
                                  ("free_disk_bytes", min)):
                 result["host_resources"][key] = reducer(
                     (row[key] for row in host.rows if key in row), default=None)
             if host.errors:
                 result["status"] = "failed"
+        if result["status"] == "completed_unqualified":
+            try:
+                from research_math.native_context_delivery import finalize_bundle, collection_snapshot
+                result["collection_resources"] = {"before": collection_snapshot(output),
+                    "scope": "collection boundary observations, not continuous or exact peak telemetry"}
+                result["raw_bundle"] = finalize_bundle(output, source_time_query=args.source_time_query)
+            except Exception as error:
+                result.update(status="failed", raw_bundle_error=type(error).__name__ + ": " + str(error))
+            finally:
+                try:
+                    result.setdefault("collection_resources", {})["after"] = collection_snapshot(output)
+                except Exception as error:
+                    result.update(status="failed", collection_telemetry_error=str(error))
         result["outputs"] = [{"path": path.relative_to(output).as_posix(),
                               "bytes": path.stat().st_size, "sha256": digest(path)}
                              for path in sorted(output.rglob("*"))

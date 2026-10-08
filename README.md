@@ -12,6 +12,8 @@
 
 ## 当前：方法必要性与可识别性审查
 
+逐项交付状态见[15 项实现清单](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)：包含数学依据、实际入口、输入接口、对照/消融、官方评分接入与缺口。当前没有完整方法被标记完成。成对原生上下文现在有独立的 `prepare_native_context.py` 计划入口和完整原始文件回传代码；仍待 Local 验收，GPU 保持停止。
+
 [第二轮研究修订](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md)补推 C02 的保护代价和匹配步长对照、C20 的 principal-angle 可识别性及噪声放大、C05 的原生接口和 localized blend 离面边界。保留20个构造与原15个入选身份，更新全池顺序和15份条件规格。数学仍是条件自审，新候选实现、完整 native 实验及正式成败均为0。
 
 新回传的 W0 checkpoint 已核对16个 pair／final receipt 字节 hash，分数与旧 summary 一致；小包仍缺其回执引用的352个阶段／raw成员。见[反馈审查](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/w0-feedback-review.json)，完整 raw 导出与 native 回放继续待补。

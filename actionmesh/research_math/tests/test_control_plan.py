@@ -51,6 +51,8 @@ class ControlPlanTest(unittest.TestCase):
                  for path in acceptance.acceptance_sources(project_root)}
         for path in (
                 'scripts/research_supervisor.py',
+                'actionmesh/prepare_native_context.py',
+                'actionmesh/research_math/native_context_delivery.py',
                 'actionmesh/research_math/native_context_runner.py',
                 'actionmesh/research_math/pipeline_decoder_observer.py',
                 'actionmesh/research_math/tests/test_research_supervisor.py'):

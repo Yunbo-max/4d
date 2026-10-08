@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-07T23:24:50Z",
+  "recorded_at": "2026-10-08T00:08:16Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "The Full128 historical-pricing root repair and concurrent capture-only unit remain present. New source adds independently paired official generation, complete native-context replay and a finite campaign supervisor; all newly changed software is generated_unexecuted. The supervisor is not installed or running. Current-source Local acceptance and an independently frozen paired-instrument budget remain pending. GPU execution remains stopped. Historical 311-test acceptance does not cover this revision. UID008 raw bundle/repeat/trusted replay and candidate scientific prerequisites remain pending; candidate complete designs/results remain 0/15 and formal outcomes 0.",
+  "status": "Paired native-context source now includes a calibration-only harness plan builder and complete receipt-bound raw archive collection, with runtime environment checks. Static independent review completed; Local software/native acceptance remains pending. GPU execution remains stopped; supervisor is source only, not installed or running. Maintained 15-item inventory reports zero complete candidate methods and 0/15 native results. Historical pricing-root repair remains present; indices 10–15, native scientific prerequisites and full method/design delivery remain open.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -965,12 +965,12 @@
   },
   "native_context_supervisor_handoff": {
     "status": "generated_unexecuted",
-    "recorded_at": "2026-10-07T23:24:50Z",
+    "recorded_at": "2026-10-08T00:08:16Z",
     "authoring_base_commit": "1da40c748a71f9687bd2c5958ee6705671632d10",
     "integration_base_commit": "1bc3c973e0c6f23c94a32be7d30a06de4a812cd8",
     "entry_ref": {
       "path": "rounds/20261008-native-context/WEB_HANDOFF.md",
-      "sha256": "5c42b42877376891a371a629b68b95c0bf803213b84cdb3bf8f23f7a218c2232"
+      "sha256": "84ca2a31623e30e9b97bd970cd198debbf35e25863ba0524fe1b54ad0864f13f"
     },
     "supervisor_entry_ref": {
       "path": "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
@@ -978,24 +978,28 @@
     },
     "source_refs": [
       {
-        "path": "actionmesh/research_math/decoder_observer.py",
-        "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"
+        "path": "actionmesh/prepare_native_context.py",
+        "sha256": "96590bfe1c7d92ddc59867dfc1dc67bdc422d6807a1bb38d374d90a014bc564d"
       },
       {
-        "path": "actionmesh/research_math/pipeline_decoder_observer.py",
-        "sha256": "a63c1ed6bb76f5b997b80a8a0383a850eeecc51b04f206a0d421f63a0eca7ecd"
+        "path": "actionmesh/research_math/native_context_delivery.py",
+        "sha256": "f4fcbc66d822496ae586d5373cad99c67a7803b79e2ec080e2cf61258fd1ab18"
       },
       {
         "path": "actionmesh/research_math/native_context_runner.py",
-        "sha256": "6e582b10a2a0def86b49056043850440a7a5a80be964501c83176f64675a8d86"
+        "sha256": "fe965254160777c5fe7e78f191d611227aa1c15770cb5ad1ac80ca35c4a1af5d"
       },
       {
-        "path": "scripts/research_supervisor.py",
-        "sha256": "6c5273f1c36b13aabf8420fb214c7fe19142f8cba780cc69cec31fa8daf3884b"
+        "path": "actionmesh/research_math/tests/test_native_context_delivery.py",
+        "sha256": "630dbcbe46303e22bae6a4afaf0fb486d313aa2325727c1dbd2113d0c5a70520"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_native_context_plan.py",
+        "sha256": "ced92536a74f39b611137e42658ba55169719c7e0c6dd2f85a10b93f090cd4cc"
       },
       {
         "path": "actionmesh/prepare_control_scoring_checks.py",
-        "sha256": "d377a7799f3467351ad06e20748f5581f3823436b7cf8a400e8f8d0bee59e966"
+        "sha256": "436cae3cdc5495b4c4d61468ab7164fe03e1f0714be4b52680f9556e4553fb27"
       }
     ],
     "source_review_complete": true,
@@ -1010,6 +1014,29 @@
     "dispatch_ready": false,
     "candidate_methods_completed": 0,
     "candidate_native_results": 0,
-    "next_step": "Local CPU harness acceptance of this exact merged source; preserve all failures. Separately freeze paired instrument budget/tolerances/assets/output closure only after applicable authorization and gates."
+    "next_step": "Local CPU acceptance using current handoff; source-only paired plan preparation with actual current environment/assets and existing remaining budget. Web continues legal-input and method/G01 obligations per 15-item inventory; GPU STOP remains effective.",
+    "continuation_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "5c9f13e4e02292b19fc89978fb5dd15ee9f5253529150ab4ed9f93e7ee4041b5"
+    },
+    "plan_builder": "actionmesh/prepare_native_context.py",
+    "plan_builder_executed": false,
+    "raw_evidence_collection": "actionmesh/research_math/native_context_delivery.py",
+    "current_authoring_host": {
+      "kind": "hourly_automation",
+      "task_id": "6ac527ad50cc8191a4964d35ae0b826e",
+      "continuous_local_supervisor": false
+    },
+    "source_review": {
+      "mode": "independent read-only agents; no execution",
+      "scopes": [
+        "plan/runtime staging and raw output closure",
+        "15-item method delivery inventory"
+      ],
+      "finding_repaired": "Collection footprint was outside sampled interval; result now holds separate before/after observations.",
+      "final_review": "No remaining critical source issue identified in scoped plan/collection change; not runtime acceptance."
+    },
+    "source_complete_candidate_count": 0
   }
 }
