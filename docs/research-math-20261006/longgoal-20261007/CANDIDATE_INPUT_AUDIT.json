@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C04,C10,C11,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (8/15); Local-verified and native-result candidates remain 0/15. Seven source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C03 and C20 remain blocked on missing legal native inputs. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (9/15); Local-verified and native-result candidates remain 0/15. Six source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C03 and C20 remain blocked on missing legal native inputs. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -726,9 +726,11 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c12-math.json",
         "sha256": "1a3bab65f877119e9eb0e43adcf31d4b157f9c1f577fd3e70eb1b871e8078032"
       },
-      "source_status": "specification_only",
-      "code_entry": null,
-      "real_input_and_model_interface": "Shared real full-mesh update and original faces/normals",
+      "source_status": "full_generated_unexecuted_chain",
+      "code_entry": "actionmesh/research_math/area_admission_candidate.py",
+      "candidate_plan_entry": "actionmesh/prepare_area_admission_candidate.py",
+      "native_scoring_plan_entry": "actionmesh/prepare_c12_native_scoring.py",
+      "real_input_and_model_interface": "One completed receipt-bound native sequence.npz/report.json pair. The method computes one predicted-mesh-only matrix-free ARAP proposed update and passes exactly that update, original faces and per-frame original normals to all three admission roles; no GT, scorer state, video labels or confirmation outcomes enter construction.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -742,15 +744,21 @@
         "generic_backtracking",
         "exact_quadratic_admission"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "native_scoring_entry": "python -m research_math.c12_native_scoring request followed by actionmesh/prepare_c12_native_scoring.py and actionmesh/launch_c12_native_scoring.py only after full admission and explicit GPU resume",
+      "local_method_acceptance_command": "python <skill>/scripts/run_harness.py <c12-artifact-plan-dir>/harness.json --root <remote-root> --execute --approved-plan-digest <digest>; then validate_candidate_artifact and the C12 comparison/scoring request profiles through the common CPU acceptance plan",
+      "acceptance_command_gap": "Exact native paths, frozen beta/fixed step/backtracking/margin/ARAP values and retained source hashes must be supplied by Local from prospective development evidence. Web did not emit or execute a plan.",
+      "completion_evidence": [
+        "Exact per-frame/per-face projected-area quadratic coefficients and stable scalar roots with true-crossing versus tangency classification",
+        "One global connected feasible step with explicit inward numerical margin; fixed damping and ordinary backtracking use the identical proposed update and constraint checker",
+        "Predicted-mesh-only common ARAP producer, complete 16-frame identity-preserving export, recomputable coefficients/certificate, terminal failure retention and deterministic bounded archive",
+        "Prospective five-role B0/B*/fixed/backtracking/candidate freezer with physical de-duplication and all-role failure denominator",
+        "Authorization-gated official ActionBench scoring, receipt-bound raw collection and stable single-owner launcher using the shared qualified transport"
+      ],
       "remaining_implementation_gaps": [
-        "common update producer",
-        "safe-interval quadratic roots/tangencies/margins",
-        "same-check controls",
-        "native entry"
+        "Local execution of current source acceptance and real-input CPU artifact plan",
+        "prospective beta, fixed alpha, backtracking factor/budget, numerical margins, ARAP parameters and B* freeze on allowed development evidence",
+        "design verification, Natural Gate 0/IPCG, source-derived family split, numeric G01 criteria and one-time GPU authorization",
+        "official native scoring, raw receipt validation, paired analysis and conclusion"
       ],
       "scientific_prerequisites": [
         "meaningful natural repair-safety gap and permitted large-rotation boundary",
@@ -762,8 +770,9 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
-      "local_method_verified": false
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "completion_scope": "Source-complete generated_unexecuted chain only. Project tests, artifact builder, candidate, official scorer, model and GPU were not run by Web. Projected oriented area is a conservative local constraint, not a proof of global injectivity or no self-intersection."
     },
     {
       "id": "4d-math-20261006-c15",
@@ -1080,11 +1089,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "40004d4ae1d7263ecbbaa7401adec37168a02895",
-  "independent_source_review": "Final C11 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c11_source_review; all identified blockers were repaired and no Critical/Important remain in the reviewed scope. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 8/15.",
+  "maintained_base_commit": "fc0b67fef0bf4406c1d8004d0da539519739c56b",
+  "independent_source_review": "C12 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c12_source_review identified near-tangent connected-component, archive-reference, failed-arm replay and bounded-materialization blockers; all were repaired, and focused final re-review found no remaining Critical/Important issue in scope. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 9/15.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 8,
+    "full_method_source_complete": 9,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

@@ -1066,6 +1066,102 @@ No C11 project test, plan builder, candidate, scorer, model or GPU task was run
 by Web authoring. Source is `generated_unexecuted`; Local acceptance, scientific
 admission and native results remain pending. GPU STOP remains effective.
 
+### C12 maximal feasible area-admission chain — source complete, not executed
+
+C12 consumes the same receipt-bound complete native `sequence.npz`/`report.json`
+pair as the other mesh repairs. It computes one predicted-mesh-only matrix-free
+ARAP proposed update and gives that exact update to all three arms. `fixed_damping`
+uses one frozen scalar and fails if it is unsafe; `generic_backtracking` starts at
+one and follows a frozen multiplicative schedule; `exact_quadratic_admission`
+forms every frame/face polynomial
+`q(alpha)=a(alpha)-beta*a(0)`, distinguishes a true positive-to-negative crossing
+from a feasible tangency, selects the earliest crossing over the whole sequence,
+and applies an explicit inward absolute/relative margin. Original degenerate
+faces fail closed. The single global alpha preserves temporal coherence; frame
+zero, topology, frame IDs and vertex IDs remain exact.
+
+This is only a conservative projected-oriented-area safeguard. It neither proves
+global injectivity nor detects all self-intersections, and it may reject legitimate
+large rotations. Freeze beta, all scalar-search tolerances, the common ARAP
+producer and coordinate policy only from allowed development evidence. After the
+shared current-source CPU acceptance, emit one zero-GPU/zero-retry artifact plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_area_admission_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --beta "$frozen_c12_beta" --fixed-alpha "$frozen_c12_fixed_alpha" \
+  --backtracking-factor "$frozen_c12_backtracking_factor" \
+  --backtracking-max-steps "$frozen_c12_backtracking_steps" \
+  --degeneracy-epsilon "$frozen_c12_degeneracy_epsilon" \
+  --root-tolerance "$frozen_c12_root_tolerance" \
+  --absolute-margin "$frozen_c12_absolute_margin" \
+  --relative-margin "$frozen_c12_relative_margin" \
+  --arap-weight "$frozen_c12_arap_weight" \
+  --temporal-weight "$frozen_c12_temporal_weight" \
+  --arap-iterations "$frozen_c12_arap_iterations" \
+  --cg-tolerance "$frozen_c12_cg_tolerance" \
+  --cg-max-iterations "$frozen_c12_cg_iterations" \
+  --coordinate-bounds "$frozen_coordinate_lower" "$frozen_coordinate_upper" \
+  --bounds-policy reject --max-artifact-bytes "$frozen_artifact_limit" \
+  --run-id c12-area-admission-001 \
+  --plan-dir "$project_dir/plans/c12-area-admission-001" \
+  --wall-seconds "$c12_cpu_wall_seconds"
+```
+
+Review and execute only its printed harness digest through `run_harness.py`.
+Retain `candidate.json`, `artifact-archive.json` and `artifact.tar`. Materialize
+the archive through the bounded single-use reader, never `tar -xf`, and validate
+the recomputed common update, coefficients, chosen alpha and all successful
+native arrays:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -c 'import sys; from pathlib import Path; from research_math.area_admission_candidate import materialize_candidate_archive,validate_candidate_artifact; root=Path(sys.argv[1]); dest=Path(sys.argv[3]); materialize_candidate_archive(Path(sys.argv[2]),dest,max_artifact_bytes=int(sys.argv[4]),max_member_bytes=int(sys.argv[5])); validate_candidate_artifact(root,dest/"candidate.json")' \
+  "$project_dir" "$returned_c12_dir/artifact.tar" \
+  "$project_dir/inputs/c12/materialized-candidate" \
+  "$frozen_artifact_limit" "$frozen_member_limit"
+```
+
+Prospectively freeze B0, B* and the three restored terminal roles, preserving
+failed preparations in the five-role denominator. Then request official scoring:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c12_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c12/c12-native-comparison-freeze.json" \
+  --output "$project_dir/inputs/c12/c12-native-comparison-request.json"
+
+"$python_bin" -m research_math.c12_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c12/c12-native-comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c12_uid/surfaces.npy" \
+  --population "$population" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c12/c12-native-scoring-request.json"
+```
+
+The five roles are `b0`, `b_star`, `fixed_damping`, `generic_backtracking` and
+`exact_quadratic_admission`. `cd_3d` is primary; `cd_4d` and `cd_motion` are
+guardrails. Physical duplicates are scored once while logical failures remain.
+Both request stages remain `generated_unexecuted` and cannot resume GPU work.
+Only after exact C12 code/design verification, Natural Gate 0/IPCG, a source-
+derived independent-family split, numeric effect/noninferiority criteria, the
+complete G01 protocol, strict runtime closure and an expiring single-use
+`single_c12_scoring_attempt` authorization may Local run
+`prepare_c12_native_scoring.py`, followed solely by
+`launch_c12_native_scoring.py`. Do not invoke the generic harness or scorer
+directly. Retain the stable `c12-launch-claim` and validate returned
+`result.json`, `raw-manifest.json` and `raw-evidence.tar` through
+`python -m research_math.c12_native_scoring validate-delivery`.
+
+No C12 project test, builder, candidate, model, scorer or GPU task was run by
+Web authoring. Source is `generated_unexecuted`; Local acceptance, scientific
+admission and native results remain pending. GPU STOP remains effective.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**
@@ -2172,4 +2268,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C04, C10, C11, C13, C14 and C15 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C04, C10, C11, C12, C13, C14 and C15 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

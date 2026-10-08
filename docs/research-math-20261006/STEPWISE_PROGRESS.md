@@ -1762,3 +1762,46 @@ were not executed. C11 is therefore source-chain complete but
 and native results 0/15. Seven method chains, complete G01 and reviewed
 supervisor extension/online-agent integration remain. GPU STOP, cumulative
 budget and frozen one-attempt/zero-retry scientific protocols are unchanged.
+
+## 2026-10-08 C12 maximal feasible area-admission source chain
+
+Resumed exact main `fc0b67fef0bf4406c1d8004d0da539519739c56b` and reused the
+retained C12 math card, independent mathematical review and selected-candidate
+record without re-ranking. Read-only boundary verification still reports all
+20 cards and the 15-item selection as verified, but grants no execution or
+scientific admission. Historical R3 311/311 evidence was not extended to this
+new source.
+
+Implemented C12 around the existing common geometry-repair proposal. For every
+oriented reference face it forms the exact quadratic signed-area ratio along
+the common update, finds the first true positive-to-negative crossing on the
+component connected to alpha zero, and selects one global scale with an
+explicit inward margin. Tangencies are recorded but are not treated as
+crossings. Fixed damping and generic backtracking are separate controls using
+the same proposed update. Every successful role exports the complete native
+16-frame sequence and a revalidated certificate; failed roles retain explicit
+reports and no scoreable NPZ. The implementation makes no global injectivity or
+self-intersection claim.
+
+The prospective comparison binds B0, preselected B*, fixed damping, generic
+backtracking and exact quadratic admission. It validates native generation,
+current source bytes, complete artifact closure, exact frame-zero/topology/time/
+vertex identity, retained certificates and the logical failure denominator.
+Official ActionBench scoring keeps `cd_3d` primary with `cd_4d`/`cd_motion`
+guardrails, stages the complete frozen closure and stays gated by verified G01,
+Gate 0/IPCG, family split, strict runtime identity and one expiring exact-attempt
+authorization. The only launcher retains a stable single-owner claim before
+delegating to the existing harness.
+
+Independent static review found and drove repairs for near-tangent connected-
+component root classification, validator-to-comparison archive reference types,
+deterministic failed-arm replay and bounded atomic materialization. Focused
+re-review found no remaining Critical/Important issue in scope. Only source/
+AST/JSON/diff/hash inspection is permitted in this Web continuation.
+Authored candidate, plan, comparison, scoring and launcher test sources were not
+executed. C12 is therefore source-chain complete but `generated_unexecuted`;
+maintained coverage is 9/15, Local verification 0/15 and native results 0/15.
+Six method chains, complete G01 and reviewed supervisor extension/online-agent
+integration remain. GPU STOP, cumulative budget and frozen one-attempt/
+zero-retry scientific protocols are unchanged. Local starts at the C12 section
+in `LOCAL_AGENT_RUNBOOK.md` after checking the exact delivered commit.

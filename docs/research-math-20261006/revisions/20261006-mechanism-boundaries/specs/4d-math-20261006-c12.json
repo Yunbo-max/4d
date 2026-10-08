@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c12",
   "name_zh": "最大可行的三角面安全修正",
   "priority_rank": 10,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Source-complete generated_unexecuted chain; awaiting Local acceptance, scientific admission and frozen native protocol; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c12.json",
@@ -54,20 +54,20 @@
     {
       "derivation_step": "s1",
       "statement": "a(alpha)=n0 dot ((e1+alpha d1) cross (e2+alpha d2))=a0+a1 alpha+a2 alpha^2.",
-      "planned_function": "4d_math_20261006_c12.form_exact_face_quadratics",
-      "status": "not_implemented"
+      "planned_function": "research_math.area_admission_candidate.form_exact_face_quadratics",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "Require a_f(alpha)>=beta a_f(0) for every face and alpha in [0,1].",
-      "planned_function": "4d_math_20261006_c12.check_all_face_area_constraints",
-      "status": "not_implemented"
+      "planned_function": "research_math.area_admission_candidate.check_all_face_area_constraints",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "Choose the first positive crossing among all face polynomials, or 1 if none, with an inward numerical margin.",
-      "planned_function": "4d_math_20261006_c12.find_first_violation_interval",
-      "status": "not_implemented"
+      "planned_function": "research_math.area_admission_candidate.find_first_violation_interval",
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -125,6 +125,18 @@
     "strongest executable baseline and fair information/cost",
     "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
   ],
+  "source_delivery": {
+    "status": "generated_unexecuted",
+    "candidate_entry": "actionmesh/research_math/area_admission_candidate.py",
+    "candidate_plan_entry": "actionmesh/prepare_area_admission_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c12_native_comparison.py",
+    "scoring_entry": "actionmesh/research_math/c12_native_scoring.py",
+    "scoring_plan_entry": "actionmesh/prepare_c12_native_scoring.py",
+    "single_owner_launcher": "actionmesh/launch_c12_native_scoring.py",
+    "local_acceptance": "pending",
+    "native_result": "not_started",
+    "scientific_limit": "Projected oriented area is a conservative local constraint and does not establish global injectivity, absence of self-intersection, physical validity or efficacy."
+  },
   "supersedes_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c12.json",
     "sha256": "8ad5e50c8a1d7916ff10fc37c5bac48b6dd7ce9a1888c0465d3ef4bc825afd3a"

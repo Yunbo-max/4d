@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C10,C11,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (8/15). C03 numerical calibration remains partial and C20 lacks a legal motion target; neither blocker was replaced with fabricated input. Seven full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (9/15). C03 numerical calibration remains partial and C20 lacks a legal motion target; neither blocker was replaced with fabricated input. Six full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",

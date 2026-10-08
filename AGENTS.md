@@ -206,8 +206,23 @@ are independently computed controls; all three roles use the same reference-area
 edge targets and pinned matrix-free lift. Continue only through the C11
 comparison request, official-scoring request, admitted plan and single-owner
 launcher. No C11 test, method, scorer or GPU task has run; Local/native status
-remains 0/15 and GPU STOP remains active. The maintained full source-chain count
-is 8/15.
+remains 0/15 and GPU STOP remains active.
+
+C12 has a source-complete but **generated_unexecuted** chain. Read the C12
+runbook section before choosing any numerical setting. Its common proposed
+update is one predicted-mesh-only matrix-free ARAP repair shared byte-for-byte
+by fixed damping, generic backtracking and the exact candidate. The candidate
+forms every frame/face projected-area quadratic, identifies the earliest true
+positive-to-negative crossing while retaining tangencies as feasible, and uses
+an explicit inward numerical margin. It exports all 16 native frames, exact
+frame zero, the original topology/identity arrays and a recomputable coefficient
+certificate; failed controls remain failures. The prospective comparison has
+five logical roles B0/B*/fixed/backtracking/exact, de-duplicates physical arrays
+and retains failed-role denominators. Official scoring is reachable only through
+the C12 request, admitted plan builder and single-owner launcher. Projected
+oriented area is not global injectivity, collision freedom or physical validity.
+No C12 test, candidate, scorer or GPU task has run; Local/native status remains
+0/15 and GPU STOP remains active. The maintained full source-chain count is 9/15.
 
 ## Safety and provenance
 

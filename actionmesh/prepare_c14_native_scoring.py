@@ -173,7 +173,7 @@ def bind_contract_arms(contract: dict, comparison: dict,
                         or (reported is not None and reported != implementation_sha)):
                     raise ValueError('B0 implementation is not pinned by contract/comparison')
                 scoring.resolve_ref(root, source_ref)
-                if PROFILE in ('c01', 'c04', 'c10', 'c11'):
+                if PROFILE in ('c01', 'c04', 'c10', 'c11', 'c12'):
                     generator_ref = identity_row.get('generation_identity_ref')
                     if generator_ref not in pinned:
                         raise ValueError('B0 native generation identity is not pinned')

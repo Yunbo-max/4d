@@ -24,6 +24,12 @@ ROLES = ("b0", "b_star", "arap_repair", "elastic_repair",
 METHOD_ROLES = ROLES[2:]
 CONTROL_ROLES = ("arap_repair", "elastic_repair")
 METHOD_IDS = candidate_module.METHOD_IDS
+CANDIDATE_ROLE = "rotation_preserving_stretch_projection"
+FREEZE_KIND = "c11-native-comparison-freeze"
+DECISION_KIND = "c11-b-star-decision"
+DECISION_NO_OUTCOMES_FIELD = "selected_without_c11_native_outcomes"
+REQUEST_KIND = "c11-native-comparison-request"
+PROFILE_LABEL = "C11"
 
 
 def digest(path: Path) -> str:
@@ -119,13 +125,13 @@ def _validate_freeze(freeze: dict) -> None:
     core = {key: value for key, value in freeze.items() if key != "freeze_digest"}
     if freeze.get("freeze_digest") != canonical_digest(core):
         raise ValueError("Freeze digest mismatch")
-    if (freeze.get("kind") != "c11-native-comparison-freeze"
+    if (freeze.get("kind") != FREEZE_KIND
             or freeze.get("version") != 1
             or freeze.get("candidate_id") != CANDIDATE_ID
             or freeze.get("scoring_seed") != 44
             or freeze.get("primary_metric") != "cd_3d"
             or freeze.get("guardrail_metrics") != ["cd_4d", "cd_motion"]):
-        raise ValueError("Current frozen C11 comparison record required")
+        raise ValueError(f"Current frozen {PROFILE_LABEL} comparison record required")
     try:
         frozen = datetime.fromisoformat(freeze["frozen_at"].replace("Z", "+00:00"))
     except (KeyError, AttributeError, ValueError) as error:
@@ -141,21 +147,21 @@ def _validate_freeze(freeze: dict) -> None:
     if (not isinstance(rows, list)
             or [row.get("role") if isinstance(row, dict) else None
                 for row in rows] != list(ROLES)):
-        raise ValueError("Exactly five ordered C11 roles must be frozen")
+        raise ValueError(f"Exactly five ordered {PROFILE_LABEL} roles must be frozen")
 
 
 def _decision(root: Path, freeze: dict) -> tuple[dict, list[dict]]:
     decision = read_json(resolve_ref(root, freeze["b_star_decision_ref"]))
     core = {key: value for key, value in decision.items()
             if key != "decision_digest"}
-    if (decision.get("kind") != "c11-b-star-decision"
+    if (decision.get("kind") != DECISION_KIND
             or decision.get("version") != 1
             or decision.get("candidate_id") != CANDIDATE_ID
             or decision.get("uid") != freeze["uid"]
             or decision.get("inference_seed") != freeze["inference_seed"]
-            or decision.get("selected_without_c11_native_outcomes") is not True
+            or decision.get(DECISION_NO_OUTCOMES_FIELD) is not True
             or decision.get("decision_digest") != canonical_digest(core)):
-        raise ValueError("B* must be selected prospectively without C11 outcomes")
+        raise ValueError(f"B* must be selected prospectively without {PROFILE_LABEL} outcomes")
     try:
         decided = datetime.fromisoformat(decision["decided_at"].replace("Z", "+00:00"))
         frozen = datetime.fromisoformat(freeze["frozen_at"].replace("Z", "+00:00"))
@@ -332,7 +338,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
                     or report.get("candidate_arm") != role
                     or report.get("implementation_sha256") != digest(implementation_path)
                     or row["method_id"] != METHOD_IDS[role]):
-                raise ValueError("C11 artifact or method identity mismatch: " + role)
+                raise ValueError(f"{PROFILE_LABEL} artifact or method identity mismatch: " + role)
             if completed:
                 if (certificate_path != artifact_path.parent / role / "certificate.npz"
                         or report.get("sha256", {}).get("certificate.npz")
@@ -340,11 +346,11 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
                     raise ValueError("Completed C11 role lacks certificate: " + role)
             elif certificate_path is not None:
                 raise ValueError("Failed C11 role cannot invent certificate")
-            if role == "rotation_preserving_stretch_projection":
+            if role == CANDIDATE_ROLE:
                 if row["method_id"] != CANDIDATE_ID:
-                    raise ValueError("Hard stretch projection must be C11 candidate")
+                    raise ValueError(f"{CANDIDATE_ROLE} must be {PROFILE_LABEL} candidate")
             elif row["method_id"] == CANDIDATE_ID:
-                raise ValueError("C11 control cannot masquerade as candidate")
+                raise ValueError(f"{PROFILE_LABEL} control cannot masquerade as candidate")
             if row["certificate_ref"] is not None:
                 pinned.append(row["certificate_ref"])
         arrays = None
@@ -394,7 +400,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
                            preparation_error=target["preparation_error"])
     unique = {ref["path"]: ref for ref in pinned}
     request = {
-        "kind": "c11-native-comparison-request", "version": 1,
+        "kind": REQUEST_KIND, "version": 1,
         "candidate_id": CANDIDATE_ID, "uid": freeze["uid"],
         "inference_seed": freeze["inference_seed"], "scoring_seed": 44,
         "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
@@ -428,15 +434,15 @@ def verify_request(root: Path, request: dict) -> None:
     core = {key: value for key, value in request.items() if key != "request_digest"}
     if request.get("request_digest") != canonical_digest(core):
         raise ValueError("Request digest mismatch")
-    if (request.get("kind") != "c11-native-comparison-request"
+    if (request.get("kind") != REQUEST_KIND
             or request.get("candidate_id") != CANDIDATE_ID
             or request.get("scoring_seed") != 44
             or request.get("generated_unexecuted") is not True
             or request.get("native_qualified") is not False
             or request.get("dispatch_ready") is not False):
-        raise ValueError("Unexecuted C11 request scope required")
+        raise ValueError(f"Unexecuted {PROFILE_LABEL} request scope required")
     if [row.get("role") for row in request.get("roles", [])] != list(ROLES):
-        raise ValueError("Exactly five ordered C11 roles required")
+        raise ValueError(f"Exactly five ordered {PROFILE_LABEL} roles required")
     refs = request.get("input_refs")
     if not isinstance(refs, list) or len({ref["path"] for ref in refs}) != len(refs):
         raise ValueError("Unique pinned request closure required")

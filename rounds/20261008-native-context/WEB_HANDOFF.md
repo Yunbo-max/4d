@@ -826,3 +826,50 @@ candidate, model, scorer, download, inference or GPU task ran. C11 is
 remain 0/15. Seven chains, complete G01 and reviewed supervisor task-extension/
 online-agent integration remain. GPU STOP and the frozen budget/protocol are
 unchanged. Local starts at the C11 runbook section at the exact read-back commit.
+
+## Continuation: C12 maximal feasible area-admission full source chain — 2026-10-08
+
+Resumed exact main `fc0b67fef0bf4406c1d8004d0da539519739c56b`. The unchanged
+20-card/15-selected evidence was restored and the read-only C12 code boundary
+reported `math_verified=20`, `selected=15` and `workflow_boundary.ready=true`.
+This check granted no code verification, scientific admission or dispatch.
+C03 and C20 remain blocked on legal scientific inputs, so C12 was the next
+independently ready selected construction.
+
+C12 now derives one common proposed update from the existing predicted-mesh-only
+matrix-free ARAP repair. Fixed damping, ordinary multiplicative backtracking and
+the candidate receive exactly this update. The candidate expands the exact
+projected oriented-area quadratic for every frame/face, solves scalar roots with
+stable quadratic/Vieta handling, distinguishes true positive-to-negative
+crossings from tangencies, selects the earliest connected feasible boundary over
+the full sequence and applies an explicit inward absolute/relative margin. It
+exports all 16 native frames, exact frame zero, unchanged topology/identity arrays,
+the common update and recomputable coefficient/alpha certificates. Degenerate
+original faces, unsafe fixed steps, exhausted backtracking and out-of-policy
+bounds are terminal per-role failures; no fallback output is made scoreable.
+
+The prospective comparison fixes B0, a development-only B* decision and the
+three terminal roles. It revalidates the artifact, source/generation identity,
+common target and certificates, retains every failed logical role, and scores
+byte-identical physical sequences once. The official-scoring profile uses the
+existing ActionBench adapter/raw collector with `cd_3d` primary and `cd_4d` plus
+`cd_motion` guardrails. The admitted plan builder requires the complete current
+design/Gate0/IPCG/family/G01/runtime closure and an exact expiring
+`single_c12_scoring_attempt` authorization. The launcher validates final
+consumption, keeps a stable `c12-launch-claim`, and is the only execution entry.
+
+Projected oriented area is a conservative local test: it is not global
+injectivity, self-intersection detection or a physical-validity guarantee, and
+large legitimate rotations can be rejected. Those limitations and the ordinary
+line-search necessity test remain in the frozen design. Independent static
+review repaired near-tangent connected-component roots, comparison archive-ref
+types, deterministic failed-arm replay and bounded atomic materialization;
+focused re-review found no remaining Critical/Important issue in scope. Web
+performed only source authoring plus AST/JSON/diff inspection; no project test, plan builder,
+candidate, model, scorer, download, inference or GPU task ran. C12 is therefore
+`generated_unexecuted`. Source coverage is 9/15
+(C01,C02,C04,C10,C11,C12,C13,C14,C15); Local verification and native results
+remain 0/15. Six method chains, complete stage-wide G01 and reviewed supervisor
+task-extension/online-agent integration remain. GPU STOP and all budgets/protocols
+are unchanged. Local starts at the C12 runbook section at the exact read-back
+commit and must preserve prior results.
