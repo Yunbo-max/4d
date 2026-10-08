@@ -298,15 +298,26 @@ The following blockers remain explicit:
   fixed identity/envelope, fully pinned added plans and the same cumulative
   deadline. It does not discover tasks, accept unknown future hashes, generate
   repairs or change campaign ID to obtain another budget.
-- **Free-form AI repair is not implemented.** Only the finite, pinned repair
-  children in the approved manifest can become eligible after their exact
-  failure condition. New code or a changed scientific direction needs a new
-  reviewable artifact and the existing admission process. `runtime-library.md`
-  describes the separately installed provider-neutral controller/ACP runtime,
-  but this project has no verified configured online repair-agent endpoint or
-  installed adapter receipt. The source does not invent or auto-install one;
-  faults report `online_repair_agent=not_connected`. Reuse that runtime after its
-  concrete installation/authority/adapter bindings are supplied and reviewed.
+- **Online repair has a source bridge, not a configured agent.**
+  `scripts/research_repair_bridge.py` binds one reviewed terminal `code_error`
+  admission to one immutable `candidate_code` task in the existing separately
+  installed provider-neutral controller/ACP runtime. It uses the documented
+  `enqueue` plus one finite `worker` call, fixed argv/no shell, exact file hashes,
+  one owner lock and a deterministic `repairs/<campaign>/<request>/` output
+  contract. The existing ACP/runtime is not an OS sandbox, so Local must also
+  qualify the configured agent's filesystem policy; the output list alone is not
+  confinement. The bridge forbids GPU authority,
+  scientific retry, output overwrite and automatic patch application. This
+  project still has no verified controller DB registration, dedicated repair
+  project, adapter/provider
+  login or worker receipt; the supervisor therefore continues to report
+  `online_repair_agent=not_connected`. Local must qualify the bridge and actual
+  adapter, review the produced patch, create a distinct child source/plan and use
+  the existing two-digest append-only extension. No free-form direction change
+  or retry of the failed experiment is admitted. In this revision the supervisor
+  itself is not wired to change that field after a bridge run; it always reports
+  `not_connected`, and the bridge's retained runtime evidence is a separate Local
+  handoff until a future reviewed status handshake is implemented.
 - **Scientific qualification is unchanged.** This wrapper does not qualify the
   current native baseline, trusted replay, candidate methods, or scientific
   outcomes, and does not advance research gates.

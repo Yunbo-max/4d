@@ -1003,3 +1003,25 @@ then the admitted `prepare_c07_native_scoring.py` / single-owner
 `launch_c07_native_scoring.py` path only. `cd_motion` is primary; `cd_3d` and
 `cd_4d` are guardrails. No C07 code, test, plan, model, data, scorer or GPU work
 has run in Web. GPU STOP, single attempt and zero scientific retry remain active.
+
+### Online repair runtime bridge continuation
+
+`scripts/research_repair_bridge.py` and its Local engineering acceptance now
+close the previously missing source interface from a reviewed terminal code
+failure to the existing `research-autopilot` runtime. The bridge creates one
+immutable `candidate_code` task, calls the registered runtime's `enqueue` and one
+finite configured ACP `worker` in a request-scoped dedicated runtime project,
+declares a deterministic new `repairs/<campaign>/<request>/` output contract, and
+cannot grant GPU authority, retry the failed scientific identity or apply its own
+patch. The task contract is not OS confinement; Local must separately qualify
+the configured agent/provider filesystem and process isolation.
+The shared zero-GPU acceptance builder pins the bridge source and test.
+
+This is `generated_unexecuted`. No controller DB, adapter registry, provider
+authentication or live online agent was found or configured in Web; no bridge
+test or worker ran. The supervisor therefore still truthfully reports
+`online_repair_agent=not_connected`; this supervisor revision has no handshake
+that changes that field after a separate bridge run. Local entry is
+`LOCAL_AGENT_RUNBOOK.md#reviewed-online-repair-bridge--source-authored-local-runtime-pending`.
+After real runtime qualification, Local must preserve the failed version, review
+the output and create a distinct child source/plan before append-only extension.

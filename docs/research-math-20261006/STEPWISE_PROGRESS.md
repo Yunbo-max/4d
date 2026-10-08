@@ -1947,3 +1947,36 @@ data download, inference, scorer or GPU work ran. Source-chain coverage is now
 11/15 (C03/C05/C08/C20 remain); Local/native verification remains 0/15. The
 supervisor is still uninstalled/unstarted, online repair is not connected, and
 GPU STOP plus frozen one-attempt/zero-retry scientific protocols remain active.
+
+## Continuation: existing-runtime online repair bridge — 2026-10-08
+
+Restored literal main `631a2f9e44ab01e2ed12d0c0b79878003e95fc06` and
+rechecked all four remaining candidates against the maintained real-input audit.
+C03, C05, C08 and C20 still lack respectively a legal development label producer,
+qualified material-mode bank/scores, a qualified sparse chain/endpoints, and a
+legal motion target. No geometry-derived or arbitrary external array was relabelled
+as model evidence, so source-method coverage remains 11/15.
+
+The concrete continuation closes a different recorded gap:
+`scripts/research_repair_bridge.py` now transforms one hash-bound Local-reviewed
+terminal `code_error` admission into one immutable `candidate_code` task for the
+existing `research-autopilot` runtime. It uses fixed no-shell calls, reserves the
+campaign-wide allocation in an immutable per-request receipt before an
+idempotent `enqueue` can expose work, and makes at most one finite ACP `worker`
+call after persisting its intent. Runtime calls use a distinct POSIX process
+group so timeout targets same-session local descendants as well as the direct
+CLI; remote-provider cancellation remains part of Local adapter qualification. It has a
+stable task/owner/digest, new-only `repairs/` outputs, and explicit zero GPU/zero
+scientific retry parameters. It never applies the
+patch, rewrites the failed version, resets budget, retries an experiment or
+creates another scheduler. The common zero-GPU acceptance builder pins this
+source and its targeted identity/budget/lost-ack tests.
+
+All code and tests are `generated_unexecuted`; Web performed only AST/JSON/source
+review. No project test, runtime worker, provider login, model/data operation,
+scoring or GPU task ran. The supervisor remains uninstalled/unstarted and reports
+`online_repair_agent=not_connected` in this revision even if Local separately
+supplies and qualifies the actual registered controller DB, adapter registry and
+provider authentication; no status handshake is implemented. Local
+must review any produced patch, create a distinct child version/plan, then use
+the existing two-digest append-only extension.

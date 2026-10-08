@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T17:33:00Z",
+  "recorded_at": "2026-10-08T18:50:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C03/C20 and C05/C08 remain blocked on genuine legal inputs. The stage-wide G01 source design is complete/generated_unexecuted with C07's exact closure added; dynamic family/B*/candidate admission remains pending. Four full source chains and an actually configured online repair-agent connection remain; reviewed append-only supervisor task extension is authored. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C03/C20 and C05/C08 remain blocked on genuine legal inputs. The stage-wide G01 source design is complete/generated_unexecuted with C07's exact closure added; dynamic family/B*/candidate admission remains pending. Four full method source chains remain. The reviewed online-repair bridge source now reuses the existing research-autopilot runtime for one immutable candidate_code task, but no controller DB/adapter/provider is configured or running and Local qualification is pending. Local/native methods 0/15. GPU STOP unchanged.",
   "g01_source_design": {
     "status": "complete_source_design_generated_unexecuted_dynamic_admission_pending",
     "recorded_at": "2026-10-08T16:50:42Z",

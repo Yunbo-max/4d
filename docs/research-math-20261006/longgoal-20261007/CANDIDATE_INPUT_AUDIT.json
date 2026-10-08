@@ -1110,8 +1110,8 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "683b96269887b75d33a56bd7ac4095ccdd58edcf",
-  "independent_source_review": "C06 and C07 incremental independent static reviews completed; all reported numerical, fallback, metric-profile, B0-binding, harness-staging and source-closure findings repaired. Latest evidence: docs/research-math-20261006/longgoal-20261007/g01-c07-incremental-source-review.json. Source only, no project execution.",
+  "maintained_base_commit": "631a2f9e44ab01e2ed12d0c0b79878003e95fc06",
+  "independent_source_review": "C06 and C07 incremental independent static reviews completed; all reported numerical, fallback, metric-profile, B0-binding, harness-staging and source-closure findings repaired. The existing-runtime repair bridge and handoff were independently reviewed and repaired through pre-enqueue cumulative reservation; Local runtime/provider qualification remains pending. Evidence: docs/research-math-20261006/longgoal-20261007/g01-c07-incremental-source-review.json and repair-runtime-bridge-source-review.json. Source only, no project execution.",
   "supervisor_extension_review": {
     "path": "docs/research-math-20261006/longgoal-20261007/supervisor-append-extension-source-review.json",
     "status": "generated_unexecuted_independent_static_review_complete",
@@ -1119,7 +1119,11 @@
     "local_acceptance": "pending",
     "supervisor_installed": false,
     "supervisor_running": false,
-    "online_repair_agent": "not_connected"
+    "online_repair_agent": "bridge_source_authored_generated_unexecuted_not_connected",
+    "repair_bridge_entry": "scripts/research_repair_bridge.py",
+    "repair_bridge_acceptance": "actionmesh/research_math/tests/test_research_repair_bridge.py via actionmesh/prepare_control_scoring_checks.py; Local pending",
+    "repair_bridge_review": "docs/research-math-20261006/longgoal-20261007/repair-runtime-bridge-source-review.json",
+    "repair_bridge_limits": "reviewed terminal code_error only; existing runtime enqueue plus one finite worker; deterministic repairs/ namespace; no GPU authority, scientific retry, patch application or cumulative-budget reset"
   },
   "g01_design": {
     "design_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",

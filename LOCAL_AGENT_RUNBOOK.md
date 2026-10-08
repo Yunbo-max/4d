@@ -1426,9 +1426,136 @@ Repeat the same exact current/next digest command after a lost extension
 acknowledgement; never create a new campaign ID or budget. Driver launch loss is
 still reconciled against exact harness/native receipts and PID/start/boot identity;
 unknown launch state is blocked, never retried. The current shared CPU acceptance
-stages the supervisor and its actual-harness extension/recovery tests. No test or
+stages the supervisor, the repair bridge, and their engineering tests. No test or
 deployment is claimed here. An actual online repair-agent connection remains
 absent and is reported as `not_connected`; GPU STOP remains in force.
+
+### Reviewed online-repair bridge — source authored, Local runtime pending
+
+Only use this after the supervisor has a receipt-proven terminal failed plan and
+Local has saved a `research-repair-admission` JSON with exactly: `kind`,
+`version=1`, `campaign_id`, `campaign_digest`, `failed_plan_id`,
+`status=terminal_failed`, `classification=code_error`, both
+`scientific_retry_allowed=false` and `gpu_allowed=false`, plus `reviewer`,
+`reviewed_at`, a bounded `repair_scope`, and exact `failure_ref`,
+`failed_plan_ref`, `supervisor_status_ref`, and `campaign_ref`. The campaign ref
+must be the exact supervisor manifest whose digest and named plan ref match the
+admission. The admission also carries an
+exact `budget_ref` to one reviewed `research-repair-campaign-budget` whose
+campaign ID/digest and cumulative `max_cost`/`max_seconds` come from the existing
+unspent authorization; it does not create a new allocation. The supervisor
+status must be a fresh inspection for the same campaign digest whose named plan is both
+`status=failed` and `repairable=true`. A running, absent, interrupted or
+`unknown` plan is not repair admission. The receipt, admission and instruction
+files must already be immutable files below the exact project root.
+
+The bridge cannot derive user authority or a provider bill from repository
+bytes: the first budget and `code_error` classification are trusted Local review
+boundaries. It enforces their exact identities and cumulative reservations from
+that point forward. DB device/inode binding detects replacement, not an in-place
+SQLite reinitialization; retain actual runtime `status`/`events` and controller
+identity in the returned Local receipt. These limitations are why this section
+is not a deployment or runtime-qualification claim.
+
+First run the existing zero-GPU common software-acceptance plan; it now pins
+`scripts/research_repair_bridge.py` and discovers
+`test_research_repair_bridge.py`. Then restore the actual installed runtime and
+provider configuration from the research-autopilot runtime guide. These commands
+are controller-only; they do not install a runtime/provider or touch the GPU:
+
+Create and independently review one ordinary runtime project registration JSON
+under the project root for this repair. Its `project_id` must equal `$REPAIR_ID`,
+its `root` must equal `$PROJECT_ROOT`, `workflow_class` is `scientific_method`,
+assigned role is `web_supervisor`, `max_workers=1`, the configured ACP adapter is
+in its allowlist, and its complete skill root/digest and request-equal cost/time
+limits must follow `runtime-library.md`. The failed campaign/plan evidence still
+has to satisfy runtime candidate-code admission (current parent, Gate 0/IPCG and
+selected mathematical evidence); a repair admission does not bypass those gates. No other task
+may use that project ID. This per-request project isolation is required because
+the runtime `worker PROJECT` command claims from a project queue rather than by
+task ID.
+
+```bash
+test -x "$RESEARCH_AUTOPILOT_RUNTIME"
+test -f "$RESEARCH_AUTOPILOT_DB"
+test -f "$RESEARCH_AUTOPILOT_ADAPTERS"
+python scripts/research_repair_bridge.py build \
+  --root "$PROJECT_ROOT" --runtime-executable "$RESEARCH_AUTOPILOT_RUNTIME" \
+  --db "$RESEARCH_AUTOPILOT_DB" --project-id "$REPAIR_ID" \
+  --owner "$REPAIR_OWNER" --adapter "$REPAIR_ADAPTER" \
+  --adapters-config "$RESEARCH_AUTOPILOT_ADAPTERS" \
+  --project "$REPAIR_PROJECT_JSON" \
+  --admission "$REPAIR_ADMISSION" --input "$FAILED_RECEIPT" \
+  --input "$FAILED_PLAN" --input "$SUPERVISOR_INSPECTION" \
+  --input "$REPAIR_BUDGET" --input "$CAMPAIGN_MANIFEST" \
+  --instruction "$REPAIR_INSTRUCTION" \
+  --output "repairs/$CAMPAIGN_ID/$REPAIR_ID/patch.diff" \
+  --output "repairs/$CAMPAIGN_ID/$REPAIR_ID/review.json" \
+  --max-cost "$REPAIR_MAX_MICRO_USD" --max-seconds "$REPAIR_MAX_SECONDS" \
+  --request-id "$REPAIR_ID" \
+  --out "$PROJECT_ROOT/runs/supervisor/$CAMPAIGN_ID/repair-$REPAIR_ID.json"
+python scripts/research_repair_bridge.py run \
+  "$PROJECT_ROOT/runs/supervisor/$CAMPAIGN_ID/repair-$REPAIR_ID.json"
+```
+
+The second command is inspection-only. Review its task, exact digest, output
+namespace and `gpu_dispatch_enabled=false`. Execute at most once with that exact
+digest:
+
+```bash
+python scripts/research_repair_bridge.py run \
+  "$PROJECT_ROOT/runs/supervisor/$CAMPAIGN_ID/repair-$REPAIR_ID.json" \
+  --execute --approved-request-digest "$REPAIR_REQUEST_DIGEST"
+```
+
+The bridge performs provider-free exact registration, then reserves its maximum
+cost/time as an immutable per-request file in the campaign-wide
+`repair-reservations/` directory before idempotent
+enqueue can expose executable work; request-scoped runtime projects therefore
+cannot reset or bypass the existing repair allocation. Reservations survive
+enqueue/worker failures and unknown outcomes. It persists a worker intent before
+calling the queue worker. Runtime calls use their own POSIX process group;
+deadline enforcement begins at the reserved request `max_seconds`, then sends
+group TERM, waits at most one second, sends group KILL, and waits at most one
+more second to reap the direct child. An unreaped child remains an explicit
+unknown requiring Local reconciliation rather than an unbounded bridge wait. Timeout or
+transport loss is retained as `worker_unknown`, including termination and
+bounded partial-output hashes; any repeated execute or
+lost acknowledgement stops at `reconcile_required` and reads runtime status; it
+never launches another worker automatically. `worker_returned` says only that one
+configured runtime worker call returned; it
+does not say outputs exist, the patch is correct, an adapter is generally
+qualified, or a scientific task may retry. Preserve the immutable `events/*.json`,
+append-only `journal.jsonl`, `last-status.json`, runtime events, provider
+identity/usage, both requested outputs and failures. Independently
+review the patch against the original failed receipt and method construction;
+commit a new source version without overwriting the failed one, rebuild/reaccept
+the affected plan, and append it only through the existing two-digest extension.
+If the real runtime executable, registered DB, adapter config, provider auth or
+online service is unavailable, retain `not_connected`; do not substitute a shell
+agent, local LLM, second scheduler or repeated experiment.
+
+For `reconcile_required`, do not delete `worker-intent.json` or execute again.
+Use the exact dedicated project/task and retained owner/fence from runtime events:
+
+```bash
+"$RESEARCH_AUTOPILOT_RUNTIME" --db "$RESEARCH_AUTOPILOT_DB" \
+  status "$REPAIR_ID"
+"$RESEARCH_AUTOPILOT_RUNTIME" --db "$RESEARCH_AUTOPILOT_DB" \
+  events "$REPAIR_ID" --after 0 --limit 1000
+"$RESEARCH_AUTOPILOT_RUNTIME" --db "$RESEARCH_AUTOPILOT_DB" \
+  inspect "$REPAIR_ID" "$REPAIR_ID" --owner "$RETAINED_OWNER" \
+  --fence "$RETAINED_FENCE" --adapter "$REPAIR_ADAPTER" \
+  --adapters-config "$RESEARCH_AUTOPILOT_ADAPTERS"
+```
+
+Only after that exact backend observation supports a terminal outcome may Local
+use the runtime's documented `reconcile` command with the same project, task,
+owner, fence, adapter and registry plus an evidence-backed `--outcome` and
+`--reason`. Unknown holds the reservation and stays parked. Reconciliation never
+clears the bridge intent or launches another worker; a future repair is a new
+request/project/output namespace and remains within the original cumulative
+campaign budget.
 
 ### C04 robust motion protection and retained-native acceptance
 

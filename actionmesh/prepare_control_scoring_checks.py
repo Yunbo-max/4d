@@ -110,6 +110,7 @@ def acceptance_sources(root: Path) -> list[Path]:
     files += [root/'actionmesh/research_ten'/name
               for name in ('__init__.py', 'm01_elasticity.py')]
     files.append(root/'scripts/research_supervisor.py')
+    files.append(root/'scripts/research_repair_bridge.py')
     files.append(root/'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json')
     files += [root/path for path in G01_SOURCES]
     missing = [path for path in files if not path.is_file()]

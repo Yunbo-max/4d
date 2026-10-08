@@ -1,0 +1,42 @@
+{
+  "kind": "independent-static-source-review",
+  "version": "1.0.0",
+  "subject": "existing-runtime online repair bridge and Local handoff",
+  "reviewed_at": "2026-10-08T18:50:00Z",
+  "reviewers": [
+    "review_repair_bridge",
+    "review_repair_handoff"
+  ],
+  "execution_performed": false,
+  "reviewed_paths": [
+    "scripts/research_repair_bridge.py",
+    "actionmesh/research_math/tests/test_research_repair_bridge.py",
+    "actionmesh/prepare_control_scoring_checks.py",
+    "LOCAL_AGENT_RUNBOOK.md",
+    "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
+    "rounds/20261008-native-context/WEB_HANDOFF.md"
+  ],
+  "repaired_findings": [
+    "durable worker intent now precedes the sole provider-facing worker call; repeated or lost-ack execution is status-only and cannot redispatch",
+    "request-scoped dedicated scientific project plus exact registration prevents the queue-wide worker from selecting an unrelated project task",
+    "runtime/adapter bytes, DB device/inode, full request, project, campaign, failed plan, supervisor observation and task evidence are hash/identity bound and rechecked",
+    "deterministic repairs/<campaign>/<request>/ output namespaces reject unowned pre-intent outputs and never auto-apply patches",
+    "campaign-wide budget identity and immutable per-request reservation receipts prevent per-request projects from resetting the retained repair allocation",
+    "campaign reservation precedes enqueue, so rejected/corrupt allocation state or a process interruption cannot leave executable unreserved work in the runtime queue",
+    "native adapter, GPU authority, scientific retry, changed capability inventory and output overwrite are rejected",
+    "registration, budget-reservation and enqueue intents/results plus worker/failure/reconciliation records are immutable events with an append-only journal; later status cannot overwrite prior evidence",
+    "the provider-facing worker begins same-session POSIX process-group teardown at the reserved max_seconds; timeout/transport loss retains termination evidence and bounded partial-output hashes as worker_unknown and later execution is status-only",
+    "the literal supervisor campaign and selected-entry envelope are schema-checked and a failed receipt must carry the selected campaign plan digest",
+    "retained JSON symlinks/nonregular files and malformed/negative budget reservations fail closed",
+    "documentation now distinguishes task contracts from OS confinement and the separate bridge from the supervisor's hard-coded not_connected status"
+  ],
+  "remaining_important": [
+    "Local has not run the generated tests or the actual installed runtime/SQLite/ACP/provider integration path; fake-runtime unit fixtures prove bridge control flow only",
+    "the initial repair-budget amount and terminal code-error classification remain trusted Local review/authorization boundaries; the bridge enforces their exact bytes and cumulative use but cannot infer user authority from repository files",
+    "DB device/inode detects path replacement but not an in-place controller reinitialization; Local must bind and return actual runtime status/events/controller identity because this runtime guide exposes no controller UUID in the request contract"
+  ],
+  "remaining_critical": [],
+  "outcome": "source_authored_generated_unexecuted_local_runtime_and_authority_qualification_pending",
+  "scientific_result": false,
+  "gpu_stop_unchanged": true
+}

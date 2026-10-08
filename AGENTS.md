@@ -105,9 +105,15 @@ The supervisor now supports fixed known-input readiness, bounded waiting,
 heartbeat/status, STOP/resume generations, retained-driver/lost-ack recovery and
 strict two-digest append-only campaign extension without a budget/deadline reset.
 Read SUPERVISOR_HANDOFF.md before use. It is neither installed nor running;
-the actual online repair-agent integration remains unconfigured and explicitly
-reports `not_connected`. Never reset campaign budget/identity or retry a frozen
-scientific attempt to obtain continued work.
+`scripts/research_repair_bridge.py` now supplies the source-authored, fail-closed
+handoff from one reviewed terminal code error to the existing
+`research-autopilot` runtime/ACP worker. It is generated_unexecuted and does not
+mean an adapter, provider login, controller DB or worker is installed/running;
+the supervisor continues to report `not_connected` in this revision even if
+Local separately qualifies and invokes the bridge. The bridge can only request a reviewed child source
+version: it forbids GPU authority and retry of the failed scientific identity.
+Never reset campaign budget/identity or retry a frozen scientific attempt to
+obtain continued work.
 The stage-wide G01 source design is
 `docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json` with its readable
 card in `G01_DESIGN.md`. It binds all 15 selected specs, the complete released
