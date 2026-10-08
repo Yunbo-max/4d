@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T12:09:20Z",
+  "recorded_at": "2026-10-08T13:04:54Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C10,C13,C14 have generated_unexecuted full source chains within stated scopes (6/15). C03 numerical calibration, frozen artifact and CPU fit plan delivered as partial source; native correspondence/export/scoring remain missing. Nine full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C10,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (7/15). C03 numerical calibration, frozen artifact and CPU fit plan remain partial; native correspondence/export/scoring are missing. Eight full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -1656,6 +1656,26 @@
       ],
       "tests_executed": false
     }
+  },
+  "c15_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T13:04:54Z",
+    "candidate_id": "4d-math-20261006-c15",
+    "method_entry": "actionmesh/research_math/protected_lowrank_candidate.py",
+    "cpu_plan": "actionmesh/prepare_protected_lowrank_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c15_native_comparison.py",
+    "official_scoring_entry": "actionmesh/research_math/c15_native_scoring.py",
+    "admitted_plan": "actionmesh/prepare_c15_native_scoring.py",
+    "single_owner_launcher": "actionmesh/launch_c15_native_scoring.py",
+    "source_scope": "prospectively evidenced orthogonal temporal Q with exact e0; float32 protected coefficients within frozen tolerance; anchor-only same-lambda SVT and candidate-export relative-rank-matched TSVD controls; six-role native denominator",
+    "source_complete_candidates": 7,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "tests_executed": false,
+    "source_review": "Independent /root/c15_source_review final static review found no remaining Critical/Important in the C15 core/comparison/scoring/plan/launcher/test-source scope; no project imports or execution.",
+    "gpu_execution": "stopped_by_user",
+    "remaining": "Local current-source acceptance, real-input CPU artifact execution, prospective development freezes, design/Gate0/IPCG/family/G01 admission, explicit GPU resume authorization and official native result",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c15-protected-low-rank-chain--source-complete-not-executed"
   },
   "c03_partial_calibration_handoff": {
     "status": "partial_source_generated_unexecuted",

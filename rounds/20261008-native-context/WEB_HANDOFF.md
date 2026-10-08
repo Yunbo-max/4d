@@ -752,3 +752,40 @@ keep C03 dependency blocked and continue C20/independent selected implementation
 Local entry is the C03 section in LOCAL_AGENT_RUNBOOK.md at the read-back commit.
 The existing hourly host remains the saved task; no new automation, supervisor
 installation, continuous-process claim, project test or scientific run occurred.
+
+## Continuation: C15 protected low-rank full source chain — 2026-10-08
+
+Resumed exact main `85a3355085969a9e1f5dfc719e722637185d6897`; the historical
+pricing-root repair and R3 311/311 receipt retain their prior scopes and were not
+rerun. The retained 20-card/15-selected method set is unchanged. Read-only C15
+method-boundary verification passed for source authoring only; no design or
+scientific dispatch admission was created.
+
+C15 now consumes a complete receipt-bound ActionMesh sequence and a prospective
+hash-bound temporal basis. The concrete Q builder is exact e0 plus frozen
+anchored-DCT modes, with separately evidenced development/input bases also
+supported. Candidate SVT acts only on `(I-Q)U`; frame zero remains exact and
+exported Q coefficients must meet a frozen float32 tolerance. The common-anchor
+same-lambda SVT and candidate-export relative-rank-matched TSVD are genuine
+operation controls, not aliases. Each role preserves the full 16-frame native
+topology/timeline/vertex identity; independent failures survive in a bounded
+deterministic terminal archive.
+
+The six-role prospective comparison is B0, B*, world Gaussian, unprotected SVT,
+rank-matched TSVD and protected residual SVT. It binds native generation identity,
+current producer/method bytes, basis evidence and nested source refs, all terminal
+reports/certificates, exact anchors and failure denominators. Physical duplicates
+are scored once. The official-scoring profile keeps `cd_motion` primary and
+`cd_3d`/`cd_4d` as guardrails, uses the fixed ActionBench adapter/raw collector,
+and inherits the complete design/Gate0/IPCG/family/G01/runtime/single-use GPU
+admission closure. Its launcher validates final consumption, holds a stable
+single-owner claim and delegates to the existing harness.
+
+Only static source, AST, JSON and digest review occurred. No test, builder,
+candidate, model, scorer, download, inference or GPU task ran. C15 is
+`generated_unexecuted`; Local and native statuses remain 0/15. Source-chain
+coverage is now 7/15 (C01,C02,C04,C10,C13,C14,C15); eight chains, full G01 and
+reviewed supervisor task-extension/online-agent integration remain. GPU STOP and
+the frozen budget/protocol are unchanged. Local entry is the C15 runbook section
+at the eventual exact read-back commit; preserve all prior results and do not
+invoke scoring without an explicit later resume authorization.

@@ -1113,8 +1113,9 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         provenance={
             'git_revision': revision,
             'git_refs': [scoring.file_ref(root, dirty_path)],
-            'model_revision': ('No model loaded by scoring; all five role '
-                               'artifacts are frozen inputs'),
+            'model_revision': ('No model loaded by scoring; all frozen role '
+                               'artifacts are frozen inputs ('
+                               + str(len(ROLE_FOR_CONTRACT_ARM)) + ' logical roles)'),
             'data_revision': request['benchmark_revision'],
             'environment_digest': environment_ref['sha256'],
             'environment_refs': [environment_ref,

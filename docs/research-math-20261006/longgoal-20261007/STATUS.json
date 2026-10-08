@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-07T18:15:41Z",
+  "updated_at": "2026-10-08T13:04:54Z",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "Eight population units completed; population-009 Stage I generation active at 19/30 as of 2026-10-07T18:15:41.051Z; zero pending and failures. Population-008 generation/scoring exited 0; receipt and all 117 declared output hashes independently verified. Engineering baseline only.",
+  "current_task": "GPU STOP remains active. C15 protected-low-rank method, six-role prospective comparison, official-score collection and single-owner launch source are delivered generated_unexecuted. Historical R9 baseline receipts are not an active process and do not accept current source.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -113,10 +113,10 @@
     },
     {
       "candidate_id": "4d-math-20261006-c15",
-      "implementation": "requires_current_design_audit",
+      "implementation": "source_complete_generated_unexecuted",
       "native_comparison": "not_started",
       "outcome": "pending",
-      "comparator_and_ablation": "required"
+      "comparator_and_ablation": "six_role_source_complete_unexecuted"
     },
     {
       "candidate_id": "4d-math-20261006-c05",
@@ -925,7 +925,7 @@
       "next_action": "Resolve C03 legal pointwise development mapping from actual native sources; if not justifiable, keep only that dependency blocked and continue retained C20/independent selected source work. No invented labels or confirmation fitting.",
       "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c03-development-calibration-core--partial-source-not-a-native-chain"
     },
-    "full_method_source_complete": 6,
+    "full_method_source_complete": 7,
     "local_method_verified": 0,
     "native_results": 0,
     "gpu_stop": true,

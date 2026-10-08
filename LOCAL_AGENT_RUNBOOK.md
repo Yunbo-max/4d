@@ -864,6 +864,122 @@ confidence interval, gate decision or scientific verdict until official replay,
 E04 and the frozen paired family/multiplicity analysis complete. GPU STOP remains
 effective.
 
+### C15 protected low-rank chain — source complete, not executed
+
+C15 consumes one receipt-bound complete native prediction and a prospective
+orthonormal temporal basis. The default concrete Q construction is exact `e0`
+plus fixed DCT-II modes on frames 1..15; the frozen rank must come from allowed
+development evidence and never from confirmation outcomes. A custom
+development/input-only basis is accepted only with the same hash-bound evidence
+contract. The candidate preserves frame zero exactly and preserves all Q
+coefficients within the frozen float32 relative tolerance, then soft-thresholds
+only the complementary residual. The two operation controls retain only the
+common frame-zero constraint: same-lambda SVT and a truncated SVD whose exported
+numeric rank matches the candidate under the frozen relative rank tolerance.
+
+First author `inputs/c15/basis.npy` and
+`inputs/c15/basis-evidence.json` prospectively. The evidence must have kind
+`c15-protection-basis-evidence`, version `1.0.0`, a timezone-aware `frozen_at`,
+the exact basis SHA-256, policy/rank/construction rule, `prospective_freeze=true`,
+`confirmation_outcomes_used=false`, and current project-relative path/SHA-256
+`source_refs`. For `analytic_anchored_dct`, the basis must byte-decode to the
+exact output of `build_anchored_dct_basis(16, K)` and `K<16`; do not tune K or
+lambda on confirmation scores.
+
+After current-source CPU acceptance, emit the zero-GPU artifact plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_protected_lowrank_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --basis "$project_dir/inputs/c15/basis.npy" \
+  --basis-evidence "$project_dir/inputs/c15/basis-evidence.json" \
+  --basis-source-policy analytic_anchored_dct \
+  --lambda-value "$frozen_c15_lambda" \
+  --residual-rank-policy candidate_export_numeric_rank \
+  --basis-orthogonality-tolerance "$frozen_basis_orthogonality_tolerance" \
+  --protected-coefficient-tolerance "$frozen_float32_protection_tolerance" \
+  --numeric-rank-tolerance "$frozen_relative_rank_tolerance" \
+  --max-artifact-bytes "$frozen_c15_artifact_limit" \
+  --run-id c15-protected-lowrank-001 \
+  --plan-dir "$project_dir/plans/c15-protected-lowrank-001" \
+  --wall-seconds "$c15_cpu_wall_seconds"
+```
+
+Inspect every input/code ref, the three terminal outputs, one attempt, zero
+retry and zero GPUs. Execute only the printed plan/digest through the installed
+harness. Retain `candidate.json`, `artifact-archive.json` and `artifact.tar`.
+The archive contains all three reports and only the sequence/certificate pairs
+that actually completed; an individual failure stays a failed logical role.
+Successful terminal artifact collection is not method success.
+
+Generate the Gaussian arm with the existing `prepare_mesh_controls.py` command
+in section 5, using the same source sequence and a prospectively frozen sigma.
+Then create the exact `c15-native-comparison-freeze` and
+`c15-b-star-decision`. The ordered denominator is `b0`, `b_star`, `gaussian`,
+`unprotected_svt`, `rank_matched_tsvd`, `protected_residual_svt`. Freeze the
+basis/evidence, lambda, both numerical tolerances, archive closure, all role
+reports/outputs/implementations, and choose B* before any C15 native outcome.
+Emit requests only:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c15_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c15/c15-native-comparison-freeze.json" \
+  --output "$project_dir/inputs/c15/c15-native-comparison-request.json"
+
+"$python_bin" -m research_math.c15_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c15/c15-native-comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c15_uid/surfaces.npy" \
+  --population "$population" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" \
+  --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c15/c15-native-scoring-request.json"
+```
+
+The official primary metric is `cd_motion`; `cd_3d` and `cd_4d` are guardrails.
+Byte-identical completed arms are scored once, but all six logical roles remain
+in the denominator and errors are never zero-imputed. Requests remain
+`generated_unexecuted`, `dispatch_ready=false` and `native_qualified=false`.
+
+GPU STOP remains active. Only after a separate explicit resume and exact C15
+design verification, Natural Gate 0/IPCG, source-derived family split, numeric
+effect/noninferiority criteria, complete G01 protocol, strict runtime closure
+and single-use GPU authorization may Local build and launch scoring:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c15_native_scoring.py" \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c15/c15-native-scoring-request.json" \
+  --protocol "$project_dir/inputs/c15/c15-native-protocol.json" \
+  --method-batch "$project_dir/inputs/c15/c15-method-verification-batch.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --admission "$project_dir/inputs/c15/c15-scientific-dispatch-admission.json" \
+  --skill-dir "$skill_dir" \
+  --plan-dir "$project_dir/plans/c15-native-scoring-001" \
+  --run-id c15-native-scoring-001 --group "$frozen_c15_group" \
+  --gpu-uuid "$actual_gpu_uuid" --wall-seconds "$c15_scoring_wall_seconds" \
+  --ram-mib "$confirmed_ram_mib" --cpu-cores "$confirmed_cpu_cores"
+
+"$python_bin" "$project_dir/actionmesh/launch_c15_native_scoring.py" \
+  --root "$project_dir" \
+  --consumption "$project_dir/inputs/c15/authorization-consumption/$c15_authorization_sha.json" \
+  --skill-dir "$skill_dir" \
+  --approved-plan-digest "$approved_c15_harness_plan_digest"
+```
+
+Never call `score` or generic harness execution directly. Preserve the stable
+single-owner launch claim and failed attempt. Returned evidence is the bounded
+`result.json`, `raw-manifest.json` and `raw-evidence.tar`; validate it with
+`python -m research_math.c15_native_scoring validate-delivery` using the same
+arguments as C14, substituting the exact C15 request, digest, GPU and receipt
+hashes. No C15 project test, artifact plan, scorer, model or GPU task was run by
+Web authoring; Local acceptance and native results remain pending.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**

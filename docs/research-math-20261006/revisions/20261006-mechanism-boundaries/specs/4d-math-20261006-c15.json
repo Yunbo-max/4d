@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c15",
   "name_zh": "保护动作分量的低秩轨迹修复",
   "priority_rank": 11,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Source-complete generated_unexecuted chain; awaiting Local acceptance, scientific admission and frozen native protocol; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c15.json",
@@ -41,7 +41,8 @@
     "inputs": [
       "full trajectory matrix Uhat[T,3V]",
       "fixed orthogonal Q containing the actual anchor basis",
-      "frozen lambda and residual-rank policy"
+      "hash-bound prospective Q evidence",
+      "frozen lambda, float32 protected-coefficient tolerance and relative numeric-rank policy"
     ],
     "outputs": [
       "full original-identity mesh sequence at every original frame",
@@ -54,20 +55,20 @@
     {
       "derivation_step": "s1",
       "statement": "Decompose Uhat=Q Uhat+(I-Q)Uhat into orthogonal components.",
-      "planned_function": "4d_math_20261006_c15.split_protected_residual",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.protected_lowrank_candidate.split_protected_residual",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "If Rhat=A diag(s) B^T, R*=A diag((s-lambda)_+) B^T.",
-      "planned_function": "4d_math_20261006_c15.solve_residual_svt",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.protected_lowrank_candidate.solve_residual_svt",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "Set U'=Q Uhat+R*; Q U'=Q Uhat and e0^T U'=e0^T Uhat.",
-      "planned_function": "4d_math_20261006_c15.recombine_and_check_anchor",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.protected_lowrank_candidate.export_protected_lowrank_candidate",
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -81,6 +82,7 @@
       "B_star",
       "gaussian",
       "unprotected_svt",
+      "rank_matched_tsvd",
       "protected_residual_svt"
     ],
     "primary_metric": "cd_motion",
@@ -114,6 +116,15 @@
       "REVISE for prespecified child hypothesis",
       "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
     ]
+  },
+  "source_delivery": {
+    "method": "actionmesh/research_math/protected_lowrank_candidate.py",
+    "cpu_plan": "actionmesh/prepare_protected_lowrank_candidate.py",
+    "comparison": "actionmesh/research_math/c15_native_comparison.py",
+    "official_scoring": "actionmesh/research_math/c15_native_scoring.py",
+    "admitted_plan": "actionmesh/prepare_c15_native_scoring.py",
+    "single_owner_launcher": "actionmesh/launch_c15_native_scoring.py",
+    "execution_status": "generated_unexecuted"
   },
   "outstanding_requirements": [
     "legal fixed protection basis and meaningful residual low-rank prior",

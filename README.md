@@ -1,4 +1,4 @@
-C03 continuation: [development calibration core and Local instructions](LOCAL_AGENT_RUNBOOK.md#c03-development-calibration-core--partial-source-not-a-native-chain) are now authored but unexecuted. The native correspondence/export/scoring chain remains incomplete; full source coverage is still 6/15.
+C15 now has a [complete generated-unexecuted protected-low-rank chain](LOCAL_AGENT_RUNBOOK.md#c15-protected-low-rank-chain--source-complete-not-executed): a prospective anchored temporal basis, protected residual SVT, anchor-only same-lambda and rank-matched controls, Gaussian/B0/B* six-role freeze, official ActionBench scoring/raw collection and single-owner admitted launcher. Local acceptance and native execution have not occurred; source coverage is 7/15. C03 remains a partial development calibration core whose legal native correspondence/export/scoring chain is still incomplete.
 
 # 4D 研究复现
 
@@ -6,7 +6,7 @@ C03 continuation: [development calibration core and Local instructions](LOCAL_AG
 
 当前源码交付入口是[原生上下文与连续接管交接](rounds/20261008-native-context/WEB_HANDOFF.md)。**GPU 保持停止；本次源码更新不恢复实验。** Local Codex 在精确交付 commit 先读[根级执行约束](AGENTS.md)与[项目运行手册](LOCAL_AGENT_RUNBOOK.md)，再按手册通过 `research-autopilot/scripts/run_harness.py` 驱动独立 Linux 主机；远端不需要 Codex/GPT，会话控制、Git、SSH 与文件回传由用户电脑承担。[既有基线交接](rounds/20261006-baseline-qualification/WEB_HANDOFF.md)保留为历史协议入口。
 
-当前状态以 [CURRENT.json](docs/research-math-20261006/CURRENT.json) 和最新回执为准：r9 的九个工程基线单元已经完成，R3 原始归档保留了 311 项软件检查通过的记录，历史定价路径修复已在源码中。311 项回执不覆盖后续 macOS 路径修订和本轮新增代码。UID008 仅有紧凑评分一致性回传，完整 raw 包、重复评分和可信重放仍待补。候选源码链完整为 6/15；Local 验证和 native 结果仍为 0/15。
+当前状态以 [CURRENT.json](docs/research-math-20261006/CURRENT.json) 和最新回执为准：r9 的九个工程基线单元已经完成，R3 原始归档保留了 311 项软件检查通过的记录，历史定价路径修复已在源码中。311 项回执不覆盖后续 macOS 路径修订和本轮新增代码。UID008 仅有紧凑评分一致性回传，完整 raw 包、重复评分和可信重放仍待补。候选源码链完整为 7/15；Local 验证和 native 结果仍为 0/15。
 
 C04 新增真实原生输入到稳健约束、三臂完整导出、五角色官方评分与归档的源码链。采用显式正对角敏感度椭球和预测网格动作代理量，保留投影证书、float32 有限步检查及全部失败；不声称概率覆盖或原生指标保证。见[运行手册 C04 章节](LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance)。Supervisor 新增固定清单内的输入等待、心跳、STOP/resume 与丢失确认对账；仍未安装或运行，新增任务审批和在线修复代理接入尚未完成。
 

@@ -1686,3 +1686,41 @@ keep C03 dependency blocked and continue C20/independent selected implementation
 Local entry is the C03 section in LOCAL_AGENT_RUNBOOK.md at the read-back commit.
 The existing hourly host remains the saved task; no new automation, supervisor
 installation, continuous-process claim, project test or scientific run occurred.
+
+## 2026-10-08 C15 protected low-rank source chain
+
+Restored literal main `85a3355085969a9e1f5dfc719e722637185d6897` and re-read the
+current method evidence, ActionMesh temporal/model interface and official
+ActionBench scorer sources. Read-only method verification retained math 20/20,
+selected 15 and the C15 code boundary; it granted no scientific admission.
+
+Implemented a real full-sequence C15 construction. A hash-bound prospective Q
+must contain exact e0; the concrete default builder is e0 plus orthonormal DCT-II
+modes on frames 1..15, while custom development/input bases remain fail-closed on
+their evidence. The candidate preserves frame zero exactly and Q coefficients
+within a frozen post-float32 relative tolerance, then applies nuclear-norm SVT
+only to the complementary residual. Anchor-only same-lambda SVT and a truncated
+SVD matched to the candidate's exported relative numeric rank are distinct
+controls. All three roles retain complete native arrays, independent terminal
+failures and a bounded deterministic archive.
+
+The prospective comparison binds B0, preselected B*, world Gaussian, both
+spectral controls and the candidate as six logical roles. It validates the native
+generation identity, Q/evidence/nested sources, current implementations, exact
+anchor/topology/time/vertex identity, terminal archive and failure denominator;
+byte-identical completed outputs share one physical score. Official ActionBench
+scoring keeps `cd_motion` primary with `cd_3d`/`cd_4d` guardrails, stages the
+complete frozen closure, collects bounded raw evidence and remains gated by
+design verification, Gate 0/IPCG, family split, numeric G01 criteria, strict
+runtime identity and one expiring exact-attempt authorization. The only launcher
+retains a stable single-owner claim before delegating to the existing harness.
+
+Independent static review was used during implementation; only source/AST/JSON/
+hash inspection was performed. Authored candidate, plan, comparison, scoring,
+delivery and launcher tests were not executed. C15 is therefore source-chain
+complete but `generated_unexecuted`; Local acceptance/native result remain absent.
+The maintained count is 7/15 source complete, 0/15 Local verified and 0/15 native
+results. Eight source chains, complete G01 and supervisor extension/online-agent
+integration remain. GPU STOP, cumulative budget and zero-retry scientific
+protocols are unchanged. Local starts at the C15 section in
+`LOCAL_AGENT_RUNBOOK.md` after checking the exact delivered commit.
