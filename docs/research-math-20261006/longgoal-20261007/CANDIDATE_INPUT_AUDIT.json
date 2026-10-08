@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C03,C04,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (13/15); Local-verified and native-result candidates remain 0/15. C05,C20 and an actually configured online repair worker remain pending. C03's tracked-GT-query to generated-query operator transfer is an explicit plain-coordinate surrogate assumption, not correspondence or native qualification. The retained repair bridge and supervisor's fail-closed read-only status handshake are source-authored/generated_unexecuted; no worker receipt is checked in and current operational state is not_connected. The stage-wide G01 source design is complete/generated_unexecuted with 13 exact method closures; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C08 uses a conservative predicted-geometry path-law specialization and makes no attention or natural-correspondence claim. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C03,C04,C05,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (14/15); Local-verified and native-result candidates remain 0/15. Only C20 and an actually configured online repair worker remain pending. C05 is a same-anchor empirical model-trajectory specialization: observed medoids and cluster masses are not calibrated posteriors, and absent separated modes cause INCONCLUSIVE without fallback. C03's tracked-GT-query to generated-query operator transfer is an explicit plain-coordinate surrogate assumption, not correspondence or native qualification. The retained repair bridge and supervisor's fail-closed read-only status handshake are source-authored/generated_unexecuted; no worker receipt is checked in and current operational state is not_connected. The stage-wide G01 source design is complete/generated_unexecuted with 14 exact method closures; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C08 uses a conservative predicted-geometry path-law specialization and makes no attention or natural-correspondence claim. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -980,11 +980,11 @@
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-review.json",
         "sha256": "e7ad3567922d57d4c9beef78469efd6acdd4b7d9b0d0ec7caf0cf6442a360747"
       },
-      "source_status": "specification_only",
-      "input_blocker_evidence": "2026-10-08 exact-source review: the native decoder/context path emits one coordinate sequence and latent tensors, not a qualified sparse material-coordinate mode bank or calibrated per-mode scores. Latent attention and arbitrary external y/p arrays are not legal substitutes; only C05-dependent work is blocked.",
-      "design_consistency_gap": "The math/review requires the same-bank surface_projected_mean comparator. It is now restored to the candidate audit, C05 spec arms and G01 control/contrast inventory (99 prospective tests); no implementation exists without a qualified producer.",
-      "code_entry": null,
-      "real_input_and_model_interface": "Actual model-exposed sparse material modes with normalized scores; anchor graph and legal hints",
+      "source_status": "source_complete_generated_unexecuted",
+      "input_blocker_evidence": "Resolved at source level by a same-anchor empirical ActionMesh trajectory specialization. One fixed Stage-0 anchor/context/Stage-II query is reused while domain-separated Stage-I noise produces complete 16-frame coordinate draws; exact branch-zero/B0 parity and full producer closure are mandatory. Empirical medoids/masses are not calibrated posteriors. Local producer/parity/Natural-Gate evidence remains absent.",
+      "design_consistency_gap": "Closed in source: localized mean, temperature-matched mean, union-surface-projected mean, independent top-1 and joint spatial labels consume the same bank and identical lift; G01 retains 99 prospective tests. Scientific admission and native execution remain pending.",
+      "code_entry": "actionmesh/prepare_c05_mode_bank.py -> actionmesh/prepare_spatial_mode_candidate.py -> actionmesh/prepare_c05_native_acceptance.py",
+      "real_input_and_model_interface": "Exact 16 ActionBench frames plus one retained B0 pair; ActionMesh Stage-0/context are frozen once, K pristine Stage-I branches decode through the same Stage-II query/topology/times; output mode bank is clustered at deterministic B0 landmarks",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -1000,17 +1000,29 @@
         "independent_top1",
         "joint_spatial_labels"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "native_scoring_entry": "actionmesh/prepare_c05_native_scoring.py -> actionmesh/launch_c05_native_scoring.py -> research_math.c05_native_scoring -> actionmesh/official_actionbench_adapter.py",
+      "local_method_acceptance_command": "python actionmesh/prepare_c05_native_acceptance.py --root $PROJECT --skill-dir $SKILL_DIR --artifact-candidate $C05_ARTIFACT/candidate.json --plan-dir $PROJECT/plans/$RUN_ID --run-id $RUN_ID --wall-seconds 3600 --ram-mib $RAM_MIB; execute only the emitted zero-GPU harness plan/digest",
+      "acceptance_command_gap": "Source-authored only; the command has not run on Local and no retained-real C05 artifact/parity receipt exists.",
+      "completion_evidence": [
+        "actionmesh/research_math/spatial_mode_candidate.py",
+        "actionmesh/research_math/c05_mode_bank.py",
+        "actionmesh/research_math/c05_candidate_artifacts.py",
+        "actionmesh/prepare_c05_mode_bank.py",
+        "actionmesh/prepare_spatial_mode_candidate.py",
+        "actionmesh/prepare_c05_native_acceptance.py",
+        "actionmesh/research_math/c05_native_comparison.py",
+        "actionmesh/research_math/c05_native_scoring.py",
+        "actionmesh/prepare_c05_native_scoring.py",
+        "actionmesh/launch_c05_native_scoring.py",
+        "LOCAL_AGENT_RUNBOOK.md#c05-same-anchor-empirical-spatial-modes--source-complete-not-executed"
+      ],
       "remaining_implementation_gaps": [
-        "qualified sparse-mode adapter (context capture does not supply modes)",
-        "budgeted joint search",
-        "common lift"
+        "Local execution of the exact mode-bank producer, branch-zero/B0 parity and zero-GPU retained-artifact acceptance",
+        "source-derived family split, D1-only parameter/B* freeze and Natural Gate evidence",
+        "candidate admission, official native scoring, paired analysis and conclusion"
       ],
       "scientific_prerequisites": [
-        "actual exposed sparse mode interface",
+        "same-anchor empirical coordinate modes with task-consequential separated-mode Natural Gate",
         "natural mode ambiguity with task consequence",
         "m03/STAC functional collision and capture equivalence",
         "final 16/16 raw receipts and native replay",
@@ -1022,7 +1034,7 @@
         "STAC-compatible common support/lift qualification",
         "score versus posterior-calibration claim boundary"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -1250,7 +1262,7 @@
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
     "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9",
+    "design_digest": "04128f7557a4f2e7ff1084aeb24262cb744aeea6f775d42b6cbd8c1829048cb7",
     "source_review_findings_remaining": {
       "critical": 0,
       "important": 0,

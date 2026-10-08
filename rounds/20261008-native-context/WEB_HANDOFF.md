@@ -7,6 +7,11 @@ GitHub delivery receipt; the C03 authoring base is
 `31da17adee35f1863131113c664f89dc25668133`. Integration preserves the concurrent
 `1bc3c973e0c6f23c94a32be7d30a06de4a812cd8` capture-only delivery.
 
+Current maintained status after the later C05 continuation in this file is
+14/15 source-complete, 0/15 Local/native verified, with only C20 still
+source-incomplete. Supervisor installation/runtime and online repair remain
+unverified/not connected; GPU STOP remains effective.
+
 ## Latest C03 source-complete continuation
 
 C03 is now a complete **generated_unexecuted** source chain, increasing source
@@ -1178,3 +1183,40 @@ Local/native remained 0/15; C03, C05 and C20 were then incomplete. Supervisor in
 and runtime execution remain false, online repair remains `not_connected`, and
 GPU STOP plus cumulative budgets are unchanged. Local must begin with the C08
 section of `LOCAL_AGENT_RUNBOOK.md` and execute only emitted harness plans.
+
+## Continuation: C05 same-anchor empirical spatial modes — 2026-10-08
+
+Starting from literal main `1305bfaa84cf8f4d7332b4cb8b4976bbc92d79f8`, Web
+completed the C05 source chain without relabelling attention or an external
+coordinate bank as correspondence modes. `prepare_c05_mode_bank.py` is an
+authorization- and STOP-gated single-attempt producer plan: one Stage-0
+anchor/context and one Stage-II query/topology/time inventory are frozen, while K
+pristine branches vary only domain-separated Stage-I noise. It retains all K
+complete 16-frame sequences. Its separate branch-zero parity receipt binds the
+exact producer result/manifest/bank/branch, retained B0 sequence/report and full
+producer input/code closure. No such receipt currently exists.
+
+`prepare_spatial_mode_candidate.py` is the zero-GPU materializer plan. It uses
+deterministic B0 landmarks, complete-link full-trajectory clustering, observed
+medoids, empirical masses and B0-only proper Kabsch edge hints. The masses are
+not calibrated probabilities. The Natural Gate requires at least two separated
+clusters on the frozen minimum landmark fraction; an absent gate is retained as
+INCONCLUSIVE and never falls back. Localized mean, temperature-matched mean,
+union-surface-projected mean, independent top-1 and joint spatial labels all use
+the same bank, lift and clip. `prepare_c05_native_acceptance.py` recursively
+stages/revalidates the retained-real closure and can prepare—but not approve—the
+prospective seven-role comparison request.
+
+After Local acceptance, family/B* freeze, Gate 0/IPCG, numeric criteria, exact
+scorer closure and a future explicit one-attempt resume authorization, the only
+native path is `prepare_c05_native_scoring.py` followed by the single-owner
+`launch_c05_native_scoring.py`. All seven roles remain in the denominator and
+the official adapter is called only through that emitted plan. Local must start
+at `LOCAL_AGENT_RUNBOOK.md#c05-same-anchor-empirical-spatial-modes--source-complete-not-executed`.
+
+All C05 code and test source is `generated_unexecuted`. Web performed only
+static source/AST/JSON/hash/diff review; it ran no project import, test, model,
+data, solver, scorer or GPU operation. Source-complete coverage is now 14/15,
+Local/native remains 0/15 and only C20 remains source-incomplete. GPU STOP and
+frozen cumulative budgets remain effective. No supervisor is installed or
+running; online repair remains `not_connected`.

@@ -2099,7 +2099,7 @@ single-owner launch profiles; and added a zero-GPU retained-real-artifact
 acceptance plan plus targeted Local test source. Updated the C03 specification,
 15-item table and G01 exact implementation closure. G01 still has 99 contrasts;
 its canonical source digest is
-`50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9`.
+`04128f7557a4f2e7ff1084aeb24262cb744aeea6f775d42b6cbd8c1829048cb7`.
 
 Static AST/JSON/hash/diff review is allowed in this Web role; no project import,
 test, model/data operation, solver, scorer or GPU task was run. All new work is
@@ -2116,3 +2116,42 @@ split propagation, candidate replay, fit verification and recursive acceptance
 staging. It found zero remaining Critical/Important source issues. The exact
 record is `longgoal-20261007/c03-g01-incremental-source-review.json`; its scope is
 static source completeness only.
+
+## C05 source-complete same-anchor empirical spatial modes — 2026-10-08
+
+Restored literal main `1305bfaa84cf8f4d7332b4cb8b4976bbc92d79f8` and retained
+the selected C05 identity rather than substituting latent attention, an external
+coordinate bank or a geometry-transport candidate. Exact ActionMesh source review
+supports one defensible specialization: execute Stage 0 and encode video context
+once, vary only deterministic domain-separated Stage-I noise, and decode every
+pristine branch through the same Stage-II anchor query, topology and 16 times.
+The result is a finite empirical bank of complete model-output trajectories.
+Branch zero remains untrusted until a separate receipt proves exact retained B0
+array equality and binds the complete producer input/code closure.
+
+The new CPU artifact chain selects deterministic B0 landmarks, clusters each
+landmark's full trajectories with complete linkage, retains observed medoids and
+empirical cluster masses, derives proper B0-only Kabsch edge hints and applies a
+deterministic multistart ICM to the explicit unary-plus-spatial energy. Those
+masses are not posteriors or calibrated probabilities. A Natural Gate requires
+at least two separated empirical modes on the frozen minimum landmark fraction;
+failure is retained as INCONCLUSIVE with no B0 or single-mode fallback. Localized
+mean, temperature-matched mean, union-sampled-surface-projected mean, independent
+top-1 and joint spatial labels are distinct reductions of the same bank and use
+one identical inverse-distance full-mesh lift and common displacement bound.
+
+The source chain now includes the STOP-gated single-attempt mode-bank plan, the
+zero-GPU materializer plan, recursive retained-real acceptance, seven-role
+prospective comparison/B*, official ActionBench scoring/raw collection and the
+single-owner launcher. G01 still has the same 99 prospective contrasts, now with
+14 exact implementation closures. Independent static review and the final
+content-hash record are retained in
+`longgoal-20261007/c05-g01-incremental-source-review.json`.
+
+Web performed source inspection plus AST/JSON/hash/diff checks only. It did not
+import project modules, run tests/plans/solvers, download data/models, invoke the
+scorer or use a GPU. Every new file is `generated_unexecuted`. Source-complete
+coverage is 14/15; Local/native verification remains 0/15. Only C20 remains
+source-incomplete. GPU STOP, cumulative budgets and the single-attempt/zero-
+scientific-retry protocol remain unchanged. Supervisor source is still
+uninstalled/unstarted and online repair is still `not_connected`.

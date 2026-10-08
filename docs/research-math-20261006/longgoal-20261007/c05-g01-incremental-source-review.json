@@ -1,0 +1,81 @@
+{
+  "kind": "candidate-incremental-source-review",
+  "version": 1,
+  "candidate_id": "4d-math-20261006-c05",
+  "recorded_at": "2026-10-08T23:47:16Z",
+  "base_commit": "1305bfaa84cf8f4d7332b4cb8b4976bbc92d79f8",
+  "status": "source_complete_generated_unexecuted",
+  "scope": "same-anchor empirical ActionMesh mode-bank producer, B0 parity, five distinct spatial-mode reductions, fixed failure denominator, real cross-root staging, seven-role prospective comparison, official scoring/raw collection and Local handoff",
+  "implementation_authors": [
+    "c05_artifact_chain",
+    "c05_native_route",
+    "integration_writer"
+  ],
+  "independent_reviewers": [
+    "c05_math_review",
+    "c05_handoff_review"
+  ],
+  "findings_repaired": {
+    "critical": [
+      "replace the historical unavailable calibrated-mode assumption with a same-anchor empirical full-trajectory specialization without calling empirical masses posteriors",
+      "bind exact branch-zero/B0 parity and the complete producer input/code closure",
+      "require medoid separation beyond the frozen cluster radius in the Natural Gate rather than mode-count alone",
+      "recompute aggregate-versus-branch arrays, content digests, five reductions, Kabsch hints, ICM traces, lift and archive closure",
+      "remap every ordinary input/code byte and output into the actual harness workspace across roots; keep only the manifest-verified model cache external",
+      "retain five bounded terminal role reports so one dependent-role failure cannot erase independent roles or the seven-role denominator"
+    ],
+    "important": [
+      "require float32 frames 0..15, native topology, material IDs, strictly increasing times and exact frame-zero identity",
+      "bind the math, producer and materializer implementation identities in every retained artifact",
+      "make Kabsch/ICM failure joint-only and union-projection failure surface-control-only",
+      "remove the incompatible C11 artifact schema from C05 comparison and scoring",
+      "declare the solver certificate plus every successful sequence and every terminal report in harness output collection",
+      "correct the Local acceptance entry to candidate.json",
+      "bind both producer-to-candidate and candidate-to-acceptance handoffs to exact native plans, receipts, attempts, staged commands and attempt workspaces",
+      "declare only the eleven always-present candidate outputs while retaining conditional successful-role sequences inside the validated artifact closure",
+      "replace the whole-cache symlink with an exact four-root per-file view and reject unlisted, partial, symbolic or changed cache inventory before and after production",
+      "carry an explicit candidate evidence-root sentinel into comparison request generation and verification"
+    ],
+    "minor": []
+  },
+  "remaining_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "source_refs": [
+    {"path": "actionmesh/research_math/spatial_mode_candidate.py", "sha256": "6a5a2a9a4be011cd0996c0316f041b580474ef2b11bdd6176809343ce7fcf133"},
+    {"path": "actionmesh/research_math/c05_mode_bank.py", "sha256": "3c7d620b585ee7d0f9a81809f61aa91984089c6c67a03bf90c7493b3a99ff6ce"},
+    {"path": "actionmesh/research_math/c05_candidate_artifacts.py", "sha256": "7c1fdf234fc3cb1bf4b67a6b91f09d4666ff530cd04ebc9a8442fdea0c207a0d"},
+    {"path": "actionmesh/prepare_c05_mode_bank.py", "sha256": "32bd5ef5369ef17aa05de40583fce8634de37f834e6a539e73fb3a174b891fd8"},
+    {"path": "actionmesh/prepare_spatial_mode_candidate.py", "sha256": "a9b4b35b16d422b6df8fb681f9d5df0224dd64603593efe545afced3417c3d28"},
+    {"path": "actionmesh/prepare_c05_native_acceptance.py", "sha256": "1ea50625a99f8bc2005456203f77f3565603293f3b788ed746a712d53efaac84"},
+    {"path": "actionmesh/research_math/c05_native_comparison.py", "sha256": "160a5fb0dd637587468ed143e0adea7a4c62806b81d0c230681bcc4bb97eb461"},
+    {"path": "actionmesh/research_math/c05_native_scoring.py", "sha256": "27f7c607c68f2a3834b75f0af51fa6e2dec198e2c79414fabdb95cb480750376"},
+    {"path": "actionmesh/prepare_c05_native_scoring.py", "sha256": "9cfb8f85583abd122f22e9d4f9ed1209c6f274ad21526e3e391f80566857e4d9"},
+    {"path": "actionmesh/launch_c05_native_scoring.py", "sha256": "fb92d5ad467c03f809037744974d5bea188886f09d025cd53bae834a377be598"},
+    {"path": "actionmesh/research_math/tests/test_c05_candidate_artifacts.py", "sha256": "82d926adccbcf25a4e8e283c5b96e498bfa119ba1c34a07f7ae532f5d0c92681"},
+    {"path": "actionmesh/research_math/tests/test_c05_mode_bank.py", "sha256": "df4e505c0531d4923de36745d67c2e38d7e81f7f91a00333c43676bab85ac141"},
+    {"path": "actionmesh/research_math/tests/test_c05_native_comparison.py", "sha256": "4623f7cdcbe9de3b65171b07de23309c87fb9ea62bea33fea59172e5a694a570"},
+    {"path": "actionmesh/research_math/tests/test_c05_native_scoring_profile.py", "sha256": "0c0d4297a211ffdf190b36e990093ae849ff5062d4209e992d69c19dadea26d8"},
+    {"path": "actionmesh/research_math/tests/test_c05_plan_staging.py", "sha256": "38406d7c1374c655baef106974bca2988142957a581b40cad28e65731c8e5f72"},
+    {"path": "actionmesh/research_math/tests/test_spatial_mode_candidate.py", "sha256": "463553d567668482431602d368cb5423efb9544760e60c297ab68d464de5ad78"},
+    {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json", "sha256": "22c2069d92189a00436e2372a07bcb408aa498c7a8b3e60a46159264c19e0241"}
+  ],
+  "checks_performed": {
+    "python_ast_parse": "17/17",
+    "json_parse": "4/4 before this review record",
+    "diff_whitespace": "clean",
+    "todo_placeholder_scan": "clean",
+    "project_imports_or_tests_executed": false,
+    "model_data_solver_scorer_or_gpu_executed": false
+  },
+  "scientific_boundaries": {
+    "local_method_verified": false,
+    "native_qualified": false,
+    "native_result": "not_started",
+    "natural_gate_observed": false,
+    "gpu_stop": true,
+    "posterior_or_calibrated_probability_claim": false
+  }
+}

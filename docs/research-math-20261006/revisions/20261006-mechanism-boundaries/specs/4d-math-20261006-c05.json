@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c05",
   "name_zh": "保留对应多解的空间联合分支",
   "priority_rank": 12,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Complete generated_unexecuted source chain for a same-anchor empirical ActionMesh trajectory specialization; Local acceptance, scientific admission and frozen native execution remain pending and it is not dispatchable while GPU STOP is active.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c05-math.json",
@@ -43,7 +43,7 @@
   "prior_art_and_role": "STAC's localized sharp blend; independent top-1; classical discrete labeling. Historical m03 also selects candidates over time, so spatial joint mode preservation needs explicit collision review.",
   "planned_interface": {
     "inputs": [
-      "qualified sparse target modes and normalized scores per anchor landmark",
+      "same-anchor ActionMesh Stage-I trajectory draws decoded through one fixed Stage-II query/topology/context, then clustered into observed medoid trajectories with empirical masses",
       "fixed anchor spatial graph and legal R_ij hints",
       "identical output lift for every mode reduction"
     ],
@@ -58,50 +58,50 @@
     {
       "derivation_step": "s1",
       "statement": "E||Y||^2-||E Y||^2=tr Cov(Y).",
-      "planned_function": "c05.s1_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.cluster_empirical_trajectories",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "For two opposite rotation modes of a vector, their mean can have a smaller norm than either mode.",
-      "planned_function": "c05.s2_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.localized_mean",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "Choose labels k_i minimizing sum_i -log p_i,k_i + lambda sum_(i,j) ||(y_i,k_i-y_j,k_j)-R_ij(x_i-x_j)||^2.",
-      "planned_function": "c05.s3_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.spatial_mode_energy",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s4",
       "statement": "The general discrete objective is nonconvex; beam/message/graph search is approximate and must retain its achieved objective and budget.",
-      "planned_function": "c05.s4_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.solve_joint_labels_icm",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s5",
       "statement": "In general g(sum_k p_k z_k) != sum_k p_k g(z_k); for g(z)=2sigmoid(z)-1 and equal z=0,2 the values are tanh(1/2) and tanh(1)/2.",
-      "planned_function": "c05.s5_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.temperature_mean",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s6",
       "statement": "A normalized token attention row does not by itself define a calibrated distribution over target material coordinates.",
-      "planned_function": "c05.s6_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.c05_mode_bank.produce_same_anchor_mode_bank",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s7",
       "statement": "The same finite labeling objective can use -log(normalized positive scores) as unary energies without claiming Bayes posterior optimality.",
-      "planned_function": "c05.s7_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.cluster_empirical_trajectories",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s8",
       "statement": "Localized positive-weight surface blends lie in the candidate convex hull, not necessarily on the surface. Equal nearby points on a sphere with chord length ell have radial deficit R-sqrt(R^2-ell^2/4)=ell^2/(8R)+O(ell^4/R^3).",
-      "planned_function": "c05.s8_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.spatial_mode_candidate.union_surface_projected_mean",
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -155,7 +155,7 @@
     ]
   },
   "outstanding_requirements": [
-    "actual exposed sparse mode interface",
+    "Local receipt for the same-anchor empirical mode-bank producer and exact branch-zero/B0 parity",
     "natural mode ambiguity with task consequence",
     "m03/STAC functional collision and capture equivalence",
     "final 16/16 raw receipts and native replay",
@@ -163,7 +163,7 @@
     "code identity/software/native-interface verification",
     "strongest executable baseline and fair information/cost",
     "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
-    "actual coordinate bank rather than latent-attention entropy",
+    "Natural Gate evidence that the empirical coordinate bank contains at least two separated modes on the frozen minimum landmark fraction; absent evidence is INCONCLUSIVE without fallback",
     "STAC-compatible common support/lift qualification",
     "score versus posterior-calibration claim boundary"
   ],

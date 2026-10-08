@@ -938,9 +938,23 @@
       "candidate_id": "4d-math-20261006-c05",
       "spec_ref": {
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
-        "sha256": "85547a4d43208af35bd7806b55b8b2c6bcb87fce1d30ccfece7b78f7d7d058c8"
+        "sha256": "22c2069d92189a00436e2372a07bcb408aa498c7a8b3e60a46159264c19e0241"
       },
-      "approved_control_implementation_refs": null,
+      "approved_control_implementation_refs": [
+        {"path": "actionmesh/launch_c05_native_scoring.py", "sha256": "fb92d5ad467c03f809037744974d5bea188886f09d025cd53bae834a377be598"},
+        {"path": "actionmesh/launch_c14_native_scoring.py", "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"},
+        {"path": "actionmesh/prepare_c05_mode_bank.py", "sha256": "32bd5ef5369ef17aa05de40583fce8634de37f834e6a539e73fb3a174b891fd8"},
+        {"path": "actionmesh/prepare_c05_native_acceptance.py", "sha256": "1ea50625a99f8bc2005456203f77f3565603293f3b788ed746a712d53efaac84"},
+        {"path": "actionmesh/prepare_c05_native_scoring.py", "sha256": "9cfb8f85583abd122f22e9d4f9ed1209c6f274ad21526e3e391f80566857e4d9"},
+        {"path": "actionmesh/prepare_c14_native_scoring.py", "sha256": "b18b533937d1501759c04112a106a155b2a2bff9be448da88805c3deb7f80858"},
+        {"path": "actionmesh/prepare_spatial_mode_candidate.py", "sha256": "a9b4b35b16d422b6df8fb681f9d5df0224dd64603593efe545afced3417c3d28"},
+        {"path": "actionmesh/research_math/c05_candidate_artifacts.py", "sha256": "7c1fdf234fc3cb1bf4b67a6b91f09d4666ff530cd04ebc9a8442fdea0c207a0d"},
+        {"path": "actionmesh/research_math/c05_mode_bank.py", "sha256": "3c7d620b585ee7d0f9a81809f61aa91984089c6c67a03bf90c7493b3a99ff6ce"},
+        {"path": "actionmesh/research_math/c05_native_comparison.py", "sha256": "160a5fb0dd637587468ed143e0adea7a4c62806b81d0c230681bcc4bb97eb461"},
+        {"path": "actionmesh/research_math/c05_native_scoring.py", "sha256": "27f7c607c68f2a3834b75f0af51fa6e2dec198e2c79414fabdb95cb480750376"},
+        {"path": "actionmesh/research_math/c14_native_scoring.py", "sha256": "9f82beda540fb3f236ef89994422c8937230341804884e3c6288eb8901039622"},
+        {"path": "actionmesh/research_math/spatial_mode_candidate.py", "sha256": "6a5a2a9a4be011cd0996c0316f041b580474ef2b11bdd6176809343ce7fcf133"}
+      ],
       "treatment_role": "joint_spatial_labels",
       "control_roles": [
         "B0",
@@ -1220,5 +1234,5 @@
     "explicit_gpu_resume_authorization_required": true,
     "gpu_dispatch_allowed_now": false
   },
-  "design_digest": "50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9"
+  "design_digest": "04128f7557a4f2e7ff1084aeb24262cb744aeea6f775d42b6cbd8c1829048cb7"
 }

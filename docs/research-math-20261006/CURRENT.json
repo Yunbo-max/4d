@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T22:55:00Z",
+  "recorded_at": "2026-10-08T23:47:16Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C03,C04,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (13/15). C03 uses development-only same-index tracked-GT decoder probes and explicitly treats GT-query to generated-query calibration as a falsifiable plain-coordinate transfer assumption, not correspondence or native qualification. C05 and C20 remain incomplete on their legal mode/target routes. G01 is complete/generated_unexecuted with 13 exact method closures; dynamic family/B*/candidate admission remains pending. Two full method source chains remain. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C03,C04,C05,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (14/15). C05 uses same-anchor empirical complete model trajectories, observed medoids/masses and a fail-closed separated-mode Natural Gate; it does not claim calibrated correspondence probabilities. Only C20 remains source-incomplete. G01 is complete/generated_unexecuted with 14 exact method closures; dynamic family/B*/candidate admission remains pending. One full method source chain remains. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods 0/15. GPU STOP unchanged.",
   "supervisor_repair_handshake": {
     "status": "source_authored_generated_unexecuted_local_acceptance_pending",
     "authoring_base": "6399bff2b087e3d648afa8e204948545c574ecca",
@@ -34,21 +34,45 @@
   "g01_source_design": {
     "status": "complete_source_design_generated_unexecuted_dynamic_admission_pending",
     "recorded_at": "2026-10-08T16:50:42Z",
-    "base_commit": "dfc8309fe60e8ae78289285ec192b965db44f162",
+    "base_commit": "1305bfaa84cf8f4d7332b4cb8b4976bbc92d79f8",
     "design": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",
     "guide": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9",
-    "coverage": "15 selected specs, exact candidate/native source closures for 13 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
-    "independent_static_review": "Prior C20/G01 incremental review plus current C03 incremental source review; current source remains generated_unexecuted and Local execution pending",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/c05-g01-incremental-source-review.json",
+    "design_digest": "04128f7557a4f2e7ff1084aeb24262cb744aeea6f775d42b6cbd8c1829048cb7",
+    "coverage": "15 selected specs, exact candidate/native source closures for 14 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
+    "independent_static_review": "Prior C20/G01 and C03 reviews plus current C05 incremental source review; current source remains generated_unexecuted and Local execution pending",
     "tests_executed": false,
     "scientific_design_verified": 0,
     "local_method_verified": 0,
     "native_results": 0,
     "gpu_dispatch_allowed": false,
     "next": "Local CPU-only common acceptance, complete source-derived family evidence plus independent review, deterministic split, D1-only B* freezes and per-candidate Gate 0/IPCG; do not resume GPU without new explicit authorization."
+  },
+  "c05_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T23:47:16Z",
+    "base_commit": "1305bfaa84cf8f4d7332b4cb8b4976bbc92d79f8",
+    "method_entry": "actionmesh/research_math/spatial_mode_candidate.py",
+    "mode_bank_entry": "actionmesh/research_math/c05_mode_bank.py",
+    "artifact_entry": "actionmesh/research_math/c05_candidate_artifacts.py",
+    "comparison_entry": "actionmesh/research_math/c05_native_comparison.py",
+    "scoring_entry": "actionmesh/research_math/c05_native_scoring.py",
+    "launcher": "actionmesh/launch_c05_native_scoring.py",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/c05-g01-incremental-source-review.json",
+    "review_findings_remaining": {
+      "critical": 0,
+      "important": 0,
+      "minor": 0
+    },
+    "source_complete_candidates": 14,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "tests_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c05-complete-empirical-spatial-mode-source-chain",
+    "remaining": "Local CPU software, cross-root staging, mode-bank/parity/Natural-Gate and retained-native interface acceptance; native scoring and scientific evidence are not started."
   },
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
@@ -1836,7 +1860,7 @@
     "native_results": 0,
     "tests_executed": false,
     "gpu_execution": "stopped_by_user",
-    "next_action": "Prospectively freeze and qualify an inactive-stationarity threshold, then implement the qualified target/basis producer and complete artifact/comparison/scoring chain or keep C20 blocked without relabelling model displacement as target. The geometry-only C08 specialization identified by exact-source review is an independent source-ready route after its prospective spec specialization."
+    "next_action": "Implement the reviewed decoder-consensus route: exact same-context source-alpha 0/8/15 replays, a cross-source coordinate-consistency target and a W-orthogonal normalized action-amplitude basis, then complete artifact/comparison/scoring/acceptance. Keep it explicitly a falsifiable self-consistency surrogate rather than truth; do not use camera/GT or relabel one decoder displacement as target."
   },
   "c03_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",

@@ -77,6 +77,125 @@ trusted official scorer replay, trusted live clustered analysis, measured host
 resources and a separate expiring exact-attempt GPU resume. The five incomplete
 method chains stay blocked independently and are not removed from G01.
 
+### C05 same-anchor empirical spatial modes — source complete, not executed
+
+The C05 chain is complete source only and remains `generated_unexecuted`.
+Web did not import it, run its tests, build a plan, load a model/data asset, score
+ActionBench or use a GPU. There is no C05 Local receipt, Natural-Gate decision,
+candidate admission or native result. GPU STOP remains active.
+
+The producer `actionmesh/prepare_c05_mode_bank.py` freezes one Stage-0 anchor,
+video context and Stage-II query/topology/times, then varies only deterministic
+domain-separated Stage-I noise. It retains every complete 16-frame trajectory.
+Branch zero must match the separately retained B0 arrays byte-for-byte by value;
+the parity receipt binds the exact mode-bank result, manifest, bank, branch-zero,
+B0 sequence and B0 report hashes. This producer is the only GPU step and cannot
+even emit a dispatchable plan until a new expiring authorization explicitly
+lifts STOP for the exact UID, outer seed and branch count. Do not create such an
+authorization while the current STOP instruction remains effective.
+
+After an authorized future producer succeeds, build the CPU-only candidate plan
+with `actionmesh/prepare_spatial_mode_candidate.py`. It deterministically selects
+sparse landmarks, clusters full observed trajectories with complete linkage,
+uses observed medoids and empirical cluster frequencies, derives proper Kabsch
+edge hints from B0, and materializes five distinct reductions. These frequencies
+are not posteriors or calibrated probabilities. The Natural Gate requires at
+least two separated empirical modes on the prospectively frozen minimum landmark
+fraction; rejection is terminal/INCONCLUSIVE and must not fall back to B0. One
+inverse-distance lift and one displacement bound are shared by all roles. The
+surface control projects onto the union of sampled branch surfaces, not onto a
+fabricated mean surface.
+
+Use new append-only paths. The following are the actual plan-builder entries;
+the shell variables for method hyperparameters must come from the reviewed D1
+development freeze and must not be chosen from D2/confirmation outcomes:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c05_mode_bank.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-root "$source_root" --frames "$c05_frames" \
+  --b0-sequence "$c05_b0_sequence" --b0-report "$c05_b0_report" \
+  --authorization "$c05_gpu_resume_authorization" \
+  --environment "$native_environment" \
+  --weights-manifest "$project_dir/actionmesh/weights-manifest.json" \
+  --config "$source_root/actionmesh/configs/actionmesh.yaml" \
+  --plan-dir "$project_dir/plans/$c05_mode_run_id" \
+  --output "$project_dir/outputs/$c05_mode_run_id" \
+  --uid "$uid" --outer-seed "$generation_seed" \
+  --branch-count "$c05_branch_count" --run-id "$c05_mode_run_id" \
+  --wall-seconds "$c05_gpu_wall_seconds" --gpu-peak-mib "$gpu_peak_mib"
+
+c05_mode_receipt="$project_dir/runs/attempts/$c05_mode_run_id/receipt.json"
+c05_mode_attempt=$("$python_bin" -c \
+  'import json,sys;x=json.load(open(sys.argv[1]));assert x["status"]=="completed" and len(x["attempts"])==1;print(x["attempts"][0]["attempt_path"])' \
+  "$c05_mode_receipt")
+c05_mode_workspace="$project_dir/$c05_mode_attempt/workspace"
+
+"$python_bin" "$project_dir/actionmesh/prepare_spatial_mode_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --mode-bank-plan "$project_dir/plans/$c05_mode_run_id/native.json" \
+  --mode-bank-receipt "$c05_mode_receipt" \
+  --mode-bank-root "$c05_mode_workspace/outputs/$c05_mode_run_id" \
+  --parity-receipt "$c05_mode_workspace/outputs/${c05_mode_run_id}-b0-parity.json" \
+  --b0-sequence "$c05_mode_workspace/${c05_b0_sequence#"$project_dir"/}" \
+  --b0-report "$c05_mode_workspace/${c05_b0_report#"$project_dir"/}" \
+  --output "$project_dir/outputs/$c05_candidate_run_id" \
+  --plan-dir "$project_dir/plans/$c05_candidate_run_id" \
+  --run-id "$c05_candidate_run_id" --landmark-count "$c05_landmark_count" \
+  --cluster-radius "$c05_cluster_radius" \
+  --natural-gate-min-fraction "$c05_gate_fraction" \
+  --localized-radius "$c05_localized_radius" \
+  --temperature "$c05_temperature" --unary-weight "$c05_unary_weight" \
+  --spatial-weight "$c05_spatial_weight" --max-sweeps "$c05_max_sweeps" \
+  --displacement-clip-multiplier "$c05_clip_multiplier" \
+  --max-artifact-bytes "$c05_max_artifact_bytes" \
+  --wall-seconds "$c05_cpu_wall_seconds" --ram-mib "$c05_ram_mib"
+
+c05_candidate_receipt="$project_dir/runs/attempts/$c05_candidate_run_id/receipt.json"
+c05_candidate_attempt=$("$python_bin" -c \
+  'import json,sys;x=json.load(open(sys.argv[1]));assert x["status"]=="completed" and len(x["attempts"])==1;print(x["attempts"][0]["attempt_path"])' \
+  "$c05_candidate_receipt")
+c05_candidate_workspace="$project_dir/$c05_candidate_attempt/workspace"
+
+"$python_bin" "$project_dir/actionmesh/prepare_c05_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --candidate-plan "$project_dir/plans/$c05_candidate_run_id/native.json" \
+  --candidate-receipt "$c05_candidate_receipt" \
+  --artifact-candidate "$c05_candidate_workspace/outputs/$c05_candidate_run_id/candidate.json" \
+  --plan-dir "$project_dir/plans/$c05_accept_run_id" \
+  --run-id "$c05_accept_run_id" --wall-seconds 3600 --ram-mib "$c05_ram_mib"
+```
+
+Here `c05_mode_receipt` and `c05_candidate_receipt` are the exact native
+`receipt.json` files referenced by the completed harness task results.
+`c05_mode_workspace` and `c05_candidate_workspace` are derived from the sole
+completed attempt's `attempt_path` by appending `/workspace`; never substitute
+controller-side `outputs/...` paths or guess an attempt directory. Both
+downstream builders revalidate the native plan digest, one-attempt/zero-retry
+identity, staged command, and exact declared output refs before consuming it.
+
+Run only emitted harness plans and record their exact approved digests. The
+acceptance plan is zero-GPU and revalidates the retained-real recursive closure,
+role arrays/certificates, two-batch staging boundary and candidate terminal
+status. Its optional `--freeze` mode prepares the seven-role comparison request
+only after the source-derived family/B* evidence exists; it does not approve the
+method. Official scoring may proceed only through
+`prepare_c05_native_scoring.py` and the single-owner
+`launch_c05_native_scoring.py`, after G01 design verification, Gate 0/IPCG,
+numeric criteria, family split, exact arm closure, scorer replay and a new exact
+single-attempt GPU authorization. B0, B*, localized mean, temperature-matched
+mean, union-surface-projected mean, independent top-1 and joint spatial labels
+all remain in the failure denominator. Preserve prior failures and never retry a
+frozen scientific identity.
+
+For D1 only, freeze the branch count, landmark count, clustering threshold,
+minimum multimodal fraction, mean temperature/radius, unary/spatial weight,
+solver sweeps and common clip multiplier before materialization. The prospective
+sensitivity matrix varies one of cluster radius, temperature and spatial weight
+at a time around the D1-selected setting; D2/confirmation uses one fixed setting
+and the unchanged 99-contrast G01 analysis. Report the Natural-Gate denominator,
+all preparation/scoring failures, per-family paired values and resource receipts.
+
 ### Current source delivery — paired replay and supervisor
 
 ### C03 correlated calibration chain — source complete, not executed

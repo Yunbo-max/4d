@@ -134,7 +134,7 @@ IDs are recomputed. UID/prefix/encoded labels and candidate outcomes are forbidd
 least 30 independent confirmation families must remain after D1/D2. The emitted
 task requests zero GPUs and cannot clear GPU STOP. Every D1 B* unit also requires
 an exact candidate/control native admission binding the spec, the implementation
-closure frozen in G01 (thirteen delivered; C05 and C20 null/incomplete), single-attempt harness/
+closure frozen in G01 (fourteen delivered; only C20 null/incomplete), single-attempt harness/
 producer identity, scorer closure and independent review completed before scoring.
 D1-only B* selection requires its own reviewed freeze before D2;
 confirmation remains locked. Missing family,
@@ -302,7 +302,7 @@ full area-mass transport and a simple `cost < 2*gamma` threshold with the same
 native fallback; all roles retain every vertex and all 16 frames. `cd_motion` is
 primary with `cd_3d`/`cd_4d` guardrails. Continue only through the C07 retained-
 artifact acceptance, comparison, official request and single-owner launcher.
-GPU STOP still forbids scoring. The maintained source-chain count is 11/15;
+GPU STOP still forbids scoring. The maintained source-chain count is 14/15;
 Local verification and native results remain 0/15.
 
 C08 has a source-complete but **generated_unexecuted** predicted-geometry
@@ -314,8 +314,26 @@ natural correspondence, GT or scorer state. Continue only through
 `prepare_trajectory_bridge_candidate.py`, `prepare_c08_native_acceptance.py`,
 the six-role prospective freeze, official scoring plan and single-owner launcher.
 Retain per-role failures; bridge nonconvergence must not erase independent control
-artifacts. GPU STOP remains active. The current source-chain count is 13/15;
+artifacts. GPU STOP remains active. The current source-chain count is 14/15;
 Local verification and native results remain 0/15.
+
+C05 has a source-complete but **generated_unexecuted** same-anchor empirical
+spatial-mode chain. Start at `prepare_c05_mode_bank.py`; it may run only after a
+new expiring exact-attempt authorization explicitly lifts GPU STOP for one UID,
+seed and branch count. It freezes one Stage-0 anchor/context and Stage-II query,
+varies only domain-separated Stage-I noise, retains every complete 16-frame
+trajectory and writes a separately hash-bound exact branch-zero/B0 parity
+receipt. Candidate materialization is CPU-only through
+`prepare_spatial_mode_candidate.py`; it clusters observed full trajectories,
+uses medoids and empirical cluster masses (never calibrated posteriors), fails
+closed when the frozen separated-mode Natural Gate is absent, and applies one
+identical inverse-distance full-mesh lift to localized mean,
+temperature-matched mean, union-surface-projected mean, independent top-1 and
+joint spatial labels. Continue only through
+`prepare_c05_native_acceptance.py`, the seven-role prospective comparison,
+`prepare_c05_native_scoring.py` and `launch_c05_native_scoring.py`. Preserve all
+failed roles in the denominator and never replace an absent mode gate with B0.
+No C05 Local receipt, admission, score or result exists; GPU STOP remains active.
 
 ## Safety and provenance
 
