@@ -14,6 +14,7 @@ ROOT_SOURCES = (
     'prepare_corotational_residual_candidate.py',
     'prepare_protected_geometry_candidate.py',
     'prepare_self_map_candidate.py',
+    'prepare_c03_calibration.py',
     'prepare_c01_native_scoring.py',
     'prepare_c01_native_acceptance.py',
     'launch_c01_native_scoring.py',

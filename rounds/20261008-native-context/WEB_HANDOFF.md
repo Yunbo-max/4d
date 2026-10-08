@@ -709,3 +709,46 @@ is existing hourly task `6ac527ad50cc8191a4964d35ae0b826e`, conversation
 Next source work follows retained C03, then independent ready selected methods.
 Local starts at the C04 runbook and supervisor handoff at the eventual exact
 read-back commit, preserving all failed/live evidence and returning actual logs.
+
+## Continuation: C03 development calibration source — 2026-10-08
+
+Restored literal main `8dd96d1374e2b551d1db6d111775d04b0cef2600`; all 2,477
+reused local source files matched that exact Git tree. Re-read R3 and current
+source: historical pricing-root repair remains present; 311/311 only accepts its
+old source closure. R9 nine completed units and indices10–15 remain historical
+evidence/pending coverage, not new runs. Corrected two stale runbook sentences
+that called the old test closure current and the historical R9 tree running.
+
+Read-only current evidence checking passed the C03 selection boundary (math20,
+selected15); it granted no scientific admission. Reused the revised 13-step math
+card, primary source notes and actual ActionMesh direct decoder and ActionBench
+unsquared/first-frame-matching code. Revisited Lange's SIAM MM chapter introduction
+(https://epubs.siam.org/doi/10.1137/1.9781611976175.ch9, introductory text only;
+full chapter unavailable). No new novelty claim or native guarantee is inferred.
+
+Authored full/diagonal/intercept squared and smoothed vector-norm affine
+calibration, actual/surrogate descent, exact-gradient stopping, finite failure
+diagnostics, fit serialization/development replay and exact-anchor array
+application. The artifact plan retains six×15 fits, all failed frames, explicit
+byte-bound inputs, disjoint declared UID/family partitions and every frozen
+parameter. It stages explicit files through the existing single harness with
+one CPU-only attempt and zero retries. The array application retains each
+failed role independently and never reads confirmation labels.
+
+Independent static review repaired missing stopping-parameter binding and
+application failure isolation; final review found no remaining Critical/Important
+within this partial scope. Authored numerical checks and a real `_stage`/fresh
+subprocess check with deleted live fixture inputs; none were executed. Only
+read-only evidence validation, AST/JSON/source/hash inspection performed.
+
+C03 remains partial: true native development correspondence/label-bank producer,
+receipt-bound C01-context-to-complete-mesh export, nine-role freeze/official
+scoring/raw collection and native acceptance remain absent. Do not fabricate
+pointwise truth from tracked GT or arbitrary nearest neighbours. Full-source
+count remains6/15, Local0/15, native0/15. Nine chains, full G01 and supervisor
+extension/online-agent integration remain. GPU STOP and frozen budget unchanged.
+Next action: resolve the legal mapping from actual native sources; if unsupported,
+keep C03 dependency blocked and continue C20/independent selected implementation.
+Local entry is the C03 section in LOCAL_AGENT_RUNBOOK.md at the read-back commit.
+The existing hourly host remains the saved task; no new automation, supervisor
+installation, continuous-process claim, project test or scientific run occurred.

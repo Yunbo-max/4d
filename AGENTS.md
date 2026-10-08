@@ -173,6 +173,14 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
+C03 now has a partial development calibration core and CPU artifact plan at
+`actionmesh/prepare_c03_calibration.py`. Read the C03 runbook section. Its six
+frozen affine estimators and unit-C01 array application do not supply the missing
+legal development correspondence producer, complete native export or nine-role
+scoring chain. Do not use historical `correlated.py` synthetic outputs, arbitrary
+nearest-neighbour labels or confirmation GT. It remains partial generated source;
+full source-chain count stays 6/15 and GPU STOP remains active.
+
 ## Safety and provenance
 
 - Preserve dirty and running worktrees. Do not force-push, reset, or overwrite another update.

@@ -4,6 +4,92 @@
 
 ### Current source delivery — paired replay and supervisor
 
+### C03 development calibration core — partial source, not a native chain
+
+Current source is `generated_unexecuted`. Entry:
+`actionmesh/prepare_c03_calibration.py`; numerical core:
+`research_math/correlated_calibration.py`; artifact boundary:
+`research_math/c03_calibration_artifacts.py`. This is a real weighted affine
+solver, not the historical `correlated.py` synthetic demonstration. Do not run
+that demonstration as C03 acceptance.
+
+The core implements the revised `20261006-native-loss/c03-math.json` s8–s12:
+full, diagonal and intercept-only fits, each with squared or smoothed vector-norm
+loss; unpenalized intercept; positive slope ridge; fixed positive tau; explicit
+weights; exact free-gradient convergence; actual and quadratic-surrogate descent.
+It retains rejected/nonconverged frame fits and never substitutes another arm.
+The squared convention is one-half weighted squared error plus one-half ridge;
+the smoothed convention is the weighted smoothed norm plus one-half ridge.
+Weights are not renormalized. Label fitting is data calibration, not zero-shot.
+
+`fit_bundle` produces six roles × fifteen nonanchor frame fits with byte-bound
+policy/data/correspondence evidence and disjoint UID/family partitions.
+`apply_bundle_arrays` takes only raw 16-frame coordinates, the observable
+same-context residual, original anchor and frozen bundle. It has no GT input or
+refitting route. It preserves the anchor exactly in float64 and retains each
+application failure independently. This array API is not yet an admitted
+C01-context-to-native-export adapter.
+
+**Remaining C03 source gaps:** a scientifically qualified development
+correspondence/label-bank producer from actual ActionMesh queries and tracked GT;
+receipt-bound C01 context-to-C03 complete mesh export with float32 and bounds
+checks; nine-role B0/B*/six fits/unit-C01 prospective freeze, native scorer and
+raw collection; retained-native acceptance. Do not fill these gaps with arbitrary
+nearest neighbours or claim official ICP supplies material correspondence. This
+partial delivery does not increase the full-source-chain count (still 6/15).
+Native Gate 0/IPCG, numeric criteria, family audit and G01 remain pending.
+
+First run the existing CPU software-acceptance builder at this exact delivered
+revision, using a new unique run ID and the emitted approved-plan digest. Its
+source closure now includes the C03 builder and both new test modules. New tests
+cover independent normal-equation expectations, restricted vector IRLS, failure
+and serialization behavior, declared split rejection and the actual `_stage`
+operation followed by a fresh staged subprocess after removal of live fixture
+inputs. These are software fixtures only, not native data or native evidence.
+None have been executed by Web.
+
+For later real development-bank fitting, the input format is deliberately
+explicit. NPZ keys are `reference_residual[N,3]`, `labeled_error[15,N,3]`,
+`weights[N]` and Unicode `uids[N]`. Each declared development UID must have
+positive weight; rows must contain exactly the prospective development partition.
+The policy keys and validation live in `validate_policy`, including seed42,
+frames0..15, `plain_pointwise_no_asset_specific_icp`, disjoint `uid_to_family`,
+all five estimator parameters, bank SHA-256 and named correspondence-evidence
+SHA-256 values. Every evidence file must be an explicit input argument. There is
+no generated native bank or approved policy in this delivery; retain that blocker
+rather than manufacture one. The source checks metadata and hashes, not the
+scientific truth of a correspondence review.
+
+Once the real bank and its reviewed policy exist, on the existing GPU host with
+native Conda, resolve `c03_data`, `c03_policy`, `c03_evidence_file` to those exact
+retained files under `project_dir`, and `c03_evidence_name` to its exact policy
+key. Resolve `c03_wall_seconds`/`c03_ram_mib` within the existing remaining budget.
+For multiple evidence files repeat the real `--evidence-file NAME PATH` arguments.
+The following emits a one-attempt, zero-retry, zero-GPU plan; it does not execute:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c03_calibration.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --data "$c03_data" --policy "$c03_policy" \
+  --evidence-file "$c03_evidence_name" "$c03_evidence_file" \
+  --run-id "$c03_run_id" --plan-dir "$project_dir/plans/$c03_run_id" \
+  --wall-seconds "$c03_wall_seconds" --ram-mib "$c03_ram_mib"
+```
+
+After source review, use only the existing `run_harness.py` with this plan and
+its actual emitted digest, under the existing Local authority and budget. Do not
+call the inner fitter directly. The declared receipt output is
+`actionmesh/c03-calibration-output/fit-bundle.json` inside the actual attempt
+workspace; derive its absolute path from the harness receipt, not a guessed UUID.
+On failure preserve this JSON, stderr/stdout and exact input/code refs. Parameter
+or label changes require a new version; do not retry a frozen scientific attempt.
+Return those raw records plus execution SHA to the current round packet. Inspect
+`role_results[role].failures` and `diagnostics.history` for nonconvergence; never
+raise tolerances or switch loss silently. A bank/hash/split rejection requires
+restoring the exact intended bytes or scientific review of a versioned change.
+No model download, scorer, supervisor installation or GPU resume is authorized
+by this source handoff. Existing asset acquisition cards below remain unchanged.
+
 ### C01 same-context correction and retained-native acceptance
 
 The C01 source chain uses the frozen native 16-frame, seed-42 context. It is
@@ -1092,7 +1178,7 @@ Read these files at the delivered commit before acting:
 | Controller | Local Codex on the user's computer, with the authenticated Git checkout and configured SSH access |
 | Compute | Separate Linux GPU host; ordinary Conda processes; no remote Codex/GPT required |
 | Repository checkout | Resolve an absolute fresh path locally; do not reuse a dirty or running tree |
-| GPU-host project path | The running r9 tree is `/root/actionmesh-research-staging/4d-longgoal-r9`; preserve it unchanged and create a separate clean checkout at the delivered revision for acceptance |
+| GPU-host project path | Historical r9 tree: `/root/actionmesh-research-staging/4d-longgoal-r9`; R3 retains its terminal snapshot (9 completed, none running/pending/failed, observed 2026-10-07T19:12:37Z). Preserve it and use an isolated checkout; no current liveness is inferred |
 | SSH alias/endpoint | Unknown. Reuse the user's already configured authorized target; do not guess or extract credentials |
 | Installed skill directory | Unknown. Locate the complete current installed `research-autopilot` package and record its absolute path |
 | Conda env/interpreter | Last returned as `/root/rivermind-data/actionmesh-repro/inference-env/bin/python`, a Conda-backed venv; revalidate captured package/dependency hashes; no Docker |
@@ -1137,10 +1223,10 @@ The committed `prepare_*.py` builders below may be invoked directly only to emit
 
 ### 3. Reuse current parser-only acceptance; rerun only after source changes
 
-The current receipt `software-status-observation-r1` records 294/294 checks
-passing, and its 72 code hashes match the current code tree. Do not rerun it
-unchanged. If any bound software source changes, regenerate the plan from a clean
-delivered checkout and run the replacement exactly once:
+Historical `software-status-observation-r1` records 294/294 checks; later R3
+records 311/311 on its explicitly pinned old closure. Neither accepts this changed
+source tree. Preserve both receipts and run current software acceptance once from
+a clean delivered checkout under the existing Local harness authority:
 
 On the GPU host, from a clean delivered checkout:
 

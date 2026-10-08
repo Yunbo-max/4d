@@ -508,8 +508,8 @@
         "path": "docs/research-math-20261006/revisions/20261006-native-loss/c03-review.json",
         "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
       },
-      "source_status": "specification_only_historical_prototype",
-      "code_entry": null,
+      "source_status": "partial_calibration_core_generated_unexecuted",
+      "code_entry": "actionmesh/prepare_c03_calibration.py",
       "real_input_and_model_interface": "C01 residual and development-only labeled errors with qualified correspondence/lift",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
@@ -530,14 +530,34 @@
       ],
       "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
       "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "acceptance_command_gap": "Shared software acceptance includes C03 numerical/artifact/staging tests; full native C03 acceptance still missing.",
+      "completion_evidence": [
+        {
+          "path": "actionmesh/research_math/correlated_calibration.py",
+          "sha256": "28be7326bdd207b86019ff75b91978e50a0e209df99202dbc957eeb72414054f"
+        },
+        {
+          "path": "actionmesh/research_math/c03_calibration_artifacts.py",
+          "sha256": "1d1b578a745df2be4279d04553bd2a2c0e695d5c335b96bb435ef0f95609a775"
+        },
+        {
+          "path": "actionmesh/prepare_c03_calibration.py",
+          "sha256": "3fcb017bb5b875268f33eeb4e1a5045ed2d7d8dde01fe312857788119d5c85e8"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_correlated_calibration.py",
+          "sha256": "40e85b742ce579b327ff0722bbfcb34f47c58dc60363149a00726c3d77818922"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_c03_calibration_artifacts.py",
+          "sha256": "ede2dc4f868dd265de91e28fbd1cf0a4a53497037f80f9f44da471b5f36862a7"
+        }
+      ],
       "remaining_implementation_gaps": [
-        "revised unsquared IRLS",
-        "full/diagonal/intercept fits",
-        "frozen fit identity",
-        "confirmation-label isolation",
-        "native entry"
+        "Qualified native development correspondence/label-bank producer; tracked GT does not automatically map to decoder query vertices",
+        "Receipt-bound C01 context to C03 complete float32 mesh export with bounds/identity checks",
+        "Nine-role prospective comparison freeze, official scoring and raw collection",
+        "Retained-native acceptance and complete G01 admission"
       ],
       "scientific_prerequisites": [
         "legal development error/moment calibration and family-split transfer",
@@ -1034,8 +1054,8 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "fd4c69055fbd827a91c3f21181b480188bf947ff",
-  "independent_source_review": "Independent C04 core/math, scoring/acceptance and supervisor read-only reviews. Issues repaired include lost rejection evidence, missing ARAP imports/archive staging, semantic evidence identity/time closure, prospective review/output cycle, STOP/resume and readiness races. Only source/AST/JSON/diff/hash checks; no project execution.",
+  "maintained_base_commit": "8dd96d1374e2b551d1db6d111775d04b0cef2600",
+  "independent_source_review": "C03 partial numerical/artifact/CPU-plan static review by /root/c03_review; no remaining Critical/Important. Core and integration test source authored only; no project execution. Full source chain count remains6/15.",
   "stage_goal": {
     "selected_methods": 15,
     "full_method_source_complete": 6,

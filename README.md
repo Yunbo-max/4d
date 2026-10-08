@@ -1,3 +1,5 @@
+C03 continuation: [development calibration core and Local instructions](LOCAL_AGENT_RUNBOOK.md#c03-development-calibration-core--partial-source-not-a-native-chain) are now authored but unexecuted. The native correspondence/export/scoring chain remains incomplete; full source coverage is still 6/15.
+
 # 4D 研究复现
 
 ## Local Codex：从这里开始

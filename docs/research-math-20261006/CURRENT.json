@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T11:17:25Z",
+  "recorded_at": "2026-10-08T12:09:20Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C10,C13,C14 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (6/15); Local-verified and native-result candidates remain 0/15. Nine source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "status": "C01,C02,C04,C10,C13,C14 have generated_unexecuted full source chains within stated scopes (6/15). C03 numerical calibration, frozen artifact and CPU fit plan delivered as partial source; native correspondence/export/scoring remain missing. Nine full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -1656,5 +1656,63 @@
       ],
       "tests_executed": false
     }
+  },
+  "c03_partial_calibration_handoff": {
+    "status": "partial_source_generated_unexecuted",
+    "recorded_at": "2026-10-08T12:09:20Z",
+    "base_commit": "8dd96d1374e2b551d1db6d111775d04b0cef2600",
+    "candidate_id": "4d-math-20261006-c03",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/correlated_calibration.py",
+        "sha256": "28be7326bdd207b86019ff75b91978e50a0e209df99202dbc957eeb72414054f"
+      },
+      {
+        "path": "actionmesh/research_math/c03_calibration_artifacts.py",
+        "sha256": "1d1b578a745df2be4279d04553bd2a2c0e695d5c335b96bb435ef0f95609a775"
+      },
+      {
+        "path": "actionmesh/prepare_c03_calibration.py",
+        "sha256": "3fcb017bb5b875268f33eeb4e1a5045ed2d7d8dde01fe312857788119d5c85e8"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_correlated_calibration.py",
+        "sha256": "40e85b742ce579b327ff0722bbfcb34f47c58dc60363149a00726c3d77818922"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c03_calibration_artifacts.py",
+        "sha256": "ede2dc4f868dd265de91e28fbd1cf0a4a53497037f80f9f44da471b5f36862a7"
+      }
+    ],
+    "source_review": {
+      "reviewer": "independent /root/c03_review",
+      "scope": "static core, artifact, plan, software test source and installed _stage semantics",
+      "critical_or_important_remaining": 0,
+      "findings_repaired": [
+        "bind all stopping/budget parameters at frozen bundle validation",
+        "retain independent per-role application failures"
+      ],
+      "executed_tests": false
+    },
+    "boundary": {
+      "batch": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
+      "batch_digest": "f8d4a834db8d017465b6234d05b4ec545c5a01c04118c173026fd425a938fb72",
+      "read_only_check": "verify_methods.py --candidate 4d-math-20261006-c03 --before code",
+      "exit_code": 0,
+      "math_verified": 20,
+      "selected": 15,
+      "scientific_admission": false
+    },
+    "remaining_implementation_gaps": [
+      "Qualified native development correspondence/label-bank producer; tracked GT does not automatically map to decoder query vertices",
+      "Receipt-bound C01 context to C03 complete float32 mesh export with bounds/identity checks",
+      "Nine-role prospective comparison freeze, official scoring and raw collection",
+      "Retained-native acceptance and complete G01 admission"
+    ],
+    "full_method_source_complete": false,
+    "local_method_verified": false,
+    "native_result": "not_started",
+    "next_action": "Resolve C03 legal pointwise development mapping from actual native sources; if not justifiable, keep only that dependency blocked and continue retained C20/independent selected source work. No invented labels or confirmation fitting.",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c03-development-calibration-core--partial-source-not-a-native-chain"
   }
 }
