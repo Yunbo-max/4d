@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c14",
   "name_zh": "共转坐标中的时间修复",
   "priority_rank": 10,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Superseded historical priority-10 specification; current selected specification is under revisions/20261006-mechanism-boundaries/specs.",
   "authored_at": "2026-10-06T10:34:56.805600+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
@@ -46,20 +46,20 @@
     {
       "derivation_step": "s1",
       "statement": "For a rigid sequence Y_t=c_t+R_t X, u_t=0 at every t.",
-      "planned_function": "4d_math_20261006_c14.fit_frozen_rigid_factors",
-      "status": "not_implemented"
+      "planned_function": "research_math.corotational_residual_candidate.fit_frozen_rigid_factors",
+      "status": "generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "Solve a declared anchored temporal repair for u, then reconstruct Y'_t=c_t+R_t(X+u'_t).",
-      "planned_function": "4d_math_20261006_c14.repair_body_residual",
-      "status": "not_implemented"
+      "planned_function": "research_math.corotational_residual_candidate.repair_body_residual",
+      "status": "generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "An operator mapping zero to zero leaves the exact rigid sequence unchanged, even for time-varying rotations.",
-      "planned_function": "4d_math_20261006_c14.reconstruct_with_fixed_pose",
-      "status": "not_implemented"
+      "planned_function": "research_math.corotational_residual_candidate.reconstruct_with_fixed_pose",
+      "status": "generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -71,9 +71,9 @@
     "arms": [
       "B0",
       "B_star",
-      "world_smoothing",
-      "simple_rigid_aligned_smoothing",
-      "declared_body_residual_repair"
+      "world_gaussian",
+      "body_gaussian",
+      "corotational_residual"
     ],
     "primary_metric": "cd_motion",
     "guardrail_metrics": [
@@ -83,7 +83,7 @@
     "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
     "distinguishing_prediction": "Pure rigid rotation/translation should be preserved by construction; improvement versus world smoothing should depend on pose variation rather than merely noise magnitude.",
     "falsifier": "Reject if inferred rigid factors are unstable or a equal-cost rigid-aligned Gaussian baseline gives the same native performance.",
-    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "actual_ids_and_group_split": "source supports a prospective hash-bound family split and one-UID comparison freeze; real IDs/family assignments remain pending scientific admission",
     "seed_policy": {
       "inference": [
         42,
@@ -108,6 +108,8 @@
     ]
   },
   "outstanding_requirements": [
+    "Local execution of current authored tests and exact real-input method/interface validation",
+    "source-derived family assignment record, prospective numeric criteria and exact single-use GPU authorization",
     "qualified pose fit without GT or evaluator ICP",
     "rigid/articulated regime of applicability",
     "SFG/STAC/basic rigid-aligned smoothing collision; baseline role unless extra delta",

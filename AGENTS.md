@@ -48,14 +48,32 @@ contains Gate 0/IPCG, independent-family split, numeric outcome criteria and an
 explicit single-attempt GPU-resume authorization for the exact GPU UUID.
 Execution must use the common harness.
 No such admission or Local acceptance currently exists; GPU STOP remains in force.
-The C14 candidate core is distinct from its existing Gaussian controls. Its only
+The C14 candidate core is distinct from its existing Gaussian controls. Its
 artifact-plan entry is `actionmesh/prepare_corotational_residual_candidate.py`.
 It fits proper frozen Kabsch factors from the predicted mesh only, solves an
 anchored nonuniform-time XYZ-group-TV body residual, and exports the complete
 identity-preserving sequence plus pose/solver evidence. It remains
-`generated_unexecuted`; the one-arm manifest is not the still-missing C14
-comparison freeze or official scoring/collection chain. Do not count C14 as
-source-chain complete, Local verified, scientifically admitted or scored.
+`generated_unexecuted`; the one-arm manifest alone is not a scientific result.
+The source-complete continuation is
+`python -m research_math.c14_native_comparison request`, then
+`python -m research_math.c14_native_scoring request`, with the only admitted
+plan entry at `actionmesh/prepare_c14_native_scoring.py`. It fixes the five
+logical roles B0/B*/world Gaussian/body Gaussian/corotational residual, pins and
+recomputes the candidate certificate and body poses, de-duplicates every
+byte-identical physical sequence, retains every failed role, binds the admitted
+ActionBench snapshot/semantics/GT closure, validates all 16 exported GLBs and
+emits receipt-bound result/manifest/tar.
+The plan builder must fail closed without C14 design verification, Gate 0/IPCG,
+source-derived independent-family split, protocol-bound numeric criteria, exact
+arm implementations, strict runtime closure and an expiring single-use
+authorization bound to the exact request/run/environment/GPU and STOP resume.
+The only execution entry is `actionmesh/launch_c14_native_scoring.py`; it must
+validate the final consumption and exact installed native/harness plan pair,
+hold the single-owner launch lock and retain/reuse the stable claim before it
+delegates to the existing harness. Never execute the C14 plan through the generic
+harness CLI or call the scorer directly.
+C14 is source-chain complete but remains Local-unverified, scientifically
+unadmitted and unscored; GPU STOP remains in force.
 Completed paired-context evidence is consumed only through the CPU-only
 `actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
 the result, manifest and tar as three explicit staged paths, bind the expected

@@ -1428,3 +1428,40 @@ as well as Local acceptance, Natural Gate 0/IPCG, family split, numeric criteria
 and native results. It therefore remains source-incomplete. Source-chain complete
 candidates stay 1/15 (C13 only), Local-verified and native results stay 0/15,
 and GPU STOP remains effective.
+
+## Continuation: C14 official scoring/collection chain — 2026-10-08
+
+Resumed literal remote main `6a1149f5f1853d07404ab4089445c0143dfacecf`
+and closed the concrete source gap named above. Added the C14-specific prospective
+five-role comparison, official ActionBench runner/raw collector, fail-closed
+common-harness plan builder and source-level acceptance tests. The five roles are
+B0, B*, world Gaussian, body Gaussian and the actual corotational residual
+candidate; body Gaussian is never treated as the candidate.
+
+The comparison pins complete native identity, current role implementations,
+body-pose evidence and a recomputed candidate pose/solver certificate. The
+scorer de-duplicates every byte-identical physical sequence, preserves all failed
+roles in the denominator, binds the admitted ActionBench snapshot/semantics/GT,
+validates all 16 exported GLBs and returns a
+bounded tamper-evident three-file bundle without a confidence interval or verdict.
+The plan builder requires current design verification, installed-schema-verified
+Gate 0/IPCG, a source-derived independent-family split, protocol-bound prospective
+numeric effect/noninferiority criteria, exact arm implementations, strict runtime
+closure and an expiring exact-request/run/environment/GPU authorization that is
+reserved once, recoverable only for identical partial plan state, validated
+against the installed native/harness schemas and finalized against both plan
+digests. A separate immutable launch ticket is a declared staged input, avoiding
+self-reference while binding the request/run/GPU/expiry; the scorer gates all
+output/GPU activity on that staged ticket and its authorization closure. The
+controller may launch only through `launch_c14_native_scoring.py`, which validates
+the final consumption and installed plan pair, holds one owner lock and records
+an exact recoverable claim, injects its hash/path for scorer verification, then
+delegates to the existing harness. The
+protocol still permits one confirmation attempt and zero retry.
+
+Tests were authored before production source but Web did not run them, so no
+RED/GREEN or pass claim exists. Static AST/JSON/hash/source review only; no project
+test, builder, scorer, model or GPU ran. C14 is source-chain complete but
+`generated_unexecuted`; Local acceptance and all scientific prerequisites/results
+remain open. Source-complete candidates are now 2/15 (C13 and C14), Local-verified
+and native results remain 0/15, and GPU STOP remains effective.

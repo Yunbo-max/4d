@@ -207,12 +207,19 @@ The candidate-specific scorer/collector is now
 the compatible Local environment without executing the GPU scorer:
 
 ```bash
+dataset_root="$project_dir/inputs/actionbench-2796071c"
+source_root="$actionmesh_source"
+population="$project_dir/actionmesh/research_overnight/assets/actionbench_population.json"
+test -d "$dataset_root/data"
+test -d "$source_root"
+test -f "$population"
+
 cd "$project_dir/actionmesh"
 "$python_bin" -m research_math.c13_native_scoring request \
   --root "$project_dir" \
   --comparison "$project_dir/inputs/c13/c13-native-comparison-request.json" \
   --ground-truth "$dataset_root/data/$c13_uid/surfaces.npy" \
-  --population "$project_dir/inputs/native-runtime/actionbench-population.json" \
+  --population "$population" \
   --repo-root "$source_root" \
   --timeout-seconds "$frozen_per_case_timeout" \
   --output "$project_dir/inputs/c13/c13-native-scoring-request.json"
@@ -363,15 +370,132 @@ failed retained attempt; do not substitute the Gaussian control or rerun the
 same frozen trial. The builder caps its inner job at 26,940 seconds so the outer
 60-second allowance remains within 27,000 seconds.
 
-This is not yet a complete C14 source chain. The one-arm manifest may be consumed
-by the shared official adapter only after the missing prospective B0/B*/world-
-Gaussian/body-Gaussian/candidate freeze, candidate-specific admitted scorer/raw
-collector, Natural Gate 0/IPCG, design verification, independent-unit split,
-numeric criteria and explicit GPU resume authorization exist. GPU STOP remains
-effective; do not invoke the scorer from this section. That future C14 wrapper
-must validate the report's sequence hash, candidate/method/role, exact 16-frame
-topology/timeline/vertex identity and official output provenance both before and
-after the generic adapter; the adapter's UID/status check alone is insufficient.
+The C14 source chain now continues through an explicit prospective comparison,
+official scorer/raw collector and admitted plan builder. First create the exact
+`c14-native-comparison-freeze` and prospective `c14-b-star-decision` records.
+The five ordered logical roles are `b0`, `b_star`, `world_gaussian`,
+`body_gaussian`, `corotational_residual`. B0 must be the exact source pair; B*
+must be selected before C14 outcomes and may alias only an already-declared
+simple control; the candidate row must pin its report, sequence and
+`certificate.npz`. Then emit the comparison request without scoring:
+
+```bash
+dataset_root="$project_dir/inputs/actionbench-2796071c"
+source_root="$actionmesh_source"
+population="$project_dir/actionmesh/research_overnight/assets/actionbench_population.json"
+test -d "$dataset_root/data"
+test -d "$source_root"
+test -f "$population"
+
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c14_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c14/c14-native-comparison-freeze.json" \
+  --output "$project_dir/inputs/c14/c14-native-comparison-request.json"
+
+"$python_bin" -m research_math.c14_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c14/c14-native-comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c14_uid/surfaces.npy" \
+  --population "$population" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$source_root" --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c14/c14-native-scoring-request.json"
+```
+
+Both requests remain `generated_unexecuted`, `native_qualified=false` and
+`dispatch_ready=false`. The comparison validates same UID/seed/source bytes,
+all 16 float32 frames, topology, timeline, vertex identity, exact frame-zero
+anchor, current method implementations, body-Gaussian `poses.npz`, and the
+candidate certificate by recomputing its pose factors and reconstruction. The
+scoring request binds the admitted released snapshot, dataset-semantics receipt,
+population/GT, current adapter, deterministic CPU-kNN entry and all six official
+ActionBench sources. Preparation failures remain in the five-role denominator;
+every byte-identical completed role shares one physical score and failures are
+never zero-filled.
+
+GPU STOP is active, so do not build or execute the scientific plan now. After a
+separate explicit resume, supply a design-verified C14 method batch/protocol and
+a hash-bound `c14-scientific-dispatch-admission`. Its referenced records are
+`c14-family-split`, `c14-outcome-criteria` and
+`c14-gpu-resume-authorization`; they have the same fail-closed structural rules
+as the C13 records above but must name C14, the exact C14 comparison/protocol,
+source-derived independent asset families, positive finite `cd_motion` effect, finite
+nonnegative `cd_3d`/`cd_4d` margins and scope
+`single_c14_scoring_attempt`. Gate 0 PASS and compatible importance/IPCG evidence
+must pass the installed schema validators. The resume authorization additionally
+binds the exact request, method batch, environment, run/task identity, expiry,
+STOP acknowledgement and nonce. The builder creates one canonical recoverable
+reservation, writes or exactly resumes the same dirty/native/harness plan state,
+issues a non-circular immutable launch ticket that is an actual staged input,
+then validates both plans with the installed runtime and finalizes one controller
+receipt bound to their paths and digests. The `score` entrypoint rejects all
+output/GPU activity unless the staged ticket, staged request, reservation and
+unexpired original authorization cross-validate and the controller injects the
+hash of its canonical final-consumption launch claim. Do not fabricate these records
+merely to satisfy the parser.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c14_native_scoring.py" \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c14/c14-native-scoring-request.json" \
+  --protocol "$project_dir/inputs/c14/c14-native-protocol.json" \
+  --method-batch "$project_dir/inputs/c14/c14-method-verification-batch.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --admission "$project_dir/inputs/c14/c14-scientific-dispatch-admission.json" \
+  --skill-dir "$skill_dir" \
+  --plan-dir "$project_dir/plans/c14-native-scoring-001" \
+  --run-id c14-native-scoring-001 --group "$frozen_c14_group" \
+  --gpu-uuid "$actual_gpu_uuid" --wall-seconds "$c14_scoring_wall_seconds" \
+  --ram-mib "$confirmed_ram_mib" --cpu-cores "$confirmed_cpu_cores"
+```
+
+Plan construction is not launch authority. After inspecting the emitted native
+and harness plans, confirm the canonical consumption receipt exists and use only
+the controller gate below. It validates the final receipt/plan pair, takes a
+nonblocking single-owner lock, creates or resumes the exact launch claim, and
+then delegates to the installed harness. Do not invoke the generic
+`run_harness.py --execute` entry for C14.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/launch_c14_native_scoring.py" \
+  --root "$project_dir" \
+  --consumption "$project_dir/inputs/c14/authorization-consumption/$c14_authorization_sha.json" \
+  --skill-dir "$skill_dir" \
+  --approved-plan-digest "$approved_c14_harness_plan_digest"
+```
+
+The builder requires `corotational_residual` as treatment, prospective B* as
+baseline and B0/world Gaussian/body Gaussian as controls, binds every arm's
+revision/implementation, verifies the strict Local runtime/scorer closure,
+reserves 300 seconds for validation/collection and emits one confirmation
+attempt with zero retry. An interrupted build may resume only when the retained
+dirty patch and any existing native/harness plan exactly equal the reconstructed
+state; a different state fails closed. Never call the `score` operation directly,
+and never bypass `launch_c14_native_scoring.py`. The only
+returned files are `actionmesh/c14-scoring-output/result.json`,
+`raw-manifest.json` and `raw-evidence.tar`. Validate transported receipt hashes:
+
+```bash
+"$python_bin" -m research_math.c14_native_scoring validate-delivery \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c14/c14-native-scoring-request.json" \
+  --gpu-uuid "$actual_gpu_uuid" \
+  --result "$returned_c14_dir/result.json" \
+  --manifest "$returned_c14_dir/raw-manifest.json" \
+  --archive "$returned_c14_dir/raw-evidence.tar" \
+  --expected-request-digest "$frozen_c14_request_digest" \
+  --expected-result-sha256 "$receipt_result_sha256" \
+  --expected-manifest-sha256 "$receipt_manifest_sha256" \
+  --expected-archive-sha256 "$receipt_archive_sha256"
+```
+
+C14 is therefore source-chain complete but still `generated_unexecuted` and
+Local-unverified. A validated raw bundle remains unqualified and contains no
+confidence interval, gate decision or scientific verdict until official replay,
+E04 and the frozen paired family/multiplicity analysis complete. GPU STOP remains
+effective.
 
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
@@ -430,9 +554,10 @@ bound source/input hash changes. Window-plan preparation is currently blocked by
 historical-r7 reference closure and a stale GPU environment identity; do not
 launch GPU work while resolving it.
 
-There are 20 mathematical constructions and 15 conditionally selected candidates,
-but **0/15 candidate implementations have a complete validation design and 0/15
-have native results**. C02 has a corrected development operator and software
+There are 20 mathematical constructions and 15 conditionally selected candidates.
+C13 and C14 now have **source-complete, generated_unexecuted** method-to-official-
+score chains, so source completion is **2/15**; **0/15 are Local-verified and
+0/15 have native results**. C02 has a corrected development operator and software
 tests only; it is not admitted here as a new-method arm.
 
 Read these files at the delivered commit before acting:
@@ -1251,4 +1376,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C02 has a development operator; C14 has comparator/control code plus a distinct generated_unexecuted candidate core/full-sequence CPU artifact path, while its comparison/scoring/design chain remains incomplete. Neither is a completed candidate validation. Every candidate still requires an implementation/design card, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; neither has Local acceptance, scientific admission or a native result. C02 has only a developmental operator. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

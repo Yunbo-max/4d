@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; current authoring base is cc84100. C13 alone has a complete generated_unexecuted method-to-official-score source chain. C14 now has its distinct generated_unexecuted corotational group-TV core/full-sequence CPU artifact path, but not yet its comparison freeze or official-scoring/collection chain.",
+  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; this continuation resumes literal main 6a1149f. C13 and C14 have generated_unexecuted method-to-official-score source chains; C14 now includes strict construction/certificate validation, admitted ActionBench snapshot/semantics binding, all-role physical de-duplication, receipt-bound raw validation and single-use authorization-gated common-harness plan-builder/controller source. Neither has Local acceptance, an emitted scientific plan or a native result.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -13,7 +13,7 @@
   "existing_implementation_notes": {
     "C02": "protected_projection.py implements mathematical projection primitive; not complete native method",
     "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
-    "C14": "simple_mesh_controls.py remains the Gaussian baseline. corotational_residual_candidate.py now implements a separate anchored nonuniform-time group-TV residual method and full-sequence export, with prepare_corotational_residual_candidate.py as its CPU-only harness plan. Comparison freeze and official scoring/collection remain missing."
+    "C14": "simple_mesh_controls.py remains the Gaussian control. corotational_residual_candidate.py implements the distinct anchored nonuniform-time group-TV method; c14_native_comparison.py, c14_native_scoring.py, prepare_c14_native_scoring.py and launch_c14_native_scoring.py complete its generated_unexecuted five-role comparison, official scoring, receipt validation and authorization-gated admitted-plan builder/controller source chain."
   },
   "required_next_sequence": [
     "Continue independent shared interface/source work; current CPU software acceptance remains Local-only.",
@@ -52,8 +52,8 @@
         "solver residuals, input/source hashes and end-to-end costs"
       ],
       "controls_and_ablations": [
-        "B0",
-        "B_star",
+        "b0",
+        "b_star",
         "geometry_only",
         "strength_matched_blend",
         "protected_step"
@@ -218,7 +218,7 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c13-math.json",
         "sha256": "63ac04cf802be3caecf96a03f1215d40167d164827dd38e1ea18b2d53a6da794"
       },
-      "source_status": "source_chain_complete_generated_unexecuted: distinct candidate core/full-sequence export, five-role freeze, official scoring runner, bounded raw collection and common-harness plan are authored; Local/scientific verification and native results remain open",
+      "source_status": "source_chain_complete_generated_unexecuted: distinct candidate core/full-sequence export, five-role freeze, official scoring runner, bounded raw collection and authorization-gated common-harness plan-builder/controller source are authored; no scientific plan was emitted, and Local/scientific verification and native results remain open",
       "code_entry": "actionmesh/research_math/group_acceleration_candidate.py:repair_group_acceleration,export_group_candidate; actionmesh/research_math/c13_native_comparison.py:make_request,verify_request; actionmesh/research_math/c13_native_scoring.py:make_scoring_request,score_request,validate_delivery",
       "candidate_plan_entry": "actionmesh/prepare_group_acceleration_candidate.py",
       "native_scoring_plan_entry": "actionmesh/prepare_c13_native_scoring.py (fail-closed until hash-bound Gate 0/IPCG/family split/numeric criteria/single-attempt GPU authorization, the design-verified confirmation protocol/method batch, exact arm implementations and strict Local runtime/GPU identity exist)",
@@ -327,8 +327,10 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c14-math.json",
         "sha256": "52fbceeb3ffdd8230274c0154c4aea9f57921ba90ead1d8275bb3fb137ee81a8"
       },
-      "source_status": "candidate_core_and_full_sequence_export_generated_unexecuted; comparison/scoring chain missing",
-      "code_entry": "actionmesh/research_math/corotational_residual_candidate.py:fit_frozen_rigid_factors,repair_body_residual,reconstruct_with_fixed_pose,export_corotational_candidate; actionmesh/prepare_corotational_residual_candidate.py:build_plans",
+      "source_status": "source_chain_complete_generated_unexecuted: distinct candidate core/full-sequence export, five-role freeze, official scoring runner, bounded raw collection and authorization-gated common-harness plan-builder/controller source are authored; no scientific plan was emitted, and Local/scientific verification and native results remain open",
+      "code_entry": "actionmesh/research_math/corotational_residual_candidate.py:fit_frozen_rigid_factors,repair_body_residual,reconstruct_with_fixed_pose,export_corotational_candidate; actionmesh/research_math/c14_native_comparison.py:make_request,verify_request; actionmesh/research_math/c14_native_scoring.py:make_scoring_request,score_request,validate_delivery",
+      "candidate_plan_entry": "actionmesh/prepare_corotational_residual_candidate.py",
+      "native_scoring_plan_entry": "actionmesh/prepare_c14_native_scoring.py builds the fail-closed plan only after hash-bound Gate 0/IPCG/family split/numeric criteria/single-attempt GPU authorization, design-verified confirmation protocol/method batch, exact five-arm implementations and strict Local runtime/GPU identity exist; actionmesh/launch_c14_native_scoring.py is the only execution entry and validates final consumption/plan digests plus a stable single-owner launch claim before delegating to the installed harness",
       "real_input_and_model_interface": "Receipt-bound ActionMesh sequence.npz/report.json. Proper Kabsch pose factors are estimated only from the predicted complete mesh and frame-zero geometry, frozen during repair, and never use GT, cameras, labels, evaluator ICP, scorer state or learned weights. The candidate repairs body residuals with anchored nonuniform-time XYZ-group TV; simple_mesh_controls.smooth_body remains the distinct Gaussian control.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
@@ -337,15 +339,15 @@
         "solver residuals, input/source hashes and end-to-end costs"
       ],
       "controls_and_ablations": [
-        "B0",
-        "B_star",
-        "world_smoothing",
-        "simple_rigid_aligned_smoothing",
-        "declared_body_residual_repair"
+        "b0",
+        "b_star",
+        "world_gaussian",
+        "body_gaussian",
+        "corotational_residual"
       ],
-      "native_scoring_entry": "The one-arm manifest is consumable by actionmesh/official_actionbench_adapter.py, but C14 still lacks a candidate-specific prospective five-role comparison freeze and admitted official-scoring/raw-collection plan; the adapter alone is not a complete scoring chain.",
+      "native_scoring_entry": "actionmesh/research_math/c14_native_comparison.py freezes B0/B*/world Gaussian/body Gaussian/corotational roles and pins the candidate certificate; actionmesh/research_math/c14_native_scoring.py stages each unique physical case, invokes actionmesh/official_actionbench_adapter.py once, validates official source/input/output identity, expands aliases without duplicate measurements, retains failures and emits result.json/raw-manifest.json/raw-evidence.tar; actionmesh/prepare_c14_native_scoring.py is the only admitted common-harness plan entry",
       "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_corotational_residual_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --run-id c14-corotational-candidate-001 --plan-dir $project_dir/plans/c14-corotational-candidate-001 --weight $frozen_group_tv_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c14_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
-      "acceptance_command_gap": "The CPU candidate-artifact command now exists and is generated_unexecuted. C14 remains source-incomplete until its prospective B*/world-Gaussian/body-Gaussian/candidate comparison and receipt-bound official-scoring/collection plan are implemented.",
+      "acceptance_command_gap": "No scoring-source gap remains for C14. The committed plan builder deliberately blocks until real comparison inputs, Natural Gate 0/IPCG, prospective B*, frozen independent-family split/IDs and numeric effect/noninferiority criteria, a design-verified confirmation protocol/method batch, exact five-arm implementation refs, strict current runtime/dependency lock and an explicit single-attempt authorization for the actual GPU UUID exist. Local observed acceptance and native results remain absent.",
       "completion_evidence": [
         {
           "status": "generated_unexecuted",
@@ -366,13 +368,39 @@
           "status": "authored_not_run",
           "source": "actionmesh/research_math/tests/test_corotational_residual_plan.py",
           "scope": "Explicit-parameter single-attempt zero-retry CPU plan contract"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/research_math/c14_native_comparison.py",
+          "scope": "Five logical roles with exact source/native identity and candidate-certificate binding, prospective B* selection, physical alias de-duplication, failed-preparation denominator retention and dispatch_ready=false request"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_c14_native_comparison.py",
+          "scope": "B* freeze/alias, certificate closure, topology/timeline rejection, physical-case de-duplication and failed-role denominator contracts"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/research_math/c14_native_scoring.py",
+          "scope": "Exact released GT/population/official-source closure, one-pass unique physical scoring, certificate staging, five-role alias/failure readout and bounded receipt-bound raw collection/validation"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/prepare_c14_native_scoring.py",
+          "scope": "Existing-harness confirmation plan gated by C14 design verification, frozen five-role method identities/implementations, Gate 0/IPCG/family split/numeric criteria, strict Local runtime/dependency identity and exact single-attempt GPU authorization; recoverable reservation, staged launch ticket, installed plan validation, one attempt and zero retry"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/launch_c14_native_scoring.py",
+          "scope": "Only controller execution entry: validates finalized consumption and exact native/harness digests, obtains one live owner lock, creates or resumes the stable launch claim, then delegates to the installed harness"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_c14_native_scoring.py; actionmesh/research_math/tests/test_c14_native_scoring_plan.py",
+          "scope": "Alias expansion, failure denominator, certificate staging, official provenance, tamper-evident raw archive, design boundary, five-arm binding, admission, installed native/harness plan validation, cross-root staging, live-owner exclusion, lost-ack claim recovery, consumption/claim/plan tamper rejection and three-file return contracts"
         }
       ],
-      "remaining_implementation_gaps": [
-        "prospective five-role comparison freeze with B0, B*, world Gaussian, body Gaussian and declared body-residual repair",
-        "candidate-specific admitted official scorer and receipt-bound raw collection that pre/post-validates report sequence hash, method/role, exact 16-frame topology/timeline/vertex identity and official output provenance instead of relying on the generic adapter's shallow report check",
-        "Local CPU software acceptance and observed real-sequence execution/resource qualification"
-      ],
+      "remaining_implementation_gaps": [],
       "scientific_prerequisites": [
         "qualified pose fit without GT or evaluator ICP",
         "rigid/articulated regime of applicability",
@@ -385,7 +413,7 @@
         "complete G01 development/confirmation, sensitivity, failure-denominator, paired-statistics and multiplicity design freeze",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -994,11 +1022,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "b90a853a03abf4d569ba7773c489e712ea147b95",
-  "independent_source_review": "Separate read-only C13 comparison, scoring, plan, math, interface and protocol reviewers inspected the selected specification, current artifact schemas and source diffs; no execution. Comparison findings on B* identity/time/method binding, control-only aliasing, duplicate physical B*, failed-role propagation and unsafe expansion were closed. Scoring findings on complete delivery validation, invalid-metric suppression, exact official output/provenance checks, physical GPU identity and pre-archive ceilings were closed. Plan findings on valid treatment role, confirmation evidence, strict runtime closure, base-plus-selected samples, exact arm implementation binding and enforceable Gate0/IPCG/family/criteria/GPU authorization were closed. Local execution remains required.",
+  "maintained_base_commit": "6a1149f5f1853d07404ab4089445c0143dfacecf",
+  "independent_source_review": "Separate read-only C13 and C14 comparison, scoring, plan, math/interface/protocol and documentation reviewers inspected the selected specifications, current artifact schemas and source diffs; no execution. C14 findings closed exact candidate/control construction, all-role physical de-duplication, candidate certificate/body-pose reconstruction, admitted ActionBench snapshot/semantics/GT closure, byte-bound request/report/sequence/certificate/poses archive evidence, safe full official-report replay, protocol-equal G01 criteria, source-derived independent families, exact arm implementations, strict runtime closure and recoverable single-use GPU authorization with execution-time final-consumption gating. Local execution remains required.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 1,
+    "full_method_source_complete": 2,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

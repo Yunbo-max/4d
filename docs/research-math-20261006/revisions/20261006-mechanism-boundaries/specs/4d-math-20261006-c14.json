@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c14",
   "name_zh": "共转坐标中的时间修复",
   "priority_rank": 5,
-  "status": "Candidate core/full-sequence CPU artifact source authored as generated_unexecuted; comparison/scoring chain, Local acceptance, scientific admission and frozen native protocol remain absent; not dispatchable.",
+  "status": "Source-complete generated_unexecuted candidate/comparison/official-scoring chain; Local acceptance, scientific admission and frozen native protocol remain pending; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
@@ -74,10 +74,14 @@
   "implementation_scope": {
     "candidate_entry": "actionmesh/research_math/corotational_residual_candidate.py",
     "cpu_plan_entry": "actionmesh/prepare_corotational_residual_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c14_native_comparison.py",
+    "official_scoring_entry": "actionmesh/research_math/c14_native_scoring.py",
+    "admitted_plan_entry": "actionmesh/prepare_c14_native_scoring.py",
+    "controller_launch_entry": "actionmesh/launch_c14_native_scoring.py",
     "simple_controls": "actionmesh/research_math/simple_mesh_controls.py:smooth_world,smooth_body",
     "source_state": "generated_unexecuted",
     "local_acceptance": "pending",
-    "native_scoring_chain": "not_implemented",
+    "native_scoring_chain": "source_complete_generated_unexecuted",
     "scientific_admission": "pending"
   },
   "native_experiment": {
@@ -87,11 +91,11 @@
       "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
     },
     "arms": [
-      "B0",
-      "B_star",
-      "world_smoothing",
-      "simple_rigid_aligned_smoothing",
-      "declared_body_residual_repair"
+      "b0",
+      "b_star",
+      "world_gaussian",
+      "body_gaussian",
+      "corotational_residual"
     ],
     "primary_metric": "cd_motion",
     "guardrail_metrics": [
@@ -101,7 +105,7 @@
     "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
     "distinguishing_prediction": "Pure rigid rotation/translation should be preserved by construction; improvement versus world smoothing should depend on pose variation rather than merely noise magnitude.",
     "falsifier": "Reject if inferred rigid factors are unstable or a equal-cost rigid-aligned Gaussian baseline gives the same native performance.",
-    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "actual_ids_and_group_split": "Source validates a prospective hash-bound family derivation/review/split and one-UID five-role comparison; real IDs and assignments remain pending scientific admission.",
     "seed_policy": {
       "inference": [
         42,
@@ -126,7 +130,7 @@
     ]
   },
   "outstanding_requirements": [
-    "prospective five-role comparison freeze and candidate-specific official-scoring/raw-collection plan",
+    "Local execution of the authored comparison/scoring/receipt validators on exact real inputs",
     "Local CPU execution of the generated candidate artifact plan with retained solver/pose evidence",
     "qualified pose fit without GT or evaluator ICP",
     "rigid/articulated regime of applicability",

@@ -452,3 +452,55 @@ must bind report sequence hash, method/role, exact 16-frame topology/timeline/
 vertex identity and official provenance around the generic adapter rather than
 trusting its shallow report UID/status check. Source-chain complete remains
 1/15, Local verified 0/15 and native results 0/15. GPU STOP remains effective.
+
+## Continuation: C14 five-role scoring and raw collection
+
+Resumed literal remote main `6a1149f5f1853d07404ab4089445c0143dfacecf`.
+The prior C14 candidate core remains unchanged and distinct from both Gaussian
+controls. This continuation adds `research_math.c14_native_comparison`,
+`research_math.c14_native_scoring` and `prepare_c14_native_scoring.py`.
+
+The prospective comparison fixes exactly B0, B*, world Gaussian, body Gaussian
+and corotational residual. It binds the same UID/seed/source report and sequence,
+full 16-frame float32 topology/timeline/vertex identity, exact anchor, current
+method implementation, body `poses.npz` and the candidate's `certificate.npz`.
+The candidate pose factors and reconstruction are recomputed. An outcome-free B*
+decision may use an explicit simple-control alias; every byte-identical completed
+role shares one physical measurement while remaining in the five-role logical
+denominator. Failed preparations remain failures and are never zero-imputed.
+
+The scorer stages each unique physical case once, including the C14 certificate,
+then invokes the existing official ActionBench adapter once with scoring seed 44.
+It validates the admitted released snapshot/dataset semantics/population/GT,
+adapter and six official source files, GPU identity, exact input/output hashes,
+all 16 exported GLBs and all success/failure rows. Delivery validation rebinds
+the archived request, comparison, report, sequence, candidate certificate and
+body-pose bytes before safe extraction and full official-report replay.
+It emits only descriptive candidate-minus-control deltas plus bounded,
+deterministic, tamper-evident `result.json`, `raw-manifest.json` and
+`raw-evidence.tar`; no confidence interval, qualification or verdict is invented.
+
+The common-harness builder remains fail-closed until installed method verification
+reports C14 `design_verified`; the protocol freezes corotational treatment, B*
+baseline, three controls, native sample/scorer and confirmation mode; every arm
+revision/implementation matches; strict environment/dependency and GPU identity
+match; and one C14 admission binds installed-schema-verified Gate 0/IPCG,
+source-derived family assignments/split, protocol-equal numeric rules and an
+expiring exact-request/method/environment/run/GPU/STOP single-attempt resume
+authorization. A canonical reservation permits exact-state recovery; a
+non-circular immutable launch ticket is staged by the installed runtime, while
+native/harness validators bind the final plan pair into one controller receipt.
+The scorer refuses to touch output or GPU until the staged ticket, request,
+reservation, unexpired authorization and controller-injected canonical claim
+validate. The only controller launch
+entry is `actionmesh/launch_c14_native_scoring.py`: it validates the final
+consumption and plan pair, holds a single-owner lock, retains a stable claim and
+then delegates to the installed harness. Generic harness execution is not an
+authorized C14 entry. It emits one confirmation attempt and zero retry. With GPU STOP active the
+authorization is absent, so no scientific plan is runnable.
+
+Tests were authored first but not executed under the Web role. Only AST/JSON/
+hash/source inspection is permitted here; no builder, project test, scorer,
+model or GPU task ran. C14 is now source-chain complete and
+`generated_unexecuted`, not Local-verified or scientifically admitted. Source-
+complete count is 2/15 (C13, C14); Local verified and native results remain 0/15.
