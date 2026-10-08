@@ -108,6 +108,27 @@ Read SUPERVISOR_HANDOFF.md before use. It is neither installed nor running;
 the actual online repair-agent integration remains unconfigured and explicitly
 reports `not_connected`. Never reset campaign budget/identity or retry a frozen
 scientific attempt to obtain continued work.
+The stage-wide G01 source design is
+`docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json` with its readable
+card in `G01_DESIGN.md`. It binds all 15 selected specs, the complete released
+ActionBench population, official scorer settings, 98 confirmatory contrasts,
+absolute effect/noninferiority criteria, family-level multiplicity, full failure
+denominators and unchanged one-GPU/native-Conda budgets. It is
+`generated_unexecuted`, not a design-verified candidate protocol. Local first
+runs the common CPU acceptance, then supplies a complete source-derived 128-UID
+family map and independent review to `actionmesh/prepare_g01_acceptance.py`.
+Per-UID family keys are parsed through frozen JSON pointers from pinned native
+metadata; separate geometry/extractor receipts prevent category swaps, and family
+IDs are recomputed. UID/prefix/encoded labels and candidate outcomes are forbidden. At
+least 30 independent confirmation families must remain after D1/D2. The emitted
+task requests zero GPUs and cannot clear GPU STOP. Every D1 B* unit also requires
+an exact candidate/control native admission binding the spec, the implementation
+closure frozen in G01 (nine delivered; six null/blocked), single-attempt harness/
+producer identity, scorer closure and independent review completed before scoring.
+D1-only B* selection requires its own reviewed freeze before D2;
+confirmation remains locked. Missing family,
+method, Gate 0/IPCG, scorer replay, analysis, runtime or explicit resume evidence
+blocks only the dependent candidate and may not be replaced by a reduced design.
 C01's actual direct decoder correction now has a source chain at
 `prepare_self_map_candidate.py`, `prepare_c01_native_acceptance.py`,
 `research_math.c01_native_comparison`, `research_math.c01_native_scoring`,

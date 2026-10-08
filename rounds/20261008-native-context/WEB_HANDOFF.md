@@ -906,3 +906,54 @@ unstarted. The provider-neutral runtime has no verified installed/configured
 online repair-agent adapter here, so status continues to report
 `online_repair_agent=not_connected`. GPU STOP, budgets and scientific protocols
 are unchanged.
+
+## Continuation: complete stage-wide G01 source design — 2026-10-08
+
+The earliest independent obligation after the six legal-input blockers was the
+shared complete evaluation design. `longgoal-20261007/G01_DESIGN.json` now binds
+the unchanged 15 selected specs to the complete 128-UID/16-frame ActionBench
+population and exact official scorer settings. It retains all declared arms and
+contains 98 confirmatory contrasts: treatment versus every control on the primary
+metric and treatment versus frozen B* on both guardrails. Absolute effects and
+noninferiority margins are fixed from the official leaderboard's task-scale
+separations, not the earlier unsourced 5%/2% work lines.
+
+The independent unit is a source-reviewed asset family. A new fail-closed
+validator requires a complete 128-UID derivation whose exact JSON pointers parse
+family keys from pinned native metadata and whose separate geometry/extractor
+receipts prevent category swaps. It recomputes family IDs and requires an
+independent review outside the receipt/derivation author chain,
+retains every exposed family in development, then deterministically
+assigns 12 unexposed families to D1, 12 to D2 and all remaining families to
+locked confirmation. It rejects UID-derived grouping and requires at least 30
+independent confirmation families. The D1-only B* freeze separately requires the complete D1 UID × seed ×
+selectable-control native/scorer receipt denominator. Each unit binds an exact
+candidate/role native admission, implementation closure, one-attempt harness and
+producer identities, canonical executed harness/native plan+receipt closure,
+exact scorer closure and a separate review. It recomputes
+seed/UID/family means and all 15 minimum-primary selections and binds an
+independent freeze review;
+confirmation cannot select a baseline.
+
+`actionmesh/prepare_g01_acceptance.py` stages this validation through the existing
+harness as one attempt, zero retries and zero GPUs. It preserves old split evidence
+and cannot clear GPU STOP. The common acceptance closure now includes the real
+design, every bound candidate spec and scorer source plus targeted tests. All new
+source is `generated_unexecuted`: Web ran no project import/test, builder, family
+derivation, scorer, model, download or GPU task. Dynamic family/B* evidence,
+candidate-specific Gate 0/IPCG/design verification, trusted live scorer/statistics,
+Local acceptance and native results remain pending. Six method source chains are
+still blocked exactly as recorded; the G01 design does not fabricate their inputs.
+
+Local starts at the new G01 section in `LOCAL_AGENT_RUNBOOK.md`, runs the common
+CPU acceptance at the exact read-back commit, and only then prepares the reviewed
+family evidence and emitted zero-GPU plan. Return the exact plan/attempt/split or
+failure packet; do not report a successful software check as scientific admission.
+
+Final independent static review checked the exact candidate/native source union,
+C15 preparer, canonical builder insertion order, actual-job `code_refs`
+normalization, digest lock, family evidence separation and complete B* time chain.
+It reports Critical 0 / Important 0 / Minor 0 in
+`docs/research-math-20261006/longgoal-20261007/g01-source-review.json`. This remains
+static source evidence only; no project import, test, plan, model/data operation,
+scoring or GPU work occurred.

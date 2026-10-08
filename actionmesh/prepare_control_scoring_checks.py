@@ -57,6 +57,36 @@ ROOT_SOURCES = (
     'observe_actionmesh_generation.py',
     'prepare_native_context.py',
     'prepare_native_context_consumption.py',
+    'prepare_g01_acceptance.py',
+)
+
+G01_SOURCES = (
+    'docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json',
+    'docs/research-math-20261006/longgoal-20261007/g01-source-review.json',
+    'docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json',
+    'docs/research-math-20261006/evidence/exposure-and-contract.json',
+    'actionmesh/research_overnight/assets/actionbench_population.json',
+    'actionmesh/repo/actionbench/README.md',
+    'actionmesh/repo/actionbench/benchmark.py',
+    'actionmesh/repo/actionbench/chamfer.py',
+    'actionmesh/repo/actionbench/evaluate_dataset.py',
+    'actionmesh/repo/actionbench/icp.py',
+    'actionmesh/repo/actionbench/sample_mesh.py',
+    'actionmesh/repo/actionbench/sample_point_cloud.py',
+    'docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json',
+    'docs/research-math-20261006/actionbench-full128-reproduction-contract.json',
+    *(
+        'docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/'
+        + candidate + '.json'
+        for candidate in (
+            '4d-math-20261006-c01', '4d-math-20261006-c02',
+            '4d-math-20261006-c03', '4d-math-20261006-c04',
+            '4d-math-20261006-c05', '4d-math-20261006-c06',
+            '4d-math-20261006-c07', '4d-math-20261006-c08',
+            '4d-math-20261006-c10', '4d-math-20261006-c11',
+            '4d-math-20261006-c12', '4d-math-20261006-c13',
+            '4d-math-20261006-c14', '4d-math-20261006-c15',
+            '4d-math-20261006-c20')),
 )
 
 
@@ -71,6 +101,7 @@ def acceptance_sources(root: Path) -> list[Path]:
               for name in ('__init__.py', 'm01_elasticity.py')]
     files.append(root/'scripts/research_supervisor.py')
     files.append(root/'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json')
+    files += [root/path for path in G01_SOURCES]
     missing = [path for path in files if not path.is_file()]
     if missing:
         raise FileNotFoundError('Missing acceptance source: '+str(missing[0]))

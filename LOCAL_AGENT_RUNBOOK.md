@@ -2,6 +2,81 @@
 
 ## Scope and current truth
 
+### Stage-wide G01 source design — complete, generated unexecuted
+
+Read
+`docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md` and its canonical
+JSON before preparing any candidate protocol. The design binds the unchanged 15
+selected candidates to all 128 released ActionBench UIDs, all 16 frames, producer
+seeds 42/314/2718, scorer seed 44, the official CD-3D/CD-4D/CD-M implementation,
+every declared control and 98 confirmatory contrasts. It fixes absolute primary
+effects (`0.002` CD-3D, `0.003` CD-M), guardrail margins (`0.002` CD-3D,
+`0.004` CD-4D, `0.003` CD-M), family-level paired analysis and Bonferroni
+familywise alpha 0.05. This is source/design completion only: no candidate is
+`design_verified`, Local/native counts remain 0/15 and GPU STOP remains active.
+
+First run the common CPU software acceptance at the exact delivered revision.
+Its staged closure now includes `G01_DESIGN.json`, the 15 exact candidate specs,
+selection/exposure/population records, official scorer source, G01 validator,
+plan builder and targeted tests. Web did not run this suite.
+
+Next create under `inputs/g01/` a complete source-derived family derivation for
+all 128 UIDs. Every unit needs an exact metadata receipt whose JSON pointers
+resolve the asserted keys from pinned native metadata, plus a distinct geometry
+receipt binding geometry files and extractor source. The validator rebuilds the
+basis and every family ID; metadata/geometry category swaps fail.
+The split requires at least 30 independent confirmation families after D1/D2,
+otherwise it remains INCONCLUSIVE. Include an independent
+`g01-family-derivation-review`, and `family-evidence.json`. UID prefixes alone,
+candidate outputs, scorer values and confirmation access are forbidden inputs.
+Every exposed UID and its whole reviewed family must remain development. Emit a
+new zero-GPU, single-attempt plan without overwriting prior evidence:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_g01_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --design "$project_dir/docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json" \
+  --family-evidence "$project_dir/inputs/g01/family-evidence.json" \
+  --output-split "$project_dir/inputs/g01/family-split.json" \
+  --run-id g01-family-acceptance-001 \
+  --plan-dir "$project_dir/plans/g01-family-acceptance-001"
+```
+
+Inspect the printed native/harness plans and execute only the exact printed
+digest through the installed `run_harness.py`. Preserve plan, attempt,
+stdout/stderr, split bytes and hashes. A failed source/review/split check is a
+G01 admission failure; do not edit the old evidence or guess a family.
+
+After qualified D1 results only, emit one canonical
+`g01-b-star-d1-control-result` for every candidate × declared selectable control
+other than the B* placeholder. Each result enumerates one canonical
+`g01-b-star-d1-native-receipt` per D1 UID × each of seeds 42/314/2718. A unit
+receipt binds the scored sequence, matching completed generation receipt,
+exact `g01-control-native-admission`, comparison/scoring requests, official
+`result.json`, `raw-manifest.json` and `raw-evidence.tar`, plus the exact
+role/metric value. That admission binds the candidate spec, role, UID, seed,
+sequence, the exact implementation refs already frozen in canonical G01 (a null
+closure is a hard block), completed single-attempt/zero-retry harness and
+producer receipts, the canonical executed harness plan/report and native
+plan/receipt, generation identity, exact scorer closure and an independent
+review. The independent admission review must be complete before official scoring;
+the executed native job `code_refs` must exactly equal frozen candidate/control
+plus native-support refs and official scorer refs—no omission or extra source.
+official score, unit receipt, aggregate result and B* freeze timestamps are
+strictly ordered. The validator cross-checks those files and every raw tar member,
+requires the complete
+denominator and recomputes seed → UID → family means. Create a
+`g01-b-star-freeze` binding every result, all 15 recomputed minimum-primary
+control aliases, the deterministic lexical tie rule and an independent review.
+Use a new plan/output identity and pass it with `--b-star-selections`; missing,
+failed, duplicated or non-minimal control evidence is rejected. Never choose B*
+on D2 or confirmation.
+Candidate dispatch still requires its complete source chain, current Local and
+native-interface acceptance, Natural Gate 0/IPCG, exact arm implementations,
+trusted official scorer replay, trusted live clustered analysis, measured host
+resources and a separate expiring exact-attempt GPU resume. The six incomplete
+method chains stay blocked independently and are not removed from G01.
+
 ### Current source delivery — paired replay and supervisor
 
 ### C03 development calibration core — partial source, not a native chain

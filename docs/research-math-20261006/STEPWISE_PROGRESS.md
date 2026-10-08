@@ -1832,3 +1832,49 @@ All source remains `generated_unexecuted`. Web ran no project test, supervisor,
 harness workload, model, scorer, download, inference or GPU task. The supervisor
 is not installed or running; the online repair adapter is still explicitly
 `not_connected`. GPU STOP and all scientific budgets/protocols remain unchanged.
+
+## Continuation: complete stage-wide G01 source design — 2026-10-08
+
+Restored exact main `dfc8309fe60e8ae78289285ec192b965db44f162` and retained the
+existing 15-item selection without re-ranking. The stage-wide G01 source design
+now binds each exact candidate spec, the released 128-UID ActionBench population,
+the vendored official scorer and 98 indispensable confirmatory contrasts. It
+fixes absolute effect/noninferiority criteria, three generation seeds, the
+complete logical failure denominator, family-cluster inference, multiplicity,
+fair B* selection, parameter-search limits, resource accounting and unchanged
+one-attempt/zero-retry/STOP boundaries.
+
+The accompanying fail-closed validator rejects altered specs, population or
+scorer sources, incomplete/non-reviewed family evidence, invalid deterministic
+splits, treatment-as-B* freezes and non-canonical records. A CPU-only Local plan
+builder stages the design through the existing single harness; common acceptance
+now includes the complete design closure and all 15 specs. Authored test source
+covers binding, numeric/contrast omissions, family evidence, split/B* and
+one-attempt plan boundaries.
+
+Independent review then found two provenance gaps and the source was tightened:
+family keys are now actually parsed by frozen JSON pointers from pinned native
+metadata, geometry and extractor identities are separate, category swaps and
+UID/prefix/hash/base64-derived keys fail, and the reviewer must be outside the
+receipt/derivation author chain. Every B* unit now requires an exact candidate/
+role admission binding the spec, implementation closure, completed one-attempt/
+zero-retry harness and producer receipts, generation identity, exact scorer
+closure and a separate review. Comparison/scoring/result/raw-manifest schemas are
+exact and the raw tar inventory is rehashed. Mutation test source covers unrelated
+family labels, category swaps and substituted admissions; it remains unexecuted.
+
+This is a complete **source design**, not `design_verified`: no project import,
+test, plan, model, data download, inference, scorer or GPU workload was executed
+in Web. Dynamic source-derived family evidence and independent review, D1-only
+B* observations, per-candidate Gate 0/IPCG, seeds 314/2718 producer qualification,
+Local acceptance and native results remain pending. Method-chain coverage stays
+9/15; Local verification and native results stay 0/15. The supervisor remains
+uninstalled/unstarted, its online repair adapter remains `not_connected`, and
+GPU STOP remains active.
+
+Final independent static review additionally checked the full candidate/native
+source union, C15 preparer, canonical builder insertion order, strict actual-job
+`code_refs` normalization, digest lock, family evidence separation and complete
+B* time chain. The final result is Critical 0 / Important 0 / Minor 0, recorded in
+`longgoal-20261007/g01-source-review.json`. This is static source evidence only:
+no project import, test, plan, model/data operation, scoring or GPU work occurred.

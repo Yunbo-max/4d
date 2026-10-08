@@ -1,6 +1,6 @@
 # 逐方法原生实验与八小时窗口设计
 
-这是 15 个分支的条件完整比较规格；**还没有合格代码、冻结 numeric criteria、确认 split、native receipts 或 dispatch**，所以 `design_verified=0`。可检验的假设、全部对照、主要端点与停止规则已明确；不可用输入和统计阈值必须在冻结前补齐。
+这是 15 个分支的原始条件比较规格。阶段级的 numeric criteria、98 个确认 contrasts、完整失败分母和确定性 family split 规则现已由 [G01_DESIGN.json](longgoal-20261007/G01_DESIGN.json) 与 [G01_DESIGN.md](longgoal-20261007/G01_DESIGN.md) 取代并冻结为 `generated_unexecuted` 源码设计；下文未改写的“拟”“尚未冻结”是历史状态，不得覆盖新设计。动态 family 来源审查、B* 的 D1-only freeze、每个候选的 Gate 0/IPCG、Local receipts 和 native results 仍未完成，因此 `design_verified=0`、GPU dispatch 仍禁止。
 
 ## 不改变原生任务
 
@@ -57,9 +57,9 @@
 
 确认 seed 拟固定 `[42,314,2718]`，推理臂配对共享 upstream RNG/context，评价 seed 44 固定。独立单位是审查后的 asset family；同对象 seeds、16 帧、100000 点和多个超参数不增加独立样本数。统计前按照冻结的对象／family 权重聚合 seeds；同时披露各 seed 和每 UID 原始值。
 
-拟用 family 级 paired bootstrap 20000 replicates（bootstrap RNG seed 20261006）形成预先指定的一侧界；小样本或不可信覆盖时用独立统计审查／受信回调，不能强判。所有冻结的 indispensable method/contrast/metric claims 使用统一 familywise alpha 0.05，保守按实际 K 分配 Bonferroni；有效性依赖各区间本身的覆盖，不能把有限 bootstrap 当精确覆盖证明。未做正式确认的方法仍列为待验证。
+历史草案拟用 family 级 paired bootstrap 20000 replicates；现行 G01 源码设计已固定为受信外部 family-cluster bootstrap 200000 replicates、RNG seed 20261006、98 个确认检验和 Bonferroni familywise alpha 0.05。动态 family 证据与受信 live analysis adapter 未资格通过时不能强判；未做正式确认的方法仍列为待验证。
 
-对越小越好的 native 指标设配对差 `d=treatment-control`。PASS 需要主端点 upper bound `< -Delta_m`，每个保护端点 upper bound `<= epsilon_m,k`，且机制对照排除仅弱化动作、更多计算或 GT 信息的解释。**Delta、epsilon、实际 K、有效样本数和 power / precision 还没有依据并冻结，均是准入缺口**；不能把旧“5% / 2%”开发工作线当科学标准。先根据任务用途、开发波动、原生评分精度和可解释可见差异固定有依据的 absolute margins，再用开发方差做功效／精度预算；样本需求超过可用库存时缩小有据可检验的 claim 或记 INCONCLUSIVE，不降低阈值追显著性。
+对越小越好的 native 指标设配对差 `d=treatment-control`。现行 G01 设计把主端点 absolute minimum effects 固定为 CD-3D 0.002、CD-M 0.003，把非劣 margins 固定为 CD-3D 0.002、CD-4D 0.004、CD-M 0.003，并以官方同任务 leaderboard 的可见差值作为尺度依据；旧“5% / 2%”工作线废止。PASS 需要每个 indispensable 主对照的 multiplicity-adjusted one-sided upper bound `< -Delta_m`，以及对 B* 的两个 guardrail upper bounds `<= epsilon_m,k`。有效样本数和 precision 仍须由 D1/D2 family 证据前瞻评估；库存无法分辨固定效应一半时记 INCONCLUSIVE，不降低阈值追显著性。
 
 每个模型调用、搜索、solver、scorer 都有冻结的 step / time / memory 上限。无动作、无解、坏面、超时、native fallback、部分臂完成、数据加载失败均保留；只按预先独立定义的技术资格规则处理，不按改善大小排除。效果与 native execution failure rate 分开报告，全部失败原因可回放。确认协议采用实际 eligibility / raw receipts，单独的结果 JSON 或布尔资格不足。
 

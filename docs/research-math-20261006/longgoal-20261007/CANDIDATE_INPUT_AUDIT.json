@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (9/15); Local-verified and native-result candidates remain 0/15. Six source chains, complete G01 and an actually configured online repair-agent integration remain pending. C03/C20 and the C05/C08/C06/C07 model-interface dependencies remain blocked on missing legal native inputs rather than fabricated arrays. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (9/15); Local-verified and native-result candidates remain 0/15. Six source chains and an actually configured online repair-agent integration remain pending. The stage-wide G01 source design is complete/generated_unexecuted; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C03/C20 and the C05/C08/C06/C07 model-interface dependencies remain blocked on missing legal native inputs rather than fabricated arrays. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -22,7 +22,7 @@
     "Retain GPU STOP; no execution or new budget from source delivery.",
     "Close genuine natural-gap/importance/collision and legal-input obligations per selected construction without inventing them.",
     "Complete each method with real inputs, distinct mathematics, native outputs and all specified control/scoring paths.",
-    "Freeze complete G01 development/confirmation/sensitivity/statistical design and exact candidate acceptance command, then Local verifies the delivered revision."
+    "Use the delivered G01 source design; Local must derive and independently review the complete family map/split, freeze B* from D1 only, satisfy candidate-specific Gate 0/IPCG and verify the delivered revision before any dispatch."
   ],
   "candidates": [
     {
@@ -123,7 +123,7 @@
       ],
       "native_scoring_entry": "research_math.c01_native_scoring request; admitted plan via prepare_c01_native_scoring.py and launch_c01_native_scoring.py only",
       "local_method_acceptance_command": "Use prepare_control_scoring_checks.py first; prepare_self_map_candidate.py on receipt-bound consumed context; prepare_c01_native_acceptance.py --artifact-candidate <retained candidate.json> [--freeze <prospective freeze>] through the installed CPU harness; future scientific scoring only after the full C01 admission/explicit GPU resume. Exact flags in LOCAL_AGENT_RUNBOOK.md.",
-      "acceptance_command_gap": "Commands/source authored, never executed here. Current native producer covers seed42 only; original proposed repeats314/2718 and complete G01 need separate producer/design qualification.",
+      "acceptance_command_gap": "Commands/source authored, never executed here. The stage-wide G01 source design keeps seeds 42/314/2718; current native producer covers seed42 only, so 314/2718 still require separate producer/interface qualification and dynamic G01 admission.",
       "completion_evidence": [
         "distinct full native correction/raw/mean-control exporter and certificate reconstruction",
         "receipt-bound capture/replay/consumption closure and actual staging test source",
@@ -145,7 +145,7 @@
       ],
       "full_method_source_complete": true,
       "local_method_verified": false,
-      "completion_scope": "Source chain for existing frozen seed42/16-frame producer only; does not certify wider G01 coverage, new scientific contribution, Local acceptance or native efficacy."
+      "completion_scope": "Source chain for existing frozen seed42/16-frame producer only; the delivered stage-wide G01 source design does not itself certify the missing seed producers, new scientific contribution, Local acceptance or native efficacy."
     },
     {
       "id": "4d-math-20261006-c10",
@@ -419,7 +419,7 @@
         "candidate-specific IPCG closure against SFG/STAC/basic rigid-aligned smoothing",
         "code identity/software/native-interface verification",
         "strongest executable baseline and fair information/cost",
-        "complete G01 development/confirmation, sensitivity, failure-denominator, paired-statistics and multiplicity design freeze",
+        "dynamic admission to the delivered G01 development/confirmation design, including reviewed family split and D1-only B* freeze",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
       "full_method_source_complete": true,
@@ -557,7 +557,7 @@
         "Qualified native development correspondence/label-bank producer; tracked GT does not automatically map to decoder query vertices",
         "Receipt-bound C01 context to C03 complete float32 mesh export with bounds/identity checks",
         "Nine-role prospective comparison freeze, official scoring and raw collection",
-        "Retained-native acceptance and complete G01 admission"
+        "Retained-native acceptance and dynamic admission to the delivered G01 source design"
       ],
       "scientific_prerequisites": [
         "legal development error/moment calibration and family-split transfer",
@@ -691,7 +691,7 @@
       "remaining_implementation_gaps": [
         "Local execution of current source acceptance and real-input CPU artifact plan",
         "prospective stretch bounds, elastic weight, numerical policies and B* freeze on allowed development evidence",
-        "design verification, Natural Gate 0/IPCG, family split, numeric G01 criteria and one-time GPU authorization",
+        "Natural Gate 0/IPCG, reviewed family split/B* freeze under the delivered numeric G01 design and one-time GPU authorization",
         "official native scoring, raw receipt validation, paired analysis and conclusion"
       ],
       "scientific_prerequisites": [
@@ -757,7 +757,7 @@
       "remaining_implementation_gaps": [
         "Local execution of current source acceptance and real-input CPU artifact plan",
         "prospective beta, fixed alpha, backtracking factor/budget, numerical margins, ARAP parameters and B* freeze on allowed development evidence",
-        "design verification, Natural Gate 0/IPCG, source-derived family split, numeric G01 criteria and one-time GPU authorization",
+        "Natural Gate 0/IPCG, reviewed source-derived family split/B* freeze under the delivered numeric G01 design and one-time GPU authorization",
         "official native scoring, raw receipt validation, paired analysis and conclusion"
       ],
       "scientific_prerequisites": [
@@ -832,7 +832,7 @@
       "remaining_implementation_gaps": [
         "Local execution of current source acceptance and real-input CPU artifact plan",
         "prospective Q rank/lambda/tolerance and B* freeze on allowed development evidence",
-        "design verification, Natural Gate 0/IPCG, family split, numeric G01 criteria and one-time GPU authorization",
+        "Natural Gate 0/IPCG, reviewed family split/B* freeze under the delivered numeric G01 design and one-time GPU authorization",
         "official native scoring, raw receipt validation, paired analysis and conclusion"
       ],
       "scientific_prerequisites": [
@@ -1093,8 +1093,8 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "220492a4f464be262af1127518b232907992fd08",
-  "independent_source_review": "C12 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c12_source_review identified near-tangent connected-component, archive-reference, failed-arm replay and bounded-materialization blockers; all were repaired, and focused final re-review found no remaining Critical/Important issue in scope. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 9/15.",
+  "maintained_base_commit": "dfc8309fe60e8ae78289285ec192b965db44f162",
+  "independent_source_review": "C12 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c12_source_review identified near-tangent connected-component, archive-reference, failed-arm replay and bounded-materialization blockers; all were repaired, and focused final re-review found no remaining Critical/Important issue in scope. A separate final G01 static review at g01-source-review.json found Critical 0, Important 0, Minor 0 after digest, family, B*, exact source-closure and job-order hardening. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 9/15.",
   "supervisor_extension_review": {
     "path": "docs/research-math-20261006/longgoal-20261007/supervisor-append-extension-source-review.json",
     "status": "generated_unexecuted_independent_static_review_complete",
@@ -1104,11 +1104,34 @@
     "supervisor_running": false,
     "online_repair_agent": "not_connected"
   },
+  "g01_design": {
+    "design_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",
+    "guide_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
+    "validator": "actionmesh/research_math/g01_design.py",
+    "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-source-review.json",
+    "design_digest": "85f52a34de5303bb16e760a07314c67eba304d4c0c07ab942d0ac75ae765be76",
+    "source_review_findings_remaining": {
+      "critical": 0,
+      "important": 0,
+      "minor": 0
+    },
+    "status": "complete_source_design_generated_unexecuted",
+    "selected_candidates": 15,
+    "benchmark": "facebook/actionbench@2796071cbe6248422fcbeab3101fa9f9886cb7b9 complete 128 released UIDs",
+    "confirmatory_contrasts": 98,
+    "numeric_criteria_frozen_in_source": true,
+    "dynamic_family_and_b_star_evidence": "pending Local source derivation, independent review and D1-only native evidence",
+    "local_acceptance": "pending",
+    "scientific_design_verified": 0,
+    "gpu_dispatch_allowed": false
+  },
   "stage_goal": {
     "selected_methods": 15,
     "full_method_source_complete": 9,
     "local_method_verified": 0,
     "native_results": 0,
+    "g01_source_design": "complete_generated_unexecuted_dynamic_admission_pending",
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",
     "gpu_execution": "stopped_by_user"
   },

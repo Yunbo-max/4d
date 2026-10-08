@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-08T13:04:54Z",
+  "updated_at": "2026-10-08T16:09:53Z",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "GPU STOP remains active. C15 protected-low-rank method, six-role prospective comparison, official-score collection and single-owner launch source are delivered generated_unexecuted. Historical R9 baseline receipts are not an active process and do not accept current source.",
+  "current_task": "GPU STOP remains active. Stage-wide G01 source design, strict validator, CPU-only Local acceptance-plan builder and common-acceptance closure for all 15 selected specs are delivered generated_unexecuted. Dynamic family evidence/review, D1-only B* freezes and every candidate admission remain pending; historical receipts do not accept current source.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -933,13 +933,13 @@
     "supervisor_running": false
   },
   "latest_web_checkpoint": {
-    "recorded_at": "2026-10-08T15:43:56Z",
+    "recorded_at": "2026-10-08T16:50:42Z",
     "stage_goal": "Complete 15 method source chains, G01, recoverable supervisor and Local handoff; Local execution may remain pending",
     "actual_host_id": "6ac527ad50cc8191a4964d35ae0b826e",
     "conversation_id": "6ac0b6a1-5e28-83e9-98d6-30f1536deef1",
     "continuous_hosted_process_verified": false,
-    "base_commit": "220492a4f464be262af1127518b232907992fd08",
-    "delivered_scope": "exact-reviewed append-only supervisor manifest extension with original owner/budget/deadline/STOP/receipt preservation and lost-ack reconciliation",
+    "base_commit": "dfc8309fe60e8ae78289285ec192b965db44f162",
+    "delivered_scope": "stage-wide G01 source design binding all 15 selected specs, complete 128-UID population and official scorer; strict validator, deterministic reviewed-family split/B* gates, 98 fixed contrasts, failure/statistics/resource rules and CPU-only Local acceptance-plan builder",
     "generated_unexecuted": true,
     "source_complete_candidates": 9,
     "local_method_verified": 0,
@@ -955,6 +955,16 @@
     "supervisor_running": false,
     "online_repair_agent": "not_connected",
     "gpu_stop": true,
-    "next_action": "Independent static review/readback of extension source, then Local zero-GPU acceptance at the delivered commit; continue only legally sourced method interfaces and full G01 authoring."
+    "g01_source_design": "complete_generated_unexecuted_dynamic_admission_pending",
+    "g01_design_digest": "85f52a34de5303bb16e760a07314c67eba304d4c0c07ab942d0ac75ae765be76",
+    "g01_source_review": "docs/research-math-20261006/longgoal-20261007/g01-source-review.json",
+    "g01_review_findings_remaining": {
+      "critical": 0,
+      "important": 0,
+      "minor": 0
+    },
+    "g01_confirmatory_contrasts": 98,
+    "g01_scientific_design_verified": 0,
+    "next_action": "Publish with expected-head protection and exact commit readback; then Local CPU-only common acceptance, complete source-derived family evidence/review, deterministic split, D1-only B* freeze and per-candidate Gate 0/IPCG. Continue only legally sourced missing method interfaces."
   }
 }

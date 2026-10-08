@@ -76,6 +76,38 @@ class ControlPlanTest(unittest.TestCase):
             'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json', paths)
         self.assertIn('actionmesh/prepare_native_context_consumption.py', paths)
 
+    def test_acceptance_stages_real_g01_design_and_every_bound_source(self):
+        project_root = Path(__file__).resolve().parents[3]
+        paths = {path.relative_to(project_root).as_posix()
+                 for path in acceptance.acceptance_sources(project_root)}
+        required = {
+            'docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json',
+            'docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json',
+            'docs/research-math-20261006/evidence/exposure-and-contract.json',
+            'actionmesh/research_overnight/assets/actionbench_population.json',
+            'actionmesh/repo/actionbench/README.md',
+            'actionmesh/repo/actionbench/benchmark.py',
+            'actionmesh/repo/actionbench/chamfer.py',
+            'actionmesh/repo/actionbench/evaluate_dataset.py',
+            'actionmesh/repo/actionbench/icp.py',
+            'actionmesh/repo/actionbench/sample_mesh.py',
+            'actionmesh/repo/actionbench/sample_point_cloud.py',
+            'docs/research-math-20261006/actionbench-full128-dataset-semantics-contract.json',
+            'docs/research-math-20261006/actionbench-full128-reproduction-contract.json',
+        }
+        required.update(
+            'docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/'
+            + name for name in (
+                '4d-math-20261006-c01.json', '4d-math-20261006-c02.json',
+                '4d-math-20261006-c03.json', '4d-math-20261006-c04.json',
+                '4d-math-20261006-c05.json', '4d-math-20261006-c06.json',
+                '4d-math-20261006-c07.json', '4d-math-20261006-c08.json',
+                '4d-math-20261006-c10.json', '4d-math-20261006-c11.json',
+                '4d-math-20261006-c12.json', '4d-math-20261006-c13.json',
+                '4d-math-20261006-c14.json', '4d-math-20261006-c15.json',
+                '4d-math-20261006-c20.json'))
+        self.assertTrue(required.issubset(paths), sorted(required - paths))
+
     def test_acceptance_stages_c13_candidate_and_plan(self):
         project_root = Path(__file__).resolve().parents[3]
         paths = {path.relative_to(project_root).as_posix()
