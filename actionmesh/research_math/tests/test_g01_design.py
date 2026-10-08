@@ -58,6 +58,14 @@ class G01DesignTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "independently frozen"):
             g01.validate_design_record(self.repository, design)
 
+    def test_shared_b0_profiles_pin_the_actual_context_producer(self):
+        design = g01.validate_design(self.repository, self.design_path)
+        for suffix in ('c06', 'c11', 'c12'):
+            row = next(item for item in design['candidates']
+                       if item['candidate_id'] == '4d-math-20261006-' + suffix)
+            paths = {ref['path'] for ref in g01.approved_native_code_refs(design, row)}
+            self.assertIn('actionmesh/research_math/native_context_runner.py', paths)
+
     def test_changed_candidate_spec_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
             copied = Path(directory) / "G01_DESIGN.json"

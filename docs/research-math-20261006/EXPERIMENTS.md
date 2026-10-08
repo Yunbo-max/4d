@@ -1,6 +1,6 @@
 # 逐方法原生实验与八小时窗口设计
 
-这是 15 个分支的原始条件比较规格。阶段级的 numeric criteria、98 个确认 contrasts、完整失败分母和确定性 family split 规则现已由 [G01_DESIGN.json](longgoal-20261007/G01_DESIGN.json) 与 [G01_DESIGN.md](longgoal-20261007/G01_DESIGN.md) 取代并冻结为 `generated_unexecuted` 源码设计；下文未改写的“拟”“尚未冻结”是历史状态，不得覆盖新设计。动态 family 来源审查、B* 的 D1-only freeze、每个候选的 Gate 0/IPCG、Local receipts 和 native results 仍未完成，因此 `design_verified=0`、GPU dispatch 仍禁止。
+这是 15 个分支的原始条件比较规格。阶段级的 numeric criteria、98 个确认 contrasts、完整失败分母和确定性 family split 规则现已由 [G01_DESIGN.json](longgoal-20261007/G01_DESIGN.json) 与 [G01_DESIGN.md](longgoal-20261007/G01_DESIGN.md) 取代并冻结为 `generated_unexecuted` 源码设计；下文未改写的“拟”“尚未冻结”是历史状态，不得覆盖新设计。C06 现已有 geometry-only 完整源码特化和五角色原生入口，但尚未 Local 执行；源码链覆盖为 10/15。动态 family 来源审查、B* 的 D1-only freeze、每个候选的 Gate 0/IPCG、Local receipts 和 native results 仍未完成，因此 `design_verified=0`、GPU dispatch 仍禁止。
 
 ## 不改变原生任务
 

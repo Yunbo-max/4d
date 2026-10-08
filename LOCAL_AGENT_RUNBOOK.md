@@ -74,7 +74,7 @@ on D2 or confirmation.
 Candidate dispatch still requires its complete source chain, current Local and
 native-interface acceptance, Natural Gate 0/IPCG, exact arm implementations,
 trusted official scorer replay, trusted live clustered analysis, measured host
-resources and a separate expiring exact-attempt GPU resume. The six incomplete
+resources and a separate expiring exact-attempt GPU resume. The five incomplete
 method chains stay blocked independently and are not removed from G01.
 
 ### Current source delivery — paired replay and supervisor
@@ -1236,6 +1236,103 @@ directly. Retain the stable `c12-launch-claim` and validate returned
 No C12 project test, builder, candidate, model, scorer or GPU task was run by
 Web authoring. Source is `generated_unexecuted`; Local acceptance, scientific
 admission and native results remain pending. GPU STOP remains effective.
+
+## C06 area-marginal transport chain — source complete, not executed
+
+C06 is a geometry-only specialization of the selected balanced-transport card.
+It consumes one completed, receipt-bound ActionMesh `sequence.npz` and sibling
+`report.json`; it does not consume GT, scorer arrays, latent attention or an
+external cost matrix. For every target frame it derives rotation/translation-
+invariant one-ring descriptors and normalized barycentric vertex areas. Feature
+kNN, identity edges and deterministic strictly positive area/uniform witnesses
+form one shared sparse support suitable for diagonal Sinkhorn scaling.
+`row_softmax`, uniform `vertex_density_transport` and the
+candidate `area_marginal_transport` share that cost/support, epsilon and the
+same target-coordinate barycentric lift. Degenerate faces and zero-area vertices
+are removed only from transport using a rotation-invariant scale and retained
+original-ID masks; excluded source
+vertices use the same-ID native prediction fallback and remain in full scoring.
+
+After the common current-source CPU acceptance, freeze epsilon, neighbour count,
+solver tolerance/iterations, coordinate policy and resource ceilings using only
+allowed development evidence. Emit, inspect and execute the zero-GPU plan only
+through the installed harness:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_area_transport_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --run-id c06-area-transport-001 \
+  --epsilon "$frozen_c06_epsilon" --neighbors "$frozen_c06_neighbors" \
+  --tolerance "$frozen_c06_tolerance" \
+  --max-iterations "$frozen_c06_iterations" \
+  --coordinate-bounds "$frozen_coordinate_lower" "$frozen_coordinate_upper" \
+  --bounds-policy preserve_and_report \
+  --max-artifact-bytes "$frozen_artifact_limit" \
+  --wall-seconds "$c06_cpu_wall_seconds" --ram-mib "$c06_cpu_ram_mib" \
+  --plan-dir "$project_dir/plans/c06-area-transport-001"
+```
+
+Retain `candidate.json`, `manifest.json`, `common-target.npz`, all three terminal
+role reports/certificates, the original producer-provenance input and `artifact.tar`
+plus its archive record. Collect and hash-check these at their retained relative
+paths in an isolated project root. The following builder reads metadata/hashes
+only; real method replay runs in its emitted zero-GPU harness task:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c06_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --artifact-candidate "$returned_c06_dir/candidate.json" \
+  --plan-dir "$project_dir/plans/c06-native-acceptance-001" \
+  --run-id c06-native-acceptance-001 \
+  --wall-seconds "$c06_cpu_wall_seconds" --ram-mib "$c06_cpu_ram_mib"
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/c06-native-acceptance-001/harness.json" \
+  --root "$project_dir" --execute --approved-plan-digest "$c06_acceptance_digest"
+```
+
+Use the builder's actual printed digest after inspecting the plan; do not reuse
+another plan's digest. Require nonzero tests, no skips and all three real roles
+completed. A valid retained failure is evidence but leaves method acceptance pending.
+The first artifact-generation plan above likewise executes only via
+`run_harness.py` using its own printed digest and remaining CPU allowance.
+
+After a prospective five-role freeze exists, the same builder emits comparison
+and scoring **requests** inside a second CPU task. Add these arguments to a new
+`prepare_c06_native_acceptance.py` invocation with a new run/plan identity:
+
+```bash
+  --freeze "$project_dir/inputs/c06/c06-native-comparison-freeze.json" \
+  --ground-truth "$dataset_root/data/$c06_uid/surfaces.npy" \
+  --population "$population" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" --timeout-seconds "$frozen_per_case_timeout"
+```
+
+All paths must be physically staged under the isolated project root before plan
+emission. Execute this emitted request-preparation plan through the same harness
+with its own digest; do not call candidate replay or request CLIs directly.
+The receipt declares `actionmesh/c06-comparison-request.json` and
+`actionmesh/c06-scoring-request.json`. Collect these with their complete input
+closure. Request preparation retains accurate failed-role terminals, performs no
+scoring, and cannot resume the GPU. The current real B0 producer supports only
+seed 42; seeds 314/2718 in G01 remain pending separate producer qualification.
+
+The logical denominator is exactly `b0`, `b_star`, `row_softmax`,
+`vertex_density_transport`, `area_marginal_transport`; physical byte duplicates
+are scored once and preparation failures remain failures. `cd_3d` is primary;
+`cd_4d` and `cd_motion` are guardrails. Only after exact C06/G01 source
+verification, source-derived family review, D1-only B*, Gate 0/IPCG and a fresh
+expiring `single_c06_scoring_attempt` authorization may Local invoke
+`prepare_c06_native_scoring.py`, then solely `launch_c06_native_scoring.py`.
+GPU STOP is currently active, so do not invoke either execution path now.
+
+All C06 source and test code is `generated_unexecuted`. The artifact builder,
+method, comparison, scorer and GPU have not run; Local method verification and
+native results remain absent. Transported barycentres are not guaranteed to lie
+on the target surface, and source completeness is not evidence that the area
+assumption is beneficial on natural ambiguity.
 
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance

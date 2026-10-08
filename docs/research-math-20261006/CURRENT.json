@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T16:09:53Z",
+  "recorded_at": "2026-10-08T17:33:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (9/15). C03/C20 and the C05/C08/C06/C07 model-interface dependencies remain blocked rather than replaced with fabricated inputs. The stage-wide G01 source design is complete/generated_unexecuted; dynamic family/B*/candidate admission remains pending. Six full source chains and an actually configured online repair-agent connection remain; reviewed append-only supervisor task extension is authored. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C06,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (10/15). C03/C20 and C05/C08 remain blocked on genuine legal inputs; C07 can reuse C06's geometry-only source bank but its distinct partial/slack method remains unimplemented. The stage-wide G01 source design is complete/generated_unexecuted with C06's exact closure added; dynamic family/B*/candidate admission remains pending. Five full source chains and an actually configured online repair-agent connection remain; reviewed append-only supervisor task extension is authored. Local/native methods 0/15. GPU STOP unchanged.",
   "g01_source_design": {
     "status": "complete_source_design_generated_unexecuted_dynamic_admission_pending",
     "recorded_at": "2026-10-08T16:50:42Z",
@@ -20,10 +20,10 @@
     "guide": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-source-review.json",
-    "design_digest": "85f52a34de5303bb16e760a07314c67eba304d4c0c07ab942d0ac75ae765be76",
-    "coverage": "15 selected specs, 67-file deduplicated candidate/native source closure for the 9 source-complete candidates, complete 128-UID population, official scorer closure, 98 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
-    "independent_static_review": "complete_critical_0_important_0_minor_0",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-c06-incremental-source-review.json",
+    "design_digest": "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034",
+    "coverage": "15 selected specs, exact candidate/native source closures for 10 source-complete candidates, complete 128-UID population, official scorer closure, 98 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
+    "independent_static_review": "C06/G01 incremental independent source review complete; Critical 0, Important 0, Minor 0; Local execution pending",
     "tests_executed": false,
     "scientific_design_verified": 0,
     "local_method_verified": 0,
@@ -1722,6 +1722,27 @@
     "gpu_execution": "stopped_by_user",
     "remaining": "Local current-source acceptance, real-input CPU artifact execution, prospective development freezes, design/Gate0/IPCG/family/G01 admission, explicit GPU resume authorization and official native result",
     "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c15-protected-low-rank-chain--source-complete-not-executed"
+  },
+  "c06_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T17:25:00Z",
+    "restored_main": "683b96269887b75d33a56bd7ac4095ccdd58edcf",
+    "candidate_id": "4d-math-20261006-c06",
+    "method_entry": "actionmesh/research_math/area_transport_candidate.py",
+    "cpu_plan": "actionmesh/prepare_area_transport_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c06_native_comparison.py",
+    "official_scoring_entry": "actionmesh/research_math/c06_native_scoring.py",
+    "admitted_plan": "actionmesh/prepare_c06_native_scoring.py",
+    "single_owner_launcher": "actionmesh/launch_c06_native_scoring.py",
+    "source_scope": "receipt-bound predicted-mesh invariant descriptors, normalized barycentric masses, shared feasible sparse support/cost/epsilon/lift, row-softmax and uniform-mass controls, balanced area-marginal Sinkhorn, complete 16-frame native export and five-role official-scoring denominator",
+    "source_complete_candidates": 10,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "tests_executed": false,
+    "source_review": "Independent final static review recorded in longgoal-20261007/g01-c06-incremental-source-review.json with Critical/Important/Minor all zero after repairs; Web performed only AST/JSON/hash/diff inspection and no project import or execution.",
+    "gpu_execution": "stopped_by_user",
+    "remaining": "Local current-source acceptance, prospective epsilon/support/solver/resource/B* freeze, real receipt-bound CPU artifact execution and replay, G01/Gate0/IPCG/family admission, explicit GPU resume authorization and official native result",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c06-area-marginal-transport-chain--source-complete-not-executed"
   },
   "c03_partial_calibration_handoff": {
     "status": "partial_source_generated_unexecuted",

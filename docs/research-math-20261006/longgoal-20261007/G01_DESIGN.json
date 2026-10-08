@@ -29,7 +29,11 @@
     "official_scorer": {
       "entrypoint": "actionmesh/repo/actionbench/evaluate_dataset.py",
       "implementation": "actionmesh/repo/actionbench/benchmark.py:compute_chamfer_3d_4d",
-      "metrics": ["cd_3d", "cd_4d", "cd_motion"],
+      "metrics": [
+        "cd_3d",
+        "cd_4d",
+        "cd_motion"
+      ],
       "direction": "minimize",
       "sampling_seed": 44,
       "surface_samples": 100000,
@@ -37,24 +41,66 @@
       "icp_rotations": 24,
       "icp_iterations": 200,
       "source_refs": [
-        {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"},
-        {"path": "actionmesh/repo/actionbench/evaluate_dataset.py", "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"},
-        {"path": "actionmesh/repo/actionbench/benchmark.py", "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"},
-        {"path": "actionmesh/repo/actionbench/chamfer.py", "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"},
-        {"path": "actionmesh/repo/actionbench/icp.py", "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"},
-        {"path": "actionmesh/repo/actionbench/sample_mesh.py", "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"},
-        {"path": "actionmesh/repo/actionbench/sample_point_cloud.py", "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"}
+        {
+          "path": "actionmesh/repo/actionbench/README.md",
+          "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"
+        },
+        {
+          "path": "actionmesh/repo/actionbench/evaluate_dataset.py",
+          "sha256": "99e9f428cc82c7b8389f830dc304d3a744538ccf944e8937b61a10770683d195"
+        },
+        {
+          "path": "actionmesh/repo/actionbench/benchmark.py",
+          "sha256": "8dd0c56a285fad113a57048df90537a943a5d3eccc7d200f1730eaa1f57a3543"
+        },
+        {
+          "path": "actionmesh/repo/actionbench/chamfer.py",
+          "sha256": "467c17f00c2744ab789120dc8629eb0f6df3450db0c77b8c47f3fd13bfd63778"
+        },
+        {
+          "path": "actionmesh/repo/actionbench/icp.py",
+          "sha256": "b240db101366d69f45377dd4265650b88844ac745b0404d570749adb0e5956c7"
+        },
+        {
+          "path": "actionmesh/repo/actionbench/sample_mesh.py",
+          "sha256": "bec13522efc71cec6a99c2ea11862b5442210977fae613391212b96a21c70fef"
+        },
+        {
+          "path": "actionmesh/repo/actionbench/sample_point_cloud.py",
+          "sha256": "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f"
+        }
       ]
     }
   },
   "approved_native_support_refs": [
-    {"path": "actionmesh/deterministic_actionbench_entry.py", "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"},
-    {"path": "actionmesh/launch_c14_native_scoring.py", "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"},
-    {"path": "actionmesh/official_actionbench_adapter.py", "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"},
-    {"path": "actionmesh/prepare_c14_native_scoring.py", "sha256": "8df8debd0627a68c1e8a0da3e6924cbfb741ec2aaea9fca1e59320e58aa717f4"},
-    {"path": "actionmesh/research_math/__init__.py", "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"},
-    {"path": "actionmesh/research_math/c14_native_scoring.py", "sha256": "f45bfd9cbd3fcee3a735c83e4b78e8d504a8ab5bbed0ff2803916d0fb4098c06"},
-    {"path": "actionmesh/research_math/deterministic_knn.py", "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"}
+    {
+      "path": "actionmesh/deterministic_actionbench_entry.py",
+      "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+    },
+    {
+      "path": "actionmesh/launch_c14_native_scoring.py",
+      "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"
+    },
+    {
+      "path": "actionmesh/official_actionbench_adapter.py",
+      "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+    },
+    {
+      "path": "actionmesh/prepare_c14_native_scoring.py",
+      "sha256": "cf54c64b14d2861f4c5a7e13862d94cf3db09b94f5cad81ff6bbd11a81042f20"
+    },
+    {
+      "path": "actionmesh/research_math/__init__.py",
+      "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+    },
+    {
+      "path": "actionmesh/research_math/c14_native_scoring.py",
+      "sha256": "f45bfd9cbd3fcee3a735c83e4b78e8d504a8ab5bbed0ff2803916d0fb4098c06"
+    },
+    {
+      "path": "actionmesh/research_math/deterministic_knn.py",
+      "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+    }
   ],
   "cohort": {
     "exposure_ref": {
@@ -69,16 +115,34 @@
     "d2_unexposed_family_count": 12,
     "assignment_rule": "Remove exposed families, sort remaining family IDs by SHA256(canonical JSON [split_salt,family_id]), assign first 12 to D1, next 12 to D2 and every remaining family to confirmation. Keep every family wholly in one split.",
     "confirmation_rule": "All remaining reviewed unexposed families; never success-only or result-selected.",
-    "freeze_order": ["family_derivation", "independent_family_review", "split", "D1", "B_star_selection", "D2", "confirmation"],
+    "freeze_order": [
+      "family_derivation",
+      "independent_family_review",
+      "split",
+      "D1",
+      "B_star_selection",
+      "D2",
+      "confirmation"
+    ],
     "minimum_confirmation_families": 30,
     "minimum_confirmation_rationale": "Fewer than 30 independent confirmation clusters is treated as INCONCLUSIVE because the family-cluster bootstrap cannot support a stable cross-family uncertainty claim at the 98-test adjusted level. The threshold is frozen before family derivation; it is a floor, not a power guarantee, and the precision gate may still block PASS."
   },
   "criteria": {
     "effect_direction": "treatment_minus_control_lower_is_better",
-    "minimum_effect": {"cd_3d": 0.002, "cd_motion": 0.003},
-    "noninferiority_margin": {"cd_3d": 0.002, "cd_4d": 0.004, "cd_motion": 0.003},
+    "minimum_effect": {
+      "cd_3d": 0.002,
+      "cd_motion": 0.003
+    },
+    "noninferiority_margin": {
+      "cd_3d": 0.002,
+      "cd_4d": 0.004,
+      "cd_motion": 0.003
+    },
     "rationale": "Absolute thresholds are fixed before candidate results and use the released official leaderboard's task-scale separations: 0.002 separates ActionMesh CD-3D 0.054 from TripoSG 0.056, while 0.004 CD-4D and 0.003 CD-M separate full ActionMesh 0.085/0.153 from ActionMesh --fast 0.089/0.156. They are not the previously rejected unsourced 5%/2% work lines.",
-    "rationale_ref": {"path": "actionmesh/repo/actionbench/README.md", "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"},
+    "rationale_ref": {
+      "path": "actionmesh/repo/actionbench/README.md",
+      "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"
+    },
     "pass_rule": "For every indispensable contrast, the multiplicity-adjusted one-sided upper confidence bound is below -minimum_effect on the candidate primary metric. For B_star guardrails it is at or below the metric-specific noninferiority margin. Every required arm and frozen unit must have a valid native receipt; otherwise PASS is unavailable.",
     "kill_rule": "Only qualified complete evidence with adequate precision may KILL the scoped construction or necessity; implementation, input, scorer or coverage failures are INCONCLUSIVE.",
     "revise_rule": "Only a prespecified development-supported child hypothesis may REVISE; create a new reviewed protocol and independent confirmation.",
@@ -102,7 +166,11 @@
     "complete_inventory": true
   },
   "randomness": {
-    "generation_seeds": [42, 314, 2718],
+    "generation_seeds": [
+      42,
+      314,
+      2718
+    ],
     "official_scorer_seed": 44,
     "pairing": "same UID, source bytes, upstream context and generation seed for every arm",
     "current_source_limit": "Current retained producer is qualified only for seed 42. Seeds 314 and 2718 remain mandatory design coverage and require separately versioned source/interface qualification before confirmation; they may not be silently removed.",
@@ -113,7 +181,12 @@
     "policy": "Retain every frozen role and unit, including preparation, missing-input, bounds, no-solution, timeout, export and official-scoring failures. Never zero-impute, drop failed UIDs, substitute a successful arm or retry the same scientific attempt.",
     "pass_completeness": "PASS requires valid native outputs for every indispensable role over the complete frozen confirmation inventory. Any missing pair makes that candidate decision INCONCLUSIVE and remains in the failure-rate denominator.",
     "physical_aliasing": "Byte-identical outputs may share one physical scorer measurement only when the alias and digest are frozen; logical roles remain separately recorded.",
-    "failure_reporting": ["failure_rate_by_role", "failure_reason_inventory", "eligible_native_metric_denominator", "complete_frozen_denominator"]
+    "failure_reporting": [
+      "failure_rate_by_role",
+      "failure_reason_inventory",
+      "eligible_native_metric_denominator",
+      "complete_frozen_denominator"
+    ]
   },
   "fairness": {
     "b_star_selection": "Every declared selectable control other than the B_star placeholder must first pass implementation/native qualification. On D1, select the lowest primary family mean across those controls with a deterministic lexical tie break; B_star aliases that exact role and is frozen before D2. A failed or unavailable strong control blocks weakening B_star.",
@@ -137,193 +210,809 @@
   "candidates": [
     {
       "candidate_id": "4d-math-20261006-c02",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c02.json", "sha256": "c99aa29f0e02cfb06a00556e2d92ae9f6d233e1fc7f3d90ef035df491234e210"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c02.json",
+        "sha256": "c99aa29f0e02cfb06a00556e2d92ae9f6d233e1fc7f3d90ef035df491234e210"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c02_native_scoring.py", "sha256": "6415ecea53b98d3836a639523e85518193ad714068c65c19de85f4ba1d167203"},
-        {"path": "actionmesh/prepare_c02_native_scoring.py", "sha256": "52dad387b25ddd082aaf289c6017a16a4829f15733ffc7f2fdb208e721915135"},
-        {"path": "actionmesh/prepare_protected_geometry_candidate.py", "sha256": "938467c24ac30cf342054a8fbf38b3d1ebf01197af9be4cb6993ecc09e6727c9"},
-        {"path": "actionmesh/research_math/c02_native_comparison.py", "sha256": "85cf2a8d0919775474061b70a6337d6168bfcc3154e1ad5508c1fce6262fd8bf"},
-        {"path": "actionmesh/research_math/c02_native_scoring.py", "sha256": "1364d84345955013b6fea86c248ee8b3cda57aa1b519cdd716efe931da187c27"},
-        {"path": "actionmesh/research_math/protected_geometry_candidate.py", "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"},
-        {"path": "actionmesh/research_ten/__init__.py", "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"},
-        {"path": "actionmesh/research_ten/m01_elasticity.py", "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"}
+        {
+          "path": "actionmesh/launch_c02_native_scoring.py",
+          "sha256": "6415ecea53b98d3836a639523e85518193ad714068c65c19de85f4ba1d167203"
+        },
+        {
+          "path": "actionmesh/prepare_c02_native_scoring.py",
+          "sha256": "52dad387b25ddd082aaf289c6017a16a4829f15733ffc7f2fdb208e721915135"
+        },
+        {
+          "path": "actionmesh/prepare_protected_geometry_candidate.py",
+          "sha256": "938467c24ac30cf342054a8fbf38b3d1ebf01197af9be4cb6993ecc09e6727c9"
+        },
+        {
+          "path": "actionmesh/research_math/c02_native_comparison.py",
+          "sha256": "85cf2a8d0919775474061b70a6337d6168bfcc3154e1ad5508c1fce6262fd8bf"
+        },
+        {
+          "path": "actionmesh/research_math/c02_native_scoring.py",
+          "sha256": "1364d84345955013b6fea86c248ee8b3cda57aa1b519cdd716efe931da187c27"
+        },
+        {
+          "path": "actionmesh/research_math/protected_geometry_candidate.py",
+          "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"
+        },
+        {
+          "path": "actionmesh/research_ten/__init__.py",
+          "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"
+        },
+        {
+          "path": "actionmesh/research_ten/m01_elasticity.py",
+          "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"
+        }
       ],
-      "treatment_role": "protected_step", "control_roles": ["B0", "B_star", "geometry_only", "strength_matched_blend"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["protected_step-B0:cd_3d", "protected_step-B_star:cd_3d", "protected_step-geometry_only:cd_3d", "protected_step-strength_matched_blend:cd_3d", "protected_step-B_star:cd_4d", "protected_step-B_star:cd_motion"]
+      "treatment_role": "protected_step",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "geometry_only",
+        "strength_matched_blend"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "protected_step-B0:cd_3d",
+        "protected_step-B_star:cd_3d",
+        "protected_step-geometry_only:cd_3d",
+        "protected_step-strength_matched_blend:cd_3d",
+        "protected_step-B_star:cd_4d",
+        "protected_step-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c01",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c01.json", "sha256": "3e2caee89b89f09ec03f117577102ab58831c436e29a4311f1f7eb9a3374f4c8"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c01.json",
+        "sha256": "3e2caee89b89f09ec03f117577102ab58831c436e29a4311f1f7eb9a3374f4c8"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c01_native_scoring.py", "sha256": "a8af81f0f1f6e0c595309020a2cd650afa74ba1dce83436a3ce59112dee7c12a"},
-        {"path": "actionmesh/prepare_c01_native_acceptance.py", "sha256": "665869d54dcd00acf2c5213bc603f8c1cb8ead7d5e2da0bcd29186c29ad0c620"},
-        {"path": "actionmesh/prepare_c01_native_scoring.py", "sha256": "0d90a1d20a68d2866dad3cf743b11206400b98babceb6346fddc326822638f7d"},
-        {"path": "actionmesh/prepare_self_map_candidate.py", "sha256": "ac504c6e8941890ed7251df915c5336638b0e88ab6ec74ba371962a925cff0c0"},
-        {"path": "actionmesh/research_math/c01_native_comparison.py", "sha256": "214901a463a214f2aafc8cb7b8a524f79d5c0f6c183f297a49607d3bc50fad82"},
-        {"path": "actionmesh/research_math/c01_native_scoring.py", "sha256": "7387195f9f11e2450a7ab00d884642ba5129237d1e773d9079a8b298a1ca76c2"},
-        {"path": "actionmesh/research_math/complete_unit_export.py", "sha256": "f8c0dff18b1361f2133c177cdef6cee6bfc00ed363ac96783aff366688545503"},
-        {"path": "actionmesh/research_math/decoder_observer.py", "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"},
-        {"path": "actionmesh/research_math/native_context_delivery.py", "sha256": "9f474e3b8c70b4466cb828d66d3e119e0b6eaab571b9ce06de6c2092a720482c"},
-        {"path": "actionmesh/research_math/native_context_runner.py", "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"},
-        {"path": "actionmesh/research_math/pipeline_decoder_observer.py", "sha256": "62bb4675f39600cac60e4e71304595ce8e1fc18716ed39bd2ea7e38ded9bc19b"},
-        {"path": "actionmesh/research_math/self_map_candidate.py", "sha256": "e971cfec0ff3225f2497c13dde7a392c491c3c2ff6a2ad877a83ec32d41cf141"}
+        {
+          "path": "actionmesh/launch_c01_native_scoring.py",
+          "sha256": "a8af81f0f1f6e0c595309020a2cd650afa74ba1dce83436a3ce59112dee7c12a"
+        },
+        {
+          "path": "actionmesh/prepare_c01_native_acceptance.py",
+          "sha256": "665869d54dcd00acf2c5213bc603f8c1cb8ead7d5e2da0bcd29186c29ad0c620"
+        },
+        {
+          "path": "actionmesh/prepare_c01_native_scoring.py",
+          "sha256": "0d90a1d20a68d2866dad3cf743b11206400b98babceb6346fddc326822638f7d"
+        },
+        {
+          "path": "actionmesh/prepare_self_map_candidate.py",
+          "sha256": "ac504c6e8941890ed7251df915c5336638b0e88ab6ec74ba371962a925cff0c0"
+        },
+        {
+          "path": "actionmesh/research_math/c01_native_comparison.py",
+          "sha256": "214901a463a214f2aafc8cb7b8a524f79d5c0f6c183f297a49607d3bc50fad82"
+        },
+        {
+          "path": "actionmesh/research_math/c01_native_scoring.py",
+          "sha256": "7387195f9f11e2450a7ab00d884642ba5129237d1e773d9079a8b298a1ca76c2"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_export.py",
+          "sha256": "f8c0dff18b1361f2133c177cdef6cee6bfc00ed363ac96783aff366688545503"
+        },
+        {
+          "path": "actionmesh/research_math/decoder_observer.py",
+          "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_delivery.py",
+          "sha256": "9f474e3b8c70b4466cb828d66d3e119e0b6eaab571b9ce06de6c2092a720482c"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_runner.py",
+          "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"
+        },
+        {
+          "path": "actionmesh/research_math/pipeline_decoder_observer.py",
+          "sha256": "62bb4675f39600cac60e4e71304595ce8e1fc18716ed39bd2ea7e38ded9bc19b"
+        },
+        {
+          "path": "actionmesh/research_math/self_map_candidate.py",
+          "sha256": "e971cfec0ff3225f2497c13dde7a392c491c3c2ff6a2ad877a83ec32d41cf141"
+        }
       ],
-      "treatment_role": "self_map_subtraction", "control_roles": ["B0", "B_star", "raw_uncorrected", "mean_bias"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["self_map_subtraction-B0:cd_motion", "self_map_subtraction-B_star:cd_motion", "self_map_subtraction-raw_uncorrected:cd_motion", "self_map_subtraction-mean_bias:cd_motion", "self_map_subtraction-B_star:cd_3d", "self_map_subtraction-B_star:cd_4d"]
+      "treatment_role": "self_map_subtraction",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "raw_uncorrected",
+        "mean_bias"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "self_map_subtraction-B0:cd_motion",
+        "self_map_subtraction-B_star:cd_motion",
+        "self_map_subtraction-raw_uncorrected:cd_motion",
+        "self_map_subtraction-mean_bias:cd_motion",
+        "self_map_subtraction-B_star:cd_3d",
+        "self_map_subtraction-B_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c10",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c10.json", "sha256": "67a63149bae8761b83f9dd57b05872a06ea79b63a48961e83bc99616b49e283f"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c10.json",
+        "sha256": "67a63149bae8761b83f9dd57b05872a06ea79b63a48961e83bc99616b49e283f"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c10_native_scoring.py", "sha256": "9aaada8e6ce6c0240f90c616a5de60133bfd9134247e8f80abcb183302285b26"},
-        {"path": "actionmesh/prepare_c10_native_scoring.py", "sha256": "8e4f9fc12e28f75f4633362a1d67e4511b3e11f578d09970b48cb2e54e3cb80b"},
-        {"path": "actionmesh/prepare_integrable_gradient_candidate.py", "sha256": "961371579ed4e21dc07e6fa68971ab23f1c00637f84fea2dde6c0539e78312b9"},
-        {"path": "actionmesh/research_math/c10_native_comparison.py", "sha256": "64f2b6929de6eb4f74fb3c2689f80ca819be908225bd400215ba0aa4c87d7f75"},
-        {"path": "actionmesh/research_math/c10_native_scoring.py", "sha256": "4805e8ff6cdcc424e7e4f0aeb205830eb1175a53e185eee8aac1cbb18556b67d"},
-        {"path": "actionmesh/research_math/integrable_gradient_candidate.py", "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"}
+        {
+          "path": "actionmesh/launch_c10_native_scoring.py",
+          "sha256": "9aaada8e6ce6c0240f90c616a5de60133bfd9134247e8f80abcb183302285b26"
+        },
+        {
+          "path": "actionmesh/prepare_c10_native_scoring.py",
+          "sha256": "8e4f9fc12e28f75f4633362a1d67e4511b3e11f578d09970b48cb2e54e3cb80b"
+        },
+        {
+          "path": "actionmesh/prepare_integrable_gradient_candidate.py",
+          "sha256": "961371579ed4e21dc07e6fa68971ab23f1c00637f84fea2dde6c0539e78312b9"
+        },
+        {
+          "path": "actionmesh/research_math/c10_native_comparison.py",
+          "sha256": "64f2b6929de6eb4f74fb3c2689f80ca819be908225bd400215ba0aa4c87d7f75"
+        },
+        {
+          "path": "actionmesh/research_math/c10_native_scoring.py",
+          "sha256": "4805e8ff6cdcc424e7e4f0aeb205830eb1175a53e185eee8aac1cbb18556b67d"
+        },
+        {
+          "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+          "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"
+        }
       ],
-      "treatment_role": "pinned_integrable_solve", "control_roles": ["B0", "B_star", "direct_common_lift", "independent_local_repair"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["pinned_integrable_solve-B0:cd_3d", "pinned_integrable_solve-B_star:cd_3d", "pinned_integrable_solve-direct_common_lift:cd_3d", "pinned_integrable_solve-independent_local_repair:cd_3d", "pinned_integrable_solve-B_star:cd_4d", "pinned_integrable_solve-B_star:cd_motion"]
+      "treatment_role": "pinned_integrable_solve",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "direct_common_lift",
+        "independent_local_repair"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "pinned_integrable_solve-B0:cd_3d",
+        "pinned_integrable_solve-B_star:cd_3d",
+        "pinned_integrable_solve-direct_common_lift:cd_3d",
+        "pinned_integrable_solve-independent_local_repair:cd_3d",
+        "pinned_integrable_solve-B_star:cd_4d",
+        "pinned_integrable_solve-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c13",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c13.json", "sha256": "fcb2a4ad3b2f3f2b0a1e4ecef15642d9ceb84b043968b7545fc3855b3322a1bf"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c13.json",
+        "sha256": "fcb2a4ad3b2f3f2b0a1e4ecef15642d9ceb84b043968b7545fc3855b3322a1bf"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/prepare_c13_native_scoring.py", "sha256": "8747a94b1018e2f8c7ef0f754a26f0187af15aeadc36c4f8689126d3decca239"},
-        {"path": "actionmesh/prepare_group_acceleration_candidate.py", "sha256": "4734c1a8fab9f07c4348cc57e729c60de32c0a29170a621c542063a43bda80aa"},
-        {"path": "actionmesh/research_math/c13_native_comparison.py", "sha256": "53e1edbf4963c8374eb4e0e1436079adcc45d85c934ef24f72eecef9f34a866e"},
-        {"path": "actionmesh/research_math/c13_native_scoring.py", "sha256": "95b4eac7468072d96c7c195c2c8f8b653f1fdfd779ea26e9ee4a3d9b5872f75c"},
-        {"path": "actionmesh/research_math/group_acceleration_candidate.py", "sha256": "fa70f5a7f7183d72193bde8e5eae53c5339eaec12f025df3db49345264c5bb07"},
-        {"path": "actionmesh/research_math/quadratic_acceleration_control.py", "sha256": "e8724ab9de9afa492adc0c32a1893fb373ce20960011a5e1b07a922ddf867807"}
+        {
+          "path": "actionmesh/prepare_c13_native_scoring.py",
+          "sha256": "8747a94b1018e2f8c7ef0f754a26f0187af15aeadc36c4f8689126d3decca239"
+        },
+        {
+          "path": "actionmesh/prepare_group_acceleration_candidate.py",
+          "sha256": "4734c1a8fab9f07c4348cc57e729c60de32c0a29170a621c542063a43bda80aa"
+        },
+        {
+          "path": "actionmesh/research_math/c13_native_comparison.py",
+          "sha256": "53e1edbf4963c8374eb4e0e1436079adcc45d85c934ef24f72eecef9f34a866e"
+        },
+        {
+          "path": "actionmesh/research_math/c13_native_scoring.py",
+          "sha256": "95b4eac7468072d96c7c195c2c8f8b653f1fdfd779ea26e9ee4a3d9b5872f75c"
+        },
+        {
+          "path": "actionmesh/research_math/group_acceleration_candidate.py",
+          "sha256": "fa70f5a7f7183d72193bde8e5eae53c5339eaec12f025df3db49345264c5bb07"
+        },
+        {
+          "path": "actionmesh/research_math/quadratic_acceleration_control.py",
+          "sha256": "e8724ab9de9afa492adc0c32a1893fb373ce20960011a5e1b07a922ddf867807"
+        }
       ],
-      "treatment_role": "group_acceleration", "control_roles": ["B0", "B_star", "gaussian", "quadratic_acceleration"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["group_acceleration-B0:cd_motion", "group_acceleration-B_star:cd_motion", "group_acceleration-gaussian:cd_motion", "group_acceleration-quadratic_acceleration:cd_motion", "group_acceleration-B_star:cd_3d", "group_acceleration-B_star:cd_4d"]
+      "treatment_role": "group_acceleration",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "gaussian",
+        "quadratic_acceleration"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "group_acceleration-B0:cd_motion",
+        "group_acceleration-B_star:cd_motion",
+        "group_acceleration-gaussian:cd_motion",
+        "group_acceleration-quadratic_acceleration:cd_motion",
+        "group_acceleration-B_star:cd_3d",
+        "group_acceleration-B_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c14",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c14.json", "sha256": "0689c957abcdf70390f46a451434bc77b7267ff24b0b9575907131eddcdd9109"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c14.json",
+        "sha256": "0689c957abcdf70390f46a451434bc77b7267ff24b0b9575907131eddcdd9109"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c14_native_scoring.py", "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"},
-        {"path": "actionmesh/prepare_c14_native_scoring.py", "sha256": "8df8debd0627a68c1e8a0da3e6924cbfb741ec2aaea9fca1e59320e58aa717f4"},
-        {"path": "actionmesh/research_math/c14_native_comparison.py", "sha256": "6bdb7d99b2154cb2c9a1200181b9eff54c5a2874b9335481e72e53dd7ff529b7"},
-        {"path": "actionmesh/research_math/c14_native_scoring.py", "sha256": "f45bfd9cbd3fcee3a735c83e4b78e8d504a8ab5bbed0ff2803916d0fb4098c06"},
-        {"path": "actionmesh/research_math/corotational_residual_candidate.py", "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"},
-        {"path": "actionmesh/research_math/simple_mesh_controls.py", "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"}
+        {
+          "path": "actionmesh/launch_c14_native_scoring.py",
+          "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"
+        },
+        {
+          "path": "actionmesh/prepare_c14_native_scoring.py",
+          "sha256": "cf54c64b14d2861f4c5a7e13862d94cf3db09b94f5cad81ff6bbd11a81042f20"
+        },
+        {
+          "path": "actionmesh/research_math/c14_native_comparison.py",
+          "sha256": "6bdb7d99b2154cb2c9a1200181b9eff54c5a2874b9335481e72e53dd7ff529b7"
+        },
+        {
+          "path": "actionmesh/research_math/c14_native_scoring.py",
+          "sha256": "f45bfd9cbd3fcee3a735c83e4b78e8d504a8ab5bbed0ff2803916d0fb4098c06"
+        },
+        {
+          "path": "actionmesh/research_math/corotational_residual_candidate.py",
+          "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"
+        },
+        {
+          "path": "actionmesh/research_math/simple_mesh_controls.py",
+          "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+        }
       ],
-      "treatment_role": "corotational_residual", "control_roles": ["b0", "b_star", "world_gaussian", "body_gaussian"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["corotational_residual-b0:cd_motion", "corotational_residual-b_star:cd_motion", "corotational_residual-world_gaussian:cd_motion", "corotational_residual-body_gaussian:cd_motion", "corotational_residual-b_star:cd_3d", "corotational_residual-b_star:cd_4d"]
+      "treatment_role": "corotational_residual",
+      "control_roles": [
+        "b0",
+        "b_star",
+        "world_gaussian",
+        "body_gaussian"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "corotational_residual-b0:cd_motion",
+        "corotational_residual-b_star:cd_motion",
+        "corotational_residual-world_gaussian:cd_motion",
+        "corotational_residual-body_gaussian:cd_motion",
+        "corotational_residual-b_star:cd_3d",
+        "corotational_residual-b_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c04",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c04.json", "sha256": "98a46bb1c1e048b7593093ad6c96a465b675642c2060b8ef1a046a6ea164c83d"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c04.json",
+        "sha256": "98a46bb1c1e048b7593093ad6c96a465b675642c2060b8ef1a046a6ea164c83d"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c04_native_scoring.py", "sha256": "82a2ae808efd63b900b7f4a3d1738f0d8ad891fe1598c493bd93f529a43bd3b1"},
-        {"path": "actionmesh/prepare_c04_native_acceptance.py", "sha256": "2901f3ddf6d1f7264ada5b7ae9cc5d80a979d0aa53e670ce9b2e1709db89624e"},
-        {"path": "actionmesh/prepare_c04_native_scoring.py", "sha256": "52eb22c837ffa40e14de3d2aa2201476f44d0fc51bc75ce6fef02464a3cd5858"},
-        {"path": "actionmesh/prepare_robust_motion_candidate.py", "sha256": "8554a7e11a95fed8fd7dc06ee5fec6e4c1c75d3b68587688a7ce7a71d49c869b"},
-        {"path": "actionmesh/research_math/c04_native_comparison.py", "sha256": "b97da830932e59bead6fca01e904a441c7a37e67a55fb789ff99cbfb5e6b16a1"},
-        {"path": "actionmesh/research_math/c04_native_scoring.py", "sha256": "acdc0b15c10032e0b1027d89ab48c284a7cf6648bc9588b445391ad452078633"},
-        {"path": "actionmesh/research_math/protected_geometry_candidate.py", "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"},
-        {"path": "actionmesh/research_math/robust_motion_candidate.py", "sha256": "8a353a6ff66b909b49f3d3d8e33d3180efcdd1e56737eb2daec97537cc295783"},
-        {"path": "actionmesh/research_ten/__init__.py", "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"},
-        {"path": "actionmesh/research_ten/m01_elasticity.py", "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"}
+        {
+          "path": "actionmesh/launch_c04_native_scoring.py",
+          "sha256": "82a2ae808efd63b900b7f4a3d1738f0d8ad891fe1598c493bd93f529a43bd3b1"
+        },
+        {
+          "path": "actionmesh/prepare_c04_native_acceptance.py",
+          "sha256": "2901f3ddf6d1f7264ada5b7ae9cc5d80a979d0aa53e670ce9b2e1709db89624e"
+        },
+        {
+          "path": "actionmesh/prepare_c04_native_scoring.py",
+          "sha256": "52eb22c837ffa40e14de3d2aa2201476f44d0fc51bc75ce6fef02464a3cd5858"
+        },
+        {
+          "path": "actionmesh/prepare_robust_motion_candidate.py",
+          "sha256": "8554a7e11a95fed8fd7dc06ee5fec6e4c1c75d3b68587688a7ce7a71d49c869b"
+        },
+        {
+          "path": "actionmesh/research_math/c04_native_comparison.py",
+          "sha256": "b97da830932e59bead6fca01e904a441c7a37e67a55fb789ff99cbfb5e6b16a1"
+        },
+        {
+          "path": "actionmesh/research_math/c04_native_scoring.py",
+          "sha256": "acdc0b15c10032e0b1027d89ab48c284a7cf6648bc9588b445391ad452078633"
+        },
+        {
+          "path": "actionmesh/research_math/protected_geometry_candidate.py",
+          "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"
+        },
+        {
+          "path": "actionmesh/research_math/robust_motion_candidate.py",
+          "sha256": "8a353a6ff66b909b49f3d3d8e33d3180efcdd1e56737eb2daec97537cc295783"
+        },
+        {
+          "path": "actionmesh/research_ten/__init__.py",
+          "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"
+        },
+        {
+          "path": "actionmesh/research_ten/m01_elasticity.py",
+          "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"
+        }
       ],
-      "treatment_role": "robust_conic_protection", "control_roles": ["B0", "B_star", "deterministic_protection", "strength_matched_repair"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["robust_conic_protection-B0:cd_3d", "robust_conic_protection-B_star:cd_3d", "robust_conic_protection-deterministic_protection:cd_3d", "robust_conic_protection-strength_matched_repair:cd_3d", "robust_conic_protection-B_star:cd_4d", "robust_conic_protection-B_star:cd_motion"]
+      "treatment_role": "robust_conic_protection",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "deterministic_protection",
+        "strength_matched_repair"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "robust_conic_protection-B0:cd_3d",
+        "robust_conic_protection-B_star:cd_3d",
+        "robust_conic_protection-deterministic_protection:cd_3d",
+        "robust_conic_protection-strength_matched_repair:cd_3d",
+        "robust_conic_protection-B_star:cd_4d",
+        "robust_conic_protection-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c03",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c03.json", "sha256": "84b2f292a288106fe408381fcb2a8e14397892e19729567db8e1363364c8a609"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c03.json",
+        "sha256": "84b2f292a288106fe408381fcb2a8e14397892e19729567db8e1363364c8a609"
+      },
       "approved_control_implementation_refs": null,
-      "treatment_role": "full_smoothed_unsquared", "control_roles": ["B0", "B_star", "intercept_squared", "intercept_unsquared", "unit_C01", "diagonal_squared", "diagonal_unsquared", "full_squared"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["full_smoothed_unsquared-B0:cd_motion", "full_smoothed_unsquared-B_star:cd_motion", "full_smoothed_unsquared-intercept_squared:cd_motion", "full_smoothed_unsquared-intercept_unsquared:cd_motion", "full_smoothed_unsquared-unit_C01:cd_motion", "full_smoothed_unsquared-diagonal_squared:cd_motion", "full_smoothed_unsquared-diagonal_unsquared:cd_motion", "full_smoothed_unsquared-full_squared:cd_motion", "full_smoothed_unsquared-B_star:cd_3d", "full_smoothed_unsquared-B_star:cd_4d"]
+      "treatment_role": "full_smoothed_unsquared",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "intercept_squared",
+        "intercept_unsquared",
+        "unit_C01",
+        "diagonal_squared",
+        "diagonal_unsquared",
+        "full_squared"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "full_smoothed_unsquared-B0:cd_motion",
+        "full_smoothed_unsquared-B_star:cd_motion",
+        "full_smoothed_unsquared-intercept_squared:cd_motion",
+        "full_smoothed_unsquared-intercept_unsquared:cd_motion",
+        "full_smoothed_unsquared-unit_C01:cd_motion",
+        "full_smoothed_unsquared-diagonal_squared:cd_motion",
+        "full_smoothed_unsquared-diagonal_unsquared:cd_motion",
+        "full_smoothed_unsquared-full_squared:cd_motion",
+        "full_smoothed_unsquared-B_star:cd_3d",
+        "full_smoothed_unsquared-B_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c20",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json", "sha256": "7dd8f31af598b90be0af09b870d43910615b2342cacd2caabb490f616ccb72f2"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
+        "sha256": "7dd8f31af598b90be0af09b870d43910615b2342cacd2caabb490f616ccb72f2"
+      },
       "approved_control_implementation_refs": null,
-      "treatment_role": "joint_monotone_phase_amplitude", "control_roles": ["B0", "B_star", "phase_only", "amplitude_only", "simple_lag"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["joint_monotone_phase_amplitude-B0:cd_motion", "joint_monotone_phase_amplitude-B_star:cd_motion", "joint_monotone_phase_amplitude-phase_only:cd_motion", "joint_monotone_phase_amplitude-amplitude_only:cd_motion", "joint_monotone_phase_amplitude-simple_lag:cd_motion", "joint_monotone_phase_amplitude-B_star:cd_3d", "joint_monotone_phase_amplitude-B_star:cd_4d"]
+      "treatment_role": "joint_monotone_phase_amplitude",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "phase_only",
+        "amplitude_only",
+        "simple_lag"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "joint_monotone_phase_amplitude-B0:cd_motion",
+        "joint_monotone_phase_amplitude-B_star:cd_motion",
+        "joint_monotone_phase_amplitude-phase_only:cd_motion",
+        "joint_monotone_phase_amplitude-amplitude_only:cd_motion",
+        "joint_monotone_phase_amplitude-simple_lag:cd_motion",
+        "joint_monotone_phase_amplitude-B_star:cd_3d",
+        "joint_monotone_phase_amplitude-B_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c11",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c11.json", "sha256": "ebc7f01866282eafd090bb1df65fa9a4b953b8ea122d4fd004e678cdd6f9439f"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c11.json",
+        "sha256": "ebc7f01866282eafd090bb1df65fa9a4b953b8ea122d4fd004e678cdd6f9439f"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c11_native_scoring.py", "sha256": "939988a4544b3f4eb56a385f119b980aeac38ecd299074f0f481eb164bdb0878"},
-        {"path": "actionmesh/prepare_c11_native_scoring.py", "sha256": "d689fa8acdd88ccac7347328aef7c88aee3247ae960211b36d9955038bbfee52"},
-        {"path": "actionmesh/prepare_strain_projection_candidate.py", "sha256": "74d871c0ee0452a0f6a80fd83449be9777815562a2e85f9205ece44c46e67825"},
-        {"path": "actionmesh/research_math/c11_native_comparison.py", "sha256": "e997e49c3c997f2f0ae7b3c52e1a13ae6a01c3fa37b4657062fe98cd302d498e"},
-        {"path": "actionmesh/research_math/c11_native_scoring.py", "sha256": "ffca38c1436ade4de65a6f7a40209e425fbd369f916d9539a000db2b7f6bbdc5"},
-        {"path": "actionmesh/research_math/corotational_residual_candidate.py", "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"},
-        {"path": "actionmesh/research_math/integrable_gradient_candidate.py", "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"},
-        {"path": "actionmesh/research_math/strain_projection_candidate.py", "sha256": "fd7fadb047aa075fb7ce66a8b3c5fac72fe60596e731995349979ca462492097"}
+        {
+          "path": "actionmesh/launch_c11_native_scoring.py",
+          "sha256": "939988a4544b3f4eb56a385f119b980aeac38ecd299074f0f481eb164bdb0878"
+        },
+        {
+          "path": "actionmesh/prepare_c11_native_scoring.py",
+          "sha256": "d689fa8acdd88ccac7347328aef7c88aee3247ae960211b36d9955038bbfee52"
+        },
+        {
+          "path": "actionmesh/prepare_strain_projection_candidate.py",
+          "sha256": "74d871c0ee0452a0f6a80fd83449be9777815562a2e85f9205ece44c46e67825"
+        },
+        {
+          "path": "actionmesh/research_math/c11_native_comparison.py",
+          "sha256": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77"
+        },
+        {
+          "path": "actionmesh/research_math/c11_native_scoring.py",
+          "sha256": "ffca38c1436ade4de65a6f7a40209e425fbd369f916d9539a000db2b7f6bbdc5"
+        },
+        {
+          "path": "actionmesh/research_math/corotational_residual_candidate.py",
+          "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"
+        },
+        {
+          "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+          "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_runner.py",
+          "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"
+        },
+        {
+          "path": "actionmesh/research_math/strain_projection_candidate.py",
+          "sha256": "fd7fadb047aa075fb7ce66a8b3c5fac72fe60596e731995349979ca462492097"
+        }
       ],
-      "treatment_role": "rotation_preserving_stretch_projection", "control_roles": ["B0", "B_star", "arap_repair", "elastic_repair"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["rotation_preserving_stretch_projection-B0:cd_3d", "rotation_preserving_stretch_projection-B_star:cd_3d", "rotation_preserving_stretch_projection-arap_repair:cd_3d", "rotation_preserving_stretch_projection-elastic_repair:cd_3d", "rotation_preserving_stretch_projection-B_star:cd_4d", "rotation_preserving_stretch_projection-B_star:cd_motion"]
+      "treatment_role": "rotation_preserving_stretch_projection",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "arap_repair",
+        "elastic_repair"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "rotation_preserving_stretch_projection-B0:cd_3d",
+        "rotation_preserving_stretch_projection-B_star:cd_3d",
+        "rotation_preserving_stretch_projection-arap_repair:cd_3d",
+        "rotation_preserving_stretch_projection-elastic_repair:cd_3d",
+        "rotation_preserving_stretch_projection-B_star:cd_4d",
+        "rotation_preserving_stretch_projection-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c12",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c12.json", "sha256": "89623e97b360b88aa3ca1bcf524a1d193c1703bf74dfb4a147d81a0e7af2f03a"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c12.json",
+        "sha256": "89623e97b360b88aa3ca1bcf524a1d193c1703bf74dfb4a147d81a0e7af2f03a"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c12_native_scoring.py", "sha256": "a2e3a17098c39df0ab112c049f7c468bac80ae1bfc11c5bfa242c403101cf9b3"},
-        {"path": "actionmesh/prepare_area_admission_candidate.py", "sha256": "4c85002708279faa075aae253af3a0b751cb5eb0323aa3e6f62b427fe353ce47"},
-        {"path": "actionmesh/prepare_c12_native_scoring.py", "sha256": "272272f85477fdd726af92812caadb927b612c22f395cd5d2a380a14837e370d"},
-        {"path": "actionmesh/research_math/area_admission_candidate.py", "sha256": "30b4a4e05b3dd0121e1a398d2eee3e44e0c030597f53dce52ecb38641d43402d"},
-        {"path": "actionmesh/research_math/c11_native_comparison.py", "sha256": "e997e49c3c997f2f0ae7b3c52e1a13ae6a01c3fa37b4657062fe98cd302d498e"},
-        {"path": "actionmesh/research_math/c12_native_comparison.py", "sha256": "cf8a9dda68535b0e8b0bb751fb3b5833fe30284a1349761058b606b99a4da111"},
-        {"path": "actionmesh/research_math/c12_native_scoring.py", "sha256": "45c3984dd98cf1129cb1ad3d602ce10f5263341c41e90635b7fc7fe450bdaca8"},
-        {"path": "actionmesh/research_math/corotational_residual_candidate.py", "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"},
-        {"path": "actionmesh/research_math/integrable_gradient_candidate.py", "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"},
-        {"path": "actionmesh/research_math/protected_geometry_candidate.py", "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"},
-        {"path": "actionmesh/research_math/strain_projection_candidate.py", "sha256": "fd7fadb047aa075fb7ce66a8b3c5fac72fe60596e731995349979ca462492097"},
-        {"path": "actionmesh/research_ten/__init__.py", "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"},
-        {"path": "actionmesh/research_ten/m01_elasticity.py", "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"}
+        {
+          "path": "actionmesh/launch_c12_native_scoring.py",
+          "sha256": "a2e3a17098c39df0ab112c049f7c468bac80ae1bfc11c5bfa242c403101cf9b3"
+        },
+        {
+          "path": "actionmesh/prepare_area_admission_candidate.py",
+          "sha256": "4c85002708279faa075aae253af3a0b751cb5eb0323aa3e6f62b427fe353ce47"
+        },
+        {
+          "path": "actionmesh/prepare_c12_native_scoring.py",
+          "sha256": "272272f85477fdd726af92812caadb927b612c22f395cd5d2a380a14837e370d"
+        },
+        {
+          "path": "actionmesh/research_math/area_admission_candidate.py",
+          "sha256": "30b4a4e05b3dd0121e1a398d2eee3e44e0c030597f53dce52ecb38641d43402d"
+        },
+        {
+          "path": "actionmesh/research_math/c11_native_comparison.py",
+          "sha256": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77"
+        },
+        {
+          "path": "actionmesh/research_math/c12_native_comparison.py",
+          "sha256": "cf8a9dda68535b0e8b0bb751fb3b5833fe30284a1349761058b606b99a4da111"
+        },
+        {
+          "path": "actionmesh/research_math/c12_native_scoring.py",
+          "sha256": "45c3984dd98cf1129cb1ad3d602ce10f5263341c41e90635b7fc7fe450bdaca8"
+        },
+        {
+          "path": "actionmesh/research_math/corotational_residual_candidate.py",
+          "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"
+        },
+        {
+          "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+          "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_runner.py",
+          "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"
+        },
+        {
+          "path": "actionmesh/research_math/protected_geometry_candidate.py",
+          "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"
+        },
+        {
+          "path": "actionmesh/research_math/strain_projection_candidate.py",
+          "sha256": "fd7fadb047aa075fb7ce66a8b3c5fac72fe60596e731995349979ca462492097"
+        },
+        {
+          "path": "actionmesh/research_ten/__init__.py",
+          "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"
+        },
+        {
+          "path": "actionmesh/research_ten/m01_elasticity.py",
+          "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"
+        }
       ],
-      "treatment_role": "exact_quadratic_admission", "control_roles": ["B0", "B_star", "fixed_damping", "generic_backtracking"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["exact_quadratic_admission-B0:cd_3d", "exact_quadratic_admission-B_star:cd_3d", "exact_quadratic_admission-fixed_damping:cd_3d", "exact_quadratic_admission-generic_backtracking:cd_3d", "exact_quadratic_admission-B_star:cd_4d", "exact_quadratic_admission-B_star:cd_motion"]
+      "treatment_role": "exact_quadratic_admission",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "fixed_damping",
+        "generic_backtracking"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "exact_quadratic_admission-B0:cd_3d",
+        "exact_quadratic_admission-B_star:cd_3d",
+        "exact_quadratic_admission-fixed_damping:cd_3d",
+        "exact_quadratic_admission-generic_backtracking:cd_3d",
+        "exact_quadratic_admission-B_star:cd_4d",
+        "exact_quadratic_admission-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c15",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c15.json", "sha256": "b2a4f4a9a88eb85022b6b7c3cc30471278f2cb2d533f21776f5b0d0cd49b0803"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c15.json",
+        "sha256": "b2a4f4a9a88eb85022b6b7c3cc30471278f2cb2d533f21776f5b0d0cd49b0803"
+      },
       "approved_control_implementation_refs": [
-        {"path": "actionmesh/launch_c15_native_scoring.py", "sha256": "dcaa1846f7c10868bd6ca186e778a7440cfec838ab695974ef066cd6b0ac4c9e"},
-        {"path": "actionmesh/prepare_c15_native_scoring.py", "sha256": "bc3fa6149ae7827d0084e45f7a84c2852f1782d1a3adc93f2e8b49e990db7537"},
-        {"path": "actionmesh/prepare_protected_lowrank_candidate.py", "sha256": "7617771c25e40578ca650bcce36f06fa87df3760411d1efab2b27ca104d0598d"},
-        {"path": "actionmesh/research_math/c15_native_comparison.py", "sha256": "cd4b2f8d9d16cd42ba199f41bea2480071e953c3bd7cb76cbf897a65beb4b9f5"},
-        {"path": "actionmesh/research_math/c15_native_scoring.py", "sha256": "740558b0e2555d949b02bebe7a37858c8942fb2563c7aff90badb3dafa096114"},
-        {"path": "actionmesh/research_math/protected_lowrank_candidate.py", "sha256": "c57f036f8cf9891500b17d1973348d96448c189126fa8161c24b1dce6062be03"},
-        {"path": "actionmesh/research_math/simple_mesh_controls.py", "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"}
+        {
+          "path": "actionmesh/launch_c15_native_scoring.py",
+          "sha256": "dcaa1846f7c10868bd6ca186e778a7440cfec838ab695974ef066cd6b0ac4c9e"
+        },
+        {
+          "path": "actionmesh/prepare_c15_native_scoring.py",
+          "sha256": "bc3fa6149ae7827d0084e45f7a84c2852f1782d1a3adc93f2e8b49e990db7537"
+        },
+        {
+          "path": "actionmesh/prepare_protected_lowrank_candidate.py",
+          "sha256": "7617771c25e40578ca650bcce36f06fa87df3760411d1efab2b27ca104d0598d"
+        },
+        {
+          "path": "actionmesh/research_math/c15_native_comparison.py",
+          "sha256": "cd4b2f8d9d16cd42ba199f41bea2480071e953c3bd7cb76cbf897a65beb4b9f5"
+        },
+        {
+          "path": "actionmesh/research_math/c15_native_scoring.py",
+          "sha256": "740558b0e2555d949b02bebe7a37858c8942fb2563c7aff90badb3dafa096114"
+        },
+        {
+          "path": "actionmesh/research_math/protected_lowrank_candidate.py",
+          "sha256": "c57f036f8cf9891500b17d1973348d96448c189126fa8161c24b1dce6062be03"
+        },
+        {
+          "path": "actionmesh/research_math/simple_mesh_controls.py",
+          "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+        }
       ],
-      "treatment_role": "protected_residual_svt", "control_roles": ["B0", "B_star", "gaussian", "unprotected_svt", "rank_matched_tsvd"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["protected_residual_svt-B0:cd_motion", "protected_residual_svt-B_star:cd_motion", "protected_residual_svt-gaussian:cd_motion", "protected_residual_svt-unprotected_svt:cd_motion", "protected_residual_svt-rank_matched_tsvd:cd_motion", "protected_residual_svt-B_star:cd_3d", "protected_residual_svt-B_star:cd_4d"]
+      "treatment_role": "protected_residual_svt",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "gaussian",
+        "unprotected_svt",
+        "rank_matched_tsvd"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "protected_residual_svt-B0:cd_motion",
+        "protected_residual_svt-B_star:cd_motion",
+        "protected_residual_svt-gaussian:cd_motion",
+        "protected_residual_svt-unprotected_svt:cd_motion",
+        "protected_residual_svt-rank_matched_tsvd:cd_motion",
+        "protected_residual_svt-B_star:cd_3d",
+        "protected_residual_svt-B_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c05",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json", "sha256": "66e1a0b973c9203599a45b149f2aa0aeea0d50b56ad03d3f3e57ffef81d8319f"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
+        "sha256": "66e1a0b973c9203599a45b149f2aa0aeea0d50b56ad03d3f3e57ffef81d8319f"
+      },
       "approved_control_implementation_refs": null,
-      "treatment_role": "joint_spatial_labels", "control_roles": ["B0", "B_star", "localized_mean", "temperature_matched_mean", "independent_top1"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["joint_spatial_labels-B0:cd_3d", "joint_spatial_labels-B_star:cd_3d", "joint_spatial_labels-localized_mean:cd_3d", "joint_spatial_labels-temperature_matched_mean:cd_3d", "joint_spatial_labels-independent_top1:cd_3d", "joint_spatial_labels-B_star:cd_4d", "joint_spatial_labels-B_star:cd_motion"]
+      "treatment_role": "joint_spatial_labels",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "localized_mean",
+        "temperature_matched_mean",
+        "independent_top1"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "joint_spatial_labels-B0:cd_3d",
+        "joint_spatial_labels-B_star:cd_3d",
+        "joint_spatial_labels-localized_mean:cd_3d",
+        "joint_spatial_labels-temperature_matched_mean:cd_3d",
+        "joint_spatial_labels-independent_top1:cd_3d",
+        "joint_spatial_labels-B_star:cd_4d",
+        "joint_spatial_labels-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c08",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c08.json", "sha256": "0b848b182bdb246ff92fe9c4cb7653b85a29aa8710ccd754cbc64887ab70c46b"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c08.json",
+        "sha256": "0b848b182bdb246ff92fe9c4cb7653b85a29aa8710ccd754cbc64887ab70c46b"
+      },
       "approved_control_implementation_refs": null,
-      "treatment_role": "endpoint_bridge", "control_roles": ["B0", "B_star", "local_transition_tracker", "coordinate_smoother", "decoder_cycle_control"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["endpoint_bridge-B0:cd_motion", "endpoint_bridge-B_star:cd_motion", "endpoint_bridge-local_transition_tracker:cd_motion", "endpoint_bridge-coordinate_smoother:cd_motion", "endpoint_bridge-decoder_cycle_control:cd_motion", "endpoint_bridge-B_star:cd_3d", "endpoint_bridge-B_star:cd_4d"]
+      "treatment_role": "endpoint_bridge",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "local_transition_tracker",
+        "coordinate_smoother",
+        "decoder_cycle_control"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "endpoint_bridge-B0:cd_motion",
+        "endpoint_bridge-B_star:cd_motion",
+        "endpoint_bridge-local_transition_tracker:cd_motion",
+        "endpoint_bridge-coordinate_smoother:cd_motion",
+        "endpoint_bridge-decoder_cycle_control:cd_motion",
+        "endpoint_bridge-B_star:cd_3d",
+        "endpoint_bridge-B_star:cd_4d"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c06",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c06.json", "sha256": "ea2226ad8e52e02b814b4f18842b54b9d246454b507ceeb2b1f3abcf27cc32d5"},
-      "approved_control_implementation_refs": null,
-      "treatment_role": "area_marginal_transport", "control_roles": ["B0", "B_star", "row_softmax", "vertex_density_transport"], "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
-      "confirmatory_contrasts": ["area_marginal_transport-B0:cd_3d", "area_marginal_transport-B_star:cd_3d", "area_marginal_transport-row_softmax:cd_3d", "area_marginal_transport-vertex_density_transport:cd_3d", "area_marginal_transport-B_star:cd_4d", "area_marginal_transport-B_star:cd_motion"]
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c06.json",
+        "sha256": "82ea8a7f45ae957aadef14568049d13a2be22cc256eb4a610f3b4b4a339e53f9"
+      },
+      "approved_control_implementation_refs": [
+        {
+          "path": "actionmesh/launch_c06_native_scoring.py",
+          "sha256": "788e2ea465fb1fe0fb0d84b9747dfc97b5eec5dec2534d78d76ef65de2209134"
+        },
+        {
+          "path": "actionmesh/prepare_area_transport_candidate.py",
+          "sha256": "9ed3338fda1f9d77605bfee878cde98bc621b9e65bd4d12f154c94813b10c327"
+        },
+        {
+          "path": "actionmesh/prepare_c06_native_acceptance.py",
+          "sha256": "08fd6e8cda26979b82b7892365bc37af6e4f2f954f9c4f64edad5b94a94ed688"
+        },
+        {
+          "path": "actionmesh/prepare_c06_native_scoring.py",
+          "sha256": "31a120b6bcac53a350adc3c345307f9e5b86eff647697b1e1079c4f39d33a6db"
+        },
+        {
+          "path": "actionmesh/research_math/area_transport_candidate.py",
+          "sha256": "4d4de7214c65abe1207114a0b4134c32756a5ec593fa051998ce481a00623571"
+        },
+        {
+          "path": "actionmesh/research_math/c06_native_comparison.py",
+          "sha256": "76c1c27c44c39801d5a593417b3d6b3d643060c05adcc4a9aa43b5688b09cc21"
+        },
+        {
+          "path": "actionmesh/research_math/c06_native_scoring.py",
+          "sha256": "4eeddbd0c2bfe3d7e576b3ad231535a08784b2c556c435bfea268d73225840a0"
+        },
+        {
+          "path": "actionmesh/research_math/c11_native_comparison.py",
+          "sha256": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_runner.py",
+          "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"
+        },
+        {
+          "path": "actionmesh/research_math/protected_geometry_candidate.py",
+          "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"
+        },
+        {
+          "path": "actionmesh/research_ten/__init__.py",
+          "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"
+        },
+        {
+          "path": "actionmesh/research_ten/m01_elasticity.py",
+          "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"
+        }
+      ],
+      "treatment_role": "area_marginal_transport",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "row_softmax",
+        "vertex_density_transport"
+      ],
+      "primary_metric": "cd_3d",
+      "guardrail_metrics": [
+        "cd_4d",
+        "cd_motion"
+      ],
+      "confirmatory_contrasts": [
+        "area_marginal_transport-B0:cd_3d",
+        "area_marginal_transport-B_star:cd_3d",
+        "area_marginal_transport-row_softmax:cd_3d",
+        "area_marginal_transport-vertex_density_transport:cd_3d",
+        "area_marginal_transport-B_star:cd_4d",
+        "area_marginal_transport-B_star:cd_motion"
+      ]
     },
     {
       "candidate_id": "4d-math-20261006-c07",
-      "spec_ref": {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c07.json", "sha256": "822e357c7fe7dc801d35f7e633b11be0a245bf308f4cf53600fc5f01d77aa324"},
+      "spec_ref": {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c07.json",
+        "sha256": "822e357c7fe7dc801d35f7e633b11be0a245bf308f4cf53600fc5f01d77aa324"
+      },
       "approved_control_implementation_refs": null,
-      "treatment_role": "partial_mass_native_fallback", "control_roles": ["B0", "B_star", "full_mass_transport", "confidence_threshold_fallback"], "primary_metric": "cd_motion", "guardrail_metrics": ["cd_3d", "cd_4d"],
-      "confirmatory_contrasts": ["partial_mass_native_fallback-B0:cd_motion", "partial_mass_native_fallback-B_star:cd_motion", "partial_mass_native_fallback-full_mass_transport:cd_motion", "partial_mass_native_fallback-confidence_threshold_fallback:cd_motion", "partial_mass_native_fallback-B_star:cd_3d", "partial_mass_native_fallback-B_star:cd_4d"]
+      "treatment_role": "partial_mass_native_fallback",
+      "control_roles": [
+        "B0",
+        "B_star",
+        "full_mass_transport",
+        "confidence_threshold_fallback"
+      ],
+      "primary_metric": "cd_motion",
+      "guardrail_metrics": [
+        "cd_3d",
+        "cd_4d"
+      ],
+      "confirmatory_contrasts": [
+        "partial_mass_native_fallback-B0:cd_motion",
+        "partial_mass_native_fallback-B_star:cd_motion",
+        "partial_mass_native_fallback-full_mass_transport:cd_motion",
+        "partial_mass_native_fallback-confidence_threshold_fallback:cd_motion",
+        "partial_mass_native_fallback-B_star:cd_3d",
+        "partial_mass_native_fallback-B_star:cd_4d"
+      ]
     }
   ],
   "execution_boundaries": {
@@ -338,5 +1027,5 @@
     "explicit_gpu_resume_authorization_required": true,
     "gpu_dispatch_allowed_now": false
   },
-  "design_digest": "85f52a34de5303bb16e760a07314c67eba304d4c0c07ab942d0ac75ae765be76"
+  "design_digest": "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034"
 }

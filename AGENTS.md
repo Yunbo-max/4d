@@ -123,7 +123,7 @@ IDs are recomputed. UID/prefix/encoded labels and candidate outcomes are forbidd
 least 30 independent confirmation families must remain after D1/D2. The emitted
 task requests zero GPUs and cannot clear GPU STOP. Every D1 B* unit also requires
 an exact candidate/control native admission binding the spec, the implementation
-closure frozen in G01 (nine delivered; six null/blocked), single-attempt harness/
+closure frozen in G01 (ten delivered; five null/incomplete), single-attempt harness/
 producer identity, scorer closure and independent review completed before scoring.
 D1-only B* selection requires its own reviewed freeze before D2;
 confirmation remains locked. Missing family,
@@ -244,7 +244,20 @@ and retains failed-role denominators. Official scoring is reachable only through
 the C12 request, admitted plan builder and single-owner launcher. Projected
 oriented area is not global injectivity, collision freedom or physical validity.
 No C12 test, candidate, scorer or GPU task has run; Local/native status remains
-0/15 and GPU STOP remains active. The maintained full source-chain count is 9/15.
+0/15 and GPU STOP remains active.
+
+C06 has a source-complete but **generated_unexecuted** geometry-only chain. Read
+the C06 runbook section before choosing epsilon, support size or solver/resource
+limits. `research_math.area_transport_candidate` derives invariant one-ring
+features, normalized barycentric masses and one shared feasible sparse support
+from a receipt-bound predicted sequence; row softmax, uniform-mass OT and the
+area-marginal candidate use the same cost/support/lift and export all 16 original
+frames with exact frame zero. It consumes no GT, scorer arrays, model attention
+or arbitrary external transport bank. Continue only through the C06 comparison,
+official request, admitted plan and single-owner launcher; GPU STOP still forbids
+execution. Transported barycentres are not guaranteed to remain on the surface,
+and source completion is not a scientific result. The maintained full source-
+chain count is 10/15; Local verification and native results remain 0/15.
 
 ## Safety and provenance
 
@@ -290,3 +303,7 @@ No C12 test, candidate, scorer or GPU task has run; Local/native status remains
 - Push reviewable summaries, receipts, and source-safe logs to `main` with expected-head/concurrent-update protection. Do not commit private credentials or large raw assets.
 - Read back the final commit and report the exact commit plus result locator. Until that readback exists, the scientific state remains unchanged.
 
+
+C06 retained replay and comparison/scoring request preparation use the zero-GPU
+`actionmesh/prepare_c06_native_acceptance.py` plan and existing harness; direct
+method replay/request execution is forbidden. The producer remains seed42-only.

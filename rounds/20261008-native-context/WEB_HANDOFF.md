@@ -957,3 +957,32 @@ It reports Critical 0 / Important 0 / Minor 0 in
 `docs/research-math-20261006/longgoal-20261007/g01-source-review.json`. This remains
 static source evidence only; no project import, test, plan, model/data operation,
 scoring or GPU work occurred.
+
+## C06 source-chain continuation
+
+C06 is now source-complete only for an explicit geometry-only specialization.
+The CPU entry is `actionmesh/prepare_area_transport_candidate.py` and the method
+is `research_math.area_transport_candidate`. A physical same-UID
+`sequence.npz`/`report.json` pair supplies invariant one-ring features,
+normalized barycentric masses and a shared sparse support with strict positive
+area/uniform feasibility certificates. Row softmax,
+uniform-mass OT and area-marginal OT then export complete native sequences and
+certificates. No GT, model attention or arbitrary external cost is consumed;
+all roles use the same support/cost/epsilon/lift and preserve exact frame zero.
+
+Local starts at
+`LOCAL_AGENT_RUNBOOK.md#c06-area-marginal-transport-chain--source-complete-not-executed`.
+After common CPU acceptance and real artifact replay, freeze the five roles with
+`research_math.c06_native_comparison` and create the official raw request with
+`research_math.c06_native_scoring`. Only a fully admitted request may pass to
+`prepare_c06_native_scoring.py` and then the single-owner
+`launch_c06_native_scoring.py`; current GPU STOP forbids that execution.
+
+Status is `generated_unexecuted`: Web ran no project test, artifact plan, model,
+scorer or GPU workload. Source coverage is 10/15; Local/native remains 0/15.
+Transported barycentres are not guaranteed to lie on the target surface and no
+scientific benefit, natural ambiguity or conclusion is claimed.
+
+C06 retained replay and comparison/scoring request preparation use the zero-GPU
+`actionmesh/prepare_c06_native_acceptance.py` plan and existing harness; direct
+method replay/request execution is forbidden. The producer remains seed42-only.

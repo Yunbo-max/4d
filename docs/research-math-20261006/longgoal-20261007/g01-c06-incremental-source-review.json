@@ -1,0 +1,65 @@
+{
+  "kind": "g01-incremental-static-source-review",
+  "version": "1.0.0",
+  "reviewed_at": "2026-10-08T17:36:00Z",
+  "reviewed_base_commit": "683b96269887b75d33a56bd7ac4095ccdd58edcf",
+  "reviewers": [
+    "/root/review_c06",
+    "/root/review_g01_c06"
+  ],
+  "scope": "Independent static review of C06 geometry-only method, artifacts, comparison/scoring profiles, CPU retained-native acceptance/request staging, regression source and G01 implementation closure. Root is sole integration writer in isolated final checkout.",
+  "design_digest": "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034",
+  "design_reference_count": 125,
+  "source_complete_candidate_count": 10,
+  "confirmatory_contrast_count": 98,
+  "findings_remaining": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "repaired_before_final_review": [
+    "Witness feasibility uses actual marginal residuals rather than exact simultaneous floating-point exhaustion.",
+    "Sinkhorn enforces finite absolute and relative marginal closure; barycentric lift normalizes actual positive row mass and retains relative residual certificates.",
+    "Real C06 acceptance and expensive comparison/scoring-request preparation now execute in emitted zero-GPU common-harness tasks; no direct method replay CLI in Local runbook.",
+    "C06 acceptance builder matches actual archive schema and stages producer provenance/code plus original source pair explicitly.",
+    "New Local-only regression source exercises real _stage across two roots, missing optional arguments, deleted original inputs, no-skips acceptance, tiny masses and translation equivariance.",
+    "G01 pins actual native_context_runner B0 producer for C06/C11/C12 and refreshes all affected implementation hashes.",
+    "Shared C11 and C06 seed allowance remains 42 until additional producer seeds are separately qualified.",
+    "Shared comparison diagnostics use actual profile identity."
+  ],
+  "review_result": "No remaining Critical/Important in both independently reviewed scopes; final profile-label minor repaired by root and rechecked.",
+  "evidence_class": "independent_static_source_review_only",
+  "generated_unexecuted": true,
+  "project_imports_executed": false,
+  "project_tests_executed": false,
+  "method_execution": false,
+  "model_or_data_download": false,
+  "native_scoring": false,
+  "gpu_execution": false,
+  "scope_limits": [
+    "Geometry-only specialization, no claimed novelty or empirical benefit.",
+    "Local must execute meaningful software and retained-native acceptance.",
+    "Source-derived family, scientific Gate0/IPCG, D1 B*, additional seeds, actual runtime installation and native results remain pending."
+  ],
+  "source_sha256": {
+    "actionmesh/launch_c06_native_scoring.py": "788e2ea465fb1fe0fb0d84b9747dfc97b5eec5dec2534d78d76ef65de2209134",
+    "actionmesh/prepare_area_transport_candidate.py": "9ed3338fda1f9d77605bfee878cde98bc621b9e65bd4d12f154c94813b10c327",
+    "actionmesh/prepare_c06_native_acceptance.py": "08fd6e8cda26979b82b7892365bc37af6e4f2f954f9c4f64edad5b94a94ed688",
+    "actionmesh/prepare_c06_native_scoring.py": "31a120b6bcac53a350adc3c345307f9e5b86eff647697b1e1079c4f39d33a6db",
+    "actionmesh/prepare_c14_native_scoring.py": "cf54c64b14d2861f4c5a7e13862d94cf3db09b94f5cad81ff6bbd11a81042f20",
+    "actionmesh/prepare_control_scoring_checks.py": "fe69ba4ac7f6a88da0b0216bc3f5403058d5760544fb491078872006d28fb985",
+    "actionmesh/research_math/area_transport_candidate.py": "4d4de7214c65abe1207114a0b4134c32756a5ec593fa051998ce481a00623571",
+    "actionmesh/research_math/c06_native_comparison.py": "76c1c27c44c39801d5a593417b3d6b3d643060c05adcc4a9aa43b5688b09cc21",
+    "actionmesh/research_math/c06_native_scoring.py": "4eeddbd0c2bfe3d7e576b3ad231535a08784b2c556c435bfea268d73225840a0",
+    "actionmesh/research_math/c11_native_comparison.py": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77",
+    "actionmesh/research_math/g01_design.py": "b21cba2b7d1e35f475ab572374aecd08a9f725d309f1e68f715f9e2730363688",
+    "actionmesh/research_math/tests/test_area_transport_candidate.py": "99b161e67aca5b88a6e9678355f298ff822ed345009dfb7b72d9f418f343f238",
+    "actionmesh/research_math/tests/test_c06_native_acceptance_plan.py": "3c2ef374c930fede8677fb5e56e0642a8b348c0b1861313af6966e422f4da187",
+    "actionmesh/research_math/tests/test_c06_native_scoring_profile.py": "3454c0f8db8e3791dbc3dceaf7d7dd1a2844160b8b7a3451e814e1468199af26",
+    "actionmesh/research_math/tests/test_g01_design.py": "08ac527888c93175099a0d4fa95b139837003f6f9e39581cdd4a8800a10bb83b",
+    "actionmesh/research_math/tests/test_native_b0_contract.py": "50c510ec4dc64b19d9f2d549f5562dbab5d72353e89e0b28b56dd99641e44815",
+    "actionmesh/research_math/tests/test_scoring_profile_closure.py": "d6bd67b978b3b241ec027f1dcb736931ce29b0a7daeff0509f8f5391302208b1",
+    "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json": "31f49b30d56e28ae5f37d07324828eb210993d8ad2167b9681a43df13d3ac419",
+    "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c06.json": "82ea8a7f45ae957aadef14568049d13a2be22cc256eb4a610f3b4b4a339e53f9"
+  }
+}

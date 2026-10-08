@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (9/15); Local-verified and native-result candidates remain 0/15. Six source chains and an actually configured online repair-agent integration remain pending. The stage-wide G01 source design is complete/generated_unexecuted; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C03/C20 and the C05/C08/C06/C07 model-interface dependencies remain blocked on missing legal native inputs rather than fabricated arrays. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C04,C06,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (10/15); Local-verified and native-result candidates remain 0/15. Five source chains and an actually configured online repair-agent integration remain pending. The stage-wide G01 source design is complete/generated_unexecuted; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C03/C20 and the C05/C08 dependencies remain blocked on missing legal native inputs; C07 can now reuse C06's geometry-only source bank but its distinct partial/slack method is still unimplemented. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -15,7 +15,8 @@
     "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
     "C14": "simple_mesh_controls.py remains the Gaussian control. corotational_residual_candidate.py implements the distinct anchored nonuniform-time group-TV method; c14_native_comparison.py, c14_native_scoring.py, prepare_c14_native_scoring.py and launch_c14_native_scoring.py complete its generated_unexecuted five-role comparison, official scoring, receipt validation and authorization-gated admitted-plan builder/controller source chain.",
     "C01": "self_map_candidate.py consumes the entire native context and reconstructs distinct raw/mean/self-map outputs; prospective comparison, official scorer/raw closure, gated plan/launcher and dedicated real-input CPU acceptance are authored. Original 314/2718 design repeats are not executable through the seed42-only producer.",
-    "C04": "Distinct positive-diagonal robust-conic source chain; source-only delivery is not semantic coverage, calibrated uncertainty or Local/native qualification."
+    "C04": "Distinct positive-diagonal robust-conic source chain; source-only delivery is not semantic coverage, calibrated uncertainty or Local/native qualification.",
+    "C06": "area_transport_candidate.py derives rotation/translation-invariant one-ring descriptors, normalized barycentric masses and a deterministic feasible sparse support from one receipt-bound predicted ActionMesh sequence. Row softmax, uniform vertex-density OT and area-marginal OT share the same descriptor cost/support/entropy/lift; all export full 16-frame native sequences. c06_native_comparison.py, c06_native_scoring.py, the CPU artifact plan, admitted scorer plan and single-owner launcher complete the generated_unexecuted five-role source chain."
   },
   "required_next_sequence": [
     "Continue independent shared interface/source work; current CPU software acceptance remains Local-only.",
@@ -990,10 +991,10 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c06-math.json",
         "sha256": "791e03d35227cb16c50dd2c68552bb59d34c312d0d7460d8334f2bd6e03db656"
       },
-      "source_status": "specification_only",
-      "input_blocker_evidence": "2026-10-08 exact-source review: current ActionMesh output/context supplies meshes and latent tensors but no qualified legal surface feature/cost/support producer shared by all C06 arms. Arbitrary external costs would leave only a transport primitive, not the complete selected method.",
-      "code_entry": null,
-      "real_input_and_model_interface": "Qualified legal surface features/cost/support with equal-total area mass",
+      "source_status": "source_chain_complete_generated_unexecuted: geometry-only specialization, three complete artifact arms, five-role freeze, official scoring/raw collection and authorization-gated common-harness plan/launcher are authored; no Local or scientific execution occurred",
+      "input_blocker_evidence": "Resolved at source level by a conservative geometry-only specialization: the receipt-bound predicted mesh itself supplies invariant one-ring descriptors, normalized barycentric areas, identity edges and a deterministic marginal-feasible witness. It does not claim model-attention semantics, natural ambiguity or scientific benefit.",
+      "code_entry": "actionmesh/research_math/area_transport_candidate.py; CPU plan actionmesh/prepare_area_transport_candidate.py; actionmesh/prepare_c06_native_acceptance.py",
+      "real_input_and_model_interface": "One completed same-UID ActionMesh sequence.npz/report.json pair with 16 float32 predicted mesh frames, fixed topology, timestamps/frame indices/query vertex IDs; no GT, scorer array, latent attention or external cost matrix is consumed",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -1007,16 +1008,26 @@
         "vertex_density_transport",
         "area_marginal_transport"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "native_scoring_entry": "actionmesh/research_math/c06_native_comparison.py -> actionmesh/research_math/c06_native_scoring.py -> actionmesh/prepare_c06_native_scoring.py -> actionmesh/launch_c06_native_scoring.py -> official_actionbench_adapter.py",
+      "local_method_acceptance_command": "First execute the common CPU acceptance through its emitted harness plan. Then build the receipt-bound CPU artifact plan: \"$python_bin\" \"$project_dir/actionmesh/prepare_area_transport_candidate.py\" --root \"$project_dir\" --skill-dir \"$skill_dir\" --source-sequence \"$source_case/sequence.npz\" --run-id c06-area-transport-001 --epsilon \"$epsilon\" --neighbors \"$neighbors\" --tolerance \"$tolerance\" --max-iterations \"$max_iterations\" --coordinate-bounds \"$lower\" \"$upper\" --bounds-policy preserve_and_report --max-artifact-bytes \"$max_artifact_bytes\" --wall-seconds \"$wall_seconds\" --ram-mib \"$ram_mib\" --plan-dir \"$project_dir/plans/c06-area-transport-001\"; execute only the printed approved harness plan, then create/verify the prospective five-role freeze/request before any scoring authorization. Retained real replay and comparison/scoring request preparation must use prepare_c06_native_acceptance.py, then its emitted zero-GPU harness plan; never call replay/request directly.",
+      "acceptance_command_gap": "Commands and targeted real artifact-to-freeze test source are authored but generated_unexecuted. Local must choose epsilon/k/support/resource limits prospectively, run current CPU acceptance and the real receipt-bound artifact plan, then satisfy G01/Gate0/IPCG/family/B*/authorization requirements. No GPU resume exists.",
+      "completion_evidence": [
+        "actionmesh/research_math/area_transport_candidate.py",
+        "actionmesh/prepare_area_transport_candidate.py",
+        "actionmesh/research_math/c06_native_comparison.py",
+        "actionmesh/research_math/c06_native_scoring.py",
+        "actionmesh/prepare_c06_native_scoring.py",
+        "actionmesh/launch_c06_native_scoring.py",
+        "actionmesh/research_math/tests/test_area_transport_candidate.py",
+        "actionmesh/research_math/tests/test_c06_native_scoring_profile.py",
+        "actionmesh/prepare_c06_native_acceptance.py",
+        "actionmesh/research_math/tests/test_c06_native_acceptance_plan.py"
+      ],
       "remaining_implementation_gaps": [
-        "feature/support adapter",
-        "log-domain transport",
-        "both marginal checks",
-        "zero-area handling",
-        "common lift"
+        "none at source-chain level for the stated geometry-only specialization",
+        "Local current-revision software and real native-interface acceptance",
+        "prospective numeric/support/resource/B* freezes and candidate-specific scientific admission",
+        "official native scores, paired statistics and evidence-based conclusion"
       ],
       "scientific_prerequisites": [
         "qualified legal surface features and feasible support",
@@ -1028,7 +1039,7 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -1051,7 +1062,7 @@
         "sha256": "4bdeef6356922e50c5f476668b30ab5026c02923f8409a7d438892127ebaa163"
       },
       "source_status": "specification_only",
-      "input_blocker_evidence": "2026-10-08 exact-source review: C07 inherits C06's missing legal feature/cost/support producer; a threshold/slack solver without that native producer and complete fallback mapping is not a complete method chain.",
+      "input_blocker_evidence": "C06 now supplies a legal geometry-only descriptor/cost/support/mass specialization that C07 may reuse. C07 remains incomplete because its distinct partial/slack transport, exact unmatched-mass accounting, prospective penalty and full native fallback have not yet been implemented.",
       "code_entry": null,
       "real_input_and_model_interface": "Same features/areas/cost/support as C06 plus native fallback and frozen slack penalty",
       "required_outputs": [
@@ -1093,8 +1104,8 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "dfc8309fe60e8ae78289285ec192b965db44f162",
-  "independent_source_review": "C12 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c12_source_review identified near-tangent connected-component, archive-reference, failed-arm replay and bounded-materialization blockers; all were repaired, and focused final re-review found no remaining Critical/Important issue in scope. A separate final G01 static review at g01-source-review.json found Critical 0, Important 0, Minor 0 after digest, family, B*, exact source-closure and job-order hardening. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 9/15.",
+  "maintained_base_commit": "683b96269887b75d33a56bd7ac4095ccdd58edcf",
+  "independent_source_review": "Independent /root/review_c06 and /root/review_g01_c06 static review completed; all reported numerical, harness-staging, source-closure and profile-label findings repaired. Exact evidence in docs/research-math-20261006/longgoal-20261007/g01-c06-incremental-source-review.json. Source only, no project execution.",
   "supervisor_extension_review": {
     "path": "docs/research-math-20261006/longgoal-20261007/supervisor-append-extension-source-review.json",
     "status": "generated_unexecuted_independent_static_review_complete",
@@ -1109,8 +1120,8 @@
     "guide_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-source-review.json",
-    "design_digest": "85f52a34de5303bb16e760a07314c67eba304d4c0c07ab942d0ac75ae765be76",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-c06-incremental-source-review.json",
+    "design_digest": "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034",
     "source_review_findings_remaining": {
       "critical": 0,
       "important": 0,
@@ -1128,7 +1139,7 @@
   },
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 9,
+    "full_method_source_complete": 10,
     "local_method_verified": 0,
     "native_results": 0,
     "g01_source_design": "complete_generated_unexecuted_dynamic_admission_pending",

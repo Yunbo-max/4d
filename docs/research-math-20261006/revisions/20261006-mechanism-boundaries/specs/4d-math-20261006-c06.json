@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c06",
   "name_zh": "面积边际约束的对应运输",
   "priority_rank": 14,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Complete geometry-only source chain is generated_unexecuted; awaiting Local verification, scientific admission and frozen native protocol; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c06.json",
@@ -54,20 +54,20 @@
     {
       "derivation_step": "s1",
       "statement": "Minimize sum Pi_ij c_ij + epsilon sum Pi_ij(log Pi_ij-1), with Pi1=a and Pi^T1=b.",
-      "planned_function": "4d_math_20261006_c06.form_area_transport_objective",
-      "status": "not_implemented"
+      "planned_function": "research_math.area_transport_candidate.sparse_sinkhorn",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "Stationarity gives Pi_ij=exp(-(c_ij+alpha_i+beta_j)/epsilon)=u_i K_ij v_j.",
-      "planned_function": "4d_math_20261006_c06.derive_log_scaling",
-      "status": "not_implemented"
+      "planned_function": "research_math.area_transport_candidate.sparse_sinkhorn",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "u=a/(Kv), v=b/(K^T u) enforce the two marginals when converged.",
-      "planned_function": "4d_math_20261006_c06.close_both_marginals",
-      "status": "not_implemented"
+      "planned_function": "research_math.area_transport_candidate.sparse_sinkhorn",
+      "status": "source_implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -116,9 +116,9 @@
     ]
   },
   "outstanding_requirements": [
-    "qualified legal surface features and feasible support",
+    "Local verification of the geometry-only descriptor/cost/feasible-support specialization",
     "area-marginal assumption versus real stretch",
-    "fair sparse-bank/lift and area-zero handling",
+    "scientific review of the shared sparse-bank/lift and retained-ID zero-area removal/native fallback policy",
     "final 16/16 raw receipts and native replay",
     "Natural Gate 0 PASS; required importance/collision decision",
     "code identity/software/native-interface verification",

@@ -1878,3 +1878,47 @@ source union, C15 preparer, canonical builder insertion order, strict actual-job
 B* time chain. The final result is Critical 0 / Important 0 / Minor 0, recorded in
 `longgoal-20261007/g01-source-review.json`. This is static source evidence only:
 no project import, test, plan, model/data operation, scoring or GPU work occurred.
+
+## Continuation: C06 geometry-only area transport — 2026-10-08
+
+Restored literal main `683b96269887b75d33a56bd7ac4095ccdd58edcf` and
+retained the existing scientific question, 20-card pool and selected 15 without
+re-ranking. Exact-source inspection showed that C06 can be specialized without
+fabricated external arrays: one receipt-bound predicted mesh sequence supplies
+rotation/translation-invariant one-ring descriptors, normalized barycentric
+areas, identity support and deterministic strictly positive area/uniform sparse
+witnesses on one shared support.
+
+The new CPU method source implements row softmax, uniform vertex-density
+balanced transport and the selected area-marginal balanced transport. A sparse
+log-domain Sinkhorn closes both frozen marginals or fails; support is monotonically
+closed until both marginal systems admit positive mass on every retained edge.
+All roles use the same descriptor cost, support, entropy and target-coordinate barycentric lift,
+preserve frame zero exactly and export all 16 native frames plus replayable
+residual/objective/support certificates. Degenerate/zero-area elements are
+removed from transport with retained original-ID masks and same-ID native
+fallback; nonconvergence and coordinate-policy failures are terminal.
+
+The five-role comparison/freezer, official ActionBench raw collector,
+scientific admission builder and single-owner launcher are parameterized for
+C06. Static review exposed and repaired two integration blockers: the B0
+generation-identity binder did not recognize C06, and the shared C11 comparison
+imported C11 candidate transitives before the C06 override. Authored Local tests
+cover the real artifact-to-five-role request, marginal closure, artifact replay,
+isolated profile imports and B0 provenance corruption. The G01 design now binds
+C06's exact source closure and covers 10/15 source-complete candidates while
+keeping all 98 contrasts unchanged.
+
+All C06 code and tests are `generated_unexecuted`. Web performed only static
+AST/JSON/hash/diff inspection: no project import/test, plan execution, artifact,
+model, data download, inference, official scorer or GPU work ran. Local/native
+verification remains 0/15, dynamic family/B*/Gate0/IPCG evidence remains absent,
+the supervisor remains uninstalled/unstarted, online repair is not connected and
+GPU STOP plus frozen one-attempt/zero-retry protocols remain effective.
+
+Final C06 review repairs floating-total witness rejection, enforces absolute and
+relative marginal residuals, normalizes the lift by actual row mass, and replaces
+direct replay/request commands with a real-artifact zero-GPU acceptance builder.
+Its source tests exercise the real cross-root staging function without mocking
+it. G01 additionally pins the actual B0 context producer for C06/C11/C12.
+No such tests were run in Web; all are for Local acceptance.

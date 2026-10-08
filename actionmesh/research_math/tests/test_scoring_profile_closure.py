@@ -21,7 +21,7 @@ import unittest
 class ScoringProfileClosureTests(unittest.TestCase):
     def test_scorer_and_launcher_import_from_only_prescribed_sources(self):
         repository = Path(__file__).resolve().parents[3]
-        for profile in ('c01', 'c02', 'c11', 'c14'):
+        for profile in ('c01', 'c02', 'c06', 'c11', 'c14'):
             with self.subTest(profile=profile), tempfile.TemporaryDirectory() as directory:
                 planner = importlib.import_module('prepare_' + profile + '_native_scoring')
                 staged = Path(directory)

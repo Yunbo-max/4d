@@ -61,7 +61,7 @@ EXPECTED_SCORER_REFS = {
     "actionmesh/repo/actionbench/sample_point_cloud.py":
         "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
 }
-EXPECTED_DESIGN_DIGEST = "85f52a34de5303bb16e760a07314c67eba304d4c0c07ab942d0ac75ae765be76"
+EXPECTED_DESIGN_DIGEST = "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034"
 EXPECTED_REVIEW_CHECKS = {
     "source_identity", "mapping_reproduction", "split_independence",
     "exposure_containment",
@@ -423,8 +423,8 @@ def validate_design_record(root: Path, design: dict) -> dict:
         if row.get("confirmatory_contrasts") != expected_contrasts:
             raise ValueError("candidate contrast inventory is incomplete")
         total_contrasts += len(expected_contrasts)
-    if approved_implementation_count != 9:
-        raise ValueError("exactly nine delivered candidate implementation closures required")
+    if approved_implementation_count != 10:
+        raise ValueError("exactly ten delivered candidate implementation closures required")
 
     statistics = design.get("statistics")
     if (not isinstance(statistics, dict)

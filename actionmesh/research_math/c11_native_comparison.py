@@ -15,7 +15,10 @@ from pathlib import Path
 
 import numpy as np
 
-from research_math import strain_projection_candidate as candidate_module
+try:
+    candidate_module
+except NameError:
+    from research_math import strain_projection_candidate as candidate_module
 
 
 CANDIDATE_ID = "4d-math-20261006-c11"
@@ -30,6 +33,7 @@ DECISION_KIND = "c11-b-star-decision"
 DECISION_NO_OUTCOMES_FIELD = "selected_without_c11_native_outcomes"
 REQUEST_KIND = "c11-native-comparison-request"
 PROFILE_LABEL = "C11"
+ALLOWED_INFERENCE_SEEDS = (42,)
 
 
 def digest(path: Path) -> str:
@@ -183,7 +187,7 @@ def _artifact_closure(root: Path, artifact_path: Path,
     if (verified.get("candidate_id") != CANDIDATE_ID
             or verified.get("uid") != freeze["uid"]
             or verified.get("seed") != freeze["inference_seed"]):
-        raise ValueError("Verified C11 artifact identity differs from freeze")
+        raise ValueError(f"Verified {PROFILE_LABEL} artifact identity differs from freeze")
     artifact = read_json(artifact_path)
     if (artifact.get("source_sequence_sha256")
             != freeze["source_sequence_ref"]["sha256"]
@@ -192,11 +196,11 @@ def _artifact_closure(root: Path, artifact_path: Path,
             or artifact.get("source_refs") != {
                 "sequence": freeze["source_sequence_ref"],
                 "report": freeze["source_report_ref"]}):
-        raise ValueError("C11 artifact is not derived from frozen B0")
+        raise ValueError(f"{PROFILE_LABEL} artifact is not derived from frozen B0")
     directory = artifact_path.parent
     reports = [read_json(directory / role / "report.json") for role in METHOD_ROLES]
     if artifact.get("arms") != reports:
-        raise ValueError("C11 candidate record differs from terminal role reports")
+        raise ValueError(f"{PROFILE_LABEL} candidate record differs from terminal role reports")
     manifest = read_json(directory / "manifest.json")
     completed = [row["candidate_arm"] for row in reports if row["status"] == "completed"]
     expected_cases = [{"case_id": freeze["uid"] + "-" + role,
@@ -205,13 +209,18 @@ def _artifact_closure(root: Path, artifact_path: Path,
     if (manifest.get("expected_roles") != list(METHOD_ROLES)
             or manifest.get("cases") != expected_cases
             or manifest.get("common_target") != artifact.get("common_target")):
-        raise ValueError("C11 artifact manifest differs from terminal arms")
+        raise ValueError(f"{PROFILE_LABEL} artifact manifest differs from terminal arms")
     paths = [artifact_path, directory / "manifest.json",
              directory / "common-target.npz"]
     archive = verified.get("artifact_archive")
     if not isinstance(archive, dict):
-        raise ValueError("C11 retained artifact archive required")
+        raise ValueError(f"{PROFILE_LABEL} retained artifact archive required")
     paths.extend(resolve_ref(root, ref) for ref in archive.values())
+    producer_ref = verified.get("producer_provenance_ref")
+    if producer_ref is not None:
+        paths.append(resolve_ref(root, producer_ref))
+    for ref in verified.get("implementation_refs", []):
+        paths.append(resolve_ref(root, ref))
     for role in METHOD_ROLES:
         paths.append(directory / role / "report.json")
         report = read_json(directory / role / "report.json")
@@ -304,7 +313,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
                     or identity.get("scope") !=
                     "paired engineering observer/replay; no candidate or scorer execution"
                     or identity.get("uid") != freeze["uid"]
-                    or freeze["inference_seed"] != 42
+                    or freeze["inference_seed"] not in ALLOWED_INFERENCE_SEEDS
                     or identity.get("generation", {}).get("seed") != freeze["inference_seed"]
                     or not isinstance(identity.get("verified_unit_manifest"), dict)
                     or not isinstance(identity.get("retained_input_refs"), dict)
@@ -343,9 +352,9 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
                 if (certificate_path != artifact_path.parent / role / "certificate.npz"
                         or report.get("sha256", {}).get("certificate.npz")
                         != row["certificate_ref"]["sha256"]):
-                    raise ValueError("Completed C11 role lacks certificate: " + role)
+                    raise ValueError(f"Completed {PROFILE_LABEL} role lacks certificate: " + role)
             elif certificate_path is not None:
-                raise ValueError("Failed C11 role cannot invent certificate")
+                raise ValueError(f"Failed {PROFILE_LABEL} role cannot invent certificate")
             if role == CANDIDATE_ROLE:
                 if row["method_id"] != CANDIDATE_ID:
                     raise ValueError(f"{CANDIDATE_ROLE} must be {PROFILE_LABEL} candidate")
@@ -456,7 +465,7 @@ def verify_request(root: Path, request: dict) -> None:
     expected = make_request(root, freeze_path=resolve_ref(root, request["freeze_ref"]),
                             _verify=False)
     if request != expected:
-        raise ValueError("Request differs from current frozen C11 construction")
+        raise ValueError(f"Request differs from current frozen {PROFILE_LABEL} construction")
 
 
 def main() -> int:
