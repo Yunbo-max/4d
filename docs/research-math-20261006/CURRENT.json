@@ -1291,7 +1291,7 @@
     ],
     "delivery_inventory_ref": {
       "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
-      "sha256": "08b61d6b6d063294ed289d3952d9f197789597d79f0d1902fc2013e621ee0731"
+      "sha256": "92a2d5aab5f80f9eede6a575c112914c21545ef705c1a3d053f26ed78340d111"
     },
     "source_review": {
       "mode": "three independent read-only math/code, plan/interface and protocol/document reviews; no execution",
@@ -1303,7 +1303,8 @@
         "plan tests initially omitted the installed run_experiments cross-root staging boundary",
         "per-candidate audit/spec/handoff initially omitted explicit IPCG and complete G01 obligations",
         "documentation initially called loader-clock indices real timestamps",
-        "future scoring wrapper requirements were initially too implicit for the generic adapter's shallow report check"
+        "future scoring wrapper requirements were initially too implicit for the generic adapter's shallow report check",
+        "an overbroad inventory edit temporarily attached C14-specific IPCG/G01 obligations to C01; exact-row correction applied before final handoff"
       ],
       "final_state": "No remaining Critical/Important finding in the candidate-core/CPU-plan scope; Local execution and the separately missing comparison/scoring chain remain required"
     },
