@@ -63,7 +63,8 @@ class NativeContextPlanTests(unittest.TestCase):
         skill = os.environ.get('RESEARCH_AUTOPILOT_SKILL_DIR')
         self.assertIsNotNone(skill, 'Use the acceptance builder-selected installed skill')
         return SimpleNamespace(root=root, plan_dir=root / 'plans/paired', skill_dir=Path(skill),
-            run_id='paired-fixture', gpu_uuid='GPU-fixture', instrument_wall_seconds=5000,
+            run_id='paired-fixture', gpu_uuid='GPU-fixture', generation_seed=314,
+            instrument_wall_seconds=5000,
             atol=0., rtol=0., max_capture_bytes=67108864, source_time_query=True,
             cpu_cores=2, ram_mib=4096, **paths)
 
@@ -82,7 +83,8 @@ class NativeContextPlanTests(unittest.TestCase):
             self.assertEqual(outer['limits']['window_seconds'], 6800)
             self.assertEqual(outer['tasks'][0]['resources']['gpu_count'], 1)
             job = native['jobs'][0]
-            self.assertEqual(job['seed'], 42)
+            self.assertEqual(job['seed'], 314)
+            self.assertEqual(command[command.index('--generation-seed') + 1], '314')
             self.assertIn('actionmesh/context-output/raw-evidence.tar', job['output_paths'])
             import run_experiments
             attempt = root / 'attempt'; attempt.mkdir()

@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T19:48:15Z",
+  "recorded_at": "2026-10-08T22:55:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (12/15). C08 is a receipt-bound predicted-geometry KL path bridge with no attention/natural-correspondence claim. C20 has a bounded solver core but remains incomplete because no qualified full-time motion-target/amplitude-basis producer or artifact/scoring chain exists; C03/C05 remain incomplete on their recorded legal-input routes. G01 is complete/generated_unexecuted with 12 exact method closures; dynamic family/B*/candidate admission remains pending. Three full method source chains remain. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C03,C04,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (13/15). C03 uses development-only same-index tracked-GT decoder probes and explicitly treats GT-query to generated-query calibration as a falsifiable plain-coordinate transfer assumption, not correspondence or native qualification. C05 and C20 remain incomplete on their legal mode/target routes. G01 is complete/generated_unexecuted with 13 exact method closures; dynamic family/B*/candidate admission remains pending. Two full method source chains remain. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods 0/15. GPU STOP unchanged.",
   "supervisor_repair_handshake": {
     "status": "source_authored_generated_unexecuted_local_acceptance_pending",
     "authoring_base": "6399bff2b087e3d648afa8e204948545c574ecca",
@@ -40,9 +40,9 @@
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
     "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "1963eb8e2da1019b195af9536583b18eb74636b5e193fbc33b68cfa253dbebb1",
-    "coverage": "15 selected specs, exact candidate/native source closures for 12 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
-    "independent_static_review": "C20/G01 incremental independent source review complete; G01 Critical 0, Important 0, Minor 0; C20 partial core Critical 0, Important 0, Minor 1; Local execution pending",
+    "design_digest": "50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9",
+    "coverage": "15 selected specs, exact candidate/native source closures for 13 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
+    "independent_static_review": "Prior C20/G01 incremental review plus current C03 incremental source review; current source remains generated_unexecuted and Local execution pending",
     "tests_executed": false,
     "scientific_design_verified": 0,
     "local_method_verified": 0,
@@ -1838,10 +1838,10 @@
     "gpu_execution": "stopped_by_user",
     "next_action": "Prospectively freeze and qualify an inactive-stationarity threshold, then implement the qualified target/basis producer and complete artifact/comparison/scoring chain or keep C20 blocked without relabelling model displacement as target. The geometry-only C08 specialization identified by exact-source review is an independent source-ready route after its prospective spec specialization."
   },
-  "c03_partial_calibration_handoff": {
-    "status": "partial_source_generated_unexecuted",
-    "recorded_at": "2026-10-08T12:09:20Z",
-    "base_commit": "8dd96d1374e2b551d1db6d111775d04b0cef2600",
+  "c03_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T22:55:00Z",
+    "base_commit": "31da17adee35f1863131113c664f89dc25668133",
     "candidate_id": "4d-math-20261006-c03",
     "source_refs": [
       {
@@ -1850,11 +1850,11 @@
       },
       {
         "path": "actionmesh/research_math/c03_calibration_artifacts.py",
-        "sha256": "1d1b578a745df2be4279d04553bd2a2c0e695d5c335b96bb435ef0f95609a775"
+        "sha256": "0450c533d86a14ec3e8c15c0b1a7e914231f24b2444059db5e1ba1b6bb68cfef"
       },
       {
         "path": "actionmesh/prepare_c03_calibration.py",
-        "sha256": "3fcb017bb5b875268f33eeb4e1a5045ed2d7d8dde01fe312857788119d5c85e8"
+        "sha256": "c4d021a49a3902b3670906d8fd49cb32898167e5ec582ce8e3bd8800e8d0dabb"
       },
       {
         "path": "actionmesh/research_math/tests/test_correlated_calibration.py",
@@ -1862,18 +1862,125 @@
       },
       {
         "path": "actionmesh/research_math/tests/test_c03_calibration_artifacts.py",
-        "sha256": "ede2dc4f868dd265de91e28fbd1cf0a4a53497037f80f9f44da471b5f36862a7"
+        "sha256": "f266a3ec27f412fd9e433a9735edb2b2cdba9a26d40e2351a8f8843a5c6f20da"
+      },
+      {
+        "path": "actionmesh/research_math/c03_label_bank.py",
+        "sha256": "4e1082732e9c3d8105e8e976153070930d830a55b9044e761bd7c6cc64c9b388"
+      },
+      {
+        "path": "actionmesh/prepare_c03_label_bank.py",
+        "sha256": "f8077b768fc59feb9bbf2f62485c3b8cbe4ba86d12eb9045aea534b8a5a7e305"
+      },
+      {
+        "path": "actionmesh/research_math/correlated_calibration_candidate.py",
+        "sha256": "bf861a2ebab2f69e65ba8552f5106c440f317b7bd7f29f76a12e4a3f1e115eda"
+      },
+      {
+        "path": "actionmesh/prepare_correlated_calibration_candidate.py",
+        "sha256": "5531126fa61352dc7af06057684cbafe508522fb86819204ac0e43ff5cace2a5"
+      },
+      {
+        "path": "actionmesh/research_math/c03_native_comparison.py",
+        "sha256": "06ddd93c22db2acac02e1bfff528544113af5436ddb53c0ee6b202b581bfc8cb"
+      },
+      {
+        "path": "actionmesh/research_math/c03_native_scoring.py",
+        "sha256": "e472d5a374ba7e6c882e0461edf86bb7c31c47214d5e84999f38ec896a90500a"
+      },
+      {
+        "path": "actionmesh/prepare_c03_native_acceptance.py",
+        "sha256": "1a8d5012307e8053744b848445b5679b897ed183dd09293cf6e0498ba57ff610"
+      },
+      {
+        "path": "actionmesh/prepare_c03_native_scoring.py",
+        "sha256": "368e075cc0e946f1af5363d212d296e12d42f90c2a077e6625223e70c3f18237"
+      },
+      {
+        "path": "actionmesh/launch_c03_native_scoring.py",
+        "sha256": "1751dab5f6152ba086bd6f38e31c583b9af8bf90553c6ee9612d18d9e41b22a4"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c03_label_bank.py",
+        "sha256": "281ade4158bee8b949cc3e2308fecb56d974a1eb4760bac25bca1bfcc71f67c2"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_correlated_calibration_candidate.py",
+        "sha256": "b068d4ce0882a6336f35559e8ffad7d1aaaf4179679468d50e4312dd6d7baed2"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c03_native_scoring_profile.py",
+        "sha256": "1b8d19362fcb60a389d3d530eab480bfa4dd9ad9168964102f990dc39e6ad68f"
+      },
+      {
+        "path": "actionmesh/research_math/complete_unit_contract.py",
+        "sha256": "8954d86ea76270c4803ceeb19a217a246f885c248b7125dfc88a30c08e113595"
+      },
+      {
+        "path": "actionmesh/research_math/native_context_runner.py",
+        "sha256": "84bd868d14ce6423b4c6975cc42c7a8db2da6fe5f6e5e8b634edb9c786bb2080"
+      },
+      {
+        "path": "actionmesh/prepare_native_context.py",
+        "sha256": "2796f8298d821ed048f817ed5c7807bf3a8147fb91a9bff0f7c0f584c539b5a1"
+      },
+      {
+        "path": "actionmesh/research_math/self_map_candidate.py",
+        "sha256": "8b0f3a7980f95ce290e10100953d714b3b8d289c9213cd8aa28554912398dafa"
+      },
+      {
+        "path": "actionmesh/prepare_self_map_candidate.py",
+        "sha256": "a48bc58de04d77492d6d99138faa6e0d5fc1aba5e7878191e971a898a64edb8e"
+      },
+      {
+        "path": "actionmesh/research_math/c11_native_comparison.py",
+        "sha256": "7c88389a1a91b548d5a2d951808afd9941f1eb4e7e16902f0ff0a1d9260a92d3"
+      },
+      {
+        "path": "actionmesh/research_math/c14_native_scoring.py",
+        "sha256": "9f82beda540fb3f236ef89994422c8937230341804884e3c6288eb8901039622"
+      },
+      {
+        "path": "actionmesh/prepare_c14_native_scoring.py",
+        "sha256": "b18b533937d1501759c04112a106a155b2a2bff9be448da88805c3deb7f80858"
+      },
+      {
+        "path": "actionmesh/launch_c14_native_scoring.py",
+        "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"
+      },
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/c03-tracked-query-source-review.json",
+        "sha256": "420c8c5ffdf38573a92086e95f25636b8acc1896bf72aa5e7cd581128f14cefe"
+      },
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json",
+        "sha256": "720392dd70b59e81fb853ab679c7215c618df2ed7a5fdcfb1349d81c015436f3"
+      },
+      {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c03.json",
+        "sha256": "964627b66fbbb4900e8cba9aed98b857cc263bd440f530371b1395dd3b27693a"
+      },
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json",
+        "sha256": "720392dd70b59e81fb853ab679c7215c618df2ed7a5fdcfb1349d81c015436f3"
       }
     ],
     "source_review": {
-      "reviewer": "independent /root/c03_review",
-      "scope": "static core, artifact, plan, software test source and installed _stage semantics",
+      "reviewer": "independent_c03_chain_patterns",
+      "review_ref": {
+        "path": "docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json",
+        "sha256": "720392dd70b59e81fb853ab679c7215c618df2ed7a5fdcfb1349d81c015436f3"
+      },
+      "scope": "exact tracked-query producer, frozen fit, complete artifacts, G01 split/B-star stages, nine-role native request/scoring, recursive acceptance and Local commands",
       "critical_or_important_remaining": 0,
       "findings_repaired": [
-        "bind all stopping/budget parameters at frozen bundle validation",
-        "retain independent per-role application failures"
+        "bind exact allowed generation seed through native context producer and plan",
+        "break the D1/global-B-star cycle while requiring the reviewed freeze for D2 and confirmation",
+        "carry and content-check the canonical G01 family split through scoring admission",
+        "recompute and verify candidate provenance, outputs, fits and recursive staged inputs"
       ],
-      "executed_tests": false
+      "executed_tests": false,
+      "generated_unexecuted": true
     },
     "boundary": {
       "batch": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
@@ -1885,15 +1992,16 @@
       "scientific_admission": false
     },
     "remaining_implementation_gaps": [
-      "Qualified native development correspondence/label-bank producer; tracked GT does not automatically map to decoder query vertices",
-      "Receipt-bound C01 context to C03 complete float32 mesh export with bounds/identity checks",
-      "Nine-role prospective comparison freeze, official scoring and raw collection",
-      "Retained-native acceptance and dynamic admission to the delivered G01 source design"
+      "Local execution/receipt for tracked-query development labels and frozen fit",
+      "Local retained-real-artifact acceptance",
+      "Dynamic G01 family/B-star/candidate admission and official native scoring/results",
+      "Empirical qualification of the declared GT-query to generated-query transfer assumption"
     ],
-    "full_method_source_complete": false,
+    "full_method_source_complete": true,
+    "source_complete_candidates": 13,
     "local_method_verified": false,
     "native_result": "not_started",
-    "next_action": "Resolve C03 legal pointwise development mapping from actual native sources; if not justifiable, keep only that dependency blocked and continue retained C20/independent selected source work. No invented labels or confirmation fitting.",
-    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c03-development-calibration-core--partial-source-not-a-native-chain"
+    "next_action": "Run current zero-GPU source acceptance. Keep GPU STOP until separate authorization; then produce/freeze development labels, fit, export confirmation artifacts, run retained acceptance and pursue G01 admission before official scoring.",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c03-correlated-calibration-chain--source-complete-not-executed"
   }
 }

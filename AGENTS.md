@@ -134,7 +134,7 @@ IDs are recomputed. UID/prefix/encoded labels and candidate outcomes are forbidd
 least 30 independent confirmation families must remain after D1/D2. The emitted
 task requests zero GPUs and cannot clear GPU STOP. Every D1 B* unit also requires
 an exact candidate/control native admission binding the spec, the implementation
-closure frozen in G01 (eleven delivered; four null/incomplete), single-attempt harness/
+closure frozen in G01 (thirteen delivered; C05 and C20 null/incomplete), single-attempt harness/
 producer identity, scorer closure and independent review completed before scoring.
 D1-only B* selection requires its own reviewed freeze before D2;
 confirmation remains locked. Missing family,
@@ -147,8 +147,10 @@ C01's actual direct decoder correction now has a source chain at
 runbook section. Preserve the five roles including raw_uncorrected so clamp
 removal is not mistaken for bias repair; original float32 anchor and all 16 frames
 remain fixed. The input is the real receipt-bound consumed context with a matched
-source-time query. The current producer only supports seed42/one native window;
-do not claim broader repeated-seed coverage. All source is generated_unexecuted.
+source-time query. The consumer/candidate source accepts only the frozen G01
+seeds 42/314/2718 and binds each to its generation identity; actual retained
+producer evidence is still seed42/one native window, so do not claim broader
+repeated-seed qualification. All source is generated_unexecuted.
 Use the dedicated CPU harness acceptance builder for retained real artifacts;
 its optional prospective freeze must be explicit and staged. Failed roles remain
 in the denominator and in the raw bundle. C01 scientific scoring needs its own
@@ -222,13 +224,15 @@ Before setup, acceptance, execution, repair, collection, or delivery, read at th
 
 Do not infer current status from older receipts. Mathematical construction, a generated request, a static receipt, and a software test are not native scientific qualification.
 
-C03 now has a partial development calibration core and CPU artifact plan at
-`actionmesh/prepare_c03_calibration.py`. Read the C03 runbook section. Its six
-frozen affine estimators and unit-C01 array application do not supply the missing
-legal development correspondence producer, complete native export or nine-role
-scoring chain. Do not use historical `correlated.py` synthetic outputs, arbitrary
-nearest-neighbour labels or confirmation GT. It remains partial generated source;
-full source-chain count excludes C03 and GPU STOP remains active.
+C03 now has a source-complete but **generated_unexecuted** chain. Read the C03
+runbook section. Development labels come only from same-index released ActionBench
+tracked points queried through exact retained Stage-II decoder contexts; no NN,
+ICP or GT-to-generated-vertex mapping is permitted. Confirmation consumes only a
+frozen fit and retained C01 generated-query context, exports seven method/control
+artifacts, and enters the nine-role official comparison/scoring chain. The global
+GT-query to generated-query operator transfer is a falsifiable plain-coordinate
+surrogate assumption, not native qualification. Do not use confirmation GT or the
+historical synthetic demonstration. Local/native status is 0/15 and GPU STOP remains active.
 
 C15 has a source-complete but **generated_unexecuted** chain. Read the C15
 runbook section before touching its inputs. The canonical method is
@@ -310,7 +314,7 @@ natural correspondence, GT or scorer state. Continue only through
 `prepare_trajectory_bridge_candidate.py`, `prepare_c08_native_acceptance.py`,
 the six-role prospective freeze, official scoring plan and single-owner launcher.
 Retain per-role failures; bridge nonconvergence must not erase independent control
-artifacts. GPU STOP remains active. The current source-chain count is 12/15;
+artifacts. GPU STOP remains active. The current source-chain count is 13/15;
 Local verification and native results remain 0/15.
 
 ## Safety and provenance

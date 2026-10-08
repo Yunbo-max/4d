@@ -1,9 +1,8 @@
 """C03 development-fit artifact boundary; generated, unexecuted source.
 
-This consumes an explicitly prepared pointwise development label bank. It does
-not construct or qualify material correspondence, run a model or score a mesh.
-The missing native label-bank producer remains a delivery gap. Hashes and split
-checks establish byte identity/isolation only, never scientific admission.
+This consumes the exact receipt-bound tracked-query development label bank.
+Hashes and split checks establish byte identity/isolation only, never scientific
+admission or transfer validity on generated-query vertices.
 """
 from __future__ import annotations
 
@@ -17,7 +16,8 @@ import numpy as np
 
 from research_math.self_map_candidate import digest, load, physical, write
 from research_math.correlated_calibration import (
-    CalibrationFailure, fit_affine, validate_fit, apply_frozen_fits, unit_c01,
+    CalibrationFailure, fit_affine, validate_fit, verify_fit,
+    apply_frozen_fits, unit_c01,
 )
 
 CANDIDATE_ID = '4d-math-20261006-c03'
@@ -38,6 +38,27 @@ def canonical_digest(value):
                                     allow_nan=False).encode()).hexdigest()
 
 
+def file_ref(root, path):
+    root, path = Path(root).resolve(), physical(path).resolve()
+    path.relative_to(root)
+    return {'path': path.relative_to(root).as_posix(), 'sha256': digest(path)}
+
+
+def resolve_ref(root, ref):
+    if (not isinstance(ref, dict) or set(ref) != {'path', 'sha256'}
+            or not isinstance(ref.get('path'), str)
+            or not isinstance(ref.get('sha256'), str) or len(ref['sha256']) != 64):
+        raise ValueError('Exact project-relative input ref required')
+    relative = Path(ref['path'])
+    if relative.is_absolute() or '..' in relative.parts:
+        raise ValueError('Nonescaping project-relative input ref required')
+    root = Path(root).resolve(); path = physical(root / relative).resolve()
+    path.relative_to(root)
+    if digest(path) != ref['sha256']:
+        raise ValueError('Referenced development input changed: ' + ref['path'])
+    return path
+
+
 def _strings(values, name):
     if (not isinstance(values, list) or not values
             or any(not isinstance(x, str) or not x for x in values)
@@ -49,7 +70,7 @@ def _strings(values, name):
 def validate_policy(policy):
     """Fixed-design metadata checks; no claim that declared provenance is true."""
     expected = {'kind', 'version', 'data_sha256', 'development_uids',
-        'confirmation_uids', 'uid_to_family', 'coordinate_policy',
+        'd2_uids', 'confirmation_uids', 'uid_to_family', 'coordinate_policy',
         'correspondence_evidence', 'parameters', 'generation_seed', 'frame_indices'}
     if (set(policy) != expected or policy['kind'] != 'c03-development-calibration-policy'
             or type(policy['version']) is not int or policy['version'] != 1):
@@ -59,11 +80,15 @@ def validate_policy(policy):
             or policy['frame_indices'] != list(range(16))):
         raise ValueError('Only seed42/full16 plain pointwise specialization is implemented')
     dev = _strings(policy['development_uids'], 'development_uids')
+    d2 = _strings(policy['d2_uids'], 'd2_uids')
     confirm = _strings(policy['confirmation_uids'], 'confirmation_uids')
     families = policy['uid_to_family']
-    if (dev & confirm or not isinstance(families, dict) or set(families) != dev | confirm
+    if (dev & d2 or dev & confirm or d2 & confirm
+            or not isinstance(families, dict) or set(families) != dev | d2 | confirm
             or any(not isinstance(v, str) or not v for v in families.values())
-            or {families[u] for u in dev} & {families[u] for u in confirm}):
+            or {families[u] for u in dev} & {families[u] for u in d2}
+            or {families[u] for u in dev} & {families[u] for u in confirm}
+            or {families[u] for u in d2} & {families[u] for u in confirm}):
         raise ValueError('Complete disjoint UID and family partitions required')
     refs = policy['correspondence_evidence']
     if not isinstance(refs, dict) or not refs:
@@ -110,9 +135,12 @@ def load_development_bank(data_path, policy):
     return values
 
 
-def fit_bundle(data_path, policy_path, evidence_files, output):
+def fit_bundle(root, data_path, policy_path, evidence_files, output):
     """Harness inner task. Failure of one fit retains all other attempts."""
-    output = Path(output); output.mkdir(parents=True, exist_ok=False)
+    root = Path(root).resolve(); output = Path(output)
+    for path in (data_path, policy_path, *evidence_files.values()):
+        physical(path).resolve().relative_to(root)
+    output.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
     result = {'candidate_id': CANDIDATE_ID, 'status': 'error', **SCOPE,
               'source_delivery_status': 'generated_unexecuted_at_authoring',
@@ -124,10 +152,47 @@ def fit_bundle(data_path, policy_path, evidence_files, output):
         for name, path in evidence_files.items():
             if digest(physical(path)) != policy['correspondence_evidence'][name]:
                 raise ValueError('Correspondence evidence changed: ' + name)
+        producer_name = 'c03_tracked_gt_producer_report'
+        if producer_name not in evidence_files:
+            raise ValueError('Receipt-bound C03 tracked-query producer report required')
+        producer = load(evidence_files[producer_name])
+        producer_core = {key: value for key, value in producer.items()
+                         if key != 'report_digest'}
+        if (producer.get('kind') != 'c03-tracked-gt-development-label-bank'
+                or producer.get('version') != 1
+                or producer.get('candidate_id') != CANDIDATE_ID
+                or producer.get('status') != 'completed'
+                or producer.get('data_sha256') != policy['data_sha256']
+                or producer.get('development_uids') != policy['development_uids']
+                or producer.get('d2_uids') != policy['d2_uids']
+                or producer.get('confirmation_uids') != policy['confirmation_uids']
+                or producer.get('coordinate_policy') !=
+                   'normalized_actionbench_tracked_gt_query_global_affine_transfer'
+                or producer.get('transfer_claim') !=
+                   'global residual-response calibration only; no pointwise GT-to-generated mapping'
+                or canonical_digest(producer_core) != producer.get('report_digest')):
+            raise ValueError('Current receipt-bound C03 tracked-query producer required')
+        producer_inputs = producer.get('input_refs')
+        if (not isinstance(producer_inputs, list) or not producer_inputs):
+            raise ValueError('C03 producer must retain complete input closure')
+        producer_refs = [producer.get('inventory_ref'), *producer_inputs]
+        if (not isinstance(producer.get('inventory_ref'), dict)
+                or producer.get('inventory_ref', {}).get('sha256') !=
+                   producer.get('inventory_sha256')
+                or len({ref.get('path') for ref in producer_refs if isinstance(ref, dict)})
+                   != len(producer_refs)):
+            raise ValueError('C03 producer must retain complete distinct input closure')
+        for ref in producer_refs:
+            resolve_ref(root, ref)
         values = load_development_bank(data_path, policy)
         policy_hash = digest(policy_path)
         result.update(policy_sha256=policy_hash, data_sha256=policy['data_sha256'],
-                      policy=policy, role_results={})
+                      policy=policy, role_results={}, input_refs={
+                          'data': file_ref(root, data_path),
+                          'policy': file_ref(root, policy_path),
+                          'evidence': {name: file_ref(root, path)
+                                       for name, path in sorted(evidence_files.items())},
+                          'producer_inputs': producer_refs})
         # One failure is not substituted with another estimator or silently retried.
         for role, (mode, loss) in FIT_ROLES.items():
             fits, failures = [], []
@@ -161,7 +226,7 @@ def fit_bundle(data_path, policy_path, evidence_files, output):
     return result
 
 
-def validate_bundle(bundle):
+def validate_bundle(bundle, *, root=None):
     if (bundle.get('candidate_id') != CANDIDATE_ID
             or bundle.get('status') not in ('completed', 'incomplete')
             or any(bundle.get(k) is not v for k, v in SCOPE.items())
@@ -169,6 +234,23 @@ def validate_bundle(bundle):
                 != bundle.get('bundle_digest')):
         raise ValueError('Unmodified completed/incomplete unqualified fit bundle required')
     policy = validate_policy(bundle['policy'])
+    refs = bundle.get('input_refs')
+    if (not isinstance(refs, dict)
+            or set(refs) != {'data', 'policy', 'evidence', 'producer_inputs'}
+            or set(refs['evidence']) != set(policy['correspondence_evidence'])
+            or not isinstance(refs['producer_inputs'], list)
+            or not refs['producer_inputs']
+            or refs['data'].get('sha256') != policy['data_sha256']
+            or refs['policy'].get('sha256') != bundle.get('policy_sha256')
+            or any(refs['evidence'][name].get('sha256') != value
+                   for name, value in policy['correspondence_evidence'].items())):
+        raise ValueError('Fit bundle requires recursive immutable development input refs')
+    for ref in (refs['data'], refs['policy'], *refs['evidence'].values(),
+                *refs['producer_inputs']):
+        if (not isinstance(ref, dict) or set(ref) != {'path', 'sha256'}
+                or Path(ref['path']).is_absolute() or '..' in Path(ref['path']).parts
+                or not isinstance(ref['sha256'], str) or len(ref['sha256']) != 64):
+            raise ValueError('Canonical project-relative fit input ref required')
     if (bundle.get('data_sha256') != policy['data_sha256']
             or set(bundle['role_results']) != set(FIT_ROLES)):
         raise ValueError('Fit bundle must retain all six matched roles')
@@ -195,16 +277,30 @@ def validate_bundle(bundle):
                     raise ValueError('Role or frozen parameter identity differs')
     if bundle['status'] != ('incomplete' if any_failed else 'completed'):
         raise ValueError('Bundle terminal state differs from fit inventory')
+    if root is not None:
+        data_path = resolve_ref(root, refs['data'])
+        policy_path = resolve_ref(root, refs['policy'])
+        if load(policy_path) != policy:
+            raise ValueError('Fit bundle policy differs from retained policy bytes')
+        values = load_development_bank(data_path, policy)
+        for row in bundle['role_results'].values():
+            for frame, fit in enumerate(row['fits']):
+                if fit is not None:
+                    verify_fit(fit, values['reference_residual'],
+                               values['labeled_error'][frame], values['weights'])
     return bundle
 
 
-def apply_bundle_arrays(raw16, self_residual, anchor, bundle, *, uid, family):
+def apply_bundle_arrays(raw16, self_residual, anchor, bundle, *, uid, family,
+                        application_stage):
     """Label-free application API; never accepts target labels or refits."""
     bundle = validate_bundle(bundle)
     policy = bundle['policy']
-    if (uid not in policy['confirmation_uids']
+    stage_uids = {'d1': policy['development_uids'], 'd2': policy['d2_uids'],
+                  'confirmation': policy['confirmation_uids']}
+    if (application_stage not in stage_uids or uid not in stage_uids[application_stage]
             or policy['uid_to_family'].get(uid) != family):
-        raise ValueError('Application must belong to the exact frozen confirmation partition')
+        raise ValueError('Application must belong to the exact frozen G01 stage partition')
     arrays, failures = {}, {}
     try:
         arrays['unit_C01'] = unit_c01(raw16, self_residual, anchor)
@@ -225,16 +321,16 @@ def apply_bundle_arrays(raw16, self_residual, anchor, bundle, *, uid, family):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    for name in ('data', 'policy', 'output'):
+    for name in ('root', 'data', 'policy', 'output'):
         parser.add_argument('--' + name, type=Path, required=True)
     parser.add_argument('--evidence-file', nargs=2, action='append', required=True)
     args = parser.parse_args(argv)
     evidence = dict(args.evidence_file)
     if len(evidence) != len(args.evidence_file):
         parser.error('Duplicate evidence names forbidden')
-    result = fit_bundle(args.data, args.policy, evidence, args.output)
+    result = fit_bundle(args.root, args.data, args.policy, evidence, args.output)
     print(json.dumps({'status': result['status'], **SCOPE}))
-    return 0 if result['status'] == 'completed' else 2
+    return 0 if result['status'] in ('completed', 'incomplete') else 2
 
 
 if __name__ == '__main__':

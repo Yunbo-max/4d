@@ -37,6 +37,7 @@ EFFECTIVE_PARAMETERS = {
     "temporal_context_size": 16, "sliding_window_denoiser": 15,
     "subsampling_level": 1, "sliding_window_autoencoder": 15,
 }
+G01_GENERATION_SEEDS = (42, 314, 2718)
 
 
 def digest(path):
@@ -64,7 +65,8 @@ def tolerance(value):
 def generation_settings(generation, source_root, frames, output):
     """Translate the exact frozen profile into the actual official Python API."""
     from research_math.complete_unit_contract import validate_generation_profile
-    profile = validate_generation_profile(generation)
+    profile = validate_generation_profile(
+        generation, allowed_seeds=G01_GENERATION_SEEDS)
     if generation.get("effective_parameters") != EFFECTIVE_PARAMETERS:
         raise ValueError("Frozen complete native generation parameters changed")
     pipeline = {
@@ -72,7 +74,8 @@ def generation_settings(generation, source_root, frames, output):
         "config_dir": str(Path(source_root) / "actionmesh/configs"),
         "dtype": generation["dtype"], "lazy_loading": profile == "fp16-lowram-v1",
     }
-    run = {"input": str(frames), "output_dir": str(output), "seed": 42, "blender_path": None}
+    run = {"input": str(frames), "output_dir": str(output),
+           "seed": generation["seed"], "blender_path": None}
     for key in ("stage_0_steps", "stage_1_steps", "face_decimation", "floaters_threshold",
                 "guidance_scales", "anchor_idx"):
         run[key] = generation["effective_parameters"][key]
@@ -345,11 +348,15 @@ def _identity(args, manifest, output):
     code_paths += [project / name for name in
                    ("official_actionbench_adapter.py", "research_census_eval.py",
                     "deterministic_actionbench_entry.py")]
+    generation = dict(manifest["generation"])
+    generation["seed"] = args.generation_seed
+    generation_settings(generation, args.source_root, Path("unused"), Path("unused"))
     identity = {
         "kind": "native-context-generation-identity", "version": 1,
         "scope": "paired engineering observer/replay; no candidate or scorer execution",
         "uid": manifest.get("selected_unit", manifest.get("calibration_unit", {}))["uid"],
-        "generation": manifest["generation"], "verified_unit_manifest": manifest,
+        "generation": generation, "verified_unit_manifest": manifest,
+        "generation_template_seed": manifest["generation"]["seed"],
         "retained_input_refs": refs,
         "upstream_source_sha256": {relative: digest(args.source_root / relative) for relative in SOURCE_FILES},
         "instrument_code_sha256": {path.relative_to(project).as_posix(): digest(path) for path in code_paths},
@@ -406,7 +413,9 @@ def execute(args):
         host.start()
         verify_environment(args)
         manifest = verify_prerequisites(args, output)
-        generation_settings(manifest["generation"], args.source_root, Path("unused"), Path("unused"))
+        generation = dict(manifest["generation"])
+        generation["seed"] = args.generation_seed
+        generation_settings(generation, args.source_root, Path("unused"), Path("unused"))
         identity = _identity(args, manifest, output)
         uid = identity["uid"]
         monitor = DeviceSamples(args.gpu_uuid, output / "device-samples.jsonl")
@@ -532,6 +541,8 @@ def parse_args(argv=None):
     parser.add_argument("--uid")
     parser.add_argument("--window-id")
     parser.add_argument("--gpu-uuid", required=True)
+    parser.add_argument("--generation-seed", type=int, required=True,
+        choices=G01_GENERATION_SEEDS)
     parser.add_argument("--wall-seconds", type=int, default=27000,
         help="Unchanged prerequisite one-unit wall budget; in Full128 mode equals frozen queue price")
     parser.add_argument("--instrument-wall-seconds", type=int, required=True,

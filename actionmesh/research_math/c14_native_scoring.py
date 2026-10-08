@@ -63,6 +63,7 @@ CONTROL_ROLES = ('b0', 'b_star', 'world_gaussian', 'body_gaussian')
 RESULT_SCOPE = ('One frozen C14 physical scoring pass and receipt-bound raw '
                 'collection; no confidence interval, gate, qualification or verdict')
 CONTRAST_DIRECTION = 'corotational residual minus control; lower is better'
+INCLUDE_APPLICATION_STAGE = False
 
 
 def read_json_bytes(value: bytes, label: str) -> dict:
@@ -288,6 +289,10 @@ def make_scoring_request(root: Path, *, comparison_path: Path,
         'scientific_verdict': 'not_computed',
         'dispatch_ready': False,
     }
+    if INCLUDE_APPLICATION_STAGE:
+        if frozen.get('application_stage') not in ('d1', 'd2', 'confirmation'):
+            raise ValueError('Stage-aware profile requires a frozen G01 application stage')
+        request['application_stage'] = frozen['application_stage']
     request['request_digest'] = canonical_digest(request)
     verify_scoring_request(root, request)
     return request
@@ -306,6 +311,8 @@ def verify_scoring_request(root: Path, request: dict) -> dict:
         'generated_unexecuted', 'native_qualified', 'scientific_verdict',
         'dispatch_ready', 'request_digest',
     }
+    if INCLUDE_APPLICATION_STAGE:
+        expected_keys.add('application_stage')
     core = {key: value for key, value in request.items()
             if key != 'request_digest'}
     if request.get('request_digest') != canonical_digest(core):
@@ -328,6 +335,8 @@ def verify_scoring_request(root: Path, request: dict) -> dict:
     comparison_module.verify_request(root, frozen)
     if (request.get('comparison_request_digest') != frozen['request_digest']
             or request.get('uid') != frozen['uid']
+            or (INCLUDE_APPLICATION_STAGE
+                and request.get('application_stage') != frozen.get('application_stage'))
             or request.get('inference_seed') != frozen['inference_seed']):
         raise ValueError('C14 scoring/comparison identity mismatch')
     population = read_json(resolve_ref(root, request.get('population_ref')))

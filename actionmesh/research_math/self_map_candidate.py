@@ -17,6 +17,7 @@ import numpy as np
 CANDIDATE_ID = '4d-math-20261006-c01'
 ROLES = ('raw_uncorrected', 'mean_bias', 'self_map_subtraction')
 METADATA = ('bundle-consumption.json', 'bundle-manifest.json', 'bundle-result.json')
+G01_GENERATION_SEEDS = (42, 314, 2718)
 
 
 def validate_native_arrays(arrays):
@@ -236,10 +237,12 @@ def load_context(context, expected_consumption_sha256):
     sequence_path = raw / 'observed/sequence.npz'
     sequence = read_sequence(sequence_path)
     source_report = load(sequence_path.with_name('report.json'))
+    report_seed = source_report.get('seed')
+    identity_seed = identity.get('generation', {}).get('seed')
     if (source_report.get('status') != 'completed' or source_report.get('uid') != c['producer_uid']
             or source_report.get('sha256', {}).get('sequence.npz') != digest(sequence_path)
-            or type(source_report.get('seed')) is not int or source_report['seed'] != 42
-            or identity.get('generation', {}).get('seed') != 42):
+            or type(report_seed) is not int or report_seed not in G01_GENERATION_SEEDS
+            or identity_seed != report_seed):
         raise ValueError('Completed original source sequence report required')
     values = {'anchor': sequence['vertices'][0],
               'raw_targets': captured['output'][0].double().numpy(),

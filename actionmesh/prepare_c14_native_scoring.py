@@ -62,6 +62,12 @@ CONTRACT_ARM_NAMES = {
 }
 PRIMARY_METRIC = 'cd_motion'
 GUARDRAIL_METRICS = ('cd_3d', 'cd_4d')
+ALLOW_G01_STAGES = False
+
+
+def validate_family_binding(root: Path, request: dict, family: dict) -> None:
+    """Profile hook; C14 has no additional cross-artifact split binding."""
+    return None
 
 
 def canonical_record_digest(value: dict, digest_key: str = 'admission_digest') -> str:
@@ -286,26 +292,44 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
         'development_ids', 'confirmation_ids', 'family_by_uid',
         'family_assignments_ref', 'frozen_at', 'split_digest',
     }
-    development = family.get('development_ids')
+    if ALLOW_G01_STAGES:
+        family_keys = {
+            'kind', 'version', 'candidate_id', 'benchmark_revision',
+            'd1_ids', 'd2_ids', 'confirmation_ids', 'family_by_uid',
+            'family_assignments_ref', 'frozen_at', 'split_digest',
+        }
+    development = family.get('d1_ids') if ALLOW_G01_STAGES else family.get('development_ids')
+    d2 = family.get('d2_ids') if ALLOW_G01_STAGES else []
     confirmation = family.get('confirmation_ids')
     family_by_uid = family.get('family_by_uid')
+    stage = request.get('application_stage') if ALLOW_G01_STAGES else 'confirmation'
+    stage_ids = {'d1': development, 'd2': d2, 'confirmation': confirmation}
     if (set(family) != family_keys
             or family.get('candidate_id') != CANDIDATE_ID
             or family.get('benchmark_revision') != request['benchmark_revision']
             or not isinstance(development, list)
+            or not isinstance(d2, list)
             or not isinstance(confirmation, list)
             or not development or not confirmation
+            or (ALLOW_G01_STAGES and not d2)
             or len(set(development)) != len(development)
+            or len(set(d2)) != len(d2)
             or len(set(confirmation)) != len(confirmation)
-            or set(development) & set(confirmation)
-            or request['uid'] not in confirmation
+            or set(development) & set(d2) or set(development) & set(confirmation)
+            or set(d2) & set(confirmation)
+            or stage not in stage_ids or request['uid'] not in stage_ids[stage]
             or not isinstance(family_by_uid, dict)
-            or set(family_by_uid) != set(development) | set(confirmation)
+            or set(family_by_uid) != set(development) | set(d2) | set(confirmation)
             or not all(isinstance(item, str) and item
                        for item in family_by_uid.values())
             or ({family_by_uid[item] for item in development}
+                & {family_by_uid[item] for item in d2})
+            or ({family_by_uid[item] for item in development}
+                & {family_by_uid[item] for item in confirmation})
+            or ({family_by_uid[item] for item in d2}
                 & {family_by_uid[item] for item in confirmation})):
-        raise ValueError('Frozen independent-family confirmation split required')
+        raise ValueError('Frozen independent-family G01 stage split required')
+    validate_family_binding(root, request, family)
     _timezone(family['frozen_at'], 'family split frozen_at')
     assignments = _record(root, family['family_assignments_ref'],
                           kind=FAMILY_ASSIGNMENTS_KIND,
@@ -438,7 +462,9 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
                    or not isinstance(row.get('values'), list)
                    or len(row['values']) < 2 for row in sensitivity)
             or not isinstance(boundary, dict)
-            or boundary.get('development_ids') != development
+            or (ALLOW_G01_STAGES and boundary.get('d1_ids') != development)
+            or (ALLOW_G01_STAGES and boundary.get('d2_ids') != d2)
+            or (not ALLOW_G01_STAGES and boundary.get('development_ids') != development)
             or boundary.get('confirmation_ids') != confirmation
             or boundary.get('confirmation_locked') is not True
             or not isinstance(protocol_criteria, list)

@@ -20,7 +20,8 @@ def build_plans(root, *, context_root, run_id, plan_dir, wall_seconds,
                 coordinate_bounds, bounds_policy, ram_mib):
     import run_experiments as native
     import run_harness as harness
-    from research_math.self_map_candidate import digest, context_inventory, METADATA, ROLES
+    from research_math.self_map_candidate import (digest, context_inventory, METADATA,
+                                                   ROLES, G01_GENERATION_SEEDS)
     root, context_root, plan_dir = (Path(p).resolve() for p in (root, context_root, plan_dir))
     context_root.relative_to(root); plan_dir.relative_to(root)
     if type(wall_seconds) is not int or not 1 <= wall_seconds <= 26940:
@@ -34,6 +35,10 @@ def build_plans(root, *, context_root, run_id, plan_dir, wall_seconds,
         raise ValueError('Explicit finite ordered bounds and no-clipping policy required')
     consumption_hash = digest(context_root / METADATA[0])
     consumption, manifest, _, files = context_inventory(context_root, consumption_hash)
+    identity = json.loads((context_root / 'raw/generation-identity.json').read_text())
+    generation_seed = identity.get('generation', {}).get('seed')
+    if type(generation_seed) is not int or generation_seed not in G01_GENERATION_SEEDS:
+        raise ValueError('Exact G01 generation seed required')
     inputs = [file_ref(root, path) for path in files]
     command = [sys.executable, '-m', 'research_math.self_map_candidate',
         '--consumption', str(context_root / METADATA[0]),
@@ -62,7 +67,8 @@ def build_plans(root, *, context_root, run_id, plan_dir, wall_seconds,
     outputs += [output_root + role + '/' + name for role in ROLES for name in ('sequence.npz', 'report.json')]
     plan = native.make_plan(root, run_id=run_id, jobs=[{
         'trial_id': 'prepare-c01-self-map-candidate', 'command': command, 'cwd': 'actionmesh',
-        'input_refs': inputs, 'code_refs': code, 'output_paths': outputs, 'seed': 42,
+        'input_refs': inputs, 'code_refs': code, 'output_paths': outputs,
+        'seed': generation_seed,
         'group': 'candidate-artifacts-only', 'arm_role': 'candidate-artifact-no-scorer-no-admission'}],
         provenance={'git_revision': 'exact code_refs; no clean-tree claim',
             'model_revision': 'cached source-time context only; no model loaded',

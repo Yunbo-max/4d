@@ -16,7 +16,8 @@ from prepare_actionbench_full128_window import validate_environment_closure
 from research_math.complete_unit_plan import validate_inventory
 from research_math.control_scoring import file_ref
 from research_math.native_context_delivery import INPUT_NAMES, receipt_output_paths
-from research_math.native_context_runner import generation_settings, tolerance
+from research_math.native_context_runner import (generation_settings, tolerance,
+                                                   G01_GENERATION_SEEDS)
 
 
 def build_plan(args):
@@ -34,8 +35,12 @@ def build_plan(args):
     atol, rtol = tolerance(args.atol), tolerance(args.rtol)
     records = validate_inventory(args)
     manifest = records['unit_manifest']
+    if type(args.generation_seed) is not int or args.generation_seed not in G01_GENERATION_SEEDS:
+        raise ValueError('Exact G01 generation seed required')
+    generation = dict(manifest['generation'])
+    generation['seed'] = args.generation_seed
     # Pure configuration inspection; no model imports, freeze workload, or device probe.
-    generation_settings(manifest['generation'], args.source_root, Path('unused'), Path('unused'))
+    generation_settings(generation, args.source_root, Path('unused'), Path('unused'))
     if args.environment.resolve() != root / 'inputs/native-runtime/environment.json':
         raise ValueError('Canonical environment path required for attempt-relative dependency verification')
     environment = json.loads(args.environment.read_text())
@@ -62,7 +67,9 @@ def build_plan(args):
         command += ['--' + name.replace('_', '-'), str(getattr(args, name).resolve())]
     for name in ('source_root', 'dataset_root', 'weights_root'):
         command += ['--' + name.replace('_', '-'), str(getattr(args, name))]
-    command += ['--gpu-uuid', args.gpu_uuid, '--output', 'context-output',
+    command += ['--gpu-uuid', args.gpu_uuid,
+                '--generation-seed', str(args.generation_seed),
+                '--output', 'context-output',
                 '--wall-seconds', str(args.instrument_wall_seconds),
                 '--instrument-wall-seconds', str(args.instrument_wall_seconds),
                 '--atol', str(atol), '--rtol', str(rtol),
@@ -74,7 +81,8 @@ def build_plan(args):
     plan = native.make_plan(root, run_id=args.run_id, purpose='engineering', evidence_mode='developmental',
         jobs=[{'trial_id': task_id, 'command': command, 'cwd': 'actionmesh',
                'input_refs': inputs, 'code_refs': code, 'output_paths': receipt_output_paths(),
-               'seed': 42, 'group': 'engineering', 'arm_role': 'paired-native-context-instrument'}],
+               'seed': args.generation_seed, 'group': 'engineering',
+               'arm_role': 'paired-native-context-instrument'}],
         provenance={'git_revision': revision, 'model_revision': 'four snapshot-bound current-release models',
                     'data_revision': manifest['population']['revision'],
                     'environment_digest': file_ref(root, args.environment)['sha256']},
@@ -110,6 +118,8 @@ def main():
         parser.add_argument('--' + name.replace('_', '-'), type=Path, required=True)
     parser.add_argument('--run-id', required=True)
     parser.add_argument('--gpu-uuid', required=True)
+    parser.add_argument('--generation-seed', type=int, choices=G01_GENERATION_SEEDS,
+                        required=True)
     parser.add_argument('--instrument-wall-seconds', type=int, required=True)
     parser.add_argument('--atol', type=float, required=True)
     parser.add_argument('--rtol', type=float, required=True)

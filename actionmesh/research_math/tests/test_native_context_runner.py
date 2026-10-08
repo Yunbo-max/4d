@@ -12,11 +12,11 @@ import torch
 
 
 class NativeContextRunnerTests(unittest.TestCase):
-    def generation(self, repair=False):
+    def generation(self, repair=False, seed=42):
         from research_math.complete_unit_contract import REPAIR_PARENT_RECEIPT
         record = {
             "runtime_profile": "fp16-lowram-v1" if repair else "default",
-            "seed": 42, "fast": False, "low_ram": repair,
+            "seed": seed, "fast": False, "low_ram": repair,
             "dtype": "float16" if repair else "bfloat16",
             "config": "actionmesh/configs/actionmesh_lowram.yaml" if repair
                       else "actionmesh/configs/actionmesh.yaml",
@@ -50,6 +50,9 @@ class NativeContextRunnerTests(unittest.TestCase):
                     "face_decimation": 40000, "floaters_threshold": .02,
                     "guidance_scales": [7.5], "anchor_idx": 0,
                 })
+        _, run = generation_settings(self.generation(seed=314),
+            Path("/source"), Path("/frames"), Path("/output"))
+        self.assertEqual(run["seed"], 314)
 
     def test_profile_or_effective_parameter_drift_is_rejected(self):
         from research_math.native_context_runner import generation_settings
@@ -70,6 +73,7 @@ class NativeContextRunnerTests(unittest.TestCase):
         for name in PREREQUISITE_PATHS:
             args += ["--" + name.replace("_", "-"), "/inputs/" + name]
         args += ["--output", "/output", "--gpu-uuid", "GPU-fixture", "--wall-seconds", "1664",
+                 "--generation-seed", "2718",
                  "--instrument-wall-seconds", "5000", "--atol", "0", "--rtol", "0",
                  "--root", "/project", "--pricing", "/project/inputs/actionbench-full128-queue/pricing.json",
                  "--uid", "fixture-uid", "--window-id", "window-02",
@@ -81,6 +85,7 @@ class NativeContextRunnerTests(unittest.TestCase):
         self.assertEqual(parsed.atol, 0.)
         self.assertEqual(parsed.rtol, 0.)
         self.assertFalse(parsed.source_time_query)
+        self.assertEqual(parsed.generation_seed, 2718)
 
     def write_sequence(self, path, *, offset=0., changed_faces=False):
         vertices = np.zeros((16, 3, 3), dtype=np.float32)

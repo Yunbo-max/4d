@@ -224,6 +224,8 @@ def _artifact_closure(root: Path, artifact_path: Path,
         paths.append(resolve_ref(root, producer_ref))
     for ref in verified.get("implementation_refs", []):
         paths.append(resolve_ref(root, ref))
+    for ref in verified.get("upstream_refs", []):
+        paths.append(resolve_ref(root, ref))
     for role in METHOD_ROLES:
         paths.append(directory / role / "report.json")
         report = read_json(directory / role / "report.json")
@@ -255,7 +257,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
     candidate_module.validate_native_arrays(source)
     decision, basis = _decision(root, freeze)
     artifact_path = resolve_ref(root, freeze["candidate_artifact_ref"])
-    _, artifact_refs, common_ref = _artifact_closure(root, artifact_path, freeze)
+    artifact, artifact_refs, common_ref = _artifact_closure(root, artifact_path, freeze)
     pinned = [file_ref(root, freeze_path), freeze["source_sequence_ref"],
               freeze["source_report_ref"], freeze["b_star_decision_ref"],
               freeze["candidate_artifact_ref"], *basis, *artifact_refs]
@@ -437,6 +439,10 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
         "generated_unexecuted": True, "native_qualified": False,
         "scientific_verdict": "not_computed", "dispatch_ready": False,
     }
+    if artifact.get("application_stage") is not None:
+        if artifact["application_stage"] not in ("d1", "d2", "confirmation"):
+            raise ValueError(f"Invalid {PROFILE_LABEL} application stage")
+        request["application_stage"] = artifact["application_stage"]
     request["request_digest"] = canonical_digest(request)
     if _verify:
         verify_request(root, request)

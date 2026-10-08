@@ -4,7 +4,7 @@
   "status": "active",
   "delivered_revision": "8d2f1e77fe2bd5c80bddd6f21b0ee080d1778eec",
   "task_scope": "evaluator qualification then all 15 selected native method comparisons",
-  "updated_at": "2026-10-08T16:09:53Z",
+  "updated_at": "2026-10-08T22:55:00Z",
   "software_acceptance": {
     "run_id": "final-software-r9",
     "tests_passed": 258,
@@ -19,7 +19,7 @@
     "native_contract_qualified": false,
     "candidate_methods_tested": false
   },
-  "current_task": "GPU STOP remains active. Stage-wide G01 source design, strict validator, CPU-only Local acceptance-plan builder and common-acceptance closure for all 15 selected specs are delivered generated_unexecuted. Dynamic family evidence/review, D1-only B* freezes and every candidate admission remain pending; historical receipts do not accept current source.",
+  "current_task": "GPU STOP remains active. Thirteen of fifteen selected methods, including the new C03 tracked-query calibration chain, have complete generated_unexecuted source and exact G01 closures. C05/C20 remain source-incomplete. Dynamic family evidence/review, D1-only B* freezes and every candidate admission remain pending; historical receipts do not accept current source.",
   "active_evaluator_task": {
     "task_name": "actionbench-official-faithful-parity",
     "plan_digest": "30f2c31a86fe156613091295fa6d10356a3715a5478435e68a403fbed9e16f9c",
@@ -860,7 +860,7 @@
     "unit_timeout_seconds_proposed": 1664,
     "timeout_evidence": "admitted r7 pricing; r9 first current-card complete unit 1203.9668408543803s; reassess further current-card units before GPU dispatch"
   },
-  "current_authoring_checkpoint": {
+  "prior_c03_core_checkpoint": {
     "recorded_at": "2026-10-08T12:09:20Z",
     "stage_goal": "Complete15 method source chains, G01, recoverable supervisor and Local handoff; Local execution can remain pending",
     "actual_host_id": "6ac527ad50cc8191a4964d35ae0b826e",
@@ -933,19 +933,19 @@
     "supervisor_running": false
   },
   "latest_web_checkpoint": {
-    "recorded_at": "2026-10-08T20:03:40Z",
+    "recorded_at": "2026-10-08T22:55:00Z",
     "stage_goal": "Complete 15 method source chains, G01, recoverable supervisor and Local handoff; Local execution may remain pending",
     "actual_host_id": "6ac527ad50cc8191a4964d35ae0b826e",
     "conversation_id": "6ac0b6a1-5e28-83e9-98d6-30f1536deef1",
     "continuous_hosted_process_verified": false,
-    "base_commit": "d26ec0870381744d5f5e453847f6142f43b43a3c",
-    "delivered_scope": "C20 bounded phase/amplitude solver core plus C05/G01 comparison-inventory repair and independent static review; partial source only, all generated_unexecuted",
+    "base_commit": "31da17adee35f1863131113c664f89dc25668133",
+    "delivered_scope": "C03 development tracked-query producer, frozen-fit binding, complete confirmation artifacts, nine-role comparison/official scoring, retained acceptance, G01 closure and handoff; all generated_unexecuted",
     "generated_unexecuted": true,
-    "source_complete_candidates": 12,
+    "source_complete_candidates": 13,
     "local_method_verified": 0,
     "native_results": 0,
     "blocked_method_inputs": {
-      "C03": "legal pointwise development correspondence producer",
+      "C03": "source complete; Local producer/fit/artifact acceptance, G01 admission and native evidence pending",
       "C20": "qualified receipt-bound motion target, frozen amplitude-basis producer, artifact/comparison/scoring chain",
       "C05": "qualified sparse material-coordinate modes and scores",
       "C08": "resolved at source level by receipt-bound geometry-only endpoint bridge; Local retained-native acceptance pending"
@@ -955,8 +955,8 @@
     "online_repair_agent": "not_connected",
     "gpu_stop": true,
     "g01_source_design": "complete_generated_unexecuted_dynamic_admission_pending",
-    "g01_design_digest": "1963eb8e2da1019b195af9536583b18eb74636b5e193fbc33b68cfa253dbebb1",
-    "g01_source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
+    "g01_design_digest": "50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9",
+    "g01_source_review": "docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json",
     "g01_review_findings_remaining": {
       "critical": 0,
       "important": 0,
@@ -969,6 +969,11 @@
       "important": 0,
       "minor": 1
     },
-    "next_action": "Complete the next legally grounded C03, C05 or C20 chain; run no GPU work. C08 Local retained-artifact acceptance and all native evidence remain pending."
+    "next_action": "Complete the next legally grounded C05 or C20 chain; run no GPU work. C03/C08 Local retained-artifact acceptance and all native evidence remain pending.",
+    "c03_source_review": "docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json",
+    "c03_review_findings_remaining": {
+      "critical": 0,
+      "important": 0
+    }
   }
 }

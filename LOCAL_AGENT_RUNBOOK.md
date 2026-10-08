@@ -79,14 +79,20 @@ method chains stay blocked independently and are not removed from G01.
 
 ### Current source delivery — paired replay and supervisor
 
-### C03 development calibration core — partial source, not a native chain
+### C03 correlated calibration chain — source complete, not executed
 
-Current source is `generated_unexecuted`. Entry:
-`actionmesh/prepare_c03_calibration.py`; numerical core:
-`research_math/correlated_calibration.py`; artifact boundary:
-`research_math/c03_calibration_artifacts.py`. This is a real weighted affine
-solver, not the historical `correlated.py` synthetic demonstration. Do not run
-that demonstration as C03 acceptance.
+Current source is `generated_unexecuted`. Development begins at
+`actionmesh/prepare_c03_label_bank.py`, fitting at
+`actionmesh/prepare_c03_calibration.py`, confirmation export at
+`actionmesh/prepare_correlated_calibration_candidate.py`, retained acceptance at
+`actionmesh/prepare_c03_native_acceptance.py`, and authorized native scoring at
+`actionmesh/prepare_c03_native_scoring.py` plus the single-owner launcher. The
+numerical core is `research_math/correlated_calibration.py`. This is not the
+historical `correlated.py` synthetic demonstration; never use that demonstration
+as C03 acceptance.
+The exact final static-review record is
+`docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json`.
+It closes source-review findings only; it is not a Local receipt or native result.
 
 The core implements the revised `20261006-native-loss/c03-math.json` s8–s12:
 full, diagonal and intercept-only fits, each with squared or smoothed vector-norm
@@ -99,28 +105,38 @@ Weights are not renormalized. Label fitting is data calibration, not zero-shot.
 
 `fit_bundle` produces six roles × fifteen nonanchor frame fits with byte-bound
 policy/data/correspondence evidence and disjoint UID/family partitions.
+`c03_label_bank` consumes only frozen development families. It queries the exact
+retained Stage-II decoder context at released ActionBench frame-zero tracked XYZ
+plus L2-normalized normals, then uses the same published track indices at frames
+1..15. It never uses NN/ICP or maps GT points to generated mesh vertices. The fit
+is a global residual-response operator; transfer to generated-query vertices is a
+falsifiable distribution-transfer assumption, not correspondence or native gain.
+
 `apply_bundle_arrays` takes only raw 16-frame coordinates, the observable
 same-context residual, original anchor and frozen bundle. It has no GT input or
 refitting route. It preserves the anchor exactly in float64 and retains each
-application failure independently. This array API is not yet an admitted
-C01-context-to-native-export adapter.
+application failure independently. The candidate adapter reads the retained C01
+context/certificate, emits float32 full-identity 16-frame artifacts for the six
+fitted roles plus unit-C01, enforces the exact anchor and declared bounds policy,
+and retains an independently checkable certificate/report per role.
 
-**Remaining C03 source gaps:** a scientifically qualified development
-correspondence/label-bank producer from actual ActionMesh queries and tracked GT;
-receipt-bound C01 context-to-C03 complete mesh export with float32 and bounds
-checks; nine-role B0/B*/six fits/unit-C01 prospective freeze, native scorer and
-raw collection; retained-native acceptance. Do not fill these gaps with arbitrary
-nearest neighbours or claim official ICP supplies material correspondence. This
-partial delivery does not increase the full-source-chain count (still 6/15).
-Native Gate 0/IPCG, numeric criteria, family audit and G01 remain pending.
+The nine-role comparison keeps B0, prospectively fixed B*, all seven exported
+method/control roles, physical deduplication and every preparation/scoring failure
+in the denominator. Official collection uses the unchanged ActionBench scorer and
+bounded raw archive. This raises source-complete coverage to 13/15, but Local and
+native verification remain 0/15. Pending are an actual Local producer receipt and
+fit, retained-artifact acceptance, source-derived G01 family evidence/B* freeze,
+candidate admission, precision review and official results. Do not use arbitrary
+nearest neighbours, confirmation GT or official ICP as material correspondence.
+GPU STOP remains effective.
 
 First run the existing CPU software-acceptance builder at this exact delivered
 revision, using a new unique run ID and the emitted approved-plan digest. Its
-source closure now includes the C03 builder and both new test modules. New tests
-cover independent normal-equation expectations, restricted vector IRLS, failure
-and serialization behavior, declared split rejection and the actual `_stage`
-operation followed by a fresh staged subprocess after removal of live fixture
-inputs. These are software fixtures only, not native data or native evidence.
+source closure now includes the C03 builders and targeted test modules. Authored
+checks cover independent normal-equation expectations, restricted vector IRLS,
+failure/serialization behavior, deterministic tracked-point selection, pinned
+autoencoder-manifest rejection, bounds handling and the dynamic nine-role failure
+denominator. These are software fixtures only, not native data or native evidence.
 None have been executed by Web.
 
 For later real development-bank fitting, the input format is deliberately
@@ -130,10 +146,47 @@ positive weight; rows must contain exactly the prospective development partition
 The policy keys and validation live in `validate_policy`, including seed42,
 frames0..15, `plain_pointwise_no_asset_specific_icp`, disjoint `uid_to_family`,
 all five estimator parameters, bank SHA-256 and named correspondence-evidence
-SHA-256 values. Every evidence file must be an explicit input argument. There is
-no generated native bank or approved policy in this delivery; retain that blocker
-rather than manufacture one. The source checks metadata and hashes, not the
-scientific truth of a correspondence review.
+SHA-256 values. Every evidence file must be an explicit input argument. The
+producer route is authored but no native bank or policy has been executed or
+returned; retain that evidence gap rather than manufacture a receipt. Hash checks
+do not prove the scientific transfer assumption.
+
+The label inventory is fail-closed rather than a list of convenient paths. It
+must bind the pinned ActionBench snapshot and tensor-semantics admissions, the
+reviewed G01 family split, a `c03-tracked-query-source-review`, and
+`actionmesh/weights-manifest.json`. Each development row binds one UID to its
+admitted `data/<uid>/surfaces.npy`, retained generation identity, exact first
+native decoder window/call, inputs and tensors. At execution the producer checks
+the released `[16,100000,6]` float32 semantics, verifies both pinned autoencoder
+files, validates the source-first time mapping, and exactly replays the original
+captured decoder query before substituting any tracked-GT query. A stale UID,
+surface, window, checkpoint or replay is terminal; do not edit the inventory to
+bypass it. The fit bundle records project-relative data, policy and every
+evidence ref, and those refs are recursively frozen into candidate comparison and
+official-scoring inputs.
+
+After a source-derived development/confirmation family freeze, construct the
+digest-bound `c03-development-label-inventory` and review every retained context,
+surface, dataset-semantics and family-split reference. With explicit GPU resume
+authorization only, the following emits a one-attempt, zero-retry development
+plan; while STOP is active, do not run the emitted plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c03_label_bank.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --inventory "$c03_inventory" --source-root "$source_root" \
+  --weights-root "$weights_root" --environment "$native_environment" \
+  --plan-dir "$project_dir/plans/$c03_label_run_id" \
+  --run-id "$c03_label_run_id" --gpu-uuid "$gpu_uuid" \
+  --points-per-uid "$c03_points_per_uid" --selection-seed 42 \
+  --wall-seconds "$c03_label_wall_seconds" --cpu-cores "$c03_cpu_cores" \
+  --ram-mib "$c03_ram_mib"
+```
+
+The inventory must keep all GT access on development families. The producer
+normalizes released normals, uses unchanged tracked indices, and records selected
+index hashes. A producer failure is retained; it is not retried or replaced with
+NN/ICP matching.
 
 Once the real bank and its reviewed policy exist, on the existing GPU host with
 native Conda, resolve `c03_data`, `c03_policy`, `c03_evidence_file` to those exact
@@ -162,8 +215,118 @@ Return those raw records plus execution SHA to the current round packet. Inspect
 `role_results[role].failures` and `diagnostics.history` for nonconvergence; never
 raise tolerances or switch loss silently. A bank/hash/split rejection requires
 restoring the exact intended bytes or scientific review of a versioned change.
-No model download, scorer, supervisor installation or GPU resume is authorized
-by this source handoff. Existing asset acquisition cards below remain unchanged.
+After a completed or terminal-incomplete fit, build stage-bound artifacts on CPU
+from the exact retained C01 `candidate.json`; never pass application GT. Run a
+separate immutable artifact unit for each admitted D1, D2 or confirmation UID:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_correlated_calibration_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --c01-candidate "$c01_candidate" --fit-bundle "$c03_fit_bundle" \
+  --application-stage "$c03_application_stage" \
+  --confirmation-family "$confirmation_family" \
+  --coordinate-bounds "$lower" "$upper" --bounds-policy preserve_and_report \
+  --max-artifact-bytes "$max_artifact_bytes" --wall-seconds "$wall_seconds" \
+  --ram-mib "$ram_mib" --run-id "$c03_candidate_run_id" \
+  --plan-dir "$project_dir/plans/$c03_candidate_run_id"
+```
+
+Then emit and run the zero-GPU retained-artifact acceptance plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c03_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --artifact-candidate "$c03_candidate/candidate.json" \
+  --plan-dir "$project_dir/plans/$c03_acceptance_run_id" \
+  --run-id "$c03_acceptance_run_id" --wall-seconds 600 --ram-mib 4096
+```
+
+For each UID and each frozen generation seed (42, 314, 2718), materialize the
+prospective decision and comparison freeze, then emit the immutable request. D1
+uses a clearly marked noninferential B0 alias placeholder so all selectable
+controls can be scored before B* exists. D2/confirmation require
+`--g01-b-star-freeze "$g01_b_star_freeze"`; the builder then validates the
+complete reviewed global freeze, all D1 control receipts and the exact
+deterministic C03 selection. All stages bind the same canonical G01 split used by
+the label bank and candidate. Arbitrary basis files or manually supplied roles
+are rejected:
+Run the three module commands from `$project_dir/actionmesh` (or set
+`PYTHONPATH=$project_dir/actionmesh`) so the delivered package is the one loaded.
+
+```bash
+c03_b_star_args=()
+if [ "$c03_application_stage" != d1 ]; then
+  c03_b_star_args=(--g01-b-star-freeze "$g01_b_star_freeze")
+fi
+
+"$python_bin" -m research_math.c03_native_comparison decision \
+  --root "$project_dir" --uid "$uid" --inference-seed "$seed" \
+  --application-stage "$c03_application_stage" \
+  --g01-design "$project_dir/docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json" \
+  --g01-family-split "$g01_family_split" \
+  "${c03_b_star_args[@]}" \
+  --output "$project_dir/inputs/c03/$uid/seed-$seed/b-star-decision.json"
+
+"$python_bin" -m research_math.c03_native_comparison freeze \
+  --root "$project_dir" --source-sequence "$b0_sequence" \
+  --source-report "$b0_report" --generation-identity "$generation_identity" \
+  --candidate-artifact "$c03_candidate/candidate.json" \
+  --b-star-decision "$project_dir/inputs/c03/$uid/seed-$seed/b-star-decision.json" \
+  --output "$project_dir/inputs/c03/$uid/seed-$seed/comparison-freeze.json"
+
+"$python_bin" -m research_math.c03_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c03/$uid/seed-$seed/comparison-freeze.json" \
+  --output "$project_dir/inputs/c03/$uid/seed-$seed/comparison-request.json"
+
+"$python_bin" -m research_math.c03_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c03/$uid/seed-$seed/comparison-request.json" \
+  --ground-truth "$dataset_root/data/$uid/surfaces.npy" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$project_dir/actionmesh/repo" \
+  --timeout-seconds "$c03_timeout_seconds_per_case" \
+  --output "$project_dir/inputs/c03/$uid/seed-$seed/scoring-request.json"
+```
+
+Only after candidate admission, exact protocol/method-batch/environment locks
+and a separate unexpired exact-attempt GPU resume authorization may Local emit
+the official-scoring plan. All referenced records must already live under
+`$project_dir`; use a new run ID and the existing remaining budget:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c03_native_scoring.py" \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c03/$uid/seed-$seed/scoring-request.json" \
+  --protocol "$c03_protocol" --method-batch "$c03_method_batch" \
+  --environment "$native_environment" --admission "$c03_admission" \
+  --skill-dir "$skill_dir" --plan-dir "$project_dir/plans/$c03_scoring_run_id" \
+  --run-id "$c03_scoring_run_id" --group "$c03_scoring_group" \
+  --gpu-uuid "$gpu_uuid" --wall-seconds "$c03_scoring_wall_seconds" \
+  --ram-mib "$c03_ram_mib" --cpu-cores "$c03_cpu_cores"
+
+"$python_bin" "$project_dir/actionmesh/launch_c03_native_scoring.py" \
+  --root "$project_dir" --consumption "$c03_authorization_consumption" \
+  --skill-dir "$skill_dir" \
+  --approved-plan-digest "$c03_approved_plan_digest" --stop-after-report
+```
+
+Before removing `--stop-after-report`, inspect the emitted native/harness plans,
+launch ticket, authorization reservation/consumption and exact digest. During a
+real launch, preserve `runs/attempts/$c03_scoring_run_id/**/{attempt.json,stdout.log,stderr.log,process-guard.json}`,
+the harness `receipt.json`, `actionmesh/c03-scoring-output/{result.json,raw-manifest.json,raw-evidence.tar}`
+and controller claim/ticket/consumption records. Return those exact files plus
+`git rev-parse HEAD`, environment record, GPU observation and plan digests; do
+not summarize away failed roles. A nonzero exit, missing raw member or digest
+mismatch is a retained failure, not permission to retry or weaken the protocol.
+
+That physical pass has nine logical roles, uses the official scorer once per
+unique sequence, retains raw inputs/results/failures and never retries a frozen
+scientific attempt. No model download, scorer execution, supervisor installation
+or GPU resume is authorized by this source handoff. Existing asset acquisition
+cards below remain unchanged.
 
 ### C08 geometry trajectory bridge chain — source complete, not executed
 
@@ -388,9 +551,11 @@ readout is a confidence interval or scientific verdict.
 The current conditional G01 draft is in the C01 specification's
 `g01_authoring_draft`. Family memberships, numeric task effects/NI, measured
 complete-unit cost and scientific gates remain unresolved. The original wider
-seed policy `[42,314,2718]` remains a design obligation: this frozen producer only
-implements seed 42, so 314/2718 require a separately reviewed producer extension,
-not a silent seed substitution. One 16-frame window is the exact native scope;
+seed policy `[42,314,2718]` remains a design obligation: the consumer/candidate
+source now accepts exactly those three seeds and binds the retained identity, but
+actual frozen producer evidence remains seed 42. Seeds 314/2718 therefore require
+new independently reviewed producer receipts, not a silent seed substitution.
+One 16-frame window is the exact native scope;
 changed/multiple windows are rejected rather than incorrectly stitched.
 
 Debug from `candidate.json`, all role reports and the retained context. Hash or

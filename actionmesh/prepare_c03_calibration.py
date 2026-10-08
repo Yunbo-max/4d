@@ -9,7 +9,7 @@ from pathlib import Path
 import sys
 
 from research_math.self_map_candidate import digest, physical, load
-from research_math.c03_calibration_artifacts import validate_policy
+from research_math.c03_calibration_artifacts import validate_policy, resolve_ref
 
 
 def file_ref(root, path):
@@ -34,7 +34,8 @@ def build_plans(root, *, data, policy, evidence_files, plan_dir, run_id,
         raise ValueError('Development data bytes differ from frozen policy')
     inputs = [file_ref(root, p) for p in (data, policy)]
     command = [sys.executable, '-m', 'research_math.c03_calibration_artifacts',
-        '--data', str(Path(data).resolve()), '--policy', str(Path(policy).resolve()),
+        '--root', str(root), '--data', str(Path(data).resolve()),
+        '--policy', str(Path(policy).resolve()),
         '--output', 'c03-calibration-output']
     for name, path in sorted(evidence_files.items()):
         ref = file_ref(root, path)
@@ -42,6 +43,22 @@ def build_plans(root, *, data, policy, evidence_files, plan_dir, run_id,
             raise ValueError('Correspondence source changed: ' + name)
         inputs.append(ref)
         command += ['--evidence-file', name, str(Path(path).resolve())]
+    producer_path = evidence_files.get('c03_tracked_gt_producer_report')
+    if producer_path is None:
+        raise ValueError('Receipt-bound C03 tracked-query producer report required')
+    producer = load(producer_path)
+    producer_inputs = producer.get('input_refs')
+    if not isinstance(producer_inputs, list) or not producer_inputs:
+        raise ValueError('Producer report lacks retained transitive inputs')
+    for input_ref in [producer.get('inventory_ref'), *producer_inputs]:
+        resolve_ref(root, input_ref)
+        inputs.append(input_ref)
+    unique_inputs = {}
+    for input_ref in inputs:
+        if (input_ref['path'] in unique_inputs
+                and unique_inputs[input_ref['path']] != input_ref):
+            raise ValueError('Conflicting C03 calibration input ref')
+        unique_inputs[input_ref['path']] = input_ref
     paths = [root / 'actionmesh/research_math' / name for name in
         ('__init__.py', 'correlated_calibration.py', 'c03_calibration_artifacts.py',
          'self_map_candidate.py')]
@@ -53,7 +70,8 @@ def build_plans(root, *, data, policy, evidence_files, plan_dir, run_id,
         separators=(',', ':')).encode()).hexdigest()
     plan = native.make_plan(root, run_id=run_id, jobs=[{
         'trial_id': 'c03-calibration-artifact', 'command': command, 'cwd': 'actionmesh',
-        'input_refs': inputs, 'code_refs': [file_ref(root, p) for p in paths],
+        'input_refs': list(unique_inputs.values()),
+        'code_refs': [file_ref(root, p) for p in paths],
         'output_paths': ['actionmesh/c03-calibration-output/fit-bundle.json'],
         'seed': 42, 'group': 'candidate-artifacts-only',
         'arm_role': 'development-calibration-no-native-admission'}],

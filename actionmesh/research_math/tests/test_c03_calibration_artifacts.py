@@ -23,18 +23,47 @@ def fixture(root):
         uids=np.array(['software-dev'] * 4))
     evidence = root / 'retained/correspondence.json'
     evidence.write_text('{"scope":"software fixture, not qualified native correspondence"}\n')
+    split_path = root / 'retained/g01-split.json'
+    split = {'kind': 'g01-family-split', 'version': 1,
+        'd1_ids': ['software-dev'], 'd2_ids': ['software-d2'],
+        'confirmation_ids': ['software-confirm'],
+        'family_by_uid': {'software-dev': 'family-d', 'software-d2': 'family-d2',
+                          'software-confirm': 'family-c'}}
+    split['split_digest'] = artifacts.canonical_digest(split)
+    artifacts.write(split_path, split)
+    inventory = root / 'retained/inventory.json'
+    artifacts.write(inventory, {'kind': 'c03-development-label-inventory',
+        'family_split_ref': artifacts.file_ref(root, split_path),
+        'scope': 'software fixture inventory'})
+    producer_path = root / 'retained/producer-report.json'
+    producer = {'kind': 'c03-tracked-gt-development-label-bank', 'version': 1,
+        'candidate_id': artifacts.CANDIDATE_ID, 'status': 'completed',
+        'data_sha256': artifacts.digest(data), 'development_uids': ['software-dev'],
+        'd2_uids': ['software-d2'], 'confirmation_uids': ['software-confirm'],
+        'coordinate_policy': 'normalized_actionbench_tracked_gt_query_global_affine_transfer',
+        'transfer_claim': 'global residual-response calibration only; no pointwise GT-to-generated mapping',
+        'inventory_sha256': artifacts.digest(inventory),
+        'inventory_ref': artifacts.file_ref(root, inventory),
+        'input_refs': [artifacts.file_ref(root, evidence),
+                       artifacts.file_ref(root, split_path)]}
+    producer['report_digest'] = artifacts.canonical_digest(producer)
+    artifacts.write(producer_path, producer)
     policy = {'kind': 'c03-development-calibration-policy', 'version': 1,
         'data_sha256': artifacts.digest(data), 'development_uids': ['software-dev'],
-        'confirmation_uids': ['software-confirm'],
-        'uid_to_family': {'software-dev': 'family-d', 'software-confirm': 'family-c'},
+        'd2_uids': ['software-d2'], 'confirmation_uids': ['software-confirm'],
+        'uid_to_family': {'software-dev': 'family-d', 'software-d2': 'family-d2',
+                          'software-confirm': 'family-c'},
         'coordinate_policy': 'plain_pointwise_no_asset_specific_icp',
-        'correspondence_evidence': {'mapping-review.json': artifacts.digest(evidence)},
+        'correspondence_evidence': {
+            'mapping-review.json': artifacts.digest(evidence),
+            'c03_tracked_gt_producer_report': artifacts.digest(producer_path)},
         'generation_seed': 42, 'frame_indices': list(range(16)),
         'parameters': {'ridge': 1., 'tau': .1, 'max_iterations': 100,
                        'gradient_tolerance': 1e-8, 'objective_tolerance': 1e-12}}
     policy_path = root / 'retained/policy.json'
     artifacts.write(policy_path, policy)
-    return data, policy_path, {'mapping-review.json': evidence}, policy
+    return data, policy_path, {'mapping-review.json': evidence,
+        'c03_tracked_gt_producer_report': producer_path}, policy
 
 
 class CalibrationArtifactTests(unittest.TestCase):
@@ -46,7 +75,8 @@ class CalibrationArtifactTests(unittest.TestCase):
             with self.assertRaises(ValueError): artifacts.validate_policy(bad)
             bank = artifacts.load_development_bank(data, policy)
             self.assertEqual(bank['labeled_error'].shape, (15, 4, 3))
-            result = artifacts.fit_bundle(data, path, evidence, Path(directory) / 'fit')
+            result = artifacts.fit_bundle(Path(directory), data, path, evidence,
+                                          Path(directory) / 'fit')
             self.assertEqual(result['status'], 'completed', result)
             bad = copy.deepcopy(result)
             bad['policy']['parameters']['max_iterations'] += 1
@@ -55,13 +85,15 @@ class CalibrationArtifactTests(unittest.TestCase):
             with self.assertRaises(ValueError): artifacts.validate_bundle(bad)
             raw = np.zeros((16, 4, 3)); anchor = np.ones((4, 3))
             arrays, failures = artifacts.apply_bundle_arrays(raw, anchor * 0, anchor, result,
-                uid='software-confirm', family='family-c')
+                uid='software-confirm', family='family-c',
+                application_stage='confirmation')
             self.assertEqual(set(arrays), set(artifacts.FIT_ROLES) | {'unit_C01'})
             self.assertEqual(failures, {})
             for value in arrays.values(): np.testing.assert_array_equal(value[0], anchor)
             with self.assertRaises(ValueError):
                 artifacts.apply_bundle_arrays(raw, anchor * 0, anchor, result,
-                    uid='software-dev', family='family-d')
+                    uid='software-dev', family='family-d',
+                    application_stage='confirmation')
 
     def test_confirmation_rows_and_corrupt_evidence_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -74,7 +106,7 @@ class CalibrationArtifactTests(unittest.TestCase):
             policy['data_sha256'] = artifacts.digest(data)
             with self.assertRaises(ValueError): artifacts.load_development_bank(data, policy)
             evidence['mapping-review.json'].write_text('changed bytes')
-            result = artifacts.fit_bundle(data, path, evidence, root / 'fit')
+            result = artifacts.fit_bundle(root, data, path, evidence, root / 'fit')
             self.assertEqual(result['status'], 'error')
             self.assertNotIn('role_results', result)
             self.assertTrue((root / 'fit/fit-bundle.json').is_file())

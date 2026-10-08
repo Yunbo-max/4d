@@ -66,16 +66,22 @@ def complete_unit_output_paths(uid: str,
 REPAIR_PARENT_RECEIPT = '7b4223a3fdcf4a738c1cec646ecb8f8172ece850a46aa8936aa96d8626cd62f9'
 
 
-def validate_generation_profile(generation: dict) -> str:
+def validate_generation_profile(generation: dict, *, allowed_seeds=(42,)) -> str:
+    if (not isinstance(allowed_seeds, tuple) or not allowed_seeds
+            or any(type(seed) is not int for seed in allowed_seeds)
+            or len(set(allowed_seeds)) != len(allowed_seeds)):
+        raise ValueError('Explicit unique integer generation seeds required')
     profile = generation.get('runtime_profile', 'default')
     if profile not in ('default', 'fp16-lowram-v1'):
         raise ValueError('Unknown runtime profile')
     repair = profile == 'fp16-lowram-v1'
-    expected = {'seed': 42, 'fast': False, 'low_ram': repair,
+    expected = {'fast': False, 'low_ram': repair,
                 'dtype': 'float16' if repair else 'bfloat16',
                 'config': 'actionmesh/configs/actionmesh_lowram.yaml' if repair
                           else 'actionmesh/configs/actionmesh.yaml'}
-    if any(generation.get(key) != value for key, value in expected.items()):
+    if (type(generation.get('seed')) is not int
+            or generation['seed'] not in allowed_seeds
+            or any(generation.get(key) != value for key, value in expected.items())):
         raise ValueError('Runtime configuration differs from explicit profile')
     if repair and generation.get('repair_parent_receipt_sha256') != REPAIR_PARENT_RECEIPT:
         raise ValueError('Explicit repair must bind the retained default OOM receipt')

@@ -1,0 +1,35 @@
+{
+  "kind": "independent-incremental-source-review",
+  "version": 1,
+  "candidate_id": "4d-math-20261006-c03",
+  "base_commit": "31da17adee35f1863131113c664f89dc25668133",
+  "reviewer": "independent_c03_chain_patterns",
+  "outcome": "pass_source_complete_generated_unexecuted",
+  "critical_findings_remaining": 0,
+  "important_findings_remaining": 0,
+  "verified_repairs": [
+    "native_context_generation_and_plan_bind_exact_allowed_seed",
+    "d1_provisional_b0_breaks_global_b_star_cycle",
+    "d2_and_confirmation_require_reviewed_global_b_star_freeze",
+    "canonical_g01_split_is_content_bound_from_fit_through_scoring_admission",
+    "candidate_provenance_uid_seed_source_error_bounds_and_replay_are_closed",
+    "every_retained_fit_is_reloaded_and_verified",
+    "acceptance_stages_the_verified_recursive_input_closure",
+    "runbook_has_seed_isolation_conditional_b_star_request_plan_launch_debug_and_return_commands"
+  ],
+  "reviewed_source_refs": [
+    {"path": "actionmesh/research_math/c03_label_bank.py", "sha256": "4e1082732e9c3d8105e8e976153070930d830a55b9044e761bd7c6cc64c9b388"},
+    {"path": "actionmesh/research_math/c03_calibration_artifacts.py", "sha256": "0450c533d86a14ec3e8c15c0b1a7e914231f24b2444059db5e1ba1b6bb68cfef"},
+    {"path": "actionmesh/research_math/correlated_calibration_candidate.py", "sha256": "bf861a2ebab2f69e65ba8552f5106c440f317b7bd7f29f76a12e4a3f1e115eda"},
+    {"path": "actionmesh/research_math/c03_native_comparison.py", "sha256": "06ddd93c22db2acac02e1bfff528544113af5436ddb53c0ee6b202b581bfc8cb"},
+    {"path": "actionmesh/research_math/c03_native_scoring.py", "sha256": "e472d5a374ba7e6c882e0461edf86bb7c31c47214d5e84999f38ec896a90500a"},
+    {"path": "actionmesh/research_math/native_context_runner.py", "sha256": "84bd868d14ce6423b4c6975cc42c7a8db2da6fe5f6e5e8b634edb9c786bb2080"},
+    {"path": "actionmesh/research_math/complete_unit_contract.py", "sha256": "8954d86ea76270c4803ceeb19a217a246f885c248b7125dfc88a30c08e113595"},
+    {"path": "actionmesh/prepare_c03_native_acceptance.py", "sha256": "1a8d5012307e8053744b848445b5679b897ed183dd09293cf6e0498ba57ff610"},
+    {"path": "actionmesh/prepare_c03_native_scoring.py", "sha256": "368e075cc0e946f1af5363d212d296e12d42f90c2a077e6625223e70c3f18237"}
+  ],
+  "scope": "Static source review only. It supports a complete plain-coordinate tracked-query development surrogate chain, not Local execution, native qualification, scientific admission, or a scientific result.",
+  "generated_unexecuted": true,
+  "project_tests_executed": false,
+  "gpu_work_executed": false
+}

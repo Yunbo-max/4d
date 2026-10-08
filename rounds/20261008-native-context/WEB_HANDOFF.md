@@ -3,9 +3,42 @@
 Status: **generated_unexecuted**. GPU STOP remains effective. No installation,
 project test, native generation, scorer, GPU task or supervisor process was
 started by this authoring round. Resolve the delivered main commit from the
-GitHub delivery receipt; the authoring base is
-`1da40c748a71f9687bd2c5958ee6705671632d10`. Integration preserves the concurrent
+GitHub delivery receipt; the C03 authoring base is
+`31da17adee35f1863131113c664f89dc25668133`. Integration preserves the concurrent
 `1bc3c973e0c6f23c94a32be7d30a06de4a812cd8` capture-only delivery.
+
+## Latest C03 source-complete continuation
+
+C03 is now a complete **generated_unexecuted** source chain, increasing source
+coverage to 13/15; Local/native verification remains 0/15. The development-only
+producer queries exact retained Stage-II contexts at released ActionBench tracked
+frame-zero XYZ/normalized normals and defines errors by the unchanged released
+indices across all 16 frames. It never uses NN/ICP or maps GT points to generated
+vertices. The fitted global affine operator is applied label-free to retained C01
+confirmation contexts and exports seven complete float32 method/control meshes;
+the nine-role freeze/scorer chain adds B0 and prospectively fixed B*. The
+GT-query→generated-query transfer is an explicit falsifiable plain-coordinate
+surrogate assumption, not a native score claim.
+
+Local order is: read the C03 runbook; run current zero-GPU software acceptance;
+after source-derived family freeze and separate GPU resume, emit/run the one-shot
+development label plan; fit on CPU; export confirmation artifacts on CPU; run the
+retained-artifact acceptance; then wait for G01 admission and a new exact scoring
+authorization. GPU STOP remains effective now, so none of those GPU/scorer steps
+has been launched. C05 and C20 remain the two incomplete source chains.
+
+The final C03 static hardening binds each development surface to the pinned
+ActionBench snapshot/semantics and G01 UID/family split, verifies the exact
+ActionMesh autoencoder manifest, and replays the original retained decoder call
+byte-for-byte before issuing a tracked query. Fit bundles now carry recursive
+data/policy/evidence refs through the candidate and native comparison. Candidate
+acceptance recomputes common targets, all successful sequences and certificates;
+legitimate failed arms remain terminal denominator entries, so optional
+sequence/certificate files are not declared as unconditional harness outputs.
+The final independent incremental static review is retained at
+`docs/research-math-20261006/longgoal-20261007/c03-g01-incremental-source-review.json`;
+it reports zero remaining Critical/Important source findings and explicitly does
+not claim Local execution or native qualification.
 
 ## Concrete source changes
 
@@ -170,8 +203,8 @@ space for both the tree and tar in addition to existing assets.
 ```bash
 "$python_bin" "$project_dir/actionmesh/prepare_native_context.py" \
   --root "$project_dir" --skill-dir "$skill_dir" \
-  --plan-dir "$project_dir/plans/paired-native-context-001" \
-  --run-id paired-native-context-001 \
+  --plan-dir "$project_dir/plans/paired-native-context-seed-$generation_seed-001" \
+  --run-id "paired-native-context-seed-$generation_seed-001" \
   --contract "$project_dir/docs/research-math-20261006/actionbench-fp16-lowram-unit-contract-v1.json" \
   --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
   --snapshot-contract "$project_dir/docs/research-math-20261006/actionbench-full128-snapshot-contract.json" \
@@ -180,10 +213,16 @@ space for both the tree and tar in addition to existing assets.
   --unit-manifest "$project_dir/inputs/actionbench-full128-snapshots/unit-manifest.json" \
   --environment "$project_dir/inputs/native-runtime/environment.json" \
   --source-root "$source_root" --dataset-root "$dataset_root" --weights-root "$weights_root" \
-  --gpu-uuid "$gpu_uuid" --instrument-wall-seconds "$instrument_wall_seconds" \
+  --gpu-uuid "$gpu_uuid" --generation-seed "$generation_seed" \
+  --instrument-wall-seconds "$instrument_wall_seconds" \
   --cpu-cores "$instrument_cpu_cores" --ram-mib "$instrument_ram_mib" \
   --atol 0 --rtol 0 --max-capture-bytes 67108864 --source-time-query
 ```
+
+`generation_seed` must be exactly 42, 314 or 2718. Preserve one independent
+plan/attempt/output root per seed; never reuse the seed-42 receipt or overwrite a
+prior root. Source support is `generated_unexecuted`; only seed 42 has retained
+producer evidence at this handoff.
 
 The unit-manifest path above must contain the exact retained calibration manifest
 for the explicit FP16 child profile (R7 manifest SHA-256
@@ -205,13 +244,12 @@ retains before/after collection disk/RSS observations, explicitly not exact peak
 ### Delivery inventory and next authoring work
 
 The maintained [15-item inventory](../../docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)
-now records each exact selected ID, math/review reference, real source entry,
-legal input/model interface, required output and all named controls/ablations,
-shared official scorer, absent candidate acceptance command, completion evidence
-and separate implementation/scientific gaps. No complete candidate method is
-claimed: C02 is a dense projection primitive; C14 is a simple baseline; C01 has
-a shared input instrument; the other 12 lack their complete method entries.
-No command is invented for an unimplemented method.
+records each exact selected ID, math/review reference, real source entry, legal
+input/model interface, required output, named controls/ablations, official scorer,
+Local acceptance command, completion evidence and separate gaps. Thirteen rows
+have complete generated-unexecuted source chains; C05 lacks a legal sparse-mode
+producer and C20 lacks a qualified full-time motion target/amplitude-basis route.
+No Local/native method evidence or scientific conclusion is claimed.
 
 Next Web work continues legal-input adapters and complete method/design
 obligations where their scientific premises exist. Sparse modes, legal motion
@@ -741,7 +779,7 @@ within this partial scope. Authored numerical checks and a real `_stage`/fresh
 subprocess check with deleted live fixture inputs; none were executed. Only
 read-only evidence validation, AST/JSON/source/hash inspection performed.
 
-C03 remains partial: true native development correspondence/label-bank producer,
+At this historical partial-core checkpoint, C03 remained partial: true native development correspondence/label-bank producer,
 receipt-bound C01-context-to-complete-mesh export, nine-role freeze/official
 scoring/raw collection and native acceptance remain absent. Do not fabricate
 pointwise truth from tracked GT or arbitrary nearest neighbours. Full-source
@@ -1135,8 +1173,8 @@ without B0 substitution and cannot erase independent control artifacts.
 All C08 source and tests remain `generated_unexecuted`. Web performed independent
 mathematical/engineering source review plus AST/JSON/hash/diff checks only; no
 project import/test, plan, data/model operation, solver, scorer or GPU task ran.
-Source-complete coverage is 12/15; Local/native remains 0/15. C03, C05 and C20
-remain incomplete on their legal-input/full-chain routes. Supervisor installation
+At this historical C08 checkpoint, source-complete coverage was 12/15 and
+Local/native remained 0/15; C03, C05 and C20 were then incomplete. Supervisor installation
 and runtime execution remain false, online repair remains `not_connected`, and
 GPU STOP plus cumulative budgets are unchanged. Local must begin with the C08
 section of `LOCAL_AGENT_RUNBOOK.md` and execute only emitted harness plans.

@@ -2078,3 +2078,41 @@ archive/source closure, failure independence, witness certificates and cycle
 semantics. Source-complete coverage becomes 12/15; Local verification and native
 results remain 0/15. No project code/test or GPU work was executed. C03, C05 and
 C20 remain incomplete; supervisor/repair runtime remains uninstalled/not_connected.
+
+## C03 source-complete tracked-query calibration chain — 2026-10-08
+
+Restored literal main `31da17adee35f1863131113c664f89dc25668133` and kept
+GPU STOP, frozen budgets and zero scientific retry unchanged. Exact ActionBench
+and ActionMesh source review established a legal development-only route without
+inventing generated-vertex labels: query each retained Stage-II context at the
+released frame-zero tracked XYZ/L2-normalized normal, then compare decoder output
+to the same released track indices at frames 1..15. This does not map GT points
+to generated vertices. Applying the fitted global operator to confirmation
+generated-query residuals is explicitly a falsifiable plain-coordinate transfer
+assumption, not a proof about native metrics.
+
+Authored the receipt-bound development producer/plan; strengthened the six-fit
+bundle to require the producer report; added complete confirmation artifact
+export for the six matched affine estimators plus unit-C01; added nine-role
+B0/B*/method comparison, official ActionBench scoring/raw retention and
+single-owner launch profiles; and added a zero-GPU retained-real-artifact
+acceptance plan plus targeted Local test source. Updated the C03 specification,
+15-item table and G01 exact implementation closure. G01 still has 99 contrasts;
+its canonical source digest is
+`50234945494ce137b8b979552033fc8ffca9f225ef7cfc1387ffab2a5289e7f9`.
+
+Static AST/JSON/hash/diff review is allowed in this Web role; no project import,
+test, model/data operation, solver, scorer or GPU task was run. All new work is
+`generated_unexecuted`. Source-complete coverage is now 13/15; Local/native
+verification remains 0/15. C05 still lacks a qualified sparse mode producer and
+C20 lacks a qualified full-time motion target/amplitude-basis route. Supervisor
+source remains uninstalled/unstarted, online repair remains `not_connected`, and
+the next independent source work is C05 or C20 while Local separately performs
+the documented C03 zero-GPU acceptance and later returns receipt-bound evidence.
+
+Final independent incremental review rechecked the seed-isolated native-context
+producer, D1 provisional-B0/D2-confirmation B-star ordering, canonical family
+split propagation, candidate replay, fit verification and recursive acceptance
+staging. It found zero remaining Critical/Important source issues. The exact
+record is `longgoal-20261007/c03-g01-incremental-source-review.json`; its scope is
+static source completeness only.

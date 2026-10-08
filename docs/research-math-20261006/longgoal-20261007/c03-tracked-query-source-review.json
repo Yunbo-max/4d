@@ -1,0 +1,38 @@
+{
+  "kind": "c03-tracked-query-source-review",
+  "version": 1,
+  "candidate_id": "4d-math-20261006-c03",
+  "benchmark_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "outcome": "verified",
+  "author": "web_supervisor",
+  "reviewer": "independent_c03_native_source_audit",
+  "checks": [
+    "decoder_query_contract_is_xyz_plus_l2_normalized_normal",
+    "development_and_confirmation_families_are_disjoint",
+    "retained_window_is_source_first_with_15_target_times",
+    "surface_columns_are_xyz_then_normal_xyz",
+    "tracked_point_index_is_stable_across_all_16_released_frames"
+  ],
+  "source_refs": [
+    {
+      "path": "actionmesh/repo/actionbench/README.md",
+      "sha256": "0dcfafddb40fcfb120dcc94d7801128fe152e451dd1470d5510badd43b9c3f0a"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/pipeline.py",
+      "sha256": "0934b6801676a9e6f188e5b07450109e0c3359c10fa1230a9b9c69f056fd50f2"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/model/temporal_autoencoder.py",
+      "sha256": "69c18c2fe73de8ecd95f062b4faafac4337589c53bac18284fccaa36d4aa37f2"
+    },
+    {
+      "path": "actionmesh/repo/actionmesh/preprocessing/mesh_processor.py",
+      "sha256": "0ce2c86f28cc84eb23beda5471c55b45f29420abb9c1d39d8b3aa69b81c6da65"
+    }
+  ],
+  "review_scope": "Static exact-source review of released tracked surface semantics, native query construction, arbitrary-query decoder contract and retained source-first window mapping. It does not execute or qualify the transfer assumption.",
+  "transfer_boundary": "Development learns a global operator in the tracked-GT query domain; confirmation applies it to generated-query residuals without GT, matching, refit or scorer feedback. This is distribution transfer, not vertex correspondence or native-metric qualification.",
+  "generated_unexecuted": true,
+  "review_digest": "da33a63e6daba3cabe76b92250e26dbac25d541de0381ca6cd579d5a479c7667"
+}
