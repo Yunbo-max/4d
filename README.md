@@ -1,4 +1,4 @@
-C20 now also has a [partial generated-unexecuted constrained solver core](LOCAL_AGENT_RUNBOOK.md#c20-phaseamplitude-solver-core--partial-source-no-legal-target-producer), while C07 retains its complete generated-unexecuted partial-transport chain. Local acceptance and native execution have not occurred; full-source coverage remains 11/15 because C20 still lacks a legal target/basis producer and native artifact/scoring chain, C03 needs its reviewed development-probe specialization, C08 needs its reviewed geometry-chain specialization, and C05 has no nondegenerate model-native mode bank. The selected 15 share one [complete generated-unexecuted G01 source design](docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md), now with the C05-required `surface_projected_mean` control, 99 predeclared contrasts, numeric criteria, metadata-parsed family evidence, reviewed candidate/role B* admissions and a zero-GPU Local acceptance entry. Dynamic family evidence, candidate admission and all native results remain pending.
+C08 now has a [complete generated-unexecuted geometry trajectory-bridge chain](LOCAL_AGENT_RUNBOOK.md#c08-geometry-trajectory-bridge-chain--source-complete-not-executed), while C20 remains a partial constrained solver core. Local acceptance and native execution have not occurred; full-source coverage is 12/15. C03, C05 and C20 still lack their documented legal label/mode/target producer or complete artifact/scoring route. The selected 15 share one complete generated-unexecuted G01 source design with 12 exact implementation closures, 99 predeclared contrasts, numeric criteria, family/B* rules and zero-GPU Local acceptance. Dynamic family evidence, candidate admission and all native results remain pending.
 
 # 4D 研究复现
 
@@ -6,7 +6,7 @@ C20 now also has a [partial generated-unexecuted constrained solver core](LOCAL_
 
 当前源码交付入口是[原生上下文与连续接管交接](rounds/20261008-native-context/WEB_HANDOFF.md)。**GPU 保持停止；本次源码更新不恢复实验。** Local Codex 在精确交付 commit 先读[根级执行约束](AGENTS.md)与[项目运行手册](LOCAL_AGENT_RUNBOOK.md)，再按手册通过 `research-autopilot/scripts/run_harness.py` 驱动独立 Linux 主机；远端不需要 Codex/GPT，会话控制、Git、SSH 与文件回传由用户电脑承担。[既有基线交接](rounds/20261006-baseline-qualification/WEB_HANDOFF.md)保留为历史协议入口。
 
-当前状态以 [CURRENT.json](docs/research-math-20261006/CURRENT.json) 和最新回执为准：r9 的九个工程基线单元已经完成，R3 原始归档保留了 311 项软件检查通过的记录，历史定价路径修复已在源码中。311 项回执不覆盖后续 macOS 路径修订和本轮新增代码。UID008 仅有紧凑评分一致性回传，完整 raw 包、重复评分和可信重放仍待补。候选源码链完整为 11/15；Local 验证和 native 结果仍为 0/15。
+当前状态以 [CURRENT.json](docs/research-math-20261006/CURRENT.json) 和最新回执为准：r9 的九个工程基线单元已经完成，R3 原始归档保留了 311 项软件检查通过的记录，历史定价路径修复已在源码中。311 项回执不覆盖后续 macOS 路径修订和本轮新增代码。UID008 仅有紧凑评分一致性回传，完整 raw 包、重复评分和可信重放仍待补。候选源码链完整为 12/15；Local 验证和 native 结果仍为 0/15。
 
 C04 新增真实原生输入到稳健约束、三臂完整导出、五角色官方评分与归档的源码链。采用显式正对角敏感度椭球和预测网格动作代理量，保留投影证书、float32 有限步检查及全部失败；不声称概率覆盖或原生指标保证。见[运行手册 C04 章节](LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance)。Supervisor 新增固定清单内的输入等待、心跳、STOP/resume 与丢失确认对账；[在线修复桥](LOCAL_AGENT_RUNBOOK.md#reviewed-online-repair-bridge--source-authored-local-runtime-pending)现可把一个已审查的终止代码错误交给既有 `research-autopilot` runtime 的单个有限 worker，并由 supervisor 只读核对哈希绑定的桥接回执。当前没有实际回执、安装或真实 provider 连接；`worker_returned_unreviewed` 也只表示有限 worker 子进程返回，不是补丁验收。任务契约不授予 GPU 权限、科学重试或自动应用补丁，也不替代 Local 对 agent/provider 的 OS 隔离资格验证。
 
@@ -14,7 +14,7 @@ C01 新增完整同上下文减偏源码链：`prepare_self_map_candidate.py` �
 
 C13 规格要求的强简单对照现已有独立源码入口：`actionmesh/prepare_quadratic_acceleration_control.py` 通过现有单一 harness 按输入序列时间戳单位生成二阶差分、精确固定第 0 帧的二次加速度控制臂。它保留完整 16 帧、拓扑和顶点身份，输出清单可交给既有官方评分适配器。该交付是 **generated_unexecuted** 的对照，不是 C13 group-trend 候选本身，也不关闭 Natural Gate 0；先按运行手册完成当前 CPU 软件验收，再在精确保留的真实 `sequence.npz` 上执行其 CPU 计划。GPU 仍停止。
 
-C13 group-trend 候选现在另有 `actionmesh/prepare_group_acceleration_candidate.py`：消费同一完整原生序列，按 supplied native loader clock 构造非均匀二阶差分，支持显式 hash 固定的非对角 temporal SPD metric（原生首个特化明确选择 identity），通过自由帧消元精确固定第 0 帧，并导出 3D group dual-ball、Fenchel 下界、primal/dual gap、ADMM residual 与完整原身份序列。源码和验收测试仍是 **generated_unexecuted**；尚未完成 Local 验收、真实五臂输入、官方评分、Natural Gate 0 或 IPCG。C01、C02、C04、C06、C07、C10、C11、C12、C13、C14、C15 现记为 **源码链完整、Local 未验证**，不是已验证候选或 native 结果；其余 4 项仍有源码缺口，native 结果仍为 0/15。GPU 仍停止。
+C13 group-trend 候选现在另有 `actionmesh/prepare_group_acceleration_candidate.py`：消费同一完整原生序列，按 supplied native loader clock 构造非均匀二阶差分，支持显式 hash 固定的非对角 temporal SPD metric（原生首个特化明确选择 identity），通过自由帧消元精确固定第 0 帧，并导出 3D group dual-ball、Fenchel 下界、primal/dual gap、ADMM residual 与完整原身份序列。源码和验收测试仍是 **generated_unexecuted**；尚未完成 Local 验收、真实五臂输入、官方评分、Natural Gate 0 或 IPCG。C01、C02、C04、C06、C07、C08、C10、C11、C12、C13、C14、C15 现记为 **源码链完整、Local 未验证**，不是已验证候选或 native 结果；其余 3 项仍有源码缺口，native 结果仍为 0/15。GPU 仍停止。
 
 C10 现在有独立的完整 **generated_unexecuted** 链。`actionmesh/prepare_integrable_gradient_candidate.py` 从 receipt-bound 原生预测序列构造固定共同微分目标和跨 16 帧不变的正权重，按连通分量固定 gauge，并分别导出 deterministic direct lift、qualified face-local ARAP 与 matrix-free pinned integrable solve；失败臂保留 terminal report，固定 tar 仍可由 harness 收集。`research_math.c10_native_comparison` 事前固定 B0/B* 与三种共同目标重建，保持五角色失败分母并按实际数组去重；`research_math.c10_native_scoring`、`prepare_c10_native_scoring.py` 与 `launch_c10_native_scoring.py` 接续官方 ActionBench 评分、有界 raw closure、单次零重试授权与稳定单所有者 claim。未执行 Local 验收、构造器、求解器、评分器或 GPU；科学准入、真实输入、G01 和 native 结果均仍待完成。
 
@@ -34,9 +34,9 @@ C02 现在不再把外部 `d/C/W` 的 `protected_projection.py` 当成候选。�
 
 ## 当前：方法必要性与可识别性审查
 
-逐项交付状态见[15 项实现清单](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)：包含数学依据、实际入口、输入接口、对照/消融、官方评分接入与缺口。C01、C02、C04、C06、C07、C10、C11、C12、C13、C14 与 C15 现标记为“源码链完整、generated_unexecuted”；Local 验证与 native 结果仍为 0/15。成对原生上下文现在有独立的 `prepare_native_context.py` 计划入口和完整原始文件回传代码；仍待 Local 验收，GPU 保持停止。
+逐项交付状态见[15 项实现清单](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)：包含数学依据、实际入口、输入接口、对照/消融、官方评分接入与缺口。C01、C02、C04、C06、C07、C08、C10、C11、C12、C13、C14 与 C15 现标记为“源码链完整、generated_unexecuted”；Local 验证与 native 结果仍为 0/15。成对原生上下文现在有独立的 `prepare_native_context.py` 计划入口和完整原始文件回传代码；仍待 Local 验收，GPU 保持停止。
 
-[第二轮研究修订](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md)补推 C02 的保护代价和匹配步长对照、C20 的 principal-angle 可识别性及噪声放大、C05 的原生接口和 localized blend 离面边界。保留20个构造与原15个入选身份，更新全池顺序和15份条件规格。数学仍是条件自审；当前源码链完整为11/15，Local 验证、完整 native 实验及正式成败仍为0/15。
+[第二轮研究修订](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md)补推 C02 的保护代价和匹配步长对照、C20 的 principal-angle 可识别性及噪声放大、C05 的原生接口和 localized blend 离面边界。保留20个构造与原15个入选身份，更新全池顺序和15份条件规格。数学仍是条件自审；当前源码链完整为12/15，Local 验证、完整 native 实验及正式成败仍为0/15。
 
 新回传的 W0 checkpoint 已核对16个 pair／final receipt 字节 hash，分数与旧 summary 一致；小包仍缺其回执引用的352个阶段／raw成员。见[反馈审查](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/w0-feedback-review.json)，完整 raw 导出与 native 回放继续待补。
 

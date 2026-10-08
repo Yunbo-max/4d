@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C20 now also has a generated_unexecuted bounded monotone phase/amplitude solver core with identifiability and original-time reconstruction, but remains incomplete because no qualified full-time motion-target/amplitude-basis producer or artifact/scoring chain exists. C03/C05/C08 likewise remain incomplete on their recorded legal-input routes. The stage-wide G01 source design is complete/generated_unexecuted with 11 exact method closures; dynamic family/B*/candidate admission remains pending. Four full method source chains remain. The reviewed online-repair bridge has a fail-closed read-only supervisor receipt handshake, but no controller DB/adapter/provider/worker receipt is configured or running and Local qualification is pending. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (12/15). C08 is a receipt-bound predicted-geometry KL path bridge with no attention/natural-correspondence claim. C20 has a bounded solver core but remains incomplete because no qualified full-time motion-target/amplitude-basis producer or artifact/scoring chain exists; C03/C05 remain incomplete on their recorded legal-input routes. G01 is complete/generated_unexecuted with 12 exact method closures; dynamic family/B*/candidate admission remains pending. Three full method source chains remain. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods 0/15. GPU STOP unchanged.",
   "supervisor_repair_handshake": {
     "status": "source_authored_generated_unexecuted_local_acceptance_pending",
     "authoring_base": "6399bff2b087e3d648afa8e204948545c574ecca",
@@ -40,8 +40,8 @@
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
     "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65",
-    "coverage": "15 selected specs, exact candidate/native source closures for 11 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts including C05's required same-bank surface-projected mean, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
+    "design_digest": "1963eb8e2da1019b195af9536583b18eb74636b5e193fbc33b68cfa253dbebb1",
+    "coverage": "15 selected specs, exact candidate/native source closures for 12 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
     "independent_static_review": "C20/G01 incremental independent source review complete; G01 Critical 0, Important 0, Minor 0; C20 partial core Critical 0, Important 0, Minor 1; Local execution pending",
     "tests_executed": false,
     "scientific_design_verified": 0,
@@ -1783,6 +1783,28 @@
     "gpu_execution": "stopped_by_user",
     "remaining": "Local current-source acceptance, prospective gamma/epsilon/support/solver/resource/B* freeze, real receipt-bound CPU artifact execution and replay, G01/Gate0/IPCG/family admission, explicit GPU resume authorization and official native result",
     "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c07-partial-transport-with-native-fallback--source-complete-not-executed"
+  },
+  "c08_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T21:20:00Z",
+    "restored_main": "0a8d58a837db113245c177dae71c0c199c595a85",
+    "candidate_id": "4d-math-20261006-c08",
+    "method_entry": "actionmesh/research_math/trajectory_bridge_candidate.py",
+    "cpu_plan": "actionmesh/prepare_trajectory_bridge_candidate.py",
+    "retained_acceptance": "actionmesh/prepare_c08_native_acceptance.py",
+    "comparison_entry": "actionmesh/research_math/c08_native_comparison.py",
+    "official_scoring_entry": "actionmesh/research_math/c08_native_scoring.py",
+    "admitted_plan": "actionmesh/prepare_c08_native_scoring.py",
+    "single_owner_launcher": "actionmesh/launch_c08_native_scoring.py",
+    "source_scope": "receipt-bound 16-frame predicted geometry; invariant adjacent descriptors; strict area/uniform support witnesses; sparse log-domain endpoint KL bridge; same-support tracker, coordinate smoother and geometry cycle controls; whole-path conditional-mean 4D lift; six-role official denominator",
+    "source_complete_candidates": 12,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "tests_executed": false,
+    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-c08-incremental-source-review.json; Critical 0, Important 0 after closure repairs; no project import or execution.",
+    "gpu_execution": "stopped_by_user",
+    "remaining": "Local source and retained-real-artifact acceptance, prospective epsilon/support/tolerance/resources/family/B* freeze, Gate0/IPCG/G01 admission, explicit GPU resume authorization and official native result",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c08-geometry-trajectory-bridge-chain--source-complete-not-executed"
   },
   "c20_partial_solver_handoff": {
     "status": "partial_solver_core_generated_unexecuted",

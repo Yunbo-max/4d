@@ -301,6 +301,18 @@ artifact acceptance, comparison, official request and single-owner launcher.
 GPU STOP still forbids scoring. The maintained source-chain count is 11/15;
 Local verification and native results remain 0/15.
 
+C08 has a source-complete but **generated_unexecuted** predicted-geometry
+trajectory-bridge chain. It consumes one receipt-bound 16-frame native sequence,
+constructs sparse adjacent descriptor kernels plus strict area/uniform support
+witnesses, solves the selected endpoint KL bridge in log space, and exports a
+whole-path conditional-mean lift. It does not consume or claim latent attention,
+natural correspondence, GT or scorer state. Continue only through
+`prepare_trajectory_bridge_candidate.py`, `prepare_c08_native_acceptance.py`,
+the six-role prospective freeze, official scoring plan and single-owner launcher.
+Retain per-role failures; bridge nonconvergence must not erase independent control
+artifacts. GPU STOP remains active. The current source-chain count is 12/15;
+Local verification and native results remain 0/15.
+
 ## Safety and provenance
 
 - Preserve dirty and running worktrees. Do not force-push, reset, or overwrite another update.

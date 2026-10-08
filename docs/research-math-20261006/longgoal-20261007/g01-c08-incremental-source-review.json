@@ -1,0 +1,47 @@
+{
+  "kind": "c08-incremental-independent-source-review",
+  "version": 1,
+  "reviewed_at": "2026-10-08T21:35:00Z",
+  "base_commit": "0a8d58a837db113245c177dae71c0c199c595a85",
+  "candidate_id": "4d-math-20261006-c08",
+  "scope": "Independent read-only mathematical and engineering review of the receipt-bound geometry trajectory bridge, artifact/archive replay, six-role comparison, official scoring/raw collection, Local plan/launcher, tests and prospective specification.",
+  "execution_boundary": "Static source review only. No project import, test, plan, data/model operation, numerical method, scorer or GPU execution.",
+  "source_delivery_status": "source_complete_generated_unexecuted",
+  "source_refs": [
+    {"path": "actionmesh/launch_c08_native_scoring.py", "sha256": "9960beb2f82b9f7edfb1dcae5f92ac29563bfa2aca4559397c70a3268156c788"},
+    {"path": "actionmesh/prepare_c08_native_acceptance.py", "sha256": "5d1009b9f876f645fef7c572e35392f4616f9c77e4afe27e1e22f953a4b8a60e"},
+    {"path": "actionmesh/prepare_c08_native_scoring.py", "sha256": "e64699c567892636f5b10305483ece471c279763a78b8cd7db1e5a28130a7fc0"},
+    {"path": "actionmesh/prepare_trajectory_bridge_candidate.py", "sha256": "ea2e199fedaa468520c8d6559b05a701c711121c3ea5220337311664d3a2917d"},
+    {"path": "actionmesh/research_math/c08_native_comparison.py", "sha256": "6a5a19ccf3b15f54adc458a0bffdef29c55afe94f70116421f0bdb2113bea60b"},
+    {"path": "actionmesh/research_math/c08_native_scoring.py", "sha256": "014ad5bc11a1a97806222c50b87f071453e01e03e5ab0c2f316034a03b9952fe"},
+    {"path": "actionmesh/research_math/c11_native_comparison.py", "sha256": "802e59dbb1a15d6bc262c8e88868e7fe09c580499a8ef85d817122c31d3b47da"},
+    {"path": "actionmesh/research_math/tests/test_c08_native_scoring_profile.py", "sha256": "f569c6c483581ec9e254b6778453deca1554fc9c32bafc90451767de8ed735b0"},
+    {"path": "actionmesh/research_math/tests/test_trajectory_bridge_candidate.py", "sha256": "0aad4fd259a38d17574e10c2f5b74cb369492d3a8e049485c4288595907b0009"},
+    {"path": "actionmesh/research_math/trajectory_bridge_candidate.py", "sha256": "f9de69195e027ebe09d21a516382fd792d727ce51bc54d5326ee1f90f1044689"},
+    {"path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c08.json", "sha256": "1845b3b51653df5c10dd7f8891b91c02c103ce1548224165e24436afa6dd63f4"}
+  ],
+  "reviewed_properties": [
+    "legal receipt-bound geometry-only inputs without attention, GT, scorer state or external correspondence",
+    "strict sparse area/uniform feasibility witnesses and structural-zero preservation",
+    "sparse log-domain endpoint IPF with actual absolute and relative endpoint closure",
+    "whole-path conditional-mean lift without dense endpoint matrices or path enumeration",
+    "independent control failure retention and exact artifact/archive replay",
+    "six-role cd_motion comparison profile and official ActionBench raw/scoring closure",
+    "single-attempt zero-retry planning, argument staging and single-owner launch"
+  ],
+  "repaired_findings": [
+    "five-role denominator and metric-profile leakage",
+    "missing source/archive comparison closure",
+    "bridge failure erasing independent controls",
+    "missing witness hashes/residuals and biased reverse cycle semantics",
+    "weak parameter/report/common-target/manifest/bounds replay validation",
+    "specification math-to-code and cost-claim mismatches",
+    "missing C08-specific conditional-mean, collapse, alias/failure and staging test source"
+  ],
+  "remaining_findings": {"critical": 0, "important": 0, "minor": 2},
+  "minor_notes": [
+    "The argv test also uses static source-token assertions; actual plan construction remains a required Local acceptance step.",
+    "The six-role unit exercises readout and profile identity while the retained-real Local plan must exercise comparison.make_request end to end."
+  ],
+  "verdict": "Source-complete/generated_unexecuted within the stated geometry-only specialization. Local execution, retained-native evidence, official scoring and scientific conclusions remain pending."
+}

@@ -2059,3 +2059,22 @@ and independent static review only and ran no project import/test, plan, solver,
 data/model download, scorer or GPU operation. GPU STOP, cumulative budget,
 single-attempt/zero-scientific-retry protocols and supervisor
 `not_connected`/uninstalled status remain unchanged.
+
+## C08 source-complete geometry bridge — 2026-10-08
+
+Starting from main `0a8d58a837db113245c177dae71c0c199c595a85`, C08 was
+prospectively specialized to a legal receipt-bound predicted-geometry path law.
+Adjacent invariant descriptor supports include strict area/uniform feasibility
+witnesses; frame-0/frame-15 barycentric areas define endpoints; sparse log-domain
+IPF closes both endpoint residuals; the 4D action is a whole-path conditional
+coordinate mean. It does not consume attention, GT, scorer state or an external
+correspondence/kernel and does not claim semantic identity recovery.
+
+The complete generated-unexecuted source chain now covers independent four-role
+artifact generation and retained failures, six-role freeze/B*, official scoring
+and raw collection, zero-GPU retained-real acceptance, single-attempt plan and
+single-owner launcher. Independent review drove repairs to profile metrics,
+archive/source closure, failure independence, witness certificates and cycle
+semantics. Source-complete coverage becomes 12/15; Local verification and native
+results remain 0/15. No project code/test or GPU work was executed. C03, C05 and
+C20 remain incomplete; supervisor/repair runtime remains uninstalled/not_connected.

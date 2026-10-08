@@ -1,4 +1,4 @@
-"""Freeze C11's five logical roles without scoring or choosing B*.
+"""Freeze a profiled candidate's logical roles without scoring or choosing B*.
 
 The request consumes a retained C11 artifact, an exact native B0 pair and a
 prospective B* decision.  It revalidates the candidate construction, keeps
@@ -153,7 +153,8 @@ def _validate_freeze(freeze: dict) -> None:
     if (not isinstance(rows, list)
             or [row.get("role") if isinstance(row, dict) else None
                 for row in rows] != list(ROLES)):
-        raise ValueError(f"Exactly five ordered {PROFILE_LABEL} roles must be frozen")
+        raise ValueError(
+            f"Exactly {len(ROLES)} ordered {PROFILE_LABEL} roles must be frozen")
 
 
 def _decision(root: Path, freeze: dict) -> tuple[dict, list[dict]]:
@@ -419,7 +420,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
         "roles": normalized,
         "role_to_case": {row["role"]: row.get("case_id") for row in normalized},
         "logical_denominator": {
-            "n_roles": 5,
+            "n_roles": len(ROLES),
             "roles": [{"role": row["role"],
                        "preparation_status": row.get("preparation_status"),
                        "case_id": row.get("case_id")} for row in normalized],
@@ -454,7 +455,8 @@ def verify_request(root: Path, request: dict) -> None:
             or request.get("dispatch_ready") is not False):
         raise ValueError(f"Unexecuted {PROFILE_LABEL} request scope required")
     if [row.get("role") for row in request.get("roles", [])] != list(ROLES):
-        raise ValueError(f"Exactly five ordered {PROFILE_LABEL} roles required")
+        raise ValueError(
+            f"Exactly {len(ROLES)} ordered {PROFILE_LABEL} roles required")
     refs = request.get("input_refs")
     if not isinstance(refs, list) or len({ref["path"] for ref in refs}) != len(refs):
         raise ValueError("Unique pinned request closure required")

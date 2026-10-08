@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c08",
   "name_zh": "端点约束的轨迹分布桥",
   "priority_rank": 13,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Prospective geometry-only specialization source-complete/generated_unexecuted; Local retained-native acceptance, prospective freeze and native scoring remain pending.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c08.json",
@@ -39,35 +39,41 @@
   "prior_art_and_role": "Classical Schrödinger/IPF bridge; local Markov tracking; historical m02 decoder cycle consistency acts on a different object.",
   "planned_interface": {
     "inputs": [
-      "qualified sparse Markov kernels and initial probabilities",
-      "legal model-derived endpoint distributions",
-      "support feasibility and common path-decision/lift policy"
+      "one completed same-UID receipt-bound ActionMesh sequence.npz plus report.json",
+      "exactly 16 float32 predicted mesh frames with fixed faces, frame/timestamp IDs and query_vertex_ids",
+      "frozen epsilon, descriptor-neighbor count, endpoint residual tolerance and maximum iterations"
     ],
     "outputs": [
       "full original-identity mesh sequence at every original frame",
       "unchanged faces and retained vertex mapping",
-      "parameters, fallback/rejection/termination logs",
-      "solver residuals, input/source hashes and end-to-end costs"
+      "parameters and fail-closed termination logs without B0 fallback or scientific retry",
+      "support/witness hashes, solver residual trace, endpoint and policy certificates, input/source hashes, iteration counts and artifact I/O timing"
     ]
   },
   "planned_math_to_code": [
     {
       "derivation_step": "s1",
-      "statement": "Stationarity of KL plus endpoint multipliers yields P*(path)=u(i_1) Q(path) v(i_T).",
-      "planned_function": "4d_math_20261006_c08.form_endpoint_kl_law",
-      "status": "not_implemented"
+      "statement": "Receipt-bound adjacent sparse geometry kernels and the frame-0 area law define the finite-state reference path law Q.",
+      "planned_function": "research_math.trajectory_bridge_candidate.build_geometry_chain",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
-      "statement": "Forward/backward messages compute endpoint marginals without enumerating all paths.",
-      "planned_function": "4d_math_20261006_c08.forward_backward_messages",
-      "status": "not_implemented"
+      "statement": "KL stationarity gives P*(path)=u(i_0)Q(path)v(i_T), and sparse forward/backward messages compute its endpoint marginals without path enumeration.",
+      "planned_function": "research_math.trajectory_bridge_candidate.solve_endpoint_bridge",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "Alternate endpoint scaling until both marginal residuals close.",
-      "planned_function": "4d_math_20261006_c08.close_endpoint_scalings",
-      "status": "not_implemented"
+      "planned_function": "research_math.trajectory_bridge_candidate.solve_endpoint_bridge",
+      "status": "implemented_generated_unexecuted"
+    },
+    {
+      "derivation_step": "s4",
+      "statement": "Sparse bridge policies define the whole-path conditional coordinate mean without a dense endpoint matrix.",
+      "planned_function": "research_math.trajectory_bridge_candidate.whole_path_conditional_mean_lift",
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -81,7 +87,7 @@
       "B_star",
       "local_transition_tracker",
       "coordinate_smoother",
-      "decoder_cycle_control",
+      "geometry_cycle_control",
       "endpoint_bridge"
     ],
     "primary_metric": "cd_motion",
@@ -90,8 +96,8 @@
       "cd_4d"
     ],
     "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
-    "distinguishing_prediction": "Future endpoint evidence can change intermediate correspondence paths without only smoothing coordinates; benefit should disappear when endpoint evidence is uninformative.",
-    "falsifier": "Reject if a local transition smoother or historical decoder-cycle repair with equal inference budget supplies the same native benefit.",
+    "distinguishing_prediction": "Final predicted-area evidence changes intermediate globally conditioned sparse policies and their full-path conditional-mean lifts; when the terminal marginal equals the reference terminal marginal, the bridge must collapse numerically to the same-support reference chain.",
+    "falsifier": "Reject if the same-support local transition tracker, same-input coordinate smoother, geometry mutual-cycle control or prospectively selected B* supplies the same native benefit under the frozen denominator and failure policy.",
     "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
     "seed_policy": {
       "inference": [
@@ -117,15 +123,82 @@
     ]
   },
   "outstanding_requirements": [
-    "actual sparse reference chain and informative endpoints",
-    "support-feasible endpoint bridge",
-    "same-information local/cycle comparators and whole-path decision",
-    "final 16/16 raw receipts and native replay",
+    "Local execution of authored numerical/unit/profile/retained-artifact tests",
+    "one retained real 16/16 source pair and exact candidate artifact replay",
+    "prospective B* freeze, family split and six-role native contract",
+    "official ActionBench scoring/raw collection after separate GPU authorization",
     "Natural Gate 0 PASS; required importance/collision decision",
-    "code identity/software/native-interface verification",
+    "Local code identity/software/native-interface verification",
     "strongest executable baseline and fair information/cost",
     "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
   ],
+  "geometry_only_specialization": {
+    "state_space": "original query vertex IDs shared by all 16 predicted frames",
+    "feature_source": "rotation/translation/scale-invariant one-ring geometry descriptors only",
+    "forbidden_inputs": [
+      "ground truth",
+      "official scorer outputs",
+      "latent attention or context arrays",
+      "external correspondence, cost or Markov kernels"
+    ],
+    "claim_boundary": "The sparse policies are geometry decisions, not recovered natural or semantic correspondence."
+  },
+  "reference_chain": {
+    "support": "descriptor kNN union exact original-ID edges plus explicit strict positive area- and uniform-feasibility witnesses; the uniform witness only closes the frozen shared support and is not an endpoint law",
+    "log_kernel": "-geometry_cost/epsilon minus sparse per-row logsumexp",
+    "initial_law": "normalized frame-0 barycentric vertex area"
+  },
+  "endpoint_marginals": {
+    "initial": "normalized frame-0 barycentric vertex area",
+    "terminal": "normalized frame-15 barycentric vertex area",
+    "strictness": "every retained state must have positive finite incident area; otherwise C08 fails closed"
+  },
+  "support_and_reachability": {
+    "certificate": "each adjacent support retains a strictly positive coupling with the two adjacent area marginals",
+    "consequence": "the product of adjacent witness conditionals is an explicit finite-KL path law with the required endpoints",
+    "structural_zeros": "support-external edges remain zero; no dense epsilon or large-weight repair"
+  },
+  "log_bridge_solver": {
+    "objective": "minimize KL(P||Q) subject to fixed initial and terminal marginals",
+    "implementation": "sparse log-domain forward/backward endpoint IPF",
+    "acceptance": "both maximum absolute and relative endpoint residuals meet the frozen tolerance before max_iterations"
+  },
+  "whole_path_decision_and_lift": {
+    "rule": "for frame s and original state i, emit E[X_s(I_s)|I_0=i] under the complete bridge policy product",
+    "implementation": "backward sparse policy products; no dense V-by-V endpoint matrix or path enumeration",
+    "anchor": "frame 0 is copied bit-exactly; faces, query IDs and frame IDs are unchanged"
+  },
+  "certificates": [
+    "receipt/source/code hashes and environment",
+    "descriptor support and witness hashes",
+    "strict witness row/column residuals",
+    "endpoint scaling residual trace and bridge row/terminal residuals",
+    "hard-path diagnostics separated from probabilistic endpoint closure",
+    "float32 finite output, exact anchor and fixed native identity arrays"
+  ],
+  "failure_semantics": "Receipt mismatch, topology/identity drift, nonpositive area, infeasible support/witness, nonconvergence, nonfinite output or certificate mismatch is retained as terminal failed_unscored/error evidence. No B0 substitution and no retry of the frozen scientific attempt.",
+  "limitations": [
+    "Predicted geometry supplies a legal specialization but not semantic identity supervision.",
+    "The conditional-mean mesh is a Bayes coordinate action; probability endpoint closure does not imply its diagnostic hard-state histogram matches the endpoint marginal.",
+    "All source and tests are generated_unexecuted until Local acceptance; no native result or scientific conclusion exists."
+  ],
+  "source_delivery": {
+    "status": "source_complete_generated_unexecuted",
+    "entrypoints": [
+      "actionmesh/prepare_trajectory_bridge_candidate.py",
+      "actionmesh/prepare_c08_native_acceptance.py",
+      "actionmesh/prepare_c08_native_scoring.py",
+      "actionmesh/launch_c08_native_scoring.py"
+    ],
+    "core": "actionmesh/research_math/trajectory_bridge_candidate.py",
+    "comparison": "actionmesh/research_math/c08_native_comparison.py",
+    "official_scoring": "actionmesh/research_math/c08_native_scoring.py",
+    "tests": [
+      "actionmesh/research_math/tests/test_trajectory_bridge_candidate.py",
+      "actionmesh/research_math/tests/test_c08_native_scoring_profile.py"
+    ],
+    "execution_state": "generated_unexecuted; GPU STOP unchanged"
+  },
   "supersedes_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c08.json",
     "sha256": "f14e1043da749f6991cbe6bf9b32623e3fecb6460b42dd9845d78f7eb39c8164"

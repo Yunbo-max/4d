@@ -1113,3 +1113,30 @@ download, solver, scorer or GPU operation. GPU STOP, cumulative budgets and the
 single-attempt/zero-scientific-retry protocols remain unchanged. The supervisor
 is not installed or running and its operational repair state remains
 `not_connected`.
+
+## C08 geometry endpoint-bridge delivery — 2026-10-08
+
+Restored literal main `0a8d58a837db113245c177dae71c0c199c595a85` and replaced
+the historical missing-Markov-input blocker with a prospectively reviewed
+specialization of the same selected C08 path-KL bridge. One receipt-bound
+predicted 16-frame mesh supplies invariant adjacent geometry descriptors,
+strict area/uniform support witnesses and first/final barycentric-area
+marginals. No latent attention/context is relabelled as a kernel, and the method
+makes no natural-correspondence claim.
+
+The authored CPU chain now includes sparse log-domain endpoint IPF, explicit
+endpoint/support/witness certificates, a whole-path conditional-mean coordinate
+lift, same-support reference tracker, coordinate smoother and mutual-geometry
+cycle control, complete 16-frame artifacts, retained failure replay, six-role
+prospective comparison, official ActionBench raw/scoring collection, an admitted
+single-attempt plan and single-owner launcher. Bridge nonconvergence is retained
+without B0 substitution and cannot erase independent control artifacts.
+
+All C08 source and tests remain `generated_unexecuted`. Web performed independent
+mathematical/engineering source review plus AST/JSON/hash/diff checks only; no
+project import/test, plan, data/model operation, solver, scorer or GPU task ran.
+Source-complete coverage is 12/15; Local/native remains 0/15. C03, C05 and C20
+remain incomplete on their legal-input/full-chain routes. Supervisor installation
+and runtime execution remain false, online repair remains `not_connected`, and
+GPU STOP plus cumulative budgets are unchanged. Local must begin with the C08
+section of `LOCAL_AGENT_RUNBOOK.md` and execute only emitted harness plans.

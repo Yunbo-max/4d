@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (11/15); Local-verified and native-result candidates remain 0/15. Four source chains and an actually configured online repair worker remain pending. The retained repair bridge and supervisor's fail-closed read-only status handshake are source-authored/generated_unexecuted; no worker receipt is checked in and current operational state is not_connected. The stage-wide G01 source design is complete/generated_unexecuted; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C03/C20 and the C05/C08 dependencies remain blocked on missing legal native inputs. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C04,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (12/15); Local-verified and native-result candidates remain 0/15. C03,C05,C20 and an actually configured online repair worker remain pending. The retained repair bridge and supervisor's fail-closed read-only status handshake are source-authored/generated_unexecuted; no worker receipt is checked in and current operational state is not_connected. The stage-wide G01 source design is complete/generated_unexecuted; source-derived family review, D1-only B* freezes, per-candidate admission and Local/native evidence remain pending. C08 now uses a conservative predicted-geometry path-law specialization and makes no attention or natural-correspondence claim. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -930,9 +930,9 @@
       "priority": 13,
       "name": "端点约束的轨迹分布桥",
       "inputs": [
-        "qualified sparse Markov kernels and initial probabilities",
-        "legal model-derived endpoint distributions",
-        "support feasibility and common path-decision/lift policy"
+        "one completed same-UID ActionMesh sequence.npz/report.json pair",
+        "16 float32 predicted mesh frames with fixed native topology and IDs",
+        "frozen epsilon, neighbor count, endpoint tolerance and iteration ceiling"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c08.json",
       "native_result": "not_started",
@@ -944,47 +944,50 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c08-math.json",
         "sha256": "8662ec642b8d778740bc7ff5586e4e60559a47c4a0e05a9660cacc5d38788372"
       },
-      "source_status": "specification_only",
-      "input_blocker_evidence": "2026-10-08 exact-source review: no qualified sparse Markov reference chain or legal model-derived endpoint distributions exist in the current native/context interface. A standalone IPF solver would be an external-input primitive, not the selected complete method.",
-      "prospective_specialization_review": "A source-faithful geometry-only specialization is available after prospective spec/review update: one receipt-bound predicted 16-frame mesh supplies adjacent sparse geometry supports/costs, row-normalized reference kernels, anchor/final barycentric-area endpoints, reachability, log-domain bridge scaling and a deterministic whole-path lift. This must not be described as model attention or natural correspondence evidence and is not implemented in the current source status.",
-      "code_entry": null,
-      "real_input_and_model_interface": "Qualified sparse Markov kernels/initial probabilities and model endpoint distributions",
+      "source_status": "source_chain_complete_generated_unexecuted: one receipt-bound predicted sequence supplies a strict sparse geometry reference chain, explicit adjacent area-feasibility witnesses, log-domain endpoint bridge, whole-path conditional-mean lift, four artifact roles, six-role freeze, official scoring/raw collection and authorization-gated common-harness plan/launcher; no Local or scientific execution occurred",
+      "input_blocker_evidence": "Resolved at source level by a conservative geometry-only specialization: exact predicted meshes supply invariant descriptors, adjacent sparse supports and first/final barycentric-area endpoints. No latent attention/context array is treated as a Markov law, and no natural correspondence or scientific benefit is claimed.",
+      "prospective_specialization_review": "Independent mathematical and engineering review accepted the predicted-geometry specialization of the same selected KL path bridge. Each adjacent support includes a strict area coupling witness; the endpoint bridge uses sparse log-domain forward/backward scaling and the lift is the full-path conditional coordinate mean from every original vertex state.",
+      "code_entry": "actionmesh/research_math/trajectory_bridge_candidate.py; CPU artifact plan actionmesh/prepare_trajectory_bridge_candidate.py; retained-native plan actionmesh/prepare_c08_native_acceptance.py",
+      "real_input_and_model_interface": "One completed same-UID ActionMesh sequence.npz/report.json pair with exactly 16 float32 predicted mesh frames, fixed faces/timestamps/frame indices/query IDs; no GT, scorer output, latent attention/context, external correspondence/cost/kernel or new model call is consumed",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
-        "parameters, fallback/rejection/termination logs",
-        "solver residuals, input/source hashes and end-to-end costs"
+        "parameters and fail-closed rejection/termination logs without fallback",
+        "support/witness and endpoint residual certificates, input/source hashes and end-to-end costs"
       ],
       "controls_and_ablations": [
         "B0",
         "B_star",
         "local_transition_tracker",
         "coordinate_smoother",
-        "decoder_cycle_control",
+        "geometry_cycle_control",
         "endpoint_bridge"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
-      "remaining_implementation_gaps": [
-        "chain/endpoint adapter",
-        "support feasibility",
-        "bridge/IPF",
-        "path decision",
-        "common lift"
+      "native_scoring_entry": "actionmesh/research_math/c08_native_comparison.py -> actionmesh/research_math/c08_native_scoring.py -> actionmesh/prepare_c08_native_scoring.py -> actionmesh/launch_c08_native_scoring.py -> official_actionbench_adapter.py",
+      "local_method_acceptance_command": "First execute the common CPU acceptance through its emitted harness plan. Then build the receipt-bound CPU artifact plan: \"$python_bin\" \"$project_dir/actionmesh/prepare_trajectory_bridge_candidate.py\" --root \"$project_dir\" --skill-dir \"$skill_dir\" --source-sequence \"$source_case/sequence.npz\" --run-id c08-trajectory-bridge-001 --epsilon \"$epsilon\" --neighbors \"$neighbors\" --tolerance \"$tolerance\" --max-iterations \"$max_iterations\" --smoothing-strength \"$smoothing_strength\" --coordinate-bounds \"$lower\" \"$upper\" --bounds-policy preserve_and_report --max-artifact-bytes \"$max_artifact_bytes\" --wall-seconds \"$wall_seconds\" --ram-mib \"$ram_mib\" --plan-dir \"$project_dir/plans/c08-trajectory-bridge-001\"; execute only the printed approved harness plan. Retained real replay and comparison/scoring request preparation must use prepare_c08_native_acceptance.py and its emitted zero-GPU plan before any scoring authorization.",
+      "acceptance_command_gap": "Commands and targeted numerical/profile/real-artifact replay test source are authored but generated_unexecuted. Local must prospectively choose epsilon/k/tolerance/resource limits, run current CPU acceptance and a retained real artifact, then satisfy G01/Gate0/IPCG/family/B*/authorization requirements. GPU STOP remains effective.",
+      "completion_evidence": [
+        "actionmesh/research_math/trajectory_bridge_candidate.py",
+        "actionmesh/prepare_trajectory_bridge_candidate.py",
+        "actionmesh/prepare_c08_native_acceptance.py",
+        "actionmesh/research_math/c08_native_comparison.py",
+        "actionmesh/research_math/c08_native_scoring.py",
+        "actionmesh/prepare_c08_native_scoring.py",
+        "actionmesh/launch_c08_native_scoring.py",
+        "actionmesh/research_math/tests/test_trajectory_bridge_candidate.py",
+        "actionmesh/research_math/tests/test_c08_native_scoring_profile.py"
       ],
+      "remaining_implementation_gaps": [],
       "scientific_prerequisites": [
-        "actual sparse reference chain and informative endpoints",
-        "support-feasible endpoint bridge",
-        "same-information local/cycle comparators and whole-path decision",
-        "final 16/16 raw receipts and native replay",
+        "Local numerical/profile and retained real-artifact replay",
+        "one retained 16/16 source pair and exact candidate artifact",
+        "prospective six-role freeze/family/B* design and official-score authorization",
         "Natural Gate 0 PASS; required importance/collision decision",
-        "code identity/software/native-interface verification",
+        "Local code identity/software/native-interface verification",
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -1147,7 +1150,7 @@
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
     "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65",
+    "design_digest": "1963eb8e2da1019b195af9536583b18eb74636b5e193fbc33b68cfa253dbebb1",
     "source_review_findings_remaining": {
       "critical": 0,
       "important": 0,
@@ -1165,7 +1168,7 @@
   },
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 11,
+    "full_method_source_complete": 12,
     "local_method_verified": 0,
     "native_results": 0,
     "g01_source_design": "complete_generated_unexecuted_dynamic_admission_pending",

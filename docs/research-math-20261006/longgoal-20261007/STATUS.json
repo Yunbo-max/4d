@@ -941,21 +941,21 @@
     "base_commit": "d26ec0870381744d5f5e453847f6142f43b43a3c",
     "delivered_scope": "C20 bounded phase/amplitude solver core plus C05/G01 comparison-inventory repair and independent static review; partial source only, all generated_unexecuted",
     "generated_unexecuted": true,
-    "source_complete_candidates": 11,
+    "source_complete_candidates": 12,
     "local_method_verified": 0,
     "native_results": 0,
     "blocked_method_inputs": {
       "C03": "legal pointwise development correspondence producer",
       "C20": "qualified receipt-bound motion target, frozen amplitude-basis producer, artifact/comparison/scoring chain",
       "C05": "qualified sparse material-coordinate modes and scores",
-      "C08": "prospective geometry-only chain specialization requires spec/review update and implementation"
+      "C08": "resolved at source level by receipt-bound geometry-only endpoint bridge; Local retained-native acceptance pending"
     },
     "supervisor_installed": false,
     "supervisor_running": false,
     "online_repair_agent": "not_connected",
     "gpu_stop": true,
     "g01_source_design": "complete_generated_unexecuted_dynamic_admission_pending",
-    "g01_design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65",
+    "g01_design_digest": "1963eb8e2da1019b195af9536583b18eb74636b5e193fbc33b68cfa253dbebb1",
     "g01_source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
     "g01_review_findings_remaining": {
       "critical": 0,
@@ -969,6 +969,6 @@
       "important": 0,
       "minor": 1
     },
-    "next_action": "Prospectively specialize and review the C03 GT-probe or C08 geometry-chain route, then implement its complete native artifact/comparison/scoring chain. Keep C05 and C20 blocked on their qualified producers; Local acceptance pending and GPU STOP unchanged."
+    "next_action": "Complete the next legally grounded C03, C05 or C20 chain; run no GPU work. C08 Local retained-artifact acceptance and all native evidence remain pending."
   }
 }

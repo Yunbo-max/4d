@@ -165,6 +165,50 @@ restoring the exact intended bytes or scientific review of a versioned change.
 No model download, scorer, supervisor installation or GPU resume is authorized
 by this source handoff. Existing asset acquisition cards below remain unchanged.
 
+### C08 geometry trajectory bridge chain — source complete, not executed
+
+C08 is `generated_unexecuted`; Web did not import or execute it. Use one retained
+completed same-UID `sequence.npz`/`report.json` pair. It must contain exactly 16
+float32 predicted mesh frames with fixed faces, timestamps/frame indices and
+`query_vertex_ids`. The method consumes no GT, scorer output, latent attention,
+external correspondence, cost or Markov array.
+
+Prospectively choose `epsilon`, descriptor-neighbor count, absolute/relative
+endpoint tolerance, maximum iterations, coordinate bounds, smoothing strength,
+CPU wall time/RAM and artifact byte ceiling before inspecting C08 outcomes. Build
+only the CPU artifact plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_trajectory_bridge_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$source_case/sequence.npz" \
+  --run-id c08-trajectory-bridge-001 \
+  --epsilon "$epsilon" --neighbors "$neighbors" \
+  --tolerance "$tolerance" --max-iterations "$max_iterations" \
+  --smoothing-strength "$smoothing_strength" \
+  --coordinate-bounds "$lower" "$upper" \
+  --bounds-policy preserve_and_report \
+  --max-artifact-bytes "$max_artifact_bytes" \
+  --wall-seconds "$wall_seconds" --ram-mib "$ram_mib" \
+  --plan-dir "$project_dir/plans/c08-trajectory-bridge-001"
+```
+
+Review the printed digest, then execute only that exact harness plan under the
+existing Local authority. It produces independent terminal reports for the
+same-support local tracker, coordinate smoother, geometry mutual-cycle control
+and endpoint bridge; a bridge failure must not erase completed controls. Preserve
+all failures. The probability endpoint certificate and diagnostic hard path are
+different objects and must not be conflated.
+
+For exact real-artifact replay and optional prospective comparison/scoring
+request preparation, invoke `prepare_c08_native_acceptance.py` to emit another
+zero-GPU harness plan. Never call `validate_candidate_artifact` or request
+builders directly. Before official scoring, complete the G01 family evidence,
+D1-only B*, six-role freeze, Gate 0/IPCG and explicit authorization. The only
+scoring execution path is `prepare_c08_native_scoring.py` followed by
+`launch_c08_native_scoring.py`. GPU STOP remains effective; source completion is
+not Local verification, a native result or a scientific conclusion.
+
 ### C20 phase/amplitude solver core — partial source, no legal target producer
 
 Current source is `generated_unexecuted`. The numerical entry is
