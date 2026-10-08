@@ -219,3 +219,36 @@ surrogates and native gap/importance/collision evidence remain genuine missing
 prerequisites for affected candidates. Current-source Local CPU acceptance is
 pending independently. Full128 indices 10–15 remain an explicit coverage gap;
 the calibration instrument neither fills that gap nor retries r9.
+
+## C13 quadratic strong-control continuation
+
+On exact source base `c41d291b50aa3d84ad495417724403132041ea0b`, a
+read-only candidate/runtime review confirmed that none of the 15 candidates has
+all Natural Gate 0/IPCG/native prerequisites. No candidate was promoted. The
+review also identified C13's required quadratic acceleration comparator as an
+independent, legal pre-admission deliverable and found an API-shape inconsistency
+in native replay (`query[:3]` retained features instead of selecting XYZ).
+
+Added `research_math.quadratic_acceleration_control` and its CPU-only plan
+builder. The identity-metric control uses the supplied sequence timestamp units,
+records the weight's fourth-power unit dependence, directly solves the anchored
+quadratic objective and exports one complete 16-frame mesh arm with
+unchanged topology/identity metadata, records source/code/output hashes and
+numerical diagnostics, and emits a case manifest accepted by the existing
+generic official adapter. It requires float32 vertices before export. It deliberately excludes GT, scorer state and learned
+parameters. It is not C13's group-l2 candidate and does not close the natural
+Gaussian/quadratic gap. The replay call now passes `query[..., :3]`; this is an
+API-shape normalization with no numerical effect in the only supported upstream
+direct mode, where `apply_displacement` ignores `vertex`. Its fixture rejects a
+non-XYZ vertex tensor; Local replay still must verify equivalence.
+
+Acceptance source was authored before implementation. Web performed static
+AST/JSON/diff/source review only and did not run the tests, builder, control,
+model, scorer or GPU. All changed source is `generated_unexecuted`. Local first
+runs the current CPU software plan. It then freezes an explicit positive control
+weight and first verifies a real retained receipt-bound source sequence using
+the controller procedure in the runbook. The builder then hash-binds only the
+staged sequence/report pair; it does not replace that upstream receipt check.
+Its plan is one CPU attempt, zero retries and no GPU. Official scoring remains
+separately gated and stopped. Candidate source
+complete remains 0/15; candidate native results remain 0/15.

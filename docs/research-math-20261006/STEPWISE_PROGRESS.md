@@ -1219,3 +1219,35 @@ the task must remain enabled. Next: Local CPU acceptance at the delivered
 revision; Web continues legal input adapters and method/design work without
 inventing natural-gap/importance/collision evidence. Full128 10–15 coverage,
 UID008 raw/repeat/trusted replay and all scientific gates remain explicit gaps.
+
+## Continuation: C13 quadratic strong control — 2026-10-08
+
+Resumed exact main `c41d291b50aa3d84ad495417724403132041ea0b` in a clean
+worktree and retained the existing 15-candidate selection. Independent source
+review confirmed that every candidate still lacks scientific admission; source
+complete candidates therefore remain 0/15.
+
+Implemented C13's named quadratic-acceleration strong comparator as a separate
+CPU-only path, without relabelling it as the group-trend candidate. It consumes
+a controller-verified real full `sequence.npz`, then hash-binds the staged
+sequence/report pair, constructs second differences in the supplied timestamp
+units, uses an identity observation metric and a direct frame-zero-anchored
+quadratic solve, preserves all
+16 frames/topology/identity metadata, records numerical and provenance details,
+and emits a single case manifest for the existing official adapter. Float32 is
+required before export; reports record the timestamp unit convention and the
+weight's fourth-power unit dependence. Added a
+single-use zero-GPU harness plan with one attempt and zero retry plus Local
+contracts for affine fixed points, spike damping, nonuniform time, invalid
+inputs, identity preservation and fail-closed hashes. Also corrected native
+replay's vertex slice from the batch axis to XYZ.
+
+Web did not execute project tests, plan builders, control computation, model,
+scorer or GPU. Static source/AST/JSON/diff checks only; the delivery is
+`generated_unexecuted`. Next executable action is the current CPU acceptance
+plan, followed by the new CPU plan over the exact retained real sequence with an
+explicitly frozen positive weight. Official scoring and all GPU work remain
+stopped. C13 still lacks its group-l2 solver, primal/dual certificate,
+multi-arm native collection and natural event-preservation evidence. The replay
+XYZ change is an API-shape normalization only: direct mode ignores the vertex
+argument, so its numerical equivalence remains a Local replay obligation.

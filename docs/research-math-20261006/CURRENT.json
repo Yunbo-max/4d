@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T00:08:16Z",
+  "recorded_at": "2026-10-08T01:24:00Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "Paired native-context source now includes a calibration-only harness plan builder and complete receipt-bound raw archive collection, with runtime environment checks. Static independent review completed; Local software/native acceptance remains pending. GPU execution remains stopped; supervisor is source only, not installed or running. Maintained 15-item inventory reports zero complete candidate methods and 0/15 native results. Historical pricing-root repair remains present; indices 10–15, native scientific prerequisites and full method/design delivery remain open.",
+  "status": "C13's required quadratic-acceleration strong control now has a separate full-sequence CPU implementation and single-use harness plan; native replay's vertex argument now slices XYZ correctly. Both remain generated_unexecuted. This comparator is not the C13 group-trend candidate and does not close Natural Gate 0. Paired native-context/supervisor source remains uninstalled and unexecuted. GPU execution remains stopped. The maintained inventory still reports zero source-complete candidate methods and 0/15 native results; indices 10–15 and scientific prerequisites remain open.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -1038,5 +1038,56 @@
       "final_review": "No remaining critical source issue identified in scoped plan/collection change; not runtime acceptance."
     },
     "source_complete_candidate_count": 0
+  },
+  "c13_quadratic_strong_control_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-08T01:24:00Z",
+    "base_commit": "c41d291b50aa3d84ad495417724403132041ea0b",
+    "scope": "C13-required strong simple comparator only; not the group-l2 candidate or scientific admission",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/quadratic_acceleration_control.py",
+        "sha256": "e8724ab9de9afa492adc0c32a1893fb373ce20960011a5e1b07a922ddf867807"
+      },
+      {
+        "path": "actionmesh/prepare_quadratic_acceleration_control.py",
+        "sha256": "0d741adf596abe7a1b361d1d7e86a38bbd114f6eda51bd0f83e7bfed0e8f7249"
+      },
+      {
+        "path": "actionmesh/research_math/pipeline_decoder_observer.py",
+        "sha256": "62bb4675f39600cac60e4e71304595ce8e1fc18716ed39bd2ea7e38ded9bc19b"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_quadratic_acceleration_control.py",
+        "sha256": "56f2ec68f8c1c77465f482d64625dc56ec2068e690d7672ab54ea458f4208526"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_control_plan.py",
+        "sha256": "46b50f63feb3bcca29e4744af765276d20041a580466a003bff2c74b96ff78b3"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_pipeline_decoder_observer.py",
+        "sha256": "899f4bc86d0346104eb09cbe60b68f894ae4205e2e4ba35ca0bc255a4b9ffd73"
+      },
+      {
+        "path": "actionmesh/prepare_control_scoring_checks.py",
+        "sha256": "f633a34504ff76148934fb66dda3a01103970d4bc506e1faccc2905e64dab276"
+      }
+    ],
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "1f9c809b6c6ac1f2f2cea8706ad545580d98a2323df522d06868ea57e10bc5a8"
+    },
+    "source_review": "Two independent read-only reviews at the base commit confirmed no candidate has complete scientific admission; C13 quadratic control is an independent legal pre-admission deliverable. Static AST/JSON/diff review only after authoring.",
+    "project_tests_executed_by_web": false,
+    "plan_builder_executed": false,
+    "control_executed": false,
+    "official_scoring_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "local_software_acceptance_complete": false,
+    "candidate_method": false,
+    "candidate_methods_completed": 0,
+    "candidate_native_results": 0,
+    "next_step": "Local current-source CPU acceptance, then independently verify the upstream receipt/protocol using the runbook, freeze an explicit positive quadratic weight, and execute the new CPU-only plan. The builder pins the staged sequence/report pair only. Do not score or use GPU while STOP remains effective."
   }
 }

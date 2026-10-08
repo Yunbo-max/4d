@@ -54,7 +54,9 @@ class Decoder(torch.nn.Module):
                 + context + self.bias)
 
     def apply_displacement(self, vertex, displacement, scale=1.0):
-        # Native direct mode ignores vertex; preserve this signature/semantics.
+        # The native API always receives XYZ, even when direct mode ignores it.
+        if vertex.shape[-1] != 3:
+            raise ValueError("apply_displacement requires XYZ vertices")
         return displacement.clamp(min=-scale, max=scale)
 
 
@@ -80,7 +82,7 @@ class FakePipeline:
             source_alpha=source_alpha, target_alphas=target_alphas,
             query=query, step_callback=step_callback)
         vertices = self.temporal_3D_vae.apply_displacement(
-            vertex=query[:3], displacement=raw).detach().cpu().numpy()
+            vertex=query[..., :3], displacement=raw).detach().cpu().numpy()
         self.last_output = [SimpleNamespace(
             vertices=vertices[0, index].astype(np.float64),
             faces=anchor_mesh.faces.copy())

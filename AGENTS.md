@@ -16,6 +16,11 @@ Its complete raw archive, manifest and result must all be receipt-bound. On a
 failure/timeout retain the actual partial attempt tree; never reconstruct success
 or retry to fill a missing bundle. See the current handoff's continuation section
 and the maintained `longgoal-20261007/CANDIDATE_INPUT_AUDIT.json` delivery inventory.
+The C13-required quadratic strong control has a separate CPU-only plan entry at
+`actionmesh/prepare_quadratic_acceleration_control.py`. It is not the C13
+group-trend method and must not be reported as candidate admission or a native
+result. Its current source and tests are `generated_unexecuted`; use the common
+software-acceptance plan before its single-use real-sequence harness plan.
 
 Before setup, acceptance, execution, repair, collection, or delivery, read at the exact delivered commit:
 

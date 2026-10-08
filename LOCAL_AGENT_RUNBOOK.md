@@ -4,6 +4,50 @@
 
 ### Current source delivery — paired replay and supervisor
 
+### Latest method-adjacent source — C13 quadratic strong control
+
+The C13 specification's required quadratic-acceleration comparator now has an
+independent CPU-only implementation and harness plan. It directly solves the
+identity-metric control
+`0.5||Y-Yhat||_F^2 + 0.5*weight||D2_timestamp Y||_F^2` with exact frame-zero
+anchoring, uses strictly increasing timestamps in the supplied sequence units,
+records that the weight scales in those units to the fourth power, and preserves the full 16-frame
+topology/identity arrays and emits one manifest case consumable by the existing
+official ActionBench adapter. This is a comparator only, not C13's group-l2
+trend method and not scientific admission. Source and tests are
+`generated_unexecuted`; Web did not run them.
+The adapter rejects before output when the float64 solve exceeds its recorded
+relative backward-error threshold `100*T*eps` or condition-number ceiling
+`1/sqrt(eps)`; the observed values and limits remain in the harness failure log.
+
+Because current sources changed, first run the CPU software acceptance in step
+3 at the delivered revision and retain its actual result. Then use the controller
+checks in step 4 to restore and independently verify the receipt-bound real
+`sequence.npz` before emitting this plan. The builder itself pins only that
+staged `sequence.npz` and its adjacent generator `report.json`; their agreement
+does not independently prove the upstream receipt/protocol:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_quadratic_acceleration_control.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --run-id c13-quadratic-control-001 \
+  --plan-dir "$project_dir/plans/c13-quadratic-control-001" \
+  --weight "$frozen_quadratic_weight" --wall-seconds 600
+```
+
+`frozen_quadratic_weight` has no silent default and depends on the fourth power
+of the supplied timestamp unit: record both value and unit in the development
+protocol before plan emission. Inspect the two pinned source refs,
+two input refs, four declared outputs, zero-GPU resources, one attempt and zero
+retries. Execute only the printed digest through `run_harness.py`. The output
+path inside the completed attempt is
+`actionmesh/quadratic-control-output/`; retain `controls.json`, `manifest.json`
+and the arm report/sequence. Do not score or tune it while GPU STOP is in force.
+After later native authorization and scorer qualification, the manifest is an
+input to `official_actionbench_adapter.py`; official scoring is not included in
+this CPU plan.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**

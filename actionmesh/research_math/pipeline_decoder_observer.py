@@ -335,7 +335,7 @@ def replay_window(model, window_path: Path, output_path: Path, *, identity: dict
                 else:
                     stack.enter_context(torch.autocast(device_type=device, enabled=False))
             raw = model(**values)
-            bounded = model.apply_displacement(vertex=values['query'][:3], displacement=raw)
+            bounded = model.apply_displacement(vertex=values['query'][..., :3], displacement=raw)
             raw_comparison = _comparison(raw, tensors['output'], atol=atol, rtol=rtol)
             mesh_comparison = _comparison(bounded[0], meshes['vertices'], atol=atol, rtol=rtol)
             report.update(raw=raw_comparison, mesh=mesh_comparison,

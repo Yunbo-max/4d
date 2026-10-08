@@ -8,15 +8,18 @@ import unittest
 
 try:
     planner = importlib.import_module('prepare_mesh_controls')
+    quadratic_planner = importlib.import_module('prepare_quadratic_acceleration_control')
     acceptance = importlib.import_module('prepare_control_scoring_checks')
 except ModuleNotFoundError:
     planner = None
+    quadratic_planner = None
     acceptance = None
 
 
 class ControlPlanTest(unittest.TestCase):
     def setUp(self):
         self.assertIsNotNone(planner, 'Baseline preparation plan builder missing')
+        self.assertIsNotNone(quadratic_planner, 'Quadratic control plan builder missing')
         self.assertIsNotNone(acceptance, 'Acceptance plan builder missing')
 
     def test_acceptance_source_closure_includes_parity_finalizer(self):
@@ -57,6 +60,24 @@ class ControlPlanTest(unittest.TestCase):
                 'actionmesh/research_math/pipeline_decoder_observer.py',
                 'actionmesh/research_math/tests/test_research_supervisor.py'):
             self.assertIn(path, paths)
+
+    def test_acceptance_stages_quadratic_control_and_plan(self):
+        project_root = Path(__file__).resolve().parents[3]
+        paths = {path.relative_to(project_root).as_posix()
+                 for path in acceptance.acceptance_sources(project_root)}
+        self.assertIn('actionmesh/prepare_quadratic_acceleration_control.py', paths)
+        self.assertIn('actionmesh/research_math/quadratic_acceleration_control.py', paths)
+        self.assertIn(
+            'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json', paths)
+
+    def test_delivery_inventory_attaches_quadratic_control_only_to_c13(self):
+        project_root = Path(__file__).resolve().parents[3]
+        audit = json.loads((project_root/'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json').read_text())
+        candidates = {row['id'].rsplit('-', 1)[-1].upper(): row for row in audit['candidates']}
+        self.assertEqual(candidates['C13']['strong_control_code_entry'],
+            'actionmesh/research_math/quadratic_acceleration_control.py:export_quadratic_control')
+        self.assertNotIn('strong_control_code_entry', candidates['C10'])
+        self.assertFalse(candidates['C13']['full_method_source_complete'])
 
     def project(self, root):
         code = root/'actionmesh/research_math'; code.mkdir(parents=True)
@@ -102,6 +123,25 @@ class ControlPlanTest(unittest.TestCase):
             planner.build_plans(root, source_sequence=seq, run_id='fixture', sigma=1., plan_dir=root/'plans', wall_seconds=120)
             with self.assertRaises(FileExistsError):
                 planner.build_plans(root, source_sequence=seq, run_id='fixture', sigma=1., plan_dir=root/'plans', wall_seconds=120)
+
+    def test_quadratic_plan_is_single_cpu_arm_and_pins_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); seq = self.project(root)
+            (root/'actionmesh/research_math/quadratic_acceleration_control.py').write_text('fixture not executable\n')
+            native, outer = quadratic_planner.build_plans(
+                root, source_sequence=seq, run_id='quadratic-fixture', weight=2.,
+                plan_dir=root/'quadratic-plans', wall_seconds=120)
+            job = native['jobs'][0]
+            self.assertEqual(native['purpose'], 'engineering')
+            self.assertEqual(job['arm_role'], 'strong-simple-control-no-scorer')
+            self.assertEqual({x['path'] for x in job['input_refs']},
+                             {'inputs/case/sequence.npz', 'inputs/case/report.json'})
+            self.assertEqual(outer['tasks'][0]['resources']['gpu_count'], 0)
+            self.assertEqual(job['output_paths'], [
+                'actionmesh/quadratic-control-output/controls.json',
+                'actionmesh/quadratic-control-output/manifest.json',
+                'actionmesh/quadratic-control-output/quadratic_acceleration/sequence.npz',
+                'actionmesh/quadratic-control-output/quadratic_acceleration/report.json'])
 
 
 if __name__ == '__main__': unittest.main()

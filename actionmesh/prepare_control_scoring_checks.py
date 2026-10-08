@@ -9,6 +9,7 @@ import sys
 ROOT_SOURCES = (
     'research_census_eval.py',
     'prepare_mesh_controls.py',
+    'prepare_quadratic_acceleration_control.py',
     'prepare_control_scoring.py',
     'prepare_control_scoring_checks.py',
     'prepare_native_runtime.py',
@@ -35,6 +36,7 @@ def acceptance_sources(root: Path) -> list[Path]:
     files = sorted((root/'actionmesh/research_math').rglob('*.py'))
     files += [root/'actionmesh'/name for name in ROOT_SOURCES]
     files.append(root/'scripts/research_supervisor.py')
+    files.append(root/'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json')
     missing = [path for path in files if not path.is_file()]
     if missing:
         raise FileNotFoundError('Missing acceptance source: '+str(missing[0]))

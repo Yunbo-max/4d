@@ -12,6 +12,7 @@
   ],
   "existing_implementation_notes": {
     "C02": "protected_projection.py implements mathematical projection primitive; not complete native method",
+    "C13": "quadratic_acceleration_control.py implements the required quadratic strong control only; the group-l2 candidate remains absent and Local execution/scoring are pending",
     "C14": "simple_mesh_controls.py has body Gaussian baseline; not full candidate qualification"
   },
   "required_next_sequence": [
@@ -219,6 +220,10 @@
       },
       "source_status": "specification_only",
       "code_entry": null,
+      "strong_control_code_entry": "actionmesh/research_math/quadratic_acceleration_control.py:export_quadratic_control",
+      "strong_control_plan_entry": "actionmesh/prepare_quadratic_acceleration_control.py",
+      "strong_control_status": "generated_unexecuted",
+      "strong_control_local_acceptance": "Run current CPU software acceptance, then build the quadratic-control plan with the exact retained sequence, inspect its pinned refs/digest, and execute that plan through the installed run_harness.py. Native official scoring remains separately gated.",
       "real_input_and_model_interface": "Full native Y with physical-time D2, SPD observation metric and actual anchor affine term",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
@@ -240,7 +245,8 @@
       "remaining_implementation_gaps": [
         "group acceleration solver",
         "primal/dual diagnostics",
-        "native entry and controls"
+        "candidate native entry and Gaussian/group multi-arm collection",
+        "Local execution and official scoring of the delivered quadratic control"
       ],
       "scientific_prerequisites": [
         "native gap not closed by Gaussian/quadratic baselines",
@@ -918,7 +924,7 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "independent_source_review": "Separate read-only delivery_inventory agent inspected selected specifications and actual entries; no execution.",
+  "independent_source_review": "Separate read-only delivery_inventory, candidate-gap and runtime-integration reviewers inspected selected specifications, actual entries and the C13 control diff; no execution. Final review found no remaining P0/P1 after C13 attribution, float32/unit/provenance wording and isolated-acceptance source-closure repairs.",
   "stage_goal": {
     "selected_methods": 15,
     "full_method_source_complete": 0,
