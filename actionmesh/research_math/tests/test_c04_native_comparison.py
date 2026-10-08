@@ -1,6 +1,6 @@
-"""Local-only real artifact to prospective C10 freeze integration tests.
+"""Local-only real artifact to prospective C04 freeze integration tests.
 
-The test uses the actual C10 constructor and comparison validator on a tiny
+The test uses the actual C04 constructor and comparison validator on a tiny
 engineering mesh.  It is authored on Web but must be run only by Local through
 the common CPU software-acceptance harness; it is not native evidence.
 """
@@ -14,16 +14,16 @@ import unittest
 
 import numpy as np
 
-from research_math import c10_native_comparison as comparison
-from research_math import integrable_gradient_candidate as candidate
+from research_math import c04_native_comparison as comparison
+from research_math import robust_motion_candidate as candidate
 
 
-class C10NativeComparisonTests(unittest.TestCase):
+class C04NativeComparisonTests(unittest.TestCase):
     def test_real_common_target_artifact_freezes_all_five_roles(self):
         root = Path(__file__).resolve().parents[3]
         with tempfile.TemporaryDirectory(dir=root) as directory:
             workspace = Path(directory)
-            uid = "fixture-c10"
+            uid = "fixture-c04"
             source = workspace / "source"
             source.mkdir()
             anchor = np.array([
@@ -66,14 +66,19 @@ class C10NativeComparisonTests(unittest.TestCase):
             identity_path.write_text(json.dumps(identity) + "\n")
 
             output = workspace / "candidate"
-            result = candidate.export_integrable_candidate(
+            result = candidate.export_robust_candidate(
                 source, output, uid=uid,
                 expected_sequence_sha256=sequence_ref["sha256"],
                 source_sequence_ref=sequence_ref["path"],
                 source_report_ref=source_report_ref["path"],
-                target_strength=.5, max_relative_change=.25,
-                absolute_tolerance=1e-10, relative_tolerance=1e-8,
-                max_iterations=1000, coordinate_lower=-10., coordinate_upper=10.,
+                parameters={"arap_weight": .1, "temporal_weight": .1,
+                    "iterations": 2, "cg_tolerance": 1e-8,
+                    "cg_max_iterations": 1000, "shape_floor": .01,
+                    "shape_gain": .5, "radius": .2, "epsilon": .1,
+                    "trust_radius": 1., "finite_budget": 1.,
+                    "absolute_tolerance": 1e-8, "relative_tolerance": 1e-6,
+                    "max_iterations": 10000, "max_backtracks": 20},
+                coordinate_lower=-10., coordinate_upper=10.,
                 bounds_policy="preserve_and_report",
                 max_artifact_bytes=16 * 1024 * 1024)
             self.assertEqual(result["status"], "completed")
@@ -81,20 +86,20 @@ class C10NativeComparisonTests(unittest.TestCase):
             basis_path = workspace / "basis.json"
             basis_path.write_text("{}\n")
             decision = {
-                "kind": "c10-b-star-decision", "version": 1,
+                "kind": "c04-b-star-decision", "version": 1,
                 "candidate_id": candidate.CANDIDATE_ID, "uid": uid,
                 "inference_seed": 42,
                 "decided_at": datetime.now(timezone.utc).isoformat(),
-                "selected_role": "direct_common_lift",
-                "selected_method_id": comparison.METHOD_IDS["direct_common_lift"],
-                "selected_without_c10_native_outcomes": True,
+                "selected_role": "deterministic_protection",
+                "selected_method_id": comparison.METHOD_IDS["deterministic_protection"],
+                "selected_without_c04_native_outcomes": True,
                 "selection_basis_refs": [comparison.file_ref(root, basis_path)],
             }
             decision["decision_digest"] = comparison.canonical_digest(decision)
             decision_path = workspace / "decision.json"
             decision_path.write_text(json.dumps(decision) + "\n")
             implementation_ref = comparison.file_ref(
-                root, root / "actionmesh/research_math/integrable_gradient_candidate.py")
+                root, root / "actionmesh/research_math/robust_motion_candidate.py")
             rows = [{
                 "role": "b0", "method_id": "native-actionmesh-b0",
                 "report_ref": source_report_ref, "sequence_ref": sequence_ref,
@@ -102,8 +107,8 @@ class C10NativeComparisonTests(unittest.TestCase):
                 "implementation_ref": comparison.file_ref(root, b0_implementation),
             }, {
                 "role": "b_star",
-                "method_id": comparison.METHOD_IDS["direct_common_lift"],
-                "alias_of": "direct_common_lift",
+                "method_id": comparison.METHOD_IDS["deterministic_protection"],
+                "alias_of": "deterministic_protection",
             }]
             for role in candidate.ROLES:
                 rows.append({
@@ -117,7 +122,7 @@ class C10NativeComparisonTests(unittest.TestCase):
                     "implementation_ref": implementation_ref,
                 })
             freeze = {
-                "kind": "c10-native-comparison-freeze", "version": 1,
+                "kind": "c04-native-comparison-freeze", "version": 1,
                 "candidate_id": candidate.CANDIDATE_ID, "uid": uid,
                 "inference_seed": 42, "scoring_seed": 44,
                 "primary_metric": "cd_3d",
@@ -139,69 +144,47 @@ class C10NativeComparisonTests(unittest.TestCase):
                              list(comparison.ROLES))
             self.assertEqual(request["logical_denominator"]["n_roles"], 5)
             self.assertEqual(request["role_to_case"]["b_star"],
-                             request["role_to_case"]["direct_common_lift"])
+                             request["role_to_case"]["deterministic_protection"])
             self.assertLessEqual(len(request["scoring_cases"]), 4)
             self.assertFalse(request["dispatch_ready"])
             self.assertTrue(request["generated_unexecuted"])
-            for filename in ("artifact.tar", "artifact-archive.json"):
-                self.assertIn(comparison.file_ref(root, output / filename),
-                              request["input_refs"])
 
-            # Hash-consistent relabelling cannot turn a simple control into C10.
+            # A review reference must stage its per-evidence nested receipts and
+            # sources as well as the wrapper; presence alone is not admission.
+            retained = workspace / "held-out-raw.json"
+            retained.write_text('{"engineering_fixture":true}\n')
+            receipt = workspace / "held-out-receipt.json"
+            receipt.write_text('{"engineering_fixture":true}\n')
+            evidence = workspace / "held-out-evidence.json"
+            evidence.write_text(json.dumps({
+                "source_refs": [comparison.file_ref(root, retained)],
+                "receipt_ref": comparison.file_ref(root, receipt)}))
+            specification = workspace / "prospective-spec.json"
+            specification.write_text(json.dumps({"implementation_ref": implementation_ref}))
+            review = workspace / "semantic-review.json"
+            review.write_text(json.dumps({
+                "method_spec_ref": comparison.file_ref(root, specification),
+                "evidence_refs": [comparison.file_ref(root, evidence)]}))
+            freeze["semantic_review_ref"] = comparison.file_ref(root, review)
+            freeze["freeze_digest"] = comparison.canonical_digest({
+                key: value for key, value in freeze.items() if key != "freeze_digest"})
+            freeze_path.write_text(json.dumps(freeze) + "\n")
+            with_review = comparison.make_request(root, freeze_path=freeze_path)
+            for path in (retained, receipt, evidence, specification, review,
+                         output / "artifact.tar", output / "artifact-archive.json"):
+                self.assertIn(comparison.file_ref(root, path), with_review["input_refs"])
+            self.assertFalse(with_review["dispatch_ready"])
+
+            # Hash-consistent relabelling cannot turn a simple control into C04.
             direct = next(row for row in freeze["roles"]
-                          if row["role"] == "direct_common_lift")
+                          if row["role"] == "deterministic_protection")
             direct["method_id"] = candidate.CANDIDATE_ID
             freeze["freeze_digest"] = comparison.canonical_digest({
                 key: value for key, value in freeze.items()
                 if key != "freeze_digest"})
             freeze_path.write_text(json.dumps(freeze) + "\n")
-            with self.assertRaisesRegex(ValueError, "relabels retained C10 method"):
+            with self.assertRaisesRegex(ValueError, "relabels retained C04 method"):
                 comparison.make_request(root, freeze_path=freeze_path)
-
-            # A real terminal construction failure remains one of the five
-            # logical roles and is neither staged nor converted to score zero.
-            direct["method_id"] = comparison.METHOD_IDS["direct_common_lift"]
-            failed_role = "independent_local_repair"
-            failed_row = next(row for row in freeze["roles"]
-                              if row["role"] == failed_role)
-            failed_report_path = output / failed_role / "report.json"
-            failed_report = comparison.read_json(failed_report_path)
-            failed_report.update(status="error", exception_type="FixtureFailure",
-                                 error="retained construction failure")
-            failed_report.pop("sha256")
-            failed_report_path.write_text(json.dumps(failed_report) + "\n")
-            (output / failed_role / "sequence.npz").unlink()
-            (output / failed_role / "certificate.npz").unlink()
-            candidate_record = comparison.read_json(output / "candidate.json")
-            candidate_record["status"] = "incomplete"
-            candidate_record["arms"] = [
-                failed_report if report["candidate_arm"] == failed_role else report
-                for report in candidate_record["arms"]]
-            (output / "candidate.json").write_text(
-                json.dumps(candidate_record) + "\n")
-            manifest = comparison.read_json(output / "manifest.json")
-            manifest["cases"] = [row for row in manifest["cases"]
-                                 if row["arm_role"] != failed_role]
-            (output / "manifest.json").write_text(json.dumps(manifest) + "\n")
-            candidate._write_deterministic_archive(
-                output, candidate_record["arms"], 16 * 1024 * 1024)
-            failed_row["report_ref"] = comparison.file_ref(root, failed_report_path)
-            failed_row["sequence_ref"] = None
-            failed_row["certificate_ref"] = None
-            freeze["candidate_artifact_ref"] = comparison.file_ref(
-                root, output / "candidate.json")
-            freeze["freeze_digest"] = comparison.canonical_digest({
-                key: value for key, value in freeze.items()
-                if key != "freeze_digest"})
-            freeze_path.write_text(json.dumps(freeze) + "\n")
-            failed_request = comparison.make_request(root, freeze_path=freeze_path)
-            failed_logical = next(row for row in failed_request["roles"]
-                                  if row["role"] == failed_role)
-            self.assertEqual(failed_logical["preparation_status"], "error")
-            self.assertIsNone(failed_logical["case_id"])
-            self.assertNotIn(
-                failed_role,
-                [row["role"] for row in failed_request["scoring_cases"]])
 
     def test_duplicate_json_key_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -1588,3 +1588,58 @@ lost-ack restart reconciliation, safe stop/resume/status commands, continued
 waiting for newly ready reviewed items and non-mocked recovery coverage remain
 open. It is not installed or running. GPU STOP and the frozen budget/protocol
 remain unchanged; continue the next independently ready method (C04).
+
+## Continuation: C04 robust motion source chain and bounded supervisor recovery — 2026-10-08
+
+Resumed exact main `fd4c69055fbd827a91c3f21181b480188bf947ff`; every reused local
+source blob matched its remote tree. Restored current AGENTS/runbook/handoff,
+R3's historical 311/311 software receipt and R9's terminal nine baseline units.
+The historical pricing-root implementation is present; no duplicate repair or
+baseline/scorer run was launched. Indices10–15 and UID008 raw/trusted replay
+remain their existing obligations. Read-only current method-evidence validation
+confirmed the unchanged math20/20 pool, selected15 and C04 selection boundary;
+it granted no scientific admission. Primary robust-optimization text, ActionMesh
+Section3.3 and the actual native benchmark/chamfer sources were jointly read.
+
+C04 now constructs shared ARAP d from the real native mesh, an exact kinetic
+surrogate gradient/Hessian, a declared strictly positive diagonal sensitivity
+ellipsoid and its anchored Euclidean conic projection. Projection gap and
+stationarity precede separately certified float32 trust/backtracking. The
+three complete physical arms preserve topology/time/vertex identity and exact
+frame0; scalar strength agreement is explicitly tolerance-qualified. Structured
+rejection history and construction/export failures remain in the terminal
+archive and five-role denominator. Prospective B*, official scorer/raw closure,
+exact-attempt admission/launcher and real-input CPU acceptance are connected.
+Semantic review is bound to prospective method parameters and actual held-out
+development receipts, not future confirmation outputs; probability/native
+safety claims remain unavailable. C04 is only this positive-diagonal
+specialization, not a generic PSD optimizer or qualified scientific result.
+
+Also repaired inherited source integration defects: C10 now stages its terminal
+archive pair; shared B0 contract validation binds the actual explicit generator
+source and available producer/command evidence instead of demanding a candidate-
+only report field absent from native reports. Non-B0 report hashes remain strict.
+Corrected the C10 scorer-request CLI card to its real --comparison/data/source
+arguments. These repairs have only source review, not new execution evidence.
+
+Independent static reviews repaired lost rejection/export evidence, omitted
+ARAP import and archive staging closure, semantic receipt/UID/parameter/time
+bindings, and STOP/resume/readiness races. The supervisor now waits within a
+fixed immutable campaign for exact known inputs, isolates blocked dependencies,
+retains heartbeat/status and process identity, and reconciles lost acknowledgement
+without reissuing native trials. It remains finite: reviewed append-only task
+extension and configured actual runtime/online repair-agent integration are
+unfinished. No supervisor was installed or started. Authored recovery tests use
+the actual harness for two batches, failure continuation, input arrival,
+interruption and lost acknowledgement; none were executed.
+
+Source-chain delivery is 6/15 (C01,C02,C04,C10,C13,C14); Local acceptance and
+native candidate results remain 0/15. Nine source chains, full G01 numeric/split/
+qualification closure, broader producer seeds and supervisor integration remain.
+Only source/AST/JSON/diff/hash checks were performed. GPU STOP, cumulative budget
+and one-attempt/zero-retry scientific protocols are unchanged. The actual host
+is existing hourly task `6ac527ad50cc8191a4964d35ae0b826e`, conversation
+`6ac0b6a1-5e28-83e9-98d6-30f1536deef1`; a continuous hosted process is not verified.
+Next source work follows retained C03, then independent ready selected methods.
+Local starts at the C04 runbook and supervisor handoff at the eventual exact
+read-back commit, preserving all failed/live evidence and returning actual logs.

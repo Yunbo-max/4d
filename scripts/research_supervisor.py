@@ -8,6 +8,7 @@ attempt, grants a scientific gate, or changes the native runner's retry limits.
 from __future__ import annotations
 
 import argparse
+from contextlib import contextmanager
 import fcntl
 import hashlib
 import importlib
@@ -199,7 +200,7 @@ class Campaign:
         m = self.data
         _fields(m, "kind version campaign_id root python skill_root skill_digest pool_dir "
                    "total_wall_seconds collection_reserve_seconds plans campaign_digest")
-        if m["kind"] != "research-harness-campaign" or type(m["version"]) is not int or m["version"] != 1:
+        if m["kind"] != "research-harness-campaign" or type(m["version"]) is not int or m["version"] not in (1, 2):
             raise CampaignError("unsupported campaign")
         if not isinstance(m["campaign_id"], str) or not re.fullmatch("[A-Za-z0-9][A-Za-z0-9_-]{0,95}", m["campaign_id"]):
             raise CampaignError("invalid campaign identifier")
@@ -218,12 +219,13 @@ class Campaign:
         if not isinstance(m["plans"], list) or not 1 <= len(m["plans"]) <= 256:
             raise CampaignError("finite nonempty plan inventory required")
         self.H = load_harness(self.skill, m["skill_digest"])
-        self.entries, self.plans, self.native = {}, {}, {}
+        self.entries, self.plans, self.native, self.missing = {}, {}, {}, {}
         self.directory = safe_path(self.root, "runs/supervisor/" + m["campaign_id"])
         native_ids, batch_ids, trial_ids, repairs = set(), set(), set(), set()
         reserved = 0
         for entry in m["plans"]:
-            _fields(entry, "id plan_ref plan_digest dependencies on_failure_of")
+            _fields(entry, "id plan_ref plan_digest dependencies on_failure_of" +
+                    (" required_inputs" if m["version"] == 2 else ""))
             name = entry["id"]
             if not isinstance(name, str) or not re.fullmatch("[A-Za-z0-9][A-Za-z0-9_-]{0,95}", name) or name in self.entries:
                 raise CampaignError("invalid or repeated plan id")
@@ -238,10 +240,22 @@ class Campaign:
                     raise CampaignError("one distinct bounded repair per failed parent")
                 repairs.add(trigger)
             plan = read_json(verify_ref(self.root, entry["plan_ref"]))
-            try:
-                self.H.validate_plan(self.root, plan)
-            except Exception as error:
-                raise CampaignError("canonical harness validation denied") from error
+            # Missing *explicitly declared* immutable inputs can delay one plan.
+            # Schemas, digests, executable code and plan identities are still read
+            # now; the full canonical validator remains mandatory before dispatch.
+            self.H.C.validate(plan, "harness-plan")
+            if self.H.plan_digest(plan) != plan["plan_digest"]:
+                raise CampaignError("harness digest mismatch")
+            required = entry.get("required_inputs", [])
+            if not isinstance(required, list):
+                raise CampaignError("required_inputs must be a list")
+            required_keys = set()
+            for ref in required:
+                _fields(ref, "path sha256")
+                safe_path(self.root, ref["path"])
+                required_keys.add((ref["path"], _digest(ref["sha256"])))
+            if len(required_keys) != len(required):
+                raise CampaignError("duplicate required input")
             if plan["plan_digest"] != _digest(entry["plan_digest"]) or plan["pool_dir"] != str(self.pool):
                 raise CampaignError("harness plan identity or host pool mismatch")
             batch = safe_path(self.root, plan["output_root"] + "/" + plan["batch_id"])
@@ -252,6 +266,13 @@ class Campaign:
             natives = {}
             for task in plan["tasks"]:
                 native = read_json(verify_ref(self.root, task["plan_ref"]))
+                self.H.C.validate(native, "experiment-run-plan")
+                if self.H.R.plan_digest(native) != native["plan_digest"]:
+                    raise CampaignError("native digest mismatch")
+                # Input availability cannot excuse changed or missing program bytes.
+                for job in native["jobs"]:
+                    for ref in job["code_refs"]:
+                        verify_ref(self.root, ref)
                 identity = safe_path(self.root, native["output_root"] + "/" + native["run_id"])
                 if identity in native_ids or identity == self.directory or identity in self.directory.parents or self.directory in identity.parents:
                     raise CampaignError("repeated or overlapping native identity")
@@ -261,7 +282,13 @@ class Campaign:
                         raise CampaignError("repeated trial identity; child plans cannot retry existing experiments")
                     trial_ids.add(job["trial_id"])
                 natives[task["task_id"]] = native
+            native_inputs = {(ref["path"], ref["sha256"])
+                             for native in natives.values() for job in native["jobs"]
+                             for ref in job["input_refs"]}
+            if not required_keys.issubset(native_inputs):
+                raise CampaignError("required input must be pinned in a native job")
             self.entries[name], self.plans[name], self.native[name] = entry, plan, natives
+            self.validate_ready(name)
         if reserved > m["total_wall_seconds"] - m["collection_reserve_seconds"]:
             raise CampaignError("all plans including repairs must fit the finite workload budget")
         retained = list(native_ids | batch_ids)
@@ -288,6 +315,21 @@ class Campaign:
         for name in self.entries:
             visit(name)
 
+    def validate_ready(self, name):
+        missing = []
+        for ref in self.entries[name].get("required_inputs", []):
+            path = safe_path(self.root, ref["path"])
+            if not path.exists():
+                missing.append(ref["path"])
+            else:
+                verify_ref(self.root, ref)  # Wrong bytes are never a readiness wait.
+        self.missing[name] = missing
+        if not missing:
+            try:
+                self.H.validate_plan(self.root, self.plans[name])
+            except Exception as error:
+                raise CampaignError("canonical harness validation denied: " + name) from error
+
     def gpu(self, name):
         return any(task["resources"]["gpu_count"] for task in self.plans[name]["tasks"])
 
@@ -299,7 +341,13 @@ class Campaign:
         for name, entry in self.entries.items():
             if read_json(verify_ref(self.root, entry["plan_ref"])) != self.plans[name]:
                 raise CampaignError("approved plan changed")
-            self.H.validate_plan(self.root, self.plans[name])
+            for task in self.plans[name]["tasks"]:
+                if read_json(verify_ref(self.root, task["plan_ref"])) != self.native[name][task["task_id"]]:
+                    raise CampaignError("approved native plan changed")
+                for job in self.native[name][task["task_id"]]["jobs"]:
+                    for ref in job["code_refs"]:
+                        verify_ref(self.root, ref)
+            self.validate_ready(name)
 
     def observe(self, name):
         """Classify real retained artifacts; saved supervisor status is never proof."""
@@ -311,6 +359,9 @@ class Campaign:
         try:
             if not (batch / "state.json").is_file():
                 retained = (batch.exists() and any(batch.iterdir())) or any(p.exists() for p in native_roots.values())
+                if not retained and self.missing[name]:
+                    return {"status": "waiting_inputs", "repairable": False,
+                            "missing_inputs": self.missing[name]}
                 return {"status": "unknown" if retained else "absent", "repairable": False}
             state = read_json(batch / "state.json")
             if (state.get("format") != "research-harness-state-v1" or state.get("root") != str(self.root) or
@@ -416,7 +467,10 @@ class HarnessTransport:
 
 
 def _driver_busy(pool):
-    path = pool / "driver.lock"
+    return _lock_busy(pool / "driver.lock")
+
+
+def _lock_busy(path):
     if not path.exists():
         return False
     with path.open("rb") as stream:
@@ -428,19 +482,151 @@ def _driver_busy(pool):
         return False
 
 
+def harness_argv(campaign, name):
+    entry = campaign.entries[name]
+    return [campaign.data["python"], "-B", str(campaign.skill / "scripts/run_harness.py"),
+            str(verify_ref(campaign.root, entry["plan_ref"])), "--root", str(campaign.root),
+            "--execute", "--approved-plan-digest", entry["plan_digest"]]
+
+
+def reconcile_dispatch(campaign, state, observed):
+    """Reconcile the exact launch identity; never infer absence from a lost ACK."""
+    outcomes = {name: item["status"] for name, item in observed.items()}
+    driver_live = []
+    for name in campaign.entries:
+        driver_path = safe_path(campaign.root,
+            str((campaign.directory / name / "driver.json").relative_to(campaign.root)))
+        if driver_path.exists():
+            driver = read_json(driver_path)
+            _fields(driver, "campaign_digest plan_digest process argv")
+            if (driver["campaign_digest"] != campaign.data["campaign_digest"] or
+                    driver["plan_digest"] != campaign.entries[name]["plan_digest"] or
+                    driver["argv"] != harness_argv(campaign, name)):
+                raise CampaignError("retained driver identity mismatch")
+            _fields(driver["process"], "pid start_ticks boot_id")
+            identity = driver["process"]
+            if (type(identity["pid"]) is not int or identity["pid"] <= 0 or
+                    not isinstance(identity["start_ticks"], str) or not identity["start_ticks"].isdigit() or
+                    not isinstance(identity["boot_id"], str)):
+                raise CampaignError("malformed retained driver process identity")
+            if campaign.H._alive(identity):
+                driver_live.append(name)
+        if state["starts"][name] and outcomes[name] in ("absent", "waiting_inputs"):
+            outcomes[name] = "running" if name in driver_live else "unknown"
+            observed[name] = {"status": outcomes[name], "repairable": False,
+                              "reason": "dispatch intent requires exact process/receipt reconciliation"}
+    return outcomes, driver_live
+
+
+def retained_status(campaign):
+    """Observation only: retained heartbeat is labelled stale, never a receipt."""
+    directory = campaign.directory
+    result = {"stop_requested": (directory / "STOP").exists(),
+              "online_repair_agent": "not_connected", "owner_live": False,
+              "supervisor_lock_held": _lock_busy(directory / "campaign.lock")}
+    heartbeat_path = directory / "heartbeat.json"
+    if heartbeat_path.is_file():
+        heartbeat = read_json(heartbeat_path)
+        if heartbeat.get("campaign_digest") != campaign.data["campaign_digest"]:
+            raise CampaignError("heartbeat identity mismatch")
+        result.update(heartbeat=heartbeat,
+                      heartbeat_age_seconds=max(0, time.time() - heartbeat["observed_epoch"]),
+                      owner_live=campaign.H._alive(heartbeat.get("owner")))
+    return result
+
+
+@contextmanager
+def control_lock(directory):
+    directory.mkdir(parents=True, exist_ok=True)
+    path = directory / "control.lock"
+    if path.is_symlink():
+        raise CampaignError("control lock symlink rejected")
+    with path.open("a+") as stream:
+        fcntl.flock(stream, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(stream, fcntl.LOCK_UN)
+
+
+def stop_target(path, approved_digest):
+    manifest = read_json(path)
+    if (manifest.get("kind") != "research-harness-campaign" or
+            manifest.get("version") not in (1, 2) or
+            campaign_digest(manifest) != manifest.get("campaign_digest") or
+            approved_digest != manifest.get("campaign_digest")):
+        raise CampaignError("exact campaign identity required for STOP")
+    name = manifest.get("campaign_id")
+    if not isinstance(name, str) or not re.fullmatch("[A-Za-z0-9][A-Za-z0-9_-]{0,95}", name):
+        raise CampaignError("invalid campaign identity for STOP")
+    directory = safe_path(_absolute(manifest["root"]), "runs/supervisor/" + name)
+    return directory
+
+
+def stop_identity(directory):
+    path = directory / "STOP"
+    if path.is_symlink():
+        raise CampaignError("STOP symlink rejected")
+    if not path.exists():
+        return None
+    with path.open("rb") as stream:
+        stat = os.fstat(stream.fileno())
+        return (stat.st_dev, stat.st_ino, stat.st_mtime_ns,
+                hashlib.sha256(stream.read()).hexdigest())
+
+
+def request_stop(path, approved_digest):
+    """Stop remains available when missing inputs or a broken skill block loading.
+
+    This writes only the canonical campaign sentinel; it never signals a PID,
+    rewrites state, resumes an experiment or declares any workload terminated.
+    """
+    directory = stop_target(path, approved_digest)
+    with control_lock(directory):
+        _atomic(directory / "STOP", {"campaign_digest": approved_digest,
+                                    "requested_epoch": time.time(),
+                                    "generation": os.urandom(16).hex()})
+    return {"status": "stop_requested", "campaign_digest": approved_digest,
+            "workers_terminated": False, "gpu_dispatch_enabled": False}
+
+
 def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
-                 now=time.time, transport=None, allow_gpu_after_user_resume=False):
+                 now=time.time, transport=None, allow_gpu_after_user_resume=False,
+                 watch_ready=False, heartbeat_seconds=30.0, resume=False):
     # This flag acknowledges a separate explicit human resume; it cannot prove or
     # manufacture that permission. It is deliberately absent from the manifest.
     if type(allow_gpu_after_user_resume) is not bool:
         raise CampaignError("explicit Local resume acknowledgment must be boolean")
     _number(poll_seconds, .05, 30)
+    _number(heartbeat_seconds, .05, 60)
+    if type(watch_ready) is not bool or type(resume) is not bool:
+        raise CampaignError("watch_ready/resume must be boolean")
+    if resume and not execute:
+        raise CampaignError("resume requires execution approval")
+    resume_stop = None
+    if resume:
+        resume_directory = stop_target(path, approved_digest)
+        with control_lock(resume_directory):
+            resume_stop = stop_identity(resume_directory)
     campaign = Campaign(path)
     m, directory = campaign.data, campaign.directory
     observations = {name: campaign.observe(name) for name in campaign.entries}
     if not execute:
+        state_path = directory / "state.json"
+        if state_path.exists():
+            retained = read_json(state_path)
+            _fields(retained, "kind campaign_digest started_epoch deadline_epoch last_epoch active starts")
+            if (retained["kind"] != "research-supervisor-state-v1" or
+                    retained["campaign_digest"] != m["campaign_digest"] or
+                    read_json(directory / "manifest.json") != m or
+                    retained["deadline_epoch"] != retained["started_epoch"] + m["total_wall_seconds"] or
+                    not isinstance(retained["starts"], dict) or set(retained["starts"]) != set(campaign.entries) or
+                    any(type(value) is not int or not 0 <= value <= 32 for value in retained["starts"].values())):
+                raise CampaignError("invalid retained campaign inspection identity")
+            reconcile_dispatch(campaign, retained, observations)
         return {"status": "inspection", "campaign_digest": m["campaign_digest"],
-                "gpu_dispatch_enabled": allow_gpu_after_user_resume, "plans": observations}
+                "gpu_dispatch_enabled": allow_gpu_after_user_resume, "plans": observations,
+                "retained_status": retained_status(campaign)}
     if approved_digest != m["campaign_digest"]:
         raise CampaignError("exact explicit campaign approval required")
     if not Path("/proc/sys/kernel/random/boot_id").is_file():
@@ -484,6 +670,8 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                     any(type(value) is not int or not 0 <= value <= 32 for value in state["starts"].values())):
                 raise CampaignError("invalid retained deadline or identity; reconciliation required")
         else:
+            if resume:
+                raise CampaignError("resume requires original retained state; no fresh budget")
             if (directory / "journal.jsonl").exists():
                 raise CampaignError("journal without state; no budget reset")
             start = now()
@@ -492,6 +680,15 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                      "last_epoch": start, "active": None, "starts": {name: 0 for name in campaign.entries}}
             _atomic(manifest_path, m)
             checkpoint("campaign_started")
+        if resume:
+            with control_lock(directory):
+                if stop_identity(directory) != resume_stop:
+                    raise CampaignError("newer STOP arrived during resume; request retained")
+                stop_path = safe_path(campaign.root, str((directory / "STOP").relative_to(campaign.root)))
+                if stop_path.exists():
+                    stop_path.unlink()
+                    _sync_directory(directory)
+                checkpoint("explicit_resume", gpu_dispatch_enabled=allow_gpu_after_user_resume)
         for signum in (signal.SIGINT, signal.SIGTERM):
             old_signals[signum] = signal.signal(signum, stop)
         monotonic_deadline = time.monotonic() + max(0, state["deadline_epoch"] - now())
@@ -500,16 +697,46 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
         def stopped():
             return stop_requested[0] or (directory / "STOP").exists()
         def report(status, outcomes, **details):
+            heartbeat(outcomes, force=True)
             checkpoint("campaign_" + status, plans=outcomes, **details)
             return {"status": status, "campaign_digest": m["campaign_digest"],
                     "deadline_epoch": state["deadline_epoch"], "plans": outcomes,
                     "gpu_dispatch_enabled": allow_gpu_after_user_resume,
-                    "scientific_result_verified": False, **details}
+                    "scientific_result_verified": False,
+                    "online_repair_agent": "not_connected", **details}
         waiting_for = None
+        last_heartbeat = [-float("inf")]
+        def heartbeat(outcomes, *, force=False):
+            if not force and time.monotonic() - last_heartbeat[0] < heartbeat_seconds:
+                return
+            last_heartbeat[0] = time.monotonic()
+            gpu_ids = {uuid for name in campaign.entries if campaign.gpu(name)
+                       for uuid in campaign.plans[name]["gpus"]["uuids"]}
+            snapshots = campaign.H.gpu_snapshot() if gpu_ids else []
+            gpu = [item for item in snapshots if item["uuid"] in gpu_ids]
+            running_gpu = any(campaign.gpu(name) and value == "running"
+                              for name, value in outcomes.items())
+            # Memory use is not utilization. Idle here means no observed compute
+            # PID on every expected physical device, never permission to launch.
+            all_devices = {item["uuid"] for item in gpu} == gpu_ids
+            idle = bool(gpu_ids and all_devices and all(not item["foreign_pids"] for item in gpu))
+            _atomic(directory / "heartbeat.json", {
+                "kind": "research-supervisor-heartbeat-v1",
+                "campaign_digest": m["campaign_digest"], "observed_epoch": now(),
+                "owner": campaign.H._self_identity(), "deadline_epoch": state["deadline_epoch"],
+                "remaining_seconds": max(0, remaining()), "plans": outcomes,
+                "gpu_observation": gpu, "gpu_observation_available": bool(gpu_ids and all_devices),
+                "gpu_no_compute_process_observed": idle,
+                "gpu_idle_while_retained_running": idle and running_gpu,
+                "gpu_dispatch_enabled": allow_gpu_after_user_resume,
+                "online_repair_agent": "not_connected", "scientific_result_verified": False})
+            checkpoint("heartbeat", plans=outcomes)
         while True:
             campaign.recheck()
             observed = {name: campaign.observe(name) for name in campaign.entries}
             outcomes = {name: value["status"] for name, value in observed.items()}
+            outcomes, driver_live = reconcile_dispatch(campaign, state, observed)
+            heartbeat(outcomes)
             if any(value == "unknown" for value in outcomes.values()):
                 return report("reconciliation_required", outcomes, observations=observed)
             eligible = []
@@ -536,6 +763,8 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                             outcomes[name] = "blocked"
                     elif entry["on_failure_of"] is not None and not observed[entry["on_failure_of"]]["repairable"]:
                         outcomes[name] = "blocked"
+                    elif outcomes[name] == "waiting_inputs":
+                        pass
                     elif campaign.gpu(name) and not allow_gpu_after_user_resume:
                         outcomes[name] = "blocked_gpu_stop"
                     else:
@@ -548,6 +777,15 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
             if len(active) > 1:
                 return report("reconciliation_required", outcomes, reason="multiple retained batches in one pool")
             target = active[0] if active else next((name for name in campaign.entries if name in eligible), None)
+            if target is None and "waiting_inputs" in outcomes.values():
+                if stopped():
+                    return report("paused", outcomes)
+                if remaining() <= m["collection_reserve_seconds"]:
+                    return report("budget_exhausted", outcomes)
+                if watch_ready:
+                    time.sleep(poll_seconds)
+                    continue
+                return report("waiting_inputs", outcomes, observations=observed)
             if target is None:
                 status = "blocked_gpu_stop" if "blocked_gpu_stop" in outcomes.values() else "failed" if any(s in ("failed", "blocked") for s in outcomes.values()) else "completed"
                 return report(status, outcomes)
@@ -555,7 +793,7 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                 return report("paused", outcomes, reason="STOP or signal; retained workers keep original deadlines")
             if remaining() <= m["collection_reserve_seconds"]:
                 return report("budget_exhausted", outcomes)
-            if _driver_busy(campaign.pool):
+            if driver_live or _driver_busy(campaign.pool):
                 if waiting_for != target:
                     checkpoint("host_driver_wait", plan_id=target)
                     waiting_for = target
@@ -568,16 +806,20 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                 return report("budget_exhausted", outcomes)
             if state["starts"][target] >= 32:
                 return report("reconciliation_required", outcomes, reason="bounded driver recovery allowance exhausted")
-            state["active"] = target
-            state["starts"][target] += 1
-            checkpoint("dispatch_intent", plan_id=target, plan_digest=campaign.entries[target]["plan_digest"])
             campaign.recheck()
             if stopped():
                 return report("paused", outcomes)
+            if remaining() <= m["collection_reserve_seconds"]:
+                return report("budget_exhausted", outcomes)
+            if campaign.missing[target]:
+                if active:
+                    return report("reconciliation_required", outcomes,
+                                  reason="retained active plan lost pinned inputs; no driver resume")
+                # Readiness can disappear during final validation; no process
+                # creation was attempted, so keep this item eligible to wait.
+                continue
             entry = campaign.entries[target]
-            argv = [m["python"], "-B", str(campaign.skill / "scripts/run_harness.py"),
-                    str(verify_ref(campaign.root, entry["plan_ref"])), "--root", str(campaign.root),
-                    "--execute", "--approved-plan-digest", entry["plan_digest"]]
+            argv = harness_argv(campaign, target)
             logs = directory / target
             logs.mkdir(exist_ok=True)
             # A private empty cache prefix prevents stale .pyc from bypassing source pins.
@@ -592,9 +834,39 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                         not active and campaign.plans[target]["limits"]["total_wall_seconds"] > workload_remaining):
                     return report("budget_exhausted", outcomes,
                                   reason="revalidation consumed the remaining dispatch budget")
-                child = (transport or HarnessTransport()).start(argv, logs, environment)
-                checkpoint("driver_started", plan_id=target, pid=child.pid, argv=argv)
+                # Serialize CLI STOP acceptance with the process-creation boundary.
+                # Do not hold this lock while waiting for the child.
+                with control_lock(directory):
+                    if stopped():
+                        return report("paused", outcomes)
+                    previous_active = state["active"]
+                    state["active"] = target
+                    state["starts"][target] += 1
+                    checkpoint("dispatch_intent", plan_id=target,
+                               plan_digest=campaign.entries[target]["plan_digest"])
+                    # fsync itself consumes time; a *known* pre-Popen cancellation
+                    # is not an uncertain launch and must not poison future resume.
+                    # A crash instead leaves the durable intent unreconciled.
+                    workload_remaining = remaining() - m["collection_reserve_seconds"]
+                    cancelled = "paused" if stopped() else "budget_exhausted" if (
+                        workload_remaining <= 0 or not active and
+                        campaign.plans[target]["limits"]["total_wall_seconds"] > workload_remaining) else None
+                    if cancelled:
+                        state["starts"][target] -= 1
+                        state["active"] = previous_active
+                        checkpoint("dispatch_cancelled_before_process_creation", plan_id=target,
+                                   reason=cancelled)
+                        return report(cancelled, outcomes)
+                    child = (transport or HarnessTransport()).start(argv, logs, environment)
+                identity = campaign.H._identity(child.pid)
+                if identity is not None:
+                    _atomic(logs / "driver.json", {"campaign_digest": m["campaign_digest"],
+                        "plan_digest": entry["plan_digest"], "process": identity, "argv": argv})
+                checkpoint("driver_started", plan_id=target, process=identity, argv=argv)
                 while child.poll() is None:
+                    live_outcomes = dict(outcomes)
+                    live_outcomes[target] = "running"
+                    heartbeat(live_outcomes)
                     if stopped() or remaining() <= m["collection_reserve_seconds"]:
                         child.send_signal(signal.SIGINT)
                         try:
@@ -633,24 +905,35 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("campaign", type=Path)
-    parser.add_argument("--execute", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--execute", action="store_true")
+    mode.add_argument("--status", action="store_true", help="Read-only exact retained process/receipt inspection")
+    mode.add_argument("--stop", action="store_true", help="Request cooperative driver handoff; never kill workers")
+    mode.add_argument("--resume", action="store_true", help="Clear campaign STOP with original state/budget; GPU STOP remains")
     parser.add_argument("--approved-campaign-digest")
     parser.add_argument("--print-digest", action="store_true")
     parser.add_argument("--poll-seconds", type=float, default=1.0)
+    parser.add_argument("--watch-ready", action="store_true",
+                        help="Wait for declared exact input bytes within the original campaign deadline")
+    parser.add_argument("--heartbeat-seconds", type=float, default=30.0)
     parser.add_argument("--allow-gpu-after-user-resume", action="store_true",
                         help="Local acknowledgment ONLY after explicit user GPU resume and gate acceptance")
     args = parser.parse_args(argv)
     try:
         if args.print_digest:
-            if args.execute:
-                raise CampaignError("digest printing cannot execute")
+            if args.execute or args.stop or args.resume:
+                raise CampaignError("digest printing cannot mutate")
             result = {"campaign_digest": campaign_digest(read_json(args.campaign)), "execution_started": False}
+        elif args.stop:
+            result = request_stop(args.campaign, args.approved_campaign_digest)
         else:
-            result = run_campaign(args.campaign, execute=args.execute,
+            result = run_campaign(args.campaign, execute=args.execute or args.resume,
                                   approved_digest=args.approved_campaign_digest, poll_seconds=args.poll_seconds,
-                                  allow_gpu_after_user_resume=args.allow_gpu_after_user_resume)
+                                  allow_gpu_after_user_resume=args.allow_gpu_after_user_resume,
+                                  watch_ready=args.watch_ready, heartbeat_seconds=args.heartbeat_seconds,
+                                  resume=args.resume)
         print(canonical(result))
-        return 0 if result.get("status") in (None, "inspection", "completed") else 2
+        return 0 if result.get("status") in (None, "inspection", "completed", "stop_requested") else 2
     except Exception as error:
         print(canonical({"status": "blocked", "error": type(error).__name__, "reason": str(error),
                          "gpu_dispatch_enabled": args.allow_gpu_after_user_resume,

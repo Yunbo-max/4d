@@ -159,7 +159,43 @@ def bind_contract_arms(contract: dict, comparison: dict,
         if root is not None and identity_row.get('report_ref') is not None:
             report = scoring.read_json(scoring.resolve_ref(
                 root, identity_row['report_ref']))
-            if report.get('implementation_sha256') != implementation_sha:
+            reported = report.get('implementation_sha256')
+            if identity_row.get('role') == 'b0':
+                # collect_native_sequence emits no candidate implementation
+                # field. The frozen source ref and its actual generator evidence
+                # provide that binding without rewriting historical reports.
+                source_ref = identity_row.get('implementation_ref')
+                pinned = comparison.get('input_refs', [])
+                if (not isinstance(source_ref, dict)
+                        or source_ref not in implementation_refs
+                        or source_ref not in pinned
+                        or source_ref.get('sha256') != implementation_sha
+                        or (reported is not None and reported != implementation_sha)):
+                    raise ValueError('B0 implementation is not pinned by contract/comparison')
+                scoring.resolve_ref(root, source_ref)
+                if PROFILE in ('c01', 'c04', 'c10'):
+                    generator_ref = identity_row.get('generation_identity_ref')
+                    if generator_ref not in pinned:
+                        raise ValueError('B0 native generation identity is not pinned')
+                    generator = scoring.read_json(scoring.resolve_ref(root, generator_ref))
+                    if (generator.get('kind') != 'native-context-generation-identity'
+                            or generator.get('uid') != comparison.get('uid')
+                            or generator.get('instrument_code_sha256', {}).get(
+                                'research_math/native_context_runner.py') != implementation_sha):
+                        raise ValueError('B0 native producer implementation mismatch')
+                elif PROFILE == 'c02':
+                    command_ref = identity_row.get('command_ref')
+                    if command_ref not in pinned:
+                        raise ValueError('B0 generation command is not pinned')
+                    command = scoring.read_json(scoring.resolve_ref(root, command_ref))
+                    if (command.get('uid') != comparison.get('uid')
+                            or command.get('seed') != comparison.get('inference_seed')
+                            or command.get('offline') is not True
+                            or command.get('script_sha256') != implementation_sha):
+                        raise ValueError('B0 generation command implementation mismatch')
+                elif PROFILE != 'c14':
+                    raise ValueError('Unknown native B0 implementation-binding profile')
+            elif reported != implementation_sha:
                 raise ValueError('Frozen arm/report implementation mismatch: '
                                  + arm_role)
     alias = by_role['b_star'].get('alias_of')

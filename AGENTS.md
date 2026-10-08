@@ -91,6 +91,22 @@ physical arrays are deduplicated, and all failed roles stay in the denominator.
 Do not call a constructor, scorer or generic harness CLI directly. C10 remains
 generated_unexecuted, Local-unverified, scientifically unadmitted and unscored;
 GPU STOP remains in force.
+C04 uses `prepare_robust_motion_candidate.py` and the real-input CPU acceptance
+entry `prepare_c04_native_acceptance.py`, then the C04 comparison/scoring profiles,
+`prepare_c04_native_scoring.py` and `launch_c04_native_scoring.py`. Read the C04
+runbook section. The implemented specialization has a positive diagonal shape,
+a declared predicted-kinetic surrogate, conic projection certificates and separate
+float32 finite-step checks; it proves no probability coverage or native guarantee.
+Retain deterministic, final-strength-matched and robust outputs and every failed
+role. Semantic review must bind a prospective method specification plus actual
+held-out developmental receipts, never future confirmation outputs. C04 remains
+generated_unexecuted and scientifically unadmitted; GPU STOP remains active.
+The supervisor now supports fixed known-input readiness, bounded waiting,
+heartbeat/status, STOP/resume generations and retained-driver/lost-ack recovery.
+Read SUPERVISOR_HANDOFF.md before use. It is neither installed nor running;
+reviewed task-extension and an actual online repair-agent integration remain
+unfinished. Never reset campaign budget/identity or retry a frozen scientific
+attempt to obtain continued work.
 C01's actual direct decoder correction now has a source chain at
 `prepare_self_map_candidate.py`, `prepare_c01_native_acceptance.py`,
 `research_math.c01_native_comparison`, `research_math.c01_native_scoring`,

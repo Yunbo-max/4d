@@ -798,6 +798,160 @@ harness and has not been installed or started. No candidate is promoted.
 
 ### Latest source handoff — decoder capture
 
+### Fixed-inventory supervisor recovery
+
+Use [SUPERVISOR_HANDOFF.md](docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md)
+for the exact v1/v2 manifest, status/heartbeat, bounded `--watch-ready`, `--stop`
+and guarded `--resume` interface. All commands retain one campaign identity and
+original deadline/collection reserve; a lost acknowledgement is reconciled
+against the exact harness/native receipts and PID/start/boot identity. Unknown
+launch state is blocked, never retried. The current shared CPU acceptance stages
+the supervisor and its actual-harness recovery tests. No test or deployment is
+claimed here. Reviewed append-only task admission and actual online repair-agent
+connection are still missing; GPU STOP remains in force.
+
+### C04 robust motion protection and retained-native acceptance
+
+Status: **generated_unexecuted**. Use the same pinned ActionMesh weights,
+ActionBench snapshot, native loader and official scorer in [asset acquisition](#download-datasets-and-models).
+No new model, dataset, GPU permission or budget is introduced. C04 reads a
+receipt-bound completed `sequence.npz` and its sibling `report.json`; all 16
+native frames, timestamps, faces and vertex identities must be present.
+
+The source specialization uses the existing common ARAP repair `d` and the
+inference-only surrogate `f(X)=sum ||X[t+1]-X[t]||^2/(2 V duration dt[t])`.
+Its exact temporal Hessian gives a finite-step bound. A strictly positive,
+diagonal, acceleration-weighted sensitivity shape defines a deterministic
+ellipsoid: it is neither an arbitrary-PSD solver nor a calibrated probability
+region. The actual conic projection minimizes `.5||delta-d||^2` with frame-zero
+pins and `|g0.delta|+r||sqrt(S)delta||<=epsilon`. Projection gap/stationarity are
+reported before trust/backtracking. Final float32 exports receive separate
+surrogate/finite-budget checks. The scalar control matches the final robust
+L2 update norm within the recorded 0.5% quantization tolerance; this is not
+literal bit-exact norm equality. No native motion guarantee follows from it.
+
+Run the current shared zero-GPU software acceptance first. Then set
+`source_sequence` to the actual retained complete native sequence under
+`project_dir`. The following variables come from the prospective C04 parameter
+record and measured Local resource envelope, never a confirmation-score search.
+The existing design permits at most two tuned numerical parameters with three
+values each; for this specialization they are radius and epsilon. Freeze ARAP,
+shape-floor/gain, solver and finite-step settings before that comparison; apply
+matched tuning/cost to the simple controls. Exact values, source-derived family
+split and numeric native effect/noninferiority margins still require their
+recorded evidence before scientific dispatch.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_robust_motion_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" --source-sequence "$source_sequence" \
+  --run-id c04-artifacts-001 --plan-dir "$project_dir/plans/c04-artifacts-001" \
+  --arap-weight "$c04_arap_weight" --temporal-weight "$c04_temporal_weight" \
+  --iterations "$c04_arap_iterations" --cg-tolerance "$c04_cg_tolerance" \
+  --cg-max-iterations "$c04_cg_max_iterations" \
+  --shape-floor "$c04_shape_floor" --shape-gain "$c04_shape_gain" \
+  --radius "$c04_radius" --epsilon "$c04_epsilon" \
+  --trust-radius "$c04_trust_radius" --finite-budget "$c04_finite_budget" \
+  --absolute-tolerance "$c04_absolute_tolerance" --relative-tolerance "$c04_relative_tolerance" \
+  --max-iterations "$c04_conic_max_iterations" --max-backtracks "$c04_max_backtracks" \
+  --coordinate-bounds "$c04_lower" "$c04_upper" --bounds-policy "$c04_bounds_policy" \
+  --max-artifact-bytes "$c04_archive_bytes" --wall-seconds "$c04_cpu_seconds"
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/c04-artifacts-001/harness.json" --root "$project_dir" \
+  --execute --approved-plan-digest "$approved_plan_digest"
+```
+
+Use the digest actually emitted by the builder after reviewing zero GPUs,
+8192 MiB CPU RAM, one attempt/zero retries and remaining campaign allowance.
+Do not execute the candidate module directly. The three receipt outputs are
+`actionmesh/c04-robust-output/{candidate.json,artifact-archive.json,artifact.tar}`.
+Return that attempt's complete `c04-robust-output` directory without changes,
+including `manifest.json`, `common-target.npz` and all three role directories.
+The archive binds every materialized member and terminal failed reports. Also
+retain the exact original sequence/report at their original project-relative
+paths; do not rewrite hashes or source refs when copying between host roots.
+Set `c04_candidate_json` to the returned `candidate.json`. Then emit the real
+artifact acceptance plan, which reconstructs the method from these native inputs:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c04_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" --artifact-candidate "$c04_candidate_json" \
+  --run-id c04-native-acceptance-001 --plan-dir "$project_dir/plans/c04-native-acceptance-001" \
+  --wall-seconds "$c04_acceptance_seconds" --ram-mib "$c04_acceptance_ram_mib"
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/c04-native-acceptance-001/harness.json" --root "$project_dir" \
+  --execute --approved-plan-digest "$approved_plan_digest"
+```
+
+Use this second builder's digest. It rejects a skipped/empty acceptance suite;
+common engineering fixtures alone cannot close this real-input acceptance.
+Incomplete candidates retain failed logical roles; a missing archive after a
+hard interruption remains a failed attempt and collection gap, not permission
+to rerun or manufacture a terminal artifact. Logs/receipts resolve from the
+actual harness state and attempt workspace, never an invented attempt UUID.
+
+After prospective B* selection, construct a `c04-native-comparison-freeze`
+using `c04_native_comparison.py`'s exact fields and all five roles:
+`b0,b_star,deterministic_protection,strength_matched_repair,robust_conic_protection`.
+Use the same metadata-only acceptance builder in explicit request-preparation
+mode; it validates terminal artifact integrity, retains failures, and assembles
+both requests inside one zero-GPU harness job. This mode does not declare all
+methods accepted. Preserve the prospective freeze and its complete decision/
+semantic evidence under the project root; the builder hashes their closure.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c04_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" --artifact-candidate "$c04_candidate_json" \
+  --freeze "$c04_freeze" --ground-truth "$dataset_root/data/$c04_uid/surfaces.npy" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" --timeout-seconds "$frozen_per_case_timeout" \
+  --run-id c04-requests-001 --plan-dir "$project_dir/plans/c04-requests-001" \
+  --wall-seconds "$c04_request_seconds" --ram-mib "$c04_acceptance_ram_mib"
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/c04-requests-001/harness.json" --root "$project_dir" \
+  --execute --approved-plan-digest "$approved_plan_digest"
+```
+
+Use that builder's actual digest. The declared outputs are
+`actionmesh/c04-comparison-request.json` and `actionmesh/c04-scoring-request.json`.
+Copy them back preserving their project-relative paths and hashes; every input
+closure file retains its path too. Providing only `--freeze` creates just the
+comparison request. Supplying scoring arguments requires their complete set.
+The official source root is reconstructed from the explicitly staged source
+file; the job never falls back to a live source checkout. These CPU validators
+perform actual method reconstruction, which is why their execution belongs to
+this harness job. They never call the official scorer or grant GPU admission.
+
+Official execution remains stopped. A future plan requires current C04
+`design_verified`, Natural Gate 0/IPCG, independent-family split, protocol-equal
+numeric CD-3D effect and CD-4D/CD-M noninferiority criteria, the frozen native
+contract, exact runtime/source closure and an expiring exact-run/GPU
+`single_c04_scoring_attempt` resume. It additionally requires actual held-out
+development evidence for the surrogate/set semantics, bound to a prospective
+method specification and implementation. That review cannot depend on future
+confirmation output or assert probability coverage. No such evidence is
+created by this source delivery.
+
+Only then use `prepare_c04_native_scoring.py` with its explicit
+`--root --request --protocol --method-batch --environment --admission --skill-dir
+--plan-dir --run-id --group --gpu-uuid --wall-seconds --ram-mib --cpu-cores` fields,
+then `launch_c04_native_scoring.py --root ... --consumption ... --skill-dir ...
+--approved-plan-digest ...`. The launcher preserves its exact stable claim,
+checks final consumption, and delegates to the existing harness. Never use the
+generic harness CLI or `score` directly for this authorized scientific plan.
+Return the receipt-bound `result.json`, `raw-manifest.json`, `raw-evidence.tar`,
+actual full logs, complete five-role denominator, all source/data/runtime hashes
+and validation result. Deduplicated physical output does not remove logical roles.
+
+Debug projection failures from `projection` gap/stationarity, fixed tolerances
+and common repair; inspect `finite_step` and every `rejected_trials` entry for
+backtracking failures. Preserve the entire failed attempt and frozen params.
+Do not fix failure by dropping a role, changing dtype/frames or relaxing a budget.
+Missing semantic/family/criterion evidence blocks scientific scoring while
+independent source work continues. All Local tests/native comparisons remain
+pending until their actual exact-version receipts are returned.
+
 ### C10 integrable-gradient chain — source complete, not executed
 
 C10 now has a distinct method-to-official-score source chain. It does not reuse
@@ -847,7 +1001,13 @@ cd "$project_dir/actionmesh"
 "$python_bin" -m research_math.c10_native_comparison request \
   --root "$project_dir" --freeze "$c10_freeze" --output "$c10_request"
 "$python_bin" -m research_math.c10_native_scoring request \
-  --root "$project_dir" --freeze "$c10_freeze" --output "$c10_scoring_request"
+  --root "$project_dir" --comparison "$c10_request" \
+  --ground-truth "$dataset_root/data/$c10_uid/surfaces.npy" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$c10_scoring_request"
 ```
 
 The request fixes B0, prospective B*, direct lift, qualified local ARAP and the

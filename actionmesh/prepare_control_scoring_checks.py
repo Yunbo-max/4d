@@ -22,9 +22,13 @@ ROOT_SOURCES = (
     'prepare_c02_native_scoring.py',
     'prepare_integrable_gradient_candidate.py',
     'prepare_c10_native_scoring.py',
+    'prepare_robust_motion_candidate.py',
+    'prepare_c04_native_acceptance.py',
+    'prepare_c04_native_scoring.py',
     'launch_c14_native_scoring.py',
     'launch_c02_native_scoring.py',
     'launch_c10_native_scoring.py',
+    'launch_c04_native_scoring.py',
     'prepare_control_scoring.py',
     'prepare_control_scoring_checks.py',
     'prepare_native_runtime.py',
@@ -51,6 +55,10 @@ def acceptance_sources(root: Path) -> list[Path]:
     root = Path(root).resolve()
     files = sorted((root/'actionmesh/research_math').rglob('*.py'))
     files += [root/'actionmesh'/name for name in ROOT_SOURCES]
+    # C02/C04 share the actual ARAP implementation; staged tests must not
+    # accidentally import this dependency from a live source checkout.
+    files += [root/'actionmesh/research_ten'/name
+              for name in ('__init__.py', 'm01_elasticity.py')]
     files.append(root/'scripts/research_supervisor.py')
     files.append(root/'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json')
     missing = [path for path in files if not path.is_file()]

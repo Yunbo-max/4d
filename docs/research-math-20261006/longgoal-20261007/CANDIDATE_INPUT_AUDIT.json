@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design inventory. C01,C02,C10,C13,C14 have generated_unexecuted source chains within their current native input scopes. No Local-verified candidate or native candidate result. Complete G01, wider producer scopes and remaining ten source chains are still pending.",
+  "scope": "C01,C02,C04,C10,C13,C14 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (6/15); Local-verified and native-result candidates remain 0/15. Nine source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -14,7 +14,8 @@
     "C02": "protected_geometry_candidate.py constructs the complete method from a receipt-bound predicted sequence: shared matrix-free ARAP repair d, deterministic anchor-topology patches, barycentric-area W, patch-centroid-velocity protection, equal-W-norm control and full native exports. c02_native_comparison.py plus the C02 scoring/plan/launcher profile complete the generated_unexecuted five-role official-scoring/raw-collection chain; protected_projection.py remains only a dense reference primitive.",
     "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
     "C14": "simple_mesh_controls.py remains the Gaussian control. corotational_residual_candidate.py implements the distinct anchored nonuniform-time group-TV method; c14_native_comparison.py, c14_native_scoring.py, prepare_c14_native_scoring.py and launch_c14_native_scoring.py complete its generated_unexecuted five-role comparison, official scoring, receipt validation and authorization-gated admitted-plan builder/controller source chain.",
-    "C01": "self_map_candidate.py consumes the entire native context and reconstructs distinct raw/mean/self-map outputs; prospective comparison, official scorer/raw closure, gated plan/launcher and dedicated real-input CPU acceptance are authored. Original 314/2718 design repeats are not executable through the seed42-only producer."
+    "C01": "self_map_candidate.py consumes the entire native context and reconstructs distinct raw/mean/self-map outputs; prospective comparison, official scorer/raw closure, gated plan/launcher and dedicated real-input CPU acceptance are authored. Original 314/2718 design repeats are not executable through the seed42-only producer.",
+    "C04": "Distinct positive-diagonal robust-conic source chain; source-only delivery is not semantic coverage, calibrated uncertainty or Local/native qualification."
   },
   "required_next_sequence": [
     "Continue independent shared interface/source work; current CPU software acceptance remains Local-only.",
@@ -444,9 +445,9 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c04-math.json",
         "sha256": "2578c6f63c4eb7cff70921301cdd4325785aa8d79530a0fe2214f391d476987d"
       },
-      "source_status": "specification_only",
-      "code_entry": null,
-      "real_input_and_model_interface": "Shared geometry repair and legal motion-surrogate gradient with uncertainty set",
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "code_entry": "actionmesh/research_math/robust_motion_candidate.py; actionmesh/prepare_robust_motion_candidate.py; actionmesh/prepare_c04_native_acceptance.py; actionmesh/research_math/c04_native_comparison.py; actionmesh/research_math/c04_native_scoring.py; actionmesh/prepare_c04_native_scoring.py; actionmesh/launch_c04_native_scoring.py",
+      "real_input_and_model_interface": "Completed native sequence.npz/report.json; shared C02 ARAP desired update, exact normalized predicted-kinetic surrogate gradient/Hessian and strictly positive diagonal acceleration-weighted sensitivity shape. No ground truth, scorer gradients, model internals or probability calibration in constructor.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -460,16 +461,18 @@
         "strength_matched_repair",
         "robust_conic_protection"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
-      "remaining_implementation_gaps": [
-        "qualified surrogate/uncertainty adapter",
-        "conic optimizer",
-        "nonlinear remainder checks",
-        "native entry"
+      "native_scoring_entry": "CPU acceptance/request assembly -> research_math.c04_native_scoring -> admitted prepare_c04_native_scoring.py -> single-owner launch_c04_native_scoring.py -> official_actionbench_adapter.py",
+      "local_method_acceptance_command": "Follow LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance: common CPU acceptance, one-attempt prepare_robust_motion_candidate.py, retained-real prepare_c04_native_acceptance.py; only after full admission and explicit exact-attempt GPU resume use official scoring plan/launcher.",
+      "acceptance_command_gap": "Concrete entry and source exist; no Local execution/real candidate artifact/admission currently exists.",
+      "completion_evidence": [
+        "common real-mesh ARAP repair and exact kinetic surrogate/Hessian",
+        "anchored conic projection with primal/dual and stationarity certificates",
+        "final float32 finite-step bound, structured rejected trials, failure-preserving archive",
+        "deterministic and tolerance-qualified final-strength scalar controls",
+        "prospective five-role comparison and receipt-bound official native scorer/raw closure",
+        "exact-attempt authorization-gated plan/launcher and retained-real CPU acceptance source"
       ],
+      "remaining_implementation_gaps": [],
       "scientific_prerequisites": [
         "legal motion surrogate and meaningful uncertainty set",
         "held-out semantic/coverage check if probability coverage claimed",
@@ -480,8 +483,9 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
-      "local_method_verified": false
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "completion_scope": "Generated source for explicit positive-diagonal shape, original 16-frame complete native input, exact frame-zero pins, deterministic kinetic surrogate. General PSD and semantic/native efficacy are not claimed."
     },
     {
       "id": "4d-math-20261006-c03",
@@ -1030,11 +1034,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "7e03902dc592e88545a182dfd37e3c5b3ef33dca",
-  "independent_source_review": "Independent read-only C01 math/context and scoring/plan reviews; no execution. Core and source closure reviewed, exact query cast retained, unclipped control separated, full context/failure raw archive bound. Fixed shared profile import closure, deterministic-kNN staging and protocol/analysis hash cycle; authored real staging/native acceptance and acyclic binding tests. Final source review does not establish Local test pass.",
+  "maintained_base_commit": "fd4c69055fbd827a91c3f21181b480188bf947ff",
+  "independent_source_review": "Independent C04 core/math, scoring/acceptance and supervisor read-only reviews. Issues repaired include lost rejection evidence, missing ARAP imports/archive staging, semantic evidence identity/time closure, prospective review/output cycle, STOP/resume and readiness races. Only source/AST/JSON/diff/hash checks; no project execution.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 5,
+    "full_method_source_complete": 6,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

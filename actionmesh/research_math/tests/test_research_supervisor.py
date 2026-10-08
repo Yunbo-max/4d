@@ -9,6 +9,7 @@ import copy
 import importlib.util
 import json
 import os
+import subprocess
 from pathlib import Path
 import sys
 import tempfile
@@ -49,11 +50,11 @@ class ResearchSupervisorTests(unittest.TestCase):
         path.write_text(S.canonical(value) + "\n")
         return {"path": relative, "sha256": S.file_digest(path)}
 
-    def plan(self, name, *, dependencies=(), repair=None, fail=False, delay=0):
+    def plan(self, name, *, dependencies=(), repair=None, fail=False, delay=0, input_refs=()):
         command = [sys.executable, "-c", "raise SystemExit(3)" if fail else
                    "from pathlib import Path; import time; time.sleep(%r); Path('result.txt').write_text('engineering')" % delay]
         native = self.R.make_plan(self.root, run_id=name, jobs=[{
-            "trial_id": name, "command": command, "cwd": ".", "input_refs": [],
+            "trial_id": name, "command": command, "cwd": ".", "input_refs": list(input_refs),
             "code_refs": [], "output_paths": ["result.txt"], "seed": 1,
             "group": "engineering", "arm_role": "engineering"}],
             provenance={"git_revision": "engineering-fixture", "model_revision": "none",
@@ -77,13 +78,16 @@ class ResearchSupervisorTests(unittest.TestCase):
         self.entries.append(entry)
         return harness
 
-    def manifest(self):
-        value = {"kind": "research-harness-campaign", "version": 1,
+    def manifest(self, version=1):
+        value = {"kind": "research-harness-campaign", "version": version,
                  "campaign_id": "engineering-supervisor", "root": str(self.root),
                  "python": str(Path(sys.executable).resolve()), "skill_root": str(self.skill),
                  "skill_digest": self.skill_hash, "pool_dir": str(self.pool),
                  "total_wall_seconds": 2400, "collection_reserve_seconds": 1800,
                  "plans": self.entries}
+        if version == 2:
+            for entry in value["plans"]:
+                entry.setdefault("required_inputs", [])
         value["campaign_digest"] = S.campaign_digest(value)
         path = self.root / "campaign.json"
         path.write_text(S.canonical(value))
@@ -169,7 +173,7 @@ class ResearchSupervisorTests(unittest.TestCase):
         def delayed_recheck(campaign):
             real_recheck(campaign)  # Retain real source, plan, and input validation.
             calls[0] += 1
-            if calls[0] == 2:  # The recheck after durable dispatch intent.
+            if calls[0] == 2:  # The final recheck before durable dispatch intent.
                 clock[0] = consumed_until
         class ForbiddenTransport:
             def start(self, *args):
@@ -440,8 +444,242 @@ class ResearchSupervisorTests(unittest.TestCase):
                                    "--execute", "--approved-plan-digest", self.entries[0]["plan_digest"]]])
         self.assertFalse((self.root / "runs/harness").exists())
         resumed_without_acknowledgment = self.execute(path, value)
-        self.assertEqual(resumed_without_acknowledgment["status"], "blocked_gpu_stop")
+        # A transport exception after durable intent cannot establish no launch.
+        self.assertEqual(resumed_without_acknowledgment["status"], "reconciliation_required")
 
+
+    def missing_input_campaign(self):
+        input_path = self.root / "inputs/required.txt"
+        input_path.parent.mkdir()
+        input_path.write_text("retained exact input")
+        ref = {"path": "inputs/required.txt", "sha256": S.file_digest(input_path)}
+        self.plan("waiting", input_refs=[ref])
+        self.entries[-1]["required_inputs"] = [ref]
+        self.plan("independent")
+        path, value = self.manifest(version=2)
+        content = input_path.read_bytes()
+        input_path.unlink()
+        return path, value, input_path, content
+
+    def test_missing_declared_input_isolates_only_dependent_plan(self):
+        path, value, _, _ = self.missing_input_campaign()
+        before = path.read_bytes()
+        result = self.execute(path, value)
+        self.assertEqual(result["status"], "waiting_inputs")
+        self.assertEqual(result["plans"]["independent"], "completed")
+        self.assertEqual(result["plans"]["waiting"], "waiting_inputs")
+        self.assertEqual(path.read_bytes(), before)
+        self.assertFalse((self.root / "runs/attempts/waiting").exists())
+
+    def test_exact_input_arrival_continues_without_new_manifest_or_budget(self):
+        path, value, input_path, content = self.missing_input_campaign()
+        heartbeat = self.root / "runs/supervisor/engineering-supervisor/heartbeat.json"
+        delivered = threading.Event()
+        errors = []
+        def deliver():
+            try:
+                deadline = time.monotonic() + 15
+                while time.monotonic() < deadline:
+                    if heartbeat.is_file():
+                        observed = json.loads(heartbeat.read_text())
+                        if observed["plans"].get("independent") == "completed":
+                            temp = input_path.with_suffix(".incoming")
+                            temp.write_bytes(content)
+                            os.replace(temp, input_path)
+                            delivered.set()
+                            return
+                    time.sleep(.02)
+                errors.append("independent real harness batch never completed")
+                S.request_stop(path, value["campaign_digest"])
+            except Exception as error:
+                errors.append(repr(error))
+        publisher = threading.Thread(target=deliver)
+        publisher.start()
+        try:
+            result = self.execute(path, value, watch_ready=True, heartbeat_seconds=.05)
+        finally:
+            publisher.join(timeout=20)
+        self.assertEqual(errors, [])
+        self.assertTrue(delivered.is_set())
+        self.assertEqual(result["status"], "completed")
+        self.assertEqual(set(result["plans"].values()), {"completed"})
+        state = json.loads((heartbeat.parent / "state.json").read_text())
+        self.assertEqual(state["starts"], {"waiting": 1, "independent": 1})
+        self.assertEqual(state["deadline_epoch"], state["started_epoch"] + value["total_wall_seconds"])
+
+    def test_final_readiness_loss_does_not_poison_dispatch_state(self):
+        input_path = self.root / "required.txt"
+        input_path.write_text("exact bytes")
+        ref = {"path": "required.txt", "sha256": S.file_digest(input_path)}
+        self.plan("waiting", input_refs=[ref])
+        self.entries[-1]["required_inputs"] = [ref]
+        path, value = self.manifest(version=2)
+        real_recheck = S.Campaign.recheck
+        calls = [0]
+        def remove_before_final_recheck(campaign):
+            calls[0] += 1
+            if calls[0] == 2:
+                input_path.unlink()
+            real_recheck(campaign)
+        class ForbiddenTransport:
+            def start(self, *args):
+                raise AssertionError("lost readiness cannot reach process creation")
+        with patch.object(S.Campaign, "recheck", remove_before_final_recheck):
+            result = self.execute(path, value, transport=ForbiddenTransport())
+        self.assertEqual(result["status"], "waiting_inputs")
+        state = json.loads((self.root / "runs/supervisor/engineering-supervisor/state.json").read_text())
+        self.assertEqual(state["starts"]["waiting"], 0)
+        self.assertIsNone(state["active"])
+        self.assertFalse((self.root / "runs/harness").exists())
+
+    def test_stop_after_intent_before_spawn_keeps_resumable_zero_start(self):
+        self.plan("a")
+        path, value = self.manifest()
+        real_atomic = S._atomic
+        injected = [False]
+        def stop_after_intent(target, payload):
+            real_atomic(target, payload)
+            if (target.name == "state.json" and payload.get("starts", {}).get("a") == 1
+                    and not injected[0]):
+                injected[0] = True
+                (target.parent / "STOP").touch()  # Legacy direct sentinel/signal timing.
+        class ForbiddenTransport:
+            def start(self, *args):
+                raise AssertionError("observed STOP before Popen must prevent launch")
+        with patch.object(S, "_atomic", stop_after_intent):
+            paused = self.execute(path, value, transport=ForbiddenTransport())
+        self.assertEqual(paused["status"], "paused")
+        state = json.loads((self.root / "runs/supervisor/engineering-supervisor/state.json").read_text())
+        self.assertEqual(state["starts"]["a"], 0)
+        self.assertEqual(self.execute(path, value, resume=True)["status"], "completed")
+
+    def test_changed_arriving_input_is_rejected_without_launch(self):
+        path, value, input_path, _ = self.missing_input_campaign()
+        input_path.write_text("wrong bytes")
+        with self.assertRaisesRegex(S.CampaignError, "pinned bytes"):
+            self.execute(path, value, watch_ready=True)
+        self.assertFalse((self.root / "runs/harness").exists())
+
+    def test_two_real_batches_continue_with_receipt_bound_dependency(self):
+        self.plan("first")
+        self.plan("second", dependencies=("first",))
+        path, value = self.manifest()
+        result = self.execute(path, value, heartbeat_seconds=.05)
+        self.assertEqual(result["status"], "completed")
+        for name in ("first", "second"):
+            receipt = json.loads((self.root / ("runs/attempts/" + name + "/receipt.json")).read_text())
+            self.assertEqual(receipt["status"], "completed")
+            self.assertEqual(len(receipt["attempts"]), 1)
+        inspected = S.run_campaign(path)
+        self.assertIn("heartbeat", inspected["retained_status"])
+        self.assertEqual(inspected["retained_status"]["online_repair_agent"], "not_connected")
+
+    def test_lost_ack_after_real_completion_settles_without_duplicate(self):
+        self.plan("first")
+        self.plan("second", dependencies=("first",))
+        path, value = self.manifest()
+        class LostAcknowledgement(OSError):
+            pass
+        class LoseCompletedAck(S.HarnessTransport):
+            def start(self, argv, directory, environment):
+                child = super().start(argv, directory, environment)
+                child.wait(timeout=15)
+                raise LostAcknowledgement("actual completed driver response lost")
+        with self.assertRaises(LostAcknowledgement):
+            self.execute(path, value, transport=LoseCompletedAck())
+        state_path = self.root / "runs/supervisor/engineering-supervisor/state.json"
+        original = json.loads(state_path.read_text())
+        first_receipt = self.root / "runs/attempts/first/receipt.json"
+        retained = first_receipt.read_bytes()
+        resumed = self.execute(path, value)
+        self.assertEqual(resumed["status"], "completed")
+        self.assertEqual(first_receipt.read_bytes(), retained)
+        self.assertEqual(resumed["deadline_epoch"], original["deadline_epoch"])
+        self.assertEqual(json.loads(state_path.read_text())["starts"]["first"], 1)
+
+    def test_unknown_launch_ack_cannot_relaunch_absent_batch(self):
+        self.plan("first")
+        path, value = self.manifest()
+        class LostBeforeIdentity(S.HarnessTransport):
+            def start(self, *args):
+                raise OSError("cannot establish whether transport created a process")
+        with self.assertRaises(OSError):
+            self.execute(path, value, transport=LostBeforeIdentity())
+        result = self.execute(path, value)
+        self.assertEqual(result["status"], "reconciliation_required")
+        state = json.loads((self.root / "runs/supervisor/engineering-supervisor/state.json").read_text())
+        self.assertEqual(state["starts"]["first"], 1)
+        self.assertFalse((self.root / "runs/harness").exists())
+
+    def test_killed_supervisor_reconciles_surviving_real_driver(self):
+        self.plan("first", delay=1.5)
+        self.plan("second", dependencies=("first",))
+        path, value = self.manifest()
+        command = [sys.executable, str(SOURCE), str(path), "--execute",
+                   "--approved-campaign-digest", value["campaign_digest"],
+                   "--poll-seconds", "0.05", "--heartbeat-seconds", "0.05"]
+        process_file = self.root / "runs/harness/first/tasks/first/process.json"
+        driver_file = self.root / "runs/supervisor/engineering-supervisor/first/driver.json"
+        controller = subprocess.Popen(command, stdout=subprocess.DEVNULL, stderr=subprocess.PIPE)
+        try:
+            deadline = time.monotonic() + 10
+            while time.monotonic() < deadline:
+                if process_file.is_file() and driver_file.is_file():
+                    if self.H._alive(json.loads(process_file.read_text())):
+                        break
+                if controller.poll() is not None:
+                    self.fail("supervisor exited before recovery injection: " + controller.stderr.read().decode())
+                time.sleep(.01)
+            else:
+                self.fail("real worker did not become live before bounded recovery injection")
+            controller.kill()  # Inject only controller failure; retain driver/workers.
+            controller.wait(timeout=5)
+            result = self.execute(path, value, heartbeat_seconds=.05)
+            self.assertEqual(result["status"], "completed")
+            for name in ("first", "second"):
+                receipt = json.loads((self.root / ("runs/attempts/" + name + "/receipt.json")).read_text())
+                self.assertEqual(len(receipt["attempts"]), 1)
+                self.assertEqual(receipt["attempts"][0]["retry_index"], 0)
+        finally:
+            if controller.poll() is None:
+                controller.send_signal(S.signal.SIGINT)
+                controller.wait(timeout=15)
+            controller.stderr.close()
+
+    def test_stop_and_explicit_resume_keep_original_deadline(self):
+        self.plan("a")
+        path, value = self.manifest()
+        stopped = S.request_stop(path, value["campaign_digest"])
+        self.assertFalse(stopped["workers_terminated"])
+        paused = self.execute(path, value)
+        self.assertEqual(paused["status"], "paused")
+        resumed = self.execute(path, value, resume=True)
+        self.assertEqual(resumed["status"], "completed")
+        self.assertEqual(resumed["deadline_epoch"], paused["deadline_epoch"])
+        self.assertFalse(resumed["gpu_dispatch_enabled"])
+
+    def test_newer_stop_during_resume_is_preserved(self):
+        self.plan("a")
+        path, value = self.manifest()
+        S.request_stop(path, value["campaign_digest"])
+        self.assertEqual(self.execute(path, value)["status"], "paused")
+        original_init = S.Campaign.__init__
+        def parse_then_new_stop(campaign, source):
+            original_init(campaign, source)  # All real plan/source checks still run.
+            S.request_stop(path, value["campaign_digest"])
+        # Inject ordering only; actual STOP files, locks and parser are used.
+        with patch.object(S.Campaign, "__init__", parse_then_new_stop):
+            with self.assertRaisesRegex(S.CampaignError, "newer STOP"):
+                self.execute(path, value, resume=True)
+        self.assertTrue((self.root / "runs/supervisor/engineering-supervisor/STOP").is_file())
+        self.assertFalse((self.root / "runs/harness").exists())
+
+    def test_resume_without_retained_state_cannot_start_fresh_budget(self):
+        self.plan("a")
+        path, value = self.manifest()
+        with self.assertRaisesRegex(S.CampaignError, "original retained state"):
+            self.execute(path, value, resume=True)
+        self.assertFalse((self.root / "runs/harness").exists())
 
 if __name__ == "__main__":
     unittest.main()

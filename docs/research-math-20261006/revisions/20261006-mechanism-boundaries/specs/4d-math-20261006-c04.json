@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c04",
   "name_zh": "不确定动作约束下的稳健修复",
   "priority_rank": 6,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "source_chain_complete_generated_unexecuted; Local acceptance, semantic qualification and scientific admission pending",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c04.json",
@@ -56,19 +56,22 @@
       "derivation_step": "s1",
       "statement": "sup_{||u||<=r}|(g0+S^(1/2)u)^T delta|=|g0^T delta|+r||S^(1/2)delta||.",
       "planned_function": "4d_math_20261006_c04.ellipsoid_support",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted",
+      "actual_function": "robust_motion_candidate.ellipsoid_support"
     },
     {
       "derivation_step": "s2",
       "statement": "Impose |g0^T delta|+r||S^(1/2)delta||<=epsilon and A delta=0.",
       "planned_function": "4d_math_20261006_c04.solve_anchored_conic_projection",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted",
+      "actual_function": "robust_motion_candidate.solve_anchored_conic_projection"
     },
     {
       "derivation_step": "s3",
       "statement": "For a smooth protected surrogate with Hessian norm <=L, finite-step change is bounded by epsilon+L||delta||^2/2.",
       "planned_function": "4d_math_20261006_c04.check_finite_step_surrogate",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted",
+      "actual_function": "robust_motion_candidate.check_finite_step_surrogate"
     }
   ],
   "native_experiment": {
@@ -114,7 +117,15 @@
       "KILL for qualified and adequately precise refutation of this construction/necessity",
       "REVISE for prespecified child hypothesis",
       "INCONCLUSIVE for unavailable/unqualified/underpowered evidence"
-    ]
+    ],
+    "sensitivity_design": {
+      "tuned_parameters": [
+        "radius",
+        "epsilon"
+      ],
+      "values_per_parameter_max": 3,
+      "policy": "Freeze values on D1 before outcomes; reuse original matched two-parameter search cap; D2 semantic review is development, never confirmation. Freeze shape/ARAP/solver/trust/bounds first. Exact numeric values pending sourced development protocol, not guessed."
+    }
   },
   "outstanding_requirements": [
     "legal motion surrogate and meaningful uncertainty set",
@@ -129,5 +140,121 @@
   "supersedes_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c04.json",
     "sha256": "7e70a0b30ba342ac08cc7b3ac1c896dd20cf5760493a38959128a9f7e34d7581"
+  },
+  "source_specialization": {
+    "base_commit": "fd4c69055fbd827a91c3f21181b480188bf947ff",
+    "source": "actionmesh/research_math/robust_motion_candidate.py",
+    "surrogate": "normalized predicted kinetic energy, exact gradient/temporal Hessian",
+    "uncertainty_shape": "strictly positive diagonal acceleration-weighted deterministic sensitivity set; floor and gain frozen",
+    "optimization": "Euclidean conic projection before reported trust/float32 backtracking; primal/dual and stationarity certificates",
+    "comparison": "B0/B*/deterministic/strength-matched/robust; final scalar norm agreement tolerance 0.5%",
+    "limitations": [
+      "arbitrary PSD shapes not supported by this specialization",
+      "no calibrated probability-coverage claim",
+      "no demonstrated semantic/native-metric relationship",
+      "all source and tests unexecuted"
+    ]
+  },
+  "source_reading": [
+    {
+      "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+      "locator": "section 6.4, Uncertainty ellipsoids, page 322",
+      "finding": "Classical robust absolute residual equals central absolute residual plus ellipsoid support norm; no novelty inferred."
+    },
+    {
+      "url": "https://arxiv.org/html/2601.16148v2",
+      "locator": "Section 3.3 and ActionBench evaluation; pinned temporal_autoencoder.py and actionbench benchmark.py/chamfer.py",
+      "finding": "Retain reference-topology animation and published scorer. Kinetic surrogate is not native CD-M; CD-M uses fixed first-frame matching over coordinates."
+    }
+  ],
+  "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance",
+  "source_review": {
+    "status": "independent_static_review_no_remaining_critical_or_important_in_scope",
+    "reviewers": [
+      "/root/review_c04_math",
+      "/root/review_c04_scoring"
+    ],
+    "scope": "positive-diagonal C04 math/core, native chain, CPU acceptance/request assembly, C10 archive and shared B0 source binding",
+    "code_refs": [
+      {
+        "path": "actionmesh/launch_c04_native_scoring.py",
+        "sha256": "82a2ae808efd63b900b7f4a3d1738f0d8ad891fe1598c493bd93f529a43bd3b1"
+      },
+      {
+        "path": "actionmesh/prepare_c04_native_acceptance.py",
+        "sha256": "2901f3ddf6d1f7264ada5b7ae9cc5d80a979d0aa53e670ce9b2e1709db89624e"
+      },
+      {
+        "path": "actionmesh/prepare_c04_native_scoring.py",
+        "sha256": "52eb22c837ffa40e14de3d2aa2201476f44d0fc51bc75ce6fef02464a3cd5858"
+      },
+      {
+        "path": "actionmesh/prepare_robust_motion_candidate.py",
+        "sha256": "8554a7e11a95fed8fd7dc06ee5fec6e4c1c75d3b68587688a7ce7a71d49c869b"
+      },
+      {
+        "path": "actionmesh/research_math/c04_native_comparison.py",
+        "sha256": "b97da830932e59bead6fca01e904a441c7a37e67a55fb789ff99cbfb5e6b16a1"
+      },
+      {
+        "path": "actionmesh/research_math/c04_native_scoring.py",
+        "sha256": "acdc0b15c10032e0b1027d89ab48c284a7cf6648bc9588b445391ad452078633"
+      },
+      {
+        "path": "actionmesh/research_math/robust_motion_candidate.py",
+        "sha256": "8a353a6ff66b909b49f3d3d8e33d3180efcdd1e56737eb2daec97537cc295783"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c04_native_comparison.py",
+        "sha256": "2748afbe0a1314dd9e0c044ff373178351bd2f4f54b4556a372278084d26f2fd"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c04_native_scoring.py",
+        "sha256": "d509f20efc9a437684020392888aa8d1e1e49e854df278738fce45af26ae923d"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c04_native_scoring_plan.py",
+        "sha256": "251b238835b8c0af455d2db0f18af8054ff29289c6e958e09bc8e21d585492c8"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c04_native_scoring_profile.py",
+        "sha256": "970bcf6e7cf22c7e3d8e82294e203b9e11cc7c1f6df8655ec0ac1c5fd5706f1c"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c04_semantic_admission.py",
+        "sha256": "a19a44f0580c1dfe3995783fc28e6df0677f61c596085ede67b1fb12c1d27aeb"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_robust_motion_candidate.py",
+        "sha256": "9ccab320a83a597acb164eef3913cb6a4f8bb704028067740a833cfe661316bd"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_robust_motion_plan.py",
+        "sha256": "e2b3b9583d558a2dabba4160fabe9065bfac96c8638e181ca35651b0f0624724"
+      },
+      {
+        "path": "actionmesh/prepare_control_scoring_checks.py",
+        "sha256": "33ddbc96fa7f550d0f17715fae1c87217ee35056cd37a7c7854db5fe852cbb3d"
+      },
+      {
+        "path": "actionmesh/prepare_c14_native_scoring.py",
+        "sha256": "05da732c776934ddff3263ef4c0b9a4de3ea98b7481ccec1de1146d884ec8c19"
+      },
+      {
+        "path": "actionmesh/prepare_c10_native_scoring.py",
+        "sha256": "8e4f9fc12e28f75f4633362a1d67e4511b3e11f578d09970b48cb2e54e3cb80b"
+      },
+      {
+        "path": "actionmesh/research_math/c10_native_comparison.py",
+        "sha256": "64f2b6929de6eb4f74fb3c2689f80ca819be908225bd400215ba0aa4c87d7f75"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_native_b0_contract.py",
+        "sha256": "34d84455645756650dd81d601b55fc79f049f3c1ccdf682615f76365b2f87c13"
+      }
+    ],
+    "executed_project_tests": false,
+    "scientific_admission": false,
+    "local_acceptance": "pending"
   }
 }

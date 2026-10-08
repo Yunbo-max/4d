@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T09:14:14Z",
+  "recorded_at": "2026-10-08T11:17:25Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C10,C13,C14 have generated_unexecuted method-to-official-score source chains within their current native input scopes (5/15); Local-verified and native-result candidates remain 0/15. C01 covers the existing seed42 complete native 16-frame window only; the originally proposed additional seeds need producer extension. Ten source chains and complete G01 remain pending. No project code/tests, plan builder, model, scoring or GPU work was executed on Web. Supervisor remains uninstalled/unstarted and is still a finite pre-frozen campaign controller rather than the required persistent continuation service; GPU STOP and frozen budget/protocol remain effective.",
+  "status": "C01,C02,C04,C10,C13,C14 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (6/15); Local-verified and native-result candidates remain 0/15. Nine source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -1540,12 +1540,30 @@
       "continuous_managed_process_verified": false
     },
     "source_refs": [
-      {"path": "actionmesh/research_math/integrable_gradient_candidate.py", "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"},
-      {"path": "actionmesh/prepare_integrable_gradient_candidate.py", "sha256": "961371579ed4e21dc07e6fa68971ab23f1c00637f84fea2dde6c0539e78312b9"},
-      {"path": "actionmesh/research_math/c10_native_comparison.py", "sha256": "af0f4256e700c853ee552ffd2373caf1bc5c2730841081ce7c514914dd9c3e25"},
-      {"path": "actionmesh/research_math/c10_native_scoring.py", "sha256": "4805e8ff6cdcc424e7e4f0aeb205830eb1175a53e185eee8aac1cbb18556b67d"},
-      {"path": "actionmesh/prepare_c10_native_scoring.py", "sha256": "874b290315d163abf9a206e69f4541ac2aa160f6042743099916ad13eddde46b"},
-      {"path": "actionmesh/launch_c10_native_scoring.py", "sha256": "9aaada8e6ce6c0240f90c616a5de60133bfd9134247e8f80abcb183302285b26"}
+      {
+        "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+        "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"
+      },
+      {
+        "path": "actionmesh/prepare_integrable_gradient_candidate.py",
+        "sha256": "961371579ed4e21dc07e6fa68971ab23f1c00637f84fea2dde6c0539e78312b9"
+      },
+      {
+        "path": "actionmesh/research_math/c10_native_comparison.py",
+        "sha256": "af0f4256e700c853ee552ffd2373caf1bc5c2730841081ce7c514914dd9c3e25"
+      },
+      {
+        "path": "actionmesh/research_math/c10_native_scoring.py",
+        "sha256": "4805e8ff6cdcc424e7e4f0aeb205830eb1175a53e185eee8aac1cbb18556b67d"
+      },
+      {
+        "path": "actionmesh/prepare_c10_native_scoring.py",
+        "sha256": "874b290315d163abf9a206e69f4541ac2aa160f6042743099916ad13eddde46b"
+      },
+      {
+        "path": "actionmesh/launch_c10_native_scoring.py",
+        "sha256": "9aaada8e6ce6c0240f90c616a5de60133bfd9134247e8f80abcb183302285b26"
+      }
     ],
     "validation": {
       "read_only_installed_method_validator": "code-boundary ready; math20/20, selected15, selection_verified true; code/design/results authorization remains false/not_granted in evidence",
@@ -1568,7 +1586,13 @@
       "final_state": "No remaining concrete source blocker found in the C10 reviewed scope; static review does not establish Local acceptance."
     },
     "source_complete_candidate_count": 5,
-    "source_complete_candidates": ["C01", "C02", "C10", "C13", "C14"],
+    "source_complete_candidates": [
+      "C01",
+      "C02",
+      "C10",
+      "C13",
+      "C14"
+    ],
     "candidate_methods_local_verified": 0,
     "candidate_native_results": 0,
     "g01_complete": false,
@@ -1585,5 +1609,52 @@
       "non-mocked two-batch, failure-isolation, interruption and lost-ack integration tests"
     ],
     "next_step": "Keep GPU stopped. Continue C04 source implementation independently. Local C10 acceptance begins with current-source CPU checks and the zero-GPU retained-native artifact plan; scientific scoring remains blocked on real input, Gate 0/IPCG, family split, complete G01 criteria, strict runtime closure and an explicit exact-attempt resume authorization."
+  },
+  "c04_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "base_commit": "fd4c69055fbd827a91c3f21181b480188bf947ff",
+    "method_entry": "actionmesh/research_math/robust_motion_candidate.py",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance",
+    "source_scope": "positive diagonal deterministic sensitivity set; conditional semantic/native qualification",
+    "source_review": "Independent static math/core/scoring/acceptance reviews; no Local execution",
+    "source_complete_candidates": 6,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "additional_repairs": [
+      "C10 archive stage closure",
+      "shared B0 native producer identity binding",
+      "shared acceptance ARAP dependency closure",
+      "C10 scorer-request runbook CLI"
+    ],
+    "review_source_record": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c04.json"
+  },
+  "supervisor_continuation_delivery": {
+    "status": "generated_unexecuted",
+    "source": "scripts/research_supervisor.py",
+    "handoff": "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
+    "installed": false,
+    "started": false,
+    "implemented": "fixed-input readiness isolation, bounded waiting, heartbeat/status, serialized STOP/resume, retained process identity and receipt-bound lost-ack recovery",
+    "remaining": [
+      "reviewed append-only task extension without budget reset",
+      "configured actual online repair-agent/runtime integration",
+      "Local recovery acceptance and deployment"
+    ],
+    "source_review": {
+      "reviewer": "/root/review_supervisor",
+      "scope": "fixed-inventory continuation/recovery and real-harness test source",
+      "status": "independent_static_review_no_remaining_critical_or_important_in_scope",
+      "code_refs": [
+        {
+          "path": "scripts/research_supervisor.py",
+          "sha256": "23bc3a8897483296d792a21bc63e1c594e23194d7bcda9ff6705c5e3a7a69f97"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_research_supervisor.py",
+          "sha256": "318efaff9652263ffa4b2e6a4e1d4bfed1603dc76ee9ffa96a74daa81150a7c6"
+        }
+      ],
+      "tests_executed": false
+    }
   }
 }

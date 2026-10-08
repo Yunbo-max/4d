@@ -1,4 +1,4 @@
-"""Local-only fail-closed contracts for the C10 scoring plan profile."""
+"""Local-only fail-closed contracts for the C04 scoring plan profile."""
 from __future__ import annotations
 
 import json
@@ -6,28 +6,28 @@ from pathlib import Path
 import tempfile
 import unittest
 
-import prepare_c10_native_scoring as planner
+import prepare_c04_native_scoring as planner
 
 
-class C10NativeScoringPlanTests(unittest.TestCase):
+class C04NativeScoringPlanTests(unittest.TestCase):
     def contract(self):
         names = {
-            "treatment": "pinned_integrable_solve", "baseline": "b_star",
-            "b0": "b0", "direct_common_lift": "direct_common_lift",
-            "independent_local_repair": "independent_local_repair",
+            "treatment": "robust_conic_protection", "baseline": "b_star",
+            "b0": "b0", "deterministic_protection": "deterministic_protection",
+            "strength_matched_repair": "strength_matched_repair",
         }
         refs = {key: [{"path": name + ".py", "sha256": chr(97 + index) * 64}]
                 for index, (key, name) in enumerate(names.items())}
-        refs["baseline"] = refs["direct_common_lift"]
+        refs["baseline"] = refs["deterministic_protection"]
         contract = {
             "benchmark_id": "facebook/actionbench", "benchmark_revision": "rev",
             "primary_metric": "cd_3d",
             "metrics": [{"name": name, "output_path": ["readout", name]}
                         for name in ("cd_3d", "cd_4d", "cd_motion")],
             "contrasts": {
-                "treatment": "pinned_integrable_solve", "baseline": "b_star",
-                "controls": ["b0", "direct_common_lift",
-                             "independent_local_repair"],
+                "treatment": "robust_conic_protection", "baseline": "b_star",
+                "controls": ["b0", "deterministic_protection",
+                             "strength_matched_repair"],
             },
             "arm_requirements": {
                 key: {"name": name, "revision": name + "-method",
@@ -37,28 +37,28 @@ class C10NativeScoringPlanTests(unittest.TestCase):
             "scorer": {"kind": "official", "source_refs": [], "code_refs": []},
         }
         contract["arm_requirements"]["baseline"]["revision"] = (
-            "direct_common_lift-method")
+            "deterministic_protection-method")
         return contract
 
     def comparison(self):
         rows = []
         hashes = {
-            "b0": "c" * 64, "direct_common_lift": "d" * 64,
-            "independent_local_repair": "e" * 64,
-            "pinned_integrable_solve": "a" * 64,
+            "b0": "c" * 64, "deterministic_protection": "d" * 64,
+            "strength_matched_repair": "e" * 64,
+            "robust_conic_protection": "a" * 64,
         }
-        for role in ("b0", "b_star", "direct_common_lift",
-                     "independent_local_repair", "pinned_integrable_solve"):
+        for role in ("b0", "b_star", "deterministic_protection",
+                     "strength_matched_repair", "robust_conic_protection"):
             row = {"role": role, "method_id": role + "-method"}
             if role == "b_star":
-                row.update(method_id="direct_common_lift-method",
-                           alias_of="direct_common_lift")
+                row.update(method_id="deterministic_protection-method",
+                           alias_of="deterministic_protection")
             else:
                 row.update(report_ref={"path": role + "/report.json",
                                        "sha256": hashes[role]},
                            implementation_sha256=hashes[role])
             rows.append(row)
-        rows[-1]["method_id"] = "pinned_integrable_solve-method"
+        rows[-1]["method_id"] = "robust_conic_protection-method"
         return {"roles": rows}
 
     def test_contract_fixes_candidate_baseline_controls_and_official_scorer(self):
@@ -66,9 +66,9 @@ class C10NativeScoringPlanTests(unittest.TestCase):
         for mutation in ("treatment", "baseline", "controls", "scorer"):
             changed = self.contract()
             if mutation == "treatment":
-                changed["contrasts"]["treatment"] = "direct_common_lift"
+                changed["contrasts"]["treatment"] = "deterministic_protection"
             elif mutation == "baseline":
-                changed["contrasts"]["baseline"] = "direct_common_lift"
+                changed["contrasts"]["baseline"] = "deterministic_protection"
             elif mutation == "controls":
                 changed["contrasts"]["controls"].pop()
             else:
@@ -79,8 +79,8 @@ class C10NativeScoringPlanTests(unittest.TestCase):
     def test_frozen_arm_bindings_cover_every_physical_implementation(self):
         refs = planner.bind_contract_arms(self.contract(), self.comparison())
         self.assertEqual({ref["path"] for ref in refs}, {
-            "b0.py", "direct_common_lift.py",
-            "independent_local_repair.py", "pinned_integrable_solve.py"})
+            "b0.py", "deterministic_protection.py",
+            "strength_matched_repair.py", "robust_conic_protection.py"})
         changed = self.contract()
         changed["arm_requirements"]["treatment"]["revision"] = "caller-relabel"
         with self.assertRaisesRegex(ValueError, "method identity"):
@@ -109,7 +109,7 @@ class C10NativeScoringPlanTests(unittest.TestCase):
                     "implementation_sha256": implementation_ref["sha256"]}))
                 row["report_ref"] = planner.scoring.file_ref(root, report)
             contract["arm_requirements"]["baseline"]["implementation_refs"] = (
-                contract["arm_requirements"]["direct_common_lift"]["implementation_refs"])
+                contract["arm_requirements"]["deterministic_protection"]["implementation_refs"])
             identity_path = root / "generation-identity.json"
             identity = {"kind": "native-context-generation-identity", "uid": "fixture",
                         "instrument_code_sha256": {
@@ -125,9 +125,9 @@ class C10NativeScoringPlanTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "producer implementation mismatch"):
                 planner.bind_contract_arms(contract, comparison, root)
 
-    def test_method_boundary_requires_c10_design_verification(self):
+    def test_method_boundary_requires_c04_design_verification(self):
         ready = {"workflow_boundary": {
-            "action": "dispatch", "candidate_id": "4d-math-20261006-c10",
+            "action": "dispatch", "candidate_id": "4d-math-20261006-c04",
             "required_stage": "design_verified", "ready": True}}
         planner.require_method_boundary(ready)
         blocked = {"workflow_boundary": {**ready["workflow_boundary"],
@@ -146,16 +146,16 @@ class C10NativeScoringPlanTests(unittest.TestCase):
 
     def test_outputs_are_receipt_bound_raw_bundle_not_a_verdict(self):
         self.assertEqual(planner.scoring_outputs(), [
-            "actionmesh/c10-scoring-output/result.json",
-            "actionmesh/c10-scoring-output/raw-manifest.json",
-            "actionmesh/c10-scoring-output/raw-evidence.tar",
+            "actionmesh/c04-scoring-output/result.json",
+            "actionmesh/c04-scoring-output/raw-manifest.json",
+            "actionmesh/c04-scoring-output/raw-evidence.tar",
         ])
         self.assertEqual(planner.AUTHORIZATION_SCOPE,
-                         "single_c10_scoring_attempt")
-        self.assertEqual(planner.FAMILY_SPLIT_KIND, "c10-family-split")
-        self.assertEqual(planner.ANALYSIS_KIND, "c10-g01-analysis-plan")
+                         "single_c04_scoring_attempt")
+        self.assertEqual(planner.FAMILY_SPLIT_KIND, "c04-family-split")
+        self.assertEqual(planner.ANALYSIS_KIND, "c04-g01-analysis-plan")
         self.assertEqual(planner.ADMISSION_KIND,
-                         "c10-scientific-dispatch-admission")
+                         "c04-scientific-dispatch-admission")
 
 
 if __name__ == "__main__":

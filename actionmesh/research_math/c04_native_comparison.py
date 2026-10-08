@@ -1,7 +1,7 @@
-"""Freeze C10's five logical native roles without scoring or choosing B*.
+"""Freeze C04's five logical native roles without scoring or choosing B*.
 
-The assembler consumes a previously retained C10 artifact, revalidates the
-common differential target and every produced arm through the candidate core,
+The assembler consumes a previously retained C04 artifact, revalidates the
+common repair and motion uncertainty set and every produced arm through the candidate core,
 and emits a content-addressed request for the separately admitted official
 scorer.  It neither generates geometry nor advances any scientific gate.
 """
@@ -15,18 +15,18 @@ from pathlib import Path
 
 import numpy as np
 
-from research_math import integrable_gradient_candidate as candidate_module
+from research_math import robust_motion_candidate as candidate_module
 
 
-CANDIDATE_ID = "4d-math-20261006-c10"
-ROLES = ("b0", "b_star", "direct_common_lift",
-         "independent_local_repair", "pinned_integrable_solve")
+CANDIDATE_ID = "4d-math-20261006-c04"
+ROLES = ("b0", "b_star", "deterministic_protection",
+         "strength_matched_repair", "robust_conic_protection")
 METHOD_ROLES = ROLES[2:]
-CONTROL_ROLES = ("direct_common_lift", "independent_local_repair")
+CONTROL_ROLES = ("deterministic_protection", "strength_matched_repair")
 METHOD_IDS = {
-    "direct_common_lift": "c10-control-direct-common-lift-v1",
-    "independent_local_repair": "c10-control-qualified-independent-local-arap-v1",
-    "pinned_integrable_solve": CANDIDATE_ID,
+    "deterministic_protection": "c04-control-deterministic-protection-v1",
+    "strength_matched_repair": "c04-control-strength-matched-repair-v1",
+    "robust_conic_protection": CANDIDATE_ID,
 }
 
 
@@ -125,13 +125,13 @@ def _freeze_core(freeze: dict) -> None:
     core = {key: value for key, value in freeze.items() if key != "freeze_digest"}
     if freeze.get("freeze_digest") != canonical_digest(core):
         raise ValueError("Freeze digest mismatch")
-    if (freeze.get("kind") != "c10-native-comparison-freeze"
+    if (freeze.get("kind") != "c04-native-comparison-freeze"
             or freeze.get("version") != 1
             or freeze.get("candidate_id") != CANDIDATE_ID
             or freeze.get("scoring_seed") != 44
             or freeze.get("primary_metric") != "cd_3d"
             or freeze.get("guardrail_metrics") != ["cd_4d", "cd_motion"]):
-        raise ValueError("Current frozen C10 comparison record required")
+        raise ValueError("Current frozen C04 comparison record required")
     try:
         frozen = datetime.fromisoformat(freeze["frozen_at"].replace("Z", "+00:00"))
     except (KeyError, AttributeError, ValueError) as error:
@@ -149,7 +149,7 @@ def _freeze_core(freeze: dict) -> None:
     if (not isinstance(rows, list)
             or [row.get("role") if isinstance(row, dict) else None
                 for row in rows] != list(ROLES)):
-        raise ValueError("Exactly five ordered C10 roles must be frozen")
+        raise ValueError("Exactly five ordered C04 roles must be frozen")
 
 
 def _decision(root: Path, freeze: dict) -> tuple[dict, list[dict]]:
@@ -157,20 +157,20 @@ def _decision(root: Path, freeze: dict) -> tuple[dict, list[dict]]:
     fields = {
         "kind", "version", "candidate_id", "uid", "inference_seed",
         "decided_at", "selected_role", "selected_method_id",
-        "selected_without_c10_native_outcomes", "selection_basis_refs",
+        "selected_without_c04_native_outcomes", "selection_basis_refs",
         "decision_digest",
     }
     core = {key: value for key, value in decision.items()
             if key != "decision_digest"}
     if (set(decision) != fields
-            or decision.get("kind") != "c10-b-star-decision"
+            or decision.get("kind") != "c04-b-star-decision"
             or decision.get("version") != 1
             or decision.get("candidate_id") != CANDIDATE_ID
             or decision.get("uid") != freeze["uid"]
             or decision.get("inference_seed") != freeze["inference_seed"]
-            or decision.get("selected_without_c10_native_outcomes") is not True
+            or decision.get("selected_without_c04_native_outcomes") is not True
             or decision.get("decision_digest") != canonical_digest(core)):
-        raise ValueError("B* must be prospectively selected without C10 outcomes")
+        raise ValueError("B* must be prospectively selected without C04 outcomes")
     try:
         decided = datetime.fromisoformat(decision["decided_at"].replace("Z", "+00:00"))
         frozen = datetime.fromisoformat(freeze["frozen_at"].replace("Z", "+00:00"))
@@ -192,7 +192,7 @@ def _artifact_closure(root: Path, artifact_path: Path,
     if (verified.get("candidate_id") != CANDIDATE_ID
             or verified.get("uid") != freeze["uid"]
             or verified.get("seed") != freeze["inference_seed"]):
-        raise ValueError("Verified C10 artifact identity differs from freeze")
+        raise ValueError("Verified C04 artifact identity differs from freeze")
     artifact = read_json(artifact_path)
     if (artifact.get("candidate_id") != CANDIDATE_ID
             or artifact.get("uid") != freeze["uid"]
@@ -204,7 +204,7 @@ def _artifact_closure(root: Path, artifact_path: Path,
             or artifact.get("source_refs") != {
                 "sequence": freeze["source_sequence_ref"],
                 "report": freeze["source_report_ref"]}):
-        raise ValueError("C10 artifact is not derived from the frozen B0 source")
+        raise ValueError("C04 artifact is not derived from the frozen B0 source")
     directory = artifact_path.parent
     terminal_reports = [read_json(directory / role / "report.json")
                         for role in METHOD_ROLES]
@@ -213,7 +213,7 @@ def _artifact_closure(root: Path, artifact_path: Path,
         else "incomplete")
     if (artifact.get("arms") != terminal_reports
             or artifact.get("status") != expected_status):
-        raise ValueError("C10 candidate record differs from terminal role reports")
+        raise ValueError("C04 candidate record differs from terminal role reports")
     manifest = read_json(directory / "manifest.json")
     completed_roles = [row["role"] for row in verified.get("arms", [])
                        if row.get("status") == "completed"]
@@ -224,13 +224,13 @@ def _artifact_closure(root: Path, artifact_path: Path,
             or manifest.get("cases") != expected_cases
             or manifest.get("common_target") != artifact.get("common_target")
             or manifest.get("scope") !=
-            "C10 generated_unexecuted three-arm artifact; no B0/B*/scoring/admission"):
-        raise ValueError("C10 artifact manifest differs from validated terminal arms")
+            "C04 generated_unexecuted three-arm artifact; no B0/B*/scoring/admission"):
+        raise ValueError("C04 artifact manifest differs from validated terminal arms")
     expected_paths = [artifact_path, directory / "manifest.json",
                       directory / "common-target.npz"]
     archive_refs = verified.get("artifact_archive")
     if not isinstance(archive_refs, dict) or not archive_refs:
-        raise ValueError("C10 retained candidate archive closure required")
+        raise ValueError("C04 retained candidate archive closure required")
     expected_paths.extend(resolve_ref(root, ref) for ref in archive_refs.values())
     for role in METHOD_ROLES:
         report_path = directory / role / "report.json"
@@ -243,13 +243,13 @@ def _artifact_closure(root: Path, artifact_path: Path,
     refs = []
     for path in expected_paths:
         if not path.is_file() or path.is_symlink():
-            raise ValueError("Incomplete physical C10 artifact closure: " + str(path))
+            raise ValueError("Incomplete physical C04 artifact closure: " + str(path))
         refs.append(file_ref(root, path))
     common_ref = file_ref(root, directory / "common-target.npz")
     if (verified.get("common_target") != common_ref
             or artifact.get("common_target", {}).get("sha256")
             != common_ref["sha256"]):
-        raise ValueError("Verified C10 common target differs from artifact")
+        raise ValueError("Verified C04 common target differs from artifact")
     return artifact, refs, common_ref
 
 
@@ -278,6 +278,28 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
     pinned = [file_ref(root, freeze_path), freeze["source_sequence_ref"],
               freeze["source_report_ref"], freeze["b_star_decision_ref"],
               freeze["candidate_artifact_ref"], *basis, *artifact_refs]
+    semantic_review_ref = freeze.get("semantic_review_ref")
+    if semantic_review_ref is not None:
+        review = read_json(resolve_ref(root, semantic_review_ref))
+        pinned.append(semantic_review_ref)
+        # Preserve all review evidence in the same content-addressed request.
+        # Admission below, not the presence of a JSON record, qualifies it.
+        def collect_refs(value):
+            if isinstance(value, dict):
+                if set(value) == {"path", "sha256"}:
+                    resolve_ref(root, value)
+                    pinned.append(value)
+                else:
+                    for item in value.values():
+                        collect_refs(item)
+            elif isinstance(value, list):
+                for item in value:
+                    collect_refs(item)
+        collect_refs(review)
+        for nested in [review.get("method_spec_ref"),
+                       *review.get("evidence_refs", [])]:
+            if nested is not None:
+                collect_refs(read_json(resolve_ref(root, nested)))
     normalized, physical, physical_content = [], {}, {}
     for row in freeze["roles"]:
         role = row["role"]
@@ -372,21 +394,21 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
                     or report.get("source_report_sha256")
                     != freeze["source_report_ref"]["sha256"]
                     or report.get("implementation_sha256") != digest(implementation)):
-                raise ValueError("C10 artifact/source identity mismatch: " + role)
+                raise ValueError("C04 artifact/source identity mismatch: " + role)
             if completed:
                 if (certificate != expected_certificate
                         or report.get("sha256", {}).get("certificate.npz")
                         != row["certificate_ref"]["sha256"]):
-                    raise ValueError("Completed C10 arm lacks its certificate: " + role)
+                    raise ValueError("Completed C04 arm lacks its certificate: " + role)
             elif certificate is not None:
-                raise ValueError("Failed C10 arm must not invent a certificate: " + role)
+                raise ValueError("Failed C04 arm must not invent a certificate: " + role)
             if row["method_id"] != METHOD_IDS[role]:
-                raise ValueError("Frozen role relabels retained C10 method: " + role)
-            if role == "pinned_integrable_solve":
+                raise ValueError("Frozen role relabels retained C04 method: " + role)
+            if role == "robust_conic_protection":
                 if row["method_id"] != CANDIDATE_ID:
-                    raise ValueError("Pinned solve must be the actual C10 candidate")
+                    raise ValueError("Robust conic solve must be the actual C04 candidate")
             elif row["method_id"] == CANDIDATE_ID:
-                raise ValueError("A C10 control cannot masquerade as the candidate")
+                raise ValueError("A C04 control cannot masquerade as the candidate")
         arrays = None
         if completed:
             arrays = _arrays(sequence_path)
@@ -442,7 +464,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
     role_to_case = {row["role"]: row["case_id"] for row in normalized}
     unique = {ref["path"]: ref for ref in pinned}
     request = {
-        "kind": "c10-native-comparison-request", "version": 1,
+        "kind": "c04-native-comparison-request", "version": 1,
         "candidate_id": CANDIDATE_ID, "uid": freeze["uid"],
         "inference_seed": freeze["inference_seed"], "scoring_seed": 44,
         "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
@@ -462,6 +484,7 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
         "source_sequence_ref": freeze["source_sequence_ref"],
         "source_report_ref": freeze["source_report_ref"],
         "common_target_ref": common_target_ref,
+        "semantic_review_ref": semantic_review_ref,
         "input_refs": list(unique.values()),
         "generated_unexecuted": True, "native_qualified": False,
         "scientific_verdict": "not_computed", "dispatch_ready": False,
@@ -477,15 +500,15 @@ def verify_request(root: Path, request: dict) -> None:
             if key != "request_digest"}
     if request.get("request_digest") != canonical_digest(core):
         raise ValueError("Request digest mismatch")
-    if (request.get("kind") != "c10-native-comparison-request"
+    if (request.get("kind") != "c04-native-comparison-request"
             or request.get("candidate_id") != CANDIDATE_ID
             or request.get("scoring_seed") != 44
             or request.get("generated_unexecuted") is not True
             or request.get("native_qualified") is not False
             or request.get("dispatch_ready") is not False):
-        raise ValueError("Unexecuted C10 request scope required")
+        raise ValueError("Unexecuted C04 request scope required")
     if [row.get("role") for row in request.get("roles", [])] != list(ROLES):
-        raise ValueError("Exactly five ordered C10 roles required")
+        raise ValueError("Exactly five ordered C04 roles required")
     if set(request.get("role_to_case", {})) != set(ROLES):
         raise ValueError("Every logical role must map to a case or retained failure")
     cases = request.get("scoring_cases", [])
@@ -506,7 +529,7 @@ def verify_request(root: Path, request: dict) -> None:
     expected = make_request(
         root, freeze_path=resolve_ref(root, request["freeze_ref"]), _verify=False)
     if request != expected:
-        raise ValueError("Request differs from current frozen C10 construction")
+        raise ValueError("Request differs from current frozen C04 construction")
 
 
 def main() -> int:
