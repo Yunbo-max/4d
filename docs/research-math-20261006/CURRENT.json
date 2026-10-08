@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T07:31:12Z",
+  "recorded_at": "2026-10-08T08:26:24Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,17 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C13 and C14 have source-complete but generated_unexecuted method-to-official-score chains. C14 now has a distinct corotational group-TV candidate, prospective five-role freeze, admitted ActionBench snapshot/semantics binding, official scorer/raw collector, byte-bound delivery replay and recoverable authorization-gated common-harness plan-builder/controller source; no scientific plan was emitted. Web performed static source/AST/JSON/diff review only. Real inputs, Local acceptance, Natural Gate 0/IPCG, actual source-derived family records, frozen numeric G01 records and native results are absent. Source-chain complete candidates are 2/15; Local-verified candidates and native candidate results remain 0/15. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
+  "status": "C02, C13 and C14 have source-complete but generated_unexecuted method-to-official-score chains. C02 now constructs its common matrix-free ARAP repair, fixed geodesic patch/area protection operator, equal-W-norm control and protected full-sequence output from the receipt-bound predicted mesh; it also has prospective comparison, official scorer/raw collection, byte-bound delivery replay and recoverable authorization-gated common-harness plan/launcher source. The old protected_projection.py remains only a reference primitive. No scientific plan was emitted. Web performed static source/AST/JSON/diff review only. Real Local acceptance, Natural Gate 0/IPCG, actual source-derived family records, frozen numeric G01 records and native results are absent. Source-chain complete candidates are 3/15; Local-verified candidates and native candidate results remain 0/15. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
+  "c02_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
+    "method_entry": "actionmesh/research_math/protected_geometry_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c02_native_comparison.py",
+    "scoring_entry": "actionmesh/research_math/c02_native_scoring.py",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c02-complete-protected-geometry-source-chain",
+    "review": "Independent static core/scoring/docs findings repaired; AST/JSON/diff checks only; project code and tests not executed.",
+    "next": "Local CPU software and artifact/native-interface acceptance at the containing commit; GPU/scientific plan remains blocked by STOP and the documented scientific gates."
+  },
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",

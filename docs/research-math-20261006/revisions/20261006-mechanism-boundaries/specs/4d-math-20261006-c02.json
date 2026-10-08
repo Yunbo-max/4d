@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c02",
   "name_zh": "保留动作特征的几何近端更新",
   "priority_rank": 1,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Complete generated_unexecuted source chain delivered; awaiting Local acceptance, scientific admission and frozen native protocol; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-math.json",
@@ -43,9 +43,9 @@
   "prior_art_and_role": "Classical equality-constrained proximal projection; geometry-only repair and simple displacement blend; SFG local/global motion decoupling means separation alone cannot be the contribution.",
   "planned_interface": {
     "inputs": [
-      "desired common geometry step d[T,V,3]",
-      "frozen C operator on free coordinates",
-      "SPD W operator and anchor pins"
+      "receipt-bound complete predicted native sequence.npz and report.json",
+      "explicit common ARAP, patch and solver parameters",
+      "frame-zero topology/timestamps/original vertex identity"
     ],
     "outputs": [
       "full original-identity mesh sequence at every original frame",
@@ -54,60 +54,69 @@
       "solver residuals, input/source hashes and end-to-end costs"
     ]
   },
+  "implementation_sources": [
+    "actionmesh/research_math/protected_geometry_candidate.py",
+    "actionmesh/prepare_protected_geometry_candidate.py",
+    "actionmesh/research_math/c02_native_comparison.py",
+    "actionmesh/research_math/c02_native_scoring.py",
+    "actionmesh/prepare_c02_native_scoring.py",
+    "actionmesh/launch_c02_native_scoring.py"
+  ],
+  "implementation_status": "generated_unexecuted; Local software/native-interface verification pending",
   "planned_math_to_code": [
     {
       "derivation_step": "s1",
       "statement": "Stationarity gives W(delta-d)+C^T lambda=0.",
-      "planned_function": "c02.s1_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "C W^-1 C^T lambda=C d.",
-      "planned_function": "c02.s2_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "delta*=d-W^-1 C^T(C W^-1 C^T)^dagger C d; C delta*=0.",
-      "planned_function": "c02.s3_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s4",
       "statement": "If C has full column rank then delta*=0.",
-      "planned_function": "c02.s4_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s5",
       "statement": "For q(delta)=.5 delta^T W delta-delta^T Wd, p=P_W d and r=d-p satisfy p^T W r=0.",
-      "planned_function": "c02.s5_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s6",
       "statement": "q(0)-q(p)=.5||p||_W^2 and q(p)-q(d)=.5||d-p||_W^2.",
-      "planned_function": "c02.s6_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s7",
       "statement": "For d!=0, rho=||d-p||_W^2/||d||_W^2 is in [0,1]; the constrained/unconstrained local improvement ratio is 1-rho.",
-      "planned_function": "c02.s7_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s8",
       "statement": "Choose scalar s=sqrt(1-rho). Then ||sd||_W=||p||_W and q(0)-q(sd)>=q(0)-q(p), but C(sd)=s Cd.",
-      "planned_function": "c02.s8_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s9",
       "statement": "If C=Dpsi(y) and ||D^2 psi||<=L locally, Cp=0 implies ||psi(y+p)-psi(y)||<=L||p||_2^2/2.",
-      "planned_function": "c02.s9_reviewed_operation",
-      "status": "not_implemented"
+      "planned_function": "research_math.protected_geometry_candidate.protected_projection",
+      "status": "source_implemented_generated_unexecuted_linear_observation_zero_remainder"
     }
   ],
   "native_experiment": {
@@ -162,7 +171,6 @@
   "outstanding_requirements": [
     "Natural repair gap after strongest simple baseline",
     "fixed inference-available protection operator with nontrivial nullspace",
-    "common repair and matrix-free implementation",
     "final 16/16 raw receipts and native replay",
     "Natural Gate 0 PASS; required importance/collision decision",
     "code identity/software/native-interface verification",

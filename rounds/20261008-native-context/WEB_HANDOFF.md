@@ -504,3 +504,52 @@ hash/source inspection is permitted here; no builder, project test, scorer,
 model or GPU task ran. C14 is now source-chain complete and
 `generated_unexecuted`, not Local-verified or scientifically admitted. Source-
 complete count is 2/15 (C13, C14); Local verified and native results remain 0/15.
+
+## Continuation: C02 complete protected-geometry chain — 2026-10-08
+
+Resumed literal remote main `4aaaf0bcb65f45be03d17e509d8c2d5003e2e387`
+and closed the highest-priority candidate's named source gap. C02 no longer
+counts `protected_projection.py` with caller-supplied d/C/W as the method.
+
+`research_math.protected_geometry_candidate` now consumes one receipt-bound
+complete predicted sequence, derives a common matrix-free local/global ARAP
+geometry repair, deterministic frame-zero topology-geodesic patches and strict
+barycentric-area metric, then applies the reviewed exact patch-centroid-velocity
+nullspace projection. It exports the same-d geometry-only arm, equal-W-norm
+scalar arm and protected candidate as full float32 16-frame original-identity
+sequences. The shared `certificate.npz` retains areas, patch labels/seeds and all
+three steps. Each role report retains explicit rank/nullity, weighted
+orthogonality/Pythagoras, rho, local-gain and enforced pre/post-float32 residual
+diagnostics; freeze assembly recomputes both layers. Inputs exclude GT, scorer state,
+cameras, video labels and hidden model state. A failed common repair never falls
+back to a control.
+
+`prepare_protected_geometry_candidate.py` emits one CPU-only, one-attempt,
+zero-retry existing-harness artifact plan. `c02_native_comparison` prospectively
+freezes B0/B*/geometry-only/strength-matched/protected-step, recomputes the full
+candidate certificate, preserves the five-role denominator and de-duplicates
+byte-identical physical sequences. `c02_native_scoring` supplies a C02 profile
+over the now parameterized, independently pinned C14 official-scorer/raw-archive
+infrastructure. `prepare_c02_native_scoring.py` and
+`launch_c02_native_scoring.py` supply C02-specific role/metric/admission records,
+single-use authorization reservation, immutable launch ticket, final plan
+consumption, one-owner lock and stable claim. Sharing is limited to transport,
+official scoring and recovery; candidate algorithms and certificates are distinct.
+
+Tests were authored for patch construction, area/projection certificates,
+rotation equivariance, invalid topology/identity, a real small candidate-to-freeze
+path, duplicate JSON rejection, and the shared C14/C02 profile source closure.
+Web did not run them. Static AST/JSON/diff/source review only; no project import,
+builder, ARAP solve, model, scorer or GPU ran. All new and refactored source is
+`generated_unexecuted`.
+
+Local first runs the common CPU acceptance at the delivered commit, then the
+receipt-bound artifact plan and comparison request described in
+`LOCAL_AGENT_RUNBOOK.md`. GPU STOP prevents emitting or executing the scientific
+scoring plan. Dispatch still requires C02 design verification, Natural Gate 0,
+IPCG/importance, source-derived independent family records, prospective B*,
+protocol-bound numeric cd_3d effect and cd_4d/cd_motion noninferiority margins,
+strict runtime closure and an expiring exact-GPU `single_c02_scoring_attempt`
+resume authorization. C02 is source-chain complete but Local-unverified and
+unscored. Source-complete candidates are 3/15 (C02, C13, C14); Local-verified
+and native-result counts remain 0/15. Supervisor remains uninstalled/unstarted.

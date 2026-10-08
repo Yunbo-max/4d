@@ -46,6 +46,23 @@ resolve_ref = comparison_module.resolve_ref
 read_json = comparison_module.read_json
 canonical_digest = comparison_module.canonical_digest
 
+# Candidate-specific profile.  The transport/archive/scorer implementation is
+# shared; a thin candidate module may replace these constants and the comparison
+# module before invoking an entry point.  Method construction remains separate.
+REQUEST_KIND = 'c14-native-scoring-request'
+GPU_OBSERVATION_KIND = 'c14-gpu-identity-observation'
+BUNDLE_KIND = 'c14-native-scoring-raw-bundle'
+RESULT_KIND = 'c14-native-scoring-result'
+TICKET_KIND = 'c14-staged-launch-ticket'
+CONSUMPTION_KIND = 'c14-gpu-resume-authorization-consumption'
+CLAIM_KIND = 'c14-launch-claim'
+CONTROLLER_ENV_PREFIX = 'C14'
+CANDIDATE_ROLE = 'corotational_residual'
+CONTROL_ROLES = ('b0', 'b_star', 'world_gaussian', 'body_gaussian')
+RESULT_SCOPE = ('One frozen C14 physical scoring pass and receipt-bound raw '
+                'collection; no confidence interval, gate, qualification or verdict')
+CONTRAST_DIRECTION = 'corotational residual minus control; lower is better'
+
 
 def read_json_bytes(value: bytes, label: str) -> dict:
     """Parse retained JSON while rejecting ambiguous duplicate keys."""
@@ -233,7 +250,7 @@ def make_scoring_request(root: Path, *, comparison_path: Path,
                       for name in official.OFFICIAL_FILES]
     refs = [file_ref(root, path) for path in official_paths]
     request = {
-        'kind': 'c14-native-scoring-request', 'version': 1,
+        'kind': REQUEST_KIND, 'version': 1,
         'candidate_id': comparison_module.CANDIDATE_ID,
         'uid': frozen['uid'], 'inference_seed': frozen['inference_seed'],
         'scoring_seed': 44, 'device': 'cuda:0',
@@ -280,7 +297,7 @@ def verify_scoring_request(root: Path, request: dict) -> dict:
     if request.get('request_digest') != canonical_digest(core):
         raise ValueError('C14 scoring request digest mismatch')
     if (set(request) != expected_keys
-            or request.get('kind') != 'c14-native-scoring-request'
+            or request.get('kind') != REQUEST_KIND
             or request.get('version') != 1
             or request.get('candidate_id') != comparison_module.CANDIDATE_ID
             or request.get('scoring_seed') != 44
@@ -377,21 +394,22 @@ def build_logical_readout(comparison: dict, official_report: dict) -> dict:
             else:
                 row.update(status='success', metrics=metrics, n_frames=16)
         logical.append(row)
-    group = next(row for row in logical if row['role'] == 'corotational_residual')
+    group = next(row for row in logical if row['role'] == CANDIDATE_ROLE)
     contrasts = []
     if group['status'] == 'success':
-        for control_role in ('b0', 'b_star', 'world_gaussian',
-                             'body_gaussian'):
+        for control_role in CONTROL_ROLES:
             control = next(row for row in logical if row['role'] == control_role)
             if control['status'] == 'success':
                 contrasts.append({
-                    'candidate_role': 'corotational_residual',
+                    'candidate_role': CANDIDATE_ROLE,
                     'control_role': control_role,
-                    'shared_measurement': bool(control.get('alias_of')),
+                    'shared_measurement': (
+                        group.get('case_id') is not None
+                        and group.get('case_id') == control.get('case_id')),
                     'deltas': {metric: group['metrics'][metric]
                                - control['metrics'][metric]
                                for metric in METRICS},
-                    'direction': 'corotational residual minus control; lower is better',
+                    'direction': CONTRAST_DIRECTION,
                 })
     successful = sum(row['status'] == 'success' for row in logical)
     return {
@@ -478,7 +496,7 @@ def observe_gpu_identity(gpu_uuid: str, raw_root: Path) -> dict:
     if not math.isfinite(memory_mib) or memory_mib <= 0:
         raise ValueError('Invalid allocated GPU memory observation')
     record = {
-        'kind': 'c14-gpu-identity-observation', 'version': 1,
+        'kind': GPU_OBSERVATION_KIND, 'version': 1,
         'gpu_uuid': gpu_uuid, 'name': values[1],
         'memory_total_mib': memory_mib,
         'cuda_visible_devices': os.environ.get('CUDA_VISIBLE_DEVICES'),
@@ -504,7 +522,7 @@ def _validate_gpu_identity_record(gpu: dict, gpu_uuid: str) -> None:
         '--query-gpu=uuid,name,memory.total', '--format=csv,noheader,nounits',
     ]
     if (set(gpu) != keys
-            or gpu.get('kind') != 'c14-gpu-identity-observation'
+            or gpu.get('kind') != GPU_OBSERVATION_KIND
             or gpu.get('version') != 1 or gpu.get('gpu_uuid') != gpu_uuid
             or gpu.get('cuda_visible_devices') != gpu_uuid
             or gpu.get('command') != expected_command
@@ -752,7 +770,7 @@ def finalize_raw_bundle(raw_root: Path, output_root: Path, *,
                    'sha256': digest(archive)}
     bundle_ref = {'archive': archive_ref, 'raw_file_count': len(rows)}
     manifest = {
-        'kind': 'c14-native-scoring-raw-bundle', 'version': 1,
+        'kind': BUNDLE_KIND, 'version': 1,
         'request_digest': request_digest,
         'comparison_request_digest': comparison_request_digest,
         'files': rows, 'bundle_ref': bundle_ref,
@@ -786,7 +804,7 @@ def validate_delivery_manifest(manifest_path: Path, archive_path: Path) -> dict:
         'scientific_verdict',
     }
     if (set(manifest) != manifest_keys
-            or manifest.get('kind') != 'c14-native-scoring-raw-bundle'
+            or manifest.get('kind') != BUNDLE_KIND
             or manifest.get('version') != 1
             or not isinstance(manifest.get('request_digest'), str)
             or len(manifest['request_digest']) != 64
@@ -1079,7 +1097,7 @@ def validate_delivery(root: Path, request_path: Path, result_path: Path,
         'scientific_verdict', 'dispatch_ready', 'scope',
     }
     if (set(result) != result_keys
-            or result.get('kind') != 'c14-native-scoring-result'
+            or result.get('kind') != RESULT_KIND
             or result.get('version') != 1
             or result.get('candidate_id') != comparison_module.CANDIDATE_ID
             or result.get('uid') != comparison.get('uid')
@@ -1111,9 +1129,7 @@ def validate_delivery(root: Path, request_path: Path, result_path: Path,
             or result.get('scientific_effect_qualification') is not False
             or result.get('scientific_verdict') != 'not_computed'
             or result.get('dispatch_ready') is not False
-            or result.get('scope') !=
-            ('One frozen C14 physical scoring pass and receipt-bound raw '
-             'collection; no confidence interval, gate, qualification or verdict')):
+            or result.get('scope') != RESULT_SCOPE):
         raise ValueError('C14 result/raw receipt cross-link mismatch')
     _validate_gpu_identity_record(gpu, result['gpu_uuid'])
     return {'status': 'validated_unqualified',
@@ -1162,7 +1178,7 @@ def validate_execution_authorization(root: Path, request_path: Path,
         'max_retries_per_trial': 0,
     }
     if (set(ticket) != expected_keys
-            or ticket.get('kind') != 'c14-staged-launch-ticket'
+            or ticket.get('kind') != TICKET_KIND
             or ticket.get('version') != 1
             or ticket.get('request_ref') != request_ref
             or ticket.get('gpu_uuid') != gpu_uuid
@@ -1204,10 +1220,10 @@ def validate_execution_authorization(root: Path, request_path: Path,
     if (expires.tzinfo is None or issued.tzinfo is None
             or issued > expires or datetime.now(timezone.utc) > expires):
         raise ValueError('C14 execution authorization expired')
-    controller_root_value = os.environ.get('C14_CONTROLLER_ROOT')
-    claim_value = os.environ.get('C14_LAUNCH_CLAIM_PATH')
-    claim_sha = os.environ.get('C14_LAUNCH_CLAIM_SHA256')
-    consumption_value = os.environ.get('C14_CONSUMPTION_PATH')
+    controller_root_value = os.environ.get(CONTROLLER_ENV_PREFIX + '_CONTROLLER_ROOT')
+    claim_value = os.environ.get(CONTROLLER_ENV_PREFIX + '_LAUNCH_CLAIM_PATH')
+    claim_sha = os.environ.get(CONTROLLER_ENV_PREFIX + '_LAUNCH_CLAIM_SHA256')
+    consumption_value = os.environ.get(CONTROLLER_ENV_PREFIX + '_CONSUMPTION_PATH')
     if not all((controller_root_value, claim_value, claim_sha, consumption_value)):
         raise ValueError('C14 finalized controller claim injection required')
     controller_root = Path(controller_root_value).resolve()
@@ -1221,14 +1237,13 @@ def validate_execution_authorization(root: Path, request_path: Path,
         raise ValueError('Physical finalized C14 controller claim required')
     claim = read_json(claim_path)
     consumption = read_json(consumption_path)
-    if (claim.get('kind') != 'c14-launch-claim'
+    if (claim.get('kind') != CLAIM_KIND
             or claim.get('claim_digest') != canonical_digest(
                 {key: value for key, value in claim.items()
                  if key != 'claim_digest'})
             or claim.get('consumption_ref') != file_ref(
                 controller_root, consumption_path)
-            or consumption.get('kind') !=
-            'c14-gpu-resume-authorization-consumption'
+            or consumption.get('kind') != CONSUMPTION_KIND
             or consumption.get('consumption_digest') != canonical_digest(
                 {key: value for key, value in consumption.items()
                  if key != 'consumption_digest'})
@@ -1346,7 +1361,7 @@ def score_request(root: Path, request_path: Path, output: Path,
         comparison_request_digest=request['comparison_request_digest'],
         excluded_ground_truth_ref=request['ground_truth_ref'])
     result = {
-        'kind': 'c14-native-scoring-result', 'version': 1,
+        'kind': RESULT_KIND, 'version': 1,
         'candidate_id': comparison_module.CANDIDATE_ID,
         'uid': request['uid'], 'status': status,
         'gpu_uuid': gpu_uuid,
@@ -1361,8 +1376,7 @@ def score_request(root: Path, request_path: Path, output: Path,
         'scientific_effect_qualification': False,
         'scientific_verdict': 'not_computed',
         'dispatch_ready': False,
-        'scope': ('One frozen C14 physical scoring pass and receipt-bound raw '
-                  'collection; no confidence interval, gate, qualification or verdict'),
+        'scope': RESULT_SCOPE,
     }
     write_json(output/'result.json', result, exclusive=True)
     validate_delivery(root, request_path, output/'result.json', output/'raw-manifest.json',

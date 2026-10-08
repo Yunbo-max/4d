@@ -29,6 +29,39 @@ ROLE_FOR_CONTRACT_ARM = {
     'world_gaussian': 'world_gaussian',
     'body_gaussian': 'body_gaussian',
 }
+PROFILE = 'c14'
+TASK_ID = 'c14-five-role-official-scoring'
+AUTHORIZATION_SCOPE = 'single_c14_scoring_attempt'
+INPUT_NAMESPACE = 'c14'
+OUTPUT_DIRECTORY = 'c14-scoring-output'
+SCORING_MODULE = 'research_math.c14_native_scoring'
+COMPARISON_SOURCE = 'actionmesh/research_math/c14_native_comparison.py'
+SCORING_SOURCE = 'actionmesh/research_math/c14_native_scoring.py'
+LAUNCHER_SOURCE = 'actionmesh/launch_c14_native_scoring.py'
+EXTRA_CODE_SOURCES = ('actionmesh/prepare_c14_native_scoring.py',)
+LAUNCH_TICKET_KIND = 'c14-staged-launch-ticket'
+AUTHORIZATION_KIND = 'c14-gpu-resume-authorization'
+RESERVATION_KIND = 'c14-gpu-resume-authorization-reservation'
+CONSUMPTION_KIND = 'c14-gpu-resume-authorization-consumption'
+FAMILY_SPLIT_KIND = 'c14-family-split'
+FAMILY_ASSIGNMENTS_KIND = 'c14-family-assignments'
+FAMILY_DERIVATION_KIND = 'c14-family-derivation'
+FAMILY_REVIEW_KIND = 'c14-family-derivation-review'
+CRITERIA_KIND = 'c14-outcome-criteria'
+ANALYSIS_KIND = 'c14-g01-analysis-plan'
+ADMISSION_KIND = 'c14-scientific-dispatch-admission'
+CONTRACT_CONTRASTS = {
+    'treatment': 'corotational_residual',
+    'baseline': 'b_star',
+    'controls': ['b0', 'world_gaussian', 'body_gaussian'],
+}
+CONTRACT_ARM_NAMES = {
+    'treatment': 'corotational_residual', 'baseline': 'b_star',
+    'b0': 'b0', 'world_gaussian': 'world_gaussian',
+    'body_gaussian': 'body_gaussian',
+}
+PRIMARY_METRIC = 'cd_motion'
+GUARDRAIL_METRICS = ('cd_3d', 'cd_4d')
 
 
 def canonical_record_digest(value: dict, digest_key: str = 'admission_digest') -> str:
@@ -59,7 +92,7 @@ def require_admission_core(admission: dict, *, uid: str,
         'status', 'admitted_at', 'admission_digest',
     }
     if (set(admission) != required
-            or admission.get('kind') != 'c14-scientific-dispatch-admission'
+            or admission.get('kind') != ADMISSION_KIND
             or admission.get('version') != 1
             or admission.get('candidate_id') != CANDIDATE_ID
             or admission.get('uid') != uid
@@ -195,7 +228,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
                 'parent_problem_ref')):
         raise ValueError('Compatible importance/collision decision required')
     family = _record(root, admission['family_split_ref'],
-                     kind='c14-family-split', digest_key='split_digest')
+                     kind=FAMILY_SPLIT_KIND, digest_key='split_digest')
     family_keys = {
         'kind', 'version', 'candidate_id', 'benchmark_revision',
         'development_ids', 'confirmation_ids', 'family_by_uid',
@@ -223,7 +256,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
         raise ValueError('Frozen independent-family confirmation split required')
     _timezone(family['frozen_at'], 'family split frozen_at')
     assignments = _record(root, family['family_assignments_ref'],
-                          kind='c14-family-assignments',
+                          kind=FAMILY_ASSIGNMENTS_KIND,
                           digest_key='assignment_digest')
     assignment_keys = {
         'kind', 'version', 'candidate_id', 'benchmark_revision',
@@ -245,7 +278,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
         scoring.resolve_ref(root, ref)
     scoring.resolve_ref(root, assignments['review_ref'])
     derivation = _record(root, assignments['derivation_ref'],
-                         kind='c14-family-derivation',
+                         kind=FAMILY_DERIVATION_KIND,
                          digest_key='derivation_digest')
     derivation_keys = {
         'kind', 'version', 'candidate_id', 'benchmark_revision',
@@ -262,7 +295,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
         raise ValueError('Reviewed family derivation must reproduce family map')
     _timezone(derivation['derived_at'], 'family derivation derived_at')
     review = _record(root, assignments['review_ref'],
-                     kind='c14-family-derivation-review',
+                     kind=FAMILY_REVIEW_KIND,
                      digest_key='review_digest')
     review_keys = {
         'kind', 'version', 'candidate_id', 'derivation_ref', 'outcome',
@@ -280,7 +313,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
         raise ValueError('Independent verified family-derivation review required')
     _timezone(review['reviewed_at'], 'family review reviewed_at')
     criteria = _record(root, admission['outcome_criteria_ref'],
-                       kind='c14-outcome-criteria',
+                       kind=CRITERIA_KIND,
                        digest_key='criteria_digest')
     criteria_keys = {
         'kind', 'version', 'candidate_id', 'comparison_digest',
@@ -296,22 +329,22 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
                 'sha256']
             or criteria.get('protocol_digest') != protocol.get('protocol_digest')
             or criteria.get('analysis_plan_ref') != protocol.get('analysis_plan_ref')
-            or criteria.get('primary_metric') != 'cd_motion'
-            or criteria.get('guardrail_metrics') != ['cd_3d', 'cd_4d']
+            or criteria.get('primary_metric') != PRIMARY_METRIC
+            or criteria.get('guardrail_metrics') != list(GUARDRAIL_METRICS)
             or criteria.get('independent_unit') != 'asset_family'
             or isinstance(criteria.get('min_effect'), bool)
             or not isinstance(criteria.get('min_effect'), (int, float))
             or not math.isfinite(criteria['min_effect'])
             or criteria['min_effect'] <= 0
             or not isinstance(margins, dict)
-            or set(margins) != {'cd_3d', 'cd_4d'}
+            or set(margins) != set(GUARDRAIL_METRICS)
             or any(isinstance(value, bool) or not isinstance(value, (int, float))
                    or not math.isfinite(value) or value < 0
                    for value in margins.values())):
         raise ValueError('Prospectively frozen numeric C14 criteria required')
     _timezone(criteria['frozen_at'], 'outcome criteria frozen_at')
     analysis_ref = criteria['analysis_plan_ref']
-    analysis = _record(root, analysis_ref, kind='c14-g01-analysis-plan',
+    analysis = _record(root, analysis_ref, kind=ANALYSIS_KIND,
                        digest_key='plan_digest')
     analysis_keys = {
         'kind', 'version', 'candidate_id', 'protocol_digest',
@@ -328,7 +361,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
     if (set(analysis) != analysis_keys
             or analysis.get('candidate_id') != CANDIDATE_ID
             or analysis.get('protocol_digest') != protocol.get('protocol_digest')
-            or analysis.get('primary_metric') != 'cd_motion'
+            or analysis.get('primary_metric') != PRIMARY_METRIC
             or analysis.get('direction') != 'minimize'
             or analysis.get('min_effect') != criteria['min_effect']
             or analysis.get('guardrail_margins') != margins
@@ -346,7 +379,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
             or not isinstance(multiplicity.get('method'), str)
             or not multiplicity['method']
             or set(multiplicity.get('family', [])) !=
-            {'cd_motion', 'cd_3d', 'cd_4d'}
+            {PRIMARY_METRIC, *GUARDRAIL_METRICS}
             or not isinstance(sensitivity, list) or not sensitivity
             or any(not isinstance(row, dict)
                    or not isinstance(row.get('name'), str)
@@ -362,20 +395,20 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
         raise ValueError('Complete protocol-bound C14 G01 analysis plan required')
     by_metric = {row.get('metric'): row for row in protocol_criteria
                  if isinstance(row, dict)}
-    if (set(by_metric) != {'cd_motion', 'cd_3d', 'cd_4d'}
-            or by_metric['cd_motion'].get('direction') != 'minimize'
-            or by_metric['cd_motion'].get('min_effect') != criteria['min_effect']
-            or by_metric['cd_motion'].get('paired_statistics') != paired
-            or by_metric['cd_motion'].get('multiplicity') != multiplicity
+    if (set(by_metric) != {PRIMARY_METRIC, *GUARDRAIL_METRICS}
+            or by_metric[PRIMARY_METRIC].get('direction') != 'minimize'
+            or by_metric[PRIMARY_METRIC].get('min_effect') != criteria['min_effect']
+            or by_metric[PRIMARY_METRIC].get('paired_statistics') != paired
+            or by_metric[PRIMARY_METRIC].get('multiplicity') != multiplicity
             or any(by_metric[name].get('direction') != 'minimize'
                    or by_metric[name].get('noninferiority_margin') != margins[name]
                    or by_metric[name].get('paired_statistics') != paired
                    or by_metric[name].get('multiplicity') != multiplicity
-                   for name in ('cd_3d', 'cd_4d'))):
+                   for name in GUARDRAIL_METRICS)):
         raise ValueError('Protocol criteria contradict the frozen G01 analysis')
     _timezone(analysis['frozen_at'], 'G01 analysis frozen_at')
     authorization = _record(root, admission['gpu_resume_authorization_ref'],
-                            kind='c14-gpu-resume-authorization',
+                            kind=AUTHORIZATION_KIND,
                             digest_key='authorization_digest')
     authorization_keys = {
         'kind', 'version', 'candidate_id', 'uid', 'gpu_uuid',
@@ -398,10 +431,10 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
             or authorization.get('method_batch_ref') != method_batch_ref
             or authorization.get('environment_ref') != environment_ref
             or authorization.get('run_id') != run_id
-            or authorization.get('task_id') != 'c14-five-role-official-scoring'
+            or authorization.get('task_id') != TASK_ID
             or authorization.get('group') != group
             or authorization.get('contract_digest') != contract_digest
-            or authorization.get('scope') != 'single_c14_scoring_attempt'
+            or authorization.get('scope') != AUTHORIZATION_SCOPE
             or authorization.get('stop_acknowledgement') !=
             'explicit_resume_for_exact_attempt'
             or not isinstance(authorization.get('authorization_nonce'), str)
@@ -450,13 +483,13 @@ def _authorization_identity(authorization_ref: dict, authorization: dict, *,
         'authorization_nonce': authorization['authorization_nonce'],
         'request_ref': request_ref, 'method_batch_ref': method_batch_ref,
         'environment_ref': environment_ref, 'run_id': run_id,
-        'task_id': 'c14-five-role-official-scoring',
+        'task_id': TASK_ID,
         'group': group, 'contract_digest': contract_digest,
     }
 
 
 def authorization_consumption_path(root: Path, authorization_ref: dict) -> Path:
-    return (Path(root)/'inputs/c14/authorization-consumption'/
+    return (Path(root)/'inputs'/INPUT_NAMESPACE/'authorization-consumption'/
             (authorization_ref['sha256'] + '.json'))
 
 
@@ -466,7 +499,7 @@ def reserve_authorization(root: Path, authorization_ref: dict,
                           run_id: str, group: str,
                           contract_digest: str) -> dict:
     """Atomically reserve one authorization; exact interrupted work may resume."""
-    directory = Path(root)/'inputs/c14/authorization-consumption'
+    directory = Path(root)/'inputs'/INPUT_NAMESPACE/'authorization-consumption'
     directory.mkdir(parents=True, exist_ok=True)
     final_path = authorization_consumption_path(root, authorization_ref)
     if final_path.exists():
@@ -477,7 +510,7 @@ def reserve_authorization(root: Path, authorization_ref: dict,
         method_batch_ref=method_batch_ref, environment_ref=environment_ref,
         run_id=run_id, group=group, contract_digest=contract_digest)
     value = {
-        'kind': 'c14-gpu-resume-authorization-reservation', 'version': 1,
+        'kind': RESERVATION_KIND, 'version': 1,
         **identity, 'state': 'reserved',
         'reserved_at': datetime.now(timezone.utc).isoformat(),
     }
@@ -506,17 +539,17 @@ def issue_launch_ticket(root: Path, authorization_ref: dict,
                         environment_ref: dict, run_id: str, group: str,
                         contract_digest: str, gpu_uuid: str) -> dict:
     """Create the immutable non-circular ticket that the runtime will stage."""
-    directory = Path(root)/'inputs/c14/authorization-consumption'
+    directory = Path(root)/'inputs'/INPUT_NAMESPACE/'authorization-consumption'
     directory.mkdir(parents=True, exist_ok=True)
     path = directory/(authorization_ref['sha256'] + '.launch-ticket.json')
     value = {
-        'kind': 'c14-staged-launch-ticket', 'version': 1,
+        'kind': LAUNCH_TICKET_KIND, 'version': 1,
         **_authorization_identity(
             authorization_ref, authorization, request_ref=request_ref,
             method_batch_ref=method_batch_ref, environment_ref=environment_ref,
             run_id=run_id, group=group, contract_digest=contract_digest),
         'reservation_ref': reservation_ref, 'gpu_uuid': gpu_uuid,
-        'expected_output': 'actionmesh/c14-scoring-output',
+        'expected_output': 'actionmesh/' + OUTPUT_DIRECTORY,
         'execution_contract': {
             'purpose': 'scientific',
             'evidence_mode': 'prospective_confirmatory',
@@ -550,7 +583,7 @@ def consume_authorization(root: Path, authorization_ref: dict,
                           native_plan_digest: str, harness_plan_ref: dict,
                           harness_plan_digest: str, expected_command: list[str],
                           native_validator, harness_validator) -> dict:
-    directory = Path(root)/'inputs/c14/authorization-consumption'
+    directory = Path(root)/'inputs'/INPUT_NAMESPACE/'authorization-consumption'
     directory.mkdir(parents=True, exist_ok=True)
     path = authorization_consumption_path(root, authorization_ref)
     identity = _authorization_identity(
@@ -559,14 +592,14 @@ def consume_authorization(root: Path, authorization_ref: dict,
         run_id=run_id, group=group, contract_digest=contract_digest)
     reservation = scoring.read_json(scoring.resolve_ref(root, reservation_ref))
     launch_ticket = scoring.read_json(scoring.resolve_ref(root, launch_ticket_ref))
-    if (reservation.get('kind') != 'c14-gpu-resume-authorization-reservation'
+    if (reservation.get('kind') != RESERVATION_KIND
             or reservation.get('version') != 1
             or reservation.get('state') != 'reserved'
             or any(reservation.get(key) != item for key, item in identity.items())
             or reservation.get('reservation_digest') != canonical_record_digest(
                 reservation, 'reservation_digest')):
         raise ValueError('Exact recoverable authorization reservation required')
-    if (launch_ticket.get('kind') != 'c14-staged-launch-ticket'
+    if (launch_ticket.get('kind') != LAUNCH_TICKET_KIND
             or launch_ticket.get('authorization_ref') != authorization_ref
             or launch_ticket.get('reservation_ref') != reservation_ref
             or launch_ticket.get('request_ref') != request_ref
@@ -604,17 +637,17 @@ def consume_authorization(root: Path, authorization_ref: dict,
             != harness_plan_digest
             or native_plan.get('run_id') != run_id
             or not isinstance(jobs, list) or len(jobs) != 1
-            or jobs[0].get('trial_id') != 'c14-five-role-official-scoring'
+            or jobs[0].get('trial_id') != TASK_ID
             or jobs[0].get('group') != group
             or jobs[0].get('command') != expected_command
             or not required_staged.issubset(declared_inputs)
             or harness_plan.get('batch_id') != run_id
             or not isinstance(tasks, list) or len(tasks) != 1
-            or tasks[0].get('task_id') != 'c14-five-role-official-scoring'
+            or tasks[0].get('task_id') != TASK_ID
             or tasks[0].get('plan_ref') != native_plan_ref):
         raise ValueError('Exact validated C14 native/harness plan pair required')
     value = {
-        'kind': 'c14-gpu-resume-authorization-consumption', 'version': 1,
+        'kind': CONSUMPTION_KIND, 'version': 1,
         **identity, 'reservation_ref': reservation_ref,
         'launch_ticket_ref': launch_ticket_ref,
         'native_plan_ref': native_plan_ref,
@@ -647,7 +680,7 @@ def validate_final_consumption(root: Path, consumption_path: Path, *,
     }
     if (set(consumption) != required
             or consumption.get('kind') !=
-            'c14-gpu-resume-authorization-consumption'
+            CONSUMPTION_KIND
             or consumption.get('version') != 1
             or consumption.get('harness_plan_digest') != expected_harness_digest
             or consumption.get('consumption_digest') != canonical_record_digest(
@@ -659,7 +692,7 @@ def validate_final_consumption(root: Path, consumption_path: Path, *,
         raise ValueError('Canonical C14 consumption path required')
     authorization = _record(
         root, consumption['authorization_ref'],
-        kind='c14-gpu-resume-authorization',
+        kind=AUTHORIZATION_KIND,
         digest_key='authorization_digest')
     reservation = scoring.read_json(scoring.resolve_ref(
         root, consumption['reservation_ref']))
@@ -685,17 +718,17 @@ def validate_final_consumption(root: Path, consumption_path: Path, *,
             or authorization.get('contract_digest') != consumption.get(
                 'contract_digest')
             or authorization.get('status') != 'authorized'
-            or authorization.get('scope') != 'single_c14_scoring_attempt'
+            or authorization.get('scope') != AUTHORIZATION_SCOPE
             or reservation.get('kind') !=
-            'c14-gpu-resume-authorization-reservation'
+            RESERVATION_KIND
             or reservation.get('state') != 'reserved'
             or reservation.get('reservation_digest') != canonical_record_digest(
                 reservation, 'reservation_digest')
-            or ticket.get('kind') != 'c14-staged-launch-ticket'
+            or ticket.get('kind') != LAUNCH_TICKET_KIND
             or ticket.get('reservation_ref') != consumption['reservation_ref']
             or ticket.get('gpu_uuid') != authorization.get('gpu_uuid')
             or ticket.get('expected_output') !=
-            'actionmesh/c14-scoring-output'
+            'actionmesh/' + OUTPUT_DIRECTORY
             or ticket.get('execution_contract') != {
                 'purpose': 'scientific',
                 'evidence_mode': 'prospective_confirmatory',
@@ -734,14 +767,14 @@ def validate_final_consumption(root: Path, consumption_path: Path, *,
     expected_flags = {
         '--root': '..',
         '--request': str(scoring.resolve_ref(root, consumption['request_ref'])),
-        '--output': 'c14-scoring-output',
+        '--output': OUTPUT_DIRECTORY,
         '--gpu-uuid': authorization['gpu_uuid'],
         '--launch-ticket': str(scoring.resolve_ref(
             root, consumption['launch_ticket_ref'])),
     }
     command_bound = (isinstance(command, list) and len(command) >= 4
                      and command[1:4] == [
-                         '-m', 'research_math.c14_native_scoring', 'score'])
+                         '-m', SCORING_MODULE, 'score'])
     if command_bound:
         for flag, value in expected_flags.items():
             if command.count(flag) != 1 or command.index(flag) + 1 >= len(command) \
@@ -805,22 +838,12 @@ def require_method_boundary(report: dict) -> None:
 
 
 def require_c14_contract(contract: dict, *, benchmark_revision: str) -> None:
-    expected_contrasts = {
-        'treatment': 'corotational_residual',
-        'baseline': 'b_star',
-        'controls': ['b0', 'world_gaussian', 'body_gaussian'],
-    }
-    expected_names = {
-        'treatment': 'corotational_residual',
-        'baseline': 'b_star',
-        'b0': 'b0',
-        'world_gaussian': 'world_gaussian',
-        'body_gaussian': 'body_gaussian',
-    }
+    expected_contrasts = CONTRACT_CONTRASTS
+    expected_names = CONTRACT_ARM_NAMES
     arms = contract.get('arm_requirements')
     if (contract.get('benchmark_id') != 'facebook/actionbench'
             or contract.get('benchmark_revision') != benchmark_revision
-            or contract.get('primary_metric') != 'cd_motion'
+            or contract.get('primary_metric') != PRIMARY_METRIC
             or [row.get('name') for row in contract.get('metrics', [])]
             != list(scoring.METRICS)
             or contract.get('contrasts') != expected_contrasts
@@ -835,9 +858,9 @@ def require_c14_contract(contract: dict, *, benchmark_revision: str) -> None:
 
 def scoring_outputs() -> list[str]:
     return [
-        'actionmesh/c14-scoring-output/result.json',
-        'actionmesh/c14-scoring-output/raw-manifest.json',
-        'actionmesh/c14-scoring-output/raw-evidence.tar',
+        'actionmesh/' + OUTPUT_DIRECTORY + '/result.json',
+        'actionmesh/' + OUTPUT_DIRECTORY + '/raw-manifest.json',
+        'actionmesh/' + OUTPUT_DIRECTORY + '/raw-evidence.tar',
     ]
 
 
@@ -964,9 +987,10 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     ]
     code_refs = [
         scoring.file_ref(root, root/'actionmesh/research_math/__init__.py'),
-        scoring.file_ref(root, root/'actionmesh/research_math/c14_native_comparison.py'),
-        scoring.file_ref(root, root/'actionmesh/research_math/c14_native_scoring.py'),
-        scoring.file_ref(root, root/'actionmesh/launch_c14_native_scoring.py'),
+        scoring.file_ref(root, root/COMPARISON_SOURCE),
+        scoring.file_ref(root, root/SCORING_SOURCE),
+        scoring.file_ref(root, root/LAUNCHER_SOURCE),
+        *(scoring.file_ref(root, root/path) for path in EXTRA_CODE_SOURCES),
         request['adapter_ref'], request['deterministic_entry_ref'],
         *request['official_source_refs'], *implementation_refs,
     ]
@@ -974,12 +998,12 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     unique_code = _unique_refs(code_refs, 'plan code')
     native_path = plan_dir/'native.json'
     harness_path = plan_dir/'harness.json'
-    ticket_path = (root/'inputs/c14/authorization-consumption'/
+    ticket_path = (root/'inputs'/INPUT_NAMESPACE/'authorization-consumption'/
                    (authorization_ref['sha256'] + '.launch-ticket.json'))
     command = [
-        sys.executable, '-m', 'research_math.c14_native_scoring', 'score',
+        sys.executable, '-m', SCORING_MODULE, 'score',
         '--root', '..', '--request', str(request_path),
-        '--output', 'c14-scoring-output', '--gpu-uuid', gpu_uuid,
+        '--output', OUTPUT_DIRECTORY, '--gpu-uuid', gpu_uuid,
         '--launch-ticket', str(ticket_path.resolve()),
     ]
     revision = subprocess.run(
@@ -1024,7 +1048,7 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         evidence_mode=protocol['evidence_mode'],
         protocol_ref=protocol_ref,
         jobs=[{
-            'trial_id': 'c14-five-role-official-scoring',
+            'trial_id': TASK_ID,
             'command': command, 'cwd': 'actionmesh',
             'input_refs': list(unique_inputs.values()),
             'code_refs': list(unique_code.values()),
@@ -1054,14 +1078,14 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
     outer = harness.make_plan(
         root, batch_id=run_id,
         tasks=[{
-            'task_id': 'c14-five-role-official-scoring',
+            'task_id': TASK_ID,
             'idea_id': CANDIDATE_ID, 'depends_on': [], 'priority': 1,
             'plan_ref': scoring.file_ref(root, native_path),
             'resources': {
                 'cpu_cores': cpu_cores, 'ram_mib': ram_mib, 'gpu_count': 1,
                 'gpu_peak_mib': None, 'allow_gpu_share': False,
                 'memory_profile_ref': None,
-                'exclusive_keys': ['c14-five-role-official-scoring'],
+                'exclusive_keys': [TASK_ID],
             },
         }],
         limits={

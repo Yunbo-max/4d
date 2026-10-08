@@ -1465,3 +1465,33 @@ test, builder, scorer, model or GPU ran. C14 is source-chain complete but
 `generated_unexecuted`; Local acceptance and all scientific prerequisites/results
 remain open. Source-complete candidates are now 2/15 (C13 and C14), Local-verified
 and native results remain 0/15, and GPU STOP remains effective.
+
+## Continuation: C02 full source chain — 2026-10-08
+
+Resumed exact remote main `4aaaf0bcb65f45be03d17e509d8c2d5003e2e387`.
+Implemented the missing C02 construction rather than wrapping the old dense
+`project_protected_step(d,C,W)` primitive. The new candidate derives its shared
+matrix-free ARAP repair, fixed topology-geodesic patches, barycentric-area W and
+patch-centroid-velocity protection from a receipt-bound predicted native mesh,
+then exports geometry-only, equal-W-norm scalar and protected complete sequences
+plus a recomputable NPZ of areas/patches/three steps; rank/nullity,
+orthogonality/rho/local gain and enforced float32 diagnostics live in each
+role report and are independently recomputed at freeze time.
+
+Added its CPU artifact builder, prospective five-role comparison, official
+ActionBench request/scorer/raw-archive profile, authorization-gated plan builder
+and stable single-owner launcher. Parameterized only C14's scorer transport,
+archive and recovery substrate; C02 method construction/certification and roles
+remain candidate-specific. Added source-level Local acceptance for projection,
+patching, native identity and a small real candidate-to-freeze path. Updated the
+common CPU acceptance closure, README/AGENTS/runbook/current handoff and 15-item
+inventory.
+
+Web performed AST/JSON/diff/source review only and did not import/run the project,
+tests, builder, ARAP solver, model, scorer or GPU. The source remains
+`generated_unexecuted`. No scientific plan was emitted because C02 still lacks
+Local acceptance, design verification, Gate 0/IPCG, prospective B*, actual family
+records, numeric G01 criteria, strict live runtime admission and exact-attempt GPU
+resume authorization. Source-complete candidates are 3/15 (C02, C13, C14);
+Local-verified and native results remain 0/15. GPU STOP remains effective and no
+supervisor process was installed or started.

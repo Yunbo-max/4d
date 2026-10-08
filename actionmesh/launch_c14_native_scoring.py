@@ -18,6 +18,10 @@ from prepare_c14_native_scoring import (
     CANDIDATE_ID, canonical_record_digest, validate_final_consumption)
 from research_math import c14_native_scoring as scoring
 
+PROFILE_LABEL = 'C14'
+CLAIM_KIND = 'c14-launch-claim'
+ENV_PREFIX = 'C14'
+
 
 def claim_launch(root: Path, consumption_path: Path, consumption: dict,
                  *, expected_harness_digest: str):
@@ -31,10 +35,10 @@ def claim_launch(root: Path, consumption_path: Path, consumption: dict,
         fcntl.flock(lock_stream.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
         lock_stream.close()
-        raise RuntimeError('C14 launch already has a live controller owner')
+        raise RuntimeError(PROFILE_LABEL + ' launch already has a live controller owner')
     claim_path = directory/(stem + '.launch-claim.json')
     identity = {
-        'kind': 'c14-launch-claim', 'version': 1,
+        'kind': CLAIM_KIND, 'version': 1,
         'consumption_ref': scoring.file_ref(root, consumption_path),
         'authorization_ref': consumption['authorization_ref'],
         'run_id': consumption['run_id'], 'task_id': consumption['task_id'],
@@ -55,7 +59,7 @@ def claim_launch(root: Path, consumption_path: Path, consumption: dict,
                 or existing.get('claim_digest') != canonical_record_digest(
                     existing, 'claim_digest')):
             lock_stream.close()
-            raise ValueError('Existing C14 launch claim has different identity')
+            raise ValueError('Existing ' + PROFILE_LABEL + ' launch claim has different identity')
     return lock_stream, scoring.file_ref(root, claim_path)
 
 
@@ -77,10 +81,10 @@ def launch(root: Path, consumption_path: Path, *, skill_dir: Path,
         root, consumption_path, consumption,
         expected_harness_digest=approved_plan_digest)
     injected = {
-        'C14_CONTROLLER_ROOT': str(root),
-        'C14_LAUNCH_CLAIM_PATH': str((root/claim_ref['path']).resolve()),
-        'C14_LAUNCH_CLAIM_SHA256': claim_ref['sha256'],
-        'C14_CONSUMPTION_PATH': str(Path(consumption_path).resolve()),
+        ENV_PREFIX + '_CONTROLLER_ROOT': str(root),
+        ENV_PREFIX + '_LAUNCH_CLAIM_PATH': str((root/claim_ref['path']).resolve()),
+        ENV_PREFIX + '_LAUNCH_CLAIM_SHA256': claim_ref['sha256'],
+        ENV_PREFIX + '_CONSUMPTION_PATH': str(Path(consumption_path).resolve()),
     }
     previous = {key: os.environ.get(key) for key in injected}
     os.environ.update(injected)

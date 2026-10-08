@@ -4,6 +4,133 @@
 
 ### Current source delivery — paired replay and supervisor
 
+### C02 complete protected-geometry source chain
+
+C02 now has a distinct end-to-end source path rather than only the dense
+`protected_projection.py` reference operator. The method consumes a completed,
+receipt-bound native `sequence.npz`/`report.json` pair. It uses no GT, scorer,
+camera, video label or hidden model state. Frame-zero topology determines
+deterministic geodesic patches and barycentric vertex areas; the shared
+matrix-free ARAP repair is computed once, then the same desired step is exported
+as geometry-only, equal-W-norm scalar and patch-centroid-velocity protected arms.
+`certificate.npz` stores patches, areas and all three step arrays. Each role's
+`report.json` stores rank/nullity, weighted orthogonality, rho, local-gain and
+pre/post-float32 diagnostics, including the enforced native-coordinate tolerance.
+
+All source and tests are **generated_unexecuted**. First run the common CPU
+software acceptance at this exact revision and retain its observed results. Then
+freeze every numerical setting on development inputs before emitting the CPU
+artifact plan; there are no silent defaults:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_protected_geometry_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --run-id c02-protected-artifacts-001 \
+  --plan-dir "$project_dir/plans/c02-protected-artifacts-001" \
+  --patch-count "$frozen_patch_count" \
+  --arap-weight "$frozen_arap_weight" \
+  --temporal-weight "$frozen_correction_velocity_weight" \
+  --iterations "$frozen_arap_iterations" \
+  --cg-tolerance "$frozen_cg_tolerance" \
+  --cg-max-iterations "$frozen_cg_max_iterations" \
+  --wall-seconds "$c02_cpu_wall_seconds"
+```
+
+Inspect the printed plan: exact sequence/report refs; candidate, ARAP and package
+source refs; nine declared outputs; one CPU attempt; zero retries; zero GPUs.
+Execute only its printed digest via installed `run_harness.py`. Preserve a common
+repair failure as an incomplete attempt. Do not replace it with geometry-only,
+the scalar control or `protected_projection.py`. On success retain
+`candidate.json`, `manifest.json`, `certificate.npz` and all three role directories.
+
+Before any scorer plan, create a prospective `c02-native-comparison-freeze`
+with exact ordered roles `b0,b_star,geometry_only,strength_matched_blend,
+protected_step`. Freeze B* without C02 outcomes; it may alias only B0,
+geometry-only or strength-matched when method identity and bytes match. Each
+physical role pins report, sequence and implementation; B0 additionally pins
+the adjacent native producer `command.json`, whose UID/seed/script hash are
+validated; all three C02-produced roles pin the same certificate. Then assemble
+the CPU comparison request:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c02_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c02/c02-native-comparison-freeze.json" \
+  --output "$project_dir/inputs/c02/c02-native-comparison-request.json"
+```
+
+This recomputes the common ARAP repair, patch construction and projection and
+retains a five-role logical denominator while de-duplicating byte-identical
+physical sequences. It does not score or admit the candidate. Next bind the
+admitted ActionBench snapshot, semantics, population, exact UID GT and official
+source closure, still without scoring:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c02_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c02/c02-native-comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c02_uid/surfaces.npy" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" \
+  --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c02/c02-native-scoring-request.json"
+```
+
+GPU STOP forbids the following scientific builder/launcher today. After an
+explicit future exact-attempt resume, Local must first supply current C02
+`design_verified`, the frozen five-role native contract, Natural Gate 0 PASS,
+compatible IPCG/importance decision, source-derived independent-family records,
+protocol-bound positive absolute cd_3d effect, numeric cd_4d/cd_motion
+noninferiority margins, strict environment/dependency closure, and an expiring
+single-use authorization bound to the exact request/run/group/environment/GPU.
+Only then use the following exact builder/controller flow; never invoke
+`research_math.c02_native_scoring score` or the generic harness CLI directly:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c02_native_scoring.py" \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c02/c02-native-scoring-request.json" \
+  --protocol "$project_dir/inputs/c02/native-protocol.json" \
+  --method-batch "$project_dir/inputs/c02/method-batch.json" \
+  --environment "$project_dir/inputs/native-runtime/environment.json" \
+  --admission "$project_dir/inputs/c02/scientific-dispatch-admission.json" \
+  --skill-dir "$skill_dir" --plan-dir "$project_dir/plans/c02-native-001" \
+  --run-id c02-native-001 --group "$c02_group" --gpu-uuid "$gpu_uuid" \
+  --wall-seconds "$c02_wall_seconds" --ram-mib "$c02_ram_mib" \
+  --cpu-cores "$c02_cpu_cores"
+
+"$python_bin" "$project_dir/actionmesh/launch_c02_native_scoring.py" \
+  --root "$project_dir" --consumption "$c02_final_consumption" \
+  --skill-dir "$skill_dir" --approved-plan-digest "$c02_plan_digest"
+```
+
+After the three returned bytes are copied back, validate the exact delivery:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c02_native_scoring validate-delivery \
+  --root "$project_dir" \
+  --request "$project_dir/inputs/c02/c02-native-scoring-request.json" \
+  --gpu-uuid "$gpu_uuid" \
+  --result "$c02_return/result.json" \
+  --manifest "$c02_return/raw-manifest.json" \
+  --archive "$c02_return/raw-evidence.tar" \
+  --expected-request-digest "$c02_request_digest" \
+  --expected-result-sha256 "$c02_result_sha256" \
+  --expected-manifest-sha256 "$c02_manifest_sha256" \
+  --expected-archive-sha256 "$c02_archive_sha256"
+```
+
+The plan has one confirmation attempt, zero retry,
+and exactly `result.json`, `raw-manifest.json`, `raw-evidence.tar` as receipt
+outputs. All 16 GLBs and archived reports/sequences/certificates must validate.
+This is still not a confidence interval, scientific verdict or native result.
+
 ### Paired-context bundle consumption
 
 The returned paired-context archive now has a fail-closed CPU consumer. Use it
@@ -555,10 +682,10 @@ historical-r7 reference closure and a stale GPU environment identity; do not
 launch GPU work while resolving it.
 
 There are 20 mathematical constructions and 15 conditionally selected candidates.
-C13 and C14 now have **source-complete, generated_unexecuted** method-to-official-
-score chains, so source completion is **2/15**; **0/15 are Local-verified and
-0/15 have native results**. C02 has a corrected development operator and software
-tests only; it is not admitted here as a new-method arm.
+C02, C13 and C14 now have **source-complete, generated_unexecuted** method-to-
+official-score chains, so source completion is **3/15**; **0/15 are Local-verified
+and 0/15 have native results**. C02's new complete chain remains unadmitted and
+unexecuted; the earlier dense operator alone is still only a reference primitive.
 
 Read these files at the delivered commit before acting:
 
@@ -1376,4 +1503,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; neither has Local acceptance, scientific admission or a native result. C02 has only a developmental operator. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C02, C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

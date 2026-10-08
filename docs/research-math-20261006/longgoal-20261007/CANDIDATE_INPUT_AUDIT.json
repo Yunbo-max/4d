@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; this continuation resumes literal main 6a1149f. C13 and C14 have generated_unexecuted method-to-official-score source chains; C14 now includes strict construction/certificate validation, admitted ActionBench snapshot/semantics binding, all-role physical de-duplication, receipt-bound raw validation and single-use authorization-gated common-harness plan-builder/controller source. Neither has Local acceptance, an emitted scientific plan or a native result.",
+  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; this continuation resumes literal main 4aaaf0b. C02, C13 and C14 have generated_unexecuted method-to-official-score source chains with candidate-specific construction/certificate checks, prospective five-role comparisons, official ActionBench collection, receipt-bound raw validation and authorization-gated common-harness plan/controller source. None has Local acceptance, an emitted scientific plan or a native result.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -11,7 +11,7 @@
     "LegalMotionSurrogate"
   ],
   "existing_implementation_notes": {
-    "C02": "protected_projection.py implements mathematical projection primitive; not complete native method",
+    "C02": "protected_geometry_candidate.py constructs the complete method from a receipt-bound predicted sequence: shared matrix-free ARAP repair d, deterministic anchor-topology patches, barycentric-area W, patch-centroid-velocity protection, equal-W-norm control and full native exports. c02_native_comparison.py plus the C02 scoring/plan/launcher profile complete the generated_unexecuted five-role official-scoring/raw-collection chain; protected_projection.py remains only a dense reference primitive.",
     "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
     "C14": "simple_mesh_controls.py remains the Gaussian control. corotational_residual_candidate.py implements the distinct anchored nonuniform-time group-TV method; c14_native_comparison.py, c14_native_scoring.py, prepare_c14_native_scoring.py and launch_c14_native_scoring.py complete its generated_unexecuted five-role comparison, official scoring, receipt validation and authorization-gated admitted-plan builder/controller source chain."
   },
@@ -28,9 +28,9 @@
       "priority": 1,
       "name": "保留动作特征的几何近端更新",
       "inputs": [
-        "desired common geometry step d[T,V,3]",
-        "frozen C operator on free coordinates",
-        "SPD W operator and anchor pins"
+        "receipt-bound native sequence.npz/report.json pair plus adjacent producer command.json provenance",
+        "explicit ARAP/temporal/CG/patch parameters frozen on development inputs",
+        "frame-zero topology, retained timesteps/frame indices and vertex identity"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c02.json",
       "native_result": "not_started",
@@ -42,9 +42,9 @@
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c02-review.json",
         "sha256": "8230d4bf18c06c4b4997c427c5888b68451f9ca3abdf5b3fc28ba7fe9bf8fd33"
       },
-      "source_status": "primitive_only",
-      "code_entry": "actionmesh/research_math/protected_projection.py:project_protected_step",
-      "real_input_and_model_interface": "Native trajectory plus fixed anchor patch-centroid/velocity operator and area weights",
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "code_entry": "actionmesh/research_math/protected_geometry_candidate.py:export_candidate; actionmesh/prepare_protected_geometry_candidate.py; actionmesh/research_math/c02_native_comparison.py; actionmesh/research_math/c02_native_scoring.py; actionmesh/prepare_c02_native_scoring.py; actionmesh/launch_c02_native_scoring.py",
+      "real_input_and_model_interface": "Receipt-bound complete native predicted sequence/report; frame-zero topology determines deterministic geodesic patches and barycentric-area W; common matrix-free ARAP repair supplies d; no GT/scorer/camera/model-hidden state",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -58,20 +58,20 @@
         "strength_matched_blend",
         "protected_step"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
-      "remaining_implementation_gaps": [
-        "common geometry repair",
-        "native C/W builder",
-        "scalable matrix-free solve",
-        "full native export/scoring"
+      "native_scoring_entry": "python -m research_math.c02_native_scoring request; admitted plan only via actionmesh/prepare_c02_native_scoring.py and actionmesh/launch_c02_native_scoring.py",
+      "local_method_acceptance_command": "Run prepare_control_scoring_checks.py through the installed harness; then run prepare_protected_geometry_candidate.py on the receipt-bound native source with every numerical parameter explicit; retain all nine outputs; assemble research_math.c02_native_comparison request and research_math.c02_native_scoring request; after future exact-attempt GPU resume only, use prepare_c02_native_scoring.py plus launch_c02_native_scoring.py and validate-delivery exactly as listed in LOCAL_AGENT_RUNBOOK.md.",
+      "acceptance_command_gap": "Command is authored but generated_unexecuted; Local must run the common CPU acceptance, then the receipt-bound candidate artifact plan and native-interface checks before design verification.",
+      "completion_evidence": [
+        "complete distinct candidate/three-arm artifact source",
+        "prospective five-role freeze and recomputed certificate source",
+        "official scorer/raw bundle source",
+        "authorization-gated zero-retry plan builder and stable-launch source",
+        "authored Local engineering tests"
       ],
+      "remaining_implementation_gaps": [],
       "scientific_prerequisites": [
         "Natural repair gap after strongest simple baseline",
         "fixed inference-available protection operator with nontrivial nullspace",
-        "common repair and matrix-free implementation",
         "final 16/16 raw receipts and native replay",
         "Natural Gate 0 PASS; required importance/collision decision",
         "code identity/software/native-interface verification",
@@ -81,7 +81,7 @@
         "legal task-relevant C and nonlinear remainder boundary",
         "rho diagnosis is not a native evaluation metric"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -1022,11 +1022,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "6a1149f5f1853d07404ab4089445c0143dfacecf",
-  "independent_source_review": "Separate read-only C13 and C14 comparison, scoring, plan, math/interface/protocol and documentation reviewers inspected the selected specifications, current artifact schemas and source diffs; no execution. C14 findings closed exact candidate/control construction, all-role physical de-duplication, candidate certificate/body-pose reconstruction, admitted ActionBench snapshot/semantics/GT closure, byte-bound request/report/sequence/certificate/poses archive evidence, safe full official-report replay, protocol-equal G01 criteria, source-derived independent families, exact arm implementations, strict runtime closure and recoverable single-use GPU authorization with execution-time final-consumption gating. Local execution remains required.",
+  "maintained_base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
+  "independent_source_review": "Separate read-only C02 math/interface, core, scoring and documentation reviewers inspected the selected specification, real native sequence interface, ARAP/projection construction, freeze identity, failed-role denominator, scorer profile/source closure and Local handoff; no execution. Important findings were repaired: actual float32 protected-arm diagnostics and tolerance are recomputed, all scored arms are byte-compared to method reconstruction, B0/B* implementation identities are bound, failed preparations remain in the five-role denominator, shared-measurement readout is accurate and C02/C14 plan dependencies are pinned. Static final review is complete; Local execution remains required.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 2,
+    "full_method_source_complete": 3,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

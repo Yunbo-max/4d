@@ -74,6 +74,27 @@ delegates to the existing harness. Never execute the C14 plan through the generi
 harness CLI or call the scorer directly.
 C14 is source-chain complete but remains Local-unverified, scientifically
 unadmitted and unscored; GPU STOP remains in force.
+The C02 candidate is no longer the dense external-input projection primitive.
+Its CPU artifact entry is `actionmesh/prepare_protected_geometry_candidate.py`:
+from one completed native predicted sequence it computes a shared matrix-free
+ARAP repair, deterministic frame-zero geodesic patches, barycentric-area metric,
+patch-centroid-velocity protected projection and equal-W-norm scalar control.
+It exports geometry-only, strength-matched and protected complete sequences plus
+one recomputable certificate. All parameters are explicit; a failed common
+repair or certificate is retained and must not fall back to a control.
+The prospective comparison entry is
+`python -m research_math.c02_native_comparison request`; official closure is
+`python -m research_math.c02_native_scoring request`. A scientific plan may be
+emitted only by `actionmesh/prepare_c02_native_scoring.py` after C02
+`design_verified`, Gate 0/IPCG, source-derived family split, protocol-consistent
+numeric cd_3d effect and cd_4d/cd_motion noninferiority criteria, exact arm/runtime
+bindings and an expiring `single_c02_scoring_attempt` authorization for the
+physical GPU. The only execution entry is
+`actionmesh/launch_c02_native_scoring.py`, which validates final authorization
+consumption, holds a single-owner lock and reuses the stable launch claim before
+delegating to the common harness. Never call `score` or the generic harness CLI
+directly. C02 remains generated_unexecuted, Local-unverified and unscored; GPU
+STOP remains in force.
 Completed paired-context evidence is consumed only through the CPU-only
 `actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
 the result, manifest and tar as three explicit staged paths, bind the expected
