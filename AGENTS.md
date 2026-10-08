@@ -102,11 +102,12 @@ role. Semantic review must bind a prospective method specification plus actual
 held-out developmental receipts, never future confirmation outputs. C04 remains
 generated_unexecuted and scientifically unadmitted; GPU STOP remains active.
 The supervisor now supports fixed known-input readiness, bounded waiting,
-heartbeat/status, STOP/resume generations and retained-driver/lost-ack recovery.
+heartbeat/status, STOP/resume generations, retained-driver/lost-ack recovery and
+strict two-digest append-only campaign extension without a budget/deadline reset.
 Read SUPERVISOR_HANDOFF.md before use. It is neither installed nor running;
-reviewed task-extension and an actual online repair-agent integration remain
-unfinished. Never reset campaign budget/identity or retry a frozen scientific
-attempt to obtain continued work.
+the actual online repair-agent integration remains unconfigured and explicitly
+reports `not_connected`. Never reset campaign budget/identity or retry a frozen
+scientific attempt to obtain continued work.
 C01's actual direct decoder correction now has a source chain at
 `prepare_self_map_candidate.py`, `prepare_c01_native_acceptance.py`,
 `research_math.c01_native_comparison`, `research_math.c01_native_scoring`,

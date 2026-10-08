@@ -20,6 +20,7 @@ import os
 from pathlib import Path
 import re
 import signal
+import stat
 import subprocess
 import sys
 import tempfile
@@ -590,6 +591,282 @@ def request_stop(path, approved_digest):
             "workers_terminated": False, "gpu_dispatch_enabled": False}
 
 
+def validate_retained_state(state, campaign, observed_now):
+    """Apply one state contract to inspection, execution and extension."""
+    try:
+        _fields(state, "kind campaign_digest started_epoch deadline_epoch last_epoch active starts")
+        for key in ("started_epoch", "deadline_epoch", "last_epoch"):
+            _number(state[key], 0, 1e20)
+        starts = state["starts"]
+        valid = (
+            state["kind"] == "research-supervisor-state-v1" and
+            state["campaign_digest"] == campaign.data["campaign_digest"] and
+            state["deadline_epoch"] == state["started_epoch"] + campaign.data["total_wall_seconds"] and
+            state["last_epoch"] >= state["started_epoch"] and
+            observed_now >= state["last_epoch"] and
+            (state["active"] is None or state["active"] in campaign.entries) and
+            isinstance(starts, dict) and set(starts) == set(campaign.entries) and
+            all(type(value) is int and 0 <= value <= 32 for value in starts.values()))
+    except (CampaignError, KeyError, TypeError, ValueError) as error:
+        raise CampaignError("invalid retained campaign state") from error
+    if not valid:
+        raise CampaignError("invalid retained campaign state")
+    return state
+
+
+def validate_heartbeat(value, campaign, state, observed_now):
+    """Validate archived heartbeat identity; status is evidence, never a receipt."""
+    try:
+        _fields(value, "kind campaign_digest observed_epoch owner deadline_epoch "
+                 "remaining_seconds plans gpu_observation gpu_observation_available "
+                 "gpu_no_compute_process_observed gpu_idle_while_retained_running "
+                 "gpu_dispatch_enabled online_repair_agent scientific_result_verified")
+        _number(value["observed_epoch"], 0, 1e20)
+        _number(value["deadline_epoch"], 0, 1e20)
+        _number(value["remaining_seconds"], 0, 28800)
+        _fields(value["owner"], "pid start_ticks boot_id")
+        valid = (
+            value["kind"] == "research-supervisor-heartbeat-v1" and
+            value["campaign_digest"] == campaign.data["campaign_digest"] and
+            value["deadline_epoch"] == state["deadline_epoch"] and
+            observed_now >= value["observed_epoch"] and
+            type(value["owner"]["pid"]) is int and value["owner"]["pid"] > 0 and
+            isinstance(value["owner"]["start_ticks"], str) and value["owner"]["start_ticks"].isdigit() and
+            isinstance(value["owner"]["boot_id"], str) and
+            isinstance(value["plans"], dict) and set(value["plans"]) == set(campaign.entries) and
+            isinstance(value["gpu_observation"], list) and
+            all(type(value[key]) is bool for key in (
+                "gpu_observation_available", "gpu_no_compute_process_observed",
+                "gpu_idle_while_retained_running", "gpu_dispatch_enabled")) and
+            value["online_repair_agent"] == "not_connected" and
+            value["scientific_result_verified"] is False)
+    except (CampaignError, KeyError, TypeError, ValueError) as error:
+        raise CampaignError("invalid retained heartbeat identity") from error
+    if not valid:
+        raise CampaignError("invalid retained heartbeat identity")
+    return value
+
+
+def regular_identity(path):
+    record = os.lstat(path)
+    if not stat.S_ISREG(record.st_mode):
+        raise CampaignError("nonregular retained artifact rejected")
+    return (record.st_dev, record.st_ino, record.st_size, record.st_mtime_ns)
+
+
+def _normalized_entry(entry):
+    """Compare v1/v2 entries without treating an empty readiness list as a change."""
+    value = dict(entry)
+    value.setdefault("required_inputs", [])
+    return value
+
+
+def _fixed_campaign_envelope(manifest):
+    return {key: manifest[key] for key in (
+        "kind", "campaign_id", "root", "python", "skill_root", "skill_digest",
+        "pool_dir", "total_wall_seconds", "collection_reserve_seconds")}
+
+
+def extend_campaign(current_path, next_path, *, approved_current_digest,
+                    approved_next_digest, now=time.time):
+    """Activate one exact append-only campaign revision without resetting state.
+
+    Both arguments are complete reviewed manifests.  The next revision may append
+    immutable plans only; it cannot rewrite the campaign envelope or any retained
+    plan.  Retained execution records are migrated under one exclusive owner and
+    the original started/deadline epochs survive unchanged.
+    """
+    current_data = read_json(current_path)
+    next_data = read_json(next_path)
+    if (campaign_digest(current_data) != current_data.get("campaign_digest") or
+            approved_current_digest != current_data.get("campaign_digest")):
+        raise CampaignError("exact current campaign approval required")
+    if (campaign_digest(next_data) != next_data.get("campaign_digest") or
+            approved_next_digest != next_data.get("campaign_digest")):
+        raise CampaignError("exact next campaign approval required")
+    if next_data.get("version") != 2:
+        raise CampaignError("append-only extension requires manifest version 2")
+    if _fixed_campaign_envelope(current_data) != _fixed_campaign_envelope(next_data):
+        raise CampaignError("fixed campaign envelope cannot change during extension")
+    old_plans = current_data.get("plans")
+    new_plans = next_data.get("plans")
+    if (not isinstance(old_plans, list) or not isinstance(new_plans, list) or
+            len(new_plans) <= len(old_plans) or
+            [_normalized_entry(entry) for entry in new_plans[:len(old_plans)]] !=
+            [_normalized_entry(entry) for entry in old_plans]):
+        raise CampaignError("extension must be a strict append-only plan inventory")
+
+    # Full construction validates every old/new plan, native identity, exact code
+    # ref, cumulative reservation, dependency and repair edge before state changes.
+    current = Campaign(current_path)
+    proposed = Campaign(next_path)
+    if current.data != current_data or proposed.data != next_data:
+        raise CampaignError("approved manifest changed before validation")
+    if current.directory != proposed.directory:
+        raise CampaignError("fixed campaign owner changed during extension")
+    directory = current.directory
+    state_path, manifest_path = directory / "state.json", directory / "manifest.json"
+    lock_path = safe_path(current.root, str((directory / "campaign.lock").relative_to(current.root)))
+    directory.mkdir(parents=True, exist_ok=True)
+    lock = lock_path.open("a+")
+    try:
+        try:
+            fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as error:
+            raise CampaignError("extension requires a settled campaign with no active owner") from error
+        with control_lock(directory):
+            if read_json(current.path) != current_data or read_json(proposed.path) != next_data:
+                raise CampaignError("approved manifest changed before retained-state mutation")
+            if not state_path.is_file() or not manifest_path.is_file():
+                raise CampaignError("extension requires retained campaign state; start the reviewed base first")
+            state = read_json(state_path)
+            retained_manifest = read_json(manifest_path)
+            history = safe_path(current.root,
+                                str((directory / "manifest-history").relative_to(current.root)))
+            if history.is_symlink():
+                raise CampaignError("manifest history symlink rejected")
+            observed_now = now()
+            if (state.get("campaign_digest") == proposed.data["campaign_digest"] and
+                    retained_manifest == proposed.data):
+                validate_retained_state(state, proposed, observed_now)
+                if state["active"] is not None:
+                    raise CampaignError("extension requires a settled campaign; active owner retained")
+                receipt_path = safe_path(current.root, str((history / (
+                    proposed.data["campaign_digest"] + "-extension.json")).relative_to(current.root)))
+                if not receipt_path.is_file():
+                    raise CampaignError("retained extension predecessor receipt missing")
+                receipt = read_json(receipt_path)
+                expected_receipt = {
+                    "kind": "research-supervisor-extension-v1",
+                    "previous_campaign_digest": current.data["campaign_digest"],
+                    "campaign_digest": proposed.data["campaign_digest"],
+                    "added_plans": list(proposed.entries)[len(current.entries):],
+                    "started_epoch": state["started_epoch"],
+                    "deadline_epoch": state["deadline_epoch"]}
+                if receipt != expected_receipt:
+                    raise CampaignError("retained extension predecessor does not match this transition")
+                return {
+                    "status": "already_extended",
+                    "previous_campaign_digest": current.data["campaign_digest"],
+                    "campaign_digest": proposed.data["campaign_digest"],
+                    "added_plans": list(proposed.entries)[len(current.entries):],
+                    "started_epoch": state["started_epoch"],
+                    "deadline_epoch": state["deadline_epoch"],
+                    "stop_preserved": (directory / "STOP").exists(),
+                    "gpu_dispatch_enabled": False,
+                    "online_repair_agent": "not_connected"}
+            if (state.get("campaign_digest") != current.data["campaign_digest"] or
+                    retained_manifest not in (current.data, proposed.data)):
+                raise CampaignError("extension requires exact settled campaign identity")
+            validate_retained_state(state, current, observed_now)
+            if state["active"] is not None:
+                raise CampaignError("extension requires a settled campaign; active owner retained")
+            observed = {name: current.observe(name) for name in current.entries}
+            outcomes, live = reconcile_dispatch(current, state, observed)
+            if live or any(status in ("running", "unknown") for status in outcomes.values()):
+                raise CampaignError("extension requires a settled campaign; reconcile active or unknown work first")
+
+            heartbeat_path = safe_path(current.root, str((directory / "heartbeat.json").relative_to(current.root)))
+            heartbeat_identity = heartbeat_value = None
+            if heartbeat_path.exists():
+                heartbeat_identity = regular_identity(heartbeat_path)
+                heartbeat_value = validate_heartbeat(
+                    read_json(heartbeat_path), current, state, observed_now)
+                if regular_identity(heartbeat_path) != heartbeat_identity:
+                    raise CampaignError("retained heartbeat changed during extension")
+
+            history.mkdir(exist_ok=True)
+            previous = safe_path(current.root, str((history / (
+                current.data["campaign_digest"] + ".json")).relative_to(current.root)))
+            if previous.exists() and read_json(previous) != current.data:
+                raise CampaignError("conflicting retained campaign history")
+            if not previous.exists():
+                _atomic(previous, current.data)
+            archived_state = safe_path(current.root, str((history / (
+                current.data["campaign_digest"] + "-state.json")).relative_to(current.root)))
+            if archived_state.exists() and read_json(archived_state) != state:
+                raise CampaignError("conflicting retained campaign state history")
+            if not archived_state.exists():
+                _atomic(archived_state, state)
+
+            # Completed driver records retain their original campaign identity in
+            # history; only live/uncertain records were rejected above.
+            for name in current.entries:
+                driver = directory / name / "driver.json"
+                if driver.is_file():
+                    archived = safe_path(current.root, str((history / (
+                        current.data["campaign_digest"] + "-" + name + "-driver.json")).relative_to(current.root)))
+                    if archived.exists() and read_json(archived) != read_json(driver):
+                        raise CampaignError("conflicting retained driver history")
+                    if not archived.exists():
+                        os.replace(driver, archived)
+                        _sync_directory(history)
+                        _sync_directory(driver.parent)
+                    else:
+                        driver.unlink()
+                        _sync_directory(driver.parent)
+            if heartbeat_identity is not None:
+                archived = safe_path(current.root, str((history / (
+                    current.data["campaign_digest"] + "-heartbeat.json")).relative_to(current.root)))
+                if archived.exists() and read_json(archived) != heartbeat_value:
+                    raise CampaignError("conflicting retained heartbeat history")
+                if not archived.exists():
+                    if regular_identity(heartbeat_path) != heartbeat_identity:
+                        raise CampaignError("retained heartbeat changed before archival")
+                    os.replace(heartbeat_path, archived)
+                    _sync_directory(history)
+                    _sync_directory(directory)
+                else:
+                    heartbeat_path.unlink()
+                    _sync_directory(directory)
+
+            migrated = dict(state)
+            migrated["campaign_digest"] = proposed.data["campaign_digest"]
+            migrated["last_epoch"] = max(state["last_epoch"], observed_now)
+            migrated["starts"] = {name: state["starts"].get(name, 0)
+                                  for name in proposed.entries}
+            # The deadline is intentionally copied, not recomputed: extension is
+            # new reviewed work inside the same cumulative campaign, not a reset.
+            receipt_path = safe_path(current.root, str((history / (
+                proposed.data["campaign_digest"] + "-extension.json")).relative_to(current.root)))
+            receipt = {
+                "kind": "research-supervisor-extension-v1",
+                "previous_campaign_digest": current.data["campaign_digest"],
+                "campaign_digest": proposed.data["campaign_digest"],
+                "added_plans": list(proposed.entries)[len(current.entries):],
+                "started_epoch": migrated["started_epoch"],
+                "deadline_epoch": migrated["deadline_epoch"]}
+            if receipt_path.exists() and read_json(receipt_path) != receipt:
+                raise CampaignError("conflicting retained extension predecessor receipt")
+            if not receipt_path.exists():
+                _atomic(receipt_path, receipt)
+            _atomic(manifest_path, proposed.data)
+            _atomic(state_path, migrated)
+            with (directory / "journal.jsonl").open("a", encoding="utf-8") as stream:
+                stream.write(canonical({
+                    "event": "campaign_extended", "observed_epoch": now(),
+                    "campaign_digest": proposed.data["campaign_digest"],
+                    "previous_campaign_digest": current.data["campaign_digest"],
+                    "added_plans": list(proposed.entries)[len(current.entries):],
+                    "deadline_epoch": migrated["deadline_epoch"]}) + "\n")
+                stream.flush()
+                os.fsync(stream.fileno())
+            _sync_directory(directory)
+            return {
+                "status": "extended",
+                "previous_campaign_digest": current.data["campaign_digest"],
+                "campaign_digest": proposed.data["campaign_digest"],
+                "added_plans": list(proposed.entries)[len(current.entries):],
+                "started_epoch": migrated["started_epoch"],
+                "deadline_epoch": migrated["deadline_epoch"],
+                "stop_preserved": (directory / "STOP").exists(),
+                "gpu_dispatch_enabled": False,
+                "online_repair_agent": "not_connected"}
+    finally:
+        fcntl.flock(lock, fcntl.LOCK_UN)
+        lock.close()
+
+
 def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                  now=time.time, transport=None, allow_gpu_after_user_resume=False,
                  watch_ready=False, heartbeat_seconds=30.0, resume=False):
@@ -615,14 +892,12 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
         state_path = directory / "state.json"
         if state_path.exists():
             retained = read_json(state_path)
-            _fields(retained, "kind campaign_digest started_epoch deadline_epoch last_epoch active starts")
-            if (retained["kind"] != "research-supervisor-state-v1" or
-                    retained["campaign_digest"] != m["campaign_digest"] or
-                    read_json(directory / "manifest.json") != m or
-                    retained["deadline_epoch"] != retained["started_epoch"] + m["total_wall_seconds"] or
-                    not isinstance(retained["starts"], dict) or set(retained["starts"]) != set(campaign.entries) or
-                    any(type(value) is not int or not 0 <= value <= 32 for value in retained["starts"].values())):
+            if read_json(directory / "manifest.json") != m:
                 raise CampaignError("invalid retained campaign inspection identity")
+            try:
+                validate_retained_state(retained, campaign, time.time())
+            except CampaignError as error:
+                raise CampaignError("invalid retained campaign inspection identity") from error
             reconcile_dispatch(campaign, retained, observations)
         return {"status": "inspection", "campaign_digest": m["campaign_digest"],
                 "gpu_dispatch_enabled": allow_gpu_after_user_resume, "plans": observations,
@@ -659,15 +934,9 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
             if not state_path.is_file() or not manifest_path.is_file() or read_json(manifest_path) != m:
                 raise CampaignError("incomplete or conflicting retained campaign; reconciliation required")
             state = read_json(state_path)
-            _fields(state, "kind campaign_digest started_epoch deadline_epoch last_epoch active starts")
-            for key in ("started_epoch", "deadline_epoch", "last_epoch"):
-                _number(state[key], 0, 1e20)
-            if (state["kind"] != "research-supervisor-state-v1" or state["campaign_digest"] != m["campaign_digest"] or
-                    state["deadline_epoch"] != state["started_epoch"] + m["total_wall_seconds"] or
-                    state["last_epoch"] < state["started_epoch"] or now() < state["last_epoch"] or
-                    state["active"] is not None and state["active"] not in campaign.entries or
-                    not isinstance(state["starts"], dict) or set(state["starts"]) != set(campaign.entries) or
-                    any(type(value) is not int or not 0 <= value <= 32 for value in state["starts"].values())):
+            try:
+                validate_retained_state(state, campaign, now())
+            except CampaignError as error:
                 raise CampaignError("invalid retained deadline or identity; reconciliation required")
         else:
             if resume:
@@ -910,7 +1179,10 @@ def main(argv=None):
     mode.add_argument("--status", action="store_true", help="Read-only exact retained process/receipt inspection")
     mode.add_argument("--stop", action="store_true", help="Request cooperative driver handoff; never kill workers")
     mode.add_argument("--resume", action="store_true", help="Clear campaign STOP with original state/budget; GPU STOP remains")
+    mode.add_argument("--extend", type=Path,
+                      help="Activate an exact reviewed append-only manifest revision")
     parser.add_argument("--approved-campaign-digest")
+    parser.add_argument("--approved-next-campaign-digest")
     parser.add_argument("--print-digest", action="store_true")
     parser.add_argument("--poll-seconds", type=float, default=1.0)
     parser.add_argument("--watch-ready", action="store_true",
@@ -921,11 +1193,16 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         if args.print_digest:
-            if args.execute or args.stop or args.resume:
+            if args.execute or args.stop or args.resume or args.extend:
                 raise CampaignError("digest printing cannot mutate")
             result = {"campaign_digest": campaign_digest(read_json(args.campaign)), "execution_started": False}
         elif args.stop:
             result = request_stop(args.campaign, args.approved_campaign_digest)
+        elif args.extend:
+            result = extend_campaign(
+                args.campaign, args.extend,
+                approved_current_digest=args.approved_campaign_digest,
+                approved_next_digest=args.approved_next_campaign_digest)
         else:
             result = run_campaign(args.campaign, execute=args.execute or args.resume,
                                   approved_digest=args.approved_campaign_digest, poll_seconds=args.poll_seconds,
@@ -933,7 +1210,8 @@ def main(argv=None):
                                   watch_ready=args.watch_ready, heartbeat_seconds=args.heartbeat_seconds,
                                   resume=args.resume)
         print(canonical(result))
-        return 0 if result.get("status") in (None, "inspection", "completed", "stop_requested") else 2
+        return 0 if result.get("status") in (
+            None, "inspection", "completed", "stop_requested", "extended", "already_extended") else 2
     except Exception as error:
         print(canonical({"status": "blocked", "error": type(error).__name__, "reason": str(error),
                          "gpu_dispatch_enabled": args.allow_gpu_after_user_resume,

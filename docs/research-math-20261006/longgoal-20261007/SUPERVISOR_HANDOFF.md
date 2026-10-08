@@ -6,7 +6,8 @@ tests, harness campaign, inference, scorer, or GPU workload. Historical receipts
 do not qualify this source revision.
 
 `scripts/research_supervisor.py` now includes a persistent, bounded readiness loop,
-periodic heartbeats, cooperative control commands and exact driver reconciliation.
+periodic heartbeats, cooperative control commands, exact driver reconciliation and
+an exact-reviewed append-only campaign extension boundary.
 It supervises a finite set of already frozen
 `research-autopilot` harness plans. The installed `scripts/run_harness.py` remains
 the executor and retains resource admission, native attempts, process ownership,
@@ -38,6 +39,13 @@ python scripts/research_supervisor.py CAMPAIGN.json \
 # This clears only the campaign STOP; it does not resume GPU permission.
 python scripts/research_supervisor.py CAMPAIGN.json \
   --resume --approved-campaign-digest SHA --watch-ready
+
+# Append only fully pinned plans from one separately reviewed full manifest.
+# The original deadline, STOP, receipts and attempt counters survive.
+python scripts/research_supervisor.py CAMPAIGN.json \
+  --extend CAMPAIGN_NEXT.json \
+  --approved-campaign-digest CURRENT_SHA \
+  --approved-next-campaign-digest NEXT_SHA
 ```
 
 `SHA` must be the reviewed campaign digest. `--poll-seconds` is an optional
@@ -49,6 +57,20 @@ keeps the controller alive only while its frozen inventory is waiting for declar
 input bytes; the original collection cutoff remains binding. No reviewed new
 manifest is automatically ingested, no campaign is automatically installed, and
 no process was started by this source delivery.
+
+`--extend` is not an inbox or discovery service. Both full manifests require exact
+digest approval. The next manifest must be v2, keep the same campaign identity,
+paths, interpreter, installed skill, pool, total wall budget and collection
+reserve, retain every old plan byte-for-byte (v1 empty readiness normalizes to
+v2), and strictly append at least one fully pinned plan. Full harness/native
+validation, cross-plan identity uniqueness, dependency/repair checks and the
+original total reservation ceiling apply before retained state changes. Extension
+requires an exclusive idle owner and refuses live or unknown work. Completed
+driver/heartbeat records move under `manifest-history/`; the old manifest,
+receipts and outputs remain retained. State migration copies `started_epoch` and
+`deadline_epoch`, adds zero starts only for new plans, and preserves STOP. Repeat
+the same two-digest command to reconcile a lost acknowledgement between manifest
+and state replacement. Use the next manifest for later status/stop/resume.
 
 GPU dispatch remains stopped by default. For future Local GPU execution, the
 optional `--allow-gpu-after-user-resume` flag acknowledges that the user has
@@ -251,7 +273,11 @@ The authored acceptance source now covers two real canonical harness batches,
 known failure followed by independent work, missing-input isolation and subsequent
 exact-byte arrival, lost acknowledgement after real completion, real supervisor
 process interruption with a surviving driver, unknown dispatch refusal, heartbeat
-and status, STOP and budget preservation. Recovery tests use the actual installed
+and status, STOP and budget preservation. Extension cases cover exact dual
+approval, prefix/envelope mutation rejection, original deadline/receipt history,
+active/unknown refusal, manifest replacement, state/heartbeat corruption and
+symlinks, lost migration acknowledgement and multi-hop predecessor identity.
+Recovery tests use the actual installed
 harness and ordinary short CPU jobs. They do not substitute a fake harness or
 mock receipts; deterministic ordering hooks inject only control/budget races.
 The CPU engineering fixtures do not stand in for native scientific acceptance.
@@ -267,13 +293,11 @@ The following blockers remain explicit:
 - **Local software and runtime qualification are pending.** Authored checks and
   source review do not establish a passed test, a working deployment, or an
   accepted harness campaign.
-- **Reviewed manifest extension is not implemented.** The controller can wait for
-  exact known hashes in a fixed inventory; it cannot accept an unbounded inbox,
-  discover new tasks, pin unknown future result hashes, append plans or transfer
-  reservations to a new campaign. A future append-only extension needs explicit
-  reviewed hashes, retained identity/history and the same cumulative deadline;
-  changing campaign ID to obtain another budget is prohibited. This is a finite
-  continuation supervisor, not the complete open-ended research supervisor.
+- **Unbounded discovery remains intentionally absent.** The reviewed append-only
+  extension accepts only a complete next manifest with exact current/next digests,
+  fixed identity/envelope, fully pinned added plans and the same cumulative
+  deadline. It does not discover tasks, accept unknown future hashes, generate
+  repairs or change campaign ID to obtain another budget.
 - **Free-form AI repair is not implemented.** Only the finite, pinned repair
   children in the approved manifest can become eligible after their exact
   failure condition. New code or a changed scientific direction needs a new

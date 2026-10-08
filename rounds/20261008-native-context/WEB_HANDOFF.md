@@ -15,7 +15,7 @@ GitHub delivery receipt; the authoring base is
 | Complete raw context | `actionmesh/research_math/decoder_observer.py` | Full latents/time/query/normal tensors, dtype/device/autocast/inference/gradient modes, identity and hashes |
 | Full-context replay and separate source-time query | `pipeline_decoder_observer.py::replay_window` | All original target outputs and bounded mesh coordinates agree before requesting the source time; no C01 correction or scientific qualification |
 | Paired official generation entry | `actionmesh/research_math/native_context_runner.py` | Exact frozen assets/profile; complete unobserved/observed 16-frame export; explicit tolerance; raw replay, failure evidence and total resource envelope |
-| Finite batch supervision | `scripts/research_supervisor.py` | Exact harness identity, failure isolation, finite repair dependencies, STOP, immutable deadline and same-task recovery |
+| Recoverable supervision | `scripts/research_supervisor.py` | Exact harness identity, failure isolation, finite repair dependencies, STOP, immutable deadline, same-task recovery and exact-reviewed append-only plan extension |
 
 Read the [supervisor interface and manifest](../../docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md)
 and [context capture rationale](../../docs/research-math-20261006/longgoal-20261007/NATIVE_CONTEXT_CAPTURE_PLAN.md).
@@ -873,3 +873,36 @@ remain 0/15. Six method chains, complete stage-wide G01 and reviewed supervisor
 task-extension/online-agent integration remain. GPU STOP and all budgets/protocols
 are unchanged. Local starts at the C12 runbook section at the exact read-back
 commit and must preserve prior results.
+
+## Continuation: append-only supervisor task extension — 2026-10-08
+
+Resumed exact main `220492a4f464be262af1127518b232907992fd08` without
+repeating the historical pricing-root repair. C05, C08, C06 and C07 were checked
+against their selected math/spec/audit records and actual ActionMesh interfaces.
+They require legal sparse coordinate modes, Markov kernels/endpoints or
+feature/support banks that the current single-coordinate native output and
+decoder context do not provide. Latent attention is not substituted for material
+coordinates. These dependencies remain blocked while independent source work
+continues; the source-chain count remains 9/15.
+
+The existing supervisor now has a bounded reviewed task-extension boundary. A
+Local owner supplies the current and proposed complete v2 manifests plus both
+exact digests. The proposed manifest must preserve campaign identity, paths,
+interpreter, skill, pool, total wall budget, collection reserve and every old
+plan, and may only append fully pinned plans within the original reservation.
+Extension requires an exclusive idle owner, rejects live/unknown retained work,
+archives prior manifest/driver/heartbeat identities, preserves STOP, receipts,
+attempt counters and the original started/deadline epochs, and recovers a lost
+acknowledgement by replaying the same exact two-digest operation. It never starts
+a harness task itself and cannot discover or synthesize unknown future work.
+
+Targeted acceptance source covers successful extension after a completed batch,
+deadline/receipt preservation, exact dual approval, old-plan/envelope mutation
+rejection, active/unknown refusal, idempotent lost acknowledgement and later
+execution of the appended dependency through the existing harness. This source
+is `generated_unexecuted`: Web performed no project test, harness plan, model,
+scorer, download, inference or GPU task. The supervisor remains uninstalled and
+unstarted. The provider-neutral runtime has no verified installed/configured
+online repair-agent adapter here, so status continues to report
+`online_repair_agent=not_connected`. GPU STOP, budgets and scientific protocols
+are unchanged.

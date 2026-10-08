@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (9/15). C03 numerical calibration remains partial and C20 lacks a legal motion target; neither blocker was replaced with fabricated input. Six full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (9/15). C03/C20 and the C05/C08/C06/C07 model-interface dependencies remain blocked rather than replaced with fabricated inputs. Six full source chains, full G01 and an actually configured online repair-agent connection remain; reviewed append-only supervisor task extension is authored. Local/native methods 0/15. GPU STOP unchanged.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -1634,9 +1634,8 @@
     "handoff": "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
     "installed": false,
     "started": false,
-    "implemented": "fixed-input readiness isolation, bounded waiting, heartbeat/status, serialized STOP/resume, retained process identity and receipt-bound lost-ack recovery",
+    "implemented": "fixed-input readiness isolation, bounded waiting, heartbeat/status, serialized STOP/resume, retained process identity, receipt-bound lost-ack recovery, and exact-reviewed append-only manifest extension with unchanged campaign identity/deadline/budget",
     "remaining": [
-      "reviewed append-only task extension without budget reset",
       "configured actual online repair-agent/runtime integration",
       "Local recovery acceptance and deployment"
     ],
@@ -1654,6 +1653,13 @@
           "sha256": "318efaff9652263ffa4b2e6a4e1d4bfed1603dc76ee9ffa96a74daa81150a7c6"
         }
       ],
+      "tests_executed": false
+    },
+    "append_extension_review": {
+      "path": "docs/research-math-20261006/longgoal-20261007/supervisor-append-extension-source-review.json",
+      "sha256": "893523680c4ed520756e0cf9db486ee6fe5c0e33ac38508a7d28f593802b0cbd",
+      "reviewer": "independent /root/c12_source_review",
+      "status": "focused_static_review_no_remaining_critical_or_important",
       "tests_executed": false
     }
   },

@@ -1,0 +1,51 @@
+{
+  "kind": "source-review",
+  "version": "1.0.0",
+  "subject": "reviewed append-only supervisor campaign extension",
+  "base_commit": "220492a4f464be262af1127518b232907992fd08",
+  "status": "generated_unexecuted",
+  "reviewer": "independent /root/c12_source_review",
+  "review_scope": [
+    "exact current/next manifest identity and append-only invariants",
+    "original budget/deadline/STOP/receipt preservation",
+    "live-owner and unknown-state exclusion",
+    "lost-acknowledgement and multi-hop predecessor reconciliation",
+    "manifest/state/driver/heartbeat history integrity",
+    "targeted Local acceptance test source"
+  ],
+  "findings_repaired": [
+    "recheck approved manifest snapshots before and under campaign/control locks",
+    "archive the exact old retained state and reject symlink/nonregular history paths",
+    "bind idempotency to an exact predecessor/successor extension receipt",
+    "apply one strict retained-state numeric/time/start-counter validator before any migration",
+    "validate heartbeat schema/campaign/deadline and regular-file identity before archival"
+  ],
+  "final_review": "No remaining Critical or Important findings in the focused repaired paths.",
+  "code_refs": [
+    {
+      "path": "scripts/research_supervisor.py",
+      "sha256": "fad6fe12fc4d0126545ce143bd9aad20724453b6219451aa49f5b1fd0409b2e1"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_research_supervisor.py",
+      "sha256": "0e4eb616d81971906433a697c814ea5350ca8203c73610141b1edf23c1d739d5"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
+      "sha256": "739f5c0edca8fe8a8f1cf5db8fbabc3d1637ba6613c4fdd4b74e9e423b6a6887"
+    }
+  ],
+  "static_checks": [
+    "Python AST parse",
+    "JSON parse",
+    "git diff --check",
+    "independent source review"
+  ],
+  "tests_executed": false,
+  "project_code_executed": false,
+  "local_acceptance": "pending",
+  "supervisor_installed": false,
+  "supervisor_running": false,
+  "online_repair_agent": "not_connected",
+  "gpu_stop": true
+}

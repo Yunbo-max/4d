@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (9/15); Local-verified and native-result candidates remain 0/15. Six source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C03 and C20 remain blocked on missing legal native inputs. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C04,C10,C11,C12,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (9/15); Local-verified and native-result candidates remain 0/15. Six source chains, complete G01 and an actually configured online repair-agent integration remain pending. C03/C20 and the C05/C08/C06/C07 model-interface dependencies remain blocked on missing legal native inputs rather than fabricated arrays. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery plus exact-reviewed append-only task extension source is authored, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -868,6 +868,7 @@
         "sha256": "e7ad3567922d57d4c9beef78469efd6acdd4b7d9b0d0ec7caf0cf6442a360747"
       },
       "source_status": "specification_only",
+      "input_blocker_evidence": "2026-10-08 exact-source review: the native decoder/context path emits one coordinate sequence and latent tensors, not a qualified sparse material-coordinate mode bank or calibrated per-mode scores. Latent attention and arbitrary external y/p arrays are not legal substitutes; only C05-dependent work is blocked.",
       "code_entry": null,
       "real_input_and_model_interface": "Actual model-exposed sparse material modes with normalized scores; anchor graph and legal hints",
       "required_outputs": [
@@ -929,6 +930,7 @@
         "sha256": "8662ec642b8d778740bc7ff5586e4e60559a47c4a0e05a9660cacc5d38788372"
       },
       "source_status": "specification_only",
+      "input_blocker_evidence": "2026-10-08 exact-source review: no qualified sparse Markov reference chain or legal model-derived endpoint distributions exist in the current native/context interface. A standalone IPF solver would be an external-input primitive, not the selected complete method.",
       "code_entry": null,
       "real_input_and_model_interface": "Qualified sparse Markov kernels/initial probabilities and model endpoint distributions",
       "required_outputs": [
@@ -989,6 +991,7 @@
         "sha256": "791e03d35227cb16c50dd2c68552bb59d34c312d0d7460d8334f2bd6e03db656"
       },
       "source_status": "specification_only",
+      "input_blocker_evidence": "2026-10-08 exact-source review: current ActionMesh output/context supplies meshes and latent tensors but no qualified legal surface feature/cost/support producer shared by all C06 arms. Arbitrary external costs would leave only a transport primitive, not the complete selected method.",
       "code_entry": null,
       "real_input_and_model_interface": "Qualified legal surface features/cost/support with equal-total area mass",
       "required_outputs": [
@@ -1048,6 +1051,7 @@
         "sha256": "4bdeef6356922e50c5f476668b30ab5026c02923f8409a7d438892127ebaa163"
       },
       "source_status": "specification_only",
+      "input_blocker_evidence": "2026-10-08 exact-source review: C07 inherits C06's missing legal feature/cost/support producer; a threshold/slack solver without that native producer and complete fallback mapping is not a complete method chain.",
       "code_entry": null,
       "real_input_and_model_interface": "Same features/areas/cost/support as C06 plus native fallback and frozen slack penalty",
       "required_outputs": [
@@ -1089,8 +1093,17 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "fc0b67fef0bf4406c1d8004d0da539519739c56b",
+  "maintained_base_commit": "220492a4f464be262af1127518b232907992fd08",
   "independent_source_review": "C12 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c12_source_review identified near-tangent connected-component, archive-reference, failed-arm replay and bounded-materialization blockers; all were repaired, and focused final re-review found no remaining Critical/Important issue in scope. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 9/15.",
+  "supervisor_extension_review": {
+    "path": "docs/research-math-20261006/longgoal-20261007/supervisor-append-extension-source-review.json",
+    "status": "generated_unexecuted_independent_static_review_complete",
+    "critical_or_important_remaining": 0,
+    "local_acceptance": "pending",
+    "supervisor_installed": false,
+    "supervisor_running": false,
+    "online_repair_agent": "not_connected"
+  },
   "stage_goal": {
     "selected_methods": 15,
     "full_method_source_complete": 9,

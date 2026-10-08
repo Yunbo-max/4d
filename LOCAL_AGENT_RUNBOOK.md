@@ -1182,17 +1182,22 @@ harness and has not been installed or started. No candidate is promoted.
 
 ### Latest source handoff — decoder capture
 
-### Fixed-inventory supervisor recovery
+### Reviewed append-only supervisor recovery
 
 Use [SUPERVISOR_HANDOFF.md](docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md)
-for the exact v1/v2 manifest, status/heartbeat, bounded `--watch-ready`, `--stop`
-and guarded `--resume` interface. All commands retain one campaign identity and
-original deadline/collection reserve; a lost acknowledgement is reconciled
-against the exact harness/native receipts and PID/start/boot identity. Unknown
-launch state is blocked, never retried. The current shared CPU acceptance stages
-the supervisor and its actual-harness recovery tests. No test or deployment is
-claimed here. Reviewed append-only task admission and actual online repair-agent
-connection are still missing; GPU STOP remains in force.
+for the exact v1/v2 manifest, status/heartbeat, bounded `--watch-ready`, `--stop`,
+guarded `--resume` and two-digest `--extend CAMPAIGN_NEXT.json` interface. Extension
+accepts only a strict full-manifest suffix under the same owner, roots, skill,
+pool, total wall budget and collection reserve. It refuses live/unknown work,
+retains the prior manifest/driver/heartbeat history, preserves STOP and the
+original deadline, and initializes only appended plan start counters to zero.
+Repeat the same exact current/next digest command after a lost extension
+acknowledgement; never create a new campaign ID or budget. Driver launch loss is
+still reconciled against exact harness/native receipts and PID/start/boot identity;
+unknown launch state is blocked, never retried. The current shared CPU acceptance
+stages the supervisor and its actual-harness extension/recovery tests. No test or
+deployment is claimed here. An actual online repair-agent connection remains
+absent and is reported as `not_connected`; GPU STOP remains in force.
 
 ### C04 robust motion protection and retained-native acceptance
 

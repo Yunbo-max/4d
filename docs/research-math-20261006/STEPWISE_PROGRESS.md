@@ -1805,3 +1805,30 @@ Six method chains, complete G01 and reviewed supervisor extension/online-agent
 integration remain. GPU STOP, cumulative budget and frozen one-attempt/
 zero-retry scientific protocols are unchanged. Local starts at the C12 section
 in `LOCAL_AGENT_RUNBOOK.md` after checking the exact delivered commit.
+
+## Continuation: reviewed append-only supervisor extension — 2026-10-08
+
+Restored exact main `220492a4f464be262af1127518b232907992fd08` and the
+unchanged 20-card/15-selected boundary. Read-only verification found C05 and C08
+mathematically selected but unable to instantiate from current native output:
+ActionMesh exposes one decoded coordinate sequence, not material-coordinate modes,
+sparse Markov kernels or legal endpoint distributions. C06/C07 likewise require
+a qualified feature/cost/support producer that is absent. These are recorded
+input blockers, not implemented as external-array primitives or latent-attention
+substitutes. Candidate source coverage remains 9/15.
+
+The existing single-harness supervisor gained a strict append-only campaign
+revision operation. It requires exact approval of both complete manifests,
+preserves the campaign envelope and every prior plan, validates all appended
+harness/native/source identities against the original cumulative reservation,
+requires one idle owner, and refuses active or unknown state. Migration archives
+old manifest/driver/heartbeat evidence and preserves STOP, receipts, attempt
+counters, started time and deadline. Repeating the same two-digest operation
+reconciles a lost acknowledgement between manifest and state replacement.
+Authored acceptance source covers the successful, rejected and interrupted
+extension boundaries and subsequent existing-harness continuation.
+
+All source remains `generated_unexecuted`. Web ran no project test, supervisor,
+harness workload, model, scorer, download, inference or GPU task. The supervisor
+is not installed or running; the online repair adapter is still explicitly
+`not_connected`. GPU STOP and all scientific budgets/protocols remain unchanged.

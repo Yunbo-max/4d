@@ -93,6 +93,17 @@ class ResearchSupervisorTests(unittest.TestCase):
         path.write_text(S.canonical(value))
         return path, value
 
+    def extended_manifest(self, base, *, path_name="campaign-next.json"):
+        value = copy.deepcopy(base)
+        value["plans"] = copy.deepcopy(self.entries)
+        for entry in value["plans"]:
+            entry.setdefault("required_inputs", [])
+        value["version"] = 2
+        value["campaign_digest"] = S.campaign_digest(value)
+        path = self.root / path_name
+        path.write_text(S.canonical(value))
+        return path, value
+
     def execute(self, path, value, **options):
         return S.run_campaign(path, execute=True,
                               approved_digest=value["campaign_digest"], poll_seconds=.05, **options)
@@ -573,6 +584,261 @@ class ResearchSupervisorTests(unittest.TestCase):
         inspected = S.run_campaign(path)
         self.assertIn("heartbeat", inspected["retained_status"])
         self.assertEqual(inspected["retained_status"]["online_repair_agent"], "not_connected")
+
+    def test_reviewed_append_only_extension_preserves_budget_and_completed_history(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        first = self.execute(base_path, base)
+        state_path = self.root / "runs/supervisor/engineering-supervisor/state.json"
+        before = json.loads(state_path.read_text())
+        first_receipt = self.root / "runs/attempts/first/receipt.json"
+        retained_receipt = first_receipt.read_bytes()
+
+        self.plan("second", dependencies=("first",))
+        next_path, proposed = self.extended_manifest(base)
+        extended = S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+
+        self.assertEqual(extended["status"], "extended")
+        self.assertEqual(extended["added_plans"], ["second"])
+        migrated = json.loads(state_path.read_text())
+        self.assertEqual(migrated["started_epoch"], before["started_epoch"])
+        self.assertEqual(migrated["deadline_epoch"], before["deadline_epoch"])
+        self.assertEqual(migrated["starts"], {"first": 1, "second": 0})
+        self.assertEqual(first_receipt.read_bytes(), retained_receipt)
+        repeated = S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+        self.assertEqual(repeated["status"], "already_extended")
+
+        finished = self.execute(next_path, proposed)
+        self.assertEqual(finished["status"], "completed")
+        self.assertEqual(finished["deadline_epoch"], before["deadline_epoch"])
+        self.assertEqual(json.loads(state_path.read_text())["starts"], {"first": 1, "second": 1})
+
+    def test_extension_recovers_lost_ack_between_manifest_and_state_replace(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        before = json.loads((self.root / "runs/supervisor/engineering-supervisor/state.json").read_text())
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        real_atomic = S._atomic
+        interrupted = [False]
+        def lose_after_manifest(target, value):
+            real_atomic(target, value)
+            if target.name == "manifest.json" and value == proposed and not interrupted[0]:
+                interrupted[0] = True
+                raise OSError("injected lost acknowledgement after manifest replacement")
+        with patch.object(S, "_atomic", lose_after_manifest):
+            with self.assertRaisesRegex(OSError, "lost acknowledgement"):
+                S.extend_campaign(
+                    base_path, next_path,
+                    approved_current_digest=base["campaign_digest"],
+                    approved_next_digest=proposed["campaign_digest"])
+        recovered = S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+        self.assertEqual(recovered["status"], "extended")
+        state = json.loads((self.root / "runs/supervisor/engineering-supervisor/state.json").read_text())
+        self.assertEqual(state["started_epoch"], before["started_epoch"])
+        self.assertEqual(state["deadline_epoch"], before["deadline_epoch"])
+        self.assertEqual(state["starts"], {"first": 1, "second": 0})
+
+    def test_extension_rejects_rewriting_a_retained_plan_or_budget(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        original_state = (self.root / "runs/supervisor/engineering-supervisor/state.json").read_bytes()
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+
+        for mutation in ("plan", "budget"):
+            with self.subTest(mutation=mutation):
+                changed = copy.deepcopy(proposed)
+                if mutation == "plan":
+                    changed["plans"][0]["dependencies"] = ["second"]
+                else:
+                    changed["total_wall_seconds"] += 1
+                changed["campaign_digest"] = S.campaign_digest(changed)
+                next_path.write_text(S.canonical(changed))
+                with self.assertRaisesRegex(S.CampaignError, "append-only|fixed campaign envelope"):
+                    S.extend_campaign(
+                        base_path, next_path,
+                        approved_current_digest=base["campaign_digest"],
+                        approved_next_digest=changed["campaign_digest"])
+                self.assertEqual(
+                    (self.root / "runs/supervisor/engineering-supervisor/state.json").read_bytes(),
+                    original_state)
+
+    def test_extension_requires_both_exact_reviewed_digests(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        with self.assertRaisesRegex(S.CampaignError, "current campaign approval"):
+            S.extend_campaign(base_path, next_path,
+                              approved_current_digest="0" * 64,
+                              approved_next_digest=proposed["campaign_digest"])
+        with self.assertRaisesRegex(S.CampaignError, "next campaign approval"):
+            S.extend_campaign(base_path, next_path,
+                              approved_current_digest=base["campaign_digest"],
+                              approved_next_digest="0" * 64)
+
+    def test_extension_rejects_manifest_replacement_after_approval_snapshot(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        changed = copy.deepcopy(proposed)
+        changed["plans"][1]["dependencies"] = ["first"]
+        changed["campaign_digest"] = S.campaign_digest(changed)
+        original_init = S.Campaign.__init__
+        replaced = [False]
+        def replace_before_second_read(campaign, source):
+            if Path(source) == next_path and not replaced[0]:
+                replaced[0] = True
+                next_path.write_text(S.canonical(changed))
+            original_init(campaign, source)
+        with patch.object(S.Campaign, "__init__", replace_before_second_read):
+            with self.assertRaisesRegex(S.CampaignError, "approved manifest changed"):
+                S.extend_campaign(
+                    base_path, next_path,
+                    approved_current_digest=base["campaign_digest"],
+                    approved_next_digest=proposed["campaign_digest"])
+
+    def test_extension_archives_exact_old_state_and_rejects_history_symlink(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        directory = self.root / "runs/supervisor/engineering-supervisor"
+        old_state = (directory / "state.json").read_bytes()
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        history = directory / "manifest-history"
+        history.mkdir()
+        target = history / (base["campaign_digest"] + ".json")
+        target.symlink_to(directory / "manifest.json")
+        with self.assertRaisesRegex(S.CampaignError, "symlink"):
+            S.extend_campaign(
+                base_path, next_path,
+                approved_current_digest=base["campaign_digest"],
+                approved_next_digest=proposed["campaign_digest"])
+        target.unlink()
+        S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+        archived_state = history / (base["campaign_digest"] + "-state.json")
+        self.assertEqual(archived_state.read_bytes(), old_state)
+
+    def test_multi_hop_extension_does_not_accept_a_nonpredecessor_as_idempotent(self):
+        self.plan("first")
+        path_a, manifest_a = self.manifest(version=2)
+        self.execute(path_a, manifest_a)
+        self.plan("second")
+        path_b, manifest_b = self.extended_manifest(manifest_a, path_name="campaign-b.json")
+        S.extend_campaign(path_a, path_b,
+                          approved_current_digest=manifest_a["campaign_digest"],
+                          approved_next_digest=manifest_b["campaign_digest"])
+        self.plan("third", dependencies=("second",))
+        path_c, manifest_c = self.extended_manifest(manifest_b, path_name="campaign-c.json")
+        S.extend_campaign(path_b, path_c,
+                          approved_current_digest=manifest_b["campaign_digest"],
+                          approved_next_digest=manifest_c["campaign_digest"])
+        with self.assertRaisesRegex(S.CampaignError, "predecessor"):
+            S.extend_campaign(path_a, path_c,
+                              approved_current_digest=manifest_a["campaign_digest"],
+                              approved_next_digest=manifest_c["campaign_digest"])
+
+    def test_extension_refuses_unsettled_or_active_campaign(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        directory = self.root / "runs/supervisor/engineering-supervisor"
+        directory.mkdir(parents=True)
+        (self.root / "runs/attempts/first").mkdir(parents=True)
+        state = {"kind": "research-supervisor-state-v1",
+                 "campaign_digest": base["campaign_digest"],
+                 "started_epoch": time.time(), "deadline_epoch": time.time() + 2400,
+                 "last_epoch": time.time(), "active": "first", "starts": {"first": 1}}
+        state["deadline_epoch"] = state["started_epoch"] + base["total_wall_seconds"]
+        (directory / "state.json").write_text(S.canonical(state))
+        (directory / "manifest.json").write_text(S.canonical(base))
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        with self.assertRaisesRegex(S.CampaignError, "settled campaign"):
+            S.extend_campaign(base_path, next_path,
+                              approved_current_digest=base["campaign_digest"],
+                              approved_next_digest=proposed["campaign_digest"])
+
+    def test_extension_rejects_malformed_retained_state_before_history_mutation(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        directory = self.root / "runs/supervisor/engineering-supervisor"
+        state_path = directory / "state.json"
+        original = json.loads(state_path.read_text())
+        for field, value in (("last_epoch", "not-a-number"), ("starts", {"first": 33})):
+            with self.subTest(field=field):
+                changed = copy.deepcopy(original)
+                changed[field] = value
+                state_path.write_text(S.canonical(changed))
+                with self.assertRaisesRegex(S.CampaignError, "retained campaign state"):
+                    S.extend_campaign(
+                        base_path, next_path,
+                        approved_current_digest=base["campaign_digest"],
+                        approved_next_digest=proposed["campaign_digest"])
+                self.assertFalse((directory / "manifest-history").exists())
+        state_path.write_text(S.canonical(original))
+        S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+        migrated = json.loads(state_path.read_text())
+        migrated["starts"]["first"] = 33
+        state_path.write_text(S.canonical(migrated))
+        with self.assertRaisesRegex(S.CampaignError, "retained campaign state"):
+            S.extend_campaign(
+                base_path, next_path,
+                approved_current_digest=base["campaign_digest"],
+                approved_next_digest=proposed["campaign_digest"])
+
+    def test_extension_rejects_symlink_or_wrong_identity_heartbeat(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.execute(base_path, base)
+        self.plan("second")
+        next_path, proposed = self.extended_manifest(base)
+        directory = self.root / "runs/supervisor/engineering-supervisor"
+        heartbeat = directory / "heartbeat.json"
+        retained = heartbeat.read_bytes()
+        elsewhere = self.root / "outside-heartbeat.json"
+        elsewhere.write_bytes(retained)
+        heartbeat.unlink()
+        heartbeat.symlink_to(elsewhere)
+        with self.assertRaisesRegex(S.CampaignError, "symlink"):
+            S.extend_campaign(
+                base_path, next_path,
+                approved_current_digest=base["campaign_digest"],
+                approved_next_digest=proposed["campaign_digest"])
+        heartbeat.unlink()
+        heartbeat.write_bytes(retained)
+        wrong = json.loads(heartbeat.read_text())
+        wrong["campaign_digest"] = "0" * 64
+        heartbeat.write_text(S.canonical(wrong))
+        with self.assertRaisesRegex(S.CampaignError, "heartbeat identity"):
+            S.extend_campaign(
+                base_path, next_path,
+                approved_current_digest=base["campaign_digest"],
+                approved_next_digest=proposed["campaign_digest"])
 
     def test_lost_ack_after_real_completion_settles_without_duplicate(self):
         self.plan("first")
