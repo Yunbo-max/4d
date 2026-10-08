@@ -108,9 +108,14 @@ Read SUPERVISOR_HANDOFF.md before use. It is neither installed nor running;
 `scripts/research_repair_bridge.py` now supplies the source-authored, fail-closed
 handoff from one reviewed terminal code error to the existing
 `research-autopilot` runtime/ACP worker. It is generated_unexecuted and does not
-mean an adapter, provider login, controller DB or worker is installed/running;
-the supervisor continues to report `not_connected` in this revision even if
-Local separately qualifies and invokes the bridge. The bridge can only request a reviewed child source
+mean an adapter, provider login, controller DB or worker is installed/running.
+The current checked-in state has no bridge receipt and reports `not_connected`.
+Supervisor source now has a read-only, hash-bound bridge receipt handshake, so a
+later actual Local call can instead report `configured_no_worker_receipt`,
+`worker_returned_unreviewed`, `reconcile_required` or `failed`; this handshake
+has not been accepted or installed, and `worker_returned_unreviewed` is not patch
+acceptance, a running supervisor or permission to append/retry work. The bridge
+can only request a reviewed child source
 version: it forbids GPU authority and retry of the failed scientific identity.
 Never reset campaign budget/identity or retry a frozen scientific attempt to
 obtain continued work.

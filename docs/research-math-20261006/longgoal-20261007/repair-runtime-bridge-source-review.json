@@ -1,8 +1,8 @@
 {
   "kind": "independent-static-source-review",
   "version": "1.0.0",
-  "subject": "existing-runtime online repair bridge and Local handoff",
-  "reviewed_at": "2026-10-08T18:50:00Z",
+  "subject": "existing-runtime online repair bridge, supervisor status handshake and Local handoff",
+  "reviewed_at": "2026-10-08T19:48:15Z",
   "reviewers": [
     "review_repair_bridge",
     "review_repair_handoff"
@@ -10,7 +10,9 @@
   "execution_performed": false,
   "reviewed_paths": [
     "scripts/research_repair_bridge.py",
+    "scripts/research_supervisor.py",
     "actionmesh/research_math/tests/test_research_repair_bridge.py",
+    "actionmesh/research_math/tests/test_research_supervisor.py",
     "actionmesh/prepare_control_scoring_checks.py",
     "LOCAL_AGENT_RUNBOOK.md",
     "docs/research-math-20261006/longgoal-20261007/SUPERVISOR_HANDOFF.md",
@@ -28,10 +30,18 @@
     "the provider-facing worker begins same-session POSIX process-group teardown at the reserved max_seconds; timeout/transport loss retains termination evidence and bounded partial-output hashes as worker_unknown and later execution is status-only",
     "the literal supervisor campaign and selected-entry envelope are schema-checked and a failed receipt must carry the selected campaign plan digest",
     "retained JSON symlinks/nonregular files and malformed/negative budget reservations fail closed",
-    "documentation now distinguishes task contracts from OS confinement and the separate bridge from the supervisor's hard-coded not_connected status"
+    "supervisor observation validates retained append-only manifest/extension ancestry, so a repair admitted against a valid parent campaign remains attributable after later exact-reviewed extension",
+    "repair request observation takes a nonblocking shared owner lock and treats active, incomplete, unindexed, unknown-status and durable-intent-without-terminal-event states as reconciliation-required without racing the bridge writer",
+    "every retained event filename/content/request digest, ordered sequence/previous-event hash, journal order and last-status pointer are reconciled; tamper or ambiguity fails closed rather than inferring success from wall-clock order",
+    "a retained registration, reservation, enqueue or worker intent forbids automatic replay; bridge rerun makes only the bounded authoritative runtime status call and retains reconciliation evidence",
+    "supervisor observation mirrors the bridge's immutable request-admission contract: live runtime/adapter hashes and DB identity, dedicated project policy and limits, complete failed-campaign/plan/receipt/status evidence, cumulative budget, inputs/instructions, dedicated outputs and exact task are all rebound before any status is reported",
+    "only the ordered registration-to-budget-to-enqueue-to-worker progression is accepted; exact stage/worker intents, invocation argv/outcomes, predecessor evidence and reservation identity are required, while incomplete or mutated evidence is reconciliation-required or rejected",
+    "an existing dedicated output without durable worker intent is classified as unowned reconciliation-required state, matching the bridge's first-dispatch preflight refusal",
+    "extension mutation does not perform a new fallible bridge scan after committing state; it returns readback_required and leaves detailed status to a separate read-only observation",
+    "documentation distinguishes task contracts from OS confinement and records the source-authored supervisor handshake separately from an actually configured/qualified worker"
   ],
   "remaining_important": [
-    "Local has not run the generated tests or the actual installed runtime/SQLite/ACP/provider integration path; fake-runtime unit fixtures prove bridge control flow only",
+    "Local has not run the generated tests, the real retained bridge-to-supervisor observation path, or the actual installed runtime/SQLite/ACP/provider integration path; source fixtures prove control flow only",
     "the initial repair-budget amount and terminal code-error classification remain trusted Local review/authorization boundaries; the bridge enforces their exact bytes and cumulative use but cannot infer user authority from repository files",
     "DB device/inode detects path replacement but not an in-place controller reinitialization; Local must bind and return actual runtime status/events/controller identity because this runtime guide exposes no controller UUID in the request contract"
   ],

@@ -1019,9 +1019,47 @@ The shared zero-GPU acceptance builder pins the bridge source and test.
 
 This is `generated_unexecuted`. No controller DB, adapter registry, provider
 authentication or live online agent was found or configured in Web; no bridge
-test or worker ran. The supervisor therefore still truthfully reports
-`online_repair_agent=not_connected`; this supervisor revision has no handshake
-that changes that field after a separate bridge run. Local entry is
+test or worker ran. The current retained state therefore truthfully reports
+`online_repair_agent=not_connected`. Local entry is
 `LOCAL_AGENT_RUNBOOK.md#reviewed-online-repair-bridge--source-authored-local-runtime-pending`.
 After real runtime qualification, Local must preserve the failed version, review
 the output and create a distinct child source/plan before append-only extension.
+
+### Repair bridge to supervisor status handshake continuation
+
+Restored literal main `6399bff2b087e3d648afa8e204948545c574ecca` and rechecked
+the four remaining candidate blockers. C03 cannot lawfully reuse the existing
+asset-specific frame-zero ICP/nearest-neighbour diagnostic as its required plain
+pointwise development correspondence; C05, C08 and C20 still lack their recorded
+model-native mode/chain/target interfaces. No candidate status or 11/15 count was
+changed.
+The actual coordination host remains task `6ac527ad50cc8191a4964d35ae0b826e`
+with conversation `6ac0b6a1-5e28-83e9-98d6-30f1536deef1`; this is not evidence
+of a continuously installed supervisor.
+
+The supervisor now observes the bridge's retained request/admission/ordered
+append-only event hash chain under the same campaign. It verifies hashes, event identity,
+zero-GPU/no-retry admission and rejects unsafe, cross-campaign, tampered or
+unindexed state. Read-only inspection and v2 heartbeats distinguish
+`not_connected`, `configured_no_worker_receipt`,
+`worker_returned_unreviewed`, `reconcile_required` and `failed`. This handshake
+does not invoke the runtime/provider, accept a patch, retry an experiment or
+append a child plan. The Local-only acceptance source covers returned, unknown,
+heartbeat, tamper, busy-owner and stage-intent lost-ack paths. Registration,
+reservation, enqueue or worker intent is never replayed automatically; a
+nonterminal retained intent is `reconcile_required`. Extension reports
+`readback_required` until a separate status observation.
+Observation mirrors the bridge's complete immutable admission checks, including
+runtime/adapter bytes, DB identity, dedicated project, failure/campaign/plan/status
+evidence, budget, exact task and output namespace. A worker-returned status also
+requires the exact ordered stage intents, argv-bound invocation results and
+reservation receipt; a merely self-consistent synthetic chain is not sufficient.
+
+All changes are `generated_unexecuted`: Web performed AST/diff/JSON/source review
+only and ran no project test, runtime worker, provider, model, data, scorer or GPU
+operation. The supervisor remains uninstalled/unstarted; no bridge receipt or
+actual online-agent connection exists in this source tree, so current operational
+status remains `not_connected`. Local must run the common zero-GPU acceptance,
+qualify the installed runtime/adapter/provider separately, and independently
+review any returned patch before a new exact child version and two-digest campaign
+extension. GPU STOP and cumulative budgets remain unchanged.

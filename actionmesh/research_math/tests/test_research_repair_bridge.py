@@ -245,6 +245,67 @@ class ResearchRepairBridgeTests(unittest.TestCase):
         self.assertFalse(any("worker" in call for call in calls))
         self.assertEqual(calls[-1][2], "status")
 
+    def test_retained_stage_intent_forbids_automatic_stage_replay(self):
+        for filename, stage in (
+                ("registration-intent.json", "register-project"),
+                ("budget-reservation-intent.json", "reserve-campaign-budget"),
+                ("enqueue-intent.json", "enqueue")):
+            with self.subTest(stage=stage):
+                path, value = self.request()
+                request = R.Request(path)
+                request.directory.mkdir(parents=True, exist_ok=True)
+                prefix = [str(request.runtime), "--db", str(request.db)]
+                expected = {
+                    "register-project": {
+                        "kind": "research-repair-stage-intent-v1", "stage": stage,
+                        "request_digest": value["request_digest"],
+                        "argv": prefix + ["register-project", str(request.project_path)]},
+                    "reserve-campaign-budget": {
+                        "kind": "research-repair-stage-intent-v1", "stage": stage,
+                        "request_digest": value["request_digest"],
+                        "max_cost": value["max_cost"],
+                        "max_seconds": value["max_seconds"]},
+                    "enqueue": {
+                        "kind": "research-repair-stage-intent-v1", "stage": stage,
+                        "request_digest": value["request_digest"],
+                        "argv": prefix + ["enqueue", value["project_id"],
+                                          str(request.directory / "task.json")]},
+                }[stage]
+                (request.directory / filename).write_text(
+                    R.canonical(expected) + "\n")
+                result = R.run_request(
+                    path, execute=True, approved_digest=value["request_digest"],
+                    environment={"REPAIR_RUNTIME_LOG": str(self.runtime_log)})
+                self.assertEqual(result["status"], "reconcile_required")
+                calls = [json.loads(line) for line in
+                         self.runtime_log.read_text().splitlines()]
+                self.assertEqual(calls[-1][:4],
+                                 ["--db", str(self.db), "status",
+                                  "repair-candidate-a-v2"])
+                self.assertFalse(any(action in call for call in calls
+                                     for action in ("register-project", "enqueue", "worker")))
+                # Each subcase needs an independent retained request namespace.
+                for child in request.directory.iterdir():
+                    if child.is_file():
+                        child.unlink()
+                    elif child.is_dir():
+                        for nested in child.iterdir():
+                            nested.unlink()
+                        child.rmdir()
+                self.runtime_log.unlink()
+
+    def test_mutated_retained_stage_intent_is_rejected(self):
+        path, value = self.request()
+        request = R.Request(path)
+        request.directory.mkdir(parents=True)
+        (request.directory / "enqueue-intent.json").write_text(R.canonical({
+            "kind": "research-repair-stage-intent-v1", "stage": "enqueue",
+            "request_digest": value["request_digest"]}) + "\n")
+        with self.assertRaisesRegex(R.RepairBridgeError, "stage intent mismatch"):
+            R.run_request(path, execute=True, approved_digest=value["request_digest"],
+                          environment={"REPAIR_RUNTIME_LOG": str(self.runtime_log)})
+        self.assertFalse(self.runtime_log.exists())
+
     def test_admission_cannot_authorize_gpu_or_retry_same_scientific_attempt(self):
         path, value = self.request()
         admission = json.loads((self.root / self.admission_ref["path"]).read_text())

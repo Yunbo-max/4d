@@ -310,14 +310,31 @@ The following blockers remain explicit:
   scientific retry, output overwrite and automatic patch application. This
   project still has no verified controller DB registration, dedicated repair
   project, adapter/provider
-  login or worker receipt; the supervisor therefore continues to report
-  `online_repair_agent=not_connected`. Local must qualify the bridge and actual
+  login or worker receipt, so the current checked-in state still reports
+  `online_repair_agent=not_connected`. After Local runs the bridge, supervisor
+  inspection now performs a read-only, hash-bound status handshake over the
+  bridge's retained `request.json`, admission ref, `last-status.json` and exact
+  ordered append-only event hash chain. It reports `configured_no_worker_receipt`,
+  `worker_returned_unreviewed`, `reconcile_required` or `failed`; malformed,
+  cross-campaign, unsafe or unindexed event state fails closed. A returned worker
+  is deliberately not called a reviewed patch, connected deployment or child
+  plan. The handshake never invokes the runtime, provider or GPU.
+  Any retained registration, reservation, enqueue or worker intent without a
+  terminal worker event, and any busy bridge owner lock, is
+  `reconcile_required`; it is never inferred to be dispatch-ready. After an
+  append-only extension returns `readback_required`, use a separate `--status`
+  read to observe the migrated state.
+  Observation also revalidates the bridge's full immutable request boundary:
+  runtime/adapter hashes, DB identity, dedicated project, complete failure and
+  campaign evidence, budget, exact task and dedicated outputs. Worker-returned
+  additionally requires the exact ordered intent/result progression with
+  argv-bound invocation receipts and the exact reservation identity.
+  Local must qualify the bridge and actual
   adapter, review the produced patch, create a distinct child source/plan and use
   the existing two-digest append-only extension. No free-form direction change
   or retry of the failed experiment is admitted. In this revision the supervisor
-  itself is not wired to change that field after a bridge run; it always reports
-  `not_connected`, and the bridge's retained runtime evidence is a separate Local
-  handoff until a future reviewed status handshake is implemented.
+  retains the bridge's runtime evidence as a separate Local handoff until the
+  patch is independently reviewed and a distinct child source/plan is appended.
 - **Scientific qualification is unchanged.** This wrapper does not qualify the
   current native baseline, trusted replay, candidate methods, or scientific
   outcomes, and does not advance research gates.

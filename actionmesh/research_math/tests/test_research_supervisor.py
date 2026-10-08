@@ -6,6 +6,7 @@ scientific scorer/model/data is exercised. Removing identity, receipt, dependenc
 STOP or deadline enforcement from the supervisor must fail the corresponding test.
 """
 import copy
+import hashlib
 import importlib.util
 import json
 import os
@@ -107,6 +108,252 @@ class ResearchSupervisorTests(unittest.TestCase):
     def execute(self, path, value, **options):
         return S.run_campaign(path, execute=True,
                               approved_digest=value["campaign_digest"], poll_seconds=.05, **options)
+
+    def repair_receipt(self, campaign, *, bridge_status="worker_returned",
+                       request_id="repair-a"):
+        """Write a complete bridge-valid retained request and receipt chain."""
+        failed_entry = campaign["plans"][0]
+        failure_ref = self.write("repair-failure-" + request_id + ".json", {
+            "status": "failed", "plan_digest": failed_entry["plan_digest"]})
+        status_ref = self.write("repair-status-" + request_id + ".json", {
+            "status": "inspection", "campaign_digest": campaign["campaign_digest"],
+            "plans": {failed_entry["id"]: {"status": "failed", "repairable": True}}})
+        budget_ref = self.write("repair-budget-" + request_id + ".json", {
+            "kind": "research-repair-campaign-budget", "version": 1,
+            "campaign_id": campaign["campaign_id"],
+            "campaign_digest": campaign["campaign_digest"],
+            "max_cost": 7, "max_seconds": 11})
+        campaign_path = self.root / "campaign.json"
+        campaign_ref = {"path": "campaign.json", "sha256": S.file_digest(campaign_path)}
+        admission = {"kind": "research-repair-admission", "version": 1,
+                     "campaign_id": campaign["campaign_id"],
+                     "campaign_digest": campaign["campaign_digest"],
+                     "failed_plan_id": failed_entry["id"],
+                     "status": "terminal_failed", "classification": "code_error",
+                     "gpu_allowed": False, "scientific_retry_allowed": False,
+                     "reviewer": "local-reviewer", "reviewed_at": "2026-10-08T00:00:00Z",
+                     "repair_scope": "candidate child source only",
+                     "failure_ref": failure_ref,
+                     "failed_plan_ref": failed_entry["plan_ref"],
+                     "supervisor_status_ref": status_ref,
+                     "budget_ref": budget_ref, "campaign_ref": campaign_ref}
+        admission_ref = self.write("repair-admission-" + request_id + ".json",
+                                   admission)
+        instruction_ref = self.write("repair-instruction-" + request_id + ".json",
+                                     {"scope": "repair reviewed code failure"})
+        project_ref = self.write("repair-project-" + request_id + ".json",
+            {"project_id": request_id, "root": str(self.root),
+             "workflow_class": "scientific_method",
+             "assigned_role": "web_supervisor", "adapter_allowlist": ["codex"],
+             "skill_root": str(self.skill), "skill_digest": self.skill_hash,
+             "max_cost": 7, "max_seconds": 11, "max_workers": 1})
+        runtime = Path(sys.executable).resolve()
+        database = self.root / "controller.sqlite3"
+        if not database.exists():
+            database.write_bytes(b"controller-fixture")
+        adapters_path = self.root / "adapters.json"
+        if not adapters_path.exists():
+            adapters_path.write_text('{"adapters":{}}\n')
+        request = {"kind": "research-runtime-repair-request", "version": 1,
+                   "request_id": request_id, "root": str(self.root),
+                   "runtime_executable": str(runtime),
+                   "runtime_sha256": S.file_digest(runtime),
+                   "db": str(database),
+                   "db_device": database.stat().st_dev,
+                   "db_inode": database.stat().st_ino,
+                   "project_id": request_id, "dedicated_project": True,
+                   "owner": "repair-owner",
+                   "adapter": "codex",
+                   "adapters_config": str(adapters_path),
+                   "adapters_sha256": S.file_digest(adapters_path),
+                   "project_ref": project_ref, "admission_ref": admission_ref,
+                   "inputs": [failure_ref, failed_entry["plan_ref"], status_ref,
+                              budget_ref, campaign_ref],
+                   "instructions": [instruction_ref],
+                   "output_paths": ["repairs/" + campaign["campaign_id"] + "/" +
+                                    request_id + "/patch.diff"],
+                   "max_cost": 7, "max_seconds": 11,
+                   "capabilities": ["filesystem_read", "filesystem_write"]}
+        request["request_digest"] = hashlib.sha256(
+            S.canonical({key: value for key, value in request.items()
+                         if key != "request_digest"}).encode()).hexdigest()
+        directory = (self.root / "runs/supervisor" / campaign["campaign_id"] /
+                     "repair-requests" / request_id)
+        events = directory / "events"
+        events.mkdir(parents=True)
+        (directory / "owner.lock").write_text("")
+        (directory / "request.json").write_text(S.canonical(request) + "\n")
+        task = {"task_id": request_id, "action": "candidate_code",
+                "inputs": list(request["inputs"]),
+                "instructions": [request["admission_ref"],
+                                 *request["instructions"]],
+                "dependencies": [], "output_paths": list(request["output_paths"]),
+                "completion": {"kind": "outputs_verified"},
+                "max_cost": request["max_cost"],
+                "max_seconds": request["max_seconds"],
+                "capabilities": list(request["capabilities"]),
+                "adapter": request["adapter"],
+                "parameters": {"campaign_digest": campaign["campaign_digest"],
+                               "failed_plan_id": campaign["plans"][0]["id"],
+                               "gpu_allowed": False,
+                               "scientific_retry_allowed": False,
+                               "requires_reviewed_child_version": True}}
+        (directory / "task.json").write_text(S.canonical(task) + "\n")
+        prefix = [request["runtime_executable"], "--db", request["db"]]
+        registration_argv = prefix + ["register-project",
+                                      str(self.root / project_ref["path"])]
+        enqueue_argv = prefix + ["enqueue", request_id,
+                                 str(directory / "task.json")]
+        worker_argv = prefix + ["worker", request_id, "--owner", request["owner"],
+                                "--adapter", request["adapter"],
+                                "--adapters-config", request["adapters_config"]]
+        registration = self.repair_invocation(registration_argv)
+        enqueue = self.repair_invocation(enqueue_argv)
+        worker_code = (None if bridge_status == "worker_unknown" else
+                       7 if bridge_status == "worker_failed" else 0)
+        worker = self.repair_invocation(worker_argv, worker_code)
+        values = []
+        registration_status = (bridge_status if bridge_status.startswith(
+            "project_registration_") else "project_registration_returned")
+        registration_value = self.repair_invocation(
+            registration_argv, None if registration_status.endswith("unknown") else
+            7 if registration_status.endswith("failed") else 0)
+        values.append({"status": registration_status, "stage": "register-project",
+                       "request_digest": request["request_digest"],
+                       "registration": registration_value})
+        self.repair_stage_intent(directory, "register-project")
+        if registration_status == "project_registration_returned" and not bridge_status.startswith(
+                "project_registration_"):
+            if bridge_status == "budget_reservation_failed":
+                values.append({"status": bridge_status,
+                               "stage": "reserve-campaign-budget",
+                               "request_digest": request["request_digest"],
+                               "error": "RepairBridgeError: fixture"})
+                self.repair_stage_intent(directory, "reserve-campaign-budget")
+            else:
+                reservation_ref = self.write(
+                    "repair-reservation-" + request_id + ".json",
+                    {"kind": "research-repair-reservation", "version": 1,
+                     "campaign_digest": campaign["campaign_digest"],
+                     "request_id": request_id,
+                     "request_digest": request["request_digest"],
+                     "max_cost": request["max_cost"],
+                     "max_seconds": request["max_seconds"]})
+                values.append({"status": "budget_reserved",
+                               "stage": "reserve-campaign-budget",
+                               "request_digest": request["request_digest"],
+                               "reservation_ref": reservation_ref})
+                self.repair_stage_intent(directory, "reserve-campaign-budget")
+                if bridge_status not in {"budget_reserved"}:
+                    enqueue_status = (bridge_status if bridge_status.startswith("enqueue_")
+                                      else "enqueue_returned")
+                    enqueue_value = self.repair_invocation(
+                        enqueue_argv, None if enqueue_status.endswith("unknown") else
+                        7 if enqueue_status.endswith("failed") else 0)
+                    values.append({"status": enqueue_status, "stage": "enqueue",
+                                   "request_digest": request["request_digest"],
+                                   "enqueue": enqueue_value})
+                    self.repair_stage_intent(directory, "enqueue")
+                    if (enqueue_status == "enqueue_returned" and
+                            bridge_status.startswith("worker_")):
+                        values.append({"status": bridge_status,
+                                       "request_digest": request["request_digest"],
+                                       "registration": registration,
+                                       "enqueue": enqueue,
+                                       "worker": worker})
+                        self.repair_worker_intent(directory)
+        previous = None
+        encoded = []
+        event_name = None
+        for sequence, value in enumerate(values, 1):
+            event = dict(value, sequence=sequence,
+                         previous_event_sha256=previous)
+            event_hash = hashlib.sha256(S.canonical(event).encode()).hexdigest()
+            event_name = f"{sequence:020d}-" + event_hash + ".json"
+            (events / event_name).write_text(S.canonical(event) + "\n")
+            encoded.append(S.canonical(event))
+            previous = event_hash
+        (directory / "journal.jsonl").write_text("\n".join(encoded) + "\n")
+        (directory / "last-status.json").write_text(S.canonical({
+            "event": event_name, "status": bridge_status,
+            "request_digest": request["request_digest"]}) + "\n")
+        return directory
+
+    def repair_invocation(self, argv, returncode=0):
+        unknown = returncode is None
+        return {"argv": argv, "returncode": returncode,
+                "transport_error": "OSError: fixture" if unknown else None,
+                "termination": {"process_group": 123, "term_sent": False,
+                                "kill_sent": False, "direct_child_reaped": not unknown},
+                "started_epoch": 1.0, "finished_epoch": 2.0,
+                "stdout": "", "stdout_sha256": hashlib.sha256(b"").hexdigest(),
+                "stdout_bytes": 0, "stdout_truncated": False,
+                "stderr": "", "stderr_sha256": hashlib.sha256(b"").hexdigest(),
+                "stderr_bytes": 0, "stderr_truncated": False}
+
+    def rewrite_repair_chain(self, directory, mutate):
+        paths = sorted((directory / "events").glob("*.json"))
+        values = [json.loads(path.read_text()) for path in paths]
+        mutate(values)
+        for path in paths:
+            path.unlink()
+        previous, encoded, event_name = None, [], None
+        for sequence, original in enumerate(values, 1):
+            value = {key: item for key, item in original.items()
+                     if key not in {"sequence", "previous_event_sha256"}}
+            value.update(sequence=sequence, previous_event_sha256=previous)
+            digest = hashlib.sha256(S.canonical(value).encode()).hexdigest()
+            event_name = f"{sequence:020d}-" + digest + ".json"
+            (directory / "events" / event_name).write_text(
+                S.canonical(value) + "\n")
+            encoded.append(S.canonical(value))
+            previous = digest
+        (directory / "journal.jsonl").write_text("\n".join(encoded) + "\n")
+        request = json.loads((directory / "request.json").read_text())
+        (directory / "last-status.json").write_text(S.canonical({
+            "event": event_name, "status": values[-1]["status"],
+            "request_digest": request["request_digest"]}) + "\n")
+
+    def repair_stage_intent(self, directory, stage):
+        request = json.loads((directory / "request.json").read_text())
+        prefix = [request["runtime_executable"], "--db", request["db"]]
+        if stage == "register-project":
+            value = {"kind": "research-repair-stage-intent-v1", "stage": stage,
+                     "request_digest": request["request_digest"],
+                     "argv": prefix + ["register-project",
+                                       str(self.root / request["project_ref"]["path"])]}
+            name = "registration-intent.json"
+        elif stage == "reserve-campaign-budget":
+            value = {"kind": "research-repair-stage-intent-v1", "stage": stage,
+                     "request_digest": request["request_digest"],
+                     "max_cost": request["max_cost"],
+                     "max_seconds": request["max_seconds"]}
+            name = "budget-reservation-intent.json"
+        elif stage == "enqueue":
+            value = {"kind": "research-repair-stage-intent-v1", "stage": stage,
+                     "request_digest": request["request_digest"],
+                     "argv": prefix + ["enqueue", request["project_id"],
+                                       str(directory / "task.json")]}
+            name = "enqueue-intent.json"
+        else:
+            raise AssertionError("unknown repair stage fixture")
+        (directory / name).write_text(S.canonical(value) + "\n")
+        return directory / name
+
+    def repair_worker_intent(self, directory):
+        request = json.loads((directory / "request.json").read_text())
+        value = {"kind": "research-repair-worker-intent-v1",
+                 "request_digest": request["request_digest"],
+                 "project_id": request["project_id"],
+                 "task_id": request["request_id"], "owner": request["owner"],
+                 "adapter": request["adapter"],
+                 "argv": [request["runtime_executable"], "--db", request["db"],
+                          "worker", request["project_id"], "--owner",
+                          request["owner"], "--adapter", request["adapter"],
+                          "--adapters-config", request["adapters_config"]],
+                 "timeout_seconds": request["max_seconds"]}
+        (directory / "worker-intent.json").write_text(S.canonical(value) + "\n")
+        return directory / "worker-intent.json"
 
     def test_default_inspection_never_creates_runtime_state(self):
         self.plan("a")
@@ -584,6 +831,304 @@ class ResearchSupervisorTests(unittest.TestCase):
         inspected = S.run_campaign(path)
         self.assertIn("heartbeat", inspected["retained_status"])
         self.assertEqual(inspected["retained_status"]["online_repair_agent"], "not_connected")
+
+    def test_repair_bridge_worker_receipt_is_observed_without_dispatch_or_patch_acceptance(self):
+        self.plan("first")
+        path, value = self.manifest()
+        self.repair_receipt(value)
+        inspected = S.run_campaign(path)
+        retained = inspected["retained_status"]
+        self.assertEqual(retained["online_repair_agent"],
+                         "worker_returned_unreviewed")
+        self.assertEqual(retained["repair_bridge"]["requests"]["repair-a"]["bridge_status"],
+                         "worker_returned")
+        self.assertFalse((self.root / "runs/harness").exists())
+
+    def test_repair_bridge_unknown_requires_reconciliation_and_survives_heartbeat(self):
+        self.plan("first")
+        path, value = self.manifest()
+        self.repair_receipt(value, bridge_status="worker_unknown")
+        result = self.execute(path, value, heartbeat_seconds=.05)
+        self.assertEqual(result["online_repair_agent"], "reconcile_required")
+        heartbeat = json.loads((self.root / "runs/supervisor/engineering-supervisor/heartbeat.json").read_text())
+        self.assertEqual(heartbeat["kind"], "research-supervisor-heartbeat-v2")
+        self.assertEqual(heartbeat["online_repair_agent"], "reconcile_required")
+        self.assertEqual(heartbeat["repair_bridge_status"], "reconcile_required")
+
+    def test_repair_worker_intent_without_terminal_event_requires_reconciliation(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="enqueue_returned")
+        self.repair_worker_intent(directory)
+        retained = S.run_campaign(path)["retained_status"]
+        self.assertEqual(retained["online_repair_agent"], "reconcile_required")
+        self.assertEqual(retained["repair_bridge"]["requests"]["repair-a"]
+                         ["bridge_status"], "worker_intent_without_terminal_event")
+
+    def test_repair_enqueue_returned_without_worker_is_not_reported_ready(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="enqueue_returned")
+        self.repair_stage_intent(directory, "enqueue")
+        retained = S.run_campaign(path)["retained_status"]
+        self.assertEqual(retained["online_repair_agent"], "reconcile_required")
+
+    def test_exact_stage_failures_remain_failed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        cases = (("project_registration_failed", "register-project"),
+                 ("budget_reservation_failed", "reserve-campaign-budget"),
+                 ("enqueue_failed", "enqueue"))
+        for index, (status, stage) in enumerate(cases):
+            with self.subTest(stage=stage):
+                request_id = "repair-failure-" + str(index)
+                directory = self.repair_receipt(
+                    value, bridge_status=status, request_id=request_id)
+                self.repair_stage_intent(directory, stage)
+                retained = S.run_campaign(path)["retained_status"]
+                item = retained["repair_bridge"]["requests"][request_id]
+                self.assertEqual(item["status"], "failed")
+
+    def test_mutated_stage_or_worker_intent_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        stage_path = self.repair_stage_intent(directory, "enqueue")
+        stage_value = json.loads(stage_path.read_text())
+        del stage_value["argv"]
+        stage_path.write_text(S.canonical(stage_value) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "stage intent identity"):
+            S.run_campaign(path)
+        stage_path.unlink()
+        worker_path = self.repair_worker_intent(directory)
+        worker_value = json.loads(worker_path.read_text())
+        worker_value["timeout_seconds"] += 1
+        worker_path.write_text(S.canonical(worker_value) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "worker intent identity"):
+            S.run_campaign(path)
+
+    def test_bridge_invalid_live_controller_identity_is_rejected(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        request = json.loads((directory / "request.json").read_text())
+        database = Path(request["db"])
+        database.unlink()
+        database.mkdir()
+        with self.assertRaisesRegex(S.CampaignError, "runtime identity"):
+            S.run_campaign(path)
+
+    def test_unowned_preflight_output_is_never_reported_configured(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        request = json.loads((directory / "request.json").read_text())
+        for name in ("registration-intent.json", "budget-reservation-intent.json",
+                     "enqueue-intent.json", "worker-intent.json", "last-status.json",
+                     "journal.jsonl"):
+            (directory / name).unlink()
+        for event in (directory / "events").iterdir():
+            event.unlink()
+        (directory / "events").rmdir()
+        output = self.root / request["output_paths"][0]
+        output.parent.mkdir(parents=True)
+        output.write_text("unowned")
+        retained = S.run_campaign(path)["retained_status"]
+        item = retained["repair_bridge"]["requests"]["repair-a"]
+        self.assertEqual(item["status"], "reconcile_required")
+        self.assertEqual(item["bridge_status"], "unowned_repair_output")
+
+    def test_complete_worker_receipt_requires_all_intents(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        (directory / "worker-intent.json").unlink()
+        retained = S.run_campaign(path)["retained_status"]
+        self.assertEqual(retained["online_repair_agent"], "reconcile_required")
+        self.assertEqual(retained["repair_bridge"]["requests"]["repair-a"]
+                         ["bridge_status"], "invalid_bridge_progression")
+
+    def test_each_stage_result_requires_its_exact_intent(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        cases = (("register-project", "registration-intent.json"),
+                 ("reserve-campaign-budget", "budget-reservation-intent.json"),
+                 ("enqueue", "enqueue-intent.json"))
+        for stage, missing in cases:
+            with self.subTest(stage=stage):
+                (directory / missing).unlink()
+                retained = S.run_campaign(path)["retained_status"]
+                item = retained["repair_bridge"]["requests"]["repair-a"]
+                self.assertEqual(item["status"], "reconcile_required")
+                self.repair_stage_intent(directory, stage)
+
+    def test_hash_consistent_registration_argv_mutation_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        self.rewrite_repair_chain(directory, lambda events:
+            events[0]["registration"]["argv"].append("--wrong"))
+        with self.assertRaisesRegex(S.CampaignError,
+                                    "registration invocation identity"):
+            S.run_campaign(path)
+
+    def test_hash_consistent_enqueue_argv_mutation_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        self.rewrite_repair_chain(directory, lambda events:
+            events[2]["enqueue"]["argv"].append("--wrong"))
+        with self.assertRaisesRegex(S.CampaignError, "enqueue invocation identity"):
+            S.run_campaign(path)
+
+    def test_hash_consistent_stage_result_missing_payload_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="enqueue_failed")
+        last_path = directory / "last-status.json"
+        last = json.loads(last_path.read_text())
+        old_path = directory / "events" / last["event"]
+        event = json.loads(old_path.read_text())
+        del event["enqueue"]
+        digest = hashlib.sha256(S.canonical(event).encode()).hexdigest()
+        new_name = event["sequence"].__format__("020d") + "-" + digest + ".json"
+        new_path = old_path.with_name(new_name)
+        old_path.rename(new_path)
+        new_path.write_text(S.canonical(event) + "\n")
+        lines = (directory / "journal.jsonl").read_text().splitlines()
+        lines[-1] = S.canonical(event)
+        (directory / "journal.jsonl").write_text("\n".join(lines) + "\n")
+        last["event"] = new_name
+        last_path.write_text(S.canonical(last) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "contract fields"):
+            S.run_campaign(path)
+
+    def test_hash_consistent_worker_argv_mutation_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        last_path = directory / "last-status.json"
+        last = json.loads(last_path.read_text())
+        old_path = directory / "events" / last["event"]
+        event = json.loads(old_path.read_text())
+        event["worker"]["argv"][-1] = str(self.root / "wrong-adapters.json")
+        digest = hashlib.sha256(S.canonical(event).encode()).hexdigest()
+        new_name = f"{event['sequence']:020d}-" + digest + ".json"
+        new_path = old_path.with_name(new_name)
+        old_path.rename(new_path)
+        new_path.write_text(S.canonical(event) + "\n")
+        lines = (directory / "journal.jsonl").read_text().splitlines()
+        lines[-1] = S.canonical(event)
+        (directory / "journal.jsonl").write_text("\n".join(lines) + "\n")
+        last["event"] = new_name
+        last_path.write_text(S.canonical(last) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "worker invocation identity"):
+            S.run_campaign(path)
+
+    def test_hash_bound_wrong_reservation_identity_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="budget_reserved")
+        last_path = directory / "last-status.json"
+        last = json.loads(last_path.read_text())
+        old_path = directory / "events" / last["event"]
+        event = json.loads(old_path.read_text())
+        receipt_path = self.root / event["reservation_ref"]["path"]
+        receipt = json.loads(receipt_path.read_text())
+        receipt["max_cost"] += 1
+        receipt_path.write_text(S.canonical(receipt) + "\n")
+        event["reservation_ref"]["sha256"] = S.file_digest(receipt_path)
+        digest = hashlib.sha256(S.canonical(event).encode()).hexdigest()
+        new_name = f"{event['sequence']:020d}-" + digest + ".json"
+        new_path = old_path.with_name(new_name)
+        old_path.rename(new_path)
+        new_path.write_text(S.canonical(event) + "\n")
+        lines = (directory / "journal.jsonl").read_text().splitlines()
+        lines[-1] = S.canonical(event)
+        (directory / "journal.jsonl").write_text("\n".join(lines) + "\n")
+        last["event"] = new_name
+        last_path.write_text(S.canonical(last) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "reservation receipt identity"):
+            S.run_campaign(path)
+
+    def test_repair_owner_lock_contention_defers_observation(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value)
+        lock = (directory / "owner.lock").open("r")
+        S.fcntl.flock(lock, S.fcntl.LOCK_EX)
+        try:
+            retained = S.run_campaign(path)["retained_status"]
+        finally:
+            S.fcntl.flock(lock, S.fcntl.LOCK_UN)
+            lock.close()
+        request = retained["repair_bridge"]["requests"]["repair-a"]
+        self.assertEqual(request["status"], "reconcile_required")
+        self.assertEqual(request["reason"], "bridge_owner_active")
+
+    def test_repair_historical_event_or_journal_reorder_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value, bridge_status="worker_returned")
+        original = next((directory / "events").glob("00000000000000000001-*.json"))
+        retained_bytes = original.read_bytes()
+        first = json.loads(retained_bytes)
+        original.write_text(S.canonical(dict(first, stage="wrong-stage")) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "event inventory"):
+            S.run_campaign(path)
+        original.write_bytes(retained_bytes)
+        lines = (directory / "journal.jsonl").read_text().splitlines()
+        (directory / "journal.jsonl").write_text(
+            lines[1] + "\n" + lines[0] + "\n" + "\n".join(lines[2:]) + "\n")
+        retained = S.run_campaign(path)["retained_status"]
+        self.assertEqual(retained["online_repair_agent"], "reconcile_required")
+        self.assertEqual(retained["repair_bridge"]["requests"]["repair-a"]
+                         ["bridge_status"], "unindexed_event")
+
+    def test_parent_repair_receipt_survives_extension_and_lost_ack_readback(self):
+        self.plan("first")
+        base_path, base = self.manifest(version=2)
+        self.repair_receipt(base)
+        self.execute(base_path, base)
+        self.plan("second", dependencies=("first",))
+        next_path, proposed = self.extended_manifest(base)
+        extended = S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+        self.assertEqual(extended["status"], "extended")
+        self.assertEqual(extended["online_repair_agent"], "readback_required")
+        inspected = S.run_campaign(next_path)
+        self.assertEqual(inspected["retained_status"]["online_repair_agent"],
+                         "worker_returned_unreviewed")
+        repeated = S.extend_campaign(
+            base_path, next_path,
+            approved_current_digest=base["campaign_digest"],
+            approved_next_digest=proposed["campaign_digest"])
+        self.assertEqual(repeated["status"], "already_extended")
+        self.assertEqual(repeated["online_repair_agent"], "readback_required")
+
+    def test_repair_bridge_tamper_or_cross_campaign_receipt_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value)
+        last = json.loads((directory / "last-status.json").read_text())
+        event = directory / "events" / last["event"]
+        event.write_text(S.canonical({"status": "worker_returned",
+                                      "request_digest": "0" * 64}) + "\n")
+        with self.assertRaisesRegex(S.CampaignError, "event .*identity"):
+            S.run_campaign(path)
+
+    def test_repair_event_symlink_root_fails_closed(self):
+        self.plan("first")
+        path, value = self.manifest()
+        directory = self.repair_receipt(value)
+        real = directory / "events-real"
+        (directory / "events").rename(real)
+        (directory / "events").symlink_to(real, target_is_directory=True)
+        with self.assertRaisesRegex(S.CampaignError, "event root"):
+            S.run_campaign(path)
 
     def test_reviewed_append_only_extension_preserves_budget_and_completed_history(self):
         self.plan("first")

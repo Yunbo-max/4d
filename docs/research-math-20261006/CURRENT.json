@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T18:50:00Z",
+  "recorded_at": "2026-10-08T19:48:15Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,26 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C03/C20 and C05/C08 remain blocked on genuine legal inputs. The stage-wide G01 source design is complete/generated_unexecuted with C07's exact closure added; dynamic family/B*/candidate admission remains pending. Four full method source chains remain. The reviewed online-repair bridge source now reuses the existing research-autopilot runtime for one immutable candidate_code task, but no controller DB/adapter/provider is configured or running and Local qualification is pending. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C03/C20 and C05/C08 remain blocked on genuine legal inputs. The stage-wide G01 source design is complete/generated_unexecuted with C07's exact closure added; dynamic family/B*/candidate admission remains pending. Four full method source chains remain. The reviewed online-repair bridge now has a fail-closed read-only supervisor receipt handshake, but no controller DB/adapter/provider/worker receipt is configured or running and Local qualification is pending. Local/native methods 0/15. GPU STOP unchanged.",
+  "supervisor_repair_handshake": {
+    "status": "source_authored_generated_unexecuted_local_acceptance_pending",
+    "authoring_base": "6399bff2b087e3d648afa8e204948545c574ecca",
+    "supervisor_entry": "scripts/research_supervisor.py",
+    "bridge_entry": "scripts/research_repair_bridge.py",
+    "acceptance_source": "actionmesh/research_math/tests/test_research_supervisor.py",
+    "observed_states": [
+      "not_connected",
+      "configured_no_worker_receipt",
+      "worker_returned_unreviewed",
+      "reconcile_required",
+      "failed"
+    ],
+    "scope": "Read-only full bridge-contract revalidation plus ordered registration/budget/enqueue/worker hash-chain reconciliation across append-only campaign lineage. Runtime/adapter bytes and DB identity are observed but never invoked. Retained unmatched intent or an active owner lock is never reported ready; no provider/GPU call, patch acceptance, retry or child-plan append.",
+    "current_operational_state": "not_connected",
+    "supervisor_installed": false,
+    "supervisor_running": false,
+    "tests_executed": false
+  },
   "g01_source_design": {
     "status": "complete_source_design_generated_unexecuted_dynamic_admission_pending",
     "recorded_at": "2026-10-08T16:50:42Z",

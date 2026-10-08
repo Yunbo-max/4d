@@ -8,7 +8,7 @@ C07 now has a [complete generated-unexecuted partial-transport chain](LOCAL_AGEN
 
 当前状态以 [CURRENT.json](docs/research-math-20261006/CURRENT.json) 和最新回执为准：r9 的九个工程基线单元已经完成，R3 原始归档保留了 311 项软件检查通过的记录，历史定价路径修复已在源码中。311 项回执不覆盖后续 macOS 路径修订和本轮新增代码。UID008 仅有紧凑评分一致性回传，完整 raw 包、重复评分和可信重放仍待补。候选源码链完整为 11/15；Local 验证和 native 结果仍为 0/15。
 
-C04 新增真实原生输入到稳健约束、三臂完整导出、五角色官方评分与归档的源码链。采用显式正对角敏感度椭球和预测网格动作代理量，保留投影证书、float32 有限步检查及全部失败；不声称概率覆盖或原生指标保证。见[运行手册 C04 章节](LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance)。Supervisor 新增固定清单内的输入等待、心跳、STOP/resume 与丢失确认对账；[在线修复桥](LOCAL_AGENT_RUNBOOK.md#reviewed-online-repair-bridge--source-authored-local-runtime-pending)现可把一个已审查的终止代码错误交给既有 `research-autopilot` runtime 的单个有限 worker，但仍未安装、运行或连接真实 provider；任务契约不授予 GPU 权限、科学重试或自动应用补丁，也不替代 Local 对 agent/provider 的 OS 隔离资格验证。
+C04 新增真实原生输入到稳健约束、三臂完整导出、五角色官方评分与归档的源码链。采用显式正对角敏感度椭球和预测网格动作代理量，保留投影证书、float32 有限步检查及全部失败；不声称概率覆盖或原生指标保证。见[运行手册 C04 章节](LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance)。Supervisor 新增固定清单内的输入等待、心跳、STOP/resume 与丢失确认对账；[在线修复桥](LOCAL_AGENT_RUNBOOK.md#reviewed-online-repair-bridge--source-authored-local-runtime-pending)现可把一个已审查的终止代码错误交给既有 `research-autopilot` runtime 的单个有限 worker，并由 supervisor 只读核对哈希绑定的桥接回执。当前没有实际回执、安装或真实 provider 连接；`worker_returned_unreviewed` 也只表示有限 worker 子进程返回，不是补丁验收。任务契约不授予 GPU 权限、科学重试或自动应用补丁，也不替代 Local 对 agent/provider 的 OS 隔离资格验证。
 
 C01 新增完整同上下文减偏源码链：`prepare_self_map_candidate.py` 从真实已消费的上下文生成 raw、mean-bias 与逐顶点减偏输出；`prepare_c01_native_acceptance.py` 提供真实输入与跨根 staging 的 CPU 验收。原生裁剪 B0 与 raw 对照分开，16 帧与锚点保留，官方评分归档包含上下文和失败报告。当前入口只覆盖冻结的 seed42/16帧；更广种子设计、科学准入及 Local 验收仍待完成。见[运行手册 C01 章节](LOCAL_AGENT_RUNBOOK.md#c01-same-context-correction-and-retained-native-acceptance)。
 

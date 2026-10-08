@@ -519,11 +519,676 @@ def reconcile_dispatch(campaign, state, observed):
     return outcomes, driver_live
 
 
+REPAIR_AGENT_STATUSES = {
+    "not_connected", "configured_no_worker_receipt",
+    "worker_returned_unreviewed", "reconcile_required", "failed",
+}
+
+
+def _repair_invocation(value):
+    """Validate the immutable result envelope emitted by repair_bridge._invoke."""
+    _fields(value, "argv returncode transport_error termination started_epoch "
+            "finished_epoch stdout stdout_sha256 stdout_bytes stdout_truncated "
+            "stderr stderr_sha256 stderr_bytes stderr_truncated")
+    _fields(value["termination"],
+            "process_group term_sent kill_sent direct_child_reaped")
+    if (not isinstance(value["argv"], list) or
+            any(not isinstance(part, str) for part in value["argv"]) or
+            (value["returncode"] is not None and
+             (isinstance(value["returncode"], bool) or
+              not isinstance(value["returncode"], int))) or
+            (value["transport_error"] is not None and
+             not isinstance(value["transport_error"], str)) or
+            any(type(value["termination"][key]) is not bool for key in
+                ("term_sent", "kill_sent", "direct_child_reaped")) or
+            (value["termination"]["process_group"] is not None and
+             (isinstance(value["termination"]["process_group"], bool) or
+              not isinstance(value["termination"]["process_group"], int))) or
+            any(not isinstance(value[key], str) for key in ("stdout", "stderr")) or
+            any(not isinstance(value[key], int) or value[key] < 0 for key in
+                ("stdout_bytes", "stderr_bytes")) or
+            any(type(value[key]) is not bool for key in
+                ("stdout_truncated", "stderr_truncated"))):
+        raise CampaignError("invalid repair invocation receipt")
+    _number(value["started_epoch"], 0, 1e20)
+    _number(value["finished_epoch"], value["started_epoch"], 1e20)
+    _digest(value["stdout_sha256"])
+    _digest(value["stderr_sha256"])
+    return value
+
+
+def _repair_outcome(status, invocation):
+    suffix = status.rsplit("_", 1)[-1]
+    if suffix == "returned":
+        valid = invocation["returncode"] == 0 and invocation["transport_error"] is None
+    elif suffix == "unknown":
+        valid = invocation["returncode"] is None and isinstance(
+            invocation["transport_error"], str)
+    elif suffix == "failed":
+        valid = (isinstance(invocation["returncode"], int) and
+                 invocation["returncode"] != 0 and
+                 invocation["transport_error"] is None)
+    else:
+        valid = False
+    if not valid:
+        raise CampaignError("repair invocation outcome mismatch")
+
+
+def _repair_campaign_digests(campaign):
+    """Return the current digest plus exactly retained extension ancestors."""
+    allowed = {campaign.data["campaign_digest"]}
+    history = campaign.directory / "manifest-history"
+    if history.is_symlink():
+        raise CampaignError("repair lineage history symlink rejected")
+    if not history.exists():
+        return allowed
+    if not history.is_dir():
+        raise CampaignError("repair lineage history must be a physical directory")
+    manifests = {campaign.data["campaign_digest"]: campaign.data}
+    receipts = []
+    for path in history.iterdir():
+        if path.is_symlink() or not path.is_file():
+            raise CampaignError("repair lineage entries must be regular files")
+        if re.fullmatch(r"[0-9a-f]{64}\.json", path.name):
+            value = read_json(path)
+            if (campaign_digest(value) != value.get("campaign_digest") or
+                    path.stem != value["campaign_digest"] or
+                    _fixed_campaign_envelope(value) != _fixed_campaign_envelope(campaign.data)):
+                raise CampaignError("retained repair ancestor manifest mismatch")
+            manifests[value["campaign_digest"]] = value
+        elif path.name.endswith("-extension.json"):
+            receipt = read_json(path)
+            _fields(receipt, "kind previous_campaign_digest campaign_digest added_plans "
+                     "started_epoch deadline_epoch")
+            if (receipt["kind"] != "research-supervisor-extension-v1" or
+                    path.name != receipt["campaign_digest"] + "-extension.json"):
+                raise CampaignError("retained repair extension receipt mismatch")
+            receipts.append(receipt)
+        # State/driver/heartbeat history is validated by extension, not lineage.
+    changed = True
+    while changed:
+        changed = False
+        for receipt in receipts:
+            if (receipt["campaign_digest"] in allowed and
+                    receipt["previous_campaign_digest"] not in allowed):
+                previous = manifests.get(receipt["previous_campaign_digest"])
+                successor = manifests.get(receipt["campaign_digest"])
+                if previous is None or successor is None:
+                    raise CampaignError("repair extension ancestor manifest missing")
+                old = [dict(entry, required_inputs=entry.get("required_inputs", []))
+                       for entry in previous["plans"]]
+                new = [dict(entry, required_inputs=entry.get("required_inputs", []))
+                       for entry in successor["plans"]]
+                if new[:len(old)] != old or len(new) <= len(old):
+                    raise CampaignError("repair extension lineage is not append-only")
+                allowed.add(receipt["previous_campaign_digest"])
+                changed = True
+    return allowed
+
+
+def repair_bridge_status(campaign):
+    """Read the bridge's append-only receipts without contacting a provider.
+
+    The bridge and supervisor intentionally have separate owners.  This view is
+    therefore observation only: it neither dispatches a repair worker nor treats
+    a successful worker process as a reviewed patch or executable child plan.
+    Malformed/cross-campaign state fails closed instead of being summarized as a
+    connected agent.
+    """
+    parent = campaign.directory / "repair-requests"
+    if parent.is_symlink():
+        raise CampaignError("repair request root symlink rejected")
+    if not parent.exists():
+        return {"status": "not_connected", "requests": {}}
+    if not parent.is_dir():
+        raise CampaignError("repair request root must be a physical directory")
+    allowed_campaigns = _repair_campaign_digests(campaign)
+    requests = {}
+    ranks = {"configured_no_worker_receipt": 1, "worker_returned_unreviewed": 2,
+             "failed": 3, "reconcile_required": 4}
+    aggregate = "configured_no_worker_receipt"
+    directories = sorted(parent.iterdir(), key=lambda path: path.name)
+    if not directories:
+        return {"status": "not_connected", "requests": {}}
+    for directory in directories:
+        if (directory.is_symlink() or not directory.is_dir() or
+                not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,95}", directory.name)):
+            raise CampaignError("invalid retained repair request directory")
+        lock_path = directory / "owner.lock"
+        if lock_path.is_symlink():
+            raise CampaignError("repair request owner lock symlink rejected")
+        if not lock_path.exists():
+            item = {"status": "reconcile_required",
+                    "reason": "incomplete_unlocked_request"}
+        elif not lock_path.is_file():
+            raise CampaignError("repair request owner lock must be a regular file")
+        else:
+            lock = lock_path.open("r")
+            try:
+                try:
+                    fcntl.flock(lock, fcntl.LOCK_SH | fcntl.LOCK_NB)
+                except BlockingIOError:
+                    item = {"status": "reconcile_required",
+                            "reason": "bridge_owner_active"}
+                else:
+                    request_path = directory / "request.json"
+                    if request_path.is_symlink():
+                        raise CampaignError("repair request identity symlink rejected")
+                    if not request_path.is_file():
+                        item = {"status": "reconcile_required",
+                                "reason": "incomplete_unlocked_request"}
+                    else:
+                        request = read_json(request_path)
+                        _fields(request, "kind version request_id root runtime_executable "
+                                "runtime_sha256 db db_device db_inode project_id "
+                                "dedicated_project owner adapter adapters_config "
+                                "adapters_sha256 project_ref admission_ref inputs "
+                                "instructions output_paths max_cost max_seconds "
+                                "capabilities request_digest")
+                        actual_digest = hashlib.sha256(canonical({
+                            key: value for key, value in request.items()
+                            if key != "request_digest"}).encode()).hexdigest()
+                        if (request.get("kind") != "research-runtime-repair-request" or
+                                request.get("version") != 1 or
+                                request.get("request_id") != directory.name or
+                                request.get("project_id") != directory.name or
+                                request.get("dedicated_project") is not True or
+                                request.get("adapter") == "native" or
+                                request.get("capabilities") !=
+                                ["filesystem_read", "filesystem_write"] or
+                                request.get("root") != str(campaign.root) or
+                                actual_digest != request.get("request_digest")):
+                            raise CampaignError("retained repair request identity mismatch")
+                        identifier = re.compile(r"[A-Za-z0-9][A-Za-z0-9_-]{0,95}")
+                        if (any(not isinstance(request[key], str) or
+                                not identifier.fullmatch(request[key]) for key in
+                                ("request_id", "project_id", "owner", "adapter")) or
+                                isinstance(request["max_cost"], bool) or
+                                not isinstance(request["max_cost"], int) or
+                                not 1 <= request["max_cost"] <= 1000000000 or
+                                isinstance(request["max_seconds"], bool) or
+                                not isinstance(request["max_seconds"], int) or
+                                not 1 <= request["max_seconds"] <= 86400):
+                            raise CampaignError("retained repair request bounds mismatch")
+                        runtime = _absolute(request["runtime_executable"], directory=False)
+                        database = _absolute(request["db"], directory=False)
+                        adapters_path = _absolute(request["adapters_config"], directory=False)
+                        if (not runtime.is_file() or not os.access(runtime, os.X_OK) or
+                                runtime.is_symlink() or
+                                file_digest(runtime) != _digest(request["runtime_sha256"]) or
+                                not database.is_file() or database.is_symlink() or
+                                type(request["db_device"]) is not int or
+                                type(request["db_inode"]) is not int or
+                                (database.stat().st_dev, database.stat().st_ino) !=
+                                (request["db_device"], request["db_inode"]) or
+                                not adapters_path.is_file() or adapters_path.is_symlink() or
+                                file_digest(adapters_path) !=
+                                _digest(request["adapters_sha256"])):
+                            raise CampaignError("retained repair runtime identity mismatch")
+                        project_path = verify_ref(campaign.root, request["project_ref"])
+                        project = read_json(project_path)
+                        role = project.get("assigned_role", project.get("role"))
+                        adapters = project.get("adapter_allowlist",
+                            project.get("allowed_adapters", project.get("adapters")))
+                        if (project.get("project_id") != request["project_id"] or
+                                project.get("root") != str(campaign.root) or
+                                project.get("workflow_class") != "scientific_method" or
+                                role != "web_supervisor" or
+                                not isinstance(adapters, list) or
+                                request["adapter"] not in adapters or
+                                project.get("max_workers") != 1 or
+                                project.get("max_cost") != request["max_cost"] or
+                                project.get("max_seconds") != request["max_seconds"] or
+                                not isinstance(project.get("skill_root"), str) or
+                                not isinstance(project.get("skill_digest"), str) or
+                                not re.fullmatch(r"[0-9a-f]{64}",
+                                                 project["skill_digest"])):
+                            raise CampaignError("retained repair project mismatch")
+                        admission = read_json(verify_ref(
+                            campaign.root, request["admission_ref"]))
+                        _fields(admission, "kind version campaign_id campaign_digest "
+                                "failed_plan_id status classification "
+                                "scientific_retry_allowed gpu_allowed reviewer reviewed_at "
+                                "repair_scope failure_ref failed_plan_ref "
+                                "supervisor_status_ref budget_ref campaign_ref")
+                        if (admission.get("kind") != "research-repair-admission" or
+                                admission.get("version") != 1 or
+                                admission.get("campaign_id") != campaign.data["campaign_id"] or
+                                admission.get("campaign_digest") not in allowed_campaigns or
+                                admission.get("failed_plan_id") not in campaign.entries or
+                                admission.get("status") != "terminal_failed" or
+                                admission.get("classification") != "code_error" or
+                                admission.get("gpu_allowed") is not False or
+                                admission.get("scientific_retry_allowed") is not False or
+                                any(not isinstance(admission[key], str) or
+                                    not admission[key] for key in
+                                    ("reviewer", "reviewed_at", "repair_scope"))):
+                            raise CampaignError("repair admission is not bound to this campaign")
+                        for name in ("inputs", "instructions"):
+                            refs = request[name]
+                            if not isinstance(refs, list) or not refs:
+                                raise CampaignError("repair request refs must be nonempty")
+                            keys = []
+                            for ref in refs:
+                                verify_ref(campaign.root, ref)
+                                keys.append((ref["path"], ref["sha256"]))
+                            if len(keys) != len(set(keys)):
+                                raise CampaignError("duplicate repair request ref")
+                        input_keys = {(ref["path"], ref["sha256"])
+                                      for ref in request["inputs"]}
+                        required_refs = (admission["failure_ref"],
+                                         admission["failed_plan_ref"],
+                                         admission["supervisor_status_ref"],
+                                         admission["budget_ref"],
+                                         admission["campaign_ref"])
+                        if any((ref["path"], ref["sha256"]) not in input_keys
+                               for ref in required_refs):
+                            raise CampaignError("repair admission evidence not in task inputs")
+                        failure = read_json(verify_ref(
+                            campaign.root, admission["failure_ref"]))
+                        failed_campaign = read_json(verify_ref(
+                            campaign.root, admission["campaign_ref"]))
+                        if (failure.get("status") != "failed" or
+                                failed_campaign.get("kind") !=
+                                "research-harness-campaign" or
+                                failed_campaign.get("campaign_id") !=
+                                admission["campaign_id"] or
+                                campaign_digest(failed_campaign) !=
+                                admission["campaign_digest"] or
+                                failed_campaign.get("campaign_digest") !=
+                                admission["campaign_digest"]):
+                            raise CampaignError("repair failed campaign evidence mismatch")
+                        selected = next((entry for entry in failed_campaign.get("plans", [])
+                                         if entry.get("id") ==
+                                         admission["failed_plan_id"]), None)
+                        if (selected is None or
+                                selected.get("plan_ref") !=
+                                admission["failed_plan_ref"] or
+                                failure.get("plan_digest") !=
+                                selected.get("plan_digest") or
+                                campaign.entries[admission["failed_plan_id"]]["plan_ref"] !=
+                                admission["failed_plan_ref"]):
+                            raise CampaignError("repair failed plan evidence mismatch")
+                        supervisor_status = read_json(verify_ref(
+                            campaign.root, admission["supervisor_status_ref"]))
+                        observed = supervisor_status.get("plans", {}).get(
+                            admission["failed_plan_id"])
+                        if (supervisor_status.get("status") != "inspection" or
+                                supervisor_status.get("campaign_digest") !=
+                                admission["campaign_digest"] or
+                                not isinstance(observed, dict) or
+                                observed.get("status") != "failed" or
+                                observed.get("repairable") is not True):
+                            raise CampaignError("repair supervisor evidence mismatch")
+                        budget = read_json(verify_ref(
+                            campaign.root, admission["budget_ref"]))
+                        _fields(budget, "kind version campaign_id campaign_digest "
+                                "max_cost max_seconds")
+                        if (budget.get("kind") != "research-repair-campaign-budget" or
+                                budget.get("version") != 1 or
+                                budget.get("campaign_id") != admission["campaign_id"] or
+                                budget.get("campaign_digest") !=
+                                admission["campaign_digest"] or
+                                isinstance(budget.get("max_cost"), bool) or
+                                not isinstance(budget.get("max_cost"), int) or
+                                not 0 <= budget["max_cost"] <= 1000000000 or
+                                isinstance(budget.get("max_seconds"), bool) or
+                                not isinstance(budget.get("max_seconds"), int) or
+                                not 0 <= budget["max_seconds"] <= 86400 or
+                                request["max_cost"] > budget["max_cost"] or
+                                request["max_seconds"] > budget["max_seconds"]):
+                            raise CampaignError("repair budget evidence mismatch")
+                        outputs = request["output_paths"]
+                        output_prefix = ("repairs/" + admission["campaign_id"] + "/" +
+                                         request["request_id"] + "/")
+                        if (not isinstance(outputs, list) or not outputs or
+                                len(outputs) != len(set(outputs))):
+                            raise CampaignError("invalid repair output inventory")
+                        existing_outputs = []
+                        for relative in outputs:
+                            target = safe_path(campaign.root, relative)
+                            if (not relative.startswith(output_prefix) or
+                                    target.exists() and
+                                    (target.is_symlink() or not target.is_file())):
+                                raise CampaignError("invalid repair output namespace")
+                            if target.exists():
+                                existing_outputs.append(relative)
+                        item = {"request_digest": request["request_digest"],
+                                "status": "configured_no_worker_receipt"}
+                        event_statuses = []
+                        event_values = []
+                        last_path = directory / "last-status.json"
+                        if last_path.is_symlink():
+                            raise CampaignError("repair last status symlink rejected")
+                        if last_path.exists():
+                            if not last_path.is_file():
+                                raise CampaignError("repair last status must be a regular file")
+                            last = read_json(last_path)
+                            _fields(last, "event status request_digest")
+                            if last["request_digest"] != request["request_digest"]:
+                                raise CampaignError("repair status request identity mismatch")
+                            events = directory / "events"
+                            if events.is_symlink() or not events.is_dir():
+                                raise CampaignError("repair event root must be a physical directory")
+                            entries = list(events.iterdir())
+                            if any(path.is_symlink() or not path.is_file() for path in entries):
+                                raise CampaignError("repair events must be regular files")
+                            names = [path.name for path in entries]
+                            if any(not re.fullmatch(r"[0-9]{20}-[0-9a-f]{64}\.json", name)
+                                   for name in names):
+                                raise CampaignError("invalid repair event inventory")
+                            event_hashes = []
+                            event_by_name = {}
+                            previous = None
+                            ordered = sorted(entries, key=lambda path: path.name)
+                            for sequence, path in enumerate(ordered, 1):
+                                value = read_json(path)
+                                digest = hashlib.sha256(canonical(value).encode()).hexdigest()
+                                if (path.name.split("-", 1)[1] != digest + ".json" or
+                                        path.name.split("-", 1)[0] != f"{sequence:020d}" or
+                                        value.get("sequence") != sequence or
+                                        value.get("previous_event_sha256") != previous or
+                                        value.get("request_digest") !=
+                                        request["request_digest"]):
+                                    raise CampaignError(
+                                        "repair event inventory identity mismatch")
+                                event_hashes.append(digest)
+                                event_by_name[path.name] = value
+                                event_statuses.append(value.get("status"))
+                                event_values.append(value)
+                                previous = digest
+                            event_path = events / last["event"]
+                            if last["event"] not in names:
+                                raise CampaignError("repair status event identity missing")
+                            event = event_by_name[event_path.name]
+                            expected_hash = hashlib.sha256(canonical(event).encode()).hexdigest()
+                            if (last["event"].split("-", 1)[1] != expected_hash + ".json" or
+                                    event.get("status") != last["status"] or
+                                    event.get("request_digest") != request["request_digest"]):
+                                raise CampaignError("repair status event identity mismatch")
+                            journal = directory / "journal.jsonl"
+                            if journal.is_symlink() or not journal.is_file():
+                                raise CampaignError("repair journal must be a regular file")
+                            lines = journal.read_text(encoding="utf-8").splitlines()
+                            try:
+                                journal_hashes = [hashlib.sha256(canonical(json.loads(
+                                    line, object_pairs_hook=_pairs)).encode()).hexdigest()
+                                    for line in lines]
+                            except (ValueError, TypeError) as error:
+                                raise CampaignError("invalid repair journal") from error
+                            raw = last["status"]
+                            if (journal_hashes != event_hashes or
+                                    not journal_hashes or journal_hashes[-1] != expected_hash):
+                                status, raw = "reconcile_required", "unindexed_event"
+                            elif raw == "worker_returned":
+                                status = "worker_returned_unreviewed"
+                            elif raw in {"worker_unknown", "reconcile_required",
+                                         "enqueue_unknown", "project_registration_unknown"}:
+                                status = "reconcile_required"
+                            elif raw in {"worker_failed", "enqueue_failed",
+                                         "project_registration_failed",
+                                         "budget_reservation_failed"}:
+                                status = "failed"
+                            elif raw in {"project_registration_returned", "budget_reserved",
+                                         "enqueue_returned"}:
+                                status = "reconcile_required"
+                            else:
+                                status = "reconcile_required"
+                            item.update(status=status, bridge_status=raw,
+                                        event=last["event"])
+                        # Validate the exact bridge-emitted result envelopes and
+                        # the only legal side-effect progression.  Hashes prove
+                        # bytes; this proves those bytes are a bridge receipt.
+                        for value in event_values:
+                            status = value.get("status")
+                            if status in {"project_registration_returned",
+                                          "project_registration_unknown",
+                                          "project_registration_failed"}:
+                                _fields(value, "status stage request_digest registration "
+                                        "sequence previous_event_sha256")
+                                if value["stage"] != "register-project":
+                                    raise CampaignError("repair registration stage mismatch")
+                                _repair_invocation(value["registration"])
+                                _repair_outcome(status, value["registration"])
+                            elif status == "budget_reserved":
+                                _fields(value, "status stage request_digest reservation_ref "
+                                        "sequence previous_event_sha256")
+                                if value["stage"] != "reserve-campaign-budget":
+                                    raise CampaignError("repair reservation stage mismatch")
+                                reservation = read_json(verify_ref(
+                                    campaign.root, value["reservation_ref"]))
+                                _fields(reservation, "kind version campaign_digest request_id "
+                                        "request_digest max_cost max_seconds")
+                                if reservation != {
+                                        "kind": "research-repair-reservation",
+                                        "version": 1,
+                                        "campaign_digest": admission["campaign_digest"],
+                                        "request_id": request["request_id"],
+                                        "request_digest": request["request_digest"],
+                                        "max_cost": request["max_cost"],
+                                        "max_seconds": request["max_seconds"]}:
+                                    raise CampaignError(
+                                        "repair reservation receipt identity mismatch")
+                            elif status == "budget_reservation_failed":
+                                _fields(value, "status stage request_digest error sequence "
+                                        "previous_event_sha256")
+                                if (value["stage"] != "reserve-campaign-budget" or
+                                        not isinstance(value["error"], str) or
+                                        not value["error"]):
+                                    raise CampaignError("repair reservation failure mismatch")
+                            elif status in {"enqueue_returned", "enqueue_unknown",
+                                            "enqueue_failed"}:
+                                _fields(value, "status stage request_digest enqueue sequence "
+                                        "previous_event_sha256")
+                                if value["stage"] != "enqueue":
+                                    raise CampaignError("repair enqueue stage mismatch")
+                                _repair_invocation(value["enqueue"])
+                                _repair_outcome(status, value["enqueue"])
+                            elif status in {"worker_returned", "worker_unknown",
+                                            "worker_failed"}:
+                                _fields(value, "status request_digest registration enqueue "
+                                        "worker sequence previous_event_sha256")
+                                for key in ("registration", "enqueue", "worker"):
+                                    _repair_invocation(value[key])
+                                _repair_outcome(status, value["worker"])
+                        core_statuses = list(event_statuses)
+                        if "reconcile_required" in core_statuses:
+                            cut = core_statuses.index("reconcile_required")
+                            if any(status != "reconcile_required"
+                                   for status in core_statuses[cut:]):
+                                core_statuses = ["invalid_progression"]
+                            else:
+                                core_statuses = core_statuses[:cut]
+                        legal_progressions = {
+                            (),
+                            ("project_registration_returned",),
+                            ("project_registration_unknown",),
+                            ("project_registration_failed",),
+                            ("project_registration_returned", "budget_reserved"),
+                            ("project_registration_returned",
+                             "budget_reservation_failed"),
+                            ("project_registration_returned", "budget_reserved",
+                             "enqueue_returned"),
+                            ("project_registration_returned", "budget_reserved",
+                             "enqueue_unknown"),
+                            ("project_registration_returned", "budget_reserved",
+                             "enqueue_failed"),
+                            ("project_registration_returned", "budget_reserved",
+                             "enqueue_returned", "worker_returned"),
+                            ("project_registration_returned", "budget_reserved",
+                             "enqueue_returned", "worker_unknown"),
+                            ("project_registration_returned", "budget_reserved",
+                             "enqueue_returned", "worker_failed"),
+                        }
+                        progression_valid = tuple(core_statuses) in legal_progressions
+                        if len(core_statuses) == 4 and progression_valid:
+                            if (event_values[3]["registration"] !=
+                                    event_values[0]["registration"] or
+                                    event_values[3]["enqueue"] !=
+                                    event_values[2]["enqueue"]):
+                                raise CampaignError("repair worker predecessor mismatch")
+                        prefix = [request["runtime_executable"], "--db", request["db"]]
+                        task_path = directory / "task.json"
+                        expected_task = {
+                            "task_id": request["request_id"],
+                            "action": "candidate_code",
+                            "inputs": list(request["inputs"]),
+                            "instructions": [request["admission_ref"],
+                                             *request["instructions"]],
+                            "dependencies": [],
+                            "output_paths": list(request["output_paths"]),
+                            "completion": {"kind": "outputs_verified"},
+                            "max_cost": request["max_cost"],
+                            "max_seconds": request["max_seconds"],
+                            "capabilities": list(request["capabilities"]),
+                            "adapter": request["adapter"],
+                            "parameters": {
+                                "campaign_digest": admission["campaign_digest"],
+                                "failed_plan_id": admission["failed_plan_id"],
+                                "gpu_allowed": False,
+                                "scientific_retry_allowed": False,
+                                "requires_reviewed_child_version": True}}
+                        if task_path.is_symlink():
+                            raise CampaignError("repair task identity symlink rejected")
+                        if not task_path.exists():
+                            item.update(status="reconcile_required",
+                                        bridge_status="retained_task_missing")
+                        elif (not task_path.is_file() or
+                              read_json(task_path) != expected_task):
+                            raise CampaignError("repair task identity mismatch")
+                        stage_specs = {
+                            "registration-intent.json": ({
+                                "kind": "research-repair-stage-intent-v1",
+                                "stage": "register-project",
+                                "request_digest": request["request_digest"],
+                                "argv": prefix + ["register-project", str(project_path)]},
+                                {"project_registration_returned",
+                                 "project_registration_unknown",
+                                 "project_registration_failed"}),
+                            "budget-reservation-intent.json": ({
+                                "kind": "research-repair-stage-intent-v1",
+                                "stage": "reserve-campaign-budget",
+                                "request_digest": request["request_digest"],
+                                "max_cost": request["max_cost"],
+                                "max_seconds": request["max_seconds"]},
+                                {"budget_reserved", "budget_reservation_failed"}),
+                            "enqueue-intent.json": ({
+                                "kind": "research-repair-stage-intent-v1",
+                                "stage": "enqueue",
+                                "request_digest": request["request_digest"],
+                                "argv": prefix + ["enqueue", request["project_id"],
+                                                  str(task_path)]},
+                                {"enqueue_returned", "enqueue_unknown",
+                                 "enqueue_failed"}),
+                        }
+                        expected_worker = {
+                            "kind": "research-repair-worker-intent-v1",
+                            "request_digest": request["request_digest"],
+                            "project_id": request["project_id"],
+                            "task_id": request["request_id"],
+                            "owner": request["owner"],
+                            "adapter": request["adapter"],
+                            "argv": prefix + ["worker", request["project_id"],
+                                              "--owner", request["owner"],
+                                              "--adapter", request["adapter"],
+                                              "--adapters-config",
+                                              request["adapters_config"]],
+                            "timeout_seconds": request["max_seconds"],
+                        }
+                        for event_value in event_values:
+                            status = event_value.get("status")
+                            if (status in {"project_registration_returned",
+                                           "project_registration_unknown",
+                                           "project_registration_failed"} and
+                                    event_value["registration"]["argv"] !=
+                                    stage_specs["registration-intent.json"][0]["argv"]):
+                                raise CampaignError(
+                                    "repair registration invocation identity mismatch")
+                            if (status in {"enqueue_returned", "enqueue_unknown",
+                                          "enqueue_failed"} and
+                                    event_value["enqueue"]["argv"] !=
+                                    stage_specs["enqueue-intent.json"][0]["argv"]):
+                                raise CampaignError(
+                                    "repair enqueue invocation identity mismatch")
+                            if (status in {"worker_returned", "worker_unknown",
+                                          "worker_failed"} and
+                                    event_value["worker"]["argv"] !=
+                                    expected_worker["argv"]):
+                                raise CampaignError(
+                                    "repair worker invocation identity mismatch")
+                        unmatched_stage = []
+                        present_stage = set()
+                        for name, (expected, terminal_statuses) in stage_specs.items():
+                            stage_path = directory / name
+                            if stage_path.is_symlink():
+                                raise CampaignError("repair stage intent symlink rejected")
+                            if stage_path.exists():
+                                if not stage_path.is_file():
+                                    raise CampaignError(
+                                        "repair stage intent must be a regular file")
+                                value = read_json(stage_path)
+                                if value != expected:
+                                    raise CampaignError(
+                                        "repair stage intent identity mismatch")
+                                present_stage.add(expected["stage"])
+                                if not terminal_statuses.intersection(event_statuses):
+                                    unmatched_stage.append(expected["stage"])
+                        if unmatched_stage:
+                            item.update(status="reconcile_required",
+                                bridge_status="stage_intent_without_result",
+                                unmatched_stage_intents=unmatched_stage)
+                        intent = directory / "worker-intent.json"
+                        worker_intent_present = False
+                        if intent.is_symlink():
+                            raise CampaignError("repair worker intent symlink rejected")
+                        if intent.exists():
+                            if not intent.is_file():
+                                raise CampaignError(
+                                    "repair worker intent must be a regular file")
+                            value = read_json(intent)
+                            if value != expected_worker:
+                                raise CampaignError("repair worker intent identity mismatch")
+                            worker_intent_present = True
+                            if item.get("bridge_status") not in {
+                                    "worker_returned", "worker_failed", "worker_unknown",
+                                    "reconcile_required"}:
+                                item.update(status="reconcile_required",
+                                    bridge_status="worker_intent_without_terminal_event")
+                        worker_terminal = bool(core_statuses and core_statuses[-1] in {
+                            "worker_returned", "worker_failed", "worker_unknown"})
+                        required_stage = set()
+                        if core_statuses:
+                            required_stage.add("register-project")
+                        if len(core_statuses) >= 2:
+                            required_stage.add("reserve-campaign-budget")
+                        if len(core_statuses) >= 3:
+                            required_stage.add("enqueue")
+                        if (not progression_valid or
+                                present_stage != required_stage or
+                                worker_terminal and
+                                not worker_intent_present):
+                            item.update(status="reconcile_required",
+                                        bridge_status="invalid_bridge_progression")
+                        if existing_outputs and not worker_intent_present:
+                            item.update(status="reconcile_required",
+                                        bridge_status="unowned_repair_output",
+                                        existing_outputs=existing_outputs)
+            finally:
+                fcntl.flock(lock, fcntl.LOCK_UN)
+                lock.close()
+        requests[directory.name] = item
+        if ranks[item["status"]] > ranks[aggregate]:
+            aggregate = item["status"]
+    return {"status": aggregate, "requests": requests}
+
+
 def retained_status(campaign):
     """Observation only: retained heartbeat is labelled stale, never a receipt."""
     directory = campaign.directory
+    repair = repair_bridge_status(campaign)
     result = {"stop_requested": (directory / "STOP").exists(),
-              "online_repair_agent": "not_connected", "owner_live": False,
+              "online_repair_agent": repair["status"],
+              "repair_bridge": repair, "owner_live": False,
               "supervisor_lock_held": _lock_busy(directory / "campaign.lock")}
     heartbeat_path = directory / "heartbeat.json"
     if heartbeat_path.is_file():
@@ -617,16 +1282,21 @@ def validate_retained_state(state, campaign, observed_now):
 def validate_heartbeat(value, campaign, state, observed_now):
     """Validate archived heartbeat identity; status is evidence, never a receipt."""
     try:
-        _fields(value, "kind campaign_digest observed_epoch owner deadline_epoch "
-                 "remaining_seconds plans gpu_observation gpu_observation_available "
-                 "gpu_no_compute_process_observed gpu_idle_while_retained_running "
-                 "gpu_dispatch_enabled online_repair_agent scientific_result_verified")
+        common = ("kind campaign_digest observed_epoch owner deadline_epoch "
+                  "remaining_seconds plans gpu_observation gpu_observation_available "
+                  "gpu_no_compute_process_observed gpu_idle_while_retained_running "
+                  "gpu_dispatch_enabled online_repair_agent scientific_result_verified")
+        if value.get("kind") == "research-supervisor-heartbeat-v2":
+            _fields(value, common + " repair_bridge_status")
+        else:
+            _fields(value, common)
         _number(value["observed_epoch"], 0, 1e20)
         _number(value["deadline_epoch"], 0, 1e20)
         _number(value["remaining_seconds"], 0, 28800)
         _fields(value["owner"], "pid start_ticks boot_id")
         valid = (
-            value["kind"] == "research-supervisor-heartbeat-v1" and
+            value["kind"] in {"research-supervisor-heartbeat-v1",
+                              "research-supervisor-heartbeat-v2"} and
             value["campaign_digest"] == campaign.data["campaign_digest"] and
             value["deadline_epoch"] == state["deadline_epoch"] and
             observed_now >= value["observed_epoch"] and
@@ -638,7 +1308,11 @@ def validate_heartbeat(value, campaign, state, observed_now):
             all(type(value[key]) is bool for key in (
                 "gpu_observation_available", "gpu_no_compute_process_observed",
                 "gpu_idle_while_retained_running", "gpu_dispatch_enabled")) and
-            value["online_repair_agent"] == "not_connected" and
+            value["online_repair_agent"] in REPAIR_AGENT_STATUSES and
+            (value["kind"] == "research-supervisor-heartbeat-v1" and
+             value["online_repair_agent"] == "not_connected" or
+             value["kind"] == "research-supervisor-heartbeat-v2" and
+             value.get("repair_bridge_status") == value["online_repair_agent"]) and
             value["scientific_result_verified"] is False)
     except (CampaignError, KeyError, TypeError, ValueError) as error:
         raise CampaignError("invalid retained heartbeat identity") from error
@@ -754,7 +1428,7 @@ def extend_campaign(current_path, next_path, *, approved_current_digest,
                     "deadline_epoch": state["deadline_epoch"],
                     "stop_preserved": (directory / "STOP").exists(),
                     "gpu_dispatch_enabled": False,
-                    "online_repair_agent": "not_connected"}
+                    "online_repair_agent": "readback_required"}
             if (state.get("campaign_digest") != current.data["campaign_digest"] or
                     retained_manifest not in (current.data, proposed.data)):
                 raise CampaignError("extension requires exact settled campaign identity")
@@ -861,7 +1535,7 @@ def extend_campaign(current_path, next_path, *, approved_current_digest,
                 "deadline_epoch": migrated["deadline_epoch"],
                 "stop_preserved": (directory / "STOP").exists(),
                 "gpu_dispatch_enabled": False,
-                "online_repair_agent": "not_connected"}
+                "online_repair_agent": "readback_required"}
     finally:
         fcntl.flock(lock, fcntl.LOCK_UN)
         lock.close()
@@ -968,11 +1642,13 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
         def report(status, outcomes, **details):
             heartbeat(outcomes, force=True)
             checkpoint("campaign_" + status, plans=outcomes, **details)
+            repair = repair_bridge_status(campaign)
             return {"status": status, "campaign_digest": m["campaign_digest"],
                     "deadline_epoch": state["deadline_epoch"], "plans": outcomes,
                     "gpu_dispatch_enabled": allow_gpu_after_user_resume,
                     "scientific_result_verified": False,
-                    "online_repair_agent": "not_connected", **details}
+                    "online_repair_agent": repair["status"],
+                    "repair_bridge": repair, **details}
         waiting_for = None
         last_heartbeat = [-float("inf")]
         def heartbeat(outcomes, *, force=False):
@@ -989,8 +1665,9 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
             # PID on every expected physical device, never permission to launch.
             all_devices = {item["uuid"] for item in gpu} == gpu_ids
             idle = bool(gpu_ids and all_devices and all(not item["foreign_pids"] for item in gpu))
+            repair = repair_bridge_status(campaign)
             _atomic(directory / "heartbeat.json", {
-                "kind": "research-supervisor-heartbeat-v1",
+                "kind": "research-supervisor-heartbeat-v2",
                 "campaign_digest": m["campaign_digest"], "observed_epoch": now(),
                 "owner": campaign.H._self_identity(), "deadline_epoch": state["deadline_epoch"],
                 "remaining_seconds": max(0, remaining()), "plans": outcomes,
@@ -998,7 +1675,9 @@ def run_campaign(path, *, execute=False, approved_digest=None, poll_seconds=1.0,
                 "gpu_no_compute_process_observed": idle,
                 "gpu_idle_while_retained_running": idle and running_gpu,
                 "gpu_dispatch_enabled": allow_gpu_after_user_resume,
-                "online_repair_agent": "not_connected", "scientific_result_verified": False})
+                "online_repair_agent": repair["status"],
+                "repair_bridge_status": repair["status"],
+                "scientific_result_verified": False})
             checkpoint("heartbeat", plans=outcomes)
         while True:
             campaign.recheck()

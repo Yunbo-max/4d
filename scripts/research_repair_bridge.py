@@ -167,15 +167,40 @@ def _record_run(directory, value):
     if events.is_symlink():
         raise RepairBridgeError("repair event directory symlink rejected")
     events.mkdir(parents=True, exist_ok=True)
+    journal = directory / "journal.jsonl"
+    if journal.is_symlink():
+        raise RepairBridgeError("repair journal symlink rejected")
+    retained = []
+    if journal.exists():
+        if not journal.is_file():
+            raise RepairBridgeError("repair journal must be a regular file")
+        try:
+            retained = [json.loads(line, object_pairs_hook=_pairs)
+                        for line in journal.read_text(encoding="utf-8").splitlines()]
+        except (OSError, UnicodeError, ValueError, TypeError) as error:
+            raise RepairBridgeError("invalid retained repair journal") from error
+    previous = None
+    for sequence, event in enumerate(retained, 1):
+        digest = hashlib.sha256(canonical(event).encode()).hexdigest()
+        expected = events / f"{sequence:020d}-{digest}.json"
+        if (event.get("sequence") != sequence or
+                event.get("previous_event_sha256") != previous or
+                not expected.is_file() or expected.is_symlink() or
+                read_retained_json(expected) != event):
+            raise RepairBridgeError("retained repair event chain mismatch")
+        previous = digest
+    inventory = list(events.iterdir())
+    if len(inventory) != len(retained):
+        raise RepairBridgeError("unindexed retained repair event")
+    sequence = len(retained) + 1
+    value = dict(value, sequence=sequence, previous_event_sha256=previous)
     encoded = canonical(value).encode()
-    name = f"{time.time_ns():020d}-{hashlib.sha256(encoded).hexdigest()}.json"
+    digest = hashlib.sha256(encoded).hexdigest()
+    name = f"{sequence:020d}-{digest}.json"
     target = events / name
     if target.exists():
         raise RepairBridgeError("repair event identity collision")
     _atomic(target, value)
-    journal = directory / "journal.jsonl"
-    if journal.is_symlink():
-        raise RepairBridgeError("repair journal symlink rejected")
     with journal.open("ab") as stream:
         stream.write(encoded + b"\n")
         stream.flush()
@@ -656,6 +681,43 @@ def run_request(path, *, execute=False, approved_digest=None, environment=None):
                       "registration": None, "enqueue": None, "worker": None,
                       "runtime_status": status_result,
                       "reason": "worker intent already retained; automatic redispatch forbidden"}
+            _record_run(request.directory, record)
+            return {**result, **record, "task_path": str(task_path)}
+        stage_intents = {
+            request.directory / "registration-intent.json": {
+                "kind": "research-repair-stage-intent-v1",
+                "stage": "register-project", "request_digest": m["request_digest"],
+                "argv": prefix + ["register-project", str(request.project_path)]},
+            request.directory / "budget-reservation-intent.json": {
+                "kind": "research-repair-stage-intent-v1",
+                "stage": "reserve-campaign-budget",
+                "request_digest": m["request_digest"],
+                "max_cost": m["max_cost"], "max_seconds": m["max_seconds"]},
+            request.directory / "enqueue-intent.json": {
+                "kind": "research-repair-stage-intent-v1", "stage": "enqueue",
+                "request_digest": m["request_digest"],
+                "argv": prefix + ["enqueue", m["project_id"], str(task_path)]},
+        }
+        retained_stage = []
+        for stage_path, expected in stage_intents.items():
+            if stage_path.is_symlink():
+                raise RepairBridgeError("repair stage intent symlink rejected")
+            if stage_path.exists():
+                if not stage_path.is_file():
+                    raise RepairBridgeError("repair stage intent must be a regular file")
+                stage_value = read_retained_json(stage_path)
+                if stage_value != expected:
+                    raise RepairBridgeError("retained repair stage intent mismatch")
+                retained_stage.append(expected["stage"])
+        if retained_stage:
+            status_result = _invoke(prefix + ["status", m["project_id"]],
+                                    cwd=request.root, environment=env, timeout=60)
+            record = {"status": "reconcile_required",
+                      "request_digest": m["request_digest"],
+                      "registration": None, "enqueue": None, "worker": None,
+                      "runtime_status": status_result,
+                      "retained_stage_intents": retained_stage,
+                      "reason": "stage intent already retained; automatic replay forbidden"}
             _record_run(request.directory, record)
             return {**result, **record, "task_path": str(task_path)}
         registration_argv = prefix + ["register-project", str(request.project_path)]

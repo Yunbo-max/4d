@@ -1427,8 +1427,24 @@ acknowledgement; never create a new campaign ID or budget. Driver launch loss is
 still reconciled against exact harness/native receipts and PID/start/boot identity;
 unknown launch state is blocked, never retried. The current shared CPU acceptance
 stages the supervisor, the repair bridge, and their engineering tests. No test or
-deployment is claimed here. An actual online repair-agent connection remains
-absent and is reported as `not_connected`; GPU STOP remains in force.
+deployment is claimed here. The checked-in state has no actual repair worker
+receipt and is therefore `not_connected`; GPU STOP remains in force. If Local
+later invokes the reviewed bridge, `research_supervisor.py CAMPAIGN.json --status`
+reads only the hash-bound retained bridge request/admission/latest event and
+reports `configured_no_worker_receipt`, `worker_returned_unreviewed`,
+`reconcile_required` or `failed`. It does not contact the provider, accept a
+patch or append a plan. Tampered, cross-campaign or unindexed bridge events stop
+inspection instead of being summarized as a healthy connection.
+Events form an ordered content-addressed hash chain. A retained registration,
+reservation, enqueue or worker intent without a terminal worker event, or a busy
+bridge owner lock, yields `reconcile_required`; rerunning the bridge performs a
+runtime status call only and never replays that stage automatically. Extension
+returns `readback_required`; run the separate `--status` command for detail.
+Status observation revalidates the bridge's full immutable request boundary,
+including current runtime/adapter hashes and DB inode, dedicated project,
+failure/campaign/plan/status refs, budget, exact task and output namespace. Thus
+`--status` can fail closed after Local runtime drift; repair the retained runtime
+installation or reconcile it explicitly, never edit the receipt to bypass this.
 
 ### Reviewed online-repair bridge — source authored, Local runtime pending
 
@@ -1534,6 +1550,17 @@ the affected plan, and append it only through the existing two-digest extension.
 If the real runtime executable, registered DB, adapter config, provider auth or
 online service is unavailable, retain `not_connected`; do not substitute a shell
 agent, local LLM, second scheduler or repeated experiment.
+
+After any bridge call, use the ordinary read-only supervisor inspection to bind
+the two retained views. `worker_returned_unreviewed` means only that the one
+finite runtime worker subprocess returned zero; inspect runtime `status`/`events`
+and both declared output bytes before patch review. `reconcile_required` forbids
+another bridge worker call. The status handshake is evidence reconciliation, not
+an execution or retry entry:
+
+```bash
+python scripts/research_supervisor.py "$CAMPAIGN_MANIFEST" --status
+```
 
 For `reconcile_required`, do not delete `worker-intent.json` or execute again.
 Use the exact dedicated project/task and retained owner/fence from runtime events:

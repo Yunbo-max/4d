@@ -1980,3 +1980,43 @@ supplies and qualifies the actual registered controller DB, adapter registry and
 provider authentication; no status handshake is implemented. Local
 must review any produced patch, create a distinct child version/plan, then use
 the existing two-digest append-only extension.
+
+## Continuation: fail-closed repair status handshake — 2026-10-08
+
+Restored literal main `6399bff2b087e3d648afa8e204948545c574ecca` and
+kept the four remaining method blockers unchanged: C03 has no legal development
+label producer under the existing pointwise/no-asset-specific-ICP policy, while
+C05, C08 and C20 still lack their qualified native mode, chain or motion-target
+inputs. No nearest-neighbour diagnostic was promoted into a C03 method input;
+source-method coverage therefore remains 11/15 and Local/native evidence 0/15.
+
+The supervisor now has a read-only, hash-bound view of retained repair-bridge
+state instead of a permanently hard-coded `not_connected`. It verifies valid
+parent campaign digests across append-only extensions, snapshots each request
+under the bridge owner lock, validates every immutable event against its name,
+request and ordered previous-event hash/journal chain, honours every durable
+registration/reservation/enqueue/worker intent, and maps only known raw
+states into `configured_no_worker_receipt`, `worker_returned_unreviewed`,
+`reconcile_required` or `failed`. Missing requests remain `not_connected`.
+Heartbeat v2 carries that observation; v1 remains compatible only with the old
+not-connected value. An extension commit returns `readback_required` rather than
+risk reporting a post-commit scan error; a separate `--status` supplies detail.
+Observation never calls the runtime/provider, dispatches work, accepts a patch,
+changes budget, or retries a scientific attempt.
+Bridge execution also refuses to replay any retained stage intent: it performs
+only a bounded runtime status query and records reconciliation evidence.
+Before mapping a receipt, observation revalidates the same immutable bridge
+admission boundary: live runtime/adapter hashes and DB identity, dedicated
+project policy, complete failure/campaign/plan/status evidence, cumulative
+budget, input/instruction refs, output namespace and exact task. Worker-returned
+requires the complete ordered progression with exact argv, outcomes and
+reservation receipt; self-consistent but bridge-invalid evidence is rejected.
+
+Targeted Local test source covers returned receipts, unknown/intent-only states,
+parent-admission survival after extension, lost acknowledgement and retained
+event tamper/symlink rejection. Independent static review findings on lineage,
+post-commit fallibility, owner-lock races, intent handling, event ordering and
+unknown statuses were repaired. All changes remain `generated_unexecuted`: Web
+ran no project import/test, runtime worker, model/data operation, scorer or GPU
+task. No worker receipt is checked in; the supervisor is uninstalled/unstarted
+and its current operational repair state remains `not_connected`.
