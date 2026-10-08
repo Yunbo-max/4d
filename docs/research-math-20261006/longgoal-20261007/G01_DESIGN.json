@@ -125,7 +125,7 @@
       "confirmation"
     ],
     "minimum_confirmation_families": 30,
-    "minimum_confirmation_rationale": "Fewer than 30 independent confirmation clusters is treated as INCONCLUSIVE because the family-cluster bootstrap cannot support a stable cross-family uncertainty claim at the 98-test adjusted level. The threshold is frozen before family derivation; it is a floor, not a power guarantee, and the precision gate may still block PASS."
+    "minimum_confirmation_rationale": "Fewer than 30 independent confirmation clusters is treated as INCONCLUSIVE because the family-cluster bootstrap cannot support a stable cross-family uncertainty claim at the 99-test adjusted level. The threshold is frozen before family derivation; it is a floor, not a power guarantee, and the precision gate may still block PASS."
   },
   "criteria": {
     "effect_direction": "treatment_minus_control_lower_is_better",
@@ -159,8 +159,8 @@
     "bootstrap_seed": 20261006,
     "familywise_alpha": 0.05,
     "multiplicity": "bonferroni_over_all_confirmatory_candidate_control_primary_and_b_star_guardrail_tests",
-    "confirmatory_test_count": 98,
-    "per_test_alpha": 0.0005102040816326531,
+    "confirmatory_test_count": 99,
+    "per_test_alpha": 0.000505050505050505,
     "precision_gate": "Before confirmation, use D1/D2 family-level dispersion only to report whether the complete remaining confirmation inventory can resolve one half of the fixed primary minimum effect at the adjusted level. If not, retain the complete inventory and predeclare INCONCLUSIVE; never shrink the effect or margin after results.",
     "analysis_adapter_status": "required_trusted_live_project_callback_not_executed",
     "complete_inventory": true
@@ -614,7 +614,7 @@
       "candidate_id": "4d-math-20261006-c20",
       "spec_ref": {
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
-        "sha256": "7dd8f31af598b90be0af09b870d43910615b2342cacd2caabb490f616ccb72f2"
+        "sha256": "592ee8e7cd7123c610d693e1742d650622d8d2d82a79e68cef371dde95fa734d"
       },
       "approved_control_implementation_refs": null,
       "treatment_role": "joint_monotone_phase_amplitude",
@@ -853,7 +853,7 @@
       "candidate_id": "4d-math-20261006-c05",
       "spec_ref": {
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
-        "sha256": "66e1a0b973c9203599a45b149f2aa0aeea0d50b56ad03d3f3e57ffef81d8319f"
+        "sha256": "85547a4d43208af35bd7806b55b8b2c6bcb87fce1d30ccfece7b78f7d7d058c8"
       },
       "approved_control_implementation_refs": null,
       "treatment_role": "joint_spatial_labels",
@@ -862,6 +862,7 @@
         "B_star",
         "localized_mean",
         "temperature_matched_mean",
+        "surface_projected_mean",
         "independent_top1"
       ],
       "primary_metric": "cd_3d",
@@ -874,6 +875,7 @@
         "joint_spatial_labels-B_star:cd_3d",
         "joint_spatial_labels-localized_mean:cd_3d",
         "joint_spatial_labels-temperature_matched_mean:cd_3d",
+        "joint_spatial_labels-surface_projected_mean:cd_3d",
         "joint_spatial_labels-independent_top1:cd_3d",
         "joint_spatial_labels-B_star:cd_4d",
         "joint_spatial_labels-B_star:cd_motion"
@@ -1040,5 +1042,5 @@
     "explicit_gpu_resume_authorization_required": true,
     "gpu_dispatch_allowed_now": false
   },
-  "design_digest": "7f963c63d94baa88e3cef033546908c21751ab8b62323fcc7207e9c086be0150"
+  "design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65"
 }

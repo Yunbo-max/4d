@@ -1907,7 +1907,9 @@ imported C11 candidate transitives before the C06 override. Authored Local tests
 cover the real artifact-to-five-role request, marginal closure, artifact replay,
 isolated profile imports and B0 provenance corruption. The G01 design now binds
 C06's exact source closure and covers 10/15 source-complete candidates while
-keeping all 98 contrasts unchanged.
+keeping the then-current 98 contrasts unchanged. A later exact-source review
+repaired C05's omitted required `surface_projected_mean`, yielding 99 prospective
+contrasts before any candidate execution.
 
 All C06 code and tests are `generated_unexecuted`. Web performed only static
 AST/JSON/hash/diff inspection: no project import/test, plan execution, artifact,
@@ -2020,3 +2022,40 @@ unknown statuses were repaired. All changes remain `generated_unexecuted`: Web
 ran no project import/test, runtime worker, model/data operation, scorer or GPU
 task. No worker receipt is checked in; the supervisor is uninstalled/unstarted
 and its current operational repair state remains `not_connected`.
+
+## C20 bounded phase/amplitude solver core — 2026-10-08
+
+Restored literal main `d26ec0870381744d5f5e453847f6142f43b43a3c`. Exact model
+and context review confirmed that the raw prediction, query-relative decoder
+residual, anchor-only source-time residual and replay disagreement are not legal
+full-time C20 correction targets. The scientific target/basis producer remains a
+real blocker rather than an external-array placeholder.
+
+Implemented `research_math.phase_amplitude_candidate` for the independent
+reviewed mathematics: endpoint-zero phase bases, weighted joint block fitting,
+whitened principal-angle `kappa`, rank/identifiability refusal, full active-set
+block solving when minimum-slope inequalities bind, original-time nonlinear
+interpolation, and residual/remainder/KKT/monotonicity diagnostics. Authored test
+source covers inactive recovery, active constraints, exact overlapping-subspace
+rejection and native-shape/endpoint refusal. This is partial source only: target
+and amplitude-basis producers, artifact arms, comparison/scoring/collection and
+native acceptance remain absent. Source-complete candidate coverage remains
+11/15; Local/native remains 0/15.
+
+The same exact-source review resolved two future routes without claiming them
+implemented. C03 may use frozen development-only tracked GT points as direct
+decoder probes, with an explicit GT-query to generated-query transfer limitation
+and no NN/ICP. C08 may specialize to a predicted-geometry adjacent sparse chain,
+area endpoints and log-domain bridge, never latent attention. Both require a
+prospective spec/review update before code. C05 has no nondegenerate model-native
+mode bank/scores in the current interface; K=1 collapses every arm and geometry
+transport would change the selected method. The C05 G01/spec comparison inventory
+previously omitted the required `surface_projected_mean` arm. This continuation
+repairs the C05 spec and prospective G01 inventory to 99 tests before any candidate
+execution; a qualified C05 producer still does not exist.
+
+All C20 source/tests are `generated_unexecuted`. Web performed AST/JSON/hash/diff
+and independent static review only and ran no project import/test, plan, solver,
+data/model download, scorer or GPU operation. GPU STOP, cumulative budget,
+single-attempt/zero-scientific-retry protocols and supervisor
+`not_connected`/uninstalled status remain unchanged.

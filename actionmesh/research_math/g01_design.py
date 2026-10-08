@@ -61,7 +61,7 @@ EXPECTED_SCORER_REFS = {
     "actionmesh/repo/actionbench/sample_point_cloud.py":
         "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
 }
-EXPECTED_DESIGN_DIGEST = "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034"
+EXPECTED_DESIGN_DIGEST = "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65"
 EXPECTED_REVIEW_CHECKS = {
     "source_identity", "mapping_reproduction", "split_independence",
     "exposure_containment",
@@ -423,8 +423,8 @@ def validate_design_record(root: Path, design: dict) -> dict:
         if row.get("confirmatory_contrasts") != expected_contrasts:
             raise ValueError("candidate contrast inventory is incomplete")
         total_contrasts += len(expected_contrasts)
-    if approved_implementation_count != 10:
-        raise ValueError("exactly ten delivered candidate implementation closures required")
+    if approved_implementation_count != 11:
+        raise ValueError("exactly eleven delivered candidate implementation closures required")
 
     statistics = design.get("statistics")
     if (not isinstance(statistics, dict)
@@ -437,7 +437,7 @@ def validate_design_record(root: Path, design: dict) -> dict:
             or statistics.get("bootstrap_seed") != 20261006
             or statistics.get("familywise_alpha") != 0.05
             or statistics.get("confirmatory_test_count") != total_contrasts
-            or total_contrasts != 98
+            or total_contrasts != 99
             or not math.isclose(statistics.get("per_test_alpha", -1),
                                 0.05 / total_contrasts, rel_tol=0, abs_tol=1e-18)
             or statistics.get("complete_inventory") is not True):

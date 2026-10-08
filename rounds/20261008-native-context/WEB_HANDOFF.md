@@ -913,7 +913,7 @@ The earliest independent obligation after the six legal-input blockers was the
 shared complete evaluation design. `longgoal-20261007/G01_DESIGN.json` now binds
 the unchanged 15 selected specs to the complete 128-UID/16-frame ActionBench
 population and exact official scorer settings. It retains all declared arms and
-contains 98 confirmatory contrasts: treatment versus every control on the primary
+contains 99 confirmatory contrasts: treatment versus every control on the primary
 metric and treatment versus frozen B* on both guardrails. Absolute effects and
 noninferiority margins are fixed from the official leaderboard's task-scale
 separations, not the earlier unsourced 5%/2% work lines.
@@ -1063,3 +1063,53 @@ status remains `not_connected`. Local must run the common zero-GPU acceptance,
 qualify the installed runtime/adapter/provider separately, and independently
 review any returned patch before a new exact child version and two-digest campaign
 extension. GPU STOP and cumulative budgets remain unchanged.
+
+## Continuation: C20 constrained solver core — 2026-10-08
+
+Restored literal main `d26ec0870381744d5f5e453847f6142f43b43a3c` and performed
+an exact-source review of all four remaining candidate input gaps. C20's current
+native prediction is the object being repaired; decoder residual mode represents
+query-relative displacement; the source-time residual is anchor-only. None is a
+legal full-time correction target. No existing tensor was relabelled to make the
+candidate appear complete.
+
+The independent mathematical part is now implemented in
+`actionmesh/research_math/phase_amplitude_candidate.py`. It binds the fixed
+endpoint-zero phase basis to the native trajectory derivative, joins the supplied
+frozen amplitude basis under positive weights/ridge, computes the whitened
+principal-angle `kappa` certificate, rejects phase or amplitude rank failure and
+below-floor identification, and switches from the inactive block solution to a
+full active-set constrained block solve whenever the minimum warped-time slope
+binds. The returned reconstruction is evaluated at all original timestamp IDs
+and records linear/nonlinear residuals, the observed Taylor remainder, active
+constraints and KKT/monotonicity certificates. Authored tests cover inactive
+recovery, an active inequality, exact non-identifiability and shape/endpoint
+refusal.
+
+This is a partial solver core, not an external-input stand-in for C20. A qualified
+receipt-bound motion-target producer, frozen amplitude-basis producer, complete
+identity-preserving phase-only/amplitude-only/simple-lag/joint artifact export,
+comparison freeze, official scoring/raw collection and retained-native acceptance
+remain missing. Source-complete coverage therefore remains 11/15 and Local/native
+coverage remains 0/15. The released video/camera inputs are only a possible next
+producer route after permission, coordinate/visibility mapping and common
+observation-space review; no such route is claimed here.
+
+Parallel static review also found prospective legal specializations that require
+their own reviewed spec updates before code: C03 can use development-only tracked
+GT points as direct decoder probes without NN/ICP, but must state the GT-query to
+generated-query transfer limitation; C08 can build a geometry-only adjacent
+sparse chain and area endpoints from one receipt-bound predicted sequence, but
+must not call latent attention a Markov kernel. C05 has no nondegenerate
+model-native mode bank/scores in the current interface: the only derivable K=1
+bank collapses all arms, while reusing C06/C07 geometry transport would change
+the selected method. This continuation repairs the spec/G01 inventory to include
+the independently required `surface_projected_mean` role and 99 prospective tests
+before any candidate execution. These findings do not change completion counts.
+
+All new source is `generated_unexecuted`. Web performed AST/JSON/hash/diff and
+independent static review only; it ran no project import/test, plan, data/model
+download, solver, scorer or GPU operation. GPU STOP, cumulative budgets and the
+single-attempt/zero-scientific-retry protocols remain unchanged. The supervisor
+is not installed or running and its operational repair state remains
+`not_connected`.

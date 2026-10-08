@@ -122,7 +122,7 @@ obtain continued work.
 The stage-wide G01 source design is
 `docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json` with its readable
 card in `G01_DESIGN.md`. It binds all 15 selected specs, the complete released
-ActionBench population, official scorer settings, 98 confirmatory contrasts,
+ActionBench population, official scorer settings, 99 confirmatory contrasts,
 absolute effect/noninferiority criteria, family-level multiplicity, full failure
 denominators and unchanged one-GPU/native-Conda budgets. It is
 `generated_unexecuted`, not a design-verified candidate protocol. Local first
@@ -184,6 +184,22 @@ producer UID/GPU/generation identity/source-time mode, enforce frozen archive, m
 ceilings, validate every regular archive member, and extract from an immutable
 private snapshot into a new single-use workspace. A consumed bundle remains unqualified transport
 evidence and must not bypass Gate 0, candidate admission or GPU STOP.
+
+C20 now has a partial numerical core at
+`actionmesh/research_math/phase_amplitude_candidate.py`. It implements the fixed
+endpoint-zero phase basis, weighted joint phase/amplitude solve, principal-angle
+`kappa` identifiability rejection, the full constrained block solve when a
+minimum-slope inequality is active, and nonlinear reconstruction at every
+original timestamp. It does **not** produce or qualify the required motion target
+or amplitude basis and is not a complete candidate entry. Raw predicted
+coordinates are the object being repaired; decoder residual mode is displacement
+relative to the query; the source-time self residual exists only at the anchor.
+None may be relabelled as a full-time C20 correction target. The authored test
+source is `actionmesh/research_math/tests/test_phase_amplitude_candidate.py` and
+remains generated_unexecuted. Do not run this core on arbitrary external arrays,
+call it source-complete, or add it to G01 admission until a receipt-bound legal
+target/basis producer, complete native artifact roles and official scoring chain
+are delivered and independently reviewed.
 
 Before setup, acceptance, execution, repair, collection, or delivery, read at the exact delivered commit:
 

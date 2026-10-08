@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C03/C20 and C05/C08 remain blocked on genuine legal inputs. The stage-wide G01 source design is complete/generated_unexecuted with C07's exact closure added; dynamic family/B*/candidate admission remains pending. Four full method source chains remain. The reviewed online-repair bridge now has a fail-closed read-only supervisor receipt handshake, but no controller DB/adapter/provider/worker receipt is configured or running and Local qualification is pending. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C06,C07,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (11/15). C20 now also has a generated_unexecuted bounded monotone phase/amplitude solver core with identifiability and original-time reconstruction, but remains incomplete because no qualified full-time motion-target/amplitude-basis producer or artifact/scoring chain exists. C03/C05/C08 likewise remain incomplete on their recorded legal-input routes. The stage-wide G01 source design is complete/generated_unexecuted with 11 exact method closures; dynamic family/B*/candidate admission remains pending. Four full method source chains remain. The reviewed online-repair bridge has a fail-closed read-only supervisor receipt handshake, but no controller DB/adapter/provider/worker receipt is configured or running and Local qualification is pending. Local/native methods 0/15. GPU STOP unchanged.",
   "supervisor_repair_handshake": {
     "status": "source_authored_generated_unexecuted_local_acceptance_pending",
     "authoring_base": "6399bff2b087e3d648afa8e204948545c574ecca",
@@ -39,10 +39,10 @@
     "guide": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-c07-incremental-source-review.json",
-    "design_digest": "7f963c63d94baa88e3cef033546908c21751ab8b62323fcc7207e9c086be0150",
-    "coverage": "15 selected specs, exact candidate/native source closures for 11 source-complete candidates, complete 128-UID population, official scorer closure, 98 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
-    "independent_static_review": "C07/G01 incremental independent source review complete; Critical 0, Important 0, Minor 0; Local execution pending",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
+    "design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65",
+    "coverage": "15 selected specs, exact candidate/native source closures for 11 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts including C05's required same-bank surface-projected mean, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
+    "independent_static_review": "C20/G01 incremental independent source review complete; G01 Critical 0, Important 0, Minor 0; C20 partial core Critical 0, Important 0, Minor 1; Local execution pending",
     "tests_executed": false,
     "scientific_design_verified": 0,
     "local_method_verified": 0,
@@ -1783,6 +1783,38 @@
     "gpu_execution": "stopped_by_user",
     "remaining": "Local current-source acceptance, prospective gamma/epsilon/support/solver/resource/B* freeze, real receipt-bound CPU artifact execution and replay, G01/Gate0/IPCG/family admission, explicit GPU resume authorization and official native result",
     "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c07-partial-transport-with-native-fallback--source-complete-not-executed"
+  },
+  "c20_partial_solver_handoff": {
+    "status": "partial_solver_core_generated_unexecuted",
+    "recorded_at": "2026-10-08T20:03:40Z",
+    "restored_main": "d26ec0870381744d5f5e453847f6142f43b43a3c",
+    "candidate_id": "4d-math-20261006-c20",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/phase_amplitude_candidate.py",
+        "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
+        "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
+      }
+    ],
+    "implemented_scope": "fixed endpoint-zero phase basis; weighted phase/amplitude block fit; whitened principal-angle kappa diagnostic; fail-closed phase/amplitude rank and identifiability checks; active-set full constrained solve when monotonicity binds; exact endpoint/minimum-slope certificate; nonlinear interpolation at the original 16 timestamp inventory; linear/nonlinear residual and remainder diagnostics",
+    "input_review": "Exact-source review found that raw predicted coordinates are the object being repaired, decoder residual mode is displacement relative to a query rather than correction error, and source-time self residual supplies only the anchor. None is a legal full-time C20 target. Released video/camera inputs remain a possible producer route only after method-input permission, coordinate/visibility mapping and common-observation-space review.",
+    "source_review": "Independent static solver review recorded in docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json; Critical 0, Important 0, Minor 1 in the partial-core scope. Web performed AST/JSON/hash/diff review only; no project import/test, data/model operation or solver execution.",
+    "remaining_implementation_gaps": [
+      "Qualified receipt-bound model/input motion-target producer",
+      "Frozen amplitude-basis producer and provenance",
+      "Complete identity-preserving artifact export and phase-only/amplitude-only/simple-lag/joint roles",
+      "Prospective comparison freeze, official scoring/raw collection and retained-native acceptance"
+    ],
+    "full_method_source_complete": false,
+    "source_complete_candidates": 11,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "tests_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "next_action": "Prospectively freeze and qualify an inactive-stationarity threshold, then implement the qualified target/basis producer and complete artifact/comparison/scoring chain or keep C20 blocked without relabelling model displacement as target. The geometry-only C08 specialization identified by exact-source review is an independent source-ready route after its prospective spec specialization."
   },
   "c03_partial_calibration_handoff": {
     "status": "partial_source_generated_unexecuted",

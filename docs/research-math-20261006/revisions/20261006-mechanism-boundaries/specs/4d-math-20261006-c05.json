@@ -115,6 +115,7 @@
       "B_star",
       "localized_mean",
       "temperature_matched_mean",
+      "surface_projected_mean",
       "independent_top1",
       "joint_spatial_labels"
     ],

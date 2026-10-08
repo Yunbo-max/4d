@@ -511,6 +511,7 @@
         "sha256": "c56720c5a8267fafdb36652d2847765b240136cd57acf94aab2ca532d3c3d381"
       },
       "source_status": "partial_calibration_core_generated_unexecuted",
+      "input_route_review": "2026-10-08 exact-source review found a prospective no-NN/no-ICP specialization: on frozen development families, query the decoder at published tracked GT frame-zero points/normals and define labels by their unchanged track indices. This supplies true GT-probe labels but not true labels for the generated anchor vertices; transfer from GT-query to generated-query distributions and the plain normalized coordinate gauge must be explicit and independently reviewed before implementation or source-complete status.",
       "code_entry": "actionmesh/prepare_c03_calibration.py",
       "real_input_and_model_interface": "C01 residual and development-only labeled errors with qualified correspondence/lift",
       "required_outputs": [
@@ -596,8 +597,9 @@
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-review.json",
         "sha256": "9253b377b9adaf4e8173595673e2fea36c89b17dda71d82437336a296cbe69a9"
       },
-      "source_status": "specification_only",
-      "code_entry": null,
+      "source_status": "partial_solver_core_generated_unexecuted",
+      "input_blocker_evidence": "2026-10-08 exact-source review: raw native coordinates are the trajectory being repaired; decoder residual mode is query-relative displacement; source-time self residual is anchor-only; replay mismatch is an engineering error. None is a legal full-time correction target. Released video/camera input is only a prospective observation-space producer after permission, coordinate/visibility mapping and common residual/Jacobian review.",
+      "code_entry": "actionmesh/research_math/phase_amplitude_candidate.py",
       "real_input_and_model_interface": "Legal model/input motion target and original times with fixed phase/amplitude bases",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
@@ -616,12 +618,21 @@
       "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
       "local_method_acceptance_command": null,
       "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "completion_evidence": [
+        {
+          "path": "actionmesh/research_math/phase_amplitude_candidate.py",
+          "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
+        },
+        {
+          "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
+          "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
+        }
+      ],
       "remaining_implementation_gaps": [
-        "motion-target adapter",
-        "bounded monotone solver",
-        "identifiability/noise diagnostics",
-        "original-time reconstruction"
+        "Qualified receipt-bound motion-target adapter; current decoder prediction, residual mode and source-time self residual are not legal full-time correction targets",
+        "Frozen amplitude-basis producer and provenance; the solver accepts only an explicitly supplied basis",
+        "Complete identity-preserving artifact export with phase-only, amplitude-only, simple-lag and joint roles",
+        "Prospective comparison freeze, official scoring/raw collection and retained-native acceptance"
       ],
       "scientific_prerequisites": [
         "qualified legal motion target and camera/information permission",
@@ -871,6 +882,7 @@
       },
       "source_status": "specification_only",
       "input_blocker_evidence": "2026-10-08 exact-source review: the native decoder/context path emits one coordinate sequence and latent tensors, not a qualified sparse material-coordinate mode bank or calibrated per-mode scores. Latent attention and arbitrary external y/p arrays are not legal substitutes; only C05-dependent work is blocked.",
+      "design_consistency_gap": "The math/review requires the same-bank surface_projected_mean comparator. It is now restored to the candidate audit, C05 spec arms and G01 control/contrast inventory (99 prospective tests); no implementation exists without a qualified producer.",
       "code_entry": null,
       "real_input_and_model_interface": "Actual model-exposed sparse material modes with normalized scores; anchor graph and legal hints",
       "required_outputs": [
@@ -884,6 +896,7 @@
         "B_star",
         "localized_mean",
         "temperature_matched_mean",
+        "surface_projected_mean",
         "independent_top1",
         "joint_spatial_labels"
       ],
@@ -933,6 +946,7 @@
       },
       "source_status": "specification_only",
       "input_blocker_evidence": "2026-10-08 exact-source review: no qualified sparse Markov reference chain or legal model-derived endpoint distributions exist in the current native/context interface. A standalone IPF solver would be an external-input primitive, not the selected complete method.",
+      "prospective_specialization_review": "A source-faithful geometry-only specialization is available after prospective spec/review update: one receipt-bound predicted 16-frame mesh supplies adjacent sparse geometry supports/costs, row-normalized reference kernels, anchor/final barycentric-area endpoints, reachability, log-domain bridge scaling and a deterministic whole-path lift. This must not be described as model attention or natural correspondence evidence and is not implemented in the current source status.",
       "code_entry": null,
       "real_input_and_model_interface": "Qualified sparse Markov kernels/initial probabilities and model endpoint distributions",
       "required_outputs": [
@@ -1111,7 +1125,7 @@
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
   "maintained_base_commit": "6399bff2b087e3d648afa8e204948545c574ecca",
-  "independent_source_review": "C06 and C07 incremental independent static reviews completed; all reported numerical, fallback, metric-profile, B0-binding, harness-staging and source-closure findings repaired. The existing-runtime repair bridge, handoff and supervisor observation handshake were independently reviewed; bridge durability, cumulative reservation, retained-lineage identity, lock-safe observation, event/journal reconciliation and fail-closed status findings were repaired. Local runtime/provider qualification remains pending. Evidence: docs/research-math-20261006/longgoal-20261007/g01-c07-incremental-source-review.json and repair-runtime-bridge-source-review.json. Source only, no project execution.",
+  "independent_source_review": "C06, C07 and C20/G01 incremental independent static reviews completed. The C20 partial solver core has Critical 0, Important 0, Minor 1 and remains non-admitted; G01's restored C05 comparator inventory has no remaining finding. The existing-runtime repair bridge, handoff and supervisor observation handshake were independently reviewed; Local runtime/provider qualification remains pending. Evidence: docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json and repair-runtime-bridge-source-review.json. Source only, no project execution.",
   "supervisor_extension_review": {
     "path": "docs/research-math-20261006/longgoal-20261007/supervisor-append-extension-source-review.json",
     "status": "generated_unexecuted_independent_static_review_complete",
@@ -1132,8 +1146,8 @@
     "guide_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/g01-c07-incremental-source-review.json",
-    "design_digest": "7f963c63d94baa88e3cef033546908c21751ab8b62323fcc7207e9c086be0150",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
+    "design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65",
     "source_review_findings_remaining": {
       "critical": 0,
       "important": 0,
@@ -1142,7 +1156,7 @@
     "status": "complete_source_design_generated_unexecuted",
     "selected_candidates": 15,
     "benchmark": "facebook/actionbench@2796071cbe6248422fcbeab3101fa9f9886cb7b9 complete 128 released UIDs",
-    "confirmatory_contrasts": 98,
+    "confirmatory_contrasts": 99,
     "numeric_criteria_frozen_in_source": true,
     "dynamic_family_and_b_star_evidence": "pending Local source derivation, independent review and D1-only native evidence",
     "local_acceptance": "pending",

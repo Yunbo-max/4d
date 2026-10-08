@@ -40,12 +40,14 @@ TripoSG `0.056`, and full versus fast ActionMesh `0.085` versus `0.089` CD-4D
 and `0.153` versus `0.156` CD-M.  They are not the earlier unsourced “5%/2%”
 development lines.
 
-There are 98 predeclared confirmatory tests:
+There are 99 predeclared confirmatory tests. The C05 inventory includes its
+math/review-required same-bank `surface_projected_mean` comparator rather than
+silently omitting that harder sharp-mean control:
 
 - each candidate versus every declared non-treatment role on its primary metric;
 - each candidate versus frozen B* on both guardrails.
 
-Use one familywise alpha `0.05`, Bonferroni over all 98 tests, and a trusted live
+Use one familywise alpha `0.05`, Bonferroni over all 99 tests, and a trusted live
 project callback for the paired family-cluster bootstrap: 200,000 basic one-sided
 resamples, RNG seed `20261006`.  The independent unit is a reviewed asset family;
 frames, scorer samples, hyperparameters and repeated seeds are nested observations.

@@ -73,6 +73,7 @@ G01_SOURCES = (
     'docs/research-math-20261006/longgoal-20261007/g01-source-review.json',
     'docs/research-math-20261006/longgoal-20261007/g01-c06-incremental-source-review.json',
     'docs/research-math-20261006/longgoal-20261007/g01-c07-incremental-source-review.json',
+    'docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json',
     'docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json',
     'docs/research-math-20261006/evidence/exposure-and-contract.json',
     'actionmesh/research_overnight/assets/actionbench_population.json',

@@ -9,7 +9,7 @@ Read
 JSON before preparing any candidate protocol. The design binds the unchanged 15
 selected candidates to all 128 released ActionBench UIDs, all 16 frames, producer
 seeds 42/314/2718, scorer seed 44, the official CD-3D/CD-4D/CD-M implementation,
-every declared control and 98 confirmatory contrasts. It fixes absolute primary
+every declared control and 99 confirmatory contrasts. It fixes absolute primary
 effects (`0.002` CD-3D, `0.003` CD-M), guardrail margins (`0.002` CD-3D,
 `0.004` CD-4D, `0.003` CD-M), family-level paired analysis and Bonferroni
 familywise alpha 0.05. This is source/design completion only: no candidate is
@@ -164,6 +164,57 @@ raise tolerances or switch loss silently. A bank/hash/split rejection requires
 restoring the exact intended bytes or scientific review of a versioned change.
 No model download, scorer, supervisor installation or GPU resume is authorized
 by this source handoff. Existing asset acquisition cards below remain unchanged.
+
+### C20 phase/amplitude solver core — partial source, no legal target producer
+
+Current source is `generated_unexecuted`. The numerical entry is
+`actionmesh/research_math/phase_amplitude_candidate.py`; authored engineering
+checks are in
+`actionmesh/research_math/tests/test_phase_amplitude_candidate.py`. This is only
+the C20 constrained solver core. It is not a native artifact builder, method
+acceptance plan, comparison freeze or scoring chain, so the 11/15 source-complete
+count does not change.
+
+`solve_phase_amplitude` consumes a complete `[T,V,3]` predicted trajectory, an
+equally shaped **qualified desired additive correction**, original timestamps, an
+exact endpoint-zero phase basis and a frozen `[Q,T,V,3]` amplitude basis. It
+builds the first-order phase block, computes the whitened phase/amplitude
+principal-angle certificate `kappa`, rejects deficient or below-floor problems,
+and uses the unconstrained weighted block solution only when every monotonicity
+inequality is inactive. Otherwise it solves the full constrained block problem
+with retained KKT/violation checks. It then interpolates the input trajectory at
+the internal warped times, adds the amplitude component, and returns one value at
+every original time ID together with linear/nonlinear residual and remainder
+diagnostics. Endpoints and the minimum interval slope are checked after solving.
+
+Do not supply any of these existing arrays as `target`:
+
+- the raw native prediction—it is the trajectory being repaired and gives zero
+  correction (or doubles motion if misread as a residual);
+- decoder `prediction_mode=residual` output—it is displacement from the query,
+  not a target error;
+- the source-time C01 residual—it exists only at the anchor and cannot identify
+  the endpoint-zero interior phase basis;
+- replay disagreement—it is an engineering consistency failure, not motion
+  evidence; or
+- confirmation GT or arbitrary external arrays.
+
+The released video/camera assets may support a future legal observation-space
+target only after method-input permission, coordinate/visibility mapping and a
+reviewed common residual/Jacobian construction. That route is not implemented or
+qualified here. A frozen amplitude-basis producer is also absent. Therefore
+there is no Local method-acceptance or execution command in this delivery. The
+test source covers inactive separation, active minimum-slope constraints,
+non-identifiability rejection and identity/endpoint validation. Web did not run
+it; the common CPU software acceptance pins and discovers it, but that is not
+C20 method/native acceptance. Local must not import or execute the core as a
+substitute for the missing complete chain. The next
+legal source step is a prospectively reviewed target/basis producer followed by
+identity-preserving phase-only, amplitude-only, simple-lag and joint artifacts;
+only then add comparison, official scoring, admission and a harness command.
+
+GPU STOP and the zero-scientific-retry rule remain effective. This partial CPU
+source grants no setup, model, scorer or GPU authority.
 
 ### C01 same-context correction and retained-native acceptance
 

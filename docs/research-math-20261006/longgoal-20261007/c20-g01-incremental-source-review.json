@@ -1,0 +1,91 @@
+{
+  "kind": "c20-g01-incremental-independent-static-source-review",
+  "version": 1,
+  "status": "independent_static_review_complete",
+  "recorded_at": "2026-10-08T20:03:40Z",
+  "restored_main": "d26ec0870381744d5f5e453847f6142f43b43a3c",
+  "scope": {
+    "c20": "Partial phase/amplitude solver core only; this is not a complete candidate chain and does not admit C20.",
+    "g01": "C05 comparator inventory and exact validator/design consistency after restoring the required same-bank surface-projected mean.",
+    "handoff": "Current-source status, hashes and generated-unexecuted boundaries."
+  },
+  "reviewers": [
+    {
+      "reviewer": "/root/review_repair_bridge",
+      "scope": "C20 solver mathematics, numerical implementation and authored test source"
+    },
+    {
+      "reviewer": "/root/review_repair_handoff",
+      "scope": "G01 count/digest/spec closure and cross-document handoff consistency"
+    }
+  ],
+  "source_refs": [
+    {
+      "path": "actionmesh/research_math/phase_amplitude_candidate.py",
+      "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
+      "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
+      "sha256": "85547a4d43208af35bd7806b55b8b2c6bcb87fce1d30ccfece7b78f7d7d058c8"
+    },
+    {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
+      "sha256": "592ee8e7cd7123c610d693e1742d650622d8d2d82a79e68cef371dde95fa734d"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",
+      "sha256": "d3f4a3a097655014075a17a2807e9d7c9ba56d72dd4917b7fb30670d0c82cee7",
+      "canonical_design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
+      "sha256": "a9840bd8c34b0a18b403caaef8ea39493ef9d41064562a34a4b9dbc9990f9cae"
+    },
+    {
+      "path": "actionmesh/research_math/g01_design.py",
+      "sha256": "262fafad7a64542c55c6ca5ea75c62efe8e20a3d9cf84077243f393e97ee5c42"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_g01_design.py",
+      "sha256": "9859e8ad27ebd78dceaf5c66e9d4c8af68510cd1cd92a5f5c348586a1cf0b0e5"
+    }
+  ],
+  "repaired_findings": [
+    "C20 renderer and phase Jacobian now use the same Hermite knot derivatives, with positive and negative warp traversal represented in test source.",
+    "C20 inactive and active solves avoid normal equations, fail closed on deficient or ill-conditioned identifiable blocks, and support phase-only or amplitude-only roles.",
+    "C20 records active multipliers, endpoint and slope certificates, warp magnitude and nonlinear remainder gates without treating the missing target producer as solved.",
+    "C05's required surface_projected_mean control is restored to its spec, delivery audit and G01 confirmatory inventory.",
+    "G01 now declares exactly 99 confirmatory contrasts, 11 delivered implementation closures, a recomputed canonical digest and current C05/C20 spec hashes."
+  ],
+  "remaining_findings": {
+    "critical": [],
+    "important": [],
+    "minor": [
+      "C20 reports the inactive stationarity residual but does not apply a separate acceptance threshold; downstream candidate materialization must retain and qualify it prospectively."
+    ]
+  },
+  "execution_boundary": {
+    "project_imports_or_tests_executed": false,
+    "data_or_model_downloads_executed": false,
+    "training_inference_or_scoring_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "review_methods": [
+      "independent source inspection",
+      "AST parsing",
+      "strict JSON parsing",
+      "canonical digest and referenced-file hash verification",
+      "diff whitespace validation"
+    ]
+  },
+  "stage_status": {
+    "c20_full_method_source_complete": false,
+    "source_complete_candidates": 11,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "label": "generated_unexecuted"
+  }
+}

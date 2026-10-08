@@ -179,5 +179,34 @@
   "supersedes_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c20.json",
     "sha256": "45eb91c445d2e229bafbe1ea7deb46222d73f146e568e61a6ca12bb37d392595"
+  },
+  "source_delivery": {
+    "status": "partial_solver_core_generated_unexecuted",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/phase_amplitude_candidate.py",
+        "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
+        "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
+      }
+    ],
+    "math_to_code": {
+      "s1": "solve_phase_amplitude constructs the trajectory derivative times the fixed endpoint-zero phase basis and joins it with the supplied frozen amplitude basis.",
+      "s2_s3": "The inactive solution is the full weighted block optimum, equivalent to profiling when the stated ranks hold; violated monotonicity enters a full active-set constrained block solve rather than reusing the profiled formula.",
+      "s4_s8": "Whitened phase/amplitude subspaces produce the principal-angle kappa certificate; rank-deficient or below-floor problems fail closed even when positive ridge makes the numerical system solvable.",
+      "s5_s7": "The implementation records the largest cross-subspace singular value, kappa and weighted residuals; no coefficient is reported as identified below the prospectively supplied floor.",
+      "s9": "Every adjacent original interval enforces the minimum warped-time slope and exact endpoint offsets; output interpolation remains on the original timestamp inventory.",
+      "s10": "The implementation retains the observed weighted nonlinear-versus-linearized remainder. A source-qualified curvature bound and target provenance remain external obligations."
+    },
+    "remaining_gaps": [
+      "Qualified receipt-bound model/input motion-target producer; current raw coordinates, decoder residual mode and source-time self residual are not a full-time corrective target",
+      "Frozen amplitude-basis producer and provenance",
+      "Complete identity-preserving artifact export and all phase/amplitude/simple-lag roles",
+      "Prospective comparison freeze, official scoring/raw collection and retained-native acceptance"
+    ],
+    "full_method_source_complete": false,
+    "local_method_verified": false
   }
 }

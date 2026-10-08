@@ -42,7 +42,10 @@ class G01DesignTests(unittest.TestCase):
         design = g01.validate_design(self.repository, self.design_path)
         self.assertEqual(len(design["candidates"]), 15)
         self.assertEqual(design["benchmark"]["population_size"], 128)
-        self.assertEqual(design["statistics"]["confirmatory_test_count"], 98)
+        self.assertEqual(design["statistics"]["confirmatory_test_count"], 99)
+        self.assertEqual(sum(
+            row["approved_control_implementation_refs"] is not None
+            for row in design["candidates"]), 11)
         self.assertEqual(design["statistics"]["independent_unit"], "asset_family")
         self.assertEqual(design["cohort"]["minimum_confirmation_families"], 30)
         self.assertEqual(design["criteria"]["minimum_effect"], {
