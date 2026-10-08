@@ -123,7 +123,7 @@ IDs are recomputed. UID/prefix/encoded labels and candidate outcomes are forbidd
 least 30 independent confirmation families must remain after D1/D2. The emitted
 task requests zero GPUs and cannot clear GPU STOP. Every D1 B* unit also requires
 an exact candidate/control native admission binding the spec, the implementation
-closure frozen in G01 (ten delivered; five null/incomplete), single-attempt harness/
+closure frozen in G01 (eleven delivered; four null/incomplete), single-attempt harness/
 producer identity, scorer closure and independent review completed before scoring.
 D1-only B* selection requires its own reviewed freeze before D2;
 confirmation remains locked. Missing family,
@@ -257,7 +257,22 @@ or arbitrary external transport bank. Continue only through the C06 comparison,
 official request, admitted plan and single-owner launcher; GPU STOP still forbids
 execution. Transported barycentres are not guaranteed to remain on the surface,
 and source completion is not a scientific result. The maintained full source-
-chain count is 10/15; Local verification and native results remain 0/15.
+chain count is 11/15 after the C07 continuation below; Local verification and
+native results remain 0/15.
+
+C07 has a source-complete but **generated_unexecuted** partial-transport chain.
+Read the C07 runbook section before choosing gamma, epsilon, support size or
+solver limits. It reuses C06's receipt-bound geometry descriptors and area
+masses but implements a distinct capacity-constrained free-mass solver. The
+candidate pays gamma for each unit of unmatched source and target mass, records
+both slacks and KKT residuals, and blends each source vertex's matched target
+barycentre with its same-ID native ActionMesh prediction. The fair controls are
+full area-mass transport and a simple `cost < 2*gamma` threshold with the same
+native fallback; all roles retain every vertex and all 16 frames. `cd_motion` is
+primary with `cd_3d`/`cd_4d` guardrails. Continue only through the C07 retained-
+artifact acceptance, comparison, official request and single-owner launcher.
+GPU STOP still forbids scoring. The maintained source-chain count is 11/15;
+Local verification and native results remain 0/15.
 
 ## Safety and provenance
 

@@ -104,17 +104,16 @@ are indispensable operation-isolating comparisons, not optional smoke arms.
 | C05 | joint spatial labels | localized/temperature means, independent top-1 | CD-3D | CD-4D, CD-M | blocked on legal modes/scores |
 | C08 | endpoint bridge | local tracker, smoother, decoder cycle | CD-M | CD-3D, CD-4D | blocked on legal chain/endpoints |
 | C06 | area-marginal transport | row softmax, vertex-density transport | CD-3D | CD-4D, CD-M | complete geometry-only specialization, unexecuted |
-| C07 | partial mass with native fallback | full transport, confidence fallback | CD-M | CD-3D, CD-4D | C06 source bank available; partial/slack/fallback method absent |
+| C07 | partial mass with native fallback | full area transport, confidence threshold fallback | CD-M | CD-3D, CD-4D | complete, unexecuted |
 
-The complete design deliberately retains the five incomplete methods. Genuine
-missing scientific inputs still prevent four implementations/admissions; C07
-has C06's legal geometry-only source bank but lacks its own partial/slack method.
-Neither condition justifies removing a comparison or fabricating arrays. The exact candidate/control
+The complete design deliberately retains the four incomplete methods. Genuine
+missing scientific inputs still prevent their implementations/admissions.
+That condition does not justify removing a comparison or fabricating arrays. The exact candidate/control
 construction inventories, including their local transitive implementation
-imports and the canonical native support closure, for the ten delivered chains
+imports and the canonical native support closure, for the eleven delivered chains
 are frozen in the canonical design. The native job `code_refs` must equal the
 canonical union of that frozen closure and the official scorer refs: omissions
-and extra executable source are both rejected. The other five carry a
+and extra executable source are both rejected. The other four carry a
 null approved closure and therefore cannot create a B* admission until a reviewed
 child design freezes their real implementation bytes.
 

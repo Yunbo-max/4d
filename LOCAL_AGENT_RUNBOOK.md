@@ -1334,6 +1334,65 @@ native results remain absent. Transported barycentres are not guaranteed to lie
 on the target surface, and source completeness is not evidence that the area
 assumption is beneficial on natural ambiguity.
 
+## C07 partial transport with native fallback — source complete, not executed
+
+C07 consumes the same completed receipt-bound ActionMesh `sequence.npz` and
+geometry-only descriptor/cost bank as C06. It does not consume GT, scorer arrays,
+latent attention or an external transport matrix. Its candidate solves entropic
+partial transport with row and column upper capacities. Eliminating source and
+target slacks gives edge cost `c - 2*gamma`; the logged clipped Sinkhorn scalings
+must close capacity and complementarity residuals. Unmatched source mass is not
+discarded: every original vertex remains in the official denominator and its
+unmatched fraction uses the same-ID native prediction.
+
+After common current-source acceptance, freeze gamma, epsilon, neighbour count,
+solver tolerance/iterations, coordinate policy and CPU limits. Emit the plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_partial_transport_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --run-id c07-partial-transport-001 \
+  --gamma "$frozen_c07_gamma" --epsilon "$frozen_c07_epsilon" \
+  --neighbors "$frozen_c07_neighbors" --tolerance "$frozen_c07_tolerance" \
+  --max-iterations "$frozen_c07_iterations" \
+  --coordinate-bounds "$frozen_coordinate_lower" "$frozen_coordinate_upper" \
+  --bounds-policy preserve_and_report --max-artifact-bytes "$frozen_artifact_limit" \
+  --wall-seconds "$c07_cpu_wall_seconds" --ram-mib "$c07_cpu_ram_mib" \
+  --plan-dir "$project_dir/plans/c07-partial-transport-001"
+```
+
+Inspect its exact plan and execute only through `run_harness.py` with the printed
+digest. Retain the candidate/manifest/common target, all three terminal role
+reports and completed certificates/sequences, producer provenance, archive and
+archive record. Then emit real retained-artifact acceptance:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c07_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --artifact-candidate "$returned_c07_dir/candidate.json" \
+  --plan-dir "$project_dir/plans/c07-native-acceptance-001" \
+  --run-id c07-native-acceptance-001 \
+  --wall-seconds "$c07_cpu_wall_seconds" --ram-mib "$c07_cpu_ram_mib"
+"$python_bin" "$skill_dir/scripts/run_harness.py" \
+  "$project_dir/plans/c07-native-acceptance-001/harness.json" \
+  --root "$project_dir" --execute --approved-plan-digest "$c07_acceptance_digest"
+```
+
+Require nonzero tests, no skips, replayed terminal hashes/certificates and all
+three roles completed. For prospective request preparation, invoke the same C07
+builder with a new plan identity plus `--freeze`, `--ground-truth`, `--population`,
+`--dataset-admission`, `--dataset-semantics`, `--repo-root` and
+`--timeout-seconds`, following the C06 path rules. The logical denominator is
+exactly B0, B*, `confidence_threshold_fallback`, `full_mass_transport`, and
+`partial_mass_native_fallback`; preparation failures remain failures. The
+primary metric is `cd_motion`, with `cd_3d` and `cd_4d` guardrails.
+
+Only a fresh admitted `single_c07_scoring_attempt` authorization may pass to
+`prepare_c07_native_scoring.py` and then solely `launch_c07_native_scoring.py`.
+GPU STOP is active, so do not invoke them. C07 source/tests have not run; Local
+method verification, native qualification and scientific conclusions are absent.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**
@@ -2445,4 +2504,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C04, C10, C11, C12, C13, C14 and C15 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C04, C06, C07, C10, C11, C12, C13, C14 and C15 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

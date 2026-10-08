@@ -34,6 +34,8 @@ DECISION_NO_OUTCOMES_FIELD = "selected_without_c11_native_outcomes"
 REQUEST_KIND = "c11-native-comparison-request"
 PROFILE_LABEL = "C11"
 ALLOWED_INFERENCE_SEEDS = (42,)
+PRIMARY_METRIC = "cd_3d"
+GUARDRAIL_METRICS = ("cd_4d", "cd_motion")
 
 
 def digest(path: Path) -> str:
@@ -133,8 +135,8 @@ def _validate_freeze(freeze: dict) -> None:
             or freeze.get("version") != 1
             or freeze.get("candidate_id") != CANDIDATE_ID
             or freeze.get("scoring_seed") != 44
-            or freeze.get("primary_metric") != "cd_3d"
-            or freeze.get("guardrail_metrics") != ["cd_4d", "cd_motion"]):
+            or freeze.get("primary_metric") != PRIMARY_METRIC
+            or freeze.get("guardrail_metrics") != list(GUARDRAIL_METRICS)):
         raise ValueError(f"Current frozen {PROFILE_LABEL} comparison record required")
     try:
         frozen = datetime.fromisoformat(freeze["frozen_at"].replace("Z", "+00:00"))
@@ -412,7 +414,8 @@ def make_request(root: Path, *, freeze_path: Path, _verify: bool = True) -> dict
         "kind": REQUEST_KIND, "version": 1,
         "candidate_id": CANDIDATE_ID, "uid": freeze["uid"],
         "inference_seed": freeze["inference_seed"], "scoring_seed": 44,
-        "primary_metric": "cd_3d", "guardrail_metrics": ["cd_4d", "cd_motion"],
+        "primary_metric": PRIMARY_METRIC,
+        "guardrail_metrics": list(GUARDRAIL_METRICS),
         "roles": normalized,
         "role_to_case": {row["role"]: row.get("case_id") for row in normalized},
         "logical_denominator": {

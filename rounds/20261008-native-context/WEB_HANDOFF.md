@@ -986,3 +986,20 @@ scientific benefit, natural ambiguity or conclusion is claimed.
 C06 retained replay and comparison/scoring request preparation use the zero-GPU
 `actionmesh/prepare_c06_native_acceptance.py` plan and existing harness; direct
 method replay/request execution is forbidden. The producer remains seed42-only.
+
+### C07 partial-transport continuation
+
+C07 is now source-complete and `generated_unexecuted`. The CPU entry is
+`actionmesh/prepare_partial_transport_candidate.py`; it consumes a physical
+same-UID native sequence/report pair and emits the full terminal archive for
+`confidence_threshold_fallback`, `full_mass_transport`, and
+`partial_mass_native_fallback`. The candidate uses capacity-constrained free
+mass with symmetric gamma slack and blends unmatched mass into the same-ID
+native prediction, so official scoring retains the full vertex/frame denominator.
+
+Local must follow `LOCAL_AGENT_RUNBOOK.md#c07-partial-transport-with-native-fallback--source-complete-not-executed`.
+Use `prepare_c07_native_acceptance.py` for retained replay and request creation,
+then the admitted `prepare_c07_native_scoring.py` / single-owner
+`launch_c07_native_scoring.py` path only. `cd_motion` is primary; `cd_3d` and
+`cd_4d` are guardrails. No C07 code, test, plan, model, data, scorer or GPU work
+has run in Web. GPU STOP, single attempt and zero scientific retry remain active.

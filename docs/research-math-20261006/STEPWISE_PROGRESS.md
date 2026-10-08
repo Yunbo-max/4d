@@ -1922,3 +1922,28 @@ direct replay/request commands with a real-artifact zero-GPU acceptance builder.
 Its source tests exercise the real cross-root staging function without mocking
 it. G01 additionally pins the actual B0 context producer for C06/C11/C12.
 No such tests were run in Web; all are for Local acceptance.
+
+## Continuation: C07 partial transport with native fallback — 2026-10-08
+
+Restored literal main `42ddc3011820fec9b8e93bf517547b32051da85f` and
+retained the existing 20-card pool, selected 15, C07 math card and rank. C07 now
+has a distinct free-mass implementation rather than a renamed C06 projection.
+The solver minimizes transport, symmetric source/target slack and entropy under
+row/column area capacities. Its clipped log-domain scaling records matched mass,
+both slacks, capacity violation, complementarity and fixed-point residuals.
+
+The complete generated chain includes a hard `c < 2*gamma` confidence-threshold
+fallback, full area-marginal transport, and the partial-mass candidate on the
+same descriptor cost/support/epsilon/gamma/lift. All roles export 16 frames,
+preserve frame zero/topology/identity and keep unmatched source mass in the
+native prediction rather than reducing the official denominator. Prospective
+comparison, raw official scoring, admitted plan and single-owner launch profiles
+use `cd_motion` primary and `cd_3d`/`cd_4d` guardrails. Retained-artifact replay
+and real cross-root request staging are delegated to one zero-GPU harness plan.
+
+All new code and tests are `generated_unexecuted`; Web performed static
+AST/JSON/hash/diff review only. No project import/test, plan, artifact, model,
+data download, inference, scorer or GPU work ran. Source-chain coverage is now
+11/15 (C03/C05/C08/C20 remain); Local/native verification remains 0/15. The
+supervisor is still uninstalled/unstarted, online repair is not connected, and
+GPU STOP plus frozen one-attempt/zero-retry scientific protocols remain active.

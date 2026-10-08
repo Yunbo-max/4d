@@ -87,7 +87,7 @@
     },
     {
       "path": "actionmesh/prepare_c14_native_scoring.py",
-      "sha256": "cf54c64b14d2861f4c5a7e13862d94cf3db09b94f5cad81ff6bbd11a81042f20"
+      "sha256": "b43c954b81840e709d0124aa13a257b41330021996da99359f00eda2b3c08830"
     },
     {
       "path": "actionmesh/research_math/__init__.py",
@@ -465,7 +465,7 @@
         },
         {
           "path": "actionmesh/prepare_c14_native_scoring.py",
-          "sha256": "cf54c64b14d2861f4c5a7e13862d94cf3db09b94f5cad81ff6bbd11a81042f20"
+          "sha256": "b43c954b81840e709d0124aa13a257b41330021996da99359f00eda2b3c08830"
         },
         {
           "path": "actionmesh/research_math/c14_native_comparison.py",
@@ -661,7 +661,7 @@
         },
         {
           "path": "actionmesh/research_math/c11_native_comparison.py",
-          "sha256": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77"
+          "sha256": "92179dd673b3f50300681fca0d0f05873bfbf1815cef50be4c802e6da43f184b"
         },
         {
           "path": "actionmesh/research_math/c11_native_scoring.py",
@@ -730,7 +730,7 @@
         },
         {
           "path": "actionmesh/research_math/c11_native_comparison.py",
-          "sha256": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77"
+          "sha256": "92179dd673b3f50300681fca0d0f05873bfbf1815cef50be4c802e6da43f184b"
         },
         {
           "path": "actionmesh/research_math/c12_native_comparison.py",
@@ -946,7 +946,7 @@
         },
         {
           "path": "actionmesh/research_math/c11_native_comparison.py",
-          "sha256": "62b083e4ba919d2bd623a3ef0b7a0f2eb12545638891d831016848ddcb20dc77"
+          "sha256": "92179dd673b3f50300681fca0d0f05873bfbf1815cef50be4c802e6da43f184b"
         },
         {
           "path": "actionmesh/research_math/native_context_runner.py",
@@ -990,9 +990,22 @@
       "candidate_id": "4d-math-20261006-c07",
       "spec_ref": {
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c07.json",
-        "sha256": "822e357c7fe7dc801d35f7e633b11be0a245bf308f4cf53600fc5f01d77aa324"
+        "sha256": "1eea3e83efbe602889ecf71872d67f2ef8710982ffdd3d5fb87b0dbd3ba76f11"
       },
-      "approved_control_implementation_refs": null,
+      "approved_control_implementation_refs": [
+        {"path": "actionmesh/launch_c07_native_scoring.py", "sha256": "1b4dbbc6e5cadfa6e41d1e9adab2063cb85a9554346bcad9fff97775e33fb39c"},
+        {"path": "actionmesh/prepare_partial_transport_candidate.py", "sha256": "dd5c0e0d9dd73edce4bcd75f0d6b15ed49a3d6380553325b061d623605953209"},
+        {"path": "actionmesh/prepare_c07_native_acceptance.py", "sha256": "e37497277b2a7dd38db8c6ec6b9ff39c37b1cf516d573a83293ac3062fb81102"},
+        {"path": "actionmesh/prepare_c07_native_scoring.py", "sha256": "42430e0cb78afdb13153a499952c56aae758edc406b0d4a85fe225c0b2288c80"},
+        {"path": "actionmesh/research_math/partial_transport_candidate.py", "sha256": "a44993cb331d2e94862c29758aa65caf62b50503e257b8bd7e963a398a91bf09"},
+        {"path": "actionmesh/research_math/c07_native_comparison.py", "sha256": "61e9ff9b5de49a07cedc97470f1520e04819778b18411481f4378bf569392e8c"},
+        {"path": "actionmesh/research_math/c07_native_scoring.py", "sha256": "3681bb5d14501aacabe1def8ea423d0e2ec6c8c1714c0da3a0e3e591446fb7ad"},
+        {"path": "actionmesh/research_math/c11_native_comparison.py", "sha256": "92179dd673b3f50300681fca0d0f05873bfbf1815cef50be4c802e6da43f184b"},
+        {"path": "actionmesh/research_math/native_context_runner.py", "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"},
+        {"path": "actionmesh/research_math/protected_geometry_candidate.py", "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"},
+        {"path": "actionmesh/research_ten/__init__.py", "sha256": "8dd90124d88fcf117975ffa5432433a61afbbe2b046ad539a679c1f2ea8a1cdb"},
+        {"path": "actionmesh/research_ten/m01_elasticity.py", "sha256": "160ac012ecb9ca2696611947a6457a5f6141e04a1b990a87aad6806b387f3096"}
+      ],
       "treatment_role": "partial_mass_native_fallback",
       "control_roles": [
         "B0",
@@ -1027,5 +1040,5 @@
     "explicit_gpu_resume_authorization_required": true,
     "gpu_dispatch_allowed_now": false
   },
-  "design_digest": "37d2a1f36d97ef621f66d0110cfc489b2b7f6b751ad75bc63fad8a0a75d16034"
+  "design_digest": "7f963c63d94baa88e3cef033546908c21751ab8b62323fcc7207e9c086be0150"
 }

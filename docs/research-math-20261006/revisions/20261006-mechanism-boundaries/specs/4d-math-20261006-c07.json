@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c07",
   "name_zh": "允许不匹配质量的部分运输",
   "priority_rank": 15,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Source-complete generated_unexecuted; awaiting Local verification, scientific admission and frozen native protocol; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c07.json",
@@ -18,6 +18,15 @@
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/selection.json",
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
+  "implementation_refs": [
+    {"path": "actionmesh/research_math/partial_transport_candidate.py", "sha256": "a44993cb331d2e94862c29758aa65caf62b50503e257b8bd7e963a398a91bf09"},
+    {"path": "actionmesh/prepare_partial_transport_candidate.py", "sha256": "dd5c0e0d9dd73edce4bcd75f0d6b15ed49a3d6380553325b061d623605953209"},
+    {"path": "actionmesh/research_math/c07_native_comparison.py", "sha256": "61e9ff9b5de49a07cedc97470f1520e04819778b18411481f4378bf569392e8c"},
+    {"path": "actionmesh/research_math/c07_native_scoring.py", "sha256": "3681bb5d14501aacabe1def8ea423d0e2ec6c8c1714c0da3a0e3e591446fb7ad"},
+    {"path": "actionmesh/prepare_c07_native_acceptance.py", "sha256": "e37497277b2a7dd38db8c6ec6b9ff39c37b1cf516d573a83293ac3062fb81102"},
+    {"path": "actionmesh/prepare_c07_native_scoring.py", "sha256": "42430e0cb78afdb13153a499952c56aae758edc406b0d4a85fe225c0b2288c80"},
+    {"path": "actionmesh/launch_c07_native_scoring.py", "sha256": "1b4dbbc6e5cadfa6e41d1e9adab2063cb85a9554346bcad9fff97775e33fb39c"}
+  ],
   "specification_refs": [
     {
       "path": "docs/research-math-20261006/CODE_DESIGN.md",
@@ -25,7 +34,7 @@
     },
     {
       "path": "docs/research-math-20261006/EXPERIMENTS.md",
-      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+      "sha256": "8790d8be7af20dfebfe4b564c9d52e09f2448b93e34057a61b3d1d7ba08c5701"
     },
     {
       "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
@@ -54,20 +63,20 @@
     {
       "derivation_step": "s1",
       "statement": "Minimize <c,Pi>+gamma(1^T s+1^T t)+epsilon sum Pi(log Pi-1).",
-      "planned_function": "4d_math_20261006_c07.form_partial_mass_objective",
-      "status": "not_implemented"
+      "planned_function": "research_math.partial_transport_candidate.sparse_partial_transport",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "At epsilon=0, adding a small transport mass removes the same mass from each slack, changing cost by (c_ij-2gamma) times mass.",
-      "planned_function": "4d_math_20261006_c07.account_unregularized_slack_tradeoff",
-      "status": "not_implemented"
+      "planned_function": "research_math.partial_transport_candidate.sparse_partial_transport",
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "Every unmatched source vertex still receives the frozen native decoder prediction.",
-      "planned_function": "4d_math_20261006_c07.apply_native_fallback_to_every_unmatched_vertex",
-      "status": "not_implemented"
+      "planned_function": "research_math.partial_transport_candidate._partial_lift",
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -117,7 +126,7 @@
   },
   "outstanding_requirements": [
     "task-relevant unsupported matches on natural cases",
-    "mass/slack solver and complete fallback semantics",
+    "Local verification of the generated mass/slack solver and complete fallback semantics",
     "ordinary threshold-fallback comparator not deliberately disadvantaged",
     "final 16/16 raw receipts and native replay",
     "Natural Gate 0 PASS; required importance/collision decision",

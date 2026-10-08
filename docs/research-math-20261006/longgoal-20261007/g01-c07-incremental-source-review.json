@@ -1,0 +1,54 @@
+{
+  "kind": "g01-c07-incremental-static-source-review",
+  "version": 1,
+  "candidate_id": "4d-math-20261006-c07",
+  "reviewed_at": "2026-10-08T18:35:00Z",
+  "base_commit": "42ddc3011820fec9b8e93bf517547b32051da85f",
+  "g01_design_digest": "7f963c63d94baa88e3cef033546908c21751ab8b62323fcc7207e9c086be0150",
+  "source_complete_candidates": 11,
+  "scope": "C07 partial/slack solver, full native fallback, three-role artifact/archive replay, five-role comparison, official scoring profile, retained acceptance/cross-root staging, shared metric and B0 binding, G01 and 15-item delivery-table integration",
+  "reviewers": [
+    "/root/review_c07_solver",
+    "/root/review_c07_chain"
+  ],
+  "execution_boundary": "Static source/AST/JSON/hash/diff review only. No project import, test, plan, model, data download, inference, scorer or GPU workload was executed.",
+  "findings_repaired": [
+    "parameterize shared comparison request metrics so C07 keeps cd_motion primary and cd_3d/cd_4d guardrails",
+    "admit C07 native-context B0 implementation identity in the shared scoring-plan binder",
+    "use the currently qualified seed 42 in the C07 request integration fixture",
+    "correct the analytic entropic boundary fixture above the zero-entropy 2gamma threshold",
+    "report actual target-capacity overload for the simple threshold control",
+    "use pure barycentric lift for the full-mass control and native blending only for threshold/partial roles",
+    "cover C07 native-context B0 acceptance and corruption rejection in the shared Local contract test",
+    "bind the exact C07 closure into G01, CURRENT, the 15-item audit and Local handoff"
+  ],
+  "final_findings": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0
+  },
+  "source_sha256": {
+    "actionmesh/research_math/partial_transport_candidate.py": "a44993cb331d2e94862c29758aa65caf62b50503e257b8bd7e963a398a91bf09",
+    "actionmesh/prepare_partial_transport_candidate.py": "dd5c0e0d9dd73edce4bcd75f0d6b15ed49a3d6380553325b061d623605953209",
+    "actionmesh/research_math/c07_native_comparison.py": "61e9ff9b5de49a07cedc97470f1520e04819778b18411481f4378bf569392e8c",
+    "actionmesh/research_math/c07_native_scoring.py": "3681bb5d14501aacabe1def8ea423d0e2ec6c8c1714c0da3a0e3e591446fb7ad",
+    "actionmesh/prepare_c07_native_acceptance.py": "e37497277b2a7dd38db8c6ec6b9ff39c37b1cf516d573a83293ac3062fb81102",
+    "actionmesh/prepare_c07_native_scoring.py": "42430e0cb78afdb13153a499952c56aae758edc406b0d4a85fe225c0b2288c80",
+    "actionmesh/launch_c07_native_scoring.py": "1b4dbbc6e5cadfa6e41d1e9adab2063cb85a9554346bcad9fff97775e33fb39c",
+    "actionmesh/research_math/c11_native_comparison.py": "92179dd673b3f50300681fca0d0f05873bfbf1815cef50be4c802e6da43f184b",
+    "actionmesh/prepare_c14_native_scoring.py": "b43c954b81840e709d0124aa13a257b41330021996da99359f00eda2b3c08830",
+    "actionmesh/prepare_control_scoring_checks.py": "e6424a567abcfc689a5cdf144d6c3a9f26a523a0b9cba7e9cc3b061d41e07925",
+    "actionmesh/research_math/tests/test_partial_transport_candidate.py": "e3e30c819d88d33417576784c38ef4e3607b69b13fd06a0fe8bb719b5068656e",
+    "actionmesh/research_math/tests/test_c07_native_acceptance_plan.py": "ce3fadd58b7fbafc7252336620045fe618f361db4dbc11a041bcc524d3519246",
+    "actionmesh/research_math/tests/test_c07_native_scoring_profile.py": "9a68952828f37c93c796b867c32abe027c71b436af49a987ba50d2d70bbe1fcb",
+    "actionmesh/research_math/tests/test_native_b0_contract.py": "4efb3bde5ddcede61b54d131b9e3ff3b695e687b4c11b91a44cb3f7e682eec2b",
+    "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json": "d7be92c9ecd51d3ffa9b1566b7184a3ccf6aab8fb560a0c7018fb4fa6dddd2ab",
+    "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json": "34af4f4675d9ef8ddf3fb3803043afed572ab5c785125cffae5809a70cb30e60",
+    "docs/research-math-20261006/CURRENT.json": "cd0d92a4cc7d610bc7c49e67cdfd806b5f8b8e570829531465fe22a98a503da2",
+    "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c07.json": "1eea3e83efbe602889ecf71872d67f2ef8710982ffdd3d5fb87b0dbd3ba76f11"
+  },
+  "status": "source_review_complete_generated_unexecuted",
+  "local_method_verified": false,
+  "native_result": "not_started",
+  "scientific_admission": false
+}
