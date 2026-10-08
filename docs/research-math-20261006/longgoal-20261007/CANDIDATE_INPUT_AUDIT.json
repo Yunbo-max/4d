@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "C01,C02,C04,C10,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (7/15); Local-verified and native-result candidates remain 0/15. Eight source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
+  "scope": "C01,C02,C04,C10,C11,C13,C14,C15 have generated_unexecuted method-to-official-score source chains within their stated native input scopes (8/15); Local-verified and native-result candidates remain 0/15. Seven source chains, complete G01 and reviewed supervisor task-extension/online-agent integration remain pending. C03 and C20 remain blocked on missing legal native inputs. C04 supports a positive-diagonal deterministic surrogate specialization only, not calibrated uncertainty or arbitrary PSD. Supervisor continuation/recovery source is authored for a finite immutable inventory, uninstalled/unstarted. GPU STOP and frozen budget/protocol remain effective.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -657,9 +657,9 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c11-math.json",
         "sha256": "236bba4ea916003e3060c1c8faef6db4976704a3ddd79233cd4353d6df95bb42"
       },
-      "source_status": "specification_only",
-      "code_entry": null,
-      "real_input_and_model_interface": "Native full-rank square local maps with explicit frame/normal completion",
+      "source_status": "full_generated_unexecuted_chain",
+      "code_entry": "actionmesh/research_math/strain_projection_candidate.py:export_strain_projection_candidate",
+      "real_input_and_model_interface": "One receipt-bound complete ActionMesh native sequence.npz/report.json; the implementation derives full-rank edge-plus-normal face maps in a frozen proper-Kabsch body frame, with prospective positive stretch bounds, elastic weight, degeneracy/tolerance/bounds policies and common pinned matrix-free lift",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -673,16 +673,26 @@
         "elastic_repair",
         "rotation_preserving_stretch_projection"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "native_scoring_entry": "actionmesh/research_math/c11_native_scoring.py -> actionmesh/official_actionbench_adapter.py (authorization-gated via prepare_c11_native_scoring.py and launch_c11_native_scoring.py)",
+      "local_method_acceptance_command": "python actionmesh/prepare_strain_projection_candidate.py --root <root> --skill-dir <skill> --source-sequence <receipt-bound-sequence.npz> --stretch-bounds <frozen-lower> <frozen-upper> --elastic-weight <frozen> --degeneracy-epsilon <frozen> --absolute-tolerance <frozen> --relative-tolerance <frozen> --max-iterations <frozen> --coordinate-bounds <frozen-lower> <frozen-upper> --bounds-policy reject --max-artifact-bytes <frozen<=1GiB> --run-id <id> --plan-dir <new-dir> --wall-seconds <bounded>; inspect and run only the printed harness plan/digest; then materialize the retained three-file receipt with strain_projection_candidate.materialize_candidate_archive under explicit archive/member ceilings and call validate_candidate_artifact on the restored candidate.json before freeze",
+      "acceptance_command_gap": "Command and source are complete but generated_unexecuted; Local must first run current shared software acceptance, supply an actual retained native sequence, execute the CPU plan, and prospectively freeze bounds/elastic/B*. No scientific admission or GPU resume exists.",
+      "completion_evidence": [
+        "actionmesh/research_math/strain_projection_candidate.py",
+        "actionmesh/prepare_strain_projection_candidate.py",
+        "actionmesh/research_math/c11_native_comparison.py",
+        "actionmesh/research_math/c11_native_scoring.py",
+        "actionmesh/prepare_c11_native_scoring.py",
+        "actionmesh/launch_c11_native_scoring.py",
+        "actionmesh/research_math/tests/test_strain_projection_candidate.py",
+        "actionmesh/research_math/tests/test_c11_native_comparison.py",
+        "actionmesh/research_math/tests/test_c11_native_scoring_profile.py",
+        "LOCAL_AGENT_RUNBOOK.md#c11-rotation-preserving-strain-chain--source-complete-not-executed"
+      ],
       "remaining_implementation_gaps": [
-        "frame/map construction",
-        "degeneracy/reflection policy",
-        "rotation-preserving stretch projection",
-        "common lift",
-        "native entry"
+        "Local execution of current source acceptance and real-input CPU artifact plan",
+        "prospective stretch bounds, elastic weight, numerical policies and B* freeze on allowed development evidence",
+        "design verification, Natural Gate 0/IPCG, family split, numeric G01 criteria and one-time GPU authorization",
+        "official native scoring, raw receipt validation, paired analysis and conclusion"
       ],
       "scientific_prerequisites": [
         "natural strain artifacts distinct from legitimate stretching",
@@ -694,7 +704,7 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
+      "full_method_source_complete": true,
       "local_method_verified": false
     },
     {
@@ -1070,11 +1080,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "85a3355085969a9e1f5dfc719e722637185d6897",
-  "independent_source_review": "Final C15 core/comparison/scoring/plan/launcher and seven targeted test-source static review by independent /root/c15_source_review; no remaining Critical/Important in the reviewed source scope. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 7/15.",
+  "maintained_base_commit": "40004d4ae1d7263ecbbaa7401adec37168a02895",
+  "independent_source_review": "Final C11 core/materialization/comparison/scoring/plan/launcher and targeted test-source static review by independent /root/c11_source_review; all identified blockers were repaired and no Critical/Important remain in the reviewed scope. Project imports/tests/method/scorer/model/GPU execution did not occur. Full generated_unexecuted source-chain count is 8/15.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 7,
+    "full_method_source_complete": 8,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

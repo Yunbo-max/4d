@@ -980,6 +980,92 @@ arguments as C14, substituting the exact C15 request, digest, GPU and receipt
 hashes. No C15 project test, artifact plan, scorer, model or GPU task was run by
 Web authoring; Local acceptance and native results remain pending.
 
+### C11 rotation-preserving strain chain — source complete, not executed
+
+C11 consumes one receipt-bound complete native `sequence.npz`. It fits the
+same deterministic whole-mesh proper-Kabsch body frame used by the existing
+corotational implementation, then constructs each face's full-rank square map
+from its two edges and explicit unit normal. The candidate preserves the proper
+polar rotation and clips only stretch eigenvalues to prospectively frozen
+positive bounds. A degenerate reference face or body-frame normal crossing the
+reference hemisphere is an explicit terminal failure, not a silent fallback.
+`arap_repair` sets all singular values to one; `elastic_repair` applies the
+separate frozen quadratic shrink rule. All three roles share reference-area
+weighted edge targets and the same pinned matrix-free lift, then export every
+native frame with unchanged topology and identities.
+
+After current-source CPU acceptance, emit the one-attempt, zero-retry, zero-GPU
+artifact plan (choose every numeric value prospectively):
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_strain_projection_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --stretch-bounds "$frozen_stretch_lower" "$frozen_stretch_upper" \
+  --elastic-weight "$frozen_elastic_weight" \
+  --degeneracy-epsilon "$frozen_degeneracy_epsilon" \
+  --absolute-tolerance "$frozen_absolute_tolerance" \
+  --relative-tolerance "$frozen_relative_tolerance" \
+  --max-iterations "$frozen_max_iterations" \
+  --coordinate-bounds "$frozen_coordinate_lower" "$frozen_coordinate_upper" \
+  --bounds-policy reject --max-artifact-bytes "$frozen_artifact_limit" \
+  --run-id c11-strain-projection-001 \
+  --plan-dir "$project_dir/plans/c11-strain-projection-001" \
+  --wall-seconds "$c11_cpu_wall_seconds"
+```
+
+Inspect and run only the emitted harness plan/digest. Retain `candidate.json`,
+`artifact-archive.json` and `artifact.tar`; each failed role stays in the
+denominator and has no scoreable NPZ. Because the harness receipt intentionally
+returns only those three bounded files, first use the core's safe single-use
+materializer with explicit compressed/expanded member ceilings, then validate
+the restored `candidate.json`; never use `tar -xf` or freeze live attempt files:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -c 'import sys; from pathlib import Path; from research_math.strain_projection_candidate import materialize_candidate_archive,validate_candidate_artifact; root=Path(sys.argv[1]); dest=Path(sys.argv[3]); materialize_candidate_archive(Path(sys.argv[2]),dest,max_artifact_bytes=int(sys.argv[4]),max_member_bytes=int(sys.argv[5])); validate_candidate_artifact(root,dest/"candidate.json")' \
+  "$project_dir" "$returned_c11_dir/artifact.tar" \
+  "$project_dir/inputs/c11/materialized-candidate" \
+  "$frozen_artifact_limit" "$frozen_member_limit"
+```
+
+Freeze `b0`, a prospectively chosen `b_star` and the three validated restored
+artifact roles before requesting native scoring:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c11_native_comparison request \
+  --root "$project_dir" \
+  --freeze "$project_dir/inputs/c11/c11-native-comparison-freeze.json" \
+  --output "$project_dir/inputs/c11/c11-native-comparison-request.json"
+
+"$python_bin" -m research_math.c11_native_scoring request \
+  --root "$project_dir" \
+  --comparison "$project_dir/inputs/c11/c11-native-comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c11_uid/surfaces.npy" \
+  --population "$population" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c11/c11-native-scoring-request.json"
+```
+
+The five logical roles are `b0`, `b_star`, `arap_repair`, `elastic_repair` and
+`rotation_preserving_stretch_projection`. Physical duplicates are scored once;
+logical failures are never zero-imputed. `cd_3d` is primary and `cd_4d` plus
+`cd_motion` are guardrails. Requests remain `generated_unexecuted` and cannot
+resume GPU work. Only after a separate exact C11 design/Gate 0/IPCG/family/G01,
+runtime and single-use `single_c11_scoring_attempt` authorization may Local use
+`actionmesh/prepare_c11_native_scoring.py` and then the sole execution entry
+`actionmesh/launch_c11_native_scoring.py`. Never call the scorer or generic
+harness execution directly; retain the stable `c11-launch-claim` and validate
+returned `result.json`, `raw-manifest.json` and `raw-evidence.tar` through
+`python -m research_math.c11_native_scoring validate-delivery`.
+
+No C11 project test, plan builder, candidate, scorer, model or GPU task was run
+by Web authoring. Source is `generated_unexecuted`; Local acceptance, scientific
+admission and native results remain pending. GPU STOP remains effective.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**
@@ -2086,4 +2172,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C10, C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C04, C10, C11, C13, C14 and C15 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

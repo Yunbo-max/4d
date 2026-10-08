@@ -1724,3 +1724,41 @@ results. Eight source chains, complete G01 and supervisor extension/online-agent
 integration remain. GPU STOP, cumulative budget and zero-retry scientific
 protocols are unchanged. Local starts at the C15 section in
 `LOCAL_AGENT_RUNBOOK.md` after checking the exact delivered commit.
+
+## 2026-10-08 C11 rotation-preserving strain source chain
+
+Resumed exact main `40004d4ae1d7263ecbbaa7401adec37168a02895`. The retained
+20-card/15-selected set and C11 math/review card were reused without re-ranking.
+C03 remains blocked on a legal native development correspondence/label bank and
+C20 on a legal motion target; no substitute truth or confirmation leakage was
+introduced. Historical R3 311/311 evidence was not extended to this source.
+
+Implemented C11 from one complete receipt-bound native sequence. Each local
+square map uses two face edges plus an explicit unit normal in a frozen
+proper-Kabsch body frame. Proper-polar rotation is retained while only stretch
+eigenvalues are clipped to frozen positive bounds. Degenerate references and
+body-frame normal hemisphere crossings fail closed. Distinct ARAP and elastic
+controls use the same reference-area edge targets and pinned matrix-free lift;
+all successful roles export the full original-identity native sequence, while
+failed roles retain reports and no scoreable NPZ.
+
+The prospective five-role request binds B0, preselected B*, ARAP, elastic and
+the rotation-preserving candidate; it checks native generation identity,
+current implementation bytes, complete artifact revalidation, topology/time/
+vertex identity, physical de-duplication and the logical failure denominator.
+The official-scoring profile keeps `cd_3d` primary with `cd_4d`/`cd_motion`
+guardrails, stages the complete closure, and remains gated by design verification,
+Gate 0/IPCG, source-derived family split, numeric G01 criteria, strict runtime
+identity and one expiring exact-attempt authorization. The sole launcher retains
+a stable single-owner claim before delegating to the existing harness.
+
+Independent static review repaired shared-plan B0 profile routing, retained
+archive materialization/content validation, exact exported-pin/certificate
+checks and physical-B* source binding; final review found no remaining
+Critical/Important in scope. Only source, AST, JSON, diff and digest review was performed. Authored
+candidate/comparison/scoring/plan/launcher and integration/failure test sources
+were not executed. C11 is therefore source-chain complete but
+`generated_unexecuted`; maintained coverage is 8/15, Local verification 0/15
+and native results 0/15. Seven method chains, complete G01 and reviewed
+supervisor extension/online-agent integration remain. GPU STOP, cumulative
+budget and frozen one-attempt/zero-retry scientific protocols are unchanged.

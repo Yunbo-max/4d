@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C04,C10,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (7/15). C03 numerical calibration, frozen artifact and CPU fit plan remain partial; native correspondence/export/scoring are missing. Eight full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "C01,C02,C04,C10,C11,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (8/15). C03 numerical calibration remains partial and C20 lacks a legal motion target; neither blocker was replaced with fabricated input. Seven full source chains and full G01/supervisor integration remain. Local/native methods 0/15. GPU STOP unchanged.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -1656,6 +1656,27 @@
       ],
       "tests_executed": false
     }
+  },
+  "c11_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T14:58:02Z",
+    "base_commit": "40004d4ae1d7263ecbbaa7401adec37168a02895",
+    "candidate_id": "4d-math-20261006-c11",
+    "method_entry": "actionmesh/research_math/strain_projection_candidate.py",
+    "cpu_plan": "actionmesh/prepare_strain_projection_candidate.py",
+    "comparison_entry": "actionmesh/research_math/c11_native_comparison.py",
+    "official_scoring_entry": "actionmesh/research_math/c11_native_scoring.py",
+    "admitted_plan": "actionmesh/prepare_c11_native_scoring.py",
+    "single_owner_launcher": "actionmesh/launch_c11_native_scoring.py",
+    "source_scope": "proper-Kabsch body frame; full-rank edge-plus-normal local maps; proper-polar rotation with bounded stretch; distinct ARAP and elastic controls; common reference-area target and pinned matrix-free lift; five-role native denominator",
+    "source_complete_candidates": 8,
+    "local_method_verified": 0,
+    "native_results": 0,
+    "tests_executed": false,
+    "source_review": "Independent /root/c11_source_review final static review found no remaining Critical/Important in the C11 core/materialization/comparison/scoring/plan/launcher/test-source scope; no project imports or execution.",
+    "gpu_execution": "stopped_by_user",
+    "remaining": "Local current-source acceptance, real-input CPU artifact execution, prospective bounds/weights/B* freeze, design/Gate0/IPCG/family/G01 admission, explicit GPU resume authorization and official native result",
+    "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c11-rotation-preserving-strain-chain--source-complete-not-executed"
   },
   "c15_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",

@@ -194,7 +194,20 @@ six logical roles (B0, B*, Gaussian, both spectral controls, candidate), physica
 deduplication and failed-role denominators. Official scoring uses the shared
 adapter only through the C15 admitted plan and single-owner launcher. No C15
 test, method, scorer or GPU task has run; Local/native status remains 0/15 and
-GPU STOP remains active. The maintained full source-chain count is 7/15.
+GPU STOP remains active.
+
+C11 has a source-complete but **generated_unexecuted** chain. Read the C11
+runbook section before touching its inputs. The canonical method constructs a
+full-rank local square map from two triangle edges plus an explicit unit normal,
+uses the frozen whole-mesh proper-Kabsch frame, keeps the proper-polar rotation
+and clips only stretch eigenvalues to prospectively frozen positive bounds.
+Reflection/large-fold and degenerate faces fail closed. ARAP and elastic repair
+are independently computed controls; all three roles use the same reference-area
+edge targets and pinned matrix-free lift. Continue only through the C11
+comparison request, official-scoring request, admitted plan and single-owner
+launcher. No C11 test, method, scorer or GPU task has run; Local/native status
+remains 0/15 and GPU STOP remains active. The maintained full source-chain count
+is 8/15.
 
 ## Safety and provenance
 

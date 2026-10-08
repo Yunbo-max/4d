@@ -789,3 +789,40 @@ reviewed supervisor task-extension/online-agent integration remain. GPU STOP and
 the frozen budget/protocol are unchanged. Local entry is the C15 runbook section
 at the eventual exact read-back commit; preserve all prior results and do not
 invoke scoring without an explicit later resume authorization.
+
+## Continuation: C11 rotation-preserving strain full source chain — 2026-10-08
+
+Resumed exact main `40004d4ae1d7263ecbbaa7401adec37168a02895`. The historical
+pricing-root repair and R3 311/311 receipt retain their prior scopes and were not
+rerun. The selected method set is unchanged. C03 and C20 remain blocked only on
+their missing legal native inputs; this continuation moved to the next
+independent selected method instead of fabricating correspondence or motion.
+
+C11 now consumes one complete receipt-bound ActionMesh sequence. It derives
+full-rank face maps from two edges and an explicit normal in the frozen
+proper-Kabsch body frame, preserves the proper-polar rotation, clips only stretch
+eigenvalues, and reintegrates reference-area weighted edge targets through the
+shared pinned matrix-free lift. Reflection/large-fold and degeneracy policies are
+explicit terminal failures. ARAP and elastic repairs are distinct operation
+controls, not aliases, and all successful roles preserve full native frame,
+topology and vertex identity.
+
+The five-role prospective comparison is B0, B*, ARAP, elastic and the
+rotation-preserving candidate. It revalidates the retained artifact, binds the
+generation identity and current source bytes, keeps failed roles in the
+denominator and scores byte-identical outputs once. The official-scoring profile
+uses the fixed ActionBench adapter/raw collector with `cd_3d` primary and
+`cd_4d`/`cd_motion` guardrails. It inherits complete design/Gate0/IPCG/family/
+G01/runtime/single-use authorization closure; its launcher validates final
+consumption, holds `c11-launch-claim`, and delegates to the existing harness.
+
+Independent static review repaired shared-plan B0 routing, receipt archive
+materialization/revalidation, exact exported pins/certificates and physical-B*
+source binding; final review found no remaining Critical/Important in scope.
+Only static source, AST, JSON, diff and digest review occurred. No test, builder,
+candidate, model, scorer, download, inference or GPU task ran. C11 is
+`generated_unexecuted`; source coverage is now 8/15
+(C01,C02,C04,C10,C11,C13,C14,C15), while Local verification and native results
+remain 0/15. Seven chains, complete G01 and reviewed supervisor task-extension/
+online-agent integration remain. GPU STOP and the frozen budget/protocol are
+unchanged. Local starts at the C11 runbook section at the exact read-back commit.

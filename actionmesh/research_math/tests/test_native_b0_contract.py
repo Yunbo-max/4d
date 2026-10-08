@@ -10,6 +10,7 @@ import unittest
 
 import prepare_c01_native_scoring as c01
 import prepare_c02_native_scoring as c02
+import prepare_c11_native_scoring as c11
 import prepare_c14_native_scoring as c14
 
 
@@ -32,7 +33,7 @@ class NativeB0ContractTests(unittest.TestCase):
                    'report_ref': report, 'implementation_ref': implementation,
                    'implementation_sha256': implementation['sha256']}
             pinned.extend([implementation, report])
-            if role == 'b0' and profile.PROFILE == 'c01':
+            if role == 'b0' and profile.PROFILE in ('c01', 'c11'):
                 ref = write('native/generation-identity.json', {
                     'kind': 'native-context-generation-identity', 'uid': 'fixture',
                     'instrument_code_sha256': {
@@ -54,14 +55,14 @@ class NativeB0ContractTests(unittest.TestCase):
                 {'uid': 'fixture', 'inference_seed': 42, 'roles': rows, 'input_refs': pinned})
 
     def test_each_real_profile_accepts_native_report_without_candidate_hash(self):
-        for profile in (c01, c02, c14):
+        for profile in (c01, c02, c11, c14):
             with self.subTest(profile=profile.PROFILE), tempfile.TemporaryDirectory() as directory:
                 root = Path(directory)
                 contract, comparison = self.fixture(root, profile)
                 profile.bind_contract_arms(contract, comparison, root)
 
     def test_present_mismatch_and_changed_bytes_are_rejected(self):
-        for profile in (c01, c02, c14):
+        for profile in (c01, c02, c11, c14):
             for corruption in ('reported_hash', 'code_bytes', 'unpinned_ref'):
                 with self.subTest(profile=profile.PROFILE, corruption=corruption), tempfile.TemporaryDirectory() as directory:
                     root = Path(directory)
@@ -83,6 +84,7 @@ class NativeB0ContractTests(unittest.TestCase):
     def test_wrong_native_producer_or_command_is_rejected(self):
         for profile, ref_key, wrong_field in (
                 (c01, 'generation_identity_ref', 'instrument_code_sha256'),
+                (c11, 'generation_identity_ref', 'instrument_code_sha256'),
                 (c02, 'command_ref', 'script_sha256')):
             with self.subTest(profile=profile.PROFILE), tempfile.TemporaryDirectory() as directory:
                 root = Path(directory)
@@ -91,7 +93,7 @@ class NativeB0ContractTests(unittest.TestCase):
                 path = root / row[ref_key]['path']
                 record = json.loads(path.read_text())
                 record[wrong_field] = ({'research_math/native_context_runner.py': '0' * 64}
-                                       if profile is c01 else '0' * 64)
+                                       if profile.PROFILE in ('c01', 'c11') else '0' * 64)
                 path.write_text(json.dumps(record))
                 old = row[ref_key]
                 row[ref_key] = profile.scoring.file_ref(root, path)

@@ -21,7 +21,7 @@ import unittest
 class ScoringProfileClosureTests(unittest.TestCase):
     def test_scorer_and_launcher_import_from_only_prescribed_sources(self):
         repository = Path(__file__).resolve().parents[3]
-        for profile in ('c01', 'c02', 'c14'):
+        for profile in ('c01', 'c02', 'c11', 'c14'):
             with self.subTest(profile=profile), tempfile.TemporaryDirectory() as directory:
                 planner = importlib.import_module('prepare_' + profile + '_native_scoring')
                 staged = Path(directory)
@@ -58,7 +58,7 @@ assert scorer.REQUEST_KIND == profile + '-native-scoring-request'
 assert launcher.CANDIDATE_ID == '4d-math-20261006-' + profile
 assert callable(scorer.validate_delivery) and callable(launcher.launch)
 assert callable(backend.cpu_knn_backward)
-if profile != 'c14':
+if profile not in ('c11', 'c14'):
     assert 'research_math.c14_native_comparison' not in sys.modules
     assert 'research_math.corotational_residual_candidate' not in sys.modules
 for name, module in tuple(sys.modules.items()):

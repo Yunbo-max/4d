@@ -19,6 +19,8 @@ The output directory must be new. The CPU controls require NumPy only. They pres
 | native_probe.py | Cached frozen ActionMesh decoder, finite differences, actual redecoding and GPU telemetry | Sparse query-interface probe with constructed edit requests; no full mesh or natural quality gain claim |
 | protected_projection.py | C02 weighted action-subspace projection with redundant-constraint and pin handling | Declared action observations are not ground-truth motion; native qualification is still pending |
 | actionbench_full_reproduction.py | Fail-closed checking for the conditional full-128 current-README reproduction contract | Runs no scorer, does not qualify one UID or a candidate effect, and cannot authorize dispatch |
+| strain_projection_candidate.py | C11 proper-polar rotation-preserving stretch projection with distinct ARAP/elastic controls and a common pinned lift | Requires a nondegenerate full-rank face frame; explicit large-fold rejection may exclude legitimate folds and needs prospective qualification |
+| c11_native_comparison.py / c11_native_scoring.py | C11 five-role prospective freeze, official scorer staging and bounded raw collection | Generated-unexecuted; cannot authorize dispatch or bypass the admitted plan/launcher |
 
 C02 implementation status (2026-10-06): four local NumPy tests and the same four
 tests in the remote inference environment pass. No candidate GPU generation or
