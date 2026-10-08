@@ -1390,3 +1390,41 @@ claim. Static AST/JSON/diff inspection only; no project code, model, scorer or
 GPU ran. C13 is now source-chain complete but `generated_unexecuted` and Local
 unverified. Source-chain complete candidates are 1/15; Local-verified candidates
 and native candidate results remain 0/15. GPU STOP remains effective.
+
+## Continuation: C14 corotational residual candidate core — 2026-10-08
+
+Resumed literal remote main `cc84100d01cdbab1fa0744d2cd87654354604621`
+without repeating the completed C13 scoring work. The maintained selection ranks
+C14 fifth. Its math card explicitly requires frozen pose factoring plus a
+declared zero-preserving residual repair; the pre-existing `smooth_body` Gaussian
+was only the named strong simple control and therefore did not count as C14.
+
+Authored `research_math.corotational_residual_candidate`. It estimates proper
+uniform-vertex Kabsch factors from the predicted complete mesh relative to
+centered frame zero, rejects rank/reflection ambiguity, freezes those factors,
+and solves an explicit anchored nonuniform-time XYZ-group-TV problem for the
+body residual. Reconstruction uses the unchanged frozen poses and preserves
+frame zero, all 16 frames, topology, vertex identity, non-vertex arrays and the
+float32 official-export dtype. Inputs exclude GT, cameras, labels, evaluator ICP,
+scorer state and learned weights. World/body Gaussian controls remain separate.
+
+The exporter retains pose singular values/RMS, observed and repaired residuals,
+ADMM objective/residual/tolerance/conditioning/termination evidence, source/code
+hashes and a one-case candidate manifest. A nonconverged solve is retained as an
+incomplete arm without substituting the Gaussian control. Added
+`prepare_corotational_residual_candidate.py`, a single-use existing-harness CPU
+plan with explicit parameters, one attempt, zero retry and zero GPUs. The common
+acceptance closure now includes the builder.
+
+Tests were authored before production source for rigid fixed points, group-TV
+method identity, SO(3)/rank refusal, complete identity/hash export, failed
+nonconvergence and plan resource/retry bounds. Web performed static AST/JSON/
+diff inspection only; it did not run project tests, the builder, solver, model,
+scorer or GPU. All source is `generated_unexecuted`/`authored_not_run`.
+
+C14 still lacks its prospective B0/B*/world-Gaussian/body-Gaussian/candidate
+comparison freeze and candidate-specific official-scoring/raw-collection plan,
+as well as Local acceptance, Natural Gate 0/IPCG, family split, numeric criteria
+and native results. It therefore remains source-incomplete. Source-chain complete
+candidates stay 1/15 (C13 only), Local-verified and native results stay 0/15,
+and GPU STOP remains effective.

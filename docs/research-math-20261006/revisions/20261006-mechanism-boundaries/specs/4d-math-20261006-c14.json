@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c14",
   "name_zh": "共转坐标中的时间修复",
   "priority_rank": 5,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Candidate core/full-sequence CPU artifact source authored as generated_unexecuted; comparison/scoring chain, Local acceptance, scientific admission and frozen native protocol remain absent; not dispatchable.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c14.json",
@@ -54,22 +54,32 @@
     {
       "derivation_step": "s1",
       "statement": "For a rigid sequence Y_t=c_t+R_t X, u_t=0 at every t.",
-      "planned_function": "4d_math_20261006_c14.fit_frozen_rigid_factors",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.corotational_residual_candidate.fit_frozen_rigid_factors",
+      "status": "generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "Solve a declared anchored temporal repair for u, then reconstruct Y'_t=c_t+R_t(X+u'_t).",
-      "planned_function": "4d_math_20261006_c14.repair_body_residual",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.corotational_residual_candidate.repair_body_residual",
+      "status": "generated_unexecuted",
+      "implementation_choice": "Freeze proper Kabsch factors estimated from predicted geometry only, then solve min_U 0.5||U-Uhat||_F^2 + lambda sum_(t,v)||(D1_timestamp U)_(t,v)||_2 with U_0=Uhat_0 by ADMM. XYZ forms one group; all tolerances, rho, lambda and iteration limit are explicit."
     },
     {
       "derivation_step": "s3",
       "statement": "An operator mapping zero to zero leaves the exact rigid sequence unchanged, even for time-varying rotations.",
-      "planned_function": "4d_math_20261006_c14.reconstruct_with_fixed_pose",
-      "status": "not_implemented"
+      "planned_function": "actionmesh.research_math.corotational_residual_candidate.reconstruct_with_fixed_pose",
+      "status": "generated_unexecuted"
     }
   ],
+  "implementation_scope": {
+    "candidate_entry": "actionmesh/research_math/corotational_residual_candidate.py",
+    "cpu_plan_entry": "actionmesh/prepare_corotational_residual_candidate.py",
+    "simple_controls": "actionmesh/research_math/simple_mesh_controls.py:smooth_world,smooth_body",
+    "source_state": "generated_unexecuted",
+    "local_acceptance": "pending",
+    "native_scoring_chain": "not_implemented",
+    "scientific_admission": "pending"
+  },
   "native_experiment": {
     "benchmark": "ActionBench",
     "contract_ref": {
@@ -116,13 +126,17 @@
     ]
   },
   "outstanding_requirements": [
+    "prospective five-role comparison freeze and candidate-specific official-scoring/raw-collection plan",
+    "Local CPU execution of the generated candidate artifact plan with retained solver/pose evidence",
     "qualified pose fit without GT or evaluator ICP",
     "rigid/articulated regime of applicability",
     "SFG/STAC/basic rigid-aligned smoothing collision; baseline role unless extra delta",
     "final 16/16 raw receipts and native replay",
     "Natural Gate 0 PASS; required importance/collision decision",
+    "candidate-specific IPCG closure against SFG/STAC/basic rigid-aligned smoothing",
     "code identity/software/native-interface verification",
     "strongest executable baseline and fair information/cost",
+    "complete G01 development/confirmation, parameter-sensitivity, failure-denominator, paired-statistics and multiplicity design freeze",
     "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
   ],
   "supersedes_ref": {

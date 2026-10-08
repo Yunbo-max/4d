@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; current authoring base is b90a853. C13 alone has a complete generated_unexecuted method-to-official-score source chain; shared plan/collection/consumer additions do not complete any other candidate.",
+  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; current authoring base is cc84100. C13 alone has a complete generated_unexecuted method-to-official-score source chain. C14 now has its distinct generated_unexecuted corotational group-TV core/full-sequence CPU artifact path, but not yet its comparison freeze or official-scoring/collection chain.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -13,7 +13,7 @@
   "existing_implementation_notes": {
     "C02": "protected_projection.py implements mathematical projection primitive; not complete native method",
     "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
-    "C14": "simple_mesh_controls.py has body Gaussian baseline; not full candidate qualification"
+    "C14": "simple_mesh_controls.py remains the Gaussian baseline. corotational_residual_candidate.py now implements a separate anchored nonuniform-time group-TV residual method and full-sequence export, with prepare_corotational_residual_candidate.py as its CPU-only harness plan. Comparison freeze and official scoring/collection remain missing."
   },
   "required_next_sequence": [
     "Continue independent shared interface/source work; current CPU software acceptance remains Local-only.",
@@ -134,8 +134,10 @@
         "SFG/old correlated functional delta; currently diagnostic baseline",
         "final 16/16 raw receipts and native replay",
         "Natural Gate 0 PASS; required importance/collision decision",
+        "candidate-specific IPCG closure against SFG/STAC/basic rigid-aligned smoothing",
         "code identity/software/native-interface verification",
         "strongest executable baseline and fair information/cost",
+        "complete G01 development/confirmation, sensitivity, failure-denominator, paired-statistics and multiplicity design freeze",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
       "full_method_source_complete": false,
@@ -327,9 +329,9 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c14-math.json",
         "sha256": "52fbceeb3ffdd8230274c0154c4aea9f57921ba90ead1d8275bb3fb137ee81a8"
       },
-      "source_status": "simple_baseline_only",
-      "code_entry": "actionmesh/research_math/simple_mesh_controls.py:smooth_body",
-      "real_input_and_model_interface": "Native Y/X and input/model pose factors without GT or evaluator alignment",
+      "source_status": "candidate_core_and_full_sequence_export_generated_unexecuted; comparison/scoring chain missing",
+      "code_entry": "actionmesh/research_math/corotational_residual_candidate.py:fit_frozen_rigid_factors,repair_body_residual,reconstruct_with_fixed_pose,export_corotational_candidate; actionmesh/prepare_corotational_residual_candidate.py:build_plans",
+      "real_input_and_model_interface": "Receipt-bound ActionMesh sequence.npz/report.json. Proper Kabsch pose factors are estimated only from the predicted complete mesh and frame-zero geometry, frozen during repair, and never use GT, cameras, labels, evaluator ICP, scorer state or learned weights. The candidate repairs body residuals with anchored nonuniform-time XYZ-group TV; simple_mesh_controls.smooth_body remains the distinct Gaussian control.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -343,14 +345,35 @@
         "simple_rigid_aligned_smoothing",
         "declared_body_residual_repair"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
+      "native_scoring_entry": "The one-arm manifest is consumable by actionmesh/official_actionbench_adapter.py, but C14 still lacks a candidate-specific prospective five-role comparison freeze and admitted official-scoring/raw-collection plan; the adapter alone is not a complete scoring chain.",
+      "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_corotational_residual_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --run-id c14-corotational-candidate-001 --plan-dir $project_dir/plans/c14-corotational-candidate-001 --weight $frozen_group_tv_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c14_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
+      "acceptance_command_gap": "The CPU candidate-artifact command now exists and is generated_unexecuted. C14 remains source-incomplete until its prospective B*/world-Gaussian/body-Gaussian/candidate comparison and receipt-bound official-scoring/collection plan are implemented.",
+      "completion_evidence": [
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/research_math/corotational_residual_candidate.py",
+          "scope": "Predicted-geometry-only proper Kabsch factors, frozen-pose body coordinates, distinct anchored nonuniform-time XYZ-group-TV solver, exact frame-zero reconstruction and full 16-frame identity-preserving export with pose/solver certificate"
+        },
+        {
+          "status": "generated_unexecuted",
+          "source": "actionmesh/prepare_corotational_residual_candidate.py",
+          "scope": "Single-use CPU-only existing-harness plan with explicit solver/time parameters, one attempt, zero retry and zero GPU"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_corotational_residual_candidate.py",
+          "scope": "Rigid fixed point, method distinction from Gaussian, SO(3)/rank failure, full native identity/hash export and nonconvergence retention"
+        },
+        {
+          "status": "authored_not_run",
+          "source": "actionmesh/research_math/tests/test_corotational_residual_plan.py",
+          "scope": "Explicit-parameter single-attempt zero-retry CPU plan contract"
+        }
+      ],
       "remaining_implementation_gaps": [
-        "separately declared zero-preserving residual repair",
-        "candidate/ablation entry",
-        "native scoring"
+        "prospective five-role comparison freeze with B0, B*, world Gaussian, body Gaussian and declared body-residual repair",
+        "candidate-specific admitted official scorer and receipt-bound raw collection that pre/post-validates report sequence hash, method/role, exact 16-frame topology/timeline/vertex identity and official output provenance instead of relying on the generic adapter's shallow report check",
+        "Local CPU software acceptance and observed real-sequence execution/resource qualification"
       ],
       "scientific_prerequisites": [
         "qualified pose fit without GT or evaluator ICP",
@@ -358,8 +381,10 @@
         "SFG/STAC/basic rigid-aligned smoothing collision; baseline role unless extra delta",
         "final 16/16 raw receipts and native replay",
         "Natural Gate 0 PASS; required importance/collision decision",
+        "candidate-specific IPCG closure against SFG/STAC/basic rigid-aligned smoothing",
         "code identity/software/native-interface verification",
         "strongest executable baseline and fair information/cost",
+        "complete G01 development/confirmation, sensitivity, failure-denominator, paired-statistics and multiplicity design freeze",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
       "full_method_source_complete": false,

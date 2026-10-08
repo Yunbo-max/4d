@@ -321,6 +321,58 @@ Preparation/scoring errors remain failures in the denominator and are never
 imputed as zero. Even a validated bundle remains unqualified and carries no
 confidence interval or scientific verdict until E04/live native replay.
 
+### C14 candidate core — frozen corotational group-TV residual
+
+C14 now has a candidate implementation distinct from the existing body Gaussian
+control. `research_math.corotational_residual_candidate` uses only the retained
+complete predicted sequence. It estimates one proper uniform-vertex Kabsch pose
+relative to centered frame zero, rejects rank/reflection ambiguity, freezes all
+pose factors, solves an anchored nonuniform-time XYZ-group-TV problem for the
+body residual, and reconstructs the complete original sequence. It consumes no
+GT, camera, label, evaluator ICP, scorer state or learned weights. The Gaussian
+world/body functions in `simple_mesh_controls.py` remain separate controls.
+
+This source is **generated_unexecuted**. Run current common CPU software
+acceptance first. Then independently verify the receipt-bound real
+`sequence.npz`/`report.json`, freeze every positive solver parameter and the
+timestamp-unit interpretation in the development protocol, and emit only this
+zero-GPU artifact plan:
+
+The frozen objective uses the discrete sum of `||delta_u/delta_t||` groups with
+no quadrature `delta_t` factor. Treat it as a cadence-sensitive loader-clock
+derivative penalty, not a continuous-time TV integral or a cross-cadence claim.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_corotational_residual_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --source-sequence "$project_dir/inputs/original-case/sequence.npz" \
+  --run-id c14-corotational-candidate-001 \
+  --plan-dir "$project_dir/plans/c14-corotational-candidate-001" \
+  --weight "$frozen_group_tv_weight" --rho "$frozen_admm_rho" \
+  --absolute-tolerance "$frozen_abs_tolerance" \
+  --relative-tolerance "$frozen_rel_tolerance" \
+  --max-iterations "$frozen_max_iterations" \
+  --wall-seconds "$c14_cpu_wall_seconds"
+```
+
+Inspect the exact sequence/report refs, two code refs, five declared outputs,
+one attempt, zero retries and zero GPUs, then execute only the printed digest
+through `run_harness.py`. Retain `candidate.json`, `manifest.json`, the complete
+sequence, pose/solver `certificate.npz` and arm report. Nonconvergence is a
+failed retained attempt; do not substitute the Gaussian control or rerun the
+same frozen trial. The builder caps its inner job at 26,940 seconds so the outer
+60-second allowance remains within 27,000 seconds.
+
+This is not yet a complete C14 source chain. The one-arm manifest may be consumed
+by the shared official adapter only after the missing prospective B0/B*/world-
+Gaussian/body-Gaussian/candidate freeze, candidate-specific admitted scorer/raw
+collector, Natural Gate 0/IPCG, design verification, independent-unit split,
+numeric criteria and explicit GPU resume authorization exist. GPU STOP remains
+effective; do not invoke the scorer from this section. That future C14 wrapper
+must validate the report's sequence hash, candidate/method/role, exact 16-frame
+topology/timeline/vertex identity and official output provenance both before and
+after the generic adapter; the adapter's UID/status check alone is insufficient.
+
 The same handoff now includes `actionmesh/prepare_native_context.py`, its exact
 plan-only command, raw archive/manifest collection and current CPU acceptance
 commands. Read its **Paired instrument plan and raw collection continuation**
@@ -1199,4 +1251,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C02 has a development operator; C14 has comparator/control code. Neither is a completed candidate validation. Every candidate still requires an implementation/design card, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C02 has a development operator; C14 has comparator/control code plus a distinct generated_unexecuted candidate core/full-sequence CPU artifact path, while its comparison/scoring/design chain remains incomplete. Neither is a completed candidate validation. Every candidate still requires an implementation/design card, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

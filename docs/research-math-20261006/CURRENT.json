@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T05:49:00Z",
+  "recorded_at": "2026-10-08T06:15:01Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C13 now has a source-complete but generated_unexecuted chain: distinct group-l2 candidate/full-sequence export, prospective five-role request, one-pass official ActionBench scoring, failure/alias-aware logical collection, bounded receipt-bound raw bundle validation and a fail-closed existing-harness plan. Web performed static source checks only. Real inputs, Local acceptance, Natural Gate 0/IPCG, design-verified protocol/batch, family split, numeric effect/noninferiority rules and native results are absent. Source-chain complete candidates are 1/15; Local-verified candidates and native candidate results remain 0/15. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
+  "status": "C13 has the only source-complete but generated_unexecuted method-to-official-score chain. C14 now has a distinct generated_unexecuted corotational group-TV candidate core, complete 16-frame export and zero-GPU artifact plan; the existing body Gaussian remains a control. C14 still lacks its prospective five-role comparison and admitted official-scoring/raw-collection chain. Web performed static source/AST/JSON/diff review only. Real inputs, Local acceptance, Natural Gate 0/IPCG, complete G01, family split, numeric effect/noninferiority rules and native results are absent. Source-chain complete candidates remain 1/15; Local-verified candidates and native candidate results remain 0/15. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -1261,5 +1261,65 @@
     "candidate_methods_local_verified": 0,
     "candidate_native_results": 0,
     "next_step": "Keep GPU stopped. Local first runs current-source CPU acceptance. Only after explicit GPU resume and real C13 comparison inputs, Gate 0/IPCG, frozen design-verified confirmation protocol/method batch, independent-family split, numeric criteria, exact arm implementation bindings and an exact UID/GPU single-attempt authorization exist may Local build and inspect the scoring plan."
+  },
+  "c14_corotational_candidate_handoff": {
+    "status": "candidate_core_generated_unexecuted_scoring_chain_missing",
+    "recorded_at": "2026-10-08T06:15:01Z",
+    "base_commit": "cc84100d01cdbab1fa0744d2cd87654354604621",
+    "scope": "C14 predicted-geometry pose fit, anchored nonuniform-time group-TV body-residual solver, exact full-sequence export and CPU-only artifact plan; no comparison freeze, scorer/collector, Local acceptance, scientific admission or result",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/corotational_residual_candidate.py",
+        "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"
+      },
+      {
+        "path": "actionmesh/prepare_corotational_residual_candidate.py",
+        "sha256": "abce40e221d3cea0c301512ba3eb4317b74b3e8eafc66ecad0ea7a2e3da79dc3"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_corotational_residual_candidate.py",
+        "sha256": "1a40ead9d6b37e8daa3fc5502d9f9b8be6b010b0129292f9a6cf13d55af05370"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_corotational_residual_plan.py",
+        "sha256": "62bd34649e0780b3483be6f54ba77991677cc52ce2573b81b1e5d5ba0084cade"
+      },
+      {
+        "path": "actionmesh/prepare_control_scoring_checks.py",
+        "sha256": "024bd03bee52b7ee0f090b6577eb62a61ed3112660eb36bedee76714c42cf3ae"
+      }
+    ],
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "08b61d6b6d063294ed289d3952d9f197789597d79f0d1902fc2013e621ee0731"
+    },
+    "source_review": {
+      "mode": "three independent read-only math/code, plan/interface and protocol/document reviews; no execution",
+      "findings_closed": [
+        "residual solver initially reused a mesh validator that rejected the small-vector positive test",
+        "zero fixed-point certificate tolerances initially omitted dimension scaling and common parameter fields",
+        "nonconvergence report initially dropped solver residual/tolerance/termination evidence",
+        "float64 reconstruction was initially not rechecked for finite values after float32 cast",
+        "plan tests initially omitted the installed run_experiments cross-root staging boundary",
+        "per-candidate audit/spec/handoff initially omitted explicit IPCG and complete G01 obligations",
+        "documentation initially called loader-clock indices real timestamps",
+        "future scoring wrapper requirements were initially too implicit for the generic adapter's shallow report check"
+      ],
+      "final_state": "No remaining Critical/Important finding in the candidate-core/CPU-plan scope; Local execution and the separately missing comparison/scoring chain remain required"
+    },
+    "project_tests_executed_by_web": false,
+    "plan_builder_executed": false,
+    "solver_executed": false,
+    "official_scoring_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "local_software_acceptance_complete": false,
+    "natural_gate_0_passed": false,
+    "ipcg_passed": false,
+    "g01_complete": false,
+    "full_method_source_complete": false,
+    "candidate_source_complete": 1,
+    "candidate_methods_local_verified": 0,
+    "candidate_native_results": 0,
+    "next_step": "Continue Web authoring with C14's prospective five-role comparison freeze and candidate-specific official scorer/raw collector that validates method/role, report sequence hash, exact 16-frame identity and official provenance around the generic adapter. Keep GPU stopped; Local acceptance remains a separate later action."
   }
 }

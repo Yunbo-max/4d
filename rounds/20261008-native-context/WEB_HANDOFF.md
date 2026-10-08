@@ -417,3 +417,38 @@ single-attempt GPU-resume authorization are absent, so current plan creation
 correctly remains blocked. C13 is now
 recorded as source-chain complete but Local-unverified; native candidate results
 remain 0/15, and GPU STOP remains effective.
+
+## C14 corotational candidate-core continuation
+
+Base: literal remote main `cc84100d01cdbab1fa0744d2cd87654354604621`.
+The existing body Gaussian remains a simple control and is not counted as C14.
+The new candidate entry is
+`actionmesh/research_math/corotational_residual_candidate.py`; its plan-only
+entry is `actionmesh/prepare_corotational_residual_candidate.py`.
+
+The candidate fits proper Kabsch factors using only the complete predicted mesh
+and frame-zero reference, freezes those factors, solves a distinct anchored
+nonuniform-time XYZ-group-TV body-residual objective, and reconstructs the full
+16-frame original topology/identity sequence. It emits a one-arm manifest plus
+pose/solver certificate; no GT, evaluator alignment, camera, label, learned
+weight or scorer state enters the fit. World/body Gaussian remain the required
+separate simple controls.
+
+The exact CPU-only command and acceptance order are in
+`LOCAL_AGENT_RUNBOOK.md#c14-candidate-core--frozen-corotational-group-tv-residual`.
+Run the current common software plan first, then freeze the real sequence/report,
+timestamp units and all positive solver parameters before plan emission. Inspect
+the emitted one-attempt/zero-retry/zero-GPU plan and execute only its printed
+digest through the existing harness. A failed/nonconverged solve stays failed.
+
+Web authored tests before implementation but did not execute them. Static AST,
+JSON and diff inspection does not establish Local acceptance. C14 still lacks
+the prospective B0/B*/world-Gaussian/body-Gaussian/candidate freeze and an
+admitted official scorer/raw collector, so it remains source-incomplete and
+unscored. Natural Gate 0, candidate-specific IPCG, complete G01 development/
+confirmation/sensitivity/statistics design, independent-family split and numeric
+effect/noninferiority criteria also remain absent. The future scoring wrapper
+must bind report sequence hash, method/role, exact 16-frame topology/timeline/
+vertex identity and official provenance around the generic adapter rather than
+trusting its shallow report UID/status check. Source-chain complete remains
+1/15, Local verified 0/15 and native results 0/15. GPU STOP remains effective.

@@ -48,6 +48,14 @@ contains Gate 0/IPCG, independent-family split, numeric outcome criteria and an
 explicit single-attempt GPU-resume authorization for the exact GPU UUID.
 Execution must use the common harness.
 No such admission or Local acceptance currently exists; GPU STOP remains in force.
+The C14 candidate core is distinct from its existing Gaussian controls. Its only
+artifact-plan entry is `actionmesh/prepare_corotational_residual_candidate.py`.
+It fits proper frozen Kabsch factors from the predicted mesh only, solves an
+anchored nonuniform-time XYZ-group-TV body residual, and exports the complete
+identity-preserving sequence plus pose/solver evidence. It remains
+`generated_unexecuted`; the one-arm manifest is not the still-missing C14
+comparison freeze or official scoring/collection chain. Do not count C14 as
+source-chain complete, Local verified, scientifically admitted or scored.
 Completed paired-context evidence is consumed only through the CPU-only
 `actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
 the result, manifest and tar as three explicit staged paths, bind the expected

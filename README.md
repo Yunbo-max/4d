@@ -14,6 +14,8 @@ C13 五角色比较现在有独立的工程装配入口 `python -m research_math
 
 C13 官方评分与原始收集现由 `research_math.c13_native_scoring` 和 `actionmesh/prepare_c13_native_scoring.py` 接续：前者把唯一物理臂逐字节暂存后一次调用固定 `official_actionbench_adapter.py`，核对官方六文件、CPU-kNN compatibility receipt、16 帧、GT/序列 hash、成功/失败分母，并把全部 raw 字节写成有上限、可重哈希的 `result.json`／`raw-manifest.json`／`raw-evidence.tar`。后者只在 C13 `design_verified`、完整确认性 native protocol、五角色方法身份/实现、严格环境锁、Natural Gate 0/IPCG、独立 family split、数值判据以及精确 UID/GPU 的一次性恢复授权均哈希匹配时生成单次零重试 harness 计划。当前真实准入文件和输入尚不存在，Web 未执行测试或评分，GPU STOP 仍有效；不得直接调用 `score` 绕过计划。
 
+C14 不再以现有 body Gaussian 冒充候选：`actionmesh/prepare_corotational_residual_candidate.py` 现有独立的 **generated_unexecuted** CPU 计划。候选仅从完整预测网格对 frame zero 做 proper Kabsch，冻结 `R_t,c_t`，在共转 body residual 上求带第 0 帧锚定、按保留的 native loader-clock timesteps（当前为 0..15，非物理时钟）缩放的 XYZ-group TV，再用未改动的 pose 重建全部 16 帧、拓扑和顶点身份。`simple_mesh_controls.smooth_world/smooth_body` 仍是 world/body Gaussian 对照。C14 当前仅完成候选核心与完整序列导出；五角色事前冻结、官方评分/原始收集、Local 验收和科学准入仍缺，因此源码链完整计数仍为 1/15、native 结果仍为 0/15。
+
 本轮新增[完整原生 decoder capture 入口](docs/research-math-20261006/NATIVE_DECODER_CAPTURE.md)：`complete_unit_plan --capture-decoder` 可生成独立观测单元计划，接入官方生成、完整上下文归档和三臂评分。新增源码为 **generated_unexecuted**，需要 Local CPU harness 验收；GPU 实验保持停止，尚无完整原生 capture 或 replay 结果。新增观测单元不能沿用旧队列定价。
 
 最新交付继续补齐独立成对生成验证、完整上下文回放、源时间查询和有限批次 supervisor。源码与验收测试已编写，仍须 Local 验收；supervisor 尚未安装或启动。共享接口不等于 15 个候选方法实现完成。环境与资产沿用[运行手册的固定数据/模型来源](LOCAL_AGENT_RUNBOOK.md#download-datasets-and-models)，优先复用仍匹配的已有资产。
@@ -22,7 +24,7 @@ C13 官方评分与原始收集现由 `research_math.c13_native_scoring` 和 `ac
 
 ## 当前：方法必要性与可识别性审查
 
-逐项交付状态见[15 项实现清单](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)：包含数学依据、实际入口、输入接口、对照/消融、官方评分接入与缺口。当前仅 C13 标记为“源码链完整、generated_unexecuted”；Local 验证与 native 结果仍为 0/15。成对原生上下文现在有独立的 `prepare_native_context.py` 计划入口和完整原始文件回传代码；仍待 Local 验收，GPU 保持停止。
+逐项交付状态见[15 项实现清单](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)：包含数学依据、实际入口、输入接口、对照/消融、官方评分接入与缺口。当前仅 C13 标记为“源码链完整、generated_unexecuted”；C14 已交付不同于 Gaussian 对照的候选核心/完整序列 CPU 路径，但评分链仍缺。Local 验证与 native 结果仍为 0/15。成对原生上下文现在有独立的 `prepare_native_context.py` 计划入口和完整原始文件回传代码；仍待 Local 验收，GPU 保持停止。
 
 [第二轮研究修订](docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md)补推 C02 的保护代价和匹配步长对照、C20 的 principal-angle 可识别性及噪声放大、C05 的原生接口和 localized blend 离面边界。保留20个构造与原15个入选身份，更新全池顺序和15份条件规格。数学仍是条件自审，新候选实现、完整 native 实验及正式成败均为0。
 

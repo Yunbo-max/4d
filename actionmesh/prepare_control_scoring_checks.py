@@ -11,6 +11,7 @@ ROOT_SOURCES = (
     'prepare_mesh_controls.py',
     'prepare_quadratic_acceleration_control.py',
     'prepare_group_acceleration_candidate.py',
+    'prepare_corotational_residual_candidate.py',
     'prepare_control_scoring.py',
     'prepare_control_scoring_checks.py',
     'prepare_native_runtime.py',
