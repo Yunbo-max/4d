@@ -14,9 +14,13 @@ import os
 from pathlib import Path
 import sys
 
-from prepare_c14_native_scoring import (
-    CANDIDATE_ID, canonical_record_digest, validate_final_consumption)
-from research_math import c14_native_scoring as scoring
+if "plan_module" not in globals():
+    import prepare_c14_native_scoring as plan_module
+CANDIDATE_ID = plan_module.CANDIDATE_ID
+canonical_record_digest = plan_module.canonical_record_digest
+validate_final_consumption = plan_module.validate_final_consumption
+if "scoring" not in globals():
+    from research_math import c14_native_scoring as scoring
 
 PROFILE_LABEL = 'C14'
 CLAIM_KIND = 'c14-launch-claim'

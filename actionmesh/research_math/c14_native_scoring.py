@@ -25,7 +25,8 @@ import time
 import traceback
 
 import official_actionbench_adapter as official
-from research_math import c14_native_comparison as comparison_module
+if "comparison_module" not in globals():
+    from research_math import c14_native_comparison as comparison_module
 
 
 METRICS = ('cd_3d', 'cd_4d', 'cd_motion')
@@ -99,9 +100,22 @@ def _copy_exact(source: Path, target: Path, expected_sha256: str) -> None:
     if (source.is_symlink() or not source.is_file()
             or any(parent.is_symlink() for parent in source.parents)):
         raise ValueError('Physical source file required: ' + str(source))
+    expected_bytes = source.stat().st_size
+    if expected_bytes > RAW_LIMITS['max_member_bytes']:
+        raise ValueError('Staged member exceeds frozen byte bound: ' + str(source))
     target.parent.mkdir(parents=True, exist_ok=True)
+    copied = 0
     with source.open('rb') as src, target.open('xb') as dst:
-        shutil.copyfileobj(src, dst, length=1024 * 1024)
+        while True:
+            block = src.read(min(1024 * 1024, expected_bytes - copied + 1))
+            if not block:
+                break
+            copied += len(block)
+            if copied > expected_bytes:
+                raise ValueError('Evidence grew while staging: ' + str(source))
+            dst.write(block)
+    if copied != expected_bytes:
+        raise ValueError('Evidence truncated while staging: ' + str(source))
     if digest(source) != expected_sha256 or digest(target) != expected_sha256:
         raise ValueError('Evidence changed while staging: ' + str(source))
 

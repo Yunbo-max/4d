@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T08:26:24Z",
+  "recorded_at": "2026-10-08T09:14:14Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C02, C13 and C14 have source-complete but generated_unexecuted method-to-official-score chains. C02 now constructs its common matrix-free ARAP repair, fixed geodesic patch/area protection operator, equal-W-norm control and protected full-sequence output from the receipt-bound predicted mesh; it also has prospective comparison, official scorer/raw collection, byte-bound delivery replay and recoverable authorization-gated common-harness plan/launcher source. The old protected_projection.py remains only a reference primitive. No scientific plan was emitted. Web performed static source/AST/JSON/diff review only. Real Local acceptance, Natural Gate 0/IPCG, actual source-derived family records, frozen numeric G01 records and native results are absent. Source-chain complete candidates are 3/15; Local-verified candidates and native candidate results remain 0/15. Supervisor is uninstalled/unstarted and GPU execution remains stopped.",
+  "status": "C01,C02,C13,C14 have generated_unexecuted method-to-official-score source chains within their current native input scopes (4/15); Local-verified and native-result candidates remain 0/15. C01 covers the existing seed42 complete native 16-frame window only; the originally proposed additional seeds need producer extension. Eleven source chains and complete G01 remain pending. No project code/tests, plan builder, model, scoring or GPU work was executed on Web. Supervisor remains uninstalled/unstarted; GPU STOP and frozen budget/protocol remain effective.",
   "c02_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",
     "base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
@@ -944,7 +944,7 @@
     "dispatch_ready": false,
     "candidate_native_results": 0
   },
-  "historical_sections_notice": "Earlier timestamped handoffs retain historical statuses and hashes. Use native_context_supervisor_handoff for the latest source delivery; native_decoder_capture_handoff remains the separate capture-only interface. No prior receipt accepts newly changed code.",
+  "historical_sections_notice": "Earlier timestamped handoffs retain historical statuses and hashes. Use c01_same_context_candidate_handoff for the current C01 and changed shared scoring source references and the latest delivery inventory. Earlier receipts, including historical R3 311/311, do not accept newly changed code. The historical runtime pricing root defect is already repaired and is not the current root blocker.",
   "native_decoder_capture_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-07T23:07:36Z",
@@ -1367,5 +1367,165 @@
     "candidate_methods_local_verified": 0,
     "candidate_native_results": 0,
     "next_step": "Keep GPU stopped. Local first executes current-source CPU acceptance and real-input candidate/interface validation. Only after real C14 inputs, Gate 0/IPCG, reviewed family derivation/split, protocol-equal numeric G01 records, strict environment closure and an explicit exact-attempt GPU resume authorization exist may Local build, inspect and dispatch the single zero-retry scoring plan."
+  },
+  "c01_same_context_candidate_handoff": {
+    "status": "source_chain_complete_generated_unexecuted",
+    "recorded_at": "2026-10-08T09:14:14Z",
+    "base_commit": "7e03902dc592e88545a182dfd37e3c5b3ef33dca",
+    "scope": "C01 H_t=X+F_t(X)-F_a(X) on the paired native decoder context, exact float32 anchor and retained native query cast, current seed42 complete16frame scope; raw unclipped and mean-bias controls, unchanged clipped B0, five-role prospective comparison, official CD-M-primary scoring, full-context/failure archive and validation, existing-harness CPU artifact/native acceptance and admitted scoring plans/launcher. No broader-seed producer, complete G01, Local pass or native result claimed.",
+    "automation_host": {
+      "id": "6ac527ad50cc8191a4964d35ae0b826e",
+      "conversation_id": "6ac0b6a1-5e28-83e9-98d6-30f1536deef1",
+      "continuous_managed_process_verified": false
+    },
+    "source_refs": [
+      {
+        "path": "actionmesh/launch_c01_native_scoring.py",
+        "sha256": "a8af81f0f1f6e0c595309020a2cd650afa74ba1dce83436a3ce59112dee7c12a"
+      },
+      {
+        "path": "actionmesh/launch_c02_native_scoring.py",
+        "sha256": "6415ecea53b98d3836a639523e85518193ad714068c65c19de85f4ba1d167203"
+      },
+      {
+        "path": "actionmesh/launch_c14_native_scoring.py",
+        "sha256": "025d19c7afc8df10f5ac6ee5130cf111f31d66bf2e09abf7fde79398ef08b60f"
+      },
+      {
+        "path": "actionmesh/prepare_c01_native_acceptance.py",
+        "sha256": "665869d54dcd00acf2c5213bc603f8c1cb8ead7d5e2da0bcd29186c29ad0c620"
+      },
+      {
+        "path": "actionmesh/prepare_c01_native_scoring.py",
+        "sha256": "0d90a1d20a68d2866dad3cf743b11206400b98babceb6346fddc326822638f7d"
+      },
+      {
+        "path": "actionmesh/prepare_c02_native_scoring.py",
+        "sha256": "52dad387b25ddd082aaf289c6017a16a4829f15733ffc7f2fdb208e721915135"
+      },
+      {
+        "path": "actionmesh/prepare_c14_native_scoring.py",
+        "sha256": "800d0ae7973cd4a963599387fa07d83932c822ef42d90ccfc3b48cb66d019b9a"
+      },
+      {
+        "path": "actionmesh/prepare_control_scoring_checks.py",
+        "sha256": "0671cfbc45aabb93823b4f08d35ff2b96b50499799abf39d40dac8c694720dd3"
+      },
+      {
+        "path": "actionmesh/prepare_self_map_candidate.py",
+        "sha256": "ac504c6e8941890ed7251df915c5336638b0e88ab6ec74ba371962a925cff0c0"
+      },
+      {
+        "path": "actionmesh/research_math/c01_native_comparison.py",
+        "sha256": "214901a463a214f2aafc8cb7b8a524f79d5c0f6c183f297a49607d3bc50fad82"
+      },
+      {
+        "path": "actionmesh/research_math/c01_native_scoring.py",
+        "sha256": "7387195f9f11e2450a7ab00d884642ba5129237d1e773d9079a8b298a1ca76c2"
+      },
+      {
+        "path": "actionmesh/research_math/c02_native_scoring.py",
+        "sha256": "1364d84345955013b6fea86c248ee8b3cda57aa1b519cdd716efe931da187c27"
+      },
+      {
+        "path": "actionmesh/research_math/c14_native_scoring.py",
+        "sha256": "f45bfd9cbd3fcee3a735c83e4b78e8d504a8ab5bbed0ff2803916d0fb4098c06"
+      },
+      {
+        "path": "actionmesh/research_math/self_map_candidate.py",
+        "sha256": "e971cfec0ff3225f2497c13dde7a392c491c3c2ff6a2ad877a83ec32d41cf141"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c01_native_acceptance_plan.py",
+        "sha256": "942df223ba56da027a914d2be0cc03501ad9efdc08b903d6ea33bb7e5088a930"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c01_native_comparison.py",
+        "sha256": "be221d5919068d20f96bd2940c71a85ca1b15794e1dbe1140d7e9c4f34cf8a9d"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c01_native_scoring.py",
+        "sha256": "b2a743d0cc4ad51e38c510eb0ccdae2343999524e370ae84209209ff594c3077"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c01_native_scoring_plan.py",
+        "sha256": "24ebc97578e22c17cb0d430778444ae691bd311944d10a7da992556686bab6a0"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c01_native_scoring_profile.py",
+        "sha256": "6faed45a315bdf3ff248b48f3c560ac387e6ac3c5e0a614a1ce0db11b1192fa5"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_scoring_profile_closure.py",
+        "sha256": "d7a05abca9c49a91bee830f006bbc1cc4e33c49659f09a9ba914a5a496b66245"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_self_map_candidate.py",
+        "sha256": "97b65a85d03c8d5b62282c16121d6a0b1d1209212ea2ff293f0be71cbc00c472"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_self_map_plan.py",
+        "sha256": "046b677d36e0cb236f01278d471b4fa1278e8dce5be8ce7ece4f7d64cdc18455"
+      }
+    ],
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "d6d5588b82b38fa0795c68efd14a00bff3eaf3e293b59b6baa1e6b95f7d2f5fc"
+    },
+    "spec_ref": {
+      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c01.json",
+      "sha256": "3e2caee89b89f09ec03f117577102ab58831c436e29a4311f1f7eb9a3374f4c8"
+    },
+    "handoff_ref": {
+      "path": "rounds/20261008-native-context/WEB_HANDOFF.md",
+      "sha256": "e59b82f13299a77d67a081b1b77559ba764eb01b84405e4d99e59e2ac4cea1c7"
+    },
+    "runbook_ref": {
+      "path": "LOCAL_AGENT_RUNBOOK.md",
+      "sha256": "e6ad0101f49a4878a291cc2e79eb4206b5157967d823d28ac51758b61e7c330f"
+    },
+    "source_review": {
+      "mode": "independent read-only math/context/native-acceptance and scoring/profile reviews; no execution",
+      "findings_closed": [
+        "retain native query cast instead of rejecting legitimate float16 quantization",
+        "add raw unclipped control to isolate clipping removal from bias correction",
+        "retain whole context and failed-arm evidence in scoring archive",
+        "stage exact input files through installed harness and optional prospective freeze; emit comparison request only after non-skipped native acceptance",
+        "close isolated scoring/launcher import and deterministic-kNN source dependencies",
+        "remove protocol/analysis circular hash using narrowly excluded core digest while preserving final full protocol binding",
+        "bound snapshot copy reads and reject changed source sizes"
+      ],
+      "final_state": "Independent reviewers found no remaining concrete blocker in the reviewed source scope. Static source review does not establish Local acceptance."
+    },
+    "validation": {
+      "read_only_installed_method_validator": "code-boundary ready; math20/20, selected15, selection_verified true; code/design/results authorization remains false/not_granted in evidence",
+      "batch_sha256": "f8d4a834db8d017465b6234d05b4ec545c5a01c04118c173026fd425a938fb72",
+      "web_checks": "AST parsing, JSON parsing, diff whitespace, source inspection only",
+      "project_tests_executed_by_web": false,
+      "plan_builder_executed": false,
+      "official_scoring_executed": false
+    },
+    "source_complete_candidate_count": 4,
+    "source_complete_candidates": [
+      "C01",
+      "C02",
+      "C13",
+      "C14"
+    ],
+    "candidate_methods_local_verified": 0,
+    "candidate_native_results": 0,
+    "local_software_acceptance_complete": false,
+    "g01_complete": false,
+    "gpu_execution": "stopped_by_user",
+    "supervisor_installed": false,
+    "supervisor_running": false,
+    "remaining_gaps": [
+      "eleven selected candidates still lack complete source chains",
+      "C01 original inference seeds314/2718 require native producer extension; no silent substitution",
+      "complete reviewed G01/family splits/numeric criteria and scientific admission remain pending",
+      "Local current-source CPU and real native interface acceptance pending; required raw native input closure absent",
+      "baseline indices10–15 coverage and UID008 full raw bundle remain unproven; do not overwrite or rerun old records"
+    ],
+    "next_step": "Continue independent ready C10 differential-target/common-lift implementation and pinned solver, maintaining this same inventory and single harness. Local may use runbook CPU acceptance and retained-native acceptance plans when actual inputs exist. Keep GPU STOP; no new budget or scientific retry."
   }
 }

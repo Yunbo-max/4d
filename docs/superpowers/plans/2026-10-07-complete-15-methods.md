@@ -1,5 +1,7 @@
 # Complete the 15-method research run
 
+> Current scope override (2026-10-08): the owner changed this continuation stage to complete source/design delivery and a precise Local handoff. The historical execution checklist below is retained as history; it is not launch authority or the current stage endpoint. GPU STOP remains active. Current counts and remaining source gaps are in `docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json`. No project tests or GPU/scorer/model jobs run in the Web role.
+
 > **For agentic workers:** Use `superpowers:executing-plans` to execute this plan in the current session. The user has explicitly authorized implementation, execution, debugging, supervision, and result delivery; no new plan approval is required.
 
 **Goal:** Finish evaluator qualification and execute all 15 selected methods with their declared comparators and ablations, preserving every outcome.

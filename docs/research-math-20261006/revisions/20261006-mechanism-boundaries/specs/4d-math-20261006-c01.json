@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c01",
   "name_zh": "同时间自映射偏差消除",
   "priority_rank": 2,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Complete generated_unexecuted source chain for frozen seed42/16-frame native context; Local acceptance and complete scientific design remain pending.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/evidence/math/4d-math-20261006-c01.json",
@@ -54,20 +54,20 @@
     {
       "derivation_step": "s1",
       "statement": "Define H_t(x)=x+F_t(x)-F_a(x); H_a(x)=x.",
-      "planned_function": "4d_math_20261006_c01.query_and_anchor_identity",
-      "status": "not_implemented"
+      "planned_function": "research_math.self_map_candidate.correction_arrays",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "Replacing every F_t by F_t+b leaves H_t unchanged.",
-      "planned_function": "4d_math_20261006_c01.cancel_shared_bias",
-      "status": "not_implemented"
+      "planned_function": "research_math.self_map_candidate.correction_arrays",
+      "status": "source_implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "E||e_t-e_a||^2-E||e_t||^2=E||e_a||^2-2E[e_t^T e_a].",
-      "planned_function": "4d_math_20261006_c01.retain_error_cross_term",
-      "status": "not_implemented"
+      "planned_function": "research_math.self_map_candidate.correction_arrays",
+      "status": "conditional_risk_identity_retained_not_estimated"
     }
   ],
   "native_experiment": {
@@ -79,6 +79,7 @@
     "arms": [
       "B0",
       "B_star",
+      "raw_uncorrected",
       "mean_bias",
       "self_map_subtraction"
     ],
@@ -127,5 +128,53 @@
   "supersedes_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-native-loss/specs/4d-math-20261006-c01.json",
     "sha256": "0bda892c600208f2df48c71c06353b8da09fd96f5caf3fd37087f896f7d75e22"
-  }
+  },
+  "authoring_clarifications_20261008": {
+    "source_base_commit": "7e03902dc592e88545a182dfd37e3c5b3ef33dca",
+    "status": "generated_unexecuted; no protocol or scientific gate promoted",
+    "raw_control_reason": "The actual direct-mode apply_displacement clamps raw decoder coordinates to [-1,1]. Add raw_uncorrected to isolate removal of that clamp from self-map subtraction; retain all four originally required roles.",
+    "supported_native_scope": "Frozen ActionBench producer: source frame 0 plus all 15 target frames in one complete captured decoder window. Reject changed/missing/overlapping windows and unsupported time schedules rather than invent cross-window coupling.",
+    "method": "F_t(X) denotes decoder(context,cast_to_native_query_dtype(X),a,t). Both calls share the same recorded q and normals. For non-anchor targets H_t=X+F_t(X)-F_a(X); source anchor is original native float32 X. Query-cast discrepancy is retained in the certificate; no clipping.",
+    "control": "For non-anchor targets M_t=F_t-mean_v(F_a-X). raw_uncorrected preserves F_t; both retain exact source anchor X.",
+    "coordinate_policy": "Explicit preserve-and-report or reject policy frozen before outputs are inspected. Neither clips. A rejected preparation remains in the logical denominator; no successful-arm substitution.",
+    "metric_interpretation": "Official cd_motion matches sampled surfaces on the first frame and averages unsquared coordinate distances over all frames. It is not a velocity loss. Time-constant bias subtraction leaves target-target vertex differences unchanged and does not guarantee any native metric improvement.",
+    "novelty": "Diagnostic/baseline role retained. Shape Flow Guidance already uses anchored differences; no novelty claim from this source completion."
+  },
+  "g01_authoring_draft": {
+    "status": "conditional_design_generated_unexecuted",
+    "claim_scope": "Shared self-query bias diagnostic on frozen public ActionBench video-to-4D; no general editing, semantic-action, long-video or new-method superiority claim.",
+    "benchmark": "Existing ActionBench full128 admitted snapshot/semantics/population and exact official source closure; do not substitute handmade cases or compact historical parity as qualification.",
+    "required_comparisons": [
+      "self_map_subtraction minus prospectively selected B_star",
+      "self_map_subtraction minus mean_bias",
+      "self_map_subtraction minus raw_uncorrected",
+      "raw_uncorrected minus B0 to isolate clamp removal"
+    ],
+    "information_and_cost": "All arms share generation identity, latent/query/normals and self-time query; allocate the common extra query and replay cost equally and report it, even when an arm ignores F_a. No GT or scorer state enters correction.",
+    "development_confirmation": "Use source-derived asset-family split, disjoint development/confirmation families and prospective B_star choice. Existing inspected UID008 and historical r9 units cannot be relabelled fresh confirmation. Actual memberships remain unprovided.",
+    "randomness": "Frozen producer presently generation seed42 only; scorer44. Broader seed314/2718 coverage retained from original design but requires a separately versioned producer/identity qualification; do not pretend this adapter already executes those seeds.",
+    "sensitivity": "Parameter-free correction. Stratify predeclared natural development cases by self-residual magnitude and raw/clamped coordinate incidence; audit float32 export perturbation and frozen replay tolerance. No alpha search or outcome-selected bound policy. Confirm every reported selected stratum on independent families.",
+    "failure_denominator": "Five logical roles per frozen UID/seed. Preserve preparation, bounds, missing-context and official-scoring failures; never zero-impute. Physical byte-identical outputs share one measurement and remain distinct logical roles.",
+    "statistics": "Paired treatment-minus-control metrics; family-level resampling with seeds/repeated outputs nested in family, not treated as independent units. Primary cd_motion effect and cd_3d/cd_4d NI criteria must be numeric and protocol-equal before dispatch. Multiple candidates/contrasts require the existing prespecified multiplicity policy. No inference from one-unit collector.",
+    "resource_assumption": "One user-stated RTX2080Ti, native Conda/no Docker. CPU artifact plan is one attempt/zero retries/zero GPUs. Future scorer remains single GPU attempt/zero retries with explicit resume. Current 28800s total/1800s collection reserve persists; new complete-unit time/VRAM/disk must be measured by Local without reducing comparisons.",
+    "remaining_design_inputs": [
+      "Natural Gate0/IPCG and functional-delta evidence",
+      "current Local code/native-context/scorer acceptance",
+      "actual audited family IDs and development/confirmation split",
+      "prospective B_star basis",
+      "task/precision-based numeric minimum effect and NI margins",
+      "qualified complete-unit timing/runtime envelope and cumulative remaining budget",
+      "seed314/2718 producer qualification if those original repeats are pursued"
+    ]
+  },
+  "implementation_sources": [
+    "actionmesh/research_math/self_map_candidate.py",
+    "actionmesh/prepare_self_map_candidate.py",
+    "actionmesh/prepare_c01_native_acceptance.py",
+    "actionmesh/research_math/c01_native_comparison.py",
+    "actionmesh/research_math/c01_native_scoring.py",
+    "actionmesh/prepare_c01_native_scoring.py",
+    "actionmesh/launch_c01_native_scoring.py"
+  ],
+  "implementation_status": "generated_unexecuted; no method test, scientific admission or native result"
 }

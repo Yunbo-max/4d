@@ -19,6 +19,7 @@ _spec = importlib.util.spec_from_file_location(
 if _spec is None or _spec.loader is None:
     raise ImportError("Unable to load shared native scoring implementation")
 _shared = importlib.util.module_from_spec(_spec)
+_shared.comparison_module = comparison_module
 _spec.loader.exec_module(_shared)
 
 _shared.comparison_module = comparison_module

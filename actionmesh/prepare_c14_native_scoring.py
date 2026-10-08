@@ -17,8 +17,8 @@ from pathlib import Path
 import subprocess
 import sys
 
-from research_math import c14_native_scoring as scoring
-from prepare_actionbench_full128_window import validate_environment_closure
+if "scoring" not in globals():
+    from research_math import c14_native_scoring as scoring
 
 
 CANDIDATE_ID = '4d-math-20261006-c14'
@@ -68,6 +68,22 @@ def canonical_record_digest(value: dict, digest_key: str = 'admission_digest') -
     core = {key: item for key, item in value.items() if key != digest_key}
     return hashlib.sha256(json.dumps(
         core, sort_keys=True, separators=(',', ':'), allow_nan=False
+    ).encode()).hexdigest()
+
+
+def analysis_protocol_core_digest(protocol: dict) -> str:
+    """Acyclic analysis binding; the final protocol still hashes the analysis ref.
+
+    Author the protocol core first, then the analysis with this digest, then
+    pin analysis_plan_ref and freeze the final protocol.  Downstream criteria
+    and GPU authorization bind that final protocol_digest without a back-edge.
+    Only the analysis reference and the two finalization fields are excluded;
+    criteria, identities, sample closure and method discovery remain covered.
+    """
+    core = {key: value for key, value in protocol.items()
+            if key not in {"analysis_plan_ref", "protocol_digest", "frozen_at"}}
+    return hashlib.sha256(json.dumps(
+        core, sort_keys=True, separators=(",", ":"), allow_nan=False
     ).encode()).hexdigest()
 
 
@@ -347,7 +363,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
     analysis = _record(root, analysis_ref, kind=ANALYSIS_KIND,
                        digest_key='plan_digest')
     analysis_keys = {
-        'kind', 'version', 'candidate_id', 'protocol_digest',
+        'kind', 'version', 'candidate_id', 'protocol_core_digest',
         'primary_metric', 'direction', 'min_effect', 'guardrail_margins',
         'independent_unit', 'failure_policy', 'paired_statistics',
         'multiplicity', 'sensitivity', 'development_confirmation',
@@ -360,7 +376,7 @@ def require_dispatch_admission(root: Path, admission_path: Path, *, request: dic
     protocol_criteria = protocol.get('criteria')
     if (set(analysis) != analysis_keys
             or analysis.get('candidate_id') != CANDIDATE_ID
-            or analysis.get('protocol_digest') != protocol.get('protocol_digest')
+            or analysis.get('protocol_core_digest') != analysis_protocol_core_digest(protocol)
             or analysis.get('primary_metric') != PRIMARY_METRIC
             or analysis.get('direction') != 'minimize'
             or analysis.get('min_effect') != criteria['min_effect']
@@ -865,6 +881,7 @@ def scoring_outputs() -> list[str]:
 
 
 def _runtime(root: Path, environment_path: Path, gpu_uuid: str) -> tuple[dict, dict]:
+    from prepare_actionbench_full128_window import validate_environment_closure
     canonical = Path(root).resolve()/'inputs/native-runtime/environment.json'
     if Path(environment_path).resolve() != canonical:
         raise ValueError('Canonical current native environment path required')
@@ -992,6 +1009,7 @@ def build_plans(root: Path, *, request_path: Path, protocol_path: Path,
         scoring.file_ref(root, root/LAUNCHER_SOURCE),
         *(scoring.file_ref(root, root/path) for path in EXTRA_CODE_SOURCES),
         request['adapter_ref'], request['deterministic_entry_ref'],
+        scoring.file_ref(root, root/'actionmesh/research_math/deterministic_knn.py'),
         *request['official_source_refs'], *implementation_refs,
     ]
     unique_inputs = _unique_refs(inputs, 'plan input')

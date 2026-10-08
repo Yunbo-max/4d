@@ -553,3 +553,52 @@ strict runtime closure and an expiring exact-GPU `single_c02_scoring_attempt`
 resume authorization. C02 is source-chain complete but Local-unverified and
 unscored. Source-complete candidates are 3/15 (C02, C13, C14); Local-verified
 and native-result counts remain 0/15. Supervisor remains uninstalled/unstarted.
+
+## Continuation: C01 complete native-context source chain — 2026-10-08
+
+Base is literal main `7e03902dc592e88545a182dfd37e3c5b3ef33dca`. Read the current
+[C01 Local command card](../../LOCAL_AGENT_RUNBOOK.md#c01-same-context-correction-and-retained-native-acceptance)
+and [existing asset acquisition](../../LOCAL_AGENT_RUNBOOK.md#download-datasets-and-models).
+No new model or dataset is introduced. Inputs come from the actual paired native
+producer with source-time query, its receipt-bound consumer, and the current
+ActionBench source/snapshot/semantics closure. If those real inputs are absent,
+only dependent Local acceptance remains blocked; no handmade scientific evidence.
+
+C01 now constructs `X+F_t(X)-F_a(X)` from the complete same-query/context raw
+outputs, with the recorded query cast inside F and original float32 anchor X
+preserved. All original 16 frames/faces/IDs are exported. Raw-uncorrected and
+mean-bias controls are separate from native-clipped B0, and bounds policy is
+explicit/no-clipping. The source-time/capture/replay/native-sequence evidence is
+revalidated before construction and every comparison. Every preparation failure
+remains in the five-role denominator; byte-identical physical meshes share one
+measurement. The raw score archive retains failed reports and complete source
+context as well as official exports. No coordinate-risk algebra is reported as
+a guarantee of native CD-M; no new scientific contribution is claimed.
+
+Local starts with current common CPU acceptance, then the CPU artifact builder
+`prepare_self_map_candidate.py`, then dedicated real-input acceptance
+`prepare_c01_native_acceptance.py`. This explicitly stages candidate.json and
+all linked native tensors instead of relying on a live directory. The actual
+prospective comparison freeze can be supplied to that builder's `--freeze` mode;
+engineering test B* never becomes scientific B*. Scoring uses the C01 profile of
+the existing official adapter and exactly the common harness, with the separate
+C01 single-owner authorized launcher; no duplicate executor.
+
+Shared source repair also closes the C01/C02/C14 import-before-profile problem,
+adds deterministic-kNN code staging, and removes the protocol/analysis hash
+cycle with a protocol-core backlink. Criteria and GPU authorization still bind
+the final full protocol digest. Existing historical protocols/attempts were not
+rewritten. See the shared binding section in the runbook before authoring new
+admission records. Scope includes static independent source review and authored
+Local tests only; no project imports, tests, builders, methods, model, official
+scorer or GPU workload ran on Web. A read-only installed evidence-validator call,
+AST/JSON/diff/hash checks do not change that status.
+
+Current source-chain coverage is 4/15 (C01,C02,C13,C14), within the documented
+native input scopes; Local candidate verification and native results are 0/15.
+C01 seed314/2718 repeats require a reviewed producer extension (current producer
+is seed42 only). Complete G01 still lacks actual independent-family assignments,
+prospective numeric effect/NI/precision decisions and complete-unit measurement;
+Natural Gate0/IPCG and native qualification remain open. Eleven other source
+chains retain concrete gaps in the maintained inventory. Supervisor remains
+uninstalled/unstarted and GPU remains stopped. The stage is not complete.

@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8; this continuation resumes literal main 4aaaf0b. C02, C13 and C14 have generated_unexecuted method-to-official-score source chains with candidate-specific construction/certificate checks, prospective five-role comparisons, official ActionBench collection, receipt-bound raw validation and authorization-gated common-harness plan/controller source. None has Local acceptance, an emitted scientific plan or a native result.",
+  "scope": "Maintained 15-item source/design inventory. C01,C02,C13,C14 have generated_unexecuted source chains within their current native input scopes. No Local-verified candidate or native candidate result. Complete G01, wider producer scopes and remaining eleven source chains are still pending.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -13,7 +13,8 @@
   "existing_implementation_notes": {
     "C02": "protected_geometry_candidate.py constructs the complete method from a receipt-bound predicted sequence: shared matrix-free ARAP repair d, deterministic anchor-topology patches, barycentric-area W, patch-centroid-velocity protection, equal-W-norm control and full native exports. c02_native_comparison.py plus the C02 scoring/plan/launcher profile complete the generated_unexecuted five-role official-scoring/raw-collection chain; protected_projection.py remains only a dense reference primitive.",
     "C13": "group_acceleration_candidate.py implements the distinct group-l2 candidate; c13_native_comparison.py and c13_native_scoring.py plus prepare_c13_native_scoring.py complete the five-role official-scoring/raw-collection source chain. All remain generated_unexecuted; Local verification, scientific admission and native results are pending",
-    "C14": "simple_mesh_controls.py remains the Gaussian control. corotational_residual_candidate.py implements the distinct anchored nonuniform-time group-TV method; c14_native_comparison.py, c14_native_scoring.py, prepare_c14_native_scoring.py and launch_c14_native_scoring.py complete its generated_unexecuted five-role comparison, official scoring, receipt validation and authorization-gated admitted-plan builder/controller source chain."
+    "C14": "simple_mesh_controls.py remains the Gaussian control. corotational_residual_candidate.py implements the distinct anchored nonuniform-time group-TV method; c14_native_comparison.py, c14_native_scoring.py, prepare_c14_native_scoring.py and launch_c14_native_scoring.py complete its generated_unexecuted five-role comparison, official scoring, receipt validation and authorization-gated admitted-plan builder/controller source chain.",
+    "C01": "self_map_candidate.py consumes the entire native context and reconstructs distinct raw/mean/self-map outputs; prospective comparison, official scorer/raw closure, gated plan/launcher and dedicated real-input CPU acceptance are authored. Original 314/2718 design repeats are not executable through the seed42-only producer."
   },
   "required_next_sequence": [
     "Continue independent shared interface/source work; current CPU software acceptance remains Local-only.",
@@ -89,9 +90,9 @@
       "priority": 2,
       "name": "同时间自映射偏差消除",
       "inputs": [
-        "anchor X and same query normals",
-        "F_a and F_t under identical complete native context",
-        "coordinate bounds policy without hidden clipping"
+        "completed paired-context result/manifest/archive consumed with source_time_query=true and receipt hashes",
+        "original full native sequence plus same-context raw target/source tensors/query/normals",
+        "explicit no-clipping coordinate bounds policy and CPU resource admission"
       ],
       "spec": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c01.json",
       "native_result": "not_started",
@@ -103,9 +104,9 @@
         "path": "docs/research-math-20261006/evidence/reviews/4d-math-20261006-c01-math.json",
         "sha256": "013a9c561c0e194aa2171f69f6bad95f610822a2756c30ec6ec9054ad9267ac0"
       },
-      "source_status": "shared_input_capture_source_delivered",
-      "code_entry": "actionmesh/research_math/pipeline_decoder_observer.py:replay_window",
-      "real_input_and_model_interface": "Complete direct decoder context and same anchor/query/normals; source-time diagnostic",
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "code_entry": "actionmesh/research_math/self_map_candidate.py; actionmesh/prepare_self_map_candidate.py; actionmesh/prepare_c01_native_acceptance.py; actionmesh/research_math/c01_native_comparison.py; actionmesh/research_math/c01_native_scoring.py; actionmesh/prepare_c01_native_scoring.py; actionmesh/launch_c01_native_scoring.py",
+      "real_input_and_model_interface": "Receipt-bound paired native context and source-time replay; exact original X, direct raw F_t/F_a with recorded query cast/normals, one full 16-frame window at seed42. No external correction field or GT.",
       "required_outputs": [
         "full original-identity mesh sequence at every original frame",
         "unchanged faces and retained vertex mapping",
@@ -113,21 +114,24 @@
         "solver residuals, input/source hashes and end-to-end costs"
       ],
       "controls_and_ablations": [
-        "B0",
-        "B_star",
+        "b0",
+        "b_star",
+        "raw_uncorrected",
         "mean_bias",
         "self_map_subtraction"
       ],
-      "native_scoring_entry": "actionmesh/official_actionbench_adapter.py:evaluate (shared; no candidate integration yet)",
-      "local_method_acceptance_command": null,
-      "acceptance_command_gap": "No complete candidate command exists; shared software acceptance cannot stand in for native method acceptance.",
-      "completion_evidence": [],
-      "remaining_implementation_gaps": [
-        "full-window correction/reassembly",
-        "coordinate bound policy",
-        "mean-bias control",
-        "native scoring"
+      "native_scoring_entry": "research_math.c01_native_scoring request; admitted plan via prepare_c01_native_scoring.py and launch_c01_native_scoring.py only",
+      "local_method_acceptance_command": "Use prepare_control_scoring_checks.py first; prepare_self_map_candidate.py on receipt-bound consumed context; prepare_c01_native_acceptance.py --artifact-candidate <retained candidate.json> [--freeze <prospective freeze>] through the installed CPU harness; future scientific scoring only after the full C01 admission/explicit GPU resume. Exact flags in LOCAL_AGENT_RUNBOOK.md.",
+      "acceptance_command_gap": "Commands/source authored, never executed here. Current native producer covers seed42 only; original proposed repeats314/2718 and complete G01 need separate producer/design qualification.",
+      "completion_evidence": [
+        "distinct full native correction/raw/mean-control exporter and certificate reconstruction",
+        "receipt-bound capture/replay/consumption closure and actual staging test source",
+        "prospective five-role comparison, failure retention and array-content deduplication",
+        "official scorer/raw collector with full context and failed-report archive closure",
+        "authorization-gated plan/stable launcher source",
+        "dedicated real-artifact CPU acceptance builder"
       ],
+      "remaining_implementation_gaps": [],
       "scientific_prerequisites": [
         "same-context self-query qualification and latent availability",
         "natural reference/downstream shared-error evidence",
@@ -138,8 +142,9 @@
         "strongest executable baseline and fair information/cost",
         "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
       ],
-      "full_method_source_complete": false,
-      "local_method_verified": false
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "completion_scope": "Source chain for existing frozen seed42/16-frame producer only; does not certify wider G01 coverage, new scientific contribution, Local acceptance or native efficacy."
     },
     {
       "id": "4d-math-20261006-c10",
@@ -1022,11 +1027,11 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
-  "maintained_base_commit": "4aaaf0bcb65f45be03d17e509d8c2d5003e2e387",
-  "independent_source_review": "Separate read-only C02 math/interface, core, scoring and documentation reviewers inspected the selected specification, real native sequence interface, ARAP/projection construction, freeze identity, failed-role denominator, scorer profile/source closure and Local handoff; no execution. Important findings were repaired: actual float32 protected-arm diagnostics and tolerance are recomputed, all scored arms are byte-compared to method reconstruction, B0/B* implementation identities are bound, failed preparations remain in the five-role denominator, shared-measurement readout is accurate and C02/C14 plan dependencies are pinned. Static final review is complete; Local execution remains required.",
+  "maintained_base_commit": "7e03902dc592e88545a182dfd37e3c5b3ef33dca",
+  "independent_source_review": "Independent read-only C01 math/context and scoring/plan reviews; no execution. Core and source closure reviewed, exact query cast retained, unclipped control separated, full context/failure raw archive bound. Fixed shared profile import closure, deterministic-kNN staging and protocol/analysis hash cycle; authored real staging/native acceptance and acyclic binding tests. Final source review does not establish Local test pass.",
   "stage_goal": {
     "selected_methods": 15,
-    "full_method_source_complete": 3,
+    "full_method_source_complete": 4,
     "local_method_verified": 0,
     "native_results": 0,
     "completion_condition": "All 15 complete implementations and G01 design, baseline interfaces, supervisor recovery and Local handoff source-reviewed and delivered; Local execution may remain pending.",

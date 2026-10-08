@@ -4,6 +4,160 @@
 
 ### Current source delivery — paired replay and supervisor
 
+### C01 same-context correction and retained-native acceptance
+
+The C01 source chain uses the frozen native 16-frame, seed-42 context. It is
+**generated_unexecuted**. It adds no GPU authorization, learned weights or data
+source. Obtain its inputs through the existing pinned ActionMesh/ActionBench
+[asset acquisition](#download-datasets-and-models), paired context producer with
+source-time query enabled, and receipt-bound bundle consumer. Keep GPU STOP:
+if that real producer bundle does not yet exist, this input-dependent acceptance
+waits; source/software work for independent candidates continues.
+
+The original native float32 anchor is X. The recorded query may cast X to the
+model dtype; define F_t(X) as that exact composite native query. C01 outputs
+X+F_t(X)-F_a(X), keeping frame zero exactly X and all original faces, vertex IDs
+and frame IDs. The mean control subtracts mean_v(F_a-X) from target coordinates.
+A raw-uncorrected arm is necessary because original B0 clamps coordinates but
+neither the correction nor its controls silently clip. The frozen five roles are
+`b0,b_star,raw_uncorrected,mean_bias,self_map_subtraction`. B* is selected without
+C01 outcomes; aliases may only reference simple arms. CD-M is the official
+first-frame-correspondence coordinate metric, not a velocity loss. Constant
+per-vertex bias subtraction preserves target-target vertex differences; it does
+not mathematically guarantee any Chamfer improvement or establish novelty.
+
+First run the common current-source CPU software acceptance. Its engineering
+capture fixture exercises the actual observer/replay/transport and installed
+cross-root staging boundary, deletes live input files and checks that correction
+uses only staged bytes. This is software evidence, not a native experiment.
+The optional retained-native test is skipped by the common suite until its
+explicit real input is supplied; a skip never counts as native acceptance.
+
+After a completed producer receipt and successful CPU consumption exist, retain
+the whole `context-consumed` directory returned by that attempt under the project
+root. Set `c01_context_root` to its actual copied location; bind the recorded
+result/manifest/archive hashes to the producer receipt using the existing bundle
+consumption procedure. Use the original frozen bounds `-1 1` and prospectively
+choose `preserve_and_report` or `reject`; neither clips. Set CPU time/RAM from the
+remaining authorized budget and actual host, not from a guessed GPU profile.
+Emit the one-attempt, zero-retry CPU artifact plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_self_map_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --context-root "$c01_context_root" \
+  --plan-dir "$project_dir/plans/c01-artifacts-001" --run-id c01-artifacts-001 \
+  --coordinate-bounds -1 1 --bounds-policy "$c01_frozen_bounds_policy" \
+  --wall-seconds "$c01_cpu_seconds" --ram-mib "$c01_cpu_ram_mib"
+```
+
+Inspect its printed digest and run only through the installed `run_harness.py`.
+Each raw file is its own declared, rewritten input argument. Return the complete
+`actionmesh/c01-self-map-output` from the actual attempt: candidate/manifest,
+certificate, retained context, and every role's report/sequence. Rejected roles
+retain an error report and no scoreable sequence; the failed attempt remains
+failed, with no fallback or automatic retry. Copy its actual files back before
+using them for comparison; never fabricate a successful receipt for a partial
+attempt. Set `c01_candidate_json` to the returned `candidate.json` under the
+project root. Run the dedicated real-input CPU acceptance plan:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c01_native_acceptance.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --artifact-candidate "$c01_candidate_json" \
+  --plan-dir "$project_dir/plans/c01-native-acceptance-001" \
+  --run-id c01-native-acceptance-001 \
+  --wall-seconds "$c01_acceptance_seconds" --ram-mib "$c01_cpu_ram_mib"
+```
+
+Dispatch only its printed CPU harness digest. This plan stages the retained real
+artifact/context bytes and explicitly selects the real-input test; it must not
+skip. It verifies correction/certificate reconstruction and full comparison
+reassembly across a different root using the installed staging implementation.
+Its engineering B* choice is only a test fixture; it cannot supply a scientific
+B* decision. Preserve the exact tested commit, plan, attempt and stdout/stderr.
+
+For the actual prospective comparison create the five-role
+`c01-native-comparison-freeze` described by `c01_native_comparison.py`. All three
+operation arms share one certificate. B0 uses the context's exact
+`raw/observed/sequence.npz`, report and adjacent generation identity; its source
+implementation ref is `native_context_runner.py`. A failure has a null sequence
+ref plus its actual bounded error report. Then assemble the official request:
+
+```bash
+cd "$project_dir/actionmesh"
+"$python_bin" -m research_math.c01_native_comparison request \
+  --root "$project_dir" --freeze "$project_dir/inputs/c01/comparison-freeze.json" \
+  --output "$project_dir/inputs/c01/comparison-request.json"
+"$python_bin" -m research_math.c01_native_scoring request \
+  --root "$project_dir" --comparison "$project_dir/inputs/c01/comparison-request.json" \
+  --ground-truth "$dataset_root/data/$c01_uid/surfaces.npy" \
+  --population "$project_dir/actionmesh/research_overnight/assets/actionbench_population.json" \
+  --dataset-admission "$project_dir/inputs/actionbench-full128-snapshots/admission.json" \
+  --dataset-semantics "$project_dir/inputs/actionbench-full128-snapshots/dataset-semantics.json" \
+  --repo-root "$actionmesh_source" --timeout-seconds "$frozen_per_case_timeout" \
+  --output "$project_dir/inputs/c01/scoring-request.json"
+```
+
+The comparison assembler recomputes the method from real retained tensors. To
+run the actual prospective freeze through the harness, repeat the dedicated
+acceptance builder with a fresh stable run ID and `--freeze
+"$project_dir/inputs/c01/comparison-freeze.json"`. It pins that freeze, decision
+and every referenced input, runs the real-input acceptance, and then writes
+`actionmesh/c01-comparison-request.json` as a declared output. Copy the exact
+receipt-bound request into `inputs/c01/comparison-request.json` before assembling
+the scorer request. The comparison CLI above is the inner operation, not a
+request for Local to design a new job or run a method outside the harness.
+Official scoring and its plan/launcher are **blocked by GPU STOP**. Future
+admission requires current design verification, Natural Gate 0/IPCG, independent
+source-derived families, prospective B*, exact protocol-bound numeric cd_motion
+minimum effect and cd_3d/cd_4d NI margins, strict environment closure, and an
+expiring `single_c01_scoring_attempt` authorization for the exact GPU/run/request.
+Only after those exist, use `prepare_c01_native_scoring.py` with the same
+`--root --request --protocol --method-batch --environment --admission --skill-dir
+--plan-dir --run-id --group --gpu-uuid --wall-seconds --ram-mib --cpu-cores` flags as
+the C02 command below, then `launch_c01_native_scoring.py --root ... --consumption
+... --skill-dir ... --approved-plan-digest ...`. Never call `score` directly or
+bypass the controller via the generic harness entry.
+
+The receipt-bound scoring outputs are `result.json`, `raw-manifest.json` and
+`raw-evidence.tar`. The C01 archive includes every frozen context input and failed
+role report under `frozen-inputs/` in addition to the complete official exports.
+Validate them with `python -m research_math.c01_native_scoring validate-delivery`
+using the exact `--root --request --gpu-uuid --result --manifest --archive
+--expected-request-digest --expected-result-sha256 --expected-manifest-sha256
+--expected-archive-sha256` arguments documented for C02 below. No individual-unit
+readout is a confidence interval or scientific verdict.
+
+The current conditional G01 draft is in the C01 specification's
+`g01_authoring_draft`. Family memberships, numeric task effects/NI, measured
+complete-unit cost and scientific gates remain unresolved. The original wider
+seed policy `[42,314,2718]` remains a design obligation: this frozen producer only
+implements seed 42, so 314/2718 require a separately reviewed producer extension,
+not a silent seed substitution. One 16-frame window is the exact native scope;
+changed/multiple windows are rejected rather than incorrectly stitched.
+
+Debug from `candidate.json`, all role reports and the retained context. Hash or
+replay mismatches require restoring the exact producer bytes, never relaxing the
+tolerance. Bound rejection is a recorded preparation failure, not a reason to
+clip. Wrong frame/window/query mapping requires repairing the producer adapter
+and requalifying changed source. Keep old failed attempts and any live roots.
+
+### Shared C01/C02/C14 protocol-analysis binding
+
+New source uses an acyclic sequence: first author the protocol core, compute
+`analysis_protocol_core_digest(protocol)` from the shared plan module, and put
+that value in analysis.`protocol_core_digest`. It excludes only
+`analysis_plan_ref`, `protocol_digest` and `frozen_at`. Then hash the final analysis
+file into protocol.`analysis_plan_ref` and freeze the full protocol with the
+installed canonical `protocol_hash`. Outcome criteria and GPU authorization
+continue to bind that **final** protocol digest. Never insert the final protocol
+digest into the analysis it hashes; that creates a cycle. Every scientific
+criterion/split/identity remains checked. No already-run protocol was changed.
+Shared profile loading now avoids importing another candidate before applying
+its own profile, and the deterministic kNN implementation is explicitly staged.
+All these repairs require new Local acceptance; historical passes do not cover them.
+
 ### C02 complete protected-geometry source chain
 
 C02 now has a distinct end-to-end source path rather than only the dense
@@ -682,8 +836,8 @@ historical-r7 reference closure and a stale GPU environment identity; do not
 launch GPU work while resolving it.
 
 There are 20 mathematical constructions and 15 conditionally selected candidates.
-C02, C13 and C14 now have **source-complete, generated_unexecuted** method-to-
-official-score chains, so source completion is **3/15**; **0/15 are Local-verified
+C01, C02, C13 and C14 now have **source-complete, generated_unexecuted** method-to-
+official-score chains, so source completion is **4/15**; **0/15 are Local-verified
 and 0/15 have native results**. C02's new complete chain remains unadmitted and
 unexecuted; the earlier dense operator alone is still only a reference primitive.
 
@@ -1503,4 +1657,4 @@ Push the source-safe review packet and receipts to `main` with expected-head pro
 
 ## Candidate ledger (outside this round)
 
-Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C02, C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.
+Conditional selection order is `c02, c01, c10, c13, c14, c04, c03, c20, c11, c12, c15, c05, c08, c06, c07`. C01, C02, C13 and C14 have source-complete but generated-unexecuted candidate/comparison/scoring chains; none has Local acceptance, scientific admission or a native result. Every candidate still requires its applicable implementation/design evidence, simple baseline, ablation, frozen native protocol, full-unit timing, reproducible result, and evidence-based conclusion after the baseline gate closes.

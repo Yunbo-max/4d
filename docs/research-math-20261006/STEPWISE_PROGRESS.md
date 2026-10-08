@@ -1495,3 +1495,50 @@ records, numeric G01 criteria, strict live runtime admission and exact-attempt G
 resume authorization. Source-complete candidates are 3/15 (C02, C13, C14);
 Local-verified and native results remain 0/15. GPU STOP remains effective and no
 supervisor process was installed or started.
+
+## Continuation: C01 same-context source chain — 2026-10-08
+
+Resumed literal main `7e03902dc592e88545a182dfd37e3c5b3ef33dca` in an isolated
+source worktree. The installed read-only method evidence validator reported the
+unchanged 20-card pool/15 selected and the C01 code-generation boundary ready;
+it granted no scientific authorization. Re-read the actual ActionMesh direct
+clamp/query semantics, native capture/replay, official motion-Chamfer source,
+ActionMesh Section 3.3 and the retained SFG collision notes. Original C01 math
+and ranking were preserved. C01 remains a diagnostic/baseline construction,
+with no novelty or native performance claim.
+
+Added the receipt-bound complete native-context consumer/corrector, raw and
+mean-bias controls, exact source anchor and 16-frame export, explicit no-clipping
+bounds policy, certificate reconstruction and CPU artifact plan. Native query
+casting is part of the implemented decoder definition and is retained explicitly.
+The fifth raw-uncorrected role isolates the native clamp from bias subtraction;
+this extends the four-role draft without removing a comparison. Added prospective
+freeze assembly, official scoring/raw collection, full archived native context
+and failed reports, authorization-gated plan/launcher and a dedicated retained-
+native CPU acceptance builder. Every actual input file is explicitly staged.
+
+Independent static review identified and repaired inherited shared C01/C02/C14
+profile-import omissions, missing deterministic-kNN staging, and a circular
+protocol/analysis hash binding. The analysis now binds a protocol-core digest;
+the final protocol pins the analysis and downstream criteria/authorization pin
+the full protocol. No existing run or frozen protocol was rewritten. Added
+isolated import and real admission-record construction test source, plus actual
+capture/replay/consume/_stage/candidate software integration and retained-native
+comparison acceptance source. These tests were authored, not run.
+
+Historical R3's 311/311 receipt and R9's nine completed baseline units were
+restored as historical scoped evidence. They do not cover this source. The
+historical pricing path fix is already present; indices10–15 remain a separate
+no-omission obligation and UID008 still lacks its returned raw package/trusted
+replay. No experiment was repeated or launched.
+
+Current source-chain count is 4/15 (C01,C02,C13,C14), Local-verified candidates
+0/15 and native candidate results 0/15. C01's current producer scope is seed42,
+one complete 16-frame context; original proposed seeds314/2718 and complete G01
+remain additional source/design qualification obligations. Eleven candidate
+source chains and stage-wide G01/supervisor acceptance obligations remain.
+GPU STOP is unchanged; no supervisor installed/started. Existing host is hourly
+automation `6ac527ad50cc8191a4964d35ae0b826e`, not a verified continuously running
+process. Continue the retained selection at C10's legal differential target/common
+lift/pinned solver or another independently ready missing component; do not
+restart ranking or count Local-unexecuted source as method verification.

@@ -74,6 +74,22 @@ delegates to the existing harness. Never execute the C14 plan through the generi
 harness CLI or call the scorer directly.
 C14 is source-chain complete but remains Local-unverified, scientifically
 unadmitted and unscored; GPU STOP remains in force.
+C01's actual direct decoder correction now has a source chain at
+`prepare_self_map_candidate.py`, `prepare_c01_native_acceptance.py`,
+`research_math.c01_native_comparison`, `research_math.c01_native_scoring`,
+`prepare_c01_native_scoring.py` and `launch_c01_native_scoring.py`. Read the C01
+runbook section. Preserve the five roles including raw_uncorrected so clamp
+removal is not mistaken for bias repair; original float32 anchor and all 16 frames
+remain fixed. The input is the real receipt-bound consumed context with a matched
+source-time query. The current producer only supports seed42/one native window;
+do not claim broader repeated-seed coverage. All source is generated_unexecuted.
+Use the dedicated CPU harness acceptance builder for retained real artifacts;
+its optional prospective freeze must be explicit and staged. Failed roles remain
+in the denominator and in the raw bundle. C01 scientific scoring needs its own
+full admission and exact-attempt resume; GPU STOP remains active.
+For new C01/C02/C14 admission records, use analysis.protocol_core_digest before
+pinning analysis_plan_ref into the final protocol; criteria and authorization
+still bind the final protocol digest. Do not construct a circular hash record.
 The C02 candidate is no longer the dense external-input projection primitive.
 Its CPU artifact entry is `actionmesh/prepare_protected_geometry_candidate.py`:
 from one completed native predicted sequence it computes a shared matrix-free
