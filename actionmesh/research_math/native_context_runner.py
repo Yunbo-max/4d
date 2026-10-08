@@ -203,6 +203,13 @@ def aggregate_comparisons(pair, replays):
             "candidate_methods_tested": False, "dispatch_ready": False}
 
 
+def stage_completion_status(stage, report):
+    """Retain replay mismatch at the stage boundary; never overstate completion."""
+    if stage == 'replay' and report.get('all_comparisons_match') is not True:
+        return 'comparison_mismatch'
+    return 'completed_unqualified'
+
+
 def _source_modules(source_root, expected):
     """Import inspected official files from the verified source checkout only."""
     source_root = Path(source_root).resolve()
@@ -307,7 +314,7 @@ def _stage(request_path, expected_hash):
             report.update(aggregate_comparisons(pair, reports))
         else:
             raise ValueError("Unknown instrument stage")
-        report["status"] = "completed_unqualified"
+        report["status"] = stage_completion_status(request["stage"], report)
         report["torch_peak_allocated_bytes"] = torch.cuda.max_memory_allocated()
         report["torch_peak_reserved_bytes"] = torch.cuda.max_memory_reserved()
     except BaseException as error:

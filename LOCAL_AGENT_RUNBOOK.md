@@ -4,6 +4,56 @@
 
 ### Current source delivery — paired replay and supervisor
 
+### Paired-context bundle consumption
+
+The returned paired-context archive now has a fail-closed CPU consumer. Use it
+only after the producing harness attempt is terminal and the three receipt output
+hashes have been copied from that attempt. The builder itself revalidates the
+complete tar/member inventory before it emits a plan; the inner task repeats the
+same validation and writes a new single-use extraction. It never loads a model,
+scores a mesh or changes qualification state.
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_native_context_consumption.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --bundle-root "$project_dir/inputs/native-context-bundle" \
+  --run-id native-context-consume-001 \
+  --plan-dir "$project_dir/plans/native-context-consume-001" \
+  --expected-result-sha256 "$result_sha256" \
+  --expected-manifest-sha256 "$manifest_sha256" \
+  --expected-archive-sha256 "$archive_sha256" \
+  --expected-uid "$producer_uid" \
+  --expected-gpu-uuid "$producer_gpu_uuid" \
+  --expected-generation-identity-sha256 "$generation_identity_sha256" \
+  --expected-source-time-query true \
+  --max-files "$frozen_max_files" \
+  --max-unpacked-bytes "$frozen_max_unpacked_bytes" \
+  --max-member-bytes "$frozen_max_member_bytes" \
+  --max-archive-bytes "$frozen_max_archive_bytes" \
+  --max-metadata-bytes "$frozen_max_metadata_bytes" \
+  --wall-seconds 900
+```
+
+Take `producer_uid`, GPU UUID and the generation-identity hash from the retained
+producer receipt/raw manifest review, not from a new run. Set source-time to the
+exact producer setting. Freeze the five positive archive/metadata/expansion ceilings above the
+observed signed inventory (without reducing or regenerating it), and record the
+values in the Local receipt. The archive ceiling is checked before its private
+snapshot is copied, and free space is preflighted for the bounded copy plus
+extraction. The emitted command passes the three files
+separately so the native staging layer rewrites every one to its immutable
+attempt copy; a parent-directory argument is intentionally forbidden.
+
+Inspect the emitted input/code refs, zero-GPU resources, one attempt, zero retry
+and every declared `actionmesh/context-consumed/raw/...` output. Execute only the
+printed digest through the installed `run_harness.py`. Promote the completed
+attempt's `actionmesh/context-consumed/` directory by controller file transfer,
+rehash it and record its receipt. `bundle-consumption.json` must retain
+`native_context_qualified=false`, `scientific_effect_qualification=false`,
+`replay_qualified=false`, `candidate_methods_tested=false` and
+`dispatch_ready=false`. Any mismatch blocks this consumer only; keep
+the original producer attempt immutable and do not regenerate it.
+
 ### Latest method-adjacent source — C13 quadratic strong control
 
 The C13 specification's required quadratic-acceleration comparator now has an

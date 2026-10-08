@@ -12,6 +12,8 @@ C13 规格要求的强简单对照现已有独立源码入口：`actionmesh/prep
 
 最新交付继续补齐独立成对生成验证、完整上下文回放、源时间查询和有限批次 supervisor。源码与验收测试已编写，仍须 Local 验收；supervisor 尚未安装或启动。共享接口不等于 15 个候选方法实现完成。环境与资产沿用[运行手册的固定数据/模型来源](LOCAL_AGENT_RUNBOOK.md#download-datasets-and-models)，优先复用仍匹配的已有资产。
 
+成对原生上下文现在另有 `actionmesh/prepare_native_context_consumption.py`：它把成功回传的 `result.json`、`raw-manifest.json`、`raw-evidence.tar` 作为三个独立固定输入，由 harness 分别暂存；消费器再绑定生产 UID、GPU、generation identity、source-time 模式与冻结的 archive/metadata/解包上限，在复制前预检空间，并从私有快照逐成员重哈希、安全提取到新的单次 CPU harness 工作区。该消费层解决后续方法只能读取前一任务 live workspace 的问题；它仍是 **generated_unexecuted** 的传输/接口代码，不构成 native qualification、候选执行或 GPU 授权。
+
 ## 当前：方法必要性与可识别性审查
 
 逐项交付状态见[15 项实现清单](docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json)：包含数学依据、实际入口、输入接口、对照/消融、官方评分接入与缺口。当前没有完整方法被标记完成。成对原生上下文现在有独立的 `prepare_native_context.py` 计划入口和完整原始文件回传代码；仍待 Local 验收，GPU 保持停止。

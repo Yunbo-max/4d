@@ -1251,3 +1251,31 @@ stopped. C13 still lacks its group-l2 solver, primal/dual certificate,
 multi-arm native collection and natural event-preservation evidence. The replay
 XYZ change is an API-shape normalization only: direct mode ignores the vertex
 argument, so its numerical equivalence remains a Local replay obligation.
+
+## Continuation: paired-context consumer — 2026-10-08
+
+Resumed exact remote main `b4923b4d3a1efd3936982ded85f8be2a1bfa05af`.
+Natural Gate 0/IPCG remain open for all selected candidates, so no candidate was
+promoted or implemented out of order. Continued the independent P0 interface
+work needed by C01 and later methods: downstream tasks can now consume a terminal
+paired-context bundle without access to the producer's live workspace.
+
+The new consumer pins and rehashes `result.json`, `raw-manifest.json` and
+`raw-evidence.tar` as three explicit harness-staged paths, snapshots those staged
+bytes, and binds the expected producer UID/GPU/generation identity/source-time
+mode. It verifies the exact unqualified result/replay schemas and matching
+comparisons, checks every required regular tar member and its size/hash, applies
+frozen archive/metadata/file/per-member/total expansion ceilings plus pre-copy free-space
+preflight, rejects path escape/link/sparse/special/duplicate/order drift, and extracts with controlled exclusive writes
+into a new root. A CPU-only one-attempt/zero-retry harness plan declares all
+inputs and extracted outputs. Replay stage status now preserves a comparison
+mismatch instead of unconditionally reporting completed.
+
+Two independent static reviews caught and drove closure of the initial live
+parent-directory staging bug, scope overclaim, reopen race and missing archive/
+expansion limits. The resulting tests exercise actual installed staging and controller-copy
+mutation but remain authored/unexecuted. Web performed only static source,
+AST/JSON/hash/diff review; no plan builder, project test, archive consumption,
+model, scorer or GPU was run. Local next runs common CPU acceptance, then the
+new consumption plan against an actual receipt-bound three-file bundle. This
+does not change 0/15 candidate source completion or 0/15 native results.

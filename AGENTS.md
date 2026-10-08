@@ -21,6 +21,13 @@ The C13-required quadratic strong control has a separate CPU-only plan entry at
 group-trend method and must not be reported as candidate admission or a native
 result. Its current source and tests are `generated_unexecuted`; use the common
 software-acceptance plan before its single-use real-sequence harness plan.
+Completed paired-context evidence is consumed only through the CPU-only
+`actionmesh/prepare_native_context_consumption.py` plan. It must pin and rehash
+the result, manifest and tar as three explicit staged paths, bind the expected
+producer UID/GPU/generation identity/source-time mode, enforce frozen archive, metadata and expansion
+ceilings, validate every regular archive member, and extract from an immutable
+private snapshot into a new single-use workspace. A consumed bundle remains unqualified transport
+evidence and must not bypass Gate 0, candidate admission or GPU STOP.
 
 Before setup, acceptance, execution, repair, collection, or delivery, read at the exact delivered commit:
 

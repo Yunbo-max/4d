@@ -1,6 +1,6 @@
 {
   "kind": "candidate-input-dependency-audit",
-  "scope": "Maintained 15-item source/design delivery inventory. Read-only source audit at ece1ce8; shared plan/collection additions do not complete a candidate.",
+  "scope": "Maintained 15-item source/design delivery inventory. Initial read-only candidate audit at ece1ce8, maintained through b4923b4; shared plan/collection/consumer additions do not complete a candidate.",
   "official_cli_outputs": "GLB/deformation only; no complete latent context, source-time query normals or attention modes",
   "common_required_interfaces": [
     "NativeContext",
@@ -924,6 +924,7 @@
     }
   ],
   "source_audit_base_commit": "ece1ce883ea106e7d2d30ef23a3712a81cba9e49",
+  "maintained_base_commit": "b4923b4d3a1efd3936982ded85f8be2a1bfa05af",
   "independent_source_review": "Separate read-only delivery_inventory, candidate-gap and runtime-integration reviewers inspected selected specifications, actual entries and the C13 control diff; no execution. Final review found no remaining P0/P1 after C13 attribution, float32/unit/provenance wording and isolated-acceptance source-closure repairs.",
   "stage_goal": {
     "selected_methods": 15,
@@ -943,6 +944,10 @@
     "builder": "actionmesh/prepare_native_context.py",
     "runner": "actionmesh/research_math/native_context_runner.py",
     "raw_collection": "actionmesh/research_math/native_context_delivery.py",
+    "consumer_builder": "actionmesh/prepare_native_context_consumption.py",
+    "consumer_entry": "actionmesh/research_math/native_context_delivery.py:consume_bundle",
+    "consumer_status": "generated_unexecuted",
+    "consumer_scope": "Consumes three separately staged files from an immutable private snapshot; binds producer UID/GPU/generation identity/source-time mode, enforces archive, metadata and expansion ceilings with disk preflight, and safely extracts the transport bundle without qualifying context or completing a candidate.",
     "status": "generated_unexecuted",
     "dispatch_ready": false
   }

@@ -69,6 +69,7 @@ class ControlPlanTest(unittest.TestCase):
         self.assertIn('actionmesh/research_math/quadratic_acceleration_control.py', paths)
         self.assertIn(
             'docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json', paths)
+        self.assertIn('actionmesh/prepare_native_context_consumption.py', paths)
 
     def test_delivery_inventory_attaches_quadratic_control_only_to_c13(self):
         project_root = Path(__file__).resolve().parents[3]

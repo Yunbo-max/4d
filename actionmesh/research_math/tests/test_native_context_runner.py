@@ -170,6 +170,14 @@ class NativeContextRunnerTests(unittest.TestCase):
         self.assertIs(result["native_context_qualified"], False)
         self.assertIs(result["replay_qualified"], False)
 
+    def test_replay_stage_status_retains_comparison_mismatch(self):
+        from research_math.native_context_runner import stage_completion_status
+        self.assertEqual(stage_completion_status('replay', {
+            'all_comparisons_match': False}), 'comparison_mismatch')
+        self.assertEqual(stage_completion_status('replay', {
+            'all_comparisons_match': True}), 'completed_unqualified')
+        self.assertEqual(stage_completion_status('observed', {}), 'completed_unqualified')
+
     def test_source_identity_failure_retains_stage_report_before_model_loading(self):
         from research_math.native_context_runner import _stage
         with tempfile.TemporaryDirectory() as directory:

@@ -252,3 +252,41 @@ staged sequence/report pair; it does not replace that upstream receipt check.
 Its plan is one CPU attempt, zero retries and no GPU. Official scoring remains
 separately gated and stopped. Candidate source
 complete remains 0/15; candidate native results remain 0/15.
+
+## Fail-closed bundle consumer continuation
+
+The producer previously created a verified raw tar/manifest but no downstream
+unit could validate and consume it without reading the producer's live attempt
+workspace. Added a separate CPU-only consumption plan and a fail-closed consumer
+in `native_context_delivery.py`. It requires explicit SHA-256 pins for the final
+result, manifest and archive plus the expected producer UID, GPU UUID,
+generation-identity hash and source-time mode. The harness command names all
+three files separately so actual staging rewrites each path; the consumer then
+copies them into a private snapshot before validation/extraction. It requires
+the exact producer/result/replay unqualified schema and matching comparisons;
+checks the manifest/result/identity/replay cross-bindings; enforces explicit
+archive, metadata, file, per-member and total-unpacked ceilings with pre-copy disk
+preflight; rejects unsafe paths, links, sparse or
+special members, duplicates, missing required files, size/hash drift and archive
+order drift; and manually writes each member into a new single-use root. It does
+not use `tar.extract`.
+
+The harness plan declares all three inputs, every extracted raw member and three
+consumption metadata outputs, with one CPU attempt, zero retry and zero GPU. A
+consumer failure does not authorize replaying the original native generation.
+The replay child stage also now retains `comparison_mismatch` instead of marking
+itself completed when raw/mesh comparison fails. The outer instrument's existing
+scientific status is unchanged.
+
+Two independent static reviews found that the first draft passed only a parent
+directory (which the native stager would not rewrite), allowed overly broad
+producer status fields, reopened live files, and lacked expansion ceilings.
+The explicit-file staging, private snapshot, exact false qualification checks,
+producer binding, exact false-scope enforcement and preflight ceilings close those findings. Tests include the
+actual installed `_stage` boundary and mutate the controller copies after
+staging; they remain authored but unexecuted. Web did not execute them or the
+builder. Source is `generated_unexecuted`; Local first runs
+the current common CPU software acceptance, then uses the exact command in
+`LOCAL_AGENT_RUNBOOK.md` after a real three-file producer receipt exists. This
+closes a shared artifact-consumption interface only. Candidate source complete
+and native results remain 0/15; GPU STOP remains effective.

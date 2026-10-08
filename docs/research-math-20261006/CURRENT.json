@@ -1,7 +1,7 @@
 {
   "kind": "current-research-revision",
   "revision_id": "mechanism-boundaries-r2",
-  "recorded_at": "2026-10-08T01:24:00Z",
+  "recorded_at": "2026-10-08T02:10:10Z",
   "batch_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/batch.json",
     "sha256": "74e69aa328e276d8c9061fce905dd6bf64dcafa5a28c568a8e35dbdd741be84b"
@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C13's required quadratic-acceleration strong control now has a separate full-sequence CPU implementation and single-use harness plan; native replay's vertex argument now slices XYZ correctly. Both remain generated_unexecuted. This comparator is not the C13 group-trend candidate and does not close Natural Gate 0. Paired native-context/supervisor source remains uninstalled and unexecuted. GPU execution remains stopped. The maintained inventory still reports zero source-complete candidate methods and 0/15 native results; indices 10–15 and scientific prerequisites remain open.",
+  "status": "The paired native-context result/manifest/archive now have a separate CPU-only downstream consumer that uses three explicit harness-staged inputs, producer identity/config binding, an immutable private snapshot, exact unqualified schema checks and frozen expansion ceilings. Replay mismatch propagation is repaired. This shared transport interface and the earlier C13 quadratic control remain generated_unexecuted; neither is a candidate method or scientific admission. Paired native-context/supervisor source remains uninstalled and unexecuted. GPU execution remains stopped. The maintained inventory still reports zero source-complete candidate methods and 0/15 native results; indices 10–15 and scientific prerequisites remain open.",
   "baseline_qualification_handoff": {
     "status": "generated_unexecuted",
     "recorded_at": "2026-10-06T19:15:24Z",
@@ -1089,5 +1089,63 @@
     "candidate_methods_completed": 0,
     "candidate_native_results": 0,
     "next_step": "Local current-source CPU acceptance, then independently verify the upstream receipt/protocol using the runbook, freeze an explicit positive quadratic weight, and execute the new CPU-only plan. The builder pins the staged sequence/report pair only. Do not score or use GPU while STOP remains effective."
+  },
+  "paired_context_consumer_handoff": {
+    "status": "generated_unexecuted",
+    "recorded_at": "2026-10-08T02:10:10Z",
+    "base_commit": "b4923b4d3a1efd3936982ded85f8be2a1bfa05af",
+    "scope": "CPU-only validation and extraction of one terminal paired-context transport bundle; no model, candidate, scorer, qualification or retry",
+    "source_refs": [
+      {
+        "path": "actionmesh/research_math/native_context_delivery.py",
+        "sha256": "9f474e3b8c70b4466cb828d66d3e119e0b6eaab571b9ce06de6c2092a720482c"
+      },
+      {
+        "path": "actionmesh/prepare_native_context_consumption.py",
+        "sha256": "94f6d92811a0054eeca28fbd2f87e8f0032624fdc566b38f2c43f605c0692e3b"
+      },
+      {
+        "path": "actionmesh/research_math/native_context_runner.py",
+        "sha256": "e16a7dbc07fd66c1a437a27eb98cbed1b3a4f023612b5226652c5f1b3f156c71"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_native_context_delivery.py",
+        "sha256": "de3ba402f19052b9188a075555f8f501ac8fe0b6a283e1a0a13e45fbfe7923ca"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_native_context_consumption_plan.py",
+        "sha256": "166ab5215fbc4177ba0dac08736d5723b35ba14854cfff82d0f4dff6bc319e81"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_native_context_runner.py",
+        "sha256": "b924c656e373876388acc4d6859c6d5d1321c70d65aa286c4d55dcc7fdcc22af"
+      }
+    ],
+    "delivery_inventory_ref": {
+      "path": "docs/research-math-20261006/longgoal-20261007/CANDIDATE_INPUT_AUDIT.json",
+      "sha256": "4252378c2cddcbf3f858ff06ff2855e8cf706a40ab7f6799ffc068182894df91"
+    },
+    "source_review": {
+      "mode": "two independent read-only agents; no execution",
+      "findings_closed": [
+        "parent directory was live because native staging rewrites exact input file paths only",
+        "producer identity/configuration and exact false qualification fields were not bound",
+        "validation and extraction reopened mutable inputs",
+        "archive expansion had no explicit preflight ceilings",
+        "archive bytes could be duplicated before any byte ceiling or free-space preflight",
+        "missing or added positive scope flags were not rejected for every copied producer record",
+        "result and manifest metadata lacked per-file ceilings and were undercounted in disk preflight"
+      ],
+      "final_state": "explicit file staging, size-bounded private snapshot, exact false-scope checks, producer/result/replay semantic cross-links, real free-space preflight and archive/metadata/file/per-member/total expansion ceilings authored; Local acceptance pending"
+    },
+    "plan_builder_executed": false,
+    "project_tests_executed_by_web": false,
+    "consumer_executed": false,
+    "gpu_execution": "stopped_by_user",
+    "local_software_acceptance_complete": false,
+    "candidate_method": false,
+    "candidate_methods_completed": 0,
+    "candidate_native_results": 0,
+    "next_step": "Local current-source CPU acceptance, then use the runbook command only after a real terminal producer receipt exists; freeze exact producer identity/configuration and expansion limits."
   }
 }

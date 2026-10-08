@@ -27,6 +27,7 @@ ROOT_SOURCES = (
     'deterministic_actionbench_entry.py',
     'observe_actionmesh_generation.py',
     'prepare_native_context.py',
+    'prepare_native_context_consumption.py',
 )
 
 
