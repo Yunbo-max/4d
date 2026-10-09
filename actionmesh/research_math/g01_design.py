@@ -61,7 +61,7 @@ EXPECTED_SCORER_REFS = {
     "actionmesh/repo/actionbench/sample_point_cloud.py":
         "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
 }
-EXPECTED_DESIGN_DIGEST = "7700296b7f92cc76a32341bf0df539a4afb4e7eab0701c573f46519a049a39b6"
+EXPECTED_DESIGN_DIGEST = "23aea722552feede9a456d23fc82b389d8fe2907df3b273499a0da0c65213043"
 EXPECTED_REVIEW_CHECKS = {
     "source_identity", "mapping_reproduction", "split_independence",
     "exposure_containment",

@@ -91,6 +91,7 @@ ROOT_SOURCES = (
 )
 
 G01_SOURCES = (
+    'docs/research-math-20261006/longgoal-20261007/local-cpu-repair-source-review-20261009.json',
     'docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json',
     'docs/research-math-20261006/longgoal-20261007/g01-source-review.json',
     'docs/research-math-20261006/longgoal-20261007/g01-c06-incremental-source-review.json',

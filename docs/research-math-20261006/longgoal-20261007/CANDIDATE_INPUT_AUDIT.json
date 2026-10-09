@@ -1271,8 +1271,8 @@
     "guide_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "7700296b7f92cc76a32341bf0df539a4afb4e7eab0701c573f46519a049a39b6",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/local-cpu-repair-source-review-20261009.json",
+    "design_digest": "23aea722552feede9a456d23fc82b389d8fe2907df3b273499a0da0c65213043",
     "source_review_findings_remaining": {
       "critical": 0,
       "important": 0,
@@ -1286,7 +1286,8 @@
     "dynamic_family_and_b_star_evidence": "pending Local source derivation, independent review and D1-only native evidence",
     "local_acceptance": "pending",
     "scientific_design_verified": 0,
-    "gpu_dispatch_allowed": false
+    "gpu_dispatch_allowed": false,
+    "local_repair_review_status": "independently_reviewed_source_only"
   },
   "stage_goal": {
     "selected_methods": 15,

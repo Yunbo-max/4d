@@ -39,16 +39,17 @@
     "guide": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
-    "design_digest": "7700296b7f92cc76a32341bf0df539a4afb4e7eab0701c573f46519a049a39b6",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/local-cpu-repair-source-review-20261009.json",
+    "design_digest": "23aea722552feede9a456d23fc82b389d8fe2907df3b273499a0da0c65213043",
     "coverage": "15 selected specs, exact candidate/native source closures for all 15 candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
-    "independent_static_review": "Final dual C20/G01 source review reports Critical 0, Important 0 and Minor 0; current source remains generated_unexecuted and Local execution pending",
+    "independent_static_review": "Local repair source reviewed by review_repairs/review_numerics; final G01 bytes reviewed by review_g01. CPU software acceptance pending for this new closure; scientific admission absent.",
     "tests_executed": false,
     "scientific_design_verified": 0,
     "local_method_verified": 0,
     "native_results": 0,
     "gpu_dispatch_allowed": false,
-    "next": "Local CPU-only common acceptance, complete source-derived family evidence plus independent review, deterministic split, D1-only B* freezes and per-candidate Gate 0/IPCG; do not resume GPU without new explicit authorization."
+    "next": "Local CPU-only common acceptance, complete source-derived family evidence plus independent review, deterministic split, D1-only B* freezes and per-candidate Gate 0/IPCG; do not resume GPU without new explicit authorization.",
+    "local_repair_review_status": "independently_reviewed_source_only"
   },
   "c05_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",

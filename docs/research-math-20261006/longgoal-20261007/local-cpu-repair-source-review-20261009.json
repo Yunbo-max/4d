@@ -1,0 +1,148 @@
+{
+  "kind": "local-cpu-software-repair-source-review",
+  "version": 1,
+  "status": "independently_reviewed_source_only",
+  "predecessor_commit": "55f465a6e2f354e23e4affb81c0cbffc8f0d33ef",
+  "reviewed_implementation_commit": "e079ae8529ca231cde6e3354b61788329fe75949",
+  "predecessor_design_digest": "7700296b7f92cc76a32341bf0df539a4afb4e7eab0701c573f46519a049a39b6",
+  "design_digest": "23aea722552feede9a456d23fc82b389d8fe2907df3b273499a0da0c65213043",
+  "design_file_sha256": "a1c1cd7597d6fc1e7b97f856aecb7ea637df4fd87b046ea6bd501c95bf49572e",
+  "updated_implementation_refs": [
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "path": "actionmesh/prepare_c01_native_scoring.py",
+      "previous_sha256": "0d90a1d20a68d2866dad3cf743b11206400b98babceb6346fddc326822638f7d",
+      "sha256": "dad37b21e384c766bcec4d4d5bbbce6ee4d1946fe2d3e46d9afb591abb28e879"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c01",
+      "path": "actionmesh/research_math/native_context_delivery.py",
+      "previous_sha256": "9f474e3b8c70b4466cb828d66d3e119e0b6eaab571b9ce06de6c2092a720482c",
+      "sha256": "86f369dddb8ae8a318fc5ee38614288884efd503fb0c3b75c0b04af84985153e"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c10",
+      "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+      "previous_sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659",
+      "sha256": "7b05c495efe9a704d49760fe1c6dbb82ad00b0cc1c757917f76ab0753f6f8f88"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c14",
+      "path": "actionmesh/research_math/c14_native_comparison.py",
+      "previous_sha256": "6bdb7d99b2154cb2c9a1200181b9eff54c5a2874b9335481e72e53dd7ff529b7",
+      "sha256": "ccc02e5e4a8f3e16a2e8c1161f5023962b2e6cef20f0fc2c007384612d7e9c9d"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c03",
+      "path": "actionmesh/prepare_c03_calibration.py",
+      "previous_sha256": "c4d021a49a3902b3670906d8fd49cb32898167e5ec582ce8e3bd8800e8d0dabb",
+      "sha256": "0308fbb8ef7e4d5659341e351957dc966bc7084e1be1a10aa893e9f0df2bd4fd"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c11",
+      "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+      "previous_sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659",
+      "sha256": "7b05c495efe9a704d49760fe1c6dbb82ad00b0cc1c757917f76ab0753f6f8f88"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c12",
+      "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+      "previous_sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659",
+      "sha256": "7b05c495efe9a704d49760fe1c6dbb82ad00b0cc1c757917f76ab0753f6f8f88"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "path": "actionmesh/prepare_c05_mode_bank.py",
+      "previous_sha256": "32bd5ef5369ef17aa05de40583fce8634de37f834e6a539e73fb3a174b891fd8",
+      "sha256": "1a49b63dc85a4cbbda0d99776225f2e5c1e1bdb6c792e288bfe1f024483748c6"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "path": "actionmesh/prepare_c05_native_acceptance.py",
+      "previous_sha256": "1ea50625a99f8bc2005456203f77f3565603293f3b788ed746a712d53efaac84",
+      "sha256": "84617efaf691a2439a91f8469c92803d0fd4f839d01e7dcf54eedfaed23f58df"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c05",
+      "path": "actionmesh/research_math/c05_candidate_artifacts.py",
+      "previous_sha256": "7c1fdf234fc3cb1bf4b67a6b91f09d4666ff530cd04ebc9a8442fdea0c207a0d",
+      "sha256": "f3a51d67877ba0c883465a99ff9a7f52b781011aca33892b525f4779b1f69e36"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "path": "actionmesh/research_math/area_transport_candidate.py",
+      "previous_sha256": "4d4de7214c65abe1207114a0b4134c32756a5ec593fa051998ce481a00623571",
+      "sha256": "271d1a09e1a7484b9a1d4d246b1327a7815eeb87a92bf1fee243cba0314b8eb1"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c08",
+      "path": "actionmesh/research_math/trajectory_bridge_candidate.py",
+      "previous_sha256": "f9de69195e027ebe09d21a516382fd792d727ce51bc54d5326ee1f90f1044689",
+      "sha256": "a6268397b5f0eddd0f81e701c8c4ceb779b9133997b13aa94fbf0c0496d01a4b"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c06",
+      "path": "actionmesh/research_math/area_transport_candidate.py",
+      "previous_sha256": "4d4de7214c65abe1207114a0b4134c32756a5ec593fa051998ce481a00623571",
+      "sha256": "271d1a09e1a7484b9a1d4d246b1327a7815eeb87a92bf1fee243cba0314b8eb1"
+    },
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "path": "actionmesh/research_math/partial_transport_candidate.py",
+      "previous_sha256": "a44993cb331d2e94862c29758aa65caf62b50503e257b8bd7e963a398a91bf09",
+      "sha256": "2d3e3b40b072bebc828cdbd89c5d419da42300bd3c40cd17c9620d7ad1adb511"
+    }
+  ],
+  "reviewers": [
+    "/root/review_repairs",
+    "/root/review_numerics",
+    "/root/review_g01"
+  ],
+  "scope": "CPU software repair only. Scientific design parameters, population, criteria, roles and GPU authorization boundaries unchanged. Historical reviews retained.",
+  "scientific_admission": false,
+  "gpu_dispatch_allowed": false,
+  "local_method_verified": 0,
+  "native_results": 0,
+  "software_attempts": [
+    {
+      "run_id": "common-cpu-55f465a-001",
+      "status": "failed",
+      "tests": 848,
+      "failures": 23,
+      "errors": 47,
+      "skipped": 6
+    },
+    {
+      "run_id": "debug-r1-cpu-001",
+      "status": "failed",
+      "tests": 848,
+      "failures": 19,
+      "errors": 30,
+      "skipped": 6
+    },
+    {
+      "run_id": "debug-r2-cpu-001",
+      "status": "budget_exhausted",
+      "complete_test_summary": false
+    }
+  ],
+  "final_reviewed_refs": [
+    {
+      "path": "actionmesh/research_math/g01_design.py",
+      "sha256": "ff32cb77543cf8d99941a8414a9bfcfb3f4eb37faba46292dc7845e2bee02a1d"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_g01_design.py",
+      "sha256": "8f40041bec206890699ea899de68dfa8036c540a9c8075298456251cf53630c6"
+    },
+    {
+      "path": "actionmesh/prepare_g01_acceptance.py",
+      "sha256": "d3cce5ac9af7935d8a519846423cdbb04568a4c6e930c04c58fd2c595773c4f5"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "22fd48d5693a44a1c410af6a942dbe077ea7ef3ddfbda2973d8c8c916a0e380e"
+    }
+  ],
+  "review_conclusion": "All 206 embedded refs rehash; 14 changed occurrences match inventory. Except implementation hashes and canonical ordering, all scientific design fields equal the predecessor. Scientific admission and GPU STOP unchanged."
+}
