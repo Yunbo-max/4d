@@ -2187,3 +2187,21 @@ The existing GPU STOP and cumulative budget remain unchanged. Supervisor source
 is authored but not installed or running; online repair remains `not_connected`.
 The next executable action is Local common CPU acceptance, followed by the C20
 runbook. GPU work requires a new exact single-use authorization.
+
+
+## 2026-10-09 Local CPU acceptance and repair
+
+Local executed the common Linux CPU harness on delivered source `55f465a`,
+retained six unsuccessful attempts (including one actual timeout), repaired
+source/fixture defects and obtained `OK (skipped=6)` on 849 tests at
+`62416056bfaaf7a82ff0d1826f1ce4b2bb0bebb8` (`debug-r6-cpu-001`).
+The six skipped checks need real C01/C03/C04/C06/C07/C08 native artifacts.
+All current software-test failures were removed; this is not native method
+verification, G01 dynamic admission, scientific scoring or GPU authorization.
+GPU STOP and 0/15 native results remain unchanged.
+
+The actual host is Tesla T4, not the historical RTX 2080 Ti. Research_Autopilot
+was updated to `bd368630ef623efa16c6c28fab894d692f82ee4d`.
+The review packet and hash-bound raw archive locators are at
+`rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/REVIEW_PACKET.md`
+and sibling `RESULT.json`. No raw assets or credentials are committed.

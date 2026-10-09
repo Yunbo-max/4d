@@ -1,0 +1,505 @@
+{
+  "kind": "local-cpu-acceptance-window",
+  "window_id": "20261009-local-cpu-acceptance",
+  "scope": "CPU engineering acceptance only; fixture evidence is not native scientific qualification",
+  "source_base": "55f465a6e2f354e23e4affb81c0cbffc8f0d33ef",
+  "runtime_revision": "bd368630ef623efa16c6c28fab894d692f82ee4d",
+  "runtime_path": "/root/rivermind-data/research-autopilot-bd36863/skills/research-autopilot",
+  "source_complete_candidates": 15,
+  "native_results": 0,
+  "local_method_verified": 0,
+  "scientific_admission": false,
+  "gpu_dispatch_allowed": false,
+  "gpu_observation": {
+    "name": "Tesla T4",
+    "uuid": "GPU-305023ac-8457-0ac4-0432-4ff19b30de46",
+    "used_mib": 0,
+    "gpu_stop": true
+  },
+  "attempts": [
+    {
+      "run_id": "common-cpu-55f465a-001",
+      "source_commit": "55f465a6e2f354e23e4affb81c0cbffc8f0d33ef",
+      "harness_status": "failed",
+      "harness_digest": "7ac18cd3f3c2ee3f10033c1019f46bfb0b7a7919fb6b33a87577eb0b98f9756f",
+      "harness_elapsed_seconds": 113.39315498899668,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/common-cpu-55f465a-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/common-cpu-55f465a-001-evidence.tar.gz",
+        "sha256": "2c81b050492ea4426aa190a9d087866d2d66adecfcf06435e53740bbfa6ae874",
+        "bytes": 3400830
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/native-plan.json",
+          "sha256": "8a957bee6deed8d6782428f9cc616722033ec5297e3ed81df4108a00ecdef3fb",
+          "archive_member": "plans/common-cpu-55f465a-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/harness-plan.json",
+          "sha256": "05aa2ef79737b6579ae343b373ad7ad3fb2a8e42ebb32258601b5fac54ac98c3",
+          "archive_member": "plans/common-cpu-55f465a-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/harness-report.json",
+          "sha256": "a96307012722846a05d9dcf5d88e99358777a836e610f4d08d305ce8cb2f3756",
+          "archive_member": "runs/harness/common-cpu-55f465a-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/receipt.json",
+          "sha256": "880adf99b4e81c2dd40ec74695b53bd5376cf386d19e9d5e5ea3f939da0d3fb6",
+          "archive_member": "runs/attempts/common-cpu-55f465a-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/execution-context.json",
+          "sha256": "057dc2852e052b99a4d20d0dd616c576f27a851cbefe35ac81e01cc799f99fe0",
+          "archive_member": "runs/harness/common-cpu-55f465a-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "archive_member": "runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/attempt.json",
+          "sha256": "ee54e8351704e0fd4a74780d6a2f0c50e6401d6c4fb13a5415e7c5d540738620",
+          "archive_member": "runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/process-guard.json",
+          "sha256": "9a3a8d9596821a70eb10ad2cefeb80e53e329fc44f6a134052225717cd853187",
+          "archive_member": "runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/process-guard.json"
+        }
+      ],
+      "complete_test_summary": true,
+      "tests": 848,
+      "test_elapsed_seconds": 109.167,
+      "summary": "FAILED (failures=23, errors=47, skipped=6)",
+      "task_terminal_status": {
+        "all-research-math-checks": "failed"
+      }
+    },
+    {
+      "run_id": "debug-r1-cpu-001",
+      "source_commit": "15b89a3d04588c8478388e52493e6c05555f8e4a",
+      "harness_status": "failed",
+      "harness_digest": "a30499f04fc22729b484372776746f238c4da5a8f276fce0e1ac566174df0c6f",
+      "harness_elapsed_seconds": 118.40501549560577,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/debug-r1-cpu-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/debug-r1-cpu-001-evidence.tar.gz",
+        "sha256": "bf554c00e1ccc3ff6d54183cfd8a65273348f0be48b1269a2b48950d7fb0b225",
+        "bytes": 3406593
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/native-plan.json",
+          "sha256": "cd335a146e919bda609d67357fa8ca1dcbd12f35f4711d4f12ec719bfbb16382",
+          "archive_member": "plans/debug-r1-cpu-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/harness-plan.json",
+          "sha256": "b7644446680ec69d45587afc4afdd88d67e122b15e96585574d682b4304e3c06",
+          "archive_member": "plans/debug-r1-cpu-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/harness-report.json",
+          "sha256": "9c0a7877639d37e64bb36635ecc7d9f9ee4f168511cf974c2c91b346b3a8d54c",
+          "archive_member": "runs/harness/debug-r1-cpu-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/receipt.json",
+          "sha256": "258884db1448cb6c48ae88fa7774f28f45e26cf279e097e4ede5d5edbed6fad7",
+          "archive_member": "runs/attempts/debug-r1-cpu-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/execution-context.json",
+          "sha256": "15328b419f69ab8bd162395bc193f49e6286c1da8ff0f7b55c3469a842fb4075",
+          "archive_member": "runs/harness/debug-r1-cpu-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "archive_member": "runs/attempts/debug-r1-cpu-001/all-research-math-checks-a1-5dcc1a0330ec400b8d68183e6a12fbd5/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/debug-r1-cpu-001/all-research-math-checks-a1-5dcc1a0330ec400b8d68183e6a12fbd5/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/attempt.json",
+          "sha256": "bfec7c8f51478c8abef2168b235c9f9b7c5c080369e54554e80461d18bcd6c51",
+          "archive_member": "runs/attempts/debug-r1-cpu-001/all-research-math-checks-a1-5dcc1a0330ec400b8d68183e6a12fbd5/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/process-guard.json",
+          "sha256": "54a16d55fe84f927abefa34c30f5e177eece96292b256509ffb81ff61e62c02c",
+          "archive_member": "runs/attempts/debug-r1-cpu-001/all-research-math-checks-a1-5dcc1a0330ec400b8d68183e6a12fbd5/process-guard.json"
+        }
+      ],
+      "complete_test_summary": true,
+      "tests": 848,
+      "test_elapsed_seconds": 114.139,
+      "summary": "FAILED (failures=19, errors=30, skipped=6)",
+      "task_terminal_status": {
+        "all-research-math-checks": "failed"
+      }
+    },
+    {
+      "run_id": "debug-r2-cpu-001",
+      "source_commit": "5557f3ad4f789867084c5e258f3cc2f3f7817c8b",
+      "harness_status": "failed",
+      "harness_digest": "3ca69d77a569daf45793d2353f0d4dc8de27be306cdbb4ecbb32cc43a71175c7",
+      "harness_elapsed_seconds": 121.40337420161813,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/debug-r2-cpu-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/debug-r2-cpu-001-evidence.tar.gz",
+        "sha256": "17b728fd81a5b04cb26c613935a804a1f1f7e85e8604066145b6b871ee9a19a9",
+        "bytes": 3402932
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/native-plan.json",
+          "sha256": "d3f18f9f45ce34069a0d82b65eb74c83ba759ac5bbea86684d713faca631893d",
+          "archive_member": "plans/debug-r2-cpu-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/harness-plan.json",
+          "sha256": "2460194fb4b299891203418fcd7df8e636abeec849d33173dfcccf7f845a00fa",
+          "archive_member": "plans/debug-r2-cpu-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/harness-report.json",
+          "sha256": "3b6dbb7621c746f6b3e55d43178530ca8ef263d48400ff0fd66ae838fcbb8244",
+          "archive_member": "runs/harness/debug-r2-cpu-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/receipt.json",
+          "sha256": "700194f9ac165c68cb6c7d2a579e8238479e67ceb6517361539e4c80fa0366b4",
+          "archive_member": "runs/attempts/debug-r2-cpu-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/execution-context.json",
+          "sha256": "e4c541005c661b70ebb6b34735db1c3dfc06feb4d0bde84ce2db6cb070efa783",
+          "archive_member": "runs/harness/debug-r2-cpu-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/stderr.log",
+          "sha256": "4f74de72dc3f6249f2afedf4dd8458685d92cd61c320a20557b3ea0c49189949",
+          "archive_member": "runs/attempts/debug-r2-cpu-001/all-research-math-checks-a1-3fd903c0d2bd460a9c1977e18aac1b05/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/debug-r2-cpu-001/all-research-math-checks-a1-3fd903c0d2bd460a9c1977e18aac1b05/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/attempt.json",
+          "sha256": "48432799cf508aa61c8b323554f5a0f3d148592c35aaafd90e26d36a5b64d46b",
+          "archive_member": "runs/attempts/debug-r2-cpu-001/all-research-math-checks-a1-3fd903c0d2bd460a9c1977e18aac1b05/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r2-cpu-001/process-guard.json",
+          "sha256": "4dbe9cabd29d8ba7ae2634dbde48622e69b3a83be766f42f71f99acc95150e3a",
+          "archive_member": "runs/attempts/debug-r2-cpu-001/all-research-math-checks-a1-3fd903c0d2bd460a9c1977e18aac1b05/process-guard.json"
+        }
+      ],
+      "complete_test_summary": false,
+      "task_terminal_status": {
+        "all-research-math-checks": "budget_exhausted"
+      }
+    },
+    {
+      "run_id": "debug-r3-cpu-001",
+      "source_commit": "e079ae8529ca231cde6e3354b61788329fe75949",
+      "harness_status": "failed",
+      "harness_digest": "f75cf9469b010256b529b460f97f888f2ebedb2c94a90effee77e7881792d53c",
+      "harness_elapsed_seconds": 116.40472974535078,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/debug-r3-cpu-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/debug-r3-cpu-001-evidence.tar.gz",
+        "sha256": "a22f5c9f24d75d8924fb3be0ecba015d39db1c514fe0fb572a2e0519c414ae3e",
+        "bytes": 3414882
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/native-plan.json",
+          "sha256": "1c696c75c5b2fd5f920f8323062f2eedf4955d77f8cf3e2c4bf8bca6d4fb5eaa",
+          "archive_member": "plans/debug-r3-cpu-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/harness-plan.json",
+          "sha256": "fe93a50fddc6da2d6866847eb5fa528cbef42d10258177c14e1f0bfa652162f0",
+          "archive_member": "plans/debug-r3-cpu-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/harness-report.json",
+          "sha256": "2579e2a683743debedfe1274a2688deb9cb5a81204cc33e0d7191d0b11d5c3ff",
+          "archive_member": "runs/harness/debug-r3-cpu-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/receipt.json",
+          "sha256": "5720977a379236fd1588f908d9cee021386b2cecf6f24541a30d0118dd97410f",
+          "archive_member": "runs/attempts/debug-r3-cpu-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/execution-context.json",
+          "sha256": "bf30fd385f1ba573a7421c13c873c96bfe70e463f19876f1cb1e9bf75d622da8",
+          "archive_member": "runs/harness/debug-r3-cpu-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "archive_member": "runs/attempts/debug-r3-cpu-001/all-research-math-checks-a1-254cd4c8bb2143f5a7349ebecb01a7dd/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/debug-r3-cpu-001/all-research-math-checks-a1-254cd4c8bb2143f5a7349ebecb01a7dd/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/attempt.json",
+          "sha256": "34b7d218001ba39fc924bc099ea3f2305354bbe12671311482c0bbf4623f9b84",
+          "archive_member": "runs/attempts/debug-r3-cpu-001/all-research-math-checks-a1-254cd4c8bb2143f5a7349ebecb01a7dd/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/process-guard.json",
+          "sha256": "8acbaf97472b8af4f0c5756f00cce42858560dd4ec860fba2f1f5b1744761b8f",
+          "archive_member": "runs/attempts/debug-r3-cpu-001/all-research-math-checks-a1-254cd4c8bb2143f5a7349ebecb01a7dd/process-guard.json"
+        }
+      ],
+      "complete_test_summary": true,
+      "tests": 849,
+      "test_elapsed_seconds": 112.172,
+      "summary": "FAILED (failures=3, errors=14, skipped=6)",
+      "task_terminal_status": {
+        "all-research-math-checks": "failed"
+      }
+    },
+    {
+      "run_id": "debug-r4-cpu-001",
+      "source_commit": "108a703229a33cae358286946f8420a5ee444f9a",
+      "harness_status": "failed",
+      "harness_digest": "f98e81a018b262e5c3d4762cafb0aab6029bce1f14abd9a29a793c9aa5b3adb0",
+      "harness_elapsed_seconds": 130.4626139709726,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/debug-r4-cpu-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/debug-r4-cpu-001-evidence.tar.gz",
+        "sha256": "e3f487cd54891f5c85a2a6f8153ba2cc0dcd147f29ff5f9ee35a5aa8b05b83e8",
+        "bytes": 3418776
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/native-plan.json",
+          "sha256": "16084a0b025b6eccdf90cca62fc5bf9fe4c74c52792178b0d89055d03c2d9377",
+          "archive_member": "plans/debug-r4-cpu-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/harness-plan.json",
+          "sha256": "68ccf81aac56364d7e19fa3cb509e6371fca7557f8477fd5aee2dde728e67232",
+          "archive_member": "plans/debug-r4-cpu-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/harness-report.json",
+          "sha256": "25a2de4aba7552c11831a5888832f1aef658c86ec662e59e932fbaa39bd5602a",
+          "archive_member": "runs/harness/debug-r4-cpu-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/receipt.json",
+          "sha256": "23276a72f0f08e61516b5f8fac956a67e4e602b6db1f8361400ab8d19d5280f1",
+          "archive_member": "runs/attempts/debug-r4-cpu-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/execution-context.json",
+          "sha256": "34f54cf0406774e7afa23762d57551227db98ce28582a5d5677434e82308c44f",
+          "archive_member": "runs/harness/debug-r4-cpu-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/stderr.log",
+          "sha256": "9e0d4ce0561e8a0f4abdd00f8693b851016cb8571b2e2f33defe4b7ddf1ddb60",
+          "archive_member": "runs/attempts/debug-r4-cpu-001/all-research-math-checks-a1-834169f58626480b9e28b79541812107/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/debug-r4-cpu-001/all-research-math-checks-a1-834169f58626480b9e28b79541812107/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/attempt.json",
+          "sha256": "cf07828b6489b90b8d3fc6eaf2584d2eeaa372bc3e66f7e4a3f09c6aeeef605f",
+          "archive_member": "runs/attempts/debug-r4-cpu-001/all-research-math-checks-a1-834169f58626480b9e28b79541812107/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/process-guard.json",
+          "sha256": "e5e3196051323cf17650e80c40354c0c60e64da930b9487603631d09b7bd5261",
+          "archive_member": "runs/attempts/debug-r4-cpu-001/all-research-math-checks-a1-834169f58626480b9e28b79541812107/process-guard.json"
+        }
+      ],
+      "complete_test_summary": true,
+      "tests": 849,
+      "test_elapsed_seconds": 125.898,
+      "summary": "FAILED (failures=1, skipped=6)",
+      "task_terminal_status": {
+        "all-research-math-checks": "failed"
+      }
+    },
+    {
+      "run_id": "debug-r5-cpu-001",
+      "source_commit": "d4c8478f57e34caede5b797090c5ac506733a355",
+      "harness_status": "failed",
+      "harness_digest": "5f7a33b88a671dd33d0002cf5af6d9b6866949c17b5b220fe8b9b42fc3e21d2c",
+      "harness_elapsed_seconds": 129.44389785919338,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/debug-r5-cpu-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/debug-r5-cpu-001-evidence.tar.gz",
+        "sha256": "b2de5d79dfa1473b186e6e9d8cedbcf31aabd5200c5a21349b5fb81a303f9a7e",
+        "bytes": 3419030
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/native-plan.json",
+          "sha256": "68224439204233c9acc2fc0a47d329ac18e02dae63cb6d48cca782b5e59c8c87",
+          "archive_member": "plans/debug-r5-cpu-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/harness-plan.json",
+          "sha256": "e32914caa42a98d7dce56f6549576d8899c967030de3510905e8b378f2d2643f",
+          "archive_member": "plans/debug-r5-cpu-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/harness-report.json",
+          "sha256": "ff0e8ce35bd41fb463bd944c0a6c58899a61afa6471365abf1d56e3b2759f66c",
+          "archive_member": "runs/harness/debug-r5-cpu-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/receipt.json",
+          "sha256": "aed3b83b9e485a8bcecaaa89949914545fbeb64e2e3e51b6ceb14f60763cdc5f",
+          "archive_member": "runs/attempts/debug-r5-cpu-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/execution-context.json",
+          "sha256": "89bc40f0dd84ca1cff474cb825f2c3720e23cd8c8e02be3d912353926b959aa9",
+          "archive_member": "runs/harness/debug-r5-cpu-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/stderr.log",
+          "sha256": "c1c178e843a58400e5b8e3912de8e5c7ccd7a7ed13d32c5b549c036958a9ff3f",
+          "archive_member": "runs/attempts/debug-r5-cpu-001/all-research-math-checks-a1-feaa52324ec643e4a905195825653bbe/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/debug-r5-cpu-001/all-research-math-checks-a1-feaa52324ec643e4a905195825653bbe/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/attempt.json",
+          "sha256": "c14dee10f18774d0f9b008d6894b2d7881737ad8575e422ba73fc112341dd405",
+          "archive_member": "runs/attempts/debug-r5-cpu-001/all-research-math-checks-a1-feaa52324ec643e4a905195825653bbe/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/process-guard.json",
+          "sha256": "1dc5eadc6db49872ac7fb265a355a4b936b5f9d11fa17ea0b28ff43bdeaa9c32",
+          "archive_member": "runs/attempts/debug-r5-cpu-001/all-research-math-checks-a1-feaa52324ec643e4a905195825653bbe/process-guard.json"
+        }
+      ],
+      "complete_test_summary": true,
+      "tests": 849,
+      "test_elapsed_seconds": 125.761,
+      "summary": "FAILED (failures=1, skipped=6)",
+      "task_terminal_status": {
+        "all-research-math-checks": "failed"
+      }
+    },
+    {
+      "run_id": "debug-r6-cpu-001",
+      "source_commit": "62416056bfaaf7a82ff0d1826f1ce4b2bb0bebb8",
+      "harness_status": "completed",
+      "harness_digest": "a9c8201fe7d75da5c3bb1eee73dfe0ffb939d9a0c794e99164bf1945b22ba282",
+      "harness_elapsed_seconds": 130.454593016766,
+      "raw_archive": {
+        "local_path": "/Users/yunbo/Documents/4d/results/local-acceptance-20261009-55f465a/debug-r6-cpu-001-evidence.tar.gz",
+        "remote_path": "/root/rivermind-data/debug-r6-cpu-001-evidence.tar.gz",
+        "sha256": "79e1827a6ac1ce6730853236df45112d62cbefa8db65b76f7e670ab8b7fd88aa",
+        "bytes": 3419060
+      },
+      "retained_refs": [
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/native-plan.json",
+          "sha256": "65bebd95d2f24a98cb60d32a84540a235aff26a90da5376f9f9861da72fada8a",
+          "archive_member": "plans/debug-r6-cpu-001/native.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/harness-plan.json",
+          "sha256": "7c99719f38976271b59ed35f83bfb594c3f6ac9e4758b1538e7b1ed40f829018",
+          "archive_member": "plans/debug-r6-cpu-001/harness.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/harness-report.json",
+          "sha256": "3d51543d22a59971b8573fdc34d0f5abed6264f0a3526791d8d7fb42b50f6147",
+          "archive_member": "runs/harness/debug-r6-cpu-001/report.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/receipt.json",
+          "sha256": "0e6f14504349543b759764b70b824958af75a1b485e84820652b9866b448b50f",
+          "archive_member": "runs/attempts/debug-r6-cpu-001/receipt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/execution-context.json",
+          "sha256": "5d3db4cb4d5f4985e1697600a3324a29b1a9a2ddd3877d903b7e06ccd6913fec",
+          "archive_member": "runs/harness/debug-r6-cpu-001/tasks/all-research-math-checks/execution-context.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/stderr.log",
+          "sha256": "b3766657bf352abdef844e36511d7bf96f6a9fb2ce3abec4a1b10e0d496145f7",
+          "archive_member": "runs/attempts/debug-r6-cpu-001/all-research-math-checks-a1-c6a83f263f444bbf9be042cf441e9bae/stderr.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "archive_member": "runs/attempts/debug-r6-cpu-001/all-research-math-checks-a1-c6a83f263f444bbf9be042cf441e9bae/stdout.log"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/attempt.json",
+          "sha256": "b112712628ca361456839287f1d830465744a6e3937e1585db575bcb55e2473c",
+          "archive_member": "runs/attempts/debug-r6-cpu-001/all-research-math-checks-a1-c6a83f263f444bbf9be042cf441e9bae/attempt.json"
+        },
+        {
+          "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r6-cpu-001/process-guard.json",
+          "sha256": "8f879f8f9989c2ee1a20b53d53f562b46b53352ffe201f5555e7eb768ffa9ccc",
+          "archive_member": "runs/attempts/debug-r6-cpu-001/all-research-math-checks-a1-c6a83f263f444bbf9be042cf441e9bae/process-guard.json"
+        }
+      ],
+      "complete_test_summary": true,
+      "tests": 849,
+      "test_elapsed_seconds": 126.296,
+      "summary": "OK (skipped=6)",
+      "task_terminal_status": {
+        "all-research-math-checks": "completed"
+      }
+    }
+  ],
+  "cumulative_harness_elapsed_seconds": 859.9673792785034,
+  "remaining_native_prerequisites": [
+    "baseline/native-scoring qualification",
+    "source-derived independent-family evidence and split",
+    "candidate Gate 0/IPCG and design verification",
+    "real current-version receipt-bound candidate inputs",
+    "numeric protocol and exact GPU attempt resume authorization"
+  ],
+  "software_acceptance": {
+    "status": "passed_with_six_retained_native_checks_skipped",
+    "accepted_source_commit": "62416056bfaaf7a82ff0d1826f1ce4b2bb0bebb8",
+    "run_id": "debug-r6-cpu-001",
+    "tests": 849,
+    "passed": 843,
+    "skipped": 6,
+    "failures": 0,
+    "errors": 0
+  }
+}

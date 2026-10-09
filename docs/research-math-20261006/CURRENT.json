@@ -2035,5 +2035,24 @@
     "native_result": "not_started",
     "next_action": "Run current zero-GPU source acceptance. Keep GPU STOP until separate authorization; then produce/freeze development labels, fit, export confirmation artifacts, run retained acceptance and pursue G01 admission before official scoring.",
     "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c03-correlated-calibration-chain--source-complete-not-executed"
+  },
+  "local_software_acceptance_20261009": {
+    "status": "passed_with_six_retained_native_checks_skipped",
+    "accepted_source_commit": "62416056bfaaf7a82ff0d1826f1ce4b2bb0bebb8",
+    "run_id": "debug-r6-cpu-001",
+    "tests": 849,
+    "passed": 843,
+    "skipped": 6,
+    "failures": 0,
+    "errors": 0,
+    "result_ref": {
+      "path": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/RESULT.json",
+      "sha256": "df6763fa43d78eb3f88cc7a3484160e936b09c0d7d40cd6c25a34faf1d6fe178"
+    },
+    "native_results": 0,
+    "local_method_verified": 0,
+    "scientific_admission": false,
+    "gpu_dispatch_allowed": false,
+    "real_native_acceptance": "pending six required real artifact checks and per-candidate admission"
   }
 }

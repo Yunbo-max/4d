@@ -1,0 +1,684 @@
+{
+  "observed_at": "2026-10-09T10:03:25.517437+00:00",
+  "source_commit": "55f465a6e2f354e23e4affb81c0cbffc8f0d33ef",
+  "scope": "controller source existence audit; no methods executed",
+  "remote_project": "/root/rivermind-data/4d-source-55f465a",
+  "remote_source_archive_sha256": "9ca42ec6b20c6efe7a9a8a8e315e72a8e601f55e1f1a01c334f2ff31918e0e17",
+  "source_transfer": "sparse clean Git checkout; large historical archives/results and example assets omitted",
+  "runtime_archive_sha256": "dc4fa67f2fe3f59b858927a06df3f21e2d52606654250281d87fd77422383dad",
+  "gpu_stop": true,
+  "scientific_dispatch_ready": false,
+  "candidates": [
+    {
+      "id": "4d-math-20261006-c02",
+      "priority": 1,
+      "name": "保留动作特征的几何近端更新",
+      "inputs": [
+        "receipt-bound native sequence.npz/report.json pair plus adjacent producer command.json provenance",
+        "explicit ARAP/temporal/CG/patch parameters frozen on development inputs",
+        "frame-zero topology, retained timesteps/frame indices and vertex identity"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "Run prepare_control_scoring_checks.py through the installed harness; then run prepare_protected_geometry_candidate.py on the receipt-bound native source with every numerical parameter explicit; retain all nine outputs; assemble research_math.c02_native_comparison request and research_math.c02_native_scoring request; after future exact-attempt GPU resume only, use prepare_c02_native_scoring.py plus launch_c02_native_scoring.py and validate-delivery exactly as listed in LOCAL_AGENT_RUNBOOK.md.",
+      "scientific_prerequisites": [
+        "Natural repair gap after strongest simple baseline",
+        "fixed inference-available protection operator with nontrivial nullspace",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "same d/W equal-W-norm scalar comparator",
+        "legal task-relevant C and nonlinear remainder boundary",
+        "rho diagnosis is not a native evaluation metric"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/protected_geometry_candidate.py",
+          "path": "actionmesh/research_math/protected_geometry_candidate.py",
+          "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"
+        },
+        {
+          "listed": "actionmesh/prepare_protected_geometry_candidate.py",
+          "path": "actionmesh/prepare_protected_geometry_candidate.py",
+          "sha256": "938467c24ac30cf342054a8fbf38b3d1ebf01197af9be4cb6993ecc09e6727c9"
+        },
+        {
+          "listed": "actionmesh/research_math/c02_native_comparison.py",
+          "path": "actionmesh/research_math/c02_native_comparison.py",
+          "sha256": "85cf2a8d0919775474061b70a6337d6168bfcc3154e1ad5508c1fce6262fd8bf"
+        },
+        {
+          "listed": "actionmesh/research_math/c02_native_scoring.py",
+          "path": "actionmesh/research_math/c02_native_scoring.py",
+          "sha256": "1364d84345955013b6fea86c248ee8b3cda57aa1b519cdd716efe931da187c27"
+        },
+        {
+          "listed": "actionmesh/prepare_c02_native_scoring.py",
+          "path": "actionmesh/prepare_c02_native_scoring.py",
+          "sha256": "52dad387b25ddd082aaf289c6017a16a4829f15733ffc7f2fdb208e721915135"
+        },
+        {
+          "listed": "actionmesh/launch_c02_native_scoring.py",
+          "path": "actionmesh/launch_c02_native_scoring.py",
+          "sha256": "6415ecea53b98d3836a639523e85518193ad714068c65c19de85f4ba1d167203"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c01",
+      "priority": 2,
+      "name": "同时间自映射偏差消除",
+      "inputs": [
+        "completed paired-context result/manifest/archive consumed with source_time_query=true and receipt hashes",
+        "original full native sequence plus same-context raw target/source tensors/query/normals",
+        "explicit no-clipping coordinate bounds policy and CPU resource admission"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "Use prepare_control_scoring_checks.py first; prepare_self_map_candidate.py on receipt-bound consumed context; prepare_c01_native_acceptance.py --artifact-candidate <retained candidate.json> [--freeze <prospective freeze>] through the installed CPU harness; future scientific scoring only after the full C01 admission/explicit GPU resume. Exact flags in LOCAL_AGENT_RUNBOOK.md.",
+      "scientific_prerequisites": [
+        "same-context self-query qualification and latent availability",
+        "natural reference/downstream shared-error evidence",
+        "SFG/old correlated functional delta; currently diagnostic baseline",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/self_map_candidate.py",
+          "path": "actionmesh/research_math/self_map_candidate.py",
+          "sha256": "8b0f3a7980f95ce290e10100953d714b3b8d289c9213cd8aa28554912398dafa"
+        },
+        {
+          "listed": "actionmesh/prepare_self_map_candidate.py",
+          "path": "actionmesh/prepare_self_map_candidate.py",
+          "sha256": "a48bc58de04d77492d6d99138faa6e0d5fc1aba5e7878191e971a898a64edb8e"
+        },
+        {
+          "listed": "actionmesh/prepare_c01_native_acceptance.py",
+          "path": "actionmesh/prepare_c01_native_acceptance.py",
+          "sha256": "665869d54dcd00acf2c5213bc603f8c1cb8ead7d5e2da0bcd29186c29ad0c620"
+        },
+        {
+          "listed": "actionmesh/research_math/c01_native_comparison.py",
+          "path": "actionmesh/research_math/c01_native_comparison.py",
+          "sha256": "214901a463a214f2aafc8cb7b8a524f79d5c0f6c183f297a49607d3bc50fad82"
+        },
+        {
+          "listed": "actionmesh/research_math/c01_native_scoring.py",
+          "path": "actionmesh/research_math/c01_native_scoring.py",
+          "sha256": "7387195f9f11e2450a7ab00d884642ba5129237d1e773d9079a8b298a1ca76c2"
+        },
+        {
+          "listed": "actionmesh/prepare_c01_native_scoring.py",
+          "path": "actionmesh/prepare_c01_native_scoring.py",
+          "sha256": "0d90a1d20a68d2866dad3cf743b11206400b98babceb6346fddc326822638f7d"
+        },
+        {
+          "listed": "actionmesh/launch_c01_native_scoring.py",
+          "path": "actionmesh/launch_c01_native_scoring.py",
+          "sha256": "a8af81f0f1f6e0c595309020a2cd650afa74ba1dce83436a3ce59112dee7c12a"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c10",
+      "priority": 3,
+      "name": "形变梯度的可积投影",
+      "inputs": [
+        "legal independently estimated differential targets h",
+        "mesh gradient/incidence operator G",
+        "positive W and per-component pins"
+      ],
+      "source_status": "source_complete_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "First run the current-source zero-GPU prepare_control_scoring_checks.py harness plan; then follow LOCAL_AGENT_RUNBOOK.md C10 section to build and execute the zero-GPU prepare_integrable_gradient_candidate.py plan against an exact retained sequence/report pair, materialize its bounded archive, run validate_candidate_artifact, and only after scientific admission build the one-shot official scoring plan.",
+      "scientific_prerequisites": [
+        "task-relevant natural nonintegrable field",
+        "qualified common target generator and reconstruction comparators",
+        "gauge/connectivity and sparse solver qualification",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/integrable_gradient_candidate.py",
+          "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+          "sha256": "58d0460213ace2df1f5f8c6d700dd56d2d1ba8bf11d3fd5dbaef9b1049a0a659"
+        },
+        {
+          "listed": "actionmesh/prepare_integrable_gradient_candidate.py",
+          "path": "actionmesh/prepare_integrable_gradient_candidate.py",
+          "sha256": "961371579ed4e21dc07e6fa68971ab23f1c00637f84fea2dde6c0539e78312b9"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c13",
+      "priority": 4,
+      "name": "稀疏加速度的事件保留修复",
+      "inputs": [
+        "full native coordinates Yhat",
+        "SPD observation metric M and explicit anchor affine term",
+        "second differences D2 at actual native timestep units"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted: distinct candidate core/full-sequence export, five-role freeze, official scoring runner, bounded raw collection and authorization-gated common-harness plan-builder/controller source are authored; no scientific plan was emitted, and Local/scientific verification and native results remain open",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_group_acceleration_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --identity-observation-metric --run-id c13-group-candidate-001 --plan-dir $project_dir/plans/c13-group-candidate-001 --group-weight $frozen_group_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --gap-tolerance $frozen_gap_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c13_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
+      "scientific_prerequisites": [
+        "native gap not closed by Gaussian/quadratic baselines",
+        "event-preservation prediction supported on natural development cases",
+        "group primal/dual gap and parameter/time-unit freeze",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/group_acceleration_candidate.py",
+          "path": "actionmesh/research_math/group_acceleration_candidate.py",
+          "sha256": "fa70f5a7f7183d72193bde8e5eae53c5339eaec12f025df3db49345264c5bb07"
+        },
+        {
+          "listed": "actionmesh/research_math/c13_native_comparison.py",
+          "path": "actionmesh/research_math/c13_native_comparison.py",
+          "sha256": "53e1edbf4963c8374eb4e0e1436079adcc45d85c934ef24f72eecef9f34a866e"
+        },
+        {
+          "listed": "actionmesh/research_math/c13_native_scoring.py",
+          "path": "actionmesh/research_math/c13_native_scoring.py",
+          "sha256": "95b4eac7468072d96c7c195c2c8f8b653f1fdfd779ea26e9ee4a3d9b5872f75c"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c14",
+      "priority": 5,
+      "name": "共转坐标中的时间修复",
+      "inputs": [
+        "full native coordinates and anchor",
+        "input/model-derived frozen R_t in SO(3),c_t",
+        "declared zero-preserving anchored residual repair"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted: distinct candidate core/full-sequence export, five-role freeze, official scoring runner, bounded raw collection and authorization-gated common-harness plan-builder/controller source are authored; no scientific plan was emitted, and Local/scientific verification and native results remain open",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "After current common CPU software acceptance and controller verification of the retained source pair: $python_bin $project_dir/actionmesh/prepare_corotational_residual_candidate.py --root $project_dir --skill-dir $skill_dir --source-sequence $project_dir/inputs/original-case/sequence.npz --run-id c14-corotational-candidate-001 --plan-dir $project_dir/plans/c14-corotational-candidate-001 --weight $frozen_group_tv_weight --rho $frozen_admm_rho --absolute-tolerance $frozen_abs_tolerance --relative-tolerance $frozen_rel_tolerance --max-iterations $frozen_max_iterations --wall-seconds $c14_cpu_wall_seconds; inspect and execute only the printed digest through run_harness.py. GPU STOP remains effective.",
+      "scientific_prerequisites": [
+        "qualified pose fit without GT or evaluator ICP",
+        "rigid/articulated regime of applicability",
+        "SFG/STAC/basic rigid-aligned smoothing collision; baseline role unless extra delta",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "candidate-specific IPCG closure against SFG/STAC/basic rigid-aligned smoothing",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "dynamic admission to the delivered G01 development/confirmation design, including reviewed family split and D1-only B* freeze",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/corotational_residual_candidate.py",
+          "path": "actionmesh/research_math/corotational_residual_candidate.py",
+          "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"
+        },
+        {
+          "listed": "actionmesh/research_math/c14_native_comparison.py",
+          "path": "actionmesh/research_math/c14_native_comparison.py",
+          "sha256": "6bdb7d99b2154cb2c9a1200181b9eff54c5a2874b9335481e72e53dd7ff529b7"
+        },
+        {
+          "listed": "actionmesh/research_math/c14_native_scoring.py",
+          "path": "actionmesh/research_math/c14_native_scoring.py",
+          "sha256": "9f82beda540fb3f236ef89994422c8937230341804884e3c6288eb8901039622"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c04",
+      "priority": 6,
+      "name": "不确定动作约束下的稳健修复",
+      "inputs": [
+        "common desired geometry repair d",
+        "legal motion-surrogate gradient g0",
+        "PSD set shape S, radius r and epsilon",
+        "anchor pins and Hessian/trust-region obligation"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "Follow LOCAL_AGENT_RUNBOOK.md#c04-robust-motion-protection-and-retained-native-acceptance: common CPU acceptance, one-attempt prepare_robust_motion_candidate.py, retained-real prepare_c04_native_acceptance.py; only after full admission and explicit exact-attempt GPU resume use official scoring plan/launcher.",
+      "scientific_prerequisites": [
+        "legal motion surrogate and meaningful uncertainty set",
+        "held-out semantic/coverage check if probability coverage claimed",
+        "nonlinear remainder bounds and fair solver budget",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/robust_motion_candidate.py",
+          "path": "actionmesh/research_math/robust_motion_candidate.py",
+          "sha256": "8a353a6ff66b909b49f3d3d8e33d3180efcdd1e56737eb2daec97537cc295783"
+        },
+        {
+          "listed": "actionmesh/prepare_robust_motion_candidate.py",
+          "path": "actionmesh/prepare_robust_motion_candidate.py",
+          "sha256": "8554a7e11a95fed8fd7dc06ee5fec6e4c1c75d3b68587688a7ce7a71d49c869b"
+        },
+        {
+          "listed": "actionmesh/prepare_c04_native_acceptance.py",
+          "path": "actionmesh/prepare_c04_native_acceptance.py",
+          "sha256": "2901f3ddf6d1f7264ada5b7ae9cc5d80a979d0aa53e670ce9b2e1709db89624e"
+        },
+        {
+          "listed": "actionmesh/research_math/c04_native_comparison.py",
+          "path": "actionmesh/research_math/c04_native_comparison.py",
+          "sha256": "b97da830932e59bead6fca01e904a441c7a37e67a55fb789ff99cbfb5e6b16a1"
+        },
+        {
+          "listed": "actionmesh/research_math/c04_native_scoring.py",
+          "path": "actionmesh/research_math/c04_native_scoring.py",
+          "sha256": "acdc0b15c10032e0b1027d89ab48c284a7cf6648bc9588b445391ad452078633"
+        },
+        {
+          "listed": "actionmesh/prepare_c04_native_scoring.py",
+          "path": "actionmesh/prepare_c04_native_scoring.py",
+          "sha256": "52eb22c837ffa40e14de3d2aa2201476f44d0fc51bc75ce6fef02464a3cd5858"
+        },
+        {
+          "listed": "actionmesh/launch_c04_native_scoring.py",
+          "path": "actionmesh/launch_c04_native_scoring.py",
+          "sha256": "82a2ae808efd63b900b7f4a3d1738f0d8ad891fe1598c493bd93f529a43bd3b1"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c03",
+      "priority": 7,
+      "name": "相关参考误差的矩阵校正：原生指标边界与非平方标定",
+      "inputs": [
+        "same-context self residual r0[T_anchor,V,3]",
+        "development-only labeled error policy",
+        "frozen means, B_t estimator and regularization",
+        "qualified legal development correspondence/lift and coordinate/alignment policy",
+        "fixed weights, tau, lambda and stop conditions; no confirmation fitting"
+      ],
+      "source_status": "complete_source_chain_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "python actionmesh/prepare_c03_native_acceptance.py --root $REPO --skill-dir $RESEARCH_AUTOPILOT_SKILL_DIR --artifact-candidate $REPO/actionmesh/c03-candidate-output/candidate.json --plan-dir $REPO/actionmesh/c03-native-acceptance-plan --run-id c03-native-acceptance --wall-seconds 600 --ram-mib 4096 && python $RESEARCH_AUTOPILOT_SKILL_DIR/scripts/run_harness.py --root $REPO --plan $REPO/actionmesh/c03-native-acceptance-plan/harness.json",
+      "scientific_prerequisites": [
+        "legal development error/moment calibration and family-split transfer",
+        "fitted means and covariance conditioning",
+        "no confirmation label access",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "explicit pointwise-to-native metric bridge or stated surrogate limitation",
+        "matched unsquared intercept/diagonal comparators",
+        "data-calibrated versus zero-shot claim boundary"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/prepare_c03_label_bank.py",
+          "path": "actionmesh/prepare_c03_label_bank.py",
+          "sha256": "f8077b768fc59feb9bbf2f62485c3b8cbe4ba86d12eb9045aea534b8a5a7e305"
+        },
+        {
+          "listed": "actionmesh/prepare_c03_calibration.py",
+          "path": "actionmesh/prepare_c03_calibration.py",
+          "sha256": "c4d021a49a3902b3670906d8fd49cb32898167e5ec582ce8e3bd8800e8d0dabb"
+        },
+        {
+          "listed": "actionmesh/prepare_correlated_calibration_candidate.py",
+          "path": "actionmesh/prepare_correlated_calibration_candidate.py",
+          "sha256": "5531126fa61352dc7af06057684cbafe508522fb86819204ac0e43ff5cace2a5"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c20",
+      "priority": 8,
+      "name": "相位与动作幅度的可识别分解",
+      "inputs": [
+        "legal input/model motion target r",
+        "fixed endpoint-preserving phase and amplitude bases",
+        "original time IDs, derivative bounds, positive amplitude ridge"
+      ],
+      "source_status": "full_generated_unexecuted_chain",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "Follow LOCAL_AGENT_RUNBOOK.md C20 section: build the canonical zero-GPU freeze; only under a new exact single-use target authorization emit/launch the target plan; use its retained plan/receipt to emit the zero-GPU four-arm candidate plan; then emit the receipt-aware acceptance/comparison request and authorization-gated official scoring plan. Do not execute while GPU STOP remains active.",
+      "scientific_prerequisites": [
+        "Local qualification of the decoder-consensus self-consistency surrogate; camera/GT remain forbidden",
+        "phase/amplitude identifiability",
+        "small-warp regime, monotonicity and nonlinear residual check",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "frozen target and W-orthogonal phase/action gauge",
+        "rank/kappa/noise/interpolation qualification",
+        "ridge inversion is not data identifiability",
+        "full constrained analysis when warp inequalities activate"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/c20_consensus_target.py",
+          "path": "actionmesh/research_math/c20_consensus_target.py",
+          "sha256": "d48196ad6109103aa7d7a373dacd714313ce0df7ecd514d0d75e1b7102ae1bce"
+        },
+        {
+          "listed": "phase_amplitude_artifacts.py",
+          "path": "actionmesh/research_math/phase_amplitude_artifacts.py",
+          "sha256": "fc87d8572b5eb71726d3b5c74fc3283255a7dde8f50641bcdb53b168abf858a8"
+        },
+        {
+          "listed": "c20_native_comparison.py",
+          "path": "actionmesh/research_math/c20_native_comparison.py",
+          "sha256": "4396b69b234cad2eb983f5a613e7781e47febaabc57fdb543935a435ecb5eb13"
+        },
+        {
+          "listed": "c20_native_scoring.py",
+          "path": "actionmesh/research_math/c20_native_scoring.py",
+          "sha256": "523362f581c11e81965d88b89e8ba9fcd1986fd97d648bd48f7e178ecbdfafcc"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c11",
+      "priority": 9,
+      "name": "保留旋转的应变约束修复",
+      "inputs": [
+        "qualified full-rank local square maps with explicit frame completion",
+        "positive stretch bounds l,u and common lift",
+        "original native mesh and anchor pins"
+      ],
+      "source_status": "full_generated_unexecuted_chain",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "python actionmesh/prepare_strain_projection_candidate.py --root <root> --skill-dir <skill> --source-sequence <receipt-bound-sequence.npz> --stretch-bounds <frozen-lower> <frozen-upper> --elastic-weight <frozen> --degeneracy-epsilon <frozen> --absolute-tolerance <frozen> --relative-tolerance <frozen> --max-iterations <frozen> --coordinate-bounds <frozen-lower> <frozen-upper> --bounds-policy reject --max-artifact-bytes <frozen<=1GiB> --run-id <id> --plan-dir <new-dir> --wall-seconds <bounded>; inspect and run only the printed harness plan/digest; then materialize the retained three-file receipt with strain_projection_candidate.materialize_candidate_archive under explicit archive/member ceilings and call validate_candidate_artifact on the restored candidate.json before freeze",
+      "scientific_prerequisites": [
+        "natural strain artifacts distinct from legitimate stretching",
+        "square-map construction and degenerate/reflection handling",
+        "classical polar/old m01/STAC functional delta",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/strain_projection_candidate.py",
+          "path": "actionmesh/research_math/strain_projection_candidate.py",
+          "sha256": "fd7fadb047aa075fb7ce66a8b3c5fac72fe60596e731995349979ca462492097"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c12",
+      "priority": 10,
+      "name": "最大可行的三角面安全修正",
+      "inputs": [
+        "same proposed full-mesh update d",
+        "original faces, nondegenerate normals and beta",
+        "common constraint checking, scalar-root and numerical-margin policy"
+      ],
+      "source_status": "full_generated_unexecuted_chain",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "python <skill>/scripts/run_harness.py <c12-artifact-plan-dir>/harness.json --root <remote-root> --execute --approved-plan-digest <digest>; then validate_candidate_artifact and the C12 comparison/scoring request profiles through the common CPU acceptance plan",
+      "scientific_prerequisites": [
+        "meaningful natural repair-safety gap and permitted large-rotation boundary",
+        "exact first crossing versus tangent root handling",
+        "ordinary line-search necessity; potentially engineering baseline only",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/area_admission_candidate.py",
+          "path": "actionmesh/research_math/area_admission_candidate.py",
+          "sha256": "30b4a4e05b3dd0121e1a398d2eee3e44e0c030597f53dce52ecb38641d43402d"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c15",
+      "priority": 11,
+      "name": "保护动作分量的低秩轨迹修复",
+      "inputs": [
+        "full trajectory matrix Uhat[T,3V]",
+        "fixed orthogonal Q containing the actual anchor basis",
+        "frozen lambda and residual-rank policy"
+      ],
+      "source_status": "full_generated_unexecuted_chain",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "python actionmesh/prepare_protected_lowrank_candidate.py --root <root> --skill-dir <skill> --source-sequence <receipt-bound-sequence.npz> --basis <frozen-basis.npy> --basis-evidence <prospective-evidence.json> --basis-source-policy analytic_anchored_dct --lambda-value <frozen> --residual-rank-policy candidate_export_numeric_rank --basis-orthogonality-tolerance <frozen> --protected-coefficient-tolerance <frozen> --numeric-rank-tolerance <frozen-relative> --max-artifact-bytes <frozen<=1GiB> --run-id <id> --plan-dir <new-dir> --wall-seconds <bounded>; inspect then run only the printed harness plan/digest",
+      "scientific_prerequisites": [
+        "legal fixed protection basis and meaningful residual low-rank prior",
+        "Mesh4D/classical SVT functional delta",
+        "same rank/tuning budget and true fine-motion failure boundary",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/protected_lowrank_candidate.py",
+          "path": "actionmesh/research_math/protected_lowrank_candidate.py",
+          "sha256": "c57f036f8cf9891500b17d1973348d96448c189126fa8161c24b1dce6062be03"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c05",
+      "priority": 12,
+      "name": "保留对应多解的空间联合分支",
+      "inputs": [
+        "qualified sparse target modes and normalized scores per anchor landmark",
+        "fixed anchor spatial graph and legal R_ij hints",
+        "identical output lift for every mode reduction"
+      ],
+      "source_status": "source_complete_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "python actionmesh/prepare_c05_native_acceptance.py --root $PROJECT --skill-dir $SKILL_DIR --artifact-candidate $C05_ARTIFACT/candidate.json --plan-dir $PROJECT/plans/$RUN_ID --run-id $RUN_ID --wall-seconds 3600 --ram-mib $RAM_MIB; execute only the emitted zero-GPU harness plan/digest",
+      "scientific_prerequisites": [
+        "same-anchor empirical coordinate modes with task-consequential separated-mode Natural Gate",
+        "natural mode ambiguity with task consequence",
+        "m03/STAC functional collision and capture equivalence",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
+        "actual coordinate bank rather than latent-attention entropy",
+        "STAC-compatible common support/lift qualification",
+        "score versus posterior-calibration claim boundary"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/prepare_c05_mode_bank.py",
+          "path": "actionmesh/prepare_c05_mode_bank.py",
+          "sha256": "32bd5ef5369ef17aa05de40583fce8634de37f834e6a539e73fb3a174b891fd8"
+        },
+        {
+          "listed": "actionmesh/prepare_spatial_mode_candidate.py",
+          "path": "actionmesh/prepare_spatial_mode_candidate.py",
+          "sha256": "a9b4b35b16d422b6df8fb681f9d5df0224dd64603593efe545afced3417c3d28"
+        },
+        {
+          "listed": "actionmesh/prepare_c05_native_acceptance.py",
+          "path": "actionmesh/prepare_c05_native_acceptance.py",
+          "sha256": "1ea50625a99f8bc2005456203f77f3565603293f3b788ed746a712d53efaac84"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c08",
+      "priority": 13,
+      "name": "端点约束的轨迹分布桥",
+      "inputs": [
+        "one completed same-UID ActionMesh sequence.npz/report.json pair",
+        "16 float32 predicted mesh frames with fixed native topology and IDs",
+        "frozen epsilon, neighbor count, endpoint tolerance and iteration ceiling"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted: one receipt-bound predicted sequence supplies a strict sparse geometry reference chain, explicit adjacent area-feasibility witnesses, log-domain endpoint bridge, whole-path conditional-mean lift, four artifact roles, six-role freeze, official scoring/raw collection and authorization-gated common-harness plan/launcher; no Local or scientific execution occurred",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "First execute the common CPU acceptance through its emitted harness plan. Then build the receipt-bound CPU artifact plan: \"$python_bin\" \"$project_dir/actionmesh/prepare_trajectory_bridge_candidate.py\" --root \"$project_dir\" --skill-dir \"$skill_dir\" --source-sequence \"$source_case/sequence.npz\" --run-id c08-trajectory-bridge-001 --epsilon \"$epsilon\" --neighbors \"$neighbors\" --tolerance \"$tolerance\" --max-iterations \"$max_iterations\" --smoothing-strength \"$smoothing_strength\" --coordinate-bounds \"$lower\" \"$upper\" --bounds-policy preserve_and_report --max-artifact-bytes \"$max_artifact_bytes\" --wall-seconds \"$wall_seconds\" --ram-mib \"$ram_mib\" --plan-dir \"$project_dir/plans/c08-trajectory-bridge-001\"; execute only the printed approved harness plan. Retained real replay and comparison/scoring request preparation must use prepare_c08_native_acceptance.py and its emitted zero-GPU plan before any scoring authorization.",
+      "scientific_prerequisites": [
+        "Local numerical/profile and retained real-artifact replay",
+        "one retained 16/16 source pair and exact candidate artifact",
+        "prospective six-role freeze/family/B* design and official-score authorization",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "Local code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/trajectory_bridge_candidate.py",
+          "path": "actionmesh/research_math/trajectory_bridge_candidate.py",
+          "sha256": "f9de69195e027ebe09d21a516382fd792d727ce51bc54d5326ee1f90f1044689"
+        },
+        {
+          "listed": "actionmesh/prepare_trajectory_bridge_candidate.py",
+          "path": "actionmesh/prepare_trajectory_bridge_candidate.py",
+          "sha256": "ea2e199fedaa468520c8d6559b05a701c711121c3ea5220337311664d3a2917d"
+        },
+        {
+          "listed": "actionmesh/prepare_c08_native_acceptance.py",
+          "path": "actionmesh/prepare_c08_native_acceptance.py",
+          "sha256": "5d1009b9f876f645fef7c572e35392f4616f9c77e4afe27e1e22f953a4b8a60e"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c06",
+      "priority": 14,
+      "name": "面积边际约束的对应运输",
+      "inputs": [
+        "same permitted feature cost matrix and sparse support",
+        "source/target model surface areas with equal total mass",
+        "positive entropy epsilon and original vertex mapping"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted: geometry-only specialization, three complete artifact arms, five-role freeze, official scoring/raw collection and authorization-gated common-harness plan/launcher are authored; no Local or scientific execution occurred",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "First execute the common CPU acceptance through its emitted harness plan. Then build the receipt-bound CPU artifact plan: \"$python_bin\" \"$project_dir/actionmesh/prepare_area_transport_candidate.py\" --root \"$project_dir\" --skill-dir \"$skill_dir\" --source-sequence \"$source_case/sequence.npz\" --run-id c06-area-transport-001 --epsilon \"$epsilon\" --neighbors \"$neighbors\" --tolerance \"$tolerance\" --max-iterations \"$max_iterations\" --coordinate-bounds \"$lower\" \"$upper\" --bounds-policy preserve_and_report --max-artifact-bytes \"$max_artifact_bytes\" --wall-seconds \"$wall_seconds\" --ram-mib \"$ram_mib\" --plan-dir \"$project_dir/plans/c06-area-transport-001\"; execute only the printed approved harness plan, then create/verify the prospective five-role freeze/request before any scoring authorization. Retained real replay and comparison/scoring request preparation must use prepare_c06_native_acceptance.py, then its emitted zero-GPU harness plan; never call replay/request directly.",
+      "scientific_prerequisites": [
+        "qualified legal surface features and feasible support",
+        "area-marginal assumption versus real stretch",
+        "fair sparse-bank/lift and area-zero handling",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/area_transport_candidate.py",
+          "path": "actionmesh/research_math/area_transport_candidate.py",
+          "sha256": "4d4de7214c65abe1207114a0b4134c32756a5ec593fa051998ce481a00623571"
+        },
+        {
+          "listed": "actionmesh/prepare_area_transport_candidate.py",
+          "path": "actionmesh/prepare_area_transport_candidate.py",
+          "sha256": "9ed3338fda1f9d77605bfee878cde98bc621b9e65bd4d12f154c94813b10c327"
+        },
+        {
+          "listed": "actionmesh/prepare_c06_native_acceptance.py",
+          "path": "actionmesh/prepare_c06_native_acceptance.py",
+          "sha256": "08fd6e8cda26979b82b7892365bc37af6e4f2f954f9c4f64edad5b94a94ed688"
+        }
+      ]
+    },
+    {
+      "id": "4d-math-20261006-c07",
+      "priority": 15,
+      "name": "允许不匹配质量的部分运输",
+      "inputs": [
+        "same feature bank, areas, cost and support as full transport",
+        "frozen unmatched penalty gamma and entropy epsilon",
+        "full native output available for unmatched fallback"
+      ],
+      "source_status": "source_chain_complete_generated_unexecuted",
+      "full_method_source_complete": true,
+      "local_method_verified": false,
+      "native_result": "not_started",
+      "local_method_acceptance_command": "Follow LOCAL_AGENT_RUNBOOK.md C07 section: emit prepare_partial_transport_candidate.py with frozen gamma/epsilon/support/solver/bounds/resources, execute its printed harness plan, then emit prepare_c07_native_acceptance.py for the retained candidate and execute that zero-GPU harness plan. Request preparation uses the same builder with all prospective freeze and native scorer inputs.",
+      "scientific_prerequisites": [
+        "task-relevant unsupported matches on natural cases",
+        "Local verification of mass/slack solver and complete fallback semantics",
+        "ordinary threshold-fallback comparator not deliberately disadvantaged",
+        "final 16/16 raw receipts and native replay",
+        "Natural Gate 0 PASS; required importance/collision decision",
+        "code identity/software/native-interface verification",
+        "strongest executable baseline and fair information/cost",
+        "frozen IDs, effect/NI criteria, independent-unit inference and full native design review"
+      ],
+      "source_files": [
+        {
+          "listed": "actionmesh/research_math/partial_transport_candidate.py",
+          "path": "actionmesh/research_math/partial_transport_candidate.py",
+          "sha256": "a44993cb331d2e94862c29758aa65caf62b50503e257b8bd7e963a398a91bf09"
+        },
+        {
+          "listed": "actionmesh/prepare_partial_transport_candidate.py",
+          "path": "actionmesh/prepare_partial_transport_candidate.py",
+          "sha256": "dd5c0e0d9dd73edce4bcd75f0d6b15ed49a3d6380553325b061d623605953209"
+        },
+        {
+          "listed": "actionmesh/prepare_c07_native_acceptance.py",
+          "path": "actionmesh/prepare_c07_native_acceptance.py",
+          "sha256": "e37497277b2a7dd38db8c6ec6b9ff39c37b1cf516d573a83293ac3062fb81102"
+        }
+      ]
+    }
+  ]
+}
