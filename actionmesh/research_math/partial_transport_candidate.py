@@ -440,6 +440,47 @@ def _group_logsumexp(indices: np.ndarray, values: np.ndarray, size: int) -> np.n
     return result
 
 
+def _bounded_dual_newton(potential, evaluate):
+    """One bounded Newton-CG step on the unchanged entropic dual objective.
+
+    evaluate returns value, gradient, Hessian-vector product and a positive
+    diagonal scale. Gauge/ridge terms regularize only the search direction;
+    acceptance always uses the original objective and marginal residuals.
+    """
+    from scipy.sparse.linalg import LinearOperator, cg
+
+    value, gradient, hessian_vector, scale = evaluate(potential)
+    size = len(potential)
+    ridge = 1e-12 * max(float(np.max(scale)), np.finfo(np.float64).tiny)
+    def product(vector):
+        return hessian_vector(vector) + ridge * vector + np.mean(vector)
+    operator = LinearOperator((size, size), matvec=product, dtype=np.float64)
+    direction, _ = cg(operator, -gradient, rtol=1e-7, atol=0.,
+                      maxiter=min(size, 100))
+    direction -= np.mean(direction)
+    slope = float(np.dot(gradient, direction))
+    if not np.isfinite(direction).all() or not np.isfinite(slope) or slope >= 0.:
+        return potential
+    # Bound potential movement even for almost disconnected sparse kernels.
+    maximum = float(np.max(np.abs(direction)))
+    if maximum > 20.:
+        direction *= 20. / maximum
+        slope = float(np.dot(gradient, direction))
+    error = float(np.max(np.abs(gradient)))
+    for backtrack in range(20):
+        step = 0.5 ** backtrack
+        trial = potential + step * direction
+        trial -= np.mean(trial)
+        trial_value, trial_gradient, _, _ = evaluate(trial)
+        rounding = 32 * np.finfo(np.float64).eps * max(1., abs(value))
+        if (np.isfinite(trial_value) and
+                (trial_value <= value + 1e-4 * step * slope or
+                 abs(trial_value - value) <= rounding and
+                 np.max(np.abs(trial_gradient)) < error)):
+            return trial
+    return potential
+
+
 def sparse_sinkhorn(rows: np.ndarray, columns: np.ndarray, costs: np.ndarray,
                     source_mass: np.ndarray, target_mass: np.ndarray, *,
                     epsilon: float, tolerance: float,
@@ -472,6 +513,18 @@ def sparse_sinkhorn(rows: np.ndarray, columns: np.ndarray, costs: np.ndarray,
     log_source, log_target = np.log(source_mass), np.log(target_mass)
     log_u = np.zeros(n, dtype=np.float64)
     log_v = np.zeros(m, dtype=np.float64)
+    def dual_state(potential):
+        norm = _group_logsumexp(rows, log_kernel + potential[columns], n)
+        weights = np.exp(log_source[rows] + log_kernel + potential[columns] - norm[rows])
+        column_mass = np.bincount(columns, weights=weights, minlength=m)
+        gradient = column_mass - target_mass
+        def hessian_vector(vector):
+            row_product = np.bincount(rows, weights=weights * vector[columns], minlength=n)
+            return (column_mass * vector - np.bincount(
+                columns, weights=weights * (row_product / source_mass)[rows], minlength=m))
+        value = float(np.dot(source_mass, norm) - np.dot(target_mass, potential))
+        return value, gradient, hessian_vector, column_mass
+
     residual = relative_residual = math.inf
     for iteration in range(1, max_iterations + 1):
         row_norm = _group_logsumexp(rows, log_kernel + log_v[columns], n)
@@ -482,6 +535,9 @@ def sparse_sinkhorn(rows: np.ndarray, columns: np.ndarray, costs: np.ndarray,
         if not np.isfinite(column_norm).all():
             raise RuntimeError("Sparse support has an empty target column")
         log_v = log_target - column_norm
+        if iteration % 10 == 0:
+            log_v = _bounded_dual_newton(log_v, dual_state)
+            log_u = log_source - _group_logsumexp(rows, log_kernel + log_v[columns], n)
         if iteration == 1 or iteration % 10 == 0 or iteration == max_iterations:
             plan = np.exp(log_u[rows] + log_kernel + log_v[columns])
             row_sum = np.zeros(n); column_sum = np.zeros(m)

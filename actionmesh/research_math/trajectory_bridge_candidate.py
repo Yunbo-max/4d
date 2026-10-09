@@ -33,6 +33,7 @@ import time
 import numpy as np
 
 from research_math.area_transport_candidate import (
+    _bounded_dual_newton,
     _scaled_features,
     _support_hash,
     build_sparse_support,
@@ -268,9 +269,45 @@ def solve_endpoint_bridge(kernels: list[dict], initial: np.ndarray, final: np.nd
     size = initial.size
     log_initial, log_final = np.log(initial), np.log(final)
     log_v = np.zeros(size, dtype=np.float64)
+    def dual_state(potential):
+        backward = [None] * 16
+        backward[15] = potential
+        for step in range(14, -1, -1):
+            kernel = kernels[step]
+            backward[step] = _row_logsumexp(
+                kernel["rows"], kernel["log_probability"]
+                + backward[step + 1][kernel["columns"]], size)
+        policies, marginals = [], [initial]
+        for step, kernel in enumerate(kernels):
+            rows, columns = kernel["rows"], kernel["columns"]
+            probability = np.exp(kernel["log_probability"]
+                + backward[step + 1][columns] - backward[step][rows])
+            policies.append(probability)
+            marginals.append(np.bincount(columns,
+                weights=marginals[-1][rows] * probability, minlength=size))
+        def hessian_vector(vector):
+            conditional = [None] * 16
+            conditional[15] = vector
+            for step in range(14, -1, -1):
+                kernel = kernels[step]
+                conditional[step] = np.bincount(kernel["rows"],
+                    weights=policies[step] * conditional[step + 1][kernel["columns"]],
+                    minlength=size)
+            derivative = np.zeros(size)
+            for step, kernel in enumerate(kernels):
+                rows, columns = kernel["rows"], kernel["columns"]
+                derivative = np.bincount(columns, weights=policies[step] * (
+                    derivative[rows] + marginals[step][rows] * (
+                        conditional[step + 1][columns] - conditional[step][rows])),
+                    minlength=size)
+            return derivative
+        value = float(np.dot(initial, backward[0]) - np.dot(final, potential))
+        return value, marginals[-1] - final, hessian_vector, marginals[-1]
+
     residual = math.inf
     trace = []
     for iteration in range(1, max_iterations + 1):
+        previous_log_v = log_v.copy()
         backward = [None] * 16
         backward[15] = log_v
         for step in range(14, -1, -1):
@@ -289,6 +326,10 @@ def solve_endpoint_bridge(kernels: list[dict], initial: np.ndarray, final: np.nd
         new_log_v -= float(np.dot(final, new_log_v))
         residual = float(np.max(np.abs(new_log_v - log_v)))
         log_v = new_log_v
+        if iteration % 10 == 0:
+            log_v = _bounded_dual_newton(log_v, dual_state)
+        log_v -= float(np.dot(final, log_v))
+        residual = float(np.max(np.abs(log_v - previous_log_v)))
         # Check the actual constrained marginals, not only potential movement.
         check_backward = [None] * 16
         check_backward[15] = log_v

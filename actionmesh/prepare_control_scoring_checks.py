@@ -147,7 +147,11 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ('root', 'skill-dir', 'plan-dir'): parser.add_argument('--'+name, type=Path, required=True)
     parser.add_argument('--run-id', required=True)
+    parser.add_argument('--timeout-seconds', type=int, default=120,
+                        help='Explicit CPU attempt ceiling, between 30 and 1200 seconds')
     args = parser.parse_args()
+    if not 30 <= args.timeout_seconds <= 1200:
+        parser.error('--timeout-seconds must be between 30 and 1200')
     root = args.root.resolve(); plan_dir = args.plan_dir.resolve(); plan_dir.relative_to(root)
     scripts = args.skill_dir.resolve()/'scripts'
     if not (scripts/'run_harness.py').is_file(): parser.error('Complete installed skill required')
@@ -173,7 +177,8 @@ def main():
                     'data_revision': 'engineering fixtures only; no benchmark evidence',
                     'environment_digest': hashlib.sha256(sys.version.encode()).hexdigest()},
         limits={'max_attempts': 1, 'max_development_trials': 1, 'max_confirmation_trials': 0,
-                'max_retries_per_trial': 0, 'wall_time_seconds': 120, 'attempt_timeout_seconds': 120})
+                'max_retries_per_trial': 0, 'wall_time_seconds': args.timeout_seconds,
+                'attempt_timeout_seconds': args.timeout_seconds})
     plan_dir.mkdir(parents=True, exist_ok=False)
     native_path = plan_dir/'native.json'; native_path.write_text(json.dumps(plan, indent=2)+'\n')
     outer = harness.make_plan(root, batch_id=args.run_id,
@@ -181,7 +186,8 @@ def main():
                 'depends_on': [], 'priority': 1, 'plan_ref': file_ref(root, native_path),
                 'resources': {'cpu_cores': 1, 'ram_mib': 2048, 'gpu_count': 0, 'gpu_peak_mib': None,
                               'allow_gpu_share': False, 'memory_profile_ref': None, 'exclusive_keys': []}}],
-        limits={'total_wall_seconds': 180, 'window_seconds': 180, 'max_parallel_tasks': 1,
+        limits={'total_wall_seconds': args.timeout_seconds + 60,
+                'window_seconds': args.timeout_seconds + 60, 'max_parallel_tasks': 1,
                 'cpu_cores': 1, 'ram_mib': 2048, 'max_gpu_task_seconds': 0})
     (plan_dir/'harness.json').write_text(json.dumps(outer, indent=2)+'\n')
     print(json.dumps({'plan': str(plan_dir/'harness.json'), 'approved_plan_digest': outer['plan_digest'],
