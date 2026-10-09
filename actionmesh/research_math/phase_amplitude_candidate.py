@@ -216,6 +216,7 @@ def solve_phase_amplitude(vertices, target, times, phase_basis, amplitude_basis,
                           max_abs_warp: float,
                           max_relative_linearization_remainder: float,
                           max_gamma_noise_amplification: float,
+                          max_relative_stationarity_residual: float,
                           rank_tolerance: float = 1e-10,
                           constraint_tolerance: float = 1e-10,
                           max_active_iterations: int = 512) -> PhaseAmplitudeResult:
@@ -254,6 +255,9 @@ def solve_phase_amplitude(vertices, target, times, phase_basis, amplitude_basis,
         "max_relative_linearization_remainder", max_relative_linearization_remainder)
     gamma_noise_limit = _positive(
         "max_gamma_noise_amplification", max_gamma_noise_amplification)
+    stationarity_limit = _positive(
+        "max_relative_stationarity_residual",
+        max_relative_stationarity_residual)
     rank_tolerance = _positive("rank_tolerance", rank_tolerance)
     constraint_tolerance = _positive("constraint_tolerance", constraint_tolerance)
     if isinstance(max_active_iterations, bool) or not isinstance(max_active_iterations, int) or max_active_iterations < 1:
@@ -331,6 +335,9 @@ def solve_phase_amplitude(vertices, target, times, phase_basis, amplitude_basis,
             augmented_design, augmented_target, constraints, bounds,
             constraint_tolerance, max_active_iterations)
         regime = "full_constrained_block"
+    if normal_residual > stationarity_limit:
+        raise PhaseAmplitudeError(
+            "relative stationarity residual exceeds frozen limit")
 
     xi = coefficients[:phase.shape[1]]
     gamma = coefficients[phase.shape[1]:]

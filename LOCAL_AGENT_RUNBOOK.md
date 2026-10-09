@@ -491,56 +491,108 @@ scoring execution path is `prepare_c08_native_scoring.py` followed by
 `launch_c08_native_scoring.py`. GPU STOP remains effective; source completion is
 not Local verification, a native result or a scientific conclusion.
 
-### C20 phase/amplitude solver core — partial source, no legal target producer
+### C20 decoder-consensus phase/amplitude chain — source complete, not executed
 
-Current source is `generated_unexecuted`. The numerical entry is
-`actionmesh/research_math/phase_amplitude_candidate.py`; authored engineering
-checks are in
-`actionmesh/research_math/tests/test_phase_amplitude_candidate.py`. This is only
-the C20 constrained solver core. It is not a native artifact builder, method
-acceptance plan, comparison freeze or scoring chain, so the 11/15 source-complete
-count does not change.
+The complete C20 chain is `generated_unexecuted`; Local/native verification and
+results are still 0. Keep GPU STOP. The method uses one exact retained ActionMesh
+Stage-II context in direct-coordinate mode. It replays source times 0/8/15 with
+the same latent bank, model, clock and source-time XYZ+upstream-normal query,
+then anchor-projects their equal-coordinate consensus. This is a falsifiable
+model self-consistency surrogate, not truth or calibration. Never pass camera,
+`surfaces.npy`, scorer ICP, candidate outcomes or confirmation outcomes.
 
-`solve_phase_amplitude` consumes a complete `[T,V,3]` predicted trajectory, an
-equally shaped **qualified desired additive correction**, original timestamps, an
-exact endpoint-zero phase basis and a frozen `[Q,T,V,3]` amplitude basis. It
-builds the first-order phase block, computes the whitened phase/amplitude
-principal-angle certificate `kappa`, rejects deficient or below-floor problems,
-and uses the unconstrained weighted block solution only when every monotonicity
-inequality is inactive. Otherwise it solves the full constrained block problem
-with retained KKT/violation checks. It then interpolates the input trajectory at
-the internal warped times, adds the amplitude component, and returns one value at
-every original time ID together with linear/nonlinear residual and remainder
-diagnostics. Endpoints and the minimum interval slope are checked after solving.
+First run common zero-GPU acceptance at the delivered commit. Then build the
+outcome-blind freeze; the fixed source indices and three scale thresholds are in
+the builder and are not Local design choices:
 
-Do not supply any of these existing arrays as `target`:
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c20_consensus_freeze.py" \
+  --root "$project_dir" --uid "$uid" --generation-seed "$seed" \
+  --source-sequence "$b0_sequence" --source-report "$b0_report" \
+  --generation-identity "$generation_identity" \
+  --capture-identity "$capture_identity" --window-record "$window_record" \
+  --decoder-record "$decoder_record" --decoder-inputs "$decoder_inputs" \
+  --decoder-tensors "$decoder_tensors" --weights-manifest "$weights_manifest" \
+  --source-review "$project_dir/docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json" \
+  --output "$project_dir/inputs/c20/$uid-$seed/input-freeze.json"
+```
 
-- the raw native prediction—it is the trajectory being repaired and gives zero
-  correction (or doubles motion if misread as a residual);
-- decoder `prediction_mode=residual` output—it is displacement from the query,
-  not a target error;
-- the source-time C01 residual—it exists only at the anchor and cannot identify
-  the endpoint-zero interior phase basis;
-- replay disagreement—it is an engineering consistency failure, not motion
-  evidence; or
-- confirmation GT or arbitrary external arrays.
+Do not run the next step under the current STOP. A future exact, expiring
+`c20-target-gpu-resume-authorization` must bind that freeze, native environment,
+UID, seed, run ID, physical GPU UUID and unchanged wall budget. With such an
+authorization, emit the one-attempt/zero-retry plan and launch only through its
+stable authorization-consumption owner:
 
-The released video/camera assets may support a future legal observation-space
-target only after method-input permission, coordinate/visibility mapping and a
-reviewed common residual/Jacobian construction. That route is not implemented or
-qualified here. A frozen amplitude-basis producer is also absent. Therefore
-there is no Local method-acceptance or execution command in this delivery. The
-test source covers inactive separation, active minimum-slope constraints,
-non-identifiability rejection and identity/endpoint validation. Web did not run
-it; the common CPU software acceptance pins and discovers it, but that is not
-C20 method/native acceptance. Local must not import or execute the core as a
-substitute for the missing complete chain. The next
-legal source step is a prospectively reviewed target/basis producer followed by
-identity-preserving phase-only, amplitude-only, simple-lag and joint artifacts;
-only then add comparison, official scoring, admission and a harness command.
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_c20_consensus_target.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" --freeze "$c20_freeze" \
+  --source-root "$actionmesh_source" --weights-root "$weights_root" \
+  --environment "$native_environment" --authorization "$target_authorization" \
+  --plan-dir "$project_dir/plans/c20-target-$uid-$seed" \
+  --run-id "c20-target-$uid-$seed" --gpu-uuid "$gpu_uuid" \
+  --cpu-cores 4 --ram-mib 32768
 
-GPU STOP and the zero-scientific-retry rule remain effective. This partial CPU
-source grants no setup, model, scorer or GPU authority.
+"$python_bin" "$project_dir/actionmesh/launch_c20_consensus_target.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --authorization "$target_authorization" \
+  --plan-dir "$project_dir/plans/c20-target-$uid-$seed" \
+  --approved-plan-digest "$printed_target_plan_digest"
+```
+
+After that retained producer plan/receipt exists, emit the CPU-only four-role
+artifact plan with these frozen first-pass parameters: phase rank 3, ridge
+0.01, minimum slope 0.25, identifiability floor 0.1, maximum warp 0.25,
+relative remainder 0.25, gamma noise amplification 10, stationarity residual
+1e-6, action residual fraction 0.05, absolute gamma 0.25, amplitude displacement
+0.10, joint target improvement 0.01, face-area ratio 0.10 and 1 GiB archive.
+Control roles record weak performance; only the joint treatment applies the
+improvement gate. Use the builder's CLI flags exactly and execute only its
+printed zero-GPU harness plan. A treatment failure returns a terminal incomplete
+artifact and stays in the six-role denominator; it is not retried.
+
+The CPU builder must receive all three outer-supervision proofs in addition to
+the native plan/receipt. It revalidates them again inside the materializer, so a
+native plan run directly around the STOP-aware launcher cannot yield an
+acceptable candidate:
+
+```bash
+"$python_bin" "$project_dir/actionmesh/prepare_phase_amplitude_candidate.py" \
+  --root "$project_dir" --skill-dir "$skill_dir" \
+  --producer-plan "$target_native_plan" \
+  --producer-receipt "$target_native_receipt" \
+  --producer-harness-plan "$target_harness_plan" \
+  --producer-harness-report "$target_harness_report" \
+  --producer-consumption "$target_authorization_consumption" \
+  --source-sequence "$b0_sequence" --source-report "$b0_report" \
+  --output "$project_dir/actionmesh/c20-artifact-$uid-$seed" \
+  --plan-dir "$project_dir/plans/c20-artifact-$uid-$seed" \
+  --run-id "c20-artifact-$uid-$seed" --uid "$uid" --seed "$seed" \
+  --phase-rank 3 --lambda-value 0.01 --min-slope 0.25 \
+  --identifiability-floor 0.1 --max-abs-warp 0.25 \
+  --max-relative-linearization-remainder 0.25 \
+  --max-gamma-noise-amplification 10 \
+  --max-relative-stationarity-residual 1e-6 \
+  --min-action-residual-fraction 0.05 --max-abs-gamma 0.25 \
+  --max-amplitude-displacement 0.10 \
+  --min-relative-target-improvement 0.01 --min-face-area-ratio 0.10 \
+  --max-artifact-bytes 1073741824 --wall-seconds 1800 --ram-mib 16384 \
+  --application-stage "$g01_stage"
+```
+
+Next run `prepare_c20_native_acceptance.py` with the retained candidate native
+plan, receipt and exact `candidate.json`. Optional request preparation requires
+a prospective six-role freeze containing the candidate plan/receipt and exact
+G01 family-split ref/digest. The roles are `b0`, `b_star`, `phase_only`,
+`amplitude_only`, `simple_lag`, `joint_monotone_phase_amplitude`; CD-M is primary,
+CD-3D/CD-4D are guardrails. Official scoring can be emitted only after G01
+family/D1-D2-confirmation evidence, B*, Gate 0/IPCG, numeric criteria, strict
+runtime closure and a new exact scoring authorization. Launch only through
+`launch_c20_native_scoring.py`. Preserve every old failure and raw archive.
+
+Return the common acceptance receipt, target plan/receipt/consumption, candidate
+plan/receipt/archive, acceptance request, and—only if separately authorized—the
+official result/raw manifest/raw archive. Source completion is not Local success,
+native qualification or a scientific conclusion.
 
 ### C01 same-context correction and retained-native acceptance
 

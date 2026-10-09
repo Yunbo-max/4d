@@ -7,9 +7,8 @@ GitHub delivery receipt; the C03 authoring base is
 `31da17adee35f1863131113c664f89dc25668133`. Integration preserves the concurrent
 `1bc3c973e0c6f23c94a32be7d30a06de4a812cd8` capture-only delivery.
 
-Current maintained status after the later C05 continuation in this file is
-14/15 source-complete, 0/15 Local/native verified, with only C20 still
-source-incomplete. Supervisor installation/runtime and online repair remain
+Current maintained status after the later C20 continuation in this file is
+15/15 source-complete and 0/15 Local/native verified. Supervisor installation/runtime and online repair remain
 unverified/not connected; GPU STOP remains effective.
 
 ## Latest C03 source-complete continuation
@@ -1214,9 +1213,44 @@ native path is `prepare_c05_native_scoring.py` followed by the single-owner
 the official adapter is called only through that emitted plan. Local must start
 at `LOCAL_AGENT_RUNBOOK.md#c05-same-anchor-empirical-spatial-modes--source-complete-not-executed`.
 
-All C05 code and test source is `generated_unexecuted`. Web performed only
+All C05 code and test source is `generated_unexecuted`. At that checkpoint Web performed only
 static source/AST/JSON/hash/diff review; it ran no project import, test, model,
-data, solver, scorer or GPU operation. Source-complete coverage is now 14/15,
-Local/native remains 0/15 and only C20 remains source-incomplete. GPU STOP and
+data, solver, scorer or GPU operation. Source-complete coverage was 14/15,
+Local/native remained 0/15 and only C20 was source-incomplete; the C20 section below supersedes that status. GPU STOP and
 frozen cumulative budgets remain effective. No supervisor is installed or
 running; online repair remains `not_connected`.
+
+## Final C20 decoder-consensus continuation
+
+C20 now closes the fifteenth source chain without using camera, GT surfaces,
+scorer ICP or confirmation outcomes. `prepare_c20_consensus_freeze.py` fixes the
+released benchmark, source indices 0/8/15 and prospective scale gates.
+`c20_consensus_target.py` reuses one exact retained ActionMesh Stage-II latent,
+model, clock and source-time XYZ+normal query, performs all three direct-coordinate
+replays, and stores both raw and exact-anchor-projected equal-source consensus.
+That target is explicitly a falsifiable model self-consistency surrogate, not
+truth or calibrated error.
+
+The target plan now uses staged-root paths, exact environment/GPU verification,
+post-run source/weight revalidation, declared target/report/manifest outputs and
+a stable single-owner authorization-consumption launcher. The next CPU plan
+constructs a W-orthogonal action-amplitude gauge and four distinct roles:
+phase-only, amplitude-only, simple lag and joint constrained phase/amplitude.
+It retains incomplete treatment artifacts as failures in the denominator.
+Receipt-aware acceptance freezes six roles including B0 and prospective B*, then
+the C20 official-scoring profile archives the complete nested producer/candidate
+closure and preserves the G01 D1/D2/confirmation stage.
+
+Two independent static reviews found and drove repairs for cwd/staging, capture
+identity, missing freeze construction, five-versus-six-role accounting, B0
+contract binding, clean-staged dynamic imports, treatment survivorship and
+recursive receipt/archive closure. The final record is
+`docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json`.
+No project code, test, model, data, solver, scorer or GPU task was run here.
+
+Local starts at
+`LOCAL_AGENT_RUNBOOK.md#c20-decoder-consensus-phaseamplitude-chain--source-complete-not-executed`.
+Run common CPU acceptance first. Do not emit or launch the GPU target under the
+current STOP; a new exact single-use authorization is required. Local/native
+verification and results remain 0/15, supervisor source remains uninstalled and
+unstarted, and online repair remains `not_connected`.

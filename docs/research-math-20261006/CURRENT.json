@@ -11,7 +11,7 @@
     "sha256": "0c77bcc149b5258baffdac4fea0a35e09de413bbda64410046448d73c061b802"
   },
   "entry_path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/README.md",
-  "status": "C01,C02,C03,C04,C05,C06,C07,C08,C10,C11,C12,C13,C14,C15 have generated_unexecuted full source chains within stated scopes (14/15). C05 uses same-anchor empirical complete model trajectories, observed medoids/masses and a fail-closed separated-mode Natural Gate; it does not claim calibrated correspondence probabilities. Only C20 remains source-incomplete. G01 is complete/generated_unexecuted with 14 exact method closures; dynamic family/B*/candidate admission remains pending. One full method source chain remains. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods 0/15. GPU STOP unchanged.",
+  "status": "All 15 selected candidates have generated_unexecuted full source chains within their stated scopes. C20 now uses a receipt-bound no-camera/no-GT same-context decoder-consensus surrogate with four distinct method/control artifacts and a six-role official-scoring chain. G01 binds 15 exact implementation closures and 99 contrasts. Supervisor/repair source is authored but not installed or running; online repair remains not_connected. Local/native methods and native results remain 0/15. GPU STOP and budget are unchanged.",
   "supervisor_repair_handshake": {
     "status": "source_authored_generated_unexecuted_local_acceptance_pending",
     "authoring_base": "6399bff2b087e3d648afa8e204948545c574ecca",
@@ -39,10 +39,10 @@
     "guide": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/c05-g01-incremental-source-review.json",
-    "design_digest": "04128f7557a4f2e7ff1084aeb24262cb744aeea6f775d42b6cbd8c1829048cb7",
-    "coverage": "15 selected specs, exact candidate/native source closures for 14 source-complete candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
-    "independent_static_review": "Prior C20/G01 and C03 reviews plus current C05 incremental source review; current source remains generated_unexecuted and Local execution pending",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
+    "design_digest": "7700296b7f92cc76a32341bf0df539a4afb4e7eab0701c573f46519a049a39b6",
+    "coverage": "15 selected specs, exact candidate/native source closures for all 15 candidates, complete 128-UID population, official scorer closure, 99 confirmatory contrasts, numeric effect/noninferiority criteria, family split/B*/failure/statistics/resource rules",
+    "independent_static_review": "Final dual C20/G01 source review reports Critical 0, Important 0 and Minor 0; current source remains generated_unexecuted and Local execution pending",
     "tests_executed": false,
     "scientific_design_verified": 0,
     "local_method_verified": 0,
@@ -1830,37 +1830,44 @@
     "remaining": "Local source and retained-real-artifact acceptance, prospective epsilon/support/tolerance/resources/family/B* freeze, Gate0/IPCG/G01 admission, explicit GPU resume authorization and official native result",
     "local_handoff": "LOCAL_AGENT_RUNBOOK.md#c08-geometry-trajectory-bridge-chain--source-complete-not-executed"
   },
-  "c20_partial_solver_handoff": {
-    "status": "partial_solver_core_generated_unexecuted",
+  "c20_source_delivery": {
+    "status": "source_chain_complete_generated_unexecuted",
     "recorded_at": "2026-10-08T20:03:40Z",
     "restored_main": "d26ec0870381744d5f5e453847f6142f43b43a3c",
     "candidate_id": "4d-math-20261006-c20",
     "source_refs": [
       {
         "path": "actionmesh/research_math/phase_amplitude_candidate.py",
-        "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
+        "sha256": "3c351ef4848f3289d44fd67b28dabad3ab9da3f9c011984f860292f91e704254"
       },
       {
         "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
-        "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
+        "sha256": "928bc22a543d2c8ab58581c1351a1a083ad0cfbc99c0948c6ba1bec9821a6da6"
+      },
+      {
+        "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
+        "sha256": "1269ca5bcf06d635054d710c774c8fca020f29a2aafddb5acc0eb924d7d18a9f"
+      },
+      {
+        "path": "docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json",
+        "sha256": "3c14a21269bd17f6640be9ced99afe15e413341dab748ee86007d2d16f2e8364"
       }
     ],
-    "implemented_scope": "fixed endpoint-zero phase basis; weighted phase/amplitude block fit; whitened principal-angle kappa diagnostic; fail-closed phase/amplitude rank and identifiability checks; active-set full constrained solve when monotonicity binds; exact endpoint/minimum-slope certificate; nonlinear interpolation at the original 16 timestamp inventory; linear/nonlinear residual and remainder diagnostics",
-    "input_review": "Exact-source review found that raw predicted coordinates are the object being repaired, decoder residual mode is displacement relative to a query rather than correction error, and source-time self residual supplies only the anchor. None is a legal full-time C20 target. Released video/camera inputs remain a possible producer route only after method-input permission, coordinate/visibility mapping and common-observation-space review.",
-    "source_review": "Independent static solver review recorded in docs/research-math-20261006/longgoal-20261007/c20-g01-incremental-source-review.json; Critical 0, Important 0, Minor 1 in the partial-core scope. Web performed AST/JSON/hash/diff review only; no project import/test, data/model operation or solver execution.",
+    "implemented_scope": "canonical input-freeze builder; exact retained same-context source-alpha 0/8/15 direct-coordinate decoder replay; anchor-projected equal-source self-consistency target; W-orthogonal action-amplitude gauge; constrained phase/amplitude solver; four distinct method/control artifacts; six-role comparison; receipt-aware acceptance; official scorer/raw archive and single-owner launchers",
+    "input_review": "The selected route uses no camera, GT surface, scorer ICP or confirmation outcome. It is explicitly a falsifiable decoder self-consistency surrogate, not truth, calibrated uncertainty or a native result.",
+    "source_review": "Two independent static reviews found four core and four chain blockers; all were repaired in source. Final review/readback is source-only: no project import/test, data/model operation, solver, scorer or GPU execution.",
     "remaining_implementation_gaps": [
-      "Qualified receipt-bound model/input motion-target producer",
-      "Frozen amplitude-basis producer and provenance",
-      "Complete identity-preserving artifact export and phase-only/amplitude-only/simple-lag/joint roles",
-      "Prospective comparison freeze, official scoring/raw collection and retained-native acceptance"
+      "No source implementation gap remains",
+      "Local CPU/cross-root/native-interface acceptance and retained receipts remain pending",
+      "Scientific admission and official native results remain pending"
     ],
-    "full_method_source_complete": false,
-    "source_complete_candidates": 11,
+    "full_method_source_complete": true,
+    "source_complete_candidates": 15,
     "local_method_verified": 0,
     "native_results": 0,
     "tests_executed": false,
     "gpu_execution": "stopped_by_user",
-    "next_action": "Implement the reviewed decoder-consensus route: exact same-context source-alpha 0/8/15 replays, a cross-source coordinate-consistency target and a W-orthogonal normalized action-amplitude basis, then complete artifact/comparison/scoring/acceptance. Keep it explicitly a falsifiable self-consistency surrogate rather than truth; do not use camera/GT or relabel one decoder displacement as target."
+    "next_action": "Keep GPU stopped. Local first runs common CPU acceptance, then follows the exact C20 freeze/target/candidate/acceptance commands. A new exact single-use authorization is required before any target or official-scoring GPU launch."
   },
   "c03_source_delivery": {
     "status": "source_chain_complete_generated_unexecuted",

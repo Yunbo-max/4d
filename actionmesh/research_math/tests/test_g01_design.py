@@ -45,7 +45,7 @@ class G01DesignTests(unittest.TestCase):
         self.assertEqual(design["statistics"]["confirmatory_test_count"], 99)
         self.assertEqual(sum(
             row["approved_control_implementation_refs"] is not None
-            for row in design["candidates"]), 13)
+            for row in design["candidates"]), 15)
         self.assertEqual(design["statistics"]["independent_unit"], "asset_family")
         self.assertEqual(design["cohort"]["minimum_confirmation_families"], 30)
         self.assertEqual(design["criteria"]["minimum_effect"], {

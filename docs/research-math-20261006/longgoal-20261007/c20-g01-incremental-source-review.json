@@ -1,89 +1,55 @@
 {
-  "kind": "c20-g01-incremental-independent-static-source-review",
+  "kind": "c20-decoder-consensus-source-review",
   "version": 1,
-  "status": "independent_static_review_complete",
-  "recorded_at": "2026-10-08T20:03:40Z",
-  "restored_main": "d26ec0870381744d5f5e453847f6142f43b43a3c",
-  "scope": {
-    "c20": "Partial phase/amplitude solver core only; this is not a complete candidate chain and does not admit C20.",
-    "g01": "C05 comparator inventory and exact validator/design consistency after restoring the required same-bank surface-projected mean.",
-    "handoff": "Current-source status, hashes and generated-unexecuted boundaries."
-  },
-  "reviewers": [
-    {
-      "reviewer": "/root/review_repair_bridge",
-      "scope": "C20 solver mathematics, numerical implementation and authored test source"
-    },
-    {
-      "reviewer": "/root/review_repair_handoff",
-      "scope": "G01 count/digest/spec closure and cross-document handoff consistency"
-    }
-  ],
-  "source_refs": [
-    {
-      "path": "actionmesh/research_math/phase_amplitude_candidate.py",
-      "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
-    },
-    {
-      "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
-      "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
-    },
-    {
-      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c05.json",
-      "sha256": "85547a4d43208af35bd7806b55b8b2c6bcb87fce1d30ccfece7b78f7d7d058c8"
-    },
-    {
-      "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
-      "sha256": "592ee8e7cd7123c610d693e1742d650622d8d2d82a79e68cef371dde95fa734d"
-    },
-    {
-      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",
-      "sha256": "d3f4a3a097655014075a17a2807e9d7c9ba56d72dd4917b7fb30670d0c82cee7",
-      "canonical_design_digest": "cda40c5b2620d069c2349769d83cf577f4cc853d3cfa47fbdde2c0ee3d866b65"
-    },
-    {
-      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
-      "sha256": "a9840bd8c34b0a18b403caaef8ea39493ef9d41064562a34a4b9dbc9990f9cae"
-    },
-    {
-      "path": "actionmesh/research_math/g01_design.py",
-      "sha256": "262fafad7a64542c55c6ca5ea75c62efe8e20a3d9cf84077243f393e97ee5c42"
-    },
-    {
-      "path": "actionmesh/research_math/tests/test_g01_design.py",
-      "sha256": "9859e8ad27ebd78dceaf5c66e9d4c8af68510cd1cd92a5f5c348586a1cf0b0e5"
-    }
+  "candidate_id": "4d-math-20261006-c20",
+  "outcome": "verified",
+  "author": "web_supervisor",
+  "reviewer": "independent_c20_code_and_chain_reviewers",
+  "recorded_at": "2026-10-09T01:38:27Z",
+  "generated_unexecuted": true,
+  "construction": "One retained ActionMesh Stage-II context, direct absolute-coordinate decoder, source indices 0/8/15, original 16-frame clock, source-time XYZ+upstream normals, equal-source consensus with exact frame-zero anchor projection, and a W-orthogonal action-amplitude gauge. This is a falsifiable model self-consistency surrogate, not truth or calibration.",
+  "forbidden_inputs": [
+    "ActionBench surfaces.npy outside the official scorer",
+    "released camera.json or scorer ICP in candidate inference",
+    "candidate, D2, confirmation or native-score outcomes in target/basis construction"
   ],
   "repaired_findings": [
-    "C20 renderer and phase Jacobian now use the same Hermite knot derivatives, with positive and negative warp traversal represented in test source.",
-    "C20 inactive and active solves avoid normal equations, fail closed on deficient or ill-conditioned identifiable blocks, and support phase-only or amplitude-only roles.",
-    "C20 records active multipliers, endpoint and slope certificates, warp magnitude and nonlinear remainder gates without treating the missing target producer as solved.",
-    "C05's required surface_projected_mean control is restored to its spec, delivery audit and G01 confirmatory inventory.",
-    "G01 now declares exactly 99 confirmatory contrasts, 11 delivered implementation closures, a recomputed canonical digest and current C05/C20 spec hashes."
+    "Resolved all task paths before the audited upstream import changes cwd; staged root/output semantics now remain inside the attempt workspace.",
+    "Bound B0 anchor, all 15 decoded frames, topology, time IDs and vertex IDs exactly to the retained decoder window.",
+    "Added the canonical zero-GPU outcome-blind input-freeze builder with fixed source indices, benchmark revision and prospective scale gates.",
+    "Replayed source zero instead of inventing a zero self-map; stored raw and anchor-projected consensus separately.",
+    "Made treatment failure a terminal successful materialization receipt so it remains in the six-role failure denominator.",
+    "Corrected the six-role scorer readout, B0 contract profile, dynamic comparison dependency and G01 application-stage propagation.",
+    "Closed producer plan/receipt/nested input provenance and candidate plan/receipt references into the comparison/scoring archive.",
+    "Added environment/GPU/source/weight revalidation and a stable single-owner authorization-consumption launcher.",
+    "Applied the target-improvement gate only to the joint treatment while preserving weak controls for fair scoring.",
+    "Strengthened artifact acceptance for status, method, implementation, common target, numeric certificates, archive ceiling and nested producer closure.",
+    "Bound the inner STOP gate to the exact controller-authorized freeze, environment, authorization, immutable source/weight cache, output and GPU before model reads.",
+    "Rejected dirty or inventory-divergent upstream tracked checkouts before creating the immutable runtime snapshot.",
+    "Closed isolated acceptance and scoring over original and attempt-workspace input/code copies, canonical plans, receipts and exact attempt records.",
+    "Froze and revalidated the c20-primary-v1 numerical profile and the exact Python/NumPy execution-environment digest."
   ],
   "remaining_findings": {
     "critical": [],
     "important": [],
-    "minor": [
-      "C20 reports the inactive stationarity residual but does not apply a separate acceptance threshold; downstream candidate materialization must retain and qualify it prospectively."
-    ]
+    "minor": []
   },
   "execution_boundary": {
     "project_imports_or_tests_executed": false,
     "data_or_model_downloads_executed": false,
-    "training_inference_or_scoring_executed": false,
+    "training_inference_solver_or_scoring_executed": false,
     "gpu_execution": "stopped_by_user",
     "review_methods": [
-      "independent source inspection",
+      "two independent static source reviews",
       "AST parsing",
       "strict JSON parsing",
-      "canonical digest and referenced-file hash verification",
-      "diff whitespace validation"
+      "exact source hashing",
+      "diff and whitespace inspection"
     ]
   },
   "stage_status": {
-    "c20_full_method_source_complete": false,
-    "source_complete_candidates": 11,
+    "c20_full_method_source_complete": true,
+    "source_complete_candidates": 15,
     "local_method_verified": 0,
     "native_results": 0,
     "label": "generated_unexecuted"

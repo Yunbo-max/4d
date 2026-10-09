@@ -699,9 +699,31 @@
       "candidate_id": "4d-math-20261006-c20",
       "spec_ref": {
         "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/specs/4d-math-20261006-c20.json",
-        "sha256": "592ee8e7cd7123c610d693e1742d650622d8d2d82a79e68cef371dde95fa734d"
+        "sha256": "1269ca5bcf06d635054d710c774c8fca020f29a2aafddb5acc0eb924d7d18a9f"
       },
-      "approved_control_implementation_refs": null,
+      "approved_control_implementation_refs": [
+        {"path": "actionmesh/launch_c20_consensus_target.py", "sha256": "91dd6a43a9f819e388fca3b5586744770c8abc24ef9dd247fea916e5462a23a8"},
+        {"path": "actionmesh/launch_c20_native_scoring.py", "sha256": "a7655cb6822be25dc3b0323bed47e14103925c0bb8748cabe1e87b3f4acf29db"},
+        {"path": "actionmesh/official_actionbench_adapter.py", "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"},
+        {"path": "actionmesh/prepare_c20_consensus_freeze.py", "sha256": "f4294a77701a435f4afff4ffc128576af45f22239de19ed9853aa033f6c1e35b"},
+        {"path": "actionmesh/prepare_c20_consensus_target.py", "sha256": "de527c0419bec767599a1b80db2a325d5e725533426bb1978d8205dd589cf1a0"},
+        {"path": "actionmesh/prepare_c20_native_acceptance.py", "sha256": "7dcf8bc308170a916b770a264161a1ecaadbdb7b770685915c47ab43fec55eac"},
+        {"path": "actionmesh/prepare_c20_native_scoring.py", "sha256": "802af94bd0117693b68336d7050c495f0740aa058f63419c7ee46ebc60fcdec2"},
+        {"path": "actionmesh/prepare_phase_amplitude_candidate.py", "sha256": "554366108f979a2b576e415737de3cbe9e53356a96ad1da0a5be112505729070"},
+        {"path": "actionmesh/research_census_eval.py", "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"},
+        {"path": "actionmesh/research_math/actionbench_parity.py", "sha256": "41274a0ce70008cc151649dba52ad8de8c2af391c9e518812c1796c77778de73"},
+        {"path": "actionmesh/research_math/c20_consensus_target.py", "sha256": "d48196ad6109103aa7d7a373dacd714313ce0df7ecd514d0d75e1b7102ae1bce"},
+        {"path": "actionmesh/research_math/c20_native_comparison.py", "sha256": "4396b69b234cad2eb983f5a613e7781e47febaabc57fdb543935a435ecb5eb13"},
+        {"path": "actionmesh/research_math/c20_native_scoring.py", "sha256": "523362f581c11e81965d88b89e8ba9fcd1986fd97d648bd48f7e178ecbdfafcc"},
+        {"path": "actionmesh/research_math/control_scoring.py", "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"},
+        {"path": "actionmesh/research_math/decoder_observer.py", "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"},
+        {"path": "actionmesh/research_math/native_context_runner.py", "sha256": "84bd868d14ce6423b4c6975cc42c7a8db2da6fe5f6e5e8b634edb9c786bb2080"},
+        {"path": "actionmesh/research_math/phase_amplitude_artifacts.py", "sha256": "fc87d8572b5eb71726d3b5c74fc3283255a7dde8f50641bcdb53b168abf858a8"},
+        {"path": "actionmesh/research_math/phase_amplitude_candidate.py", "sha256": "3c351ef4848f3289d44fd67b28dabad3ab9da3f9c011984f860292f91e704254"},
+        {"path": "actionmesh/research_math/pipeline_decoder_observer.py", "sha256": "62bb4675f39600cac60e4e71304595ce8e1fc18716ed39bd2ea7e38ded9bc19b"},
+        {"path": "actionmesh/research_math/tests/test_c20_source_chain.py", "sha256": "9622631b36291c881f6c729932885484112a107b979497566995454a6b6a256f"},
+        {"path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py", "sha256": "928bc22a543d2c8ab58581c1351a1a083ad0cfbc99c0948c6ba1bec9821a6da6"}
+      ],
       "treatment_role": "joint_monotone_phase_amplitude",
       "control_roles": [
         "B0",
@@ -1234,5 +1256,5 @@
     "explicit_gpu_resume_authorization_required": true,
     "gpu_dispatch_allowed_now": false
   },
-  "design_digest": "04128f7557a4f2e7ff1084aeb24262cb744aeea6f775d42b6cbd8c1829048cb7"
+  "design_digest": "7700296b7f92cc76a32341bf0df539a4afb4e7eab0701c573f46519a049a39b6"
 }

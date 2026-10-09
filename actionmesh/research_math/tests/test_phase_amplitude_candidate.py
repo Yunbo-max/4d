@@ -40,6 +40,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
             identifiability_floor=1e-8, max_abs_warp=0.1,
             max_relative_linearization_remainder=0.2,
             max_gamma_noise_amplification=1e6,
+            max_relative_stationarity_residual=1e-8,
         )
 
         np.testing.assert_allclose(result.phase_coefficients, xi, atol=2e-7)
@@ -68,6 +69,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
             identifiability_floor=1e-10, max_abs_warp=0.5,
             max_relative_linearization_remainder=2.0,
             max_gamma_noise_amplification=1e6,
+            max_relative_stationarity_residual=1e-8,
         )
 
         self.assertTrue(result.active_constraints)
@@ -96,6 +98,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
                 identifiability_floor=1e-4, max_abs_warp=0.2,
                 max_relative_linearization_remainder=0.2,
                 max_gamma_noise_amplification=1e6,
+                max_relative_stationarity_residual=1e-8,
             )
 
     def test_target_and_bases_must_match_original_identity(self):
@@ -109,6 +112,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
                 identifiability_floor=1e-8, max_abs_warp=0.2,
                 max_relative_linearization_remainder=0.2,
                 max_gamma_noise_amplification=1e6,
+                max_relative_stationarity_residual=1e-8,
             )
         with self.assertRaisesRegex(ValueError, "endpoint"):
             bad = phase_basis.copy()
@@ -119,6 +123,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
                 identifiability_floor=1e-8, max_abs_warp=0.2,
                 max_relative_linearization_remainder=0.2,
                 max_gamma_noise_amplification=1e6,
+                max_relative_stationarity_residual=1e-8,
             )
 
     def test_reduced_phase_only_and_amplitude_only_blocks_are_supported(self):
@@ -132,6 +137,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
             min_slope=0.2, identifiability_floor=1e-8,
             max_abs_warp=0.05, max_relative_linearization_remainder=0.2,
             max_gamma_noise_amplification=1e6,
+            max_relative_stationarity_residual=1e-8,
         )
         self.assertEqual(phase_only.amplitude_coefficients.size, 0)
         self.assertEqual(phase_only.kappa, 1.0)
@@ -145,6 +151,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
             identifiability_floor=1e-8, max_abs_warp=0.05,
             max_relative_linearization_remainder=0.2,
             max_gamma_noise_amplification=1e6,
+            max_relative_stationarity_residual=1e-8,
         )
         self.assertEqual(amplitude_only.phase_coefficients.size, 0)
         np.testing.assert_allclose(amplitude_only.amplitude_coefficients, [0.2], atol=1e-7)
@@ -160,6 +167,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
             identifiability_floor=1e-8, max_abs_warp=0.05,
             max_relative_linearization_remainder=0.2,
             max_gamma_noise_amplification=1e6,
+            max_relative_stationarity_residual=1e-8,
         )
         self.assertLess(result.relative_linearization_remainder, 0.2)
         self.assertGreater(result.output_vertices[5, 0, 0], vertices[5, 0, 0])
@@ -187,6 +195,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
                 max_abs_warp=0.9,
                 max_relative_linearization_remainder=1e-8,
                 max_gamma_noise_amplification=1e6,
+                max_relative_stationarity_residual=1e-8,
             )
         with self.assertRaisesRegex(PhaseAmplitudeError, "small-warp"):
             solve_phase_amplitude(
@@ -195,6 +204,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
                 identifiability_floor=1e-8, max_abs_warp=1e-6,
                 max_relative_linearization_remainder=0.2,
                 max_gamma_noise_amplification=1e6,
+                max_relative_stationarity_residual=1e-8,
             )
 
     def test_ill_scaled_amplitude_basis_is_rejected_by_noise_bound(self):
@@ -208,6 +218,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
                 identifiability_floor=1e-8, max_abs_warp=0.1,
                 max_relative_linearization_remainder=0.2,
                 max_gamma_noise_amplification=1e5,
+                max_relative_stationarity_residual=1e-8,
             )
 
     def test_nonuniform_times_and_weights_keep_the_same_weighted_solution(self):
@@ -226,6 +237,7 @@ class PhaseAmplitudeCandidateTest(unittest.TestCase):
             identifiability_floor=1e-8, max_abs_warp=0.05,
             max_relative_linearization_remainder=0.2,
             max_gamma_noise_amplification=1e6,
+            max_relative_stationarity_residual=1e-8,
         )
         np.testing.assert_allclose(result.phase_coefficients, [0.005], atol=1e-9)
 

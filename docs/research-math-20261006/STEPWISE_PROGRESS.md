@@ -2155,3 +2155,35 @@ coverage is 14/15; Local/native verification remains 0/15. Only C20 remains
 source-incomplete. GPU STOP, cumulative budgets and the single-attempt/zero-
 scientific-retry protocol remain unchanged. Supervisor source is still
 uninstalled/unstarted and online repair is still `not_connected`.
+
+## C20 full decoder-consensus chain and 15/15 source closure — 2026-10-09
+
+Completed the final selected source chain as `generated_unexecuted`. C20 now has
+a canonical outcome-blind freeze builder; an exact same-context ActionMesh
+source-0/8/15 direct-coordinate decoder-consensus target producer; a constrained
+phase/amplitude solver with stationarity, identifiability, warp, coefficient,
+remainder and mesh gates; four distinct artifact roles; a six-role prospective
+comparison; receipt-aware Local acceptance; and official ActionBench scoring/raw
+collection through the existing single harness and single-owner launch path.
+
+The construction rejects camera, GT surfaces, scorer ICP and candidate/confirmation
+outcomes. Equal-source consensus is an anchor-projected model self-consistency
+surrogate, not truth or calibration. A W-orthogonal action direction fixes the
+amplitude gauge; its near-unit kappa is a construction certificate, not empirical
+proof of unrestricted phase/amplitude identifiability.
+
+Independent static code and chain reviews found four core and four integration
+blockers. Repaired items include cwd/staged-root drift, B0/capture geometry-time
+binding, source-zero replay, canonical freeze generation, declared target output,
+environment/GPU/source/weight revalidation, treatment-failure retention, six-role
+accounting, native B0 contract binding, clean-staged dynamic dependencies, G01
+stage propagation and nested plan/receipt/archive closure. AST and strict JSON
+checks were performed; no project import/test, model/data, solver, scorer or GPU
+execution occurred.
+
+G01 now contains 15 exact implementation closures and the same 99 contrasts.
+Source completion is 15/15; Local/native verification and results remain 0/15.
+The existing GPU STOP and cumulative budget remain unchanged. Supervisor source
+is authored but not installed or running; online repair remains `not_connected`.
+The next executable action is Local common CPU acceptance, followed by the C20
+runbook. GPU work requires a new exact single-use authorization.

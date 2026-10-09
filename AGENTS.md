@@ -134,7 +134,7 @@ IDs are recomputed. UID/prefix/encoded labels and candidate outcomes are forbidd
 least 30 independent confirmation families must remain after D1/D2. The emitted
 task requests zero GPUs and cannot clear GPU STOP. Every D1 B* unit also requires
 an exact candidate/control native admission binding the spec, the implementation
-closure frozen in G01 (fourteen delivered; only C20 null/incomplete), single-attempt harness/
+closure frozen in G01 (all fifteen delivered and generated_unexecuted), single-attempt harness/
 producer identity, scorer closure and independent review completed before scoring.
 D1-only B* selection requires its own reviewed freeze before D2;
 confirmation remains locked. Missing family,
@@ -187,21 +187,20 @@ ceilings, validate every regular archive member, and extract from an immutable
 private snapshot into a new single-use workspace. A consumed bundle remains unqualified transport
 evidence and must not bypass Gate 0, candidate admission or GPU STOP.
 
-C20 now has a partial numerical core at
-`actionmesh/research_math/phase_amplitude_candidate.py`. It implements the fixed
-endpoint-zero phase basis, weighted joint phase/amplitude solve, principal-angle
-`kappa` identifiability rejection, the full constrained block solve when a
-minimum-slope inequality is active, and nonlinear reconstruction at every
-original timestamp. It does **not** produce or qualify the required motion target
-or amplitude basis and is not a complete candidate entry. Raw predicted
-coordinates are the object being repaired; decoder residual mode is displacement
-relative to the query; the source-time self residual exists only at the anchor.
-None may be relabelled as a full-time C20 correction target. The authored test
-source is `actionmesh/research_math/tests/test_phase_amplitude_candidate.py` and
-remains generated_unexecuted. Do not run this core on arbitrary external arrays,
-call it source-complete, or add it to G01 admission until a receipt-bound legal
-target/basis producer, complete native artifact roles and official scoring chain
-are delivered and independently reviewed.
+C20 has a complete **generated_unexecuted** source chain. Start with
+`prepare_c20_consensus_freeze.py`, which fixes source indices 0/8/15, the released
+benchmark revision and prospective scale gates without GPU work or outcomes.
+`c20_consensus_target.py` then replays one exact retained Stage-II context in
+direct-coordinate mode and constructs an anchor-projected equal-source decoder
+consensus. This is only a falsifiable model self-consistency surrogate: camera,
+GT surfaces, scorer ICP and candidate/confirmation outcomes are forbidden.
+`phase_amplitude_artifacts.py` constructs a W-orthogonal action gauge and exports
+phase-only, amplitude-only, simple-lag and joint roles with full identity and
+terminal failures. Comparison/scoring use six fixed roles and keep every failure
+in the denominator. Target and scorer launchers require exact single-use
+authorization consumption and stable single-owner claims. Follow the C20 runbook;
+do not run while GPU STOP is active and do not call source completion a Local or
+scientific result.
 
 Before setup, acceptance, execution, repair, collection, or delivery, read at the exact delivered commit:
 
@@ -302,7 +301,7 @@ full area-mass transport and a simple `cost < 2*gamma` threshold with the same
 native fallback; all roles retain every vertex and all 16 frames. `cd_motion` is
 primary with `cd_3d`/`cd_4d` guardrails. Continue only through the C07 retained-
 artifact acceptance, comparison, official request and single-owner launcher.
-GPU STOP still forbids scoring. The maintained source-chain count is 14/15;
+GPU STOP still forbids scoring. The maintained source-chain count is 15/15;
 Local verification and native results remain 0/15.
 
 C08 has a source-complete but **generated_unexecuted** predicted-geometry
@@ -314,7 +313,7 @@ natural correspondence, GT or scorer state. Continue only through
 `prepare_trajectory_bridge_candidate.py`, `prepare_c08_native_acceptance.py`,
 the six-role prospective freeze, official scoring plan and single-owner launcher.
 Retain per-role failures; bridge nonconvergence must not erase independent control
-artifacts. GPU STOP remains active. The current source-chain count is 14/15;
+artifacts. GPU STOP remains active. The current source-chain count is 15/15;
 Local verification and native results remain 0/15.
 
 C05 has a source-complete but **generated_unexecuted** same-anchor empirical

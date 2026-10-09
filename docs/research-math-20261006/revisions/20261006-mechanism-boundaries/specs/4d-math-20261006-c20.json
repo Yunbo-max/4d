@@ -4,7 +4,7 @@
   "candidate_id": "4d-math-20261006-c20",
   "name_zh": "相位与动作幅度的可识别分解",
   "priority_rank": 8,
-  "status": "Awaiting scientific admission, implementation and frozen native protocol; not dispatchable.",
+  "status": "Full source/design closure generated_unexecuted; awaiting Local retained-native validation and scientific admission.",
   "authored_at": "2026-10-06T13:15:59.771836+00:00",
   "math_card_ref": {
     "path": "docs/research-math-20261006/revisions/20261006-mechanism-boundaries/c20-math.json",
@@ -25,7 +25,7 @@
     },
     {
       "path": "docs/research-math-20261006/EXPERIMENTS.md",
-      "sha256": "2805c4d066b4db4dfdba37a5d55ccc1cf260fbce6e6277111c941b36d9785e65"
+      "sha256": "8790d8be7af20dfebfe4b564c9d52e09f2448b93e34057a61b3d1d7ba08c5701"
     },
     {
       "path": "docs/research-math-20261006/revisions/20261006-native-loss/README.md",
@@ -59,61 +59,61 @@
       "derivation_step": "s1",
       "statement": "Linearize the repair as r approximately P xi+B gamma, with phase endpoint offsets zero.",
       "planned_function": "c20.s1_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s2",
       "statement": "Let M=I-P(P^T W P)^dagger P^T W; after unconstrained phase elimination, gamma*=(B^T W M B+lambda I)^-1 B^T W M r.",
       "planned_function": "c20.s2_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s3",
       "statement": "For monotone time, impose 1+tau'(t)>0; if the bound is active, solve the full constrained block problem instead of the unconstrained formula.",
       "planned_function": "c20.s3_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s4",
       "statement": "Overlapping phase/amplitude directions are unidentifiable without extra constraints; residual second-order error is O(||tau||^2).",
       "planned_function": "c20.s4_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s5",
       "statement": "Let L=W^(1/2), U span range(LP), M0=I-UU^T, and LB=VR with V^T V=I and R invertible. The amplitude data curvature in eta=R gamma is S=V^T M0 V=I-V^T UU^T V.",
       "planned_function": "c20.s5_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s6",
       "statement": "kappa=lambda_min(S)=1-sigma_max(U^T V)^2; with no phase subspace define the cross singular value as zero. kappa>0 iff M0 V has full column rank.",
       "planned_function": "c20.s6_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s7",
       "statement": "For kappa>0 and zero ridge, ||Delta eta||<=||e||/sqrt(kappa), and ||Delta gamma||<=||R^-1|| ||e||/sqrt(kappa), for whitened residual perturbation e.",
       "planned_function": "c20.s7_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s8",
       "statement": "If Bv=Pu!=0, (xi,gamma) and (xi-au,gamma+av) predict identically. Positive amplitude ridge can make its profiled inverse exist without identifying the true decomposition from data.",
       "planned_function": "c20.s8_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s9",
       "statement": "For original t_j and piecewise-linear internal tau, impose tau_(j+1)-tau_j>=-(1-m)(t_(j+1)-t_j), m>0, and zero endpoint offsets.",
       "planned_function": "c20.s9_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     },
     {
       "derivation_step": "s10",
       "statement": "For block-diagonal W=diag(w_i I) and ||Y_i second derivative||<=K_i, ||epsilon_linear||_W<=.5 sqrt(sum_i w_i K_i^2 tau_i^4).",
       "planned_function": "c20.s10_reviewed_operation",
-      "status": "not_implemented"
+      "status": "implemented_generated_unexecuted"
     }
   ],
   "native_experiment": {
@@ -138,7 +138,7 @@
     "primary_contrast": "candidate versus strongest executable simple comparator fixed on development, plus the named operation-isolating comparisons",
     "distinguishing_prediction": "Timing-dominated errors should respond to phase correction while amplitude-only shrinkage loses motion; amplitude-dominated errors should show the opposite pattern. In the unregularized local problem whitened target errors can be amplified by exactly 1/sqrt(kappa); ridge numerical solvability does not resolve zero-kappa data ambiguity.",
     "falsifier": "Reject if ordinary lag/alignment with equal evidence/budget is sufficient, or phase/amplitude remains unidentifiable on the native task.",
-    "actual_ids_and_group_split": "pending exposure/duplicate/family audit and prospective freeze",
+    "actual_ids_and_group_split": "G01 binds the audited 128-UID population and prospective independent-family D1/D2/confirmation split; every C20 request must carry application_stage and the exact family-split ref/digest.",
     "seed_policy": {
       "inference": [
         42,
@@ -152,7 +152,7 @@
       "pairwise_difference": "treatment-control; lower is better",
       "min_effect": null,
       "noninferiority_margins": null,
-      "status": "requires task/precision-based numeric freeze, not run ready"
+      "status": "numeric G01 thresholds frozen; dispatch still requires retained artifacts, admission and exact single-use authorization"
     },
     "cost_class": "unmeasured new complete multi-arm unit; do not reuse unchanged 1229s baseline pair as measured method cost",
     "proposed_decisions": [
@@ -163,15 +163,15 @@
     ]
   },
   "outstanding_requirements": [
-    "qualified legal motion target and camera/information permission",
+    "Local execution of the outcome-blind decoder-consensus target producer; no camera, GT, scorer ICP or confirmation outcome is permitted",
     "phase/amplitude identifiability",
     "small-warp regime, monotonicity and nonlinear residual check",
-    "final 16/16 raw receipts and native replay",
+    "final 16/16 Local receipts and native replay",
     "Natural Gate 0 PASS; required importance/collision decision",
     "code identity/software/native-interface verification",
     "strongest executable baseline and fair information/cost",
     "frozen IDs, effect/NI criteria, independent-unit inference and full native design review",
-    "legal target and phase gauge",
+    "Local validation of the frozen decoder-consensus surrogate and W-orthogonal action phase gauge",
     "rank/kappa/noise/interpolation qualification",
     "ridge inversion is not data identifiability",
     "full constrained analysis when warp inequalities activate"
@@ -181,15 +181,91 @@
     "sha256": "45eb91c445d2e229bafbe1ea7deb46222d73f146e568e61a6ca12bb37d392595"
   },
   "source_delivery": {
-    "status": "partial_solver_core_generated_unexecuted",
+    "status": "full_method_chain_generated_unexecuted",
     "source_refs": [
       {
         "path": "actionmesh/research_math/phase_amplitude_candidate.py",
-        "sha256": "5377581f4f7bbaa930cd07798c2e7bee80d2bf26d874c2342c7c5d6c0affb9d4"
+        "sha256": "3c351ef4848f3289d44fd67b28dabad3ab9da3f9c011984f860292f91e704254"
+      },
+      {
+        "path": "actionmesh/research_math/c20_consensus_target.py",
+        "sha256": "d48196ad6109103aa7d7a373dacd714313ce0df7ecd514d0d75e1b7102ae1bce"
+      },
+      {
+        "path": "actionmesh/research_math/actionbench_parity.py",
+        "sha256": "41274a0ce70008cc151649dba52ad8de8c2af391c9e518812c1796c77778de73"
+      },
+      {
+        "path": "actionmesh/research_math/control_scoring.py",
+        "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+      },
+      {
+        "path": "actionmesh/research_math/decoder_observer.py",
+        "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"
+      },
+      {
+        "path": "actionmesh/research_math/pipeline_decoder_observer.py",
+        "sha256": "62bb4675f39600cac60e4e71304595ce8e1fc18716ed39bd2ea7e38ded9bc19b"
+      },
+      {
+        "path": "actionmesh/research_math/native_context_runner.py",
+        "sha256": "84bd868d14ce6423b4c6975cc42c7a8db2da6fe5f6e5e8b634edb9c786bb2080"
+      },
+      {
+        "path": "actionmesh/official_actionbench_adapter.py",
+        "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+      },
+      {
+        "path": "actionmesh/research_census_eval.py",
+        "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+      },
+      {
+        "path": "actionmesh/research_math/phase_amplitude_artifacts.py",
+        "sha256": "fc87d8572b5eb71726d3b5c74fc3283255a7dde8f50641bcdb53b168abf858a8"
+      },
+      {
+        "path": "actionmesh/research_math/c20_native_comparison.py",
+        "sha256": "4396b69b234cad2eb983f5a613e7781e47febaabc57fdb543935a435ecb5eb13"
+      },
+      {
+        "path": "actionmesh/research_math/c20_native_scoring.py",
+        "sha256": "523362f581c11e81965d88b89e8ba9fcd1986fd97d648bd48f7e178ecbdfafcc"
+      },
+      {
+        "path": "actionmesh/prepare_c20_consensus_freeze.py",
+        "sha256": "f4294a77701a435f4afff4ffc128576af45f22239de19ed9853aa033f6c1e35b"
+      },
+      {
+        "path": "actionmesh/prepare_c20_consensus_target.py",
+        "sha256": "de527c0419bec767599a1b80db2a325d5e725533426bb1978d8205dd589cf1a0"
+      },
+      {
+        "path": "actionmesh/launch_c20_consensus_target.py",
+        "sha256": "91dd6a43a9f819e388fca3b5586744770c8abc24ef9dd247fea916e5462a23a8"
+      },
+      {
+        "path": "actionmesh/prepare_phase_amplitude_candidate.py",
+        "sha256": "554366108f979a2b576e415737de3cbe9e53356a96ad1da0a5be112505729070"
+      },
+      {
+        "path": "actionmesh/prepare_c20_native_acceptance.py",
+        "sha256": "7dcf8bc308170a916b770a264161a1ecaadbdb7b770685915c47ab43fec55eac"
+      },
+      {
+        "path": "actionmesh/prepare_c20_native_scoring.py",
+        "sha256": "802af94bd0117693b68336d7050c495f0740aa058f63419c7ee46ebc60fcdec2"
+      },
+      {
+        "path": "actionmesh/launch_c20_native_scoring.py",
+        "sha256": "a7655cb6822be25dc3b0323bed47e14103925c0bb8748cabe1e87b3f4acf29db"
       },
       {
         "path": "actionmesh/research_math/tests/test_phase_amplitude_candidate.py",
-        "sha256": "b7008b2b4e3b49748e5dec4b38d71244b7c9efcc0b3e064ddc965a375bdaf7cb"
+        "sha256": "928bc22a543d2c8ab58581c1351a1a083ad0cfbc99c0948c6ba1bec9821a6da6"
+      },
+      {
+        "path": "actionmesh/research_math/tests/test_c20_source_chain.py",
+        "sha256": "9622631b36291c881f6c729932885484112a107b979497566995454a6b6a256f"
       }
     ],
     "math_to_code": {
@@ -198,15 +274,13 @@
       "s4_s8": "Whitened phase/amplitude subspaces produce the principal-angle kappa certificate; rank-deficient or below-floor problems fail closed even when positive ridge makes the numerical system solvable.",
       "s5_s7": "The implementation records the largest cross-subspace singular value, kappa and weighted residuals; no coefficient is reported as identified below the prospectively supplied floor.",
       "s9": "Every adjacent original interval enforces the minimum warped-time slope and exact endpoint offsets; output interpolation remains on the original timestamp inventory.",
-      "s10": "The implementation retains the observed weighted nonlinear-versus-linearized remainder. A source-qualified curvature bound and target provenance remain external obligations."
+      "s10": "The implementation retains the weighted nonlinear-versus-linearized remainder, stationarity residual, coefficient/displacement bounds, mesh-area certificate and candidate-only target-improvement gate."
     },
     "remaining_gaps": [
-      "Qualified receipt-bound model/input motion-target producer; current raw coordinates, decoder residual mode and source-time self residual are not a full-time corrective target",
-      "Frozen amplitude-basis producer and provenance",
-      "Complete identity-preserving artifact export and all phase/amplitude/simple-lag roles",
-      "Prospective comparison freeze, official scoring/raw collection and retained-native acceptance"
+      "Local must execute the authored target, candidate, acceptance and official-scoring plans on the pinned native Conda host after a new exact single-use authorization; current GPU STOP remains in force",
+      "Local must return retained receipts and native results before any method is called verified or any scientific conclusion is made"
     ],
-    "full_method_source_complete": false,
+    "full_method_source_complete": true,
     "local_method_verified": false
   }
 }
