@@ -1,0 +1,401 @@
+{
+  "kind": "local-native-prerequisites-window",
+  "window_id": "20261009-native-prerequisites",
+  "captured_at": "2026-10-09T13:27:36.407219+00:00",
+  "gpu_stop": true,
+  "native_results": 0,
+  "real_family_mapping_admitted": false,
+  "attempts": [
+    {
+      "run_id": "family-provenance-red-002",
+      "root": "/root/rivermind-data/4d-family-red",
+      "source_commit": "fe82cd1d3574b805d3c68cccad5685f3dde7910c",
+      "status": "failed",
+      "tests": 850,
+      "test_seconds": 127.799,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 6,
+      "harness_digest": "4c5a6d10c5626ef5a57375800c20296435aba00fd50b6c3ea60c86f5877549ec",
+      "raw_archive": {
+        "path": "/root/rivermind-data/4d-native-prerequisites-20261009/family-provenance-red-002-raw-evidence.tar.gz",
+        "sha256": "4976d2b246eea6b37b248de94d81aa3fa34064d20081f8ada9b04fdd4be9b32a",
+        "bytes": 3281596
+      },
+      "retained_refs": [
+        {
+          "path": "evidence/family-provenance-red-002/native-plan.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/plans/family-provenance-red-002/native.json",
+          "sha256": "c97bb944910015465303e1117c93e39723dcdd3f010fee599089a7ff7a6a3839"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/harness-plan.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/plans/family-provenance-red-002/harness.json",
+          "sha256": "ff7a4fc120880fde2b02d52d00a18a13465bfdfc65c44d15ce253354a7a51e6e"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/harness-report.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/harness/family-provenance-red-002/report.json",
+          "sha256": "e802042a890f9a2d827272acb1cbe18967a37d28468868d4c8eebb09dfdb2ab2"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/receipt.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/attempts/family-provenance-red-002/receipt.json",
+          "sha256": "e0e3a9abafff5a83494d17d63df404224be1e7bfb10906de78ef9d4de4faaa48"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/execution-context.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/harness/family-provenance-red-002/tasks/all-research-math-checks/execution-context.json",
+          "sha256": "f8b0dce6064036133376773b69a6f13d15982f2881ca0dd8da64369cb54dae8f"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/stdout.log",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/attempts/family-provenance-red-002/all-research-math-checks-a1-0ff5b049ffc94541961968ec3017a9e3/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/stderr.log",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/attempts/family-provenance-red-002/all-research-math-checks-a1-0ff5b049ffc94541961968ec3017a9e3/stderr.log",
+          "sha256": "637c4fbe1e3521a32fa95fdea69c98f87f57767609745beee75b8bb2dab5a927"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/attempt.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/attempts/family-provenance-red-002/all-research-math-checks-a1-0ff5b049ffc94541961968ec3017a9e3/attempt.json",
+          "sha256": "6b1e9654f0077e405ec6fa18225c8c093ae96b998aadd47b36b13b4ff3f1eed9"
+        },
+        {
+          "path": "evidence/family-provenance-red-002/process-guard.json",
+          "remote_path": "/root/rivermind-data/4d-family-red/runs/attempts/family-provenance-red-002/all-research-math-checks-a1-0ff5b049ffc94541961968ec3017a9e3/process-guard.json",
+          "sha256": "02516a0ba81ee2876d62122d3024fc5d921c4492e42a4f41df80afc8a781b6b2"
+        }
+      ]
+    },
+    {
+      "run_id": "family-provenance-green-001",
+      "root": "/root/rivermind-data/4d-family-green",
+      "source_commit": "462b6f5e5d23a98d9e71e66e5bb6025d6f42c577",
+      "status": "completed",
+      "tests": 852,
+      "test_seconds": 127.39,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 6,
+      "harness_digest": "244a891e5ebd2977e97ac692cb1373e36c2e59318b02c5a0ad8514428b91e2cf",
+      "raw_archive": {
+        "path": "/root/rivermind-data/4d-native-prerequisites-20261009/family-provenance-green-001-raw-evidence.tar.gz",
+        "sha256": "948d9719058059f578b4510bb481e05160785666b7345bb165ddb6a5bf974d2e",
+        "bytes": 3284766
+      },
+      "retained_refs": [
+        {
+          "path": "evidence/family-provenance-green-001/native-plan.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/plans/family-provenance-green-001/native.json",
+          "sha256": "a5a482a7dc64e58f2e48bfb740232b129c2598b3faf51fc9801c49479a553f6d"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/harness-plan.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/plans/family-provenance-green-001/harness.json",
+          "sha256": "a2cfc5b575faab33623b70b518afb5e5f3d66282b0bc173cbb129e64d3243927"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/harness-report.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/harness/family-provenance-green-001/report.json",
+          "sha256": "c9492be6e1c62533c151fcd39fedbf9464550a7fff3c1b5eff1227a2623b314a"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/receipt.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/attempts/family-provenance-green-001/receipt.json",
+          "sha256": "b867688baa9c8724e43960872c04e208ce29227a4d8990e834362ac1b94ecc0a"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/execution-context.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/harness/family-provenance-green-001/tasks/all-research-math-checks/execution-context.json",
+          "sha256": "74c0aeefe77564c7498972bfa86e6f7b30774188094a463b6ee063a9397c69a9"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/stdout.log",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/attempts/family-provenance-green-001/all-research-math-checks-a1-d2c6b550c1674a469b68c2d2bd6336b0/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/stderr.log",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/attempts/family-provenance-green-001/all-research-math-checks-a1-d2c6b550c1674a469b68c2d2bd6336b0/stderr.log",
+          "sha256": "c6f5e5b7aec497a8cfc08698e3412794d1e090f5e554743b650136b6999498de"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/attempt.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/attempts/family-provenance-green-001/all-research-math-checks-a1-d2c6b550c1674a469b68c2d2bd6336b0/attempt.json",
+          "sha256": "10489d925eb714bf18aa7e6b928417cfe5eac24960899bb3e430ffa1743e1da6"
+        },
+        {
+          "path": "evidence/family-provenance-green-001/process-guard.json",
+          "remote_path": "/root/rivermind-data/4d-family-green/runs/attempts/family-provenance-green-001/all-research-math-checks-a1-d2c6b550c1674a469b68c2d2bd6336b0/process-guard.json",
+          "sha256": "b10b0982359bba39ed5ec53906d43a30a6c00f5606907d8563def2c1ee68f78f"
+        }
+      ]
+    }
+  ],
+  "setup_snapshot_refs": [
+    {
+      "path": "setup/actionbench-object-path-lookup.json",
+      "sha256": "b504cb6901c254b91317234dd5112c0a75ade5ab280129d6a2b05628b3490022",
+      "source_sha256": "b504cb6901c254b91317234dd5112c0a75ade5ab280129d6a2b05628b3490022"
+    },
+    {
+      "path": "setup/collect-family-delivery.py",
+      "sha256": "8f2a1081c93616999f6995124bc7b41d9aac81dbd9e307e19cb28347e8e4ed24",
+      "source_sha256": "8f2a1081c93616999f6995124bc7b41d9aac81dbd9e307e19cb28347e8e4ed24"
+    },
+    {
+      "path": "setup/conda-install-r2.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "setup/conda-install-r2.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "setup/conda-install-r2.stderr",
+      "sha256": "8221c50cb3f65af9fa47f409887241f9a34d7fa89487d9051322361f49667907",
+      "source_sha256": "8221c50cb3f65af9fa47f409887241f9a34d7fa89487d9051322361f49667907"
+    },
+    {
+      "path": "setup/conda-install.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "source_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "setup/conda-install.json",
+      "sha256": "8faa8b369edb5d4e411ca5a76809f5dcdcd113f9f3b1c6cc70cf6d1ef31a6710",
+      "source_sha256": "8faa8b369edb5d4e411ca5a76809f5dcdcd113f9f3b1c6cc70cf6d1ef31a6710"
+    },
+    {
+      "path": "setup/conda-install.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "setup/conda-solve-r2.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "source_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "setup/conda-solve-r2.json",
+      "sha256": "2f4a3038241b7663cacf2fc8438d4a9439dbb5402d4bf697cd74196c05f5b07c",
+      "source_sha256": "2f4a3038241b7663cacf2fc8438d4a9439dbb5402d4bf697cd74196c05f5b07c"
+    },
+    {
+      "path": "setup/conda-solve-r2.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "setup/conda-solve-r3.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "setup/conda-solve-r3.json",
+      "sha256": "ad0fac0284138f6e9d159105f40bc3137eebb672c7cf6e9bb10a0631076d4b91",
+      "source_sha256": "ad0fac0284138f6e9d159105f40bc3137eebb672c7cf6e9bb10a0631076d4b91"
+    },
+    {
+      "path": "setup/conda-solve-r3.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "setup/conda-solve.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "source_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "setup/conda-solve.json",
+      "sha256": "3bad183461c00b4f5ff5d0476c92496b1e7b0d1e6fa8385a4ca13062af155910",
+      "source_sha256": "3bad183461c00b4f5ff5d0476c92496b1e7b0d1e6fa8385a4ca13062af155910"
+    },
+    {
+      "path": "setup/conda-solve.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "setup/download-family-assets.py",
+      "sha256": "f05262951e5a108613463bad21b39ec9c3933144a62bc498023ef8b15c9792e0",
+      "source_sha256": "f05262951e5a108613463bad21b39ec9c3933144a62bc498023ef8b15c9792e0"
+    },
+    {
+      "path": "setup/download-family-xet.py",
+      "sha256": "ccc57bcf8c7c7ef13aa09d14fbbe6d701b2eb74b17aeab0aabe67fb62590db48",
+      "source_sha256": "ccc57bcf8c7c7ef13aa09d14fbbe6d701b2eb74b17aeab0aabe67fb62590db48"
+    },
+    {
+      "path": "setup/family-green-harness.log",
+      "sha256": "87b92101fba72b8ba0bb0e622c1ed221293fcddb3ba74b2ac0ea59b3b07cbb89",
+      "source_sha256": "87b92101fba72b8ba0bb0e622c1ed221293fcddb3ba74b2ac0ea59b3b07cbb89"
+    },
+    {
+      "path": "setup/family-red-harness.log",
+      "sha256": "ed77fde7a01f55fcc23e0f77cb3b507c69da44dd1425d4ed9977227378b62163",
+      "source_sha256": "ed77fde7a01f55fcc23e0f77cb3b507c69da44dd1425d4ed9977227378b62163"
+    },
+    {
+      "path": "setup/install-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/install-native-pip.sh",
+      "sha256": "857473799cbce93fec86ac0cb1273159b48e1bb98d8362148864dc45ed0614ac",
+      "source_sha256": "857473799cbce93fec86ac0cb1273159b48e1bb98d8362148864dc45ed0614ac"
+    },
+    {
+      "path": "setup/install-native-r2.sh",
+      "sha256": "97ac1a2fc390c86a5bcf48f8aca1503f4a0fd193d75b6f2c51f2a34b9909436a",
+      "source_sha256": "97ac1a2fc390c86a5bcf48f8aca1503f4a0fd193d75b6f2c51f2a34b9909436a"
+    },
+    {
+      "path": "setup/install-native.sh",
+      "sha256": "9c4ff3333f59c9e931351615bf3a3193a273452781d497a63c816d1e38763c6d",
+      "source_sha256": "9c4ff3333f59c9e931351615bf3a3193a273452781d497a63c816d1e38763c6d"
+    },
+    {
+      "path": "setup/install-r2-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/native-conda-explicit.txt",
+      "sha256": "6620b3a00f59245df003e07bbd800d70a7aa52b73e7d6ca0eba7504c7f969774",
+      "source_sha256": "6620b3a00f59245df003e07bbd800d70a7aa52b73e7d6ca0eba7504c7f969774"
+    },
+    {
+      "path": "setup/native-core-constraints.txt",
+      "sha256": "2451a963b451b6573949c216ffb0f49951bfbff9af199801bc3ff224c456f646",
+      "source_sha256": "2451a963b451b6573949c216ffb0f49951bfbff9af199801bc3ff224c456f646"
+    },
+    {
+      "path": "setup/native-pip-requirements.txt",
+      "sha256": "e5652efa82d768e2dcddbc48d0122f723c892384a8f54da8da640d3523345970",
+      "source_sha256": "e5652efa82d768e2dcddbc48d0122f723c892384a8f54da8da640d3523345970"
+    },
+    {
+      "path": "setup/native-pip-resolved-lock.txt",
+      "sha256": "094f547f2601b602be92a729739a2f00e4f113ff2434e651ebfb695b45d5be07",
+      "source_sha256": "094f547f2601b602be92a729739a2f00e4f113ff2434e651ebfb695b45d5be07"
+    },
+    {
+      "path": "setup/native-pip-without-diso.txt",
+      "sha256": "ca28a169f7baab7096c93e5fb1c6e32d787eae5051b4d0846cd803053b5d695a",
+      "source_sha256": "ca28a169f7baab7096c93e5fb1c6e32d787eae5051b4d0846cd803053b5d695a"
+    },
+    {
+      "path": "setup/pip-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/pip-install-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/pip-install-report.json",
+      "sha256": "50b8dfd6c4749ab43612f35368344d9c98f126715a58cd9b638de16690d3814d",
+      "source_sha256": "cabeb2e30c79b278e1bed778c13a7e8044c72f3dc0211127a6ab44391f2ddb2f"
+    },
+    {
+      "path": "setup/pip-install.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "setup/pip-install.log",
+      "sha256": "9e179991855232f2acc903a47e5f0e7153c9f7eafdfebab31cfc139e1ffb19bf",
+      "source_sha256": "9e179991855232f2acc903a47e5f0e7153c9f7eafdfebab31cfc139e1ffb19bf"
+    },
+    {
+      "path": "setup/pip-r2-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/pip-solve-r2-report.json",
+      "sha256": "0736785c8e0c5bff2dcf60387d828f9797cbdfe6b43759edd21c36b43b15d73f",
+      "source_sha256": "819ed40888fe26815aa8ae51cb5c6aead523d96538068bd181e27a98a643ed6c"
+    },
+    {
+      "path": "setup/pip-solve-r2.exit",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    },
+    {
+      "path": "setup/pip-solve-r2.log",
+      "sha256": "48a3c2555172043d334cacafd6b70d8c6ede3e7f37f3ef4d6bdd279d5a2f9cd7",
+      "source_sha256": "48a3c2555172043d334cacafd6b70d8c6ede3e7f37f3ef4d6bdd279d5a2f9cd7"
+    },
+    {
+      "path": "setup/pip-solve.exit",
+      "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "source_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    {
+      "path": "setup/pip-solve.log",
+      "sha256": "b8b1fcc473cd42d5d94a89e10f70081ab2b6d96692f647251a3e6dda15d4690d",
+      "source_sha256": "b8b1fcc473cd42d5d94a89e10f70081ab2b6d96692f647251a3e6dda15d4690d"
+    },
+    {
+      "path": "setup/solve-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/solve-native-pip-r2.sh",
+      "sha256": "1badcd5c5437c47ff36618afe00168d95f8d0c3cf59e93aaad66c22120a3bb30",
+      "source_sha256": "1badcd5c5437c47ff36618afe00168d95f8d0c3cf59e93aaad66c22120a3bb30"
+    },
+    {
+      "path": "setup/solve-native-pip.sh",
+      "sha256": "52167e2768bdcd0b6e662ae73c7fa0f7d2214c1fe1c6be3ca8e25eb7c5ed7e99",
+      "source_sha256": "52167e2768bdcd0b6e662ae73c7fa0f7d2214c1fe1c6be3ca8e25eb7c5ed7e99"
+    },
+    {
+      "path": "setup/solve-native-r2.sh",
+      "sha256": "07f6f4f7955285bb434deba3357c57be1e2cf5240df9224d1ae48de49654c36f",
+      "source_sha256": "07f6f4f7955285bb434deba3357c57be1e2cf5240df9224d1ae48de49654c36f"
+    },
+    {
+      "path": "setup/solve-native-r3.sh",
+      "sha256": "96412373e5d9c92bdd8212f6534061efeecb503a322006bab9495a7ae3e86bb0",
+      "source_sha256": "96412373e5d9c92bdd8212f6534061efeecb503a322006bab9495a7ae3e86bb0"
+    },
+    {
+      "path": "setup/solve-native.sh",
+      "sha256": "cdae1988a6b5e50d99bba336706b676877156aabe96c41a896e2b6ba7cf25a67",
+      "source_sha256": "cdae1988a6b5e50d99bba336706b676877156aabe96c41a896e2b6ba7cf25a67"
+    },
+    {
+      "path": "setup/solve-r2-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/solve-r3-controller.log",
+      "sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46",
+      "source_sha256": "0ea7cf1d885ad4976e0150df9dce6ffc37f00cf7db07e24b2b2e886ad0493c46"
+    },
+    {
+      "path": "setup/sparse-checkout-r2.log",
+      "sha256": "bf1d697d3541db7c9517977b2ab2b25c2a5ce46ce00d49ce232b690f19a33bfb",
+      "source_sha256": "bf1d697d3541db7c9517977b2ab2b25c2a5ce46ce00d49ce232b690f19a33bfb"
+    },
+    {
+      "path": "setup/sparse-checkout.log",
+      "sha256": "0a08ac93207b0f33b4a87fb15f11b1411ccb67f5bf6f49d07e69f0fddbca4ff4",
+      "source_sha256": "0a08ac93207b0f33b4a87fb15f11b1411ccb67f5bf6f49d07e69f0fddbca4ff4"
+    }
+  ],
+  "setup_status": "Conda core installed; pip extension setup incomplete; asset download ongoing; no native runtime capture yet"
+}

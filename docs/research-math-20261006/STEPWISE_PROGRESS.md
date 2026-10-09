@@ -2219,3 +2219,9 @@ Mirror pagination, expired Xet-token caching and source-transfer failures were
 diagnosed; original failure logs and partial controller transfers were retained.
 These are engineering input records only. GPU STOP, method verification 0/15,
 native results 0/15 and scientific admission requirements remain unchanged.
+
+## 2026-10-09 Local G01 family identity repair and complete debug ledger
+
+The real-source audit found that per-asset metadata/geometry hashes fractured statistical families. Red source fe82cd1 produced 128 instead of 55 fixture families; independently reviewed source 462b6f5 introduces derivation 1.1.0, retains every provenance check, rejects legacy semantics and passes 852 software checks (846 passed, 6 retained-native skips). New design digest: 22d352a3ec8d391dd2bbe0549a3a39d8dc4cd5e05a53c0d4e675c930dab9b098. No real family mapping or scientific admission is asserted. GPU STOP remains active.
+
+All 139 observed FAIL/ERROR records (71 different headings) are indexed in LOCAL_DEBUG_FAILURE_INDEX_20261009.json, with causes/fixes in LOCAL_DEBUG_LEDGER_20261009.md. Actual plans, receipts and raw archive locators are in rounds/20261008-native-context/windows/20261009-native-prerequisites/RESULT.json. Native environment and original family assets remain in preparation.

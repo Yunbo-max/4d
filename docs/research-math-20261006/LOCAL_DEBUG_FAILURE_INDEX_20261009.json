@@ -1,0 +1,1983 @@
+{
+  "scope": "All retained FAIL/ERROR summary headings from the nine actual Local CPU runs; duplicate subtest headings remain separate. Timeout is documented separately. This is software evidence only.",
+  "distinct_failure_headings": 71,
+  "failure_error_occurrences": 139,
+  "final_run": "family-provenance-green-001",
+  "final_source": "462b6f5e5d23a98d9e71e66e5bb6025d6f42c577",
+  "tests": 852,
+  "passed": 846,
+  "skipped": 6,
+  "failures": 0,
+  "errors": 0,
+  "cases": [
+    {
+      "test": "test_validation_replays_failed_arms_and_materializer_prevalidates (test_area_admission_candidate.AreaAdmissionCandidateTests.test_validation_replays_failed_arms_and_materializer_prevalidates)",
+      "module": "test_area_admission_candidate",
+      "repair_groups": [
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"replay|failure|error\" does not match \"C12 failed role lacks bounded terminal evidence\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1555
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"replay|failure|error\" does not match \"C12 failed role lacks bounded terminal evidence\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1312
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_export_and_replay_bind_real_source_pair (test_area_transport_candidate.AreaTransportArtifactTests.test_export_and_replay_bind_real_source_pair)",
+      "module": "test_area_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S16"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Lists differ: ['row_softmax'] != ['row_softmax', 'vertex_density_transport', 'area_marginal_transport']",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1568
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Lists differ: ['row_softmax'] != ['row_softmax', 'vertex_density_transport', 'area_marginal_transport']",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1325
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_artifact_freezes_five_role_native_request (test_area_transport_candidate.AreaTransportArtifactTests.test_real_artifact_freezes_five_role_native_request)",
+      "module": "test_area_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S16"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/4d-source-55f465a/runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/workspace/tmp0dew21qd/candidate/vertex_density_transport/sequence.npz'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 865
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/4d-debug-r1/runs/attempts/debug-r1-cpu-001/all-research-math-checks-a1-5dcc1a0330ec400b8d68183e6a12fbd5/workspace/tmpt1cgoudx/candidate/vertex_density_transport/sequence.npz'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 862
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: B0 must retain exact native generation identity",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 863
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_rectangular_active_sets_preserve_full_native_vertex_ids (test_area_transport_candidate.AreaTransportKernelTests.test_rectangular_active_sets_preserve_full_native_vertex_ids)",
+      "module": "test_area_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S16"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 883
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 880
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_three_roles_share_geometry_and_keep_exact_anchor (test_area_transport_candidate.AreaTransportKernelTests.test_three_roles_share_geometry_and_keep_exact_anchor)",
+      "module": "test_area_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S16"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 897
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 894
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_explicit_candidate_path_and_entire_closure_survive_real_staging (test_c01_native_acceptance_plan.C01NativeAcceptancePlanTests.test_explicit_candidate_path_and_entire_closure_survive_real_staging)",
+      "module": "test_c01_native_acceptance_plan",
+      "repair_groups": [
+        "S02",
+        "S03"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Raw member inventory must be sorted and unique",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 914
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_final_consumption_claim_and_staged_ticket_close_one_chain (test_c01_native_scoring_plan.C01NativeScoringPlanTests.test_final_consumption_claim_and_staged_ticket_close_one_chain)",
+      "module": "test_c01_native_scoring_plan",
+      "repair_groups": [
+        "S03",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"controller claim\" does not match \"C14 finalized claim/consumption closure mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1583
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"controller claim\" does not match \"C14 finalized claim/consumption closure mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1340
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_candidate_artifacts_freeze_and_deduplicate (test_c02_native_comparison.C02NativeComparisonTests.test_real_candidate_artifacts_freeze_and_deduplicate)",
+      "module": "test_c02_native_comparison",
+      "repair_groups": [
+        "S01",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/4d-source-55f465a/runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/workspace/actionmesh/research_census_case.py'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 930
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Common geometry-only ARAP repair did not converge",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 911
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_actual_cross_root_staging_has_no_live_input_dependency (test_c03_calibration_artifacts.CalibrationArtifactTests.test_actual_cross_root_staging_has_no_live_input_dependency)",
+      "module": "test_c03_calibration_artifacts",
+      "repair_groups": [
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 2 != 0 : ",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1596
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 2 != 0 : {\"status\": \"error\", \"native_qualified\": false, \"scientific_admission\": false, \"local_method_verified\": false, \"candidate_methods_tested\": false}",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1353
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_failed_role_remains_in_denominator (test_c03_native_scoring_profile.C03NativeScoringProfileTests.test_failed_role_remains_in_denominator)",
+      "module": "test_c03_native_scoring_profile",
+      "repair_groups": [
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 9 != 1",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1604
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 9 != 1",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1362
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_successful_readout_keeps_nine_role_denominator (test_c03_native_scoring_profile.C03NativeScoringProfileTests.test_successful_readout_keeps_nine_role_denominator)",
+      "module": "test_c03_native_scoring_profile",
+      "repair_groups": [
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 0 != 9",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1612
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 0 != 9",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1370
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_common_target_artifact_freezes_all_five_roles (test_c04_native_comparison.C04NativeComparisonTests.test_real_common_target_artifact_freezes_all_five_roles)",
+      "module": "test_c04_native_comparison",
+      "repair_groups": [
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'incomplete' != 'completed'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1620
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'incomplete' != 'completed'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1378
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_archive_and_generated_files_are_exact_and_tamper_evident (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_archive_and_generated_files_are_exact_and_tamper_evident)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 945
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_byte_ceiling_and_append_only_output_fail_closed (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_byte_ceiling_and_append_only_output_fail_closed)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 960
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_changed_output_and_extra_file_are_rejected (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_changed_output_and_extra_file_are_rejected)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 971
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_icm_failure_blocks_only_joint_after_kabsch_evidence (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_icm_failure_blocks_only_joint_after_kabsch_evidence)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 986
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_interface_has_no_forbidden_coordinate_or_scoring_input (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_interface_has_no_forbidden_coordinate_or_scoring_input)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Items in the first set but not the second:",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1633
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Items in the first set but not the second:",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1391
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_kabsch_failure_blocks_only_joint_and_keeps_fixed_denominator (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_kabsch_failure_blocks_only_joint_and_keeps_fixed_denominator)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1001
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_materializes_all_distinct_roles_with_exact_native_identity (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_materializes_all_distinct_roles_with_exact_native_identity)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1016
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Tuples differ: ('independent_top1', 'joint_spatial_labels'[68 chars]ean') != ('localized_mean', 'temperature_matched_mea[68 chars]els')",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1400
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_natural_gate_rejection_has_no_scoreable_role_or_fallback (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_natural_gate_rejection_has_no_scoreable_role_or_fallback)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1031
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Tuples differ: ('independent_top1', 'joint_spatial_labels'[68 chars]ean') != ('localized_mean', 'temperature_matched_mea[68 chars]els')",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1426
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_union_projection_failure_blocks_only_surface_and_is_bounded (test_c05_candidate_artifacts.C05CandidateArtifactTests.test_union_projection_failure_blocks_only_surface_and_is_bounded)",
+      "module": "test_c05_candidate_artifacts",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1046
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_candidate_outer_seed_and_prospective_decision_are_enforced (test_c05_native_comparison.C05NativeComparisonTests.test_candidate_outer_seed_and_prospective_decision_are_enforced)",
+      "module": "test_c05_native_comparison",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1061
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_one_terminal_role_error_stays_in_denominator_without_a_case (test_c05_native_comparison.C05NativeComparisonTests.test_one_terminal_role_error_stays_in_denominator_without_a_case)",
+      "module": "test_c05_native_comparison",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1075
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_seven_roles_shared_json_certificates_and_recursive_closure (test_c05_native_comparison.C05NativeComparisonTests.test_seven_roles_shared_json_certificates_and_recursive_closure)",
+      "module": "test_c05_native_comparison",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1089
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_tampered_shared_solver_certificate_is_rejected (test_c05_native_comparison.C05NativeComparisonTests.test_tampered_shared_solver_certificate_is_rejected)",
+      "module": "test_c05_native_comparison",
+      "repair_groups": [
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "NameError: name 'b0_sequence_ref' is not defined. Did you mean: 'sequence_ref'?",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1103
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "research_math.c05_candidate_artifacts.C05ArtifactError: C05 generated member changed",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 925
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_cpu_candidate_plan_uses_only_staged_recursive_closure (test_c05_plan_staging.C05RealStagingTests.test_cpu_candidate_plan_uses_only_staged_recursive_closure)",
+      "module": "test_c05_plan_staging",
+      "repair_groups": [
+        "S01",
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "See full traceback / assertion diff in linked log",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1117
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: JSON object required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 941
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_mode_bank_plan_freezes_every_noncache_input_cross_root (test_c05_plan_staging.C05RealStagingTests.test_mode_bank_plan_freezes_every_noncache_input_cross_root)",
+      "module": "test_c05_plan_staging",
+      "repair_groups": [
+        "S01",
+        "S04",
+        "S05"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "See full traceback / assertion diff in linked log",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1140
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_common_target_artifact_freezes_all_five_roles (test_c10_native_comparison.C10NativeComparisonTests.test_real_common_target_artifact_freezes_all_five_roles)",
+      "module": "test_c10_native_comparison",
+      "repair_groups": [
+        "S13"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'incomplete' != 'completed'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1642
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: independent_local_repair sequence differs from exact reconstruction",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 961
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_all_byte_identical_physical_roles_share_one_measurement (test_c14_native_comparison.C14NativeComparisonTests.test_all_byte_identical_physical_roles_share_one_measurement)",
+      "module": "test_c14_native_comparison",
+      "repair_groups": [
+        "S06",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Corotational role must be the C14 candidate construction",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1163
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: C14 candidate method_id is fixed",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 978
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_candidate_certificate_is_part_of_the_scoring_input_closure (test_c14_native_comparison.C14NativeComparisonTests.test_candidate_certificate_is_part_of_the_scoring_input_closure)",
+      "module": "test_c14_native_comparison",
+      "repair_groups": [
+        "S06",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Corotational role must be the C14 candidate construction",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1176
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: C14 candidate method_id is fixed",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 989
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_failed_physical_arm_is_retained_without_a_scoring_case (test_c14_native_comparison.C14NativeComparisonTests.test_failed_physical_arm_is_retained_without_a_scoring_case)",
+      "module": "test_c14_native_comparison",
+      "repair_groups": [
+        "S06",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Corotational role must be the C14 candidate construction",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1189
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: C14 candidate method_id is fixed",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1000
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_freeze_keeps_five_roles_but_deduplicates_explicit_b_star_alias (test_c14_native_comparison.C14NativeComparisonTests.test_freeze_keeps_five_roles_but_deduplicates_explicit_b_star_alias)",
+      "module": "test_c14_native_comparison",
+      "repair_groups": [
+        "S06",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Corotational role must be the C14 candidate construction",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1202
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: C14 candidate method_id is fixed",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1011
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_final_consumption_claim_and_staged_ticket_close_one_chain (test_c14_native_scoring_plan.C14NativeScoringPlanTests.test_final_consumption_claim_and_staged_ticket_close_one_chain)",
+      "module": "test_c14_native_scoring_plan",
+      "repair_groups": [
+        "S06",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"controller claim\" does not match \"C14 finalized claim/consumption closure mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1655
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"controller claim\" does not match \"C14 finalized claim/consumption closure mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1452
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_delivery_inventory_attaches_quadratic_control_only_to_c13 (test_control_plan.ControlPlanTest.test_delivery_inventory_attaches_quadratic_control_only_to_c13)",
+      "module": "test_control_plan",
+      "repair_groups": [
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: True is not false",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1668
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: True is not false",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1465
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_b_star_freeze_covers_all_candidates_and_only_declared_controls (test_g01_design.G01DesignTests.test_b_star_freeze_covers_all_candidates_and_only_declared_controls)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1215
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1022
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 874
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_b_star_freeze_recomputes_complete_d1_minimum (test_g01_design.G01DesignTests.test_b_star_freeze_recomputes_complete_d1_minimum)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1229
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1038
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 890
+        },
+        {
+          "run_id": "debug-r4-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"generation identity\" does not match \"exact candidate/control native admission required\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r4-cpu-001/stderr.log",
+          "log_sha256": "9e0d4ce0561e8a0f4abdd00f8693b851016cb8571b2e2f33defe4b7ddf1ddb60",
+          "line": 863
+        },
+        {
+          "run_id": "debug-r5-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"official score result\" does not match \"native D1 receipt disagrees with comparison request\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r5-cpu-001/stderr.log",
+          "log_sha256": "c1c178e843a58400e5b8e3912de8e5c7ccd7a7ed13d32c5b549c036958a9ff3f",
+          "line": 863
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_c15_preparer_and_shared_support_are_frozen_and_extra_code_is_rejected (test_g01_design.G01DesignTests.test_c15_preparer_and_shared_support_are_frozen_and_extra_code_is_rejected)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1243
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1054
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 906
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_family_grouping_survives_distinct_asset_provenance (test_g01_design.G01DesignTests.test_family_grouping_survives_distinct_asset_provenance)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "family-provenance-red-002",
+          "kind": "FAIL",
+          "exception": "AssertionError: 128 != 55",
+          "log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-red-002/stderr.log",
+          "log_sha256": "637c4fbe1e3521a32fa95fdea69c98f87f57767609745beee75b8bb2dab5a927",
+          "line": 864
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_family_label_unrelated_to_metadata_and_category_swap_are_rejected (test_g01_design.G01DesignTests.test_family_label_unrelated_to_metadata_and_category_swap_are_rejected)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1257
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1070
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 922
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_family_split_is_deterministic_and_keeps_exposure_out_of_confirmation (test_g01_design.G01DesignTests.test_family_split_is_deterministic_and_keeps_exposure_out_of_confirmation)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1271
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1086
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 938
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_stage_design_binds_all_selected_specs_and_native_population (test_g01_design.G01DesignTests.test_real_stage_design_binds_all_selected_specs_and_native_population)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1285
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1102
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 954
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_removed_or_substituted_transitive_implementation_is_rejected (test_g01_design.G01DesignTests.test_removed_or_substituted_transitive_implementation_is_rejected)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"independently frozen\" does not match \"canonical approved candidate implementation closure required\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1676
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"independently frozen\" does not match \"reference digest mismatch: actionmesh/prepare_c01_native_scoring.py\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1473
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"independently frozen\" does not match \"reference digest mismatch: actionmesh/prepare_c01_native_scoring.py\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1083
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_shared_b0_profiles_pin_the_actual_context_producer (test_g01_design.G01DesignTests.test_shared_b0_profiles_pin_the_actual_context_producer)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1299
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1118
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 970
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_too_few_confirmation_clusters_are_rejected (test_g01_design.G01DesignTests.test_too_few_confirmation_clusters_are_rejected)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1313
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1134
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 986
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_uid_derived_family_labels_are_rejected (test_g01_design.G01DesignTests.test_uid_derived_family_labels_are_rejected)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1327
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1150
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1002
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_unreviewed_or_incomplete_family_evidence_is_rejected (test_g01_design.G01DesignTests.test_unreviewed_or_incomplete_family_evidence_is_rejected)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: canonical approved candidate implementation closure required",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1341
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1166
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: reference digest mismatch: actionmesh/prepare_c01_native_scoring.py",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1018
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_unreviewed_semantic_rewrite_is_rejected_by_frozen_digest (test_g01_design.G01DesignTests.test_unreviewed_semantic_rewrite_is_rejected_by_frozen_digest)",
+      "module": "test_g01_design",
+      "repair_groups": [
+        "S11",
+        "S14",
+        "S15",
+        "S17"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"independently frozen\" does not match \"canonical approved candidate implementation closure required\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1689
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"independently frozen\" does not match \"reference digest mismatch: actionmesh/prepare_c01_native_scoring.py\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1486
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"independently frozen\" does not match \"reference digest mismatch: actionmesh/prepare_c01_native_scoring.py\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1096
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_affine_motion_is_fixed_point_with_exact_anchor_and_certificate (test_group_acceleration_candidate.GroupAccelerationCandidateTests.test_affine_motion_is_fixed_point_with_exact_anchor_and_certificate)",
+      "module": "test_group_acceleration_candidate",
+      "repair_groups": [
+        "S10"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Exported float32 sequence failed primal/dual gap tolerance: gap=3.5860896303291495e-06, tolerance=9.9999999999999995e-08",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1355
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Exported float32 sequence failed primal/dual gap tolerance: gap=3.5860896303291495e-06, tolerance=9.9999999999999995e-08",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1182
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_export_is_complete_identity_preserving_candidate_arm (test_group_acceleration_candidate.GroupAccelerationCandidateTests.test_export_is_complete_identity_preserving_candidate_arm)",
+      "module": "test_group_acceleration_candidate",
+      "repair_groups": [
+        "S10"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'incomplete' != 'completed'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1702
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'incomplete' != 'completed'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1499
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_off_diagonal_metric_keeps_anchor_cross_term (test_group_acceleration_candidate.GroupAccelerationCandidateTests.test_off_diagonal_metric_keeps_anchor_cross_term)",
+      "module": "test_group_acceleration_candidate",
+      "repair_groups": [
+        "S10"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Exported float32 sequence failed primal/dual gap tolerance: gap=5.6138057702437294e-07, tolerance=9.9999999999999995e-08",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1369
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Exported float32 sequence failed primal/dual gap tolerance: gap=5.6138057702437294e-07, tolerance=9.9999999999999995e-08",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1196
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_three_dimensional_group_prior_is_rotation_equivariant (test_group_acceleration_candidate.GroupAccelerationCandidateTests.test_three_dimensional_group_prior_is_rotation_equivariant)",
+      "module": "test_group_acceleration_candidate",
+      "repair_groups": [
+        "S10"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Exported float32 sequence failed primal/dual gap tolerance: gap=1.1109422827226823e-06, tolerance=9.9999999999999995e-08",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1383
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Exported float32 sequence failed primal/dual gap tolerance: gap=1.1109422827226823e-06, tolerance=9.9999999999999995e-08",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1210
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_full_export_preserves_16_frames_topology_ids_and_recomputes (test_integrable_gradient_candidate.IntegrableGradientCandidateTests.test_full_export_preserves_16_frames_topology_ids_and_recomputes)",
+      "module": "test_integrable_gradient_candidate",
+      "repair_groups": [
+        "S13"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'incomplete' != 'completed'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1715
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "ValueError: independent_local_repair sequence differs from exact reconstruction",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1224
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_three_arms_share_target_but_have_distinct_constructions (test_integrable_gradient_candidate.IntegrableGradientCandidateTests.test_three_arms_share_target_but_have_distinct_constructions)",
+      "module": "test_integrable_gradient_candidate",
+      "repair_groups": [
+        "S13"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "IndexError: too many indices for array: array is 2-dimensional, but 3 were indexed",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1397
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_present_mismatch_and_changed_bytes_are_rejected (test_native_b0_contract.NativeB0ContractTests.test_present_mismatch_and_changed_bytes_are_rejected) (profile='c01', corruption='code_bytes')",
+      "module": "test_native_b0_contract",
+      "repair_groups": [
+        "S03",
+        "S11"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: ValueError not raised",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1737
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_present_mismatch_and_changed_bytes_are_rejected (test_native_b0_contract.NativeB0ContractTests.test_present_mismatch_and_changed_bytes_are_rejected) (profile='c01', corruption='reported_hash')",
+      "module": "test_native_b0_contract",
+      "repair_groups": [
+        "S03",
+        "S11"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: ValueError not raised",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1728
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_present_mismatch_and_changed_bytes_are_rejected (test_native_b0_contract.NativeB0ContractTests.test_present_mismatch_and_changed_bytes_are_rejected) (profile='c01', corruption='unpinned_ref')",
+      "module": "test_native_b0_contract",
+      "repair_groups": [
+        "S03",
+        "S11"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: ValueError not raised",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1746
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_plan_pins_three_bundle_files_and_declares_every_extracted_member (test_native_context_consumption_plan.NativeContextConsumptionPlanTests.test_plan_pins_three_bundle_files_and_declares_every_extracted_member)",
+      "module": "test_native_context_consumption_plan",
+      "repair_groups": [
+        "S02"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Raw member inventory must be sorted and unique",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1412
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_stale_pin_or_existing_plan_directory_fails_closed (test_native_context_consumption_plan.NativeContextConsumptionPlanTests.test_stale_pin_or_existing_plan_directory_fails_closed)",
+      "module": "test_native_context_consumption_plan",
+      "repair_groups": [
+        "S02"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Raw member inventory must be sorted and unique",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1426
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_consumer_rehashes_and_extracts_every_member_without_claiming_qualification (test_native_context_delivery.NativeContextDeliveryTests.test_consumer_rehashes_and_extracts_every_member_without_claiming_qualification)",
+      "module": "test_native_context_delivery",
+      "repair_groups": [
+        "S02"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Raw member inventory must be sorted and unique",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1439
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_consumer_rejects_wrong_producer_identity_and_scope_overclaim (test_native_context_delivery.NativeContextDeliveryTests.test_consumer_rejects_wrong_producer_identity_and_scope_overclaim)",
+      "module": "test_native_context_delivery",
+      "repair_groups": [
+        "S02"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"identity\" does not match \"Raw member inventory must be sorted and unique\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1755
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_plans_and_staging_preserve_identity_paths_budget_and_outputs (test_native_context_plan.NativeContextPlanTests.test_real_plans_and_staging_preserve_identity_paths_budget_and_outputs)",
+      "module": "test_native_context_plan",
+      "repair_groups": [
+        "S02",
+        "S12"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "UnboundLocalError: cannot access local variable 'command' where it is not associated with a value",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1453
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_export_and_replay_bind_real_source_pair (test_partial_transport_candidate.PartialTransportArtifactTests.test_export_and_replay_bind_real_source_pair)",
+      "module": "test_partial_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S08"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Lists differ: ['con[20 chars]llback'] != ['con[20 chars]llback', 'full_mass_transport', 'partial_mass_native_fallback']",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1768
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Lists differ: ['con[20 chars]llback'] != ['con[20 chars]llback', 'full_mass_transport', 'partial_mass_native_fallback']",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1512
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: Lists differ: ['con[20 chars]llback', 'full_mass_transport'] != ['con[20 chars]llback', 'full_mass_transport', 'partial_mass_native_fallback']",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1109
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_artifact_freezes_five_role_native_request (test_partial_transport_candidate.PartialTransportArtifactTests.test_real_artifact_freezes_five_role_native_request)",
+      "module": "test_partial_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S08"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/4d-source-55f465a/runs/attempts/common-cpu-55f465a-001/all-research-math-checks-a1-b56c67e6a0964db8948cbf316fcb59e1/workspace/tmp9wlowrti/candidate/full_mass_transport/sequence.npz'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1462
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/4d-debug-r1/runs/attempts/debug-r1-cpu-001/all-research-math-checks-a1-5dcc1a0330ec400b8d68183e6a12fbd5/workspace/tmpvcjn2slt/candidate/full_mass_transport/sequence.npz'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1235
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "FileNotFoundError: [Errno 2] No such file or directory: '/root/rivermind-data/4d-debug-r3/runs/attempts/debug-r3-cpu-001/all-research-math-checks-a1-254cd4c8bb2143f5a7349ebecb01a7dd/workspace/tmpjqk4s3x1/candidate/partial_mass_native_fallback/sequence.npz'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1034
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_rectangular_active_sets_preserve_full_native_vertex_ids (test_partial_transport_candidate.PartialTransportKernelTests.test_rectangular_active_sets_preserve_full_native_vertex_ids)",
+      "module": "test_partial_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S08"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1480
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1253
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Partial Sinkhorn did not satisfy capacity KKT conditions: iteration=3000, capacity=0, complementarity=0.00031764067902457203, fixed_point=0.00033270272736274364",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1052
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_three_roles_share_geometry_and_keep_exact_anchor (test_partial_transport_candidate.PartialTransportKernelTests.test_three_roles_share_geometry_and_keep_exact_anchor)",
+      "module": "test_partial_transport_candidate",
+      "repair_groups": [
+        "S07",
+        "S08"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1494
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Sparse Sinkhorn did not close both frozen marginals",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1267
+        },
+        {
+          "run_id": "debug-r3-cpu-001",
+          "kind": "ERROR",
+          "exception": "RuntimeError: Partial Sinkhorn did not satisfy capacity KKT conditions: iteration=3000, capacity=5.5511151231257827e-17, complementarity=1.4144318001965265e-09, fixed_point=2.8357662884559431e-09",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r3-cpu-001/stderr.log",
+          "log_sha256": "7603739b24d26b00d5fa522666e358171eeea9fb62a748c935a57cf977db4f40",
+          "line": 1066
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_hash_consistent_enqueue_argv_mutation_fails_closed (test_research_supervisor.ResearchSupervisorTests.test_hash_consistent_enqueue_argv_mutation_fails_closed)",
+      "module": "test_research_supervisor",
+      "repair_groups": [
+        "S18"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"enqueue invocation identity\" does not match \"repair worker predecessor mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1789
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"enqueue invocation identity\" does not match \"repair worker predecessor mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1533
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_hash_consistent_registration_argv_mutation_fails_closed (test_research_supervisor.ResearchSupervisorTests.test_hash_consistent_registration_argv_mutation_fails_closed)",
+      "module": "test_research_supervisor",
+      "repair_groups": [
+        "S18"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"registration invocation identity\" does not match \"repair worker predecessor mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1802
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: \"registration invocation identity\" does not match \"repair worker predecessor mismatch\"",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1546
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_repair_historical_event_or_journal_reorder_fails_closed (test_research_supervisor.ResearchSupervisorTests.test_repair_historical_event_or_journal_reorder_fails_closed)",
+      "module": "test_research_supervisor",
+      "repair_groups": [
+        "S18"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'worker_intent_without_terminal_event' != 'unindexed_event'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1815
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "FAIL",
+          "exception": "AssertionError: 'worker_intent_without_terminal_event' != 'unindexed_event'",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1559
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_real_cross_root_freeze_and_context_to_candidate (test_self_map_plan.SelfMapPlanIntegrationTests.test_real_cross_root_freeze_and_context_to_candidate)",
+      "module": "test_self_map_plan",
+      "repair_groups": [
+        "S02"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "ValueError: Raw member inventory must be sorted and unique",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1511
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_sparse_witness_and_bridge_close_every_required_marginal (test_trajectory_bridge_candidate.C08NumericalTests.test_sparse_witness_and_bridge_close_every_required_marginal)",
+      "module": "test_trajectory_bridge_candidate",
+      "repair_groups": [
+        "S09"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "research_math.trajectory_bridge_candidate.TrajectoryBridgeError: Endpoint scaling did not converge",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1527
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "research_math.trajectory_bridge_candidate.TrajectoryBridgeError: Endpoint scaling did not converge",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1284
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    },
+    {
+      "test": "test_whole_path_outputs_preserve_anchor_shape_and_finiteness (test_trajectory_bridge_candidate.C08NumericalTests.test_whole_path_outputs_preserve_anchor_shape_and_finiteness)",
+      "module": "test_trajectory_bridge_candidate",
+      "repair_groups": [
+        "S09"
+      ],
+      "occurrences": [
+        {
+          "run_id": "common-cpu-55f465a-001",
+          "kind": "ERROR",
+          "exception": "research_math.trajectory_bridge_candidate.TrajectoryBridgeError: Endpoint scaling did not converge",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/common-cpu-55f465a-001/stderr.log",
+          "log_sha256": "5a300d02e835ee20784d95c2be3a305a6ed4edf21dbc58d301cb7d5731c341eb",
+          "line": 1538
+        },
+        {
+          "run_id": "debug-r1-cpu-001",
+          "kind": "ERROR",
+          "exception": "research_math.trajectory_bridge_candidate.TrajectoryBridgeError: Endpoint scaling did not converge",
+          "log": "rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/evidence/debug-r1-cpu-001/stderr.log",
+          "log_sha256": "507dbac1423c932232fabb8978055093df689ad61996b3ccb58051ffc9343098",
+          "line": 1295
+        }
+      ],
+      "latest_verification": "passed",
+      "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
+    }
+  ]
+}

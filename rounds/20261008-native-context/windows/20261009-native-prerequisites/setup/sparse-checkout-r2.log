@@ -1,0 +1,7 @@
+nohup: ignoring input
+error: Path 'AGENTS.md' already present; will not overwrite with sparse update.
+error: Path 'LOCAL_AGENT_RUNBOOK.md' already present; will not overwrite with sparse update.
+error: Path 'actionmesh/prepare_native_runtime.py' already present; will not overwrite with sparse update.
+error: Path 'actionmesh/research_math/__init__.py' already present; will not overwrite with sparse update.
+error: Path 'actionmesh/research_math/native_runtime.py' already present; will not overwrite with sparse update.
+error: Path 'docs/research-math-20261006/ACTIONBENCH_SCORER_PARITY.md' already present; will not overwrite with sparse update.
