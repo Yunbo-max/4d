@@ -108,7 +108,7 @@
       "sha256": "cc75796d1a6b6a811facd05997dba0cd096790563a40836e7404210f7dfd8b75"
     },
     "independent_unit": "asset_family",
-    "family_source_policy": "Require a complete source-derived family_by_uid map for all 128 released UIDs. Each family ID is recomputed from a canonical upstream-family basis with pinned source/geometry identities and source refs, followed by independent verified review. UID-derived labels and scorer/candidate outcomes are forbidden family evidence.",
+    "family_source_policy": "Require a complete source-derived family_by_uid map for all 128 released UIDs. Derivation version 1.1.0 hashes only the canonical upstream_family_keys object for family identity; complete per-UID metadata, geometry and extractor hashes remain mandatory, validated and bound separately in receipt/derivation/evidence digests. Keys require consistent documented lineage meaning across the population and independent verified review of both same-key and different-key related assets. Uploader identity alone and arbitrary coincident strings do not establish independent families. UID-derived labels and scorer/candidate outcomes are forbidden. Legacy version 1.0.0 derivations and assignment rules are rejected without automatic split migration.",
     "split_salt": "4d-math-restart-20261006-v1",
     "development_exposed": "Every UID in the retained exposure record and every UID sharing its reviewed asset family is development-only.",
     "d1_unexposed_family_count": 12,
@@ -1358,5 +1358,5 @@
     "explicit_gpu_resume_authorization_required": true,
     "gpu_dispatch_allowed_now": false
   },
-  "design_digest": "2d53b764958f89cb5edcc3949b721ac9a7ca484e7ec8c65d8b07649f7edeeb16"
+  "design_digest": "22d352a3ec8d391dd2bbe0549a3a39d8dc4cd5e05a53c0d4e675c930dab9b098"
 }

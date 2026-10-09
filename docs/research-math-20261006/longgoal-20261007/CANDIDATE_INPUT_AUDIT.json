@@ -1271,8 +1271,8 @@
     "guide_path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
     "validator": "actionmesh/research_math/g01_design.py",
     "local_plan_builder": "actionmesh/prepare_g01_acceptance.py",
-    "source_review": "docs/research-math-20261006/longgoal-20261007/local-cpu-repair-source-review-20261009-v2.json",
-    "design_digest": "2d53b764958f89cb5edcc3949b721ac9a7ca484e7ec8c65d8b07649f7edeeb16",
+    "source_review": "docs/research-math-20261006/longgoal-20261007/local-family-identity-source-review-20261009.json",
+    "design_digest": "22d352a3ec8d391dd2bbe0549a3a39d8dc4cd5e05a53c0d4e675c930dab9b098",
     "source_review_findings_remaining": {
       "critical": 0,
       "important": 0,
@@ -1287,7 +1287,9 @@
     "local_acceptance": "pending",
     "scientific_design_verified": 0,
     "gpu_dispatch_allowed": false,
-    "local_repair_review_status": "independently_reviewed_source_only"
+    "local_repair_review_status": "independent_source_review_approved",
+    "family_derivation_version": "1.1.0",
+    "real_family_mapping_admitted": false
   },
   "stage_goal": {
     "selected_methods": 15,

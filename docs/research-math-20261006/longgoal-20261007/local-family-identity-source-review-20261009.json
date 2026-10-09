@@ -1,0 +1,55 @@
+{
+  "kind": "local-family-identity-source-review",
+  "version": 1,
+  "status": "independent_source_review_approved",
+  "predecessor_commit": "fe82cd1d3574b805d3c68cccad5685f3dde7910c",
+  "predecessor_design_digest": "2d53b764958f89cb5edcc3949b721ac9a7ca484e7ec8c65d8b07649f7edeeb16",
+  "design_digest": "22d352a3ec8d391dd2bbe0549a3a39d8dc4cd5e05a53c0d4e675c930dab9b098",
+  "scope": "Family derivation semantics repair: canonical upstream keys determine family identity; per-asset provenance remains mandatory and receipt-bound. Source schema changes; numerical criteria, candidate implementations, splits counts and GPU STOP remain unchanged. No real family assignment or scientific admission.",
+  "root_cause": "Full per-asset evidence hashes were incorrectly used as statistical cluster identity. Distinct native metadata shards and geometry split assets despite identical reviewed upstream keys.",
+  "regression": {
+    "run_id": "family-provenance-red-002",
+    "source_commit": "fe82cd1d3574b805d3c68cccad5685f3dde7910c",
+    "harness_digest": "4c5a6d10c5626ef5a57375800c20296435aba00fd50b6c3ea60c86f5877549ec",
+    "tests": 850,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 6,
+    "observed": "128 != 55 families",
+    "seconds": 127.799
+  },
+  "reviewed_refs": [
+    {
+      "path": "actionmesh/research_math/g01_design.py",
+      "sha256": "f93d539d8192e462c28a4eefd45c78e817274723bc02542852122c0a44ca9faf"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_g01_design.py",
+      "sha256": "f5c26ee8a5729dbeae16ec919251c294fd01b3b35ba4c7b314ff2a94b7902e38"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "345518563a8d6cba19e1a9a004451843c9a7c161b1a44d25e834e3b7ee324188"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",
+      "sha256": "ac798f1664c1ea4d9940668d1dd0548de60628f036629cb31f476e11ce1bbc2c"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.md",
+      "sha256": "476e1794e311b18207a5e45b2ac4bbf6e9c1c2e84ef879ef24592e19c0214cb2"
+    }
+  ],
+  "reviewers": [
+    {
+      "reviewer": "/root/review_g01",
+      "outcome": "approved",
+      "findings": [],
+      "scope": "Read-only final byte/source review; 206 design refs verified, no workloads or scientific admission"
+    }
+  ],
+  "software_acceptance": "pending",
+  "scientific_admission": false,
+  "real_family_mapping_admitted": false,
+  "gpu_stop": true
+}

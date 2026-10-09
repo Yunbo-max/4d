@@ -22,6 +22,11 @@ DESIGN_KIND = "stage-wide-g01-design"
 DESIGN_VERSION = "1.0.0"
 FAMILY_EVIDENCE_KIND = "g01-family-evidence"
 FAMILY_DERIVATION_KIND = "g01-family-derivation"
+FAMILY_DERIVATION_VERSION = "1.1.0"
+FAMILY_ASSIGNMENT_RULE = (
+    "family_id=sha256(canonical_upstream_family_keys); "
+    "provenance_bound_separately; uid_and_outcomes_forbidden"
+)
 FAMILY_REVIEW_KIND = "g01-family-derivation-review"
 FAMILY_METADATA_KIND = "g01-upstream-family-metadata-receipt"
 FAMILY_GEOMETRY_KIND = "g01-geometry-identity-receipt"
@@ -61,7 +66,7 @@ EXPECTED_SCORER_REFS = {
     "actionmesh/repo/actionbench/sample_point_cloud.py":
         "012a6d2f6fe33e8de2745b00dd57689b93605102935b07ecd6b35381da8a379f",
 }
-EXPECTED_DESIGN_DIGEST = "2d53b764958f89cb5edcc3949b721ac9a7ca484e7ec8c65d8b07649f7edeeb16"
+EXPECTED_DESIGN_DIGEST = "22d352a3ec8d391dd2bbe0549a3a39d8dc4cd5e05a53c0d4e675c930dab9b098"
 EXPECTED_REVIEW_CHECKS = {
     "source_identity", "mapping_reproduction", "split_independence",
     "exposure_containment",
@@ -523,10 +528,10 @@ def _validate_family_evidence(root: Path, design: dict, evidence: dict,
     units = derivation.get("units") if isinstance(derivation, dict) else None
     if (not isinstance(derivation, dict) or set(derivation) != derivation_keys
             or derivation.get("kind") != FAMILY_DERIVATION_KIND
-            or derivation.get("version") != DESIGN_VERSION
+            or derivation.get("version") != FAMILY_DERIVATION_VERSION
             or derivation.get("benchmark_revision") != BENCHMARK_REVISION
             or derivation.get("assignment_rule") !=
-            "family_id=sha256(canonical_family_basis); uid_and_outcomes_forbidden"
+            FAMILY_ASSIGNMENT_RULE
             or not isinstance(derivation.get("author"), str)
             or not derivation["author"]
             or not isinstance(units, dict) or set(units) != set(uids)
@@ -659,7 +664,13 @@ def _validate_family_evidence(root: Path, design: dict, evidence: dict,
                            for value in metadata_hashes + geometry_hashes
                            + extractor_hashes)):
             raise ValueError("complete canonical family identity evidence required")
-        family_id = hashlib.sha256(_canonical_bytes(basis)).hexdigest()
+        # Provenance identifies each asset's evidence, not its statistical family.
+        # Related assets may have different meshes, metadata shards or extractor
+        # bytes. Those remain mandatory in the fully checked derivation above.
+        # A separate independent review must establish the meaning and completeness
+        # of these keys across the population; string equality is not admission.
+        family_id = hashlib.sha256(_canonical_bytes(
+            {"upstream_family_keys": upstream})).hexdigest()
         if unit.get("family_id") != family_id:
             raise ValueError("family ID is not reproducible from source identity")
         derived_family_by_uid[uid] = family_id

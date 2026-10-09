@@ -200,7 +200,8 @@ class G01DesignTests(unittest.TestCase):
                 "geometry_content_sha256": [geometry_ref["sha256"]],
                 "extractor_content_sha256": [extractor_ref["sha256"]],
             }
-            family_id = hashlib.sha256(g01._canonical_bytes(basis)).hexdigest()
+            family_id = hashlib.sha256(g01._canonical_bytes(
+                {"upstream_family_keys": [family_key]})).hexdigest()
             units[uid] = {
                 "family_basis": basis, "family_id": family_id,
                 "metadata_receipt_ref": g01.file_ref(root, metadata_path),
@@ -208,11 +209,12 @@ class G01DesignTests(unittest.TestCase):
             }
             family_by_uid[uid] = family_id
         derivation = {
-            "kind": "g01-family-derivation", "version": "1.0.0",
+            "kind": "g01-family-derivation", "version": "1.1.0",
             "benchmark_revision": population["revision"],
             "units": units,
             "assignment_rule":
-                "family_id=sha256(canonical_family_basis); uid_and_outcomes_forbidden",
+                "family_id=sha256(canonical_upstream_family_keys); "
+                "provenance_bound_separately; uid_and_outcomes_forbidden",
             "author": "fixture-derivation-author",
             "derived_at": "2026-10-08T00:00:00Z",
         }
@@ -292,6 +294,45 @@ class G01DesignTests(unittest.TestCase):
                 g01.derive_family_split(
                     self.repository, design, evidence,
                     evidence_root=Path(directory))
+
+    def test_family_identity_repair_still_rejects_changed_provenance(self):
+        design = g01.validate_design(self.repository, self.design_path)
+        for field in ("metadata_receipt_ref", "geometry_receipt_ref"):
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                evidence, _ = self._family_fixture(root, distinct_asset_bytes=True)
+                derivation = g01.read_json(g01.resolve_ref(root, evidence["derivation_ref"]))
+                unit = next(iter(derivation["units"].values()))
+                receipt = g01.read_json(g01.resolve_ref(root, unit[field]))
+                ref = (receipt["metadata_source_ref"] if field == "metadata_receipt_ref"
+                       else receipt["geometry_refs"][0])
+                path = g01.resolve_ref(root, ref)
+                path.write_bytes(path.read_bytes() + b" ")
+                with self.assertRaisesRegex(ValueError, "reference digest"):
+                    g01.derive_family_split(
+                        self.repository, design, evidence, evidence_root=root)
+
+    def test_legacy_family_derivation_semantics_are_not_silently_migrated(self):
+        design = g01.validate_design(self.repository, self.design_path)
+        for key, value in (
+                ("version", "1.0.0"),
+                ("assignment_rule", "family_id=sha256(canonical_family_basis); "
+                 "uid_and_outcomes_forbidden")):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                evidence, _ = self._family_fixture(root)
+                path = g01.resolve_ref(root, evidence["derivation_ref"])
+                derivation = g01.read_json(path)
+                derivation[key] = value
+                derivation["derivation_digest"] = g01.canonical_record_digest(
+                    derivation, "derivation_digest")
+                path.write_text(json.dumps(derivation))
+                evidence["derivation_ref"] = g01.file_ref(root, path)
+                evidence["evidence_digest"] = g01.canonical_record_digest(
+                    evidence, "evidence_digest")
+                with self.assertRaisesRegex(ValueError, "reproducible family derivation"):
+                    g01.derive_family_split(
+                        self.repository, design, evidence, evidence_root=root)
 
     def test_uid_derived_family_labels_are_rejected(self):
         design = g01.validate_design(self.repository, self.design_path)

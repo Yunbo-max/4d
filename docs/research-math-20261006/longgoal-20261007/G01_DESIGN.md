@@ -63,7 +63,16 @@ exact `g01-upstream-family-metadata-receipt`: its JSON pointers are evaluated
 against pinned native metadata, so a self-asserted unrelated label is rejected.
 A separate exact `g01-geometry-identity-receipt` pins geometry files and extractor
 source; metadata, extractor and geometry categories may not overlap. The validator
-reconstructs the canonical basis and `family_id = SHA256(canonical family basis)`.
+reconstructs and validates the complete provenance basis. Derivation version
+`1.1.0` computes `family_id = SHA256(canonical {"upstream_family_keys": keys})`.
+Per-asset metadata, geometry and extractor hashes remain mandatory and bound by
+the receipt/derivation/evidence digests, but do not split related assets merely
+because their files differ. Version `1.0.0` derivations and the previous assignment
+rule are rejected; existing splits are never silently migrated.
+Keys must have a consistent documented meaning across all 128 inputs. Uploader
+identity alone, arbitrary coincident strings, or member-specific extra keys do
+not establish independent families. Independent review must examine the actual
+lineage and geometry, including related assets carrying different keys.
 UID/prefix/hash/base64-derived keys, category swaps and scorer/candidate outcomes
 are forbidden. Receipt/derivation authors cannot perform the independent review.
 
