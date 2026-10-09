@@ -1,6 +1,7 @@
 """Emit a bounded zero-GPU import diagnostic; do not import native libraries."""
 import argparse
 import hashlib
+import importlib.metadata
 import json
 from pathlib import Path
 import subprocess
@@ -35,8 +36,19 @@ def main():
     if not closure:
         raise ValueError('Native source closure required')
     plans.mkdir(parents=True)
+    staged_source = plans / 'official-source'
+    for row in closure:
+        target = staged_source / row['path']
+        target.parent.mkdir(parents=True, exist_ok=True)
+        data = (source / row['path']).read_bytes()
+        if hashlib.sha256(data).hexdigest() != row['sha256']:
+            raise ValueError('Source changed while preparing plan')
+        target.write_bytes(data)
     inventory = plans / 'source-inventory.json'
-    inventory.write_text(json.dumps({'source_root': str(source), 'revision': revision,
+    inventory.write_text(json.dumps({'original_source_root': str(source), 'revision': revision,
+                                    'python_executable': sys.executable,
+                                    'packages': {name: importlib.metadata.version(name) for name in
+                                        ('torch', 'torchvision', 'pytorch3d', 'diffusers', 'transformers', 'diso')},
                                     'files': closure}, indent=2) + '\n')
     def ref(path):
         return {'path': path.relative_to(root).as_posix(), 'sha256': sha(path)}
@@ -52,7 +64,7 @@ def main():
                'input_refs': [ref(inventory)],
                'code_refs': [ref(root / 'actionmesh' / name) for name in (
                    'research_math/__init__.py', 'research_math/native_import_check.py',
-                   'prepare_native_import_check.py')],
+                   'prepare_native_import_check.py')] + [ref(staged_source / row['path']) for row in closure],
                'output_paths': ['actionmesh/native-import-output.json'],
                'seed': 0, 'group': 'engineering', 'arm_role': 'software-only'}],
         provenance={'git_revision': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip(),

@@ -25,14 +25,21 @@ def main():
         if os.environ.get('CUDA_VISIBLE_DEVICES') != '':
             raise ValueError('Zero-GPU harness allocation required')
         inventory = json.loads(args.inventory.read_text())
-        source = Path(inventory['source_root'])
+        source = args.inventory.resolve().parent / 'official-source'
+        expected_paths = {row['path'] for row in inventory['files']}
+        if {path.relative_to(source).as_posix() for path in source.rglob('*.py')} != expected_paths:
+            raise ValueError('Exact staged official source inventory required')
         for row in inventory['files']:
             path = source / row['path']
-            if path.is_symlink() or hashlib.sha256(path.read_bytes()).hexdigest() != row['sha256']:
+            if (Path(row['path']).is_absolute() or '..' in Path(row['path']).parts
+                    or path.is_symlink() or not path.resolve().is_relative_to(source)
+                    or hashlib.sha256(path.read_bytes()).hexdigest() != row['sha256']):
                 raise ValueError('Official source bytes changed: ' + row['path'])
         result['source_inventory_sha256'] = hashlib.sha256(args.inventory.read_bytes()).hexdigest()
         result['packages'] = {name: importlib.metadata.version(name) for name in
                               ('torch', 'torchvision', 'pytorch3d', 'diffusers', 'transformers', 'diso')}
+        if result['packages'] != inventory['packages'] or sys.executable != inventory['python_executable']:
+            raise ValueError('Runtime package identity changed since plan emission')
         os.environ.update(HF_HUB_OFFLINE='1', TRANSFORMERS_OFFLINE='1', HF_HUB_DISABLE_IMPLICIT_TOKEN='1')
         sys.path[:0] = [str(source), str(source / 'third_party/TripoSG')]
         for name in ('torch', 'torchvision', 'pytorch3d.ops', 'diso', 'actionmesh.pipeline',
