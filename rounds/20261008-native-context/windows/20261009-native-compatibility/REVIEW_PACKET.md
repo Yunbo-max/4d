@@ -29,6 +29,16 @@ The actual old-environment CPU diagnostic reproduced the same infer_schema failu
 The separately generated repair GPU plan is `paired-native-context-seed42-20261009-r2`, digest `e209c7377f8b32a5f3280a20fc80ce56e2ae38762598dac8fb6837599573b6ab`. It retains the original generation/profile,zero comparison tolerances,full16frames,three receipt outputs,1attempt/0retry and12600second bound. The candidate scientific state remains unadmitted. Its execution state will be recorded separately; the source builder always emits `dispatch_ready=false` and cannot itself authorize execution.
 
 
-## Repair attempt launched
+## Repair attempt completed
 
-The independently reviewed r2 attempt is now running. The exact read-only harness observation is [repair-launch/status-snapshot.json](repair-launch/status-snapshot.json); [controller launch review](repair-launch/controller-launch-review.json) retains the user instruction, exact GPU/current inventory, repair parent and parent hard deadline. Subsequent live logs show16 input frames loaded, background remover and TripoSG loaded, and the100-step generator advancing. This is live progress, not a completed result.
+The independently reviewed r2 attempt completed under the single-attempt harness. The exact launch authority and device inventory remain in [controller launch review](repair-launch/controller-launch-review.json). The attempt used the repaired Diffusers0.36.0 environment on Tesla T4 UUID `GPU-305023ac-8457-0ac4-0432-4ff19b30de46`.
+
+- Run: `paired-native-context-seed42-20261009-r2`; harness digest `e209c7377f8b32a5f3280a20fc80ce56e2ae38762598dac8fb6837599573b6ab`; native plan digest `07365dc75ab33b7048de2ea2ba32ed1d47767ead9bb62d4822bc7f3d1b3aa041`.
+- Unobserved generation: completed, 1595.3498215284199 seconds. Observed generation: completed, 1599.4099076380953 seconds. Replay: completed, 139.4388423934579 seconds. Total instrument elapsed: 3430.5481796972454 seconds.
+- Stage counts: 30/30 Stage I frames, 15/15 Stage II frames, and 1/1 source-time query. Both 16-frame GLB sequences and both grid videos were emitted.
+- Paired comparison: exact topology, identity and coordinates match at `atol=rtol=0`, maximum absolute error `0.0`; both sequence hashes are `1b199107ec0e09b36231bd8d5322b11ea09d99d8b72208f1b93f516c4ba07894`.
+- Replay raw and mesh comparisons match with maximum absolute error `0.0`. The replay report records `dtype_matches=false` for the mesh comparison, so the run remains `replayed_unqualified`.
+- Final status: `completed_unqualified`, `final_integrity=matched`, `all_comparisons_match=true`, `replay_qualified=false`, `native_context_qualified=false`, `scientific_effect_qualification=false`, and `dispatch_ready=false`. This is engineering transport/replay evidence, not candidate admission or an official score.
+- Receipt hashes: `result.json` `58145ee7792b28c31bcf45a18d9614bea2046978ee08211110428240c78a825d`; `raw-manifest.json` `8bdce2261f2a64498c2da02653d2200e4730e632fca6b827285fbde5996f16b3`; `raw-evidence.tar` `fcceacd171edbd20a9431b3bdccf84b7e5687414b8e1306f7ca86af793894953` (79,452,160 bytes). The complete retained attempt archive is `paired-native-context-seed42-20261009-r2-completion.tar.gz`, SHA-256 `c967f9eedcb318b94337b315a270f03a39216fcaa5c65a2cfa1ea52495184759`.
+
+The GPU is now idle. The next step is CPU-only receipt-bound consumption and baseline/scorer parity; no candidate scoring or 15-idea scientific result is authorized by this engineering completion.
