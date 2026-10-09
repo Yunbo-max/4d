@@ -324,7 +324,7 @@ def _report_identity(report: dict, freeze: dict, role: str) -> None:
         raise ValueError('Body Gaussian role identity mismatch')
     if role == 'corotational_residual' and (
             report.get('candidate_id') != CANDIDATE_ID
-            or report.get('arm_role') != 'corotational_residual'):
+            or report.get('arm_role') != candidate_module.ARM):
         raise ValueError('Corotational role must be the C14 candidate construction')
 
 

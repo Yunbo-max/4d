@@ -498,10 +498,10 @@ def independent_local_repair(common: dict, faces: np.ndarray,
             weight = float(face_weights[pair_id])
             local_rhs[:, local_first] -= weight * desired
             local_rhs[:, local_second] += weight * desired
-            local_system[:, local_first, local_first] += weight
-            local_system[:, local_second, local_second] += weight
-            local_system[:, local_first, local_second] -= weight
-            local_system[:, local_second, local_first] -= weight
+            local_system[local_first, local_first] += weight
+            local_system[local_second, local_second] += weight
+            local_system[local_first, local_second] -= weight
+            local_system[local_second, local_first] -= weight
         # Adding the projector onto constants fixes only the local gauge.  The
         # three-by-three systems remain independent; no global solve is hidden.
         local_system += np.ones((3, 3), dtype=np.float64) / 3.0

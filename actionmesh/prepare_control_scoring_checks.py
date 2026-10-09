@@ -7,6 +7,7 @@ import sys
 
 
 ROOT_SOURCES = (
+    'research_census_case.py',
     'research_census_eval.py',
     'prepare_mesh_controls.py',
     'prepare_quadratic_acceleration_control.py',

@@ -81,7 +81,7 @@ class C04NativeComparisonTests(unittest.TestCase):
                 coordinate_lower=-10., coordinate_upper=10.,
                 bounds_policy="preserve_and_report",
                 max_artifact_bytes=16 * 1024 * 1024)
-            self.assertEqual(result["status"], "completed")
+            self.assertEqual(result["status"], "completed", result)
 
             basis_path = workspace / "basis.json"
             basis_path.write_text("{}\n")

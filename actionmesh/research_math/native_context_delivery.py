@@ -369,7 +369,7 @@ def collection_snapshot(output):
 def _inventory(root):
     rows = []
     excluded = {'result.json', 'raw-manifest.json', 'raw-evidence.tar'}
-    for path in sorted(root.rglob('*')):
+    for path in sorted(root.rglob('*'), key=lambda item: item.relative_to(root).as_posix()):
         mode = path.lstat().st_mode
         if stat.S_ISDIR(mode):
             continue

@@ -427,11 +427,13 @@ if not matches: raise ValueError("C05 branch zero differs from retained B0")
         "depends_on": [], "priority": 1, "plan_ref": file_ref(root, native_path),
         "resources": {"cpu_cores": 1, "ram_mib": 32768, "gpu_count": 1,
             "gpu_peak_mib": gpu_peak_mib, "allow_gpu_share": False,
-            "memory_profile_ref": file_ref(root, environment),
+            "memory_profile_ref": None,
             "exclusive_keys": ["gpu", "actionmesh-model-cache"]}}],
         limits={"total_wall_seconds": wall_seconds, "window_seconds": wall_seconds,
             "max_parallel_tasks": 1, "cpu_cores": 1, "ram_mib": 32768,
-            "max_gpu_task_seconds": wall_seconds})
+            "max_gpu_task_seconds": wall_seconds},
+        gpus={"uuids": [read_json(environment)["gpu_uuid"]],
+              "safety_margin_mib": 1024, "max_tasks_per_gpu": 1})
     (plan_dir / "harness.json").write_text(json.dumps(outer, indent=2) + "\n")
     return native_plan, outer
 

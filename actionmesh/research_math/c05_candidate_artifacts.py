@@ -841,7 +841,7 @@ def materialize_candidate(
             "candidate_arm": role, "method_id": METHOD_IDS[role],
             "implementation_ref": input_refs["math_implementation"],
             "sequence_ref": sequence_ref,
-            "source_sequence_ref": b0_sequence_ref,
+            "source_sequence_ref": input_refs["b0_sequence"],
             "source_report_ref": input_refs["b0_report"],
             "parity_receipt_ref": input_refs["parity_receipt"],
             "certificate_ref": _ref(root, certificate_path),

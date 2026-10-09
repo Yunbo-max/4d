@@ -79,7 +79,7 @@ _bind_standard_arms = _shared.bind_contract_arms
 def _bind_c01_arms(contract: dict, comparison: dict, root: Path | None = None):
     # Native official-generation B0 predates the candidate report schema. Its
     # exact implementation is bound by the receipt-retained generation identity.
-    refs = _bind_standard_arms(contract, comparison, root=None)
+    refs = _bind_standard_arms(contract, comparison, root=root)
     if root is not None:
         by_role = {row["role"]: row for row in comparison["roles"]}
         for row in comparison["roles"]:

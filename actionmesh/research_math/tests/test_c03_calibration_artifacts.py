@@ -141,7 +141,7 @@ class CalibrationArtifactTests(unittest.TestCase):
             shutil.rmtree(root / 'retained')
             # Invoke the staged module in a fresh process, not live imported code.
             result = subprocess.run(command, cwd=cwd, capture_output=True, text=True)
-            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
             bundle = artifacts.load(cwd / 'c03-calibration-output/fit-bundle.json')
             self.assertEqual(artifacts.validate_bundle(bundle)['status'], 'completed')
 

@@ -84,7 +84,7 @@ class NativeContextPlanTests(unittest.TestCase):
             self.assertEqual(outer['tasks'][0]['resources']['gpu_count'], 1)
             job = native['jobs'][0]
             self.assertEqual(job['seed'], 314)
-            self.assertEqual(command[command.index('--generation-seed') + 1], '314')
+            self.assertEqual(job['command'][job['command'].index('--generation-seed') + 1], '314')
             self.assertIn('actionmesh/context-output/raw-evidence.tar', job['output_paths'])
             import run_experiments
             attempt = root / 'attempt'; attempt.mkdir()
