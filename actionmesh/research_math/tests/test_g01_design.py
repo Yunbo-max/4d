@@ -972,6 +972,45 @@ class G01DesignTests(unittest.TestCase):
             post_score = deepcopy(first_receipt)
             post_score["native_admission_ref"] = g01.file_ref(
                 self.repository, first_admission_path)
+            # Rebind the complete fixture chain after changing admission bytes,
+            # so only the post-score review time is invalid.
+            late_comparison = json.loads(g01.resolve_ref(
+                self.repository, first_receipt["comparison_request_ref"]).read_text())
+            for role_row in late_comparison["roles"]:
+                if role_row["role"].lower() == first_receipt["control_role"].lower():
+                    role_row["native_admission_ref"] = post_score["native_admission_ref"]
+            late_comparison["request_digest"] = g01.canonical_record_digest(
+                late_comparison, "request_digest")
+            late_comparison_path = root / "late-comparison.json"
+            late_comparison_path.write_text(json.dumps(late_comparison))
+            late_scoring = json.loads(g01.resolve_ref(
+                self.repository, first_receipt["scoring_request_ref"]).read_text())
+            late_scoring["comparison_request_digest"] = late_comparison["request_digest"]
+            late_scoring["request_digest"] = g01.canonical_record_digest(
+                late_scoring, "request_digest")
+            late_scoring_path = root / "late-scoring.json"
+            late_scoring_path.write_text(json.dumps(late_scoring))
+            late_manifest = json.loads(g01.resolve_ref(
+                self.repository, first_receipt["raw_manifest_ref"]).read_text())
+            late_manifest["request_digest"] = late_scoring["request_digest"]
+            late_manifest["comparison_request_digest"] = late_comparison["request_digest"]
+            late_manifest_path = root / "late-raw-manifest.json"
+            late_manifest_path.write_text(json.dumps(late_manifest))
+            late_scored = json.loads(g01.resolve_ref(
+                self.repository, first_receipt["result_ref"]).read_text())
+            late_scored["request_digest"] = late_scoring["request_digest"]
+            late_scored["comparison_request_digest"] = late_comparison["request_digest"]
+            late_scored["raw_bundle"]["manifest"]["sha256"] = g01.file_ref(
+                self.repository, late_manifest_path)["sha256"]
+            late_scored["result_digest"] = g01.canonical_record_digest(
+                late_scored, "result_digest")
+            late_scored_path = root / "late-score.json"
+            late_scored_path.write_text(json.dumps(late_scored))
+            for key, path in (("comparison_request_ref", late_comparison_path),
+                              ("scoring_request_ref", late_scoring_path),
+                              ("raw_manifest_ref", late_manifest_path),
+                              ("result_ref", late_scored_path)):
+                post_score[key] = g01.file_ref(self.repository, path)
             post_score["receipt_digest"] = g01.canonical_record_digest(
                 post_score, "receipt_digest")
             first_receipt_path.write_text(json.dumps(post_score))
