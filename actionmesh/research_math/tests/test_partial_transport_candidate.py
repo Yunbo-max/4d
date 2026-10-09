@@ -237,7 +237,8 @@ class PartialTransportArtifactTests(unittest.TestCase):
                 bounds_policy="preserve_and_report", max_artifact_bytes=10_000_000)
             verified = candidate.validate_candidate_artifact(
                 root, output / "candidate.json")
-            self.assertEqual(verified["completed_roles"], list(candidate.ROLES))
+            self.assertEqual(verified["completed_roles"], list(candidate.ROLES),
+                [(path.as_posix(), path.read_text()) for path in output.glob("*/report.json")])
             self.assertEqual(set(verified["artifact_archive"]), {"archive", "record"})
             with np.load(output / "partial_mass_native_fallback" / "sequence.npz",
                          allow_pickle=False) as saved:

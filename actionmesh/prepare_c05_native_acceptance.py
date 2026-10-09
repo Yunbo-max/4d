@@ -14,6 +14,7 @@ from pathlib import Path
 import sys
 
 from prepare_control_scoring_checks import acceptance_sources
+from prepare_c05_mode_bank import _validate_weights_manifest_schema
 from prepare_c06_native_acceptance import (
     _checked_ref, _digest, _load, _nested_refs, _physical, _ref,
     official_source_names,
@@ -89,7 +90,8 @@ def _resolve_nested_ref(root: Path, document: Path, ref: dict, *,
 
 
 def _walk_source_closure(root: Path, document: Path, initial, *,
-                         evidence_root: Path, producer_root: Path) -> list[Path]:
+                         evidence_root: Path, producer_root: Path,
+                         model_inventory: Path | None = None) -> list[Path]:
     """Follow exact refs through JSON evidence with a strict finite bound."""
     pending: list[tuple[Path, dict]] = []
     for ref in _iter_refs(initial):
@@ -106,7 +108,11 @@ def _walk_source_closure(root: Path, document: Path, initial, *,
         if path in seen:
             continue
         seen.add(path); files.append(path)
-        if path.suffix == ".json":
+        if path == model_inventory:
+            # This exact producer-bound document inventories external weights.
+            # CPU artifact acceptance retains the inventory, not model assets.
+            _validate_weights_manifest_schema(path)
+        elif path.suffix == ".json":
             value = _load(path)
             pending.extend((path, child) for child in _iter_refs(value))
     return files
@@ -180,9 +186,18 @@ def artifact_refs(root, artifact_candidate, *, evidence_root):
     evidence_root = Path(evidence_root).resolve()
     candidate_path.relative_to(evidence_root)
     producer_root = _producer_root_from_candidate(root, evidence_root, candidate)
+    mode_path = _physical(root, evidence_root / inputs["mode_bank"]["path"])
+    producer_manifest_path = mode_path.parent / "raw-manifest.json"
+    producer_manifest = _load(producer_manifest_path)
+    model_ref = producer_manifest.get("provenance", {}).get("model_ref")
+    model_inventory = None
+    if model_ref is not None:
+        model_inventory = _resolve_nested_ref(
+            root, producer_manifest_path, model_ref, evidence_root=evidence_root,
+            producer_root=producer_root)
     files.extend(_walk_source_closure(
         root, candidate_path, inputs, evidence_root=evidence_root,
-        producer_root=producer_root))
+        producer_root=producer_root, model_inventory=model_inventory))
     # De-duplicate only after exact physical resolution, then normalize every
     # source/artifact reference into the project namespace used by the harness.
     return [_ref(root, path) for path in sorted(set(files))]

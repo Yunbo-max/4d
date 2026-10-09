@@ -165,7 +165,8 @@ class C14NativeComparisonTests(unittest.TestCase):
                 continue
             directory = arms[role]
             role_rows.append({
-                'role': role, 'method_id': role,
+                'role': role, 'method_id': (comparison.CANDIDATE_ID
+                    if role == 'corotational_residual' else role),
                 'report_ref': comparison.file_ref(self.root, directory / 'report.json'),
                 'sequence_ref': comparison.file_ref(self.root, directory / 'sequence.npz'),
                 **({'implementation_ref': comparison.file_ref(

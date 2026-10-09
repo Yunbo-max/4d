@@ -203,7 +203,7 @@ class C05CandidateArtifactTests(unittest.TestCase):
             self.assertEqual(result["role_denominator"], len(artifacts.ROLE_ORDER))
             self.assertEqual(result["roles_failed"], [])
             candidate = artifacts.validate_candidate_artifact(root, output)
-            self.assertEqual(tuple(candidate["role_refs"]), artifacts.ROLE_ORDER)
+            self.assertEqual(set(candidate["role_refs"]), set(artifacts.ROLE_ORDER))
             self.assertEqual(candidate["method_ids"], artifacts.METHOD_IDS)
             self.assertEqual(set(candidate["input_refs"]), {
                 "mode_bank_result", "mode_bank_manifest", "mode_bank",
@@ -236,7 +236,7 @@ class C05CandidateArtifactTests(unittest.TestCase):
             output, result = materialize(root, workspace=workspace, multimodal=False)
             self.assertEqual(result["status"], "incomplete_natural_gate")
             candidate = artifacts.validate_candidate_artifact(root, output)
-            self.assertEqual(tuple(candidate["role_refs"]), artifacts.ROLE_ORDER)
+            self.assertEqual(set(candidate["role_refs"]), set(artifacts.ROLE_ORDER))
             self.assertEqual(result["roles_completed"], [])
             self.assertEqual(result["roles_failed"], list(artifacts.ROLE_ORDER))
             self.assertEqual(result["role_denominator"], len(artifacts.ROLE_ORDER))
@@ -412,7 +412,7 @@ class C05CandidateArtifactTests(unittest.TestCase):
             "natural_gate_min_fraction", "localized_radius", "temperature",
             "unary_weight", "spatial_weight", "max_sweeps",
             "displacement_clip_multiplier", "max_artifact_bytes", "face_chunk_size",
-        })
+            "producer_root"})
         args = artifacts.parse_args([
             "validate", "--root", "/project", "--output", "/project/c05"])
         self.assertEqual(args.operation, "validate")

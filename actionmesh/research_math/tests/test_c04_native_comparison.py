@@ -72,7 +72,7 @@ class C04NativeComparisonTests(unittest.TestCase):
                 source_sequence_ref=sequence_ref["path"],
                 source_report_ref=source_report_ref["path"],
                 parameters={"arap_weight": .1, "temporal_weight": .1,
-                    "iterations": 2, "cg_tolerance": 1e-8,
+                    "iterations": 100, "cg_tolerance": 1e-8,
                     "cg_max_iterations": 1000, "shape_floor": .01,
                     "shape_gain": .5, "radius": .2, "epsilon": .1,
                     "trust_radius": 1., "finite_budget": 1.,

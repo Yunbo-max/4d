@@ -318,7 +318,9 @@ def solve_endpoint_bridge(kernels: list[dict], initial: np.ndarray, final: np.nd
         if absolute <= tolerance and relative <= tolerance:
             break
     else:
-        raise TrajectoryBridgeError("Endpoint scaling did not converge")
+        raise TrajectoryBridgeError("Endpoint scaling did not converge: "
+                                    f"iteration={iteration}, absolute={absolute:.17g}, "
+                                    f"relative={relative:.17g}, update={residual:.17g}")
     backward = [None] * 16
     backward[15] = log_v
     for step in range(14, -1, -1):

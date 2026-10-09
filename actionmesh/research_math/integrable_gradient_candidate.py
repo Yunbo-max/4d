@@ -979,6 +979,7 @@ def validate_candidate_artifact(root: Path, candidate_path: Path) -> dict:
         expected_vertices = (source_vertices.astype(np.float64)
                              + expected_displacement).astype(np.float32)
         expected_vertices[:, recomputed["pins"]] = source_vertices[:, recomputed["pins"]]
+        expected_vertices[0] = source_vertices[0]
         if not np.array_equal(output_vertices, expected_vertices):
             raise ValueError(f"{role} sequence differs from exact reconstruction")
         with np.load(certificate_path, allow_pickle=False) as saved:

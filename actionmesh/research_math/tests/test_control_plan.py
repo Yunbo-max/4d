@@ -124,7 +124,7 @@ class ControlPlanTest(unittest.TestCase):
         self.assertEqual(candidates['C13']['strong_control_code_entry'],
             'actionmesh/research_math/quadratic_acceleration_control.py:export_quadratic_control')
         self.assertNotIn('strong_control_code_entry', candidates['C10'])
-        self.assertFalse(candidates['C13']['full_method_source_complete'])
+        self.assertTrue(candidates['C13']['full_method_source_complete'])
 
     def project(self, root):
         code = root/'actionmesh/research_math'; code.mkdir(parents=True)

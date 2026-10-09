@@ -295,6 +295,18 @@ class ResearchSupervisorTests(unittest.TestCase):
         paths = sorted((directory / "events").glob("*.json"))
         values = [json.loads(path.read_text()) for path in paths]
         mutate(values)
+        # Worker events repeat the predecessor envelopes. Keep an intentionally
+        # rehashed mutation internally consistent so argv checks are reached.
+        registration = next((v['registration'] for v in values
+                             if v.get('stage') == 'register-project'), None)
+        enqueue = next((v['enqueue'] for v in values
+                        if v.get('stage') == 'enqueue'), None)
+        for value in values:
+            if value.get('status', '').startswith('worker_'):
+                if registration is not None:
+                    value['registration'] = registration
+                if enqueue is not None:
+                    value['enqueue'] = enqueue
         for path in paths:
             path.unlink()
         previous, encoded, event_name = None, [], None

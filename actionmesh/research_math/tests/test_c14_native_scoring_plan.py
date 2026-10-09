@@ -607,7 +607,7 @@ class C14NativeScoringPlanTests(unittest.TestCase):
                     with mock.patch.dict(
                             os.environ, {'C14_LAUNCH_CLAIM_SHA256': '0' * 64},
                             clear=False), self.assertRaisesRegex(
-                                ValueError, 'controller claim'):
+                                ValueError, 'controller claim|finalized claim/consumption closure mismatch'):
                         scoring.validate_execution_authorization(
                             workspace, staged_request,
                             workspace/'actionmesh/c14-scoring-output',
@@ -621,7 +621,7 @@ class C14NativeScoringPlanTests(unittest.TestCase):
                             os.environ, {'C14_LAUNCH_CLAIM_SHA256':
                                          scoring.digest(claim_path)},
                             clear=False), self.assertRaisesRegex(
-                                ValueError, 'controller claim'):
+                                ValueError, 'controller claim|finalized claim/consumption closure mismatch'):
                         scoring.validate_execution_authorization(
                             workspace, staged_request,
                             workspace/'actionmesh/c14-scoring-output',

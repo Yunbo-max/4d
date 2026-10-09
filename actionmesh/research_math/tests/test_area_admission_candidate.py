@@ -230,7 +230,7 @@ class AreaAdmissionCandidateTests(unittest.TestCase):
             candidate.write_json(output / "manifest.json", manifest)
             candidate._write_archive(
                 output, [forged, *reports[1:]], 32 * 1024 * 1024)
-            with self.assertRaisesRegex(ValueError, "replay|failure|error"):
+            with self.assertRaisesRegex(ValueError, "C12 failed role lacks bounded terminal evidence"):
                 candidate.validate_candidate_artifact(root, output / "candidate.json")
 
 

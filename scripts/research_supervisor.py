@@ -1149,9 +1149,10 @@ def repair_bridge_status(campaign):
                             if value != expected_worker:
                                 raise CampaignError("repair worker intent identity mismatch")
                             worker_intent_present = True
-                            if item.get("bridge_status") not in {
-                                    "worker_returned", "worker_failed", "worker_unknown",
-                                    "reconcile_required"}:
+                            if (not any(status in {
+                                    "worker_returned", "worker_failed", "worker_unknown"}
+                                    for status in core_statuses)
+                                    and item.get("bridge_status") != "unindexed_event"):
                                 item.update(status="reconcile_required",
                                     bridge_status="worker_intent_without_terminal_event")
                         worker_terminal = bool(core_statuses and core_statuses[-1] in {

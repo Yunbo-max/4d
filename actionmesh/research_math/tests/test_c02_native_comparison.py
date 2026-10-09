@@ -56,7 +56,7 @@ class C02NativeComparisonTests(unittest.TestCase):
             result = candidate.export_candidate(
                 source, output, uid=uid, expected_sequence_sha256=sequence_sha,
                 patch_count=2, arap_weight=1., temporal_weight=1.,
-                iterations=20, cg_tolerance=1e-8, cg_max_iterations=500)
+                iterations=100, cg_tolerance=1e-8, cg_max_iterations=500)
             self.assertEqual(result["status"], "completed")
             basis = workspace / "basis.json"; basis.write_text("{}\n")
             decision = {

@@ -34,7 +34,7 @@ def build_plans(root, *, data, policy, evidence_files, plan_dir, run_id,
         raise ValueError('Development data bytes differ from frozen policy')
     inputs = [file_ref(root, p) for p in (data, policy)]
     command = [sys.executable, '-m', 'research_math.c03_calibration_artifacts',
-        '--root', str(root), '--data', str(Path(data).resolve()),
+        '--root', '..', '--data', str(Path(data).resolve()),
         '--policy', str(Path(policy).resolve()),
         '--output', 'c03-calibration-output']
     for name, path in sorted(evidence_files.items()):

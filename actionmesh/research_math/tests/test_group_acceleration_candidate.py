@@ -38,6 +38,17 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
         return candidate.repair_group_acceleration(
             vertices, self.times, metric, pinned_frames=[0], **options)
 
+    def solve_float64(self, vertices, metric=None):
+        # Mathematical symmetry and SPD behavior are properties of the solve.
+        # Certification of the rounded native export is tested separately.
+        if metric is None:
+            metric = np.eye(len(vertices), dtype=np.float64)
+        problem = candidate.form_anchored_group_trend_problem(
+            vertices, self.times, metric, pinned_frames=[0])
+        return candidate.solve_affine_anchor_stationarity(
+            problem, group_weight=.25, rho=1., absolute_tolerance=1e-8,
+            relative_tolerance=1e-7, gap_tolerance=1e-7, max_iterations=10000)
+
     def test_nonuniform_timestamp_operator_annihilates_affine_motion(self):
         times = np.array([0., .25, 1., 2.5, 5.])
         operator = candidate.timestamp_second_difference(times)
@@ -45,7 +56,7 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
         np.testing.assert_allclose(operator @ times, 0., atol=1e-14)
 
     def test_affine_motion_is_fixed_point_with_exact_anchor_and_certificate(self):
-        velocity = np.array([.2, -.1, .3], dtype=np.float32)
+        velocity = np.array([.25, -.125, .5], dtype=np.float32)
         source = self.vertices + self.times[:, None, None].astype(np.float32) * velocity
         repaired, certificate, diagnostics = self.solve(source)
         np.testing.assert_allclose(repaired, source, atol=2e-6)
@@ -64,8 +75,8 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
         rotation = np.array([[np.cos(angle), -np.sin(angle), 0.],
                              [np.sin(angle), np.cos(angle), 0.],
                              [0., 0., 1.]], dtype=np.float64)
-        repaired, _, _ = self.solve(source)
-        rotated, _, _ = self.solve((source.astype(np.float64) @ rotation).astype(np.float32))
+        repaired, _, _ = self.solve_float64(source)
+        rotated, _, _ = self.solve_float64((source.astype(np.float64) @ rotation).astype(np.float32))
         np.testing.assert_allclose(rotated, repaired.astype(np.float64) @ rotation,
                                    atol=3e-5, rtol=3e-5)
 
@@ -74,8 +85,8 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
         source[6, 3, 2] += 1.
         metric = np.eye(16, dtype=np.float64)
         metric += .15 * (np.eye(16, k=1) + np.eye(16, k=-1))
-        repaired, _, diagnostics = self.solve(source, metric)
-        identity, _, _ = self.solve(source)
+        repaired, _, diagnostics = self.solve_float64(source, metric)
+        identity, _, _ = self.solve_float64(source)
         self.assertGreater(float(np.max(np.abs(repaired - identity))), 1e-5)
         self.assertEqual(diagnostics['metric_scope'], 'shared_temporal_spd_kron_identity_vertex_xyz')
         self.assertGreater(diagnostics['metric_offdiagonal_linf'], 0.)
@@ -121,9 +132,10 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
                 self.vertices, self.times, np.eye(16),
                 pinned_frames=[3, 0], anchor_values=anchors)
 
-    def source(self, root):
+    def source(self, root, *, spike=True):
         case = root / 'source'; case.mkdir()
-        self.vertices[8, 3, 2] += 1.
+        if spike:
+            self.vertices[8, 3, 2] += 1.
         np.savez_compressed(case / 'sequence.npz', vertices=self.vertices,
                             faces=self.faces, frame_indices=np.arange(16),
                             timesteps=self.times.astype(np.float32),
@@ -136,7 +148,7 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
 
     def test_export_is_complete_identity_preserving_candidate_arm(self):
         with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory); case, digest = self.source(root)
+            root = Path(directory); case, digest = self.source(root, spike=False)
             result = candidate.export_group_candidate(
                 case, root / 'out', uid='fixture',
                 expected_sequence_sha256=digest, metric_path=None,
@@ -206,6 +218,21 @@ class GroupAccelerationCandidateTests(unittest.TestCase):
                     relative_tolerance=1e-7, gap_tolerance=1e-7,
                     max_iterations=10000)
             self.assertFalse((root / 'other').exists())
+
+    def test_float32_quantization_failure_retains_no_scoreable_sequence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); case, digest = self.source(root)
+            result = candidate.export_group_candidate(
+                case, root / 'out', uid='fixture',
+                expected_sequence_sha256=digest, metric_path=None,
+                expected_metric_sha256=None, group_weight=.25, rho=1.,
+                absolute_tolerance=1e-8, relative_tolerance=1e-7,
+                gap_tolerance=1e-7, max_iterations=10000)
+            self.assertEqual(result['status'], 'incomplete')
+            report = json.loads((root / 'out/group_acceleration/report.json').read_text())
+            self.assertIn('Exported float32 sequence failed', report['error'])
+            self.assertFalse((root / 'out/group_acceleration/sequence.npz').exists())
+            self.assertFalse((root / 'out/group_acceleration/certificate.npz').exists())
 
     def test_nonconvergence_retains_error_report_without_fake_sequence(self):
         with tempfile.TemporaryDirectory() as directory:

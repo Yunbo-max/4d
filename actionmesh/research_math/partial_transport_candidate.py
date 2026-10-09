@@ -496,7 +496,7 @@ def sparse_sinkhorn(rows: np.ndarray, columns: np.ndarray, costs: np.ndarray,
                 break
     if (not np.isfinite(plan).all() or not math.isfinite(relative_residual)
             or residual > tolerance or relative_residual > tolerance):
-        raise RuntimeError("Sparse Sinkhorn did not close both frozen marginals")
+        raise RuntimeError(f"Sparse Sinkhorn did not close both frozen marginals: iteration={iteration}, absolute={residual:.17g}, relative={relative_residual:.17g}")
     objective = float(np.dot(plan, costs) + epsilon * np.dot(
         plan, np.log(np.maximum(plan, np.finfo(np.float64).tiny)) - 1.0))
     row_sum = np.zeros(n); column_sum = np.zeros(m)
@@ -604,7 +604,7 @@ def sparse_partial_transport(rows: np.ndarray, columns: np.ndarray,
         float(np.max(np.abs((target_mass - column_sum) * log_v))))
     if (not np.isfinite(plan).all() or capacity > tolerance
             or fixed_point > tolerance or complementarity > tolerance):
-        raise RuntimeError("Partial Sinkhorn did not satisfy capacity KKT conditions")
+        raise RuntimeError(f"Partial Sinkhorn did not satisfy capacity KKT conditions: iteration={iteration}, capacity={capacity:.17g}, complementarity={complementarity:.17g}, fixed_point={fixed_point:.17g}")
     source_slack = source_mass - row_sum
     target_slack = target_mass - column_sum
     objective = float(np.dot(plan, costs)

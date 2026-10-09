@@ -152,7 +152,7 @@ class C05NativeComparisonTests(unittest.TestCase):
             sandbox = Path(directory); freeze = fixture(PROJECT_ROOT, sandbox)
             solver = sandbox / "candidate/solver-certificate.json"
             solver.write_text(solver.read_text() + " ")
-            with self.assertRaises(ValueError):
+            with self.assertRaises(artifacts.C05ArtifactError):
                 comparison.make_request(PROJECT_ROOT, freeze_path=freeze)
 
     def test_cli_only_builds_a_request(self):

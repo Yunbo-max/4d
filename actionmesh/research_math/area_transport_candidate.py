@@ -495,7 +495,10 @@ def sparse_sinkhorn(rows: np.ndarray, columns: np.ndarray, costs: np.ndarray,
                 break
     if (not np.isfinite(plan).all() or not math.isfinite(relative_residual)
             or residual > tolerance or relative_residual > tolerance):
-        raise RuntimeError("Sparse Sinkhorn did not close both frozen marginals")
+        raise RuntimeError("Sparse Sinkhorn did not close both frozen marginals: "
+                           f"iteration={iteration}, absolute={residual:.17g}, "
+                           f"relative={relative_residual:.17g}, "
+                           f"log_kernel_range=[{log_kernel.min():.17g},{log_kernel.max():.17g}]")
     objective = float(np.dot(plan, costs) + epsilon * np.dot(
         plan, np.log(np.maximum(plan, np.finfo(np.float64).tiny)) - 1.0))
     row_sum = np.zeros(n); column_sum = np.zeros(m)

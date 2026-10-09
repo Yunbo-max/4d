@@ -58,7 +58,7 @@ class C03NativeScoringProfileTests(unittest.TestCase):
             roles.append({"role": role, "method_id": "method-" + role,
                           "case_id": case_id, "preparation_status": "completed"})
             cases.append({"case_id": case_id, "status": "success",
-                          "metrics": {"cd_motion": 1.0, "cd_3d": 2.0, "cd_4d": 3.0}})
+                          "cd_motion": 1.0, "cd_3d": 2.0, "cd_4d": 3.0})
         result = scoring.build_logical_readout({"roles": roles}, {"cases": cases})
         self.assertEqual(result["logical_denominator"]["n_roles"], 9)
         self.assertEqual(result["n_successful_roles"], 9)
@@ -72,7 +72,7 @@ class C03NativeScoringProfileTests(unittest.TestCase):
                   "preparation_error": "retained"}
                  for role in comparison.ROLES]
         cases = [{"case_id": "case-" + role, "status": "success",
-                  "metrics": {"cd_motion": 1.0, "cd_3d": 2.0, "cd_4d": 3.0}}
+                  "cd_motion": 1.0, "cd_3d": 2.0, "cd_4d": 3.0}
                  for role in comparison.ROLES if role != "full_squared"]
         result = scoring.build_logical_readout({"roles": roles}, {"cases": cases})
         self.assertEqual(result["n_failed_or_missing_roles"], 1)
