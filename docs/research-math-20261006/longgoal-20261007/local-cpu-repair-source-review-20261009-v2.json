@@ -1,0 +1,73 @@
+{
+  "kind": "local-cpu-software-repair-source-review",
+  "version": 2,
+  "status": "independently_reviewed_source_only",
+  "predecessor_commit": "bc4ef2e",
+  "reviewed_implementation_commit": "8bf2a8011bf2770785269bd762d0258f5da1aaf3",
+  "predecessor_design_digest": "23aea722552feede9a456d23fc82b389d8fe2907df3b273499a0da0c65213043",
+  "design_digest": "2d53b764958f89cb5edcc3949b721ac9a7ca484e7ec8c65d8b07649f7edeeb16",
+  "updated_implementation_refs": [
+    {
+      "candidate_id": "4d-math-20261006-c07",
+      "path": "actionmesh/research_math/partial_transport_candidate.py",
+      "sha256": "2d3e3b40b072bebc828cdbd89c5d419da42300bd3c40cd17c9620d7ad1adb511",
+      "new_sha256": "fd7f09164f079d7147b7eb2796d7481bfb841fb86d4b0867e689e6ffbdc76fdf"
+    }
+  ],
+  "final_reviewed_refs": [
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/G01_DESIGN.json",
+      "sha256": "3a721cb8592ebf331c93dda843c20d5e9b8f4e94c3935905e958890e8eac9011"
+    },
+    {
+      "path": "actionmesh/research_math/g01_design.py",
+      "sha256": "f17e6403250ff7f2819242bbf306cdeb69ad0e42218d4f48da555ca3ae60bdbb"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_g01_design.py",
+      "sha256": "8f40041bec206890699ea899de68dfa8036c540a9c8075298456251cf53630c6"
+    },
+    {
+      "path": "actionmesh/prepare_g01_acceptance.py",
+      "sha256": "d3cce5ac9af7935d8a519846423cdbb04568a4c6e930c04c58fd2c595773c4f5"
+    },
+    {
+      "path": "actionmesh/prepare_control_scoring_checks.py",
+      "sha256": "6a7f06f322ec8b6129b80687ad146a22223708e306258f8288b70dad7fc6ed1a"
+    },
+    {
+      "path": "actionmesh/research_math/partial_transport_candidate.py",
+      "sha256": "fd7f09164f079d7147b7eb2796d7481bfb841fb86d4b0867e689e6ffbdc76fdf"
+    },
+    {
+      "path": "actionmesh/research_math/tests/test_area_transport_candidate.py",
+      "sha256": "6b92c94b0596f49b07e2d0ff6bda5579dbfde416c25044ebf8d47782dd9fe817"
+    },
+    {
+      "path": "docs/research-math-20261006/longgoal-20261007/local-cpu-repair-source-review-20261009.json",
+      "sha256": "24deced3695d51df91c759bc357c78f03733e2f46541ec17677549f4c80e0899"
+    }
+  ],
+  "scope": "Continuation of Local CPU software repair: unchanged partial entropic transport objective, capacities, kernel, epsilon, gamma and KKT acceptance; bounded projected Newton directions. C06 positive fixture uses only supported native generation seed42. Scientific design and authorization unchanged.",
+  "reviewers": [
+    "/root/review_numerics",
+    "/root/review_g01"
+  ],
+  "scientific_admission": false,
+  "gpu_dispatch_allowed": false,
+  "local_method_verified": 0,
+  "native_results": 0,
+  "software_attempts": [
+    {
+      "run_id": "debug-r3-cpu-001",
+      "status": "failed",
+      "tests": 849,
+      "failures": 3,
+      "errors": 14,
+      "skipped": 6,
+      "test_elapsed_seconds": 112.172,
+      "source_commit": "e079ae8529ca231cde6e3354b61788329fe75949"
+    }
+  ],
+  "review_conclusion": "No blocking findings. All 206 design refs and eight final review refs rehash. Only C07 implementation hash and canonical design digest differ from bc4ef2e; all scientific fields unchanged."
+}
