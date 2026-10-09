@@ -128,7 +128,7 @@ class G01DesignTests(unittest.TestCase):
             g01.validate_design_record(self.repository, design)
 
     def _family_fixture(self, directory, *, uid_derived=False,
-                        unexposed_family_count=None):
+                        unexposed_family_count=None, distinct_asset_bytes=False):
         root = Path(directory)
         population = json.loads((
             self.repository / "actionmesh/research_overnight/assets/"
@@ -159,9 +159,14 @@ class G01DesignTests(unittest.TestCase):
                 family_key = "asset-group-%03d" % family_index
                 fresh_index += 1
             metadata_source = root / ("metadata-%03d.json" % index)
-            metadata_source.write_text(json.dumps({
-                "native": {"asset_family": family_key},
-            }))
+            native_metadata = {"native": {"asset_family": family_key}}
+            if distinct_asset_bytes:
+                # Related assets have distinct files and incidental metadata.
+                native_metadata["asset_description"] = "fixture asset %d" % index
+                geometry = root / ("geometry-%03d.bin" % index)
+                geometry.write_bytes(("fixture geometry %d" % index).encode())
+                geometry_ref = g01.file_ref(root, geometry)
+            metadata_source.write_text(json.dumps(native_metadata))
             metadata_source_ref = g01.file_ref(root, metadata_source)
             metadata = {
                 "kind": "g01-upstream-family-metadata-receipt",
@@ -263,6 +268,18 @@ class G01DesignTests(unittest.TestCase):
             self.assertFalse(exposed_ids & set(one["confirmation_ids"]))
             self.assertEqual(len(one["d1_families"]), 12)
             self.assertEqual(len(one["d2_families"]), 12)
+
+    def test_family_grouping_survives_distinct_asset_provenance(self):
+        design = g01.validate_design(self.repository, self.design_path)
+        with tempfile.TemporaryDirectory() as directory:
+            evidence, exposed_ids = self._family_fixture(
+                directory, unexposed_family_count=54, distinct_asset_bytes=True)
+            split = g01.derive_family_split(
+                self.repository, design, evidence, evidence_root=Path(directory))
+            self.assertEqual(len(set(split["family_by_uid"].values())), 55)
+            self.assertEqual(len(split["confirmation_families"]), 30)
+            self.assertEqual(len(split["development_exposed_families"]), 1)
+            self.assertTrue(exposed_ids.issubset(set(split["development_exposed_ids"])))
 
     def test_unreviewed_or_incomplete_family_evidence_is_rejected(self):
         design = g01.validate_design(self.repository, self.design_path)
