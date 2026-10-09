@@ -935,9 +935,25 @@ class G01DesignTests(unittest.TestCase):
                 self.repository, first_receipt_path)
             substituted_result["result_digest"] = g01.canonical_record_digest(
                 substituted_result, "result_digest")
-            with self.assertRaisesRegex(ValueError, "generation identity"):
+            with self.assertRaisesRegex(ValueError, "exact candidate/control native admission"):
                 g01._validate_b_star_result(
                     self.repository, design, split_ref, split, substituted_result)
+
+            # Keep the approved implementation closure intact to exercise the
+            # later generation-identity check independently of admission.
+            wrong_identity = deepcopy(first_admission)
+            wrong_identity["generation_identity_ref"] = g01.file_ref(
+                self.repository, rogue_identity_path)
+            wrong_identity["admission_digest"] = g01.canonical_record_digest(
+                wrong_identity, "admission_digest")
+            wrong_identity_path = root / "wrong-generation-identity-admission.json"
+            wrong_identity_path.write_text(json.dumps(wrong_identity))
+            with self.assertRaisesRegex(ValueError, "generation identity"):
+                g01._validate_control_admission(
+                    self.repository, design, admitted_row,
+                    first_receipt["control_role"], first_receipt["uid"],
+                    first_receipt["generation_seed"], first_receipt["sequence_ref"],
+                    g01.file_ref(self.repository, wrong_identity_path))
 
             admission_review_path = g01.resolve_ref(
                 self.repository, first_admission["review_ref"])
