@@ -376,7 +376,7 @@ class AreaTransportArtifactTests(unittest.TestCase):
                 query_vertex_ids=np.arange(vertices.shape[1], dtype=np.int64))
             sequence_ref = comparison.file_ref(root, source / "sequence.npz")
             (source / "report.json").write_text(json.dumps({
-                "status": "completed", "uid": uid, "seed": 314,
+                "status": "completed", "uid": uid, "seed": 42,
                 "sha256": {"sequence.npz": sequence_ref["sha256"]}}) + "\n")
             report_ref = comparison.file_ref(root, source / "report.json")
             output = work / "candidate"
@@ -400,7 +400,7 @@ class AreaTransportArtifactTests(unittest.TestCase):
             decision = {
                 "kind": comparison.DECISION_KIND, "version": 1,
                 "candidate_id": candidate.CANDIDATE_ID, "uid": uid,
-                "inference_seed": 314, "decided_at": stamp,
+                "inference_seed": 42, "decided_at": stamp,
                 "selected_role": "vertex_density_transport",
                 "selected_method_id":
                     candidate.METHOD_IDS["vertex_density_transport"],
@@ -415,7 +415,7 @@ class AreaTransportArtifactTests(unittest.TestCase):
             identity_path.write_text(json.dumps({
                 "kind": "native-context-generation-identity", "version": 1,
                 "scope": "paired engineering observer/replay; no candidate or scorer execution",
-                "uid": uid, "generation": {"seed": 314},
+                "uid": uid, "generation": {"seed": 42},
                 "verified_unit_manifest": {"fixture": True},
                 "retained_input_refs": {"fixture": {
                     "path": "inputs/fixture.json", "sha256": "a" * 64}},
@@ -451,7 +451,7 @@ class AreaTransportArtifactTests(unittest.TestCase):
             freeze = {
                 "kind": comparison.FREEZE_KIND, "version": 1,
                 "candidate_id": candidate.CANDIDATE_ID, "uid": uid,
-                "inference_seed": 314, "scoring_seed": 44,
+                "inference_seed": 42, "scoring_seed": 44,
                 "primary_metric": "cd_3d",
                 "guardrail_metrics": ["cd_4d", "cd_motion"],
                 "frozen_at": stamp, "source_sequence_ref": sequence_ref,
@@ -489,7 +489,7 @@ class AreaTransportArtifactTests(unittest.TestCase):
             failed_decision = {
                 "kind": comparison.DECISION_KIND, "version": 1,
                 "candidate_id": candidate.CANDIDATE_ID, "uid": uid,
-                "inference_seed": 314, "decided_at": stamp,
+                "inference_seed": 42, "decided_at": stamp,
                 "selected_role": "b0", "selected_method_id": "native-actionmesh-b0",
                 "selected_without_c06_native_outcomes": True,
                 "selection_basis_refs": [comparison.file_ref(root, basis)],

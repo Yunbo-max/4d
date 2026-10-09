@@ -639,6 +639,61 @@ def sparse_partial_transport(rows: np.ndarray, columns: np.ndarray,
         raise ValueError("Valid sparse partial-transport arrays required")
     log_kernel = (2.0 * gamma - costs) / epsilon
     log_u = np.zeros(n); log_v = np.zeros(m)
+    def accelerate(u, v):
+        # Minimize the same smooth entropic dual over u,v <= 0. These bounds
+        # encode capacity inequalities; they must not be treated as equalities.
+        from scipy.sparse.linalg import LinearOperator, cg
+        potential = np.concatenate((u, v))
+        capacities = np.concatenate((source_mass, target_mass))
+        def evaluate(value):
+            weights = np.exp(log_kernel + value[:n][rows] + value[n:][columns])
+            marginals = np.concatenate((
+                np.bincount(rows, weights=weights, minlength=n),
+                np.bincount(columns, weights=weights, minlength=m)))
+            objective = float(weights.sum() - np.dot(capacities, value))
+            return objective, marginals - capacities, weights, marginals
+        objective, gradient, weights, marginal = evaluate(potential)
+        free = (potential < 0.) | (gradient > 0.)
+        if not np.any(free):
+            return u, v
+        indices = np.flatnonzero(free)
+        ridge = 1e-12 * max(float(np.max(marginal)), np.finfo(np.float64).tiny)
+        def product(reduced):
+            vector = np.zeros(n + m); vector[indices] = reduced
+            result = marginal * vector
+            result[:n] += np.bincount(rows,
+                weights=weights * vector[n:][columns], minlength=n)
+            result[n:] += np.bincount(columns,
+                weights=weights * vector[:n][rows], minlength=m)
+            return result[indices] + ridge * reduced
+        operator = LinearOperator((len(indices), len(indices)),
+                                  matvec=product, dtype=np.float64)
+        reduced, _ = cg(operator, -gradient[indices], rtol=1e-7, atol=0.,
+                        maxiter=min(len(indices), 100))
+        direction = np.zeros(n + m); direction[indices] = reduced
+        if not np.isfinite(direction).all():
+            return u, v
+        maximum = float(np.max(np.abs(direction)))
+        if maximum > 20.:
+            direction *= 20. / maximum
+        # Projected gradient is zero precisely at box-constrained stationarity.
+        error = float(np.max(np.abs(np.where(potential < 0., gradient,
+                                             np.maximum(gradient, 0.)))))
+        for backtrack in range(20):
+            trial = np.minimum(0., potential + (0.5 ** backtrack) * direction)
+            slope = float(np.dot(gradient, trial - potential))
+            if slope >= 0.:
+                continue
+            trial_objective, trial_gradient, _, _ = evaluate(trial)
+            trial_error = float(np.max(np.abs(np.where(trial < 0., trial_gradient,
+                                                       np.maximum(trial_gradient, 0.)))))
+            rounding = 32 * np.finfo(np.float64).eps * max(1., abs(objective))
+            if (np.isfinite(trial_objective) and
+                    (trial_objective <= objective + 1e-4 * slope or
+                     abs(trial_objective - objective) <= rounding and trial_error < error)):
+                return trial[:n], trial[n:]
+        return u, v
+
     fixed_point = math.inf
     for iteration in range(1, max_iterations + 1):
         previous_u, previous_v = log_u.copy(), log_v.copy()
@@ -646,6 +701,8 @@ def sparse_partial_transport(rows: np.ndarray, columns: np.ndarray,
         log_u = np.minimum(0.0, np.log(source_mass) - row_norm)
         column_norm = _group_logsumexp(columns, log_kernel + log_u[rows], m)
         log_v = np.minimum(0.0, np.log(target_mass) - column_norm)
+        if iteration % 10 == 0:
+            log_u, log_v = accelerate(log_u, log_v)
         fixed_point = max(float(np.max(np.abs(log_u - previous_u))),
                           float(np.max(np.abs(log_v - previous_v))))
         if fixed_point <= tolerance:
