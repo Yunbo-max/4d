@@ -1,0 +1,477 @@
+{
+  "schema_id": "experiment-run-plan",
+  "schema_version": "1.0.0",
+  "run_id": "paired-native-context-seed42-20261009-r2",
+  "purpose": "engineering",
+  "evidence_mode": "developmental",
+  "protocol_ref": null,
+  "protocol_digest": null,
+  "output_root": "runs/attempts",
+  "provenance": {
+    "git_revision": "62fe8785f0f554e4342cb227972cd87c00c3528b",
+    "model_revision": "four snapshot-bound current-release models",
+    "data_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "environment_digest": "1fbfa6e81f3b8757dd7dfd8ee3f06333a4fdeb175cdd709ec227de5319f1d0e7"
+  },
+  "limits": {
+    "max_attempts": 1,
+    "max_development_trials": 1,
+    "max_confirmation_trials": 0,
+    "max_retries_per_trial": 0,
+    "wall_time_seconds": 12600,
+    "attempt_timeout_seconds": 12600
+  },
+  "jobs": [
+    {
+      "trial_id": "paired-native-context",
+      "command": [
+        "/opt/4d-native-diffusers036/bin/python",
+        "-m",
+        "research_math.native_context_runner",
+        "--contract",
+        "/root/rivermind-data/4d-native-compatibility/docs/research-math-20261006/actionbench-fp16-lowram-unit-contract-v1.json",
+        "--population",
+        "/root/rivermind-data/4d-native-compatibility/actionmesh/research_overnight/assets/actionbench_population.json",
+        "--snapshot-contract",
+        "/root/rivermind-data/4d-native-compatibility/docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+        "--snapshot-admission",
+        "/root/rivermind-data/4d-native-compatibility/inputs/actionbench-full128-snapshots/admission.json",
+        "--dataset-semantics",
+        "/root/rivermind-data/4d-native-compatibility/inputs/actionbench-full128-snapshots/dataset-semantics.json",
+        "--unit-manifest",
+        "/root/rivermind-data/4d-native-compatibility/inputs/actionbench-full128-snapshots/unit-manifest.json",
+        "--environment",
+        "/root/rivermind-data/4d-native-compatibility/inputs/native-runtime/environment.json",
+        "--source-root",
+        "/root/rivermind-data/4d-native-r7-assets/actionmesh",
+        "--dataset-root",
+        "/root/rivermind-data/4d-native-preparation/inputs/actionbench-2796071c",
+        "--weights-root",
+        "/root/rivermind-data/4d-native-r7-assets/actionmesh/pretrained_weights",
+        "--gpu-uuid",
+        "GPU-305023ac-8457-0ac4-0432-4ff19b30de46",
+        "--generation-seed",
+        "42",
+        "--output",
+        "context-output",
+        "--wall-seconds",
+        "12600",
+        "--instrument-wall-seconds",
+        "12600",
+        "--atol",
+        "0.0",
+        "--rtol",
+        "0.0",
+        "--max-capture-bytes",
+        "67108864",
+        "--source-time-query"
+      ],
+      "cwd": "actionmesh",
+      "input_refs": [
+        {
+          "path": "docs/research-math-20261006/actionbench-fp16-lowram-unit-contract-v1.json",
+          "sha256": "96405eb7e11027e911423cb4bf2a89643ef2b7794d3c164bf7034b465c0bf49c"
+        },
+        {
+          "path": "actionmesh/research_overnight/assets/actionbench_population.json",
+          "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+        },
+        {
+          "path": "docs/research-math-20261006/actionbench-full128-snapshot-contract.json",
+          "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/admission.json",
+          "sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/dataset-semantics.json",
+          "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+        },
+        {
+          "path": "inputs/actionbench-full128-snapshots/unit-manifest.json",
+          "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+        },
+        {
+          "path": "inputs/native-runtime/environment.json",
+          "sha256": "1fbfa6e81f3b8757dd7dfd8ee3f06333a4fdeb175cdd709ec227de5319f1d0e7"
+        },
+        {
+          "path": "inputs/native-runtime/dependencies.json",
+          "sha256": "4f7666aaa091e3771e37d8e47d81124eb476a790c4c589e99b52ce970b6a4cb7"
+        }
+      ],
+      "code_refs": [
+        {
+          "path": "actionmesh/research_math/__init__.py",
+          "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_dataset_semantics.py",
+          "sha256": "5d7a12a0f84596188c2fa59defc518667e6e139c1b860df35b9f039ea300dd55"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_full128_unit.py",
+          "sha256": "0d17fba2698863a207888febeeeb929af497919e5a823f13d14c10d55776ed33"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_full_reproduction.py",
+          "sha256": "84e6f1278a6f7129da1f7672cabfa15e9f667f4e7b343d236c867caac2890c13"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_parity.py",
+          "sha256": "41274a0ce70008cc151649dba52ad8de8c2af391c9e518812c1796c77778de73"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_queue_pricing.py",
+          "sha256": "6628d25741f72a0772e0f0b42c014e541dbdf7db0070778628e6e935fe49f3e1"
+        },
+        {
+          "path": "actionmesh/research_math/actionbench_unit_manifest.py",
+          "sha256": "3403780557927321e240ddd17a5e6faea4ebbd533938c13724b5004a59d31c06"
+        },
+        {
+          "path": "actionmesh/research_math/area_admission_candidate.py",
+          "sha256": "30b4a4e05b3dd0121e1a398d2eee3e44e0c030597f53dce52ecb38641d43402d"
+        },
+        {
+          "path": "actionmesh/research_math/area_transport_candidate.py",
+          "sha256": "271d1a09e1a7484b9a1d4d246b1327a7815eeb87a92bf1fee243cba0314b8eb1"
+        },
+        {
+          "path": "actionmesh/research_math/c01_native_comparison.py",
+          "sha256": "214901a463a214f2aafc8cb7b8a524f79d5c0f6c183f297a49607d3bc50fad82"
+        },
+        {
+          "path": "actionmesh/research_math/c01_native_scoring.py",
+          "sha256": "7387195f9f11e2450a7ab00d884642ba5129237d1e773d9079a8b298a1ca76c2"
+        },
+        {
+          "path": "actionmesh/research_math/c02_native_comparison.py",
+          "sha256": "85cf2a8d0919775474061b70a6337d6168bfcc3154e1ad5508c1fce6262fd8bf"
+        },
+        {
+          "path": "actionmesh/research_math/c02_native_scoring.py",
+          "sha256": "1364d84345955013b6fea86c248ee8b3cda57aa1b519cdd716efe931da187c27"
+        },
+        {
+          "path": "actionmesh/research_math/c03_calibration_artifacts.py",
+          "sha256": "0450c533d86a14ec3e8c15c0b1a7e914231f24b2444059db5e1ba1b6bb68cfef"
+        },
+        {
+          "path": "actionmesh/research_math/c03_label_bank.py",
+          "sha256": "4e1082732e9c3d8105e8e976153070930d830a55b9044e761bd7c6cc64c9b388"
+        },
+        {
+          "path": "actionmesh/research_math/c03_native_comparison.py",
+          "sha256": "06ddd93c22db2acac02e1bfff528544113af5436ddb53c0ee6b202b581bfc8cb"
+        },
+        {
+          "path": "actionmesh/research_math/c03_native_scoring.py",
+          "sha256": "e472d5a374ba7e6c882e0461edf86bb7c31c47214d5e84999f38ec896a90500a"
+        },
+        {
+          "path": "actionmesh/research_math/c04_native_comparison.py",
+          "sha256": "b97da830932e59bead6fca01e904a441c7a37e67a55fb789ff99cbfb5e6b16a1"
+        },
+        {
+          "path": "actionmesh/research_math/c04_native_scoring.py",
+          "sha256": "acdc0b15c10032e0b1027d89ab48c284a7cf6648bc9588b445391ad452078633"
+        },
+        {
+          "path": "actionmesh/research_math/c05_candidate_artifacts.py",
+          "sha256": "f3a51d67877ba0c883465a99ff9a7f52b781011aca33892b525f4779b1f69e36"
+        },
+        {
+          "path": "actionmesh/research_math/c05_mode_bank.py",
+          "sha256": "3c7d620b585ee7d0f9a81809f61aa91984089c6c67a03bf90c7493b3a99ff6ce"
+        },
+        {
+          "path": "actionmesh/research_math/c05_native_comparison.py",
+          "sha256": "160a5fb0dd637587468ed143e0adea7a4c62806b81d0c230681bcc4bb97eb461"
+        },
+        {
+          "path": "actionmesh/research_math/c05_native_scoring.py",
+          "sha256": "27f7c607c68f2a3834b75f0af51fa6e2dec198e2c79414fabdb95cb480750376"
+        },
+        {
+          "path": "actionmesh/research_math/c06_native_comparison.py",
+          "sha256": "76c1c27c44c39801d5a593417b3d6b3d643060c05adcc4a9aa43b5688b09cc21"
+        },
+        {
+          "path": "actionmesh/research_math/c06_native_scoring.py",
+          "sha256": "4eeddbd0c2bfe3d7e576b3ad231535a08784b2c556c435bfea268d73225840a0"
+        },
+        {
+          "path": "actionmesh/research_math/c07_native_comparison.py",
+          "sha256": "61e9ff9b5de49a07cedc97470f1520e04819778b18411481f4378bf569392e8c"
+        },
+        {
+          "path": "actionmesh/research_math/c07_native_scoring.py",
+          "sha256": "3681bb5d14501aacabe1def8ea423d0e2ec6c8c1714c0da3a0e3e591446fb7ad"
+        },
+        {
+          "path": "actionmesh/research_math/c08_native_comparison.py",
+          "sha256": "6a5a19ccf3b15f54adc458a0bffdef29c55afe94f70116421f0bdb2113bea60b"
+        },
+        {
+          "path": "actionmesh/research_math/c08_native_scoring.py",
+          "sha256": "014ad5bc11a1a97806222c50b87f071453e01e03e5ab0c2f316034a03b9952fe"
+        },
+        {
+          "path": "actionmesh/research_math/c10_native_comparison.py",
+          "sha256": "64f2b6929de6eb4f74fb3c2689f80ca819be908225bd400215ba0aa4c87d7f75"
+        },
+        {
+          "path": "actionmesh/research_math/c10_native_scoring.py",
+          "sha256": "4805e8ff6cdcc424e7e4f0aeb205830eb1175a53e185eee8aac1cbb18556b67d"
+        },
+        {
+          "path": "actionmesh/research_math/c11_native_comparison.py",
+          "sha256": "7c88389a1a91b548d5a2d951808afd9941f1eb4e7e16902f0ff0a1d9260a92d3"
+        },
+        {
+          "path": "actionmesh/research_math/c11_native_scoring.py",
+          "sha256": "ffca38c1436ade4de65a6f7a40209e425fbd369f916d9539a000db2b7f6bbdc5"
+        },
+        {
+          "path": "actionmesh/research_math/c12_native_comparison.py",
+          "sha256": "cf8a9dda68535b0e8b0bb751fb3b5833fe30284a1349761058b606b99a4da111"
+        },
+        {
+          "path": "actionmesh/research_math/c12_native_scoring.py",
+          "sha256": "45c3984dd98cf1129cb1ad3d602ce10f5263341c41e90635b7fc7fe450bdaca8"
+        },
+        {
+          "path": "actionmesh/research_math/c13_native_comparison.py",
+          "sha256": "53e1edbf4963c8374eb4e0e1436079adcc45d85c934ef24f72eecef9f34a866e"
+        },
+        {
+          "path": "actionmesh/research_math/c13_native_scoring.py",
+          "sha256": "95b4eac7468072d96c7c195c2c8f8b653f1fdfd779ea26e9ee4a3d9b5872f75c"
+        },
+        {
+          "path": "actionmesh/research_math/c14_native_comparison.py",
+          "sha256": "ccc02e5e4a8f3e16a2e8c1161f5023962b2e6cef20f0fc2c007384612d7e9c9d"
+        },
+        {
+          "path": "actionmesh/research_math/c14_native_scoring.py",
+          "sha256": "9f82beda540fb3f236ef89994422c8937230341804884e3c6288eb8901039622"
+        },
+        {
+          "path": "actionmesh/research_math/c15_native_comparison.py",
+          "sha256": "cd4b2f8d9d16cd42ba199f41bea2480071e953c3bd7cb76cbf897a65beb4b9f5"
+        },
+        {
+          "path": "actionmesh/research_math/c15_native_scoring.py",
+          "sha256": "740558b0e2555d949b02bebe7a37858c8942fb2563c7aff90badb3dafa096114"
+        },
+        {
+          "path": "actionmesh/research_math/c20_consensus_target.py",
+          "sha256": "d48196ad6109103aa7d7a373dacd714313ce0df7ecd514d0d75e1b7102ae1bce"
+        },
+        {
+          "path": "actionmesh/research_math/c20_native_comparison.py",
+          "sha256": "4396b69b234cad2eb983f5a613e7781e47febaabc57fdb543935a435ecb5eb13"
+        },
+        {
+          "path": "actionmesh/research_math/c20_native_scoring.py",
+          "sha256": "523362f581c11e81965d88b89e8ba9fcd1986fd97d648bd48f7e178ecbdfafcc"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_admission.py",
+          "sha256": "a73242c113e31b05102b6743b45528e194c7402309668db7c5216f6d107a5291"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_contract.py",
+          "sha256": "8954d86ea76270c4803ceeb19a217a246f885c248b7125dfc88a30c08e113595"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_export.py",
+          "sha256": "f8c0dff18b1361f2133c177cdef6cee6bfc00ed363ac96783aff366688545503"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_plan.py",
+          "sha256": "23b561d1d8a8a98fce8c918a173a92f1f841bb8f73b28e1ea26efacc862c8709"
+        },
+        {
+          "path": "actionmesh/research_math/complete_unit_runner.py",
+          "sha256": "f2e91bd3e6fc1315796a65a456cc59c78d70b88eccaef0cc1b312f95a6ccbc38"
+        },
+        {
+          "path": "actionmesh/research_math/contact_events.py",
+          "sha256": "dbb64f4817b17e695601de1d9f521a55ce038ae95be001d06368a40b45d1a073"
+        },
+        {
+          "path": "actionmesh/research_math/control_scoring.py",
+          "sha256": "2c02d3bd2c7f038cc8d795520b754f8fb44cbca0c37bd386076f1c6aac5be51a"
+        },
+        {
+          "path": "actionmesh/research_math/controllability.py",
+          "sha256": "784081c576c27b799cd4695faf92e430e3f0bae0a80e8b29f878cdde80bac0fc"
+        },
+        {
+          "path": "actionmesh/research_math/corotational_residual_candidate.py",
+          "sha256": "2736827d09f71f7259357967ab1d5f84e31bb7057be89263161f84b3919de408"
+        },
+        {
+          "path": "actionmesh/research_math/correlated.py",
+          "sha256": "2b199f605b717f486c3f07a53bc59a62516762d033460e9ba33c83922c733395"
+        },
+        {
+          "path": "actionmesh/research_math/correlated_calibration.py",
+          "sha256": "28be7326bdd207b86019ff75b91978e50a0e209df99202dbc957eeb72414054f"
+        },
+        {
+          "path": "actionmesh/research_math/correlated_calibration_candidate.py",
+          "sha256": "bf861a2ebab2f69e65ba8552f5106c440f317b7bd7f29f76a12e4a3f1e115eda"
+        },
+        {
+          "path": "actionmesh/research_math/decoder_observer.py",
+          "sha256": "c2e451e61001094c18a794c493f4e6e90d5da7ae011797ed01b518a34ef82545"
+        },
+        {
+          "path": "actionmesh/research_math/deterministic_knn.py",
+          "sha256": "8608a0f98f105136b00dabda89b0f5489707c925a63f41e0155ac5dfe0348771"
+        },
+        {
+          "path": "actionmesh/research_math/g01_design.py",
+          "sha256": "f93d539d8192e462c28a4eefd45c78e817274723bc02542852122c0a44ca9faf"
+        },
+        {
+          "path": "actionmesh/research_math/group_acceleration_candidate.py",
+          "sha256": "fa70f5a7f7183d72193bde8e5eae53c5339eaec12f025df3db49345264c5bb07"
+        },
+        {
+          "path": "actionmesh/research_math/integrable_gradient_candidate.py",
+          "sha256": "7b05c495efe9a704d49760fe1c6dbb82ad00b0cc1c757917f76ab0753f6f8f88"
+        },
+        {
+          "path": "actionmesh/research_math/knn_backend_checks.py",
+          "sha256": "e118c9faf6bc4e0c179ef0cbae53167ba8d56a7c8b3e529a9d968ba4530bc057"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_delivery.py",
+          "sha256": "86f369dddb8ae8a318fc5ee38614288884efd503fb0c3b75c0b04af84985153e"
+        },
+        {
+          "path": "actionmesh/research_math/native_context_runner.py",
+          "sha256": "84bd868d14ce6423b4c6975cc42c7a8db2da6fe5f6e5e8b634edb9c786bb2080"
+        },
+        {
+          "path": "actionmesh/research_math/native_import_check.py",
+          "sha256": "70d70e9264af26b1a38b53d41bcb6b0a5fd85bb02c6759f6954f496dab3d9ee6"
+        },
+        {
+          "path": "actionmesh/research_math/native_probe.py",
+          "sha256": "06641222f25fdf12e7a92f7765638a48aed5d68bac43f351f9b327b987f310b3"
+        },
+        {
+          "path": "actionmesh/research_math/native_runtime.py",
+          "sha256": "c13de3122f51847438ee15ccdc406e28e29da074491c4732de03ed76669c0398"
+        },
+        {
+          "path": "actionmesh/research_math/partial_transport_candidate.py",
+          "sha256": "fd7f09164f079d7147b7eb2796d7481bfb841fb86d4b0867e689e6ffbdc76fdf"
+        },
+        {
+          "path": "actionmesh/research_math/phase_amplitude_artifacts.py",
+          "sha256": "fc87d8572b5eb71726d3b5c74fc3283255a7dde8f50641bcdb53b168abf858a8"
+        },
+        {
+          "path": "actionmesh/research_math/phase_amplitude_candidate.py",
+          "sha256": "3c351ef4848f3289d44fd67b28dabad3ab9da3f9c011984f860292f91e704254"
+        },
+        {
+          "path": "actionmesh/research_math/pipeline_decoder_capture.py",
+          "sha256": "6d3952145be61cd8268104382a0f8d78092608317499eccc2cf66043e27b62f7"
+        },
+        {
+          "path": "actionmesh/research_math/pipeline_decoder_observer.py",
+          "sha256": "62bb4675f39600cac60e4e71304595ce8e1fc18716ed39bd2ea7e38ded9bc19b"
+        },
+        {
+          "path": "actionmesh/research_math/population_window_plan.py",
+          "sha256": "c7fca1e54916cef745ca017edc73f6ecdae437aadca475580336d572535f2f5d"
+        },
+        {
+          "path": "actionmesh/research_math/protected_geometry_candidate.py",
+          "sha256": "4b4a731a5e36c11f1504692b6e2d4fe84826e45053e3231055c749668312f301"
+        },
+        {
+          "path": "actionmesh/research_math/protected_lowrank_candidate.py",
+          "sha256": "c57f036f8cf9891500b17d1973348d96448c189126fa8161c24b1dce6062be03"
+        },
+        {
+          "path": "actionmesh/research_math/protected_projection.py",
+          "sha256": "b85827f75a738544c5ca4cd6a5bf817eea9034777058742288953901c601d1a6"
+        },
+        {
+          "path": "actionmesh/research_math/quadratic_acceleration_control.py",
+          "sha256": "e8724ab9de9afa492adc0c32a1893fb373ce20960011a5e1b07a922ddf867807"
+        },
+        {
+          "path": "actionmesh/research_math/robust_motion_candidate.py",
+          "sha256": "8a353a6ff66b909b49f3d3d8e33d3180efcdd1e56737eb2daec97537cc295783"
+        },
+        {
+          "path": "actionmesh/research_math/run_controls.py",
+          "sha256": "cc9bf7579dd8bd24423e21149773cc23f88dd0e26ec41b416212fb5f2fa207e7"
+        },
+        {
+          "path": "actionmesh/research_math/self_map_candidate.py",
+          "sha256": "8b0f3a7980f95ce290e10100953d714b3b8d289c9213cd8aa28554912398dafa"
+        },
+        {
+          "path": "actionmesh/research_math/simple_mesh_controls.py",
+          "sha256": "7aeb3865b78d996c20e20bef2836dcd735b1cc342449c0ad4f6e0922cf1bace6"
+        },
+        {
+          "path": "actionmesh/research_math/snapshot_admission.py",
+          "sha256": "59b4e4e61f1a5eaae330bf9550bda0e603a6d2876659e63173eb168e55eabeef"
+        },
+        {
+          "path": "actionmesh/research_math/spatial_mode_candidate.py",
+          "sha256": "6a5a2a9a4be011cd0996c0316f041b580474ef2b11bdd6176809343ce7fcf133"
+        },
+        {
+          "path": "actionmesh/research_math/strain_projection_candidate.py",
+          "sha256": "fd7fadb047aa075fb7ce66a8b3c5fac72fe60596e731995349979ca462492097"
+        },
+        {
+          "path": "actionmesh/research_math/trajectory_bridge_candidate.py",
+          "sha256": "a6268397b5f0eddd0f81e701c8c4ceb779b9133997b13aa94fbf0c0496d01a4b"
+        },
+        {
+          "path": "actionmesh/research_math/unit_resources.py",
+          "sha256": "226a9a6d4985e6a0ca9073236c69aa3e84edb45885307f6773690fca4ae8c030"
+        },
+        {
+          "path": "actionmesh/official_actionbench_adapter.py",
+          "sha256": "06710e6ca2191c6e5512f7b8bdbc4cde36c7f9ad478ff2f8924553e3ff2a64f2"
+        },
+        {
+          "path": "actionmesh/research_census_eval.py",
+          "sha256": "2159bd2e6eaaba6c6e6da7f4ff571fc7de4b1b673813cff4273dafe1b91ff40a"
+        },
+        {
+          "path": "actionmesh/deterministic_actionbench_entry.py",
+          "sha256": "25255f682b05522b577a4154104b3ddecc544a469bf9d41165f13a8ce00fd4cb"
+        },
+        {
+          "path": "actionmesh/prepare_native_context.py",
+          "sha256": "2796f8298d821ed048f817ed5c7807bf3a8147fb91a9bff0f7c0f584c539b5a1"
+        }
+      ],
+      "output_paths": [
+        "actionmesh/context-output/result.json",
+        "actionmesh/context-output/raw-manifest.json",
+        "actionmesh/context-output/raw-evidence.tar"
+      ],
+      "seed": 42,
+      "group": "engineering",
+      "arm_role": "paired-native-context-instrument"
+    }
+  ],
+  "plan_digest": "07365dc75ab33b7048de2ea2ba32ed1d47767ead9bb62d4822bc7f3d1b3aa041"
+}

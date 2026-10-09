@@ -2118,5 +2118,21 @@
     "native_gpu_compatibility_verified": false,
     "scientific_admission": false,
     "gpu_stop": true
+  },
+  "local_gpu_resume_20261009": {
+    "authority": "User explicitly stated \u53ef\u4ee5\u5f00\u59cb\u6b63\u5f0f\u5b9e\u9a8c\u4e86",
+    "first_run": "paired-native-context-seed42-20261009-001",
+    "first_status": "failed_before_generation_diffusers_import",
+    "repair": "separate Diffusers0.36.0 environment; source-staged CPU diagnostic completed",
+    "native_gpu_compatibility_verified": false,
+    "candidate_scientific_admission": false,
+    "next_run": "paired-native-context-seed42-20261009-r2",
+    "next_plan_digest": "e209c7377f8b32a5f3280a20fc80ce56e2ae38762598dac8fb6837599573b6ab",
+    "next_run_status": "running",
+    "window": "rounds/20261008-native-context/windows/20261009-native-compatibility",
+    "status_snapshot_ref": {
+      "path": "rounds/20261008-native-context/windows/20261009-native-compatibility/repair-launch/status-snapshot.json",
+      "sha256": "fa10f16479c6bcfaa5dd630c3e252485202621a1f269173b24cc378e0371068d"
+    }
   }
 }

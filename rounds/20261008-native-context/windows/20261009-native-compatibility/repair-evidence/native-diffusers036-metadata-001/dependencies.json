@@ -1,0 +1,1041 @@
+{
+  "conda_packages": [
+    {
+      "build": "20_gnu",
+      "name": "_openmp_mutex",
+      "subdir": "linux-64",
+      "version": "4.5"
+    },
+    {
+      "build": "hd8ed1ab_3",
+      "name": "_python_abi3_support",
+      "subdir": "noarch",
+      "version": "1.0"
+    },
+    {
+      "build": "h27087fc_1",
+      "name": "aom",
+      "subdir": "linux-64",
+      "version": "3.4.0"
+    },
+    {
+      "build": "py311h6f959d0_1",
+      "name": "backports.zstd",
+      "subdir": "linux-64",
+      "version": "1.7.0"
+    },
+    {
+      "build": "mkl",
+      "name": "blas",
+      "subdir": "linux-64",
+      "version": "1.0"
+    },
+    {
+      "build": "py311heb3be6f_4",
+      "name": "brotli-python",
+      "subdir": "linux-64",
+      "version": "1.2.0"
+    },
+    {
+      "build": "hda65f42_10",
+      "name": "bzip2",
+      "subdir": "linux-64",
+      "version": "1.0.8"
+    },
+    {
+      "build": "hbd8a1cb_0",
+      "name": "ca-certificates",
+      "subdir": "noarch",
+      "version": "2026.7.22"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "certifi",
+      "subdir": "noarch",
+      "version": "2026.7.22"
+    },
+    {
+      "build": "h1114479_0",
+      "name": "charset-normalizer",
+      "subdir": "linux-64",
+      "version": "3.5.2"
+    },
+    {
+      "build": "py311hd8ed1ab_1",
+      "name": "cpython",
+      "subdir": "noarch",
+      "version": "3.11.17"
+    },
+    {
+      "build": "0",
+      "name": "cuda-cudart",
+      "subdir": "linux-64",
+      "version": "12.1.105"
+    },
+    {
+      "build": "0",
+      "name": "cuda-cupti",
+      "subdir": "linux-64",
+      "version": "12.1.105"
+    },
+    {
+      "build": "0",
+      "name": "cuda-libraries",
+      "subdir": "linux-64",
+      "version": "12.1.0"
+    },
+    {
+      "build": "0",
+      "name": "cuda-nvrtc",
+      "subdir": "linux-64",
+      "version": "12.1.105"
+    },
+    {
+      "build": "0",
+      "name": "cuda-nvtx",
+      "subdir": "linux-64",
+      "version": "12.1.105"
+    },
+    {
+      "build": "hd2095e1_0",
+      "name": "cuda-opencl",
+      "subdir": "linux-64",
+      "version": "13.4.92"
+    },
+    {
+      "build": "0",
+      "name": "cuda-runtime",
+      "subdir": "linux-64",
+      "version": "12.1.0"
+    },
+    {
+      "build": "hfacf21a_3",
+      "name": "cuda-version",
+      "subdir": "noarch",
+      "version": "13.4"
+    },
+    {
+      "build": "pyhc8e2a94_3",
+      "name": "dataclasses",
+      "subdir": "noarch",
+      "version": "0.8"
+    },
+    {
+      "build": "gpl_h45a1190_101",
+      "name": "ffmpeg",
+      "subdir": "linux-64",
+      "version": "5.1.0"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "filelock",
+      "subdir": "noarch",
+      "version": "4.0.12"
+    },
+    {
+      "build": "hab24e00_0",
+      "name": "font-ttf-dejavu-sans-mono",
+      "subdir": "noarch",
+      "version": "2.37"
+    },
+    {
+      "build": "h77eed37_0",
+      "name": "font-ttf-inconsolata",
+      "subdir": "noarch",
+      "version": "3.000"
+    },
+    {
+      "build": "h77eed37_0",
+      "name": "font-ttf-source-code-pro",
+      "subdir": "noarch",
+      "version": "2.038"
+    },
+    {
+      "build": "h77eed37_3",
+      "name": "font-ttf-ubuntu",
+      "subdir": "noarch",
+      "version": "0.83"
+    },
+    {
+      "build": "h4db4eae_1",
+      "name": "fontconfig",
+      "subdir": "linux-64",
+      "version": "2.18.3"
+    },
+    {
+      "build": "0",
+      "name": "fonts-conda-ecosystem",
+      "subdir": "noarch",
+      "version": "1"
+    },
+    {
+      "build": "hc364b38_1",
+      "name": "fonts-conda-forge",
+      "subdir": "noarch",
+      "version": "1"
+    },
+    {
+      "build": "ha770c72_2",
+      "name": "freetype",
+      "subdir": "linux-64",
+      "version": "2.14.3"
+    },
+    {
+      "build": "hfd2156b_3",
+      "name": "gmp",
+      "subdir": "linux-64",
+      "version": "6.3.0"
+    },
+    {
+      "build": "py311hbc40be8_0",
+      "name": "gmpy2",
+      "subdir": "linux-64",
+      "version": "2.3.2"
+    },
+    {
+      "build": "he274497_3",
+      "name": "gnutls",
+      "subdir": "linux-64",
+      "version": "3.7.6"
+    },
+    {
+      "build": "pyhcf101f3_0",
+      "name": "h2",
+      "subdir": "noarch",
+      "version": "4.4.1"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "hpack",
+      "subdir": "noarch",
+      "version": "4.2.0"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "hyperframe",
+      "subdir": "noarch",
+      "version": "6.1.0"
+    },
+    {
+      "build": "pyh5ded981_0",
+      "name": "idna",
+      "subdir": "noarch",
+      "version": "3.20"
+    },
+    {
+      "build": "h9e868ea_3769",
+      "name": "intel-openmp",
+      "subdir": "linux-64",
+      "version": "2022.1.0"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "iopath",
+      "subdir": "noarch",
+      "version": "0.1.10"
+    },
+    {
+      "build": "pyhcf101f3_1",
+      "name": "jinja2",
+      "subdir": "noarch",
+      "version": "3.1.6"
+    },
+    {
+      "build": "h166bdaf_2",
+      "name": "jpeg",
+      "subdir": "linux-64",
+      "version": "9e"
+    },
+    {
+      "build": "h166bdaf_1003",
+      "name": "lame",
+      "subdir": "linux-64",
+      "version": "3.100"
+    },
+    {
+      "build": "heab6991_0",
+      "name": "lcms2",
+      "subdir": "linux-64",
+      "version": "2.17"
+    },
+    {
+      "build": "default_hbd61a6d_102",
+      "name": "ld_impl_linux-64",
+      "subdir": "linux-64",
+      "version": "2.46.1"
+    },
+    {
+      "build": "hdb68285_0",
+      "name": "lerc",
+      "subdir": "linux-64",
+      "version": "4.2.0"
+    },
+    {
+      "build": "16_linux64_mkl",
+      "name": "libblas",
+      "subdir": "linux-64",
+      "version": "3.9.0"
+    },
+    {
+      "build": "h084b8d7_1",
+      "name": "libcap",
+      "subdir": "linux-64",
+      "version": "2.78"
+    },
+    {
+      "build": "16_linux64_mkl",
+      "name": "libcblas",
+      "subdir": "linux-64",
+      "version": "3.9.0"
+    },
+    {
+      "build": "0",
+      "name": "libcublas",
+      "subdir": "linux-64",
+      "version": "12.1.0.26"
+    },
+    {
+      "build": "0",
+      "name": "libcufft",
+      "subdir": "linux-64",
+      "version": "11.0.2.4"
+    },
+    {
+      "build": "h63c01a6_0",
+      "name": "libcufile",
+      "subdir": "linux-64",
+      "version": "1.19.1.55"
+    },
+    {
+      "build": "h393e864_0",
+      "name": "libcurand",
+      "subdir": "linux-64",
+      "version": "10.4.4.72"
+    },
+    {
+      "build": "0",
+      "name": "libcusolver",
+      "subdir": "linux-64",
+      "version": "11.4.4.55"
+    },
+    {
+      "build": "0",
+      "name": "libcusparse",
+      "subdir": "linux-64",
+      "version": "12.0.2.55"
+    },
+    {
+      "build": "hb9d3cd8_0",
+      "name": "libdeflate",
+      "subdir": "linux-64",
+      "version": "1.22"
+    },
+    {
+      "build": "h7cc23a3_0",
+      "name": "libdrm",
+      "subdir": "linux-64",
+      "version": "2.4.129"
+    },
+    {
+      "build": "ha4b6fd6_5",
+      "name": "libegl",
+      "subdir": "linux-64",
+      "version": "1.7.0"
+    },
+    {
+      "build": "hd2095e1_0",
+      "name": "libexpat",
+      "subdir": "linux-64",
+      "version": "2.8.5"
+    },
+    {
+      "build": "h81df57d_1",
+      "name": "libffi",
+      "subdir": "linux-64",
+      "version": "3.7.0"
+    },
+    {
+      "build": "ha770c72_2",
+      "name": "libfreetype",
+      "subdir": "linux-64",
+      "version": "2.14.3"
+    },
+    {
+      "build": "h5e6c136_2",
+      "name": "libfreetype6",
+      "subdir": "linux-64",
+      "version": "2.14.3"
+    },
+    {
+      "build": "ha9f2e26_7",
+      "name": "libgcc",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "h69a702a_7",
+      "name": "libgcc-ng",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "h69a702a_7",
+      "name": "libgfortran",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "h69a702a_7",
+      "name": "libgfortran-ng",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "h6b99dfc_7",
+      "name": "libgfortran5",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "ha4b6fd6_5",
+      "name": "libgl",
+      "subdir": "linux-64",
+      "version": "1.7.0"
+    },
+    {
+      "build": "ha4b6fd6_5",
+      "name": "libglvnd",
+      "subdir": "linux-64",
+      "version": "1.7.0"
+    },
+    {
+      "build": "ha4b6fd6_5",
+      "name": "libglx",
+      "subdir": "linux-64",
+      "version": "1.7.0"
+    },
+    {
+      "build": "he0feb66_7",
+      "name": "libgomp",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "h0cb94f2_3",
+      "name": "libiconv",
+      "subdir": "linux-64",
+      "version": "1.18"
+    },
+    {
+      "build": "hfac485b_1",
+      "name": "libidn2",
+      "subdir": "linux-64",
+      "version": "2.3.8"
+    },
+    {
+      "build": "h9bf148f_0",
+      "name": "libjpeg-turbo",
+      "subdir": "linux-64",
+      "version": "2.0.0"
+    },
+    {
+      "build": "16_linux64_mkl",
+      "name": "liblapack",
+      "subdir": "linux-64",
+      "version": "3.9.0"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "liblzma",
+      "subdir": "linux-64",
+      "version": "5.8.3"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "liblzma-devel",
+      "subdir": "linux-64",
+      "version": "5.8.3"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "libnl",
+      "subdir": "linux-64",
+      "version": "3.11.0"
+    },
+    {
+      "build": "0",
+      "name": "libnpp",
+      "subdir": "linux-64",
+      "version": "12.0.2.50"
+    },
+    {
+      "build": "hb9d3cd8_1",
+      "name": "libnsl",
+      "subdir": "linux-64",
+      "version": "2.0.1"
+    },
+    {
+      "build": "0",
+      "name": "libnvjitlink",
+      "subdir": "linux-64",
+      "version": "12.1.105"
+    },
+    {
+      "build": "0",
+      "name": "libnvjpeg",
+      "subdir": "linux-64",
+      "version": "12.1.1.14"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "libpciaccess",
+      "subdir": "linux-64",
+      "version": "0.19"
+    },
+    {
+      "build": "h922cc85_0",
+      "name": "libpng",
+      "subdir": "linux-64",
+      "version": "1.6.59"
+    },
+    {
+      "build": "h0c77377_1_cpython",
+      "name": "libpython",
+      "subdir": "linux-64",
+      "version": "3.11.17"
+    },
+    {
+      "build": "h0737f62_103",
+      "name": "libsqlite",
+      "subdir": "linux-64",
+      "version": "3.53.4"
+    },
+    {
+      "build": "h934c35e_7",
+      "name": "libstdcxx",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "hdf11a46_7",
+      "name": "libstdcxx-ng",
+      "subdir": "linux-64",
+      "version": "16.2.0"
+    },
+    {
+      "build": "h26e0ef7_2",
+      "name": "libsystemd0",
+      "subdir": "linux-64",
+      "version": "262"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "libtasn1",
+      "subdir": "linux-64",
+      "version": "4.21.0"
+    },
+    {
+      "build": "h029b1ac_0",
+      "name": "libtiff",
+      "subdir": "linux-64",
+      "version": "4.7.1"
+    },
+    {
+      "build": "h26e0ef7_2",
+      "name": "libudev1",
+      "subdir": "linux-64",
+      "version": "262"
+    },
+    {
+      "build": "h7f98852_0",
+      "name": "libunistring",
+      "subdir": "linux-64",
+      "version": "0.9.10"
+    },
+    {
+      "build": "hcfc3c73_0",
+      "name": "libuuid",
+      "subdir": "linux-64",
+      "version": "2.42.4"
+    },
+    {
+      "build": "hb83e432_1",
+      "name": "libva",
+      "subdir": "linux-64",
+      "version": "2.24.1"
+    },
+    {
+      "build": "h9c3ff4c_3",
+      "name": "libvpx",
+      "subdir": "linux-64",
+      "version": "1.11.0"
+    },
+    {
+      "build": "hd42ef1d_1",
+      "name": "libwebp-base",
+      "subdir": "linux-64",
+      "version": "1.6.0"
+    },
+    {
+      "build": "hb83e432_2",
+      "name": "libxcb",
+      "subdir": "linux-64",
+      "version": "1.17.0"
+    },
+    {
+      "build": "h280c20c_0",
+      "name": "libxcrypt",
+      "subdir": "linux-64",
+      "version": "4.4.38"
+    },
+    {
+      "build": "h2cb61b6_0",
+      "name": "libxml2",
+      "subdir": "linux-64",
+      "version": "2.13.9"
+    },
+    {
+      "build": "h25fd6f3_3",
+      "name": "libzlib",
+      "subdir": "linux-64",
+      "version": "1.3.2"
+    },
+    {
+      "build": "h0cdce71_0",
+      "name": "llvm-openmp",
+      "subdir": "linux-64",
+      "version": "15.0.7"
+    },
+    {
+      "build": "py311h92159aa_0",
+      "name": "markupsafe",
+      "subdir": "linux-64",
+      "version": "3.0.4"
+    },
+    {
+      "build": "hc2b9512_224",
+      "name": "mkl",
+      "subdir": "linux-64",
+      "version": "2022.1.0"
+    },
+    {
+      "build": "ha2cb11d_1",
+      "name": "mpc",
+      "subdir": "linux-64",
+      "version": "1.4.0"
+    },
+    {
+      "build": "ha2cb11d_1",
+      "name": "mpfr",
+      "subdir": "linux-64",
+      "version": "4.2.2"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "mpmath",
+      "subdir": "noarch",
+      "version": "1.4.1"
+    },
+    {
+      "build": "hdb14827_1",
+      "name": "ncurses",
+      "subdir": "linux-64",
+      "version": "6.6"
+    },
+    {
+      "build": "hc379101_1",
+      "name": "nettle",
+      "subdir": "linux-64",
+      "version": "3.8.1"
+    },
+    {
+      "build": "pyhcf101f3_0",
+      "name": "networkx",
+      "subdir": "noarch",
+      "version": "3.6.1"
+    },
+    {
+      "build": "py311h64a7726_0",
+      "name": "numpy",
+      "subdir": "linux-64",
+      "version": "1.26.4"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "ocl-icd",
+      "subdir": "linux-64",
+      "version": "2.3.4"
+    },
+    {
+      "build": "hecca717_0",
+      "name": "opencl-headers",
+      "subdir": "linux-64",
+      "version": "2025.06.13"
+    },
+    {
+      "build": "h27087fc_0",
+      "name": "openh264",
+      "subdir": "linux-64",
+      "version": "2.3.0"
+    },
+    {
+      "build": "h55fea9a_0",
+      "name": "openjpeg",
+      "subdir": "linux-64",
+      "version": "2.5.4"
+    },
+    {
+      "build": "h781a0a9_0",
+      "name": "openssl",
+      "subdir": "linux-64",
+      "version": "3.6.5"
+    },
+    {
+      "build": "pyhc364b38_0",
+      "name": "packaging",
+      "subdir": "noarch",
+      "version": "26.3"
+    },
+    {
+      "build": "py311hac6e08b_1",
+      "name": "pillow",
+      "subdir": "linux-64",
+      "version": "11.1.0"
+    },
+    {
+      "build": "pyh8b19718_0",
+      "name": "pip",
+      "subdir": "noarch",
+      "version": "26.2.1"
+    },
+    {
+      "build": "py311h38be061_2",
+      "name": "portalocker",
+      "subdir": "linux-64",
+      "version": "3.2.0"
+    },
+    {
+      "build": "h7cc23a3_1004",
+      "name": "pthread-stubs",
+      "subdir": "linux-64",
+      "version": "0.4"
+    },
+    {
+      "build": "pyha55dd90_7",
+      "name": "pysocks",
+      "subdir": "noarch",
+      "version": "1.7.1"
+    },
+    {
+      "build": "h5f976f7_1_cpython",
+      "name": "python",
+      "subdir": "linux-64",
+      "version": "3.11.17"
+    },
+    {
+      "build": "hd8ed1ab_1",
+      "name": "python-gil",
+      "subdir": "noarch",
+      "version": "3.11.17"
+    },
+    {
+      "build": "9_cp311",
+      "name": "python_abi",
+      "subdir": "noarch",
+      "version": "3.11"
+    },
+    {
+      "build": "py3.11_cuda12.1_cudnn9.1.0_0",
+      "name": "pytorch",
+      "subdir": "linux-64",
+      "version": "2.4.0"
+    },
+    {
+      "build": "ha16c6d3_6",
+      "name": "pytorch-cuda",
+      "subdir": "linux-64",
+      "version": "12.1"
+    },
+    {
+      "build": "cuda",
+      "name": "pytorch-mutex",
+      "subdir": "noarch",
+      "version": "1.0"
+    },
+    {
+      "build": "py311_cu121_pyt240",
+      "name": "pytorch3d",
+      "subdir": "linux-64",
+      "version": "0.7.8"
+    },
+    {
+      "build": "py311h3778330_1",
+      "name": "pyyaml",
+      "subdir": "linux-64",
+      "version": "6.0.3"
+    },
+    {
+      "build": "h7b4f2e6_0",
+      "name": "rdma-core",
+      "subdir": "linux-64",
+      "version": "65.0"
+    },
+    {
+      "build": "hd6e31c0_1",
+      "name": "readline",
+      "subdir": "linux-64",
+      "version": "8.3"
+    },
+    {
+      "build": "pyhcf101f3_0",
+      "name": "requests",
+      "subdir": "noarch",
+      "version": "2.34.2"
+    },
+    {
+      "build": "py311h517d4fd_0",
+      "name": "scipy",
+      "subdir": "linux-64",
+      "version": "1.13.1"
+    },
+    {
+      "build": "pyh332efcf_0",
+      "name": "setuptools",
+      "subdir": "noarch",
+      "version": "84.0.0"
+    },
+    {
+      "build": "h27087fc_0",
+      "name": "svt-av1",
+      "subdir": "linux-64",
+      "version": "1.2.0"
+    },
+    {
+      "build": "pyh2585a3b_106",
+      "name": "sympy",
+      "subdir": "noarch",
+      "version": "1.14.0"
+    },
+    {
+      "build": "noxft_h1df4ec4_4",
+      "name": "tk",
+      "subdir": "linux-64",
+      "version": "8.6.13"
+    },
+    {
+      "build": "py311",
+      "name": "torchtriton",
+      "subdir": "linux-64",
+      "version": "3.0.0"
+    },
+    {
+      "build": "py311_cu121",
+      "name": "torchvision",
+      "subdir": "linux-64",
+      "version": "0.19.0"
+    },
+    {
+      "build": "pyhfa0c392_0",
+      "name": "tqdm",
+      "subdir": "noarch",
+      "version": "4.70.1"
+    },
+    {
+      "build": "h69aa097_0",
+      "name": "typing-extensions",
+      "subdir": "noarch",
+      "version": "4.16.0"
+    },
+    {
+      "build": "pyhcf101f3_0",
+      "name": "typing_extensions",
+      "subdir": "noarch",
+      "version": "4.16.0"
+    },
+    {
+      "build": "h151e31d_0",
+      "name": "tzdata",
+      "subdir": "noarch",
+      "version": "2026c"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "urllib3",
+      "subdir": "noarch",
+      "version": "2.8.0"
+    },
+    {
+      "build": "hc1c935e_2",
+      "name": "wayland",
+      "subdir": "linux-64",
+      "version": "1.26.0"
+    },
+    {
+      "build": "hd8ed1ab_0",
+      "name": "wayland-protocols",
+      "subdir": "noarch",
+      "version": "1.49"
+    },
+    {
+      "build": "pyhd8ed1ab_0",
+      "name": "wheel",
+      "subdir": "noarch",
+      "version": "0.48.0"
+    },
+    {
+      "build": "h7cc23a3_3",
+      "name": "x264",
+      "subdir": "linux-64",
+      "version": "1!164.3095"
+    },
+    {
+      "build": "h73f68a7_4",
+      "name": "x265",
+      "subdir": "linux-64",
+      "version": "3.5"
+    },
+    {
+      "build": "he1eb515_1",
+      "name": "xorg-libx11",
+      "subdir": "linux-64",
+      "version": "1.8.13"
+    },
+    {
+      "build": "h7cc23a3_2",
+      "name": "xorg-libxau",
+      "subdir": "linux-64",
+      "version": "1.0.12"
+    },
+    {
+      "build": "h7cc23a3_2",
+      "name": "xorg-libxdmcp",
+      "subdir": "linux-64",
+      "version": "1.1.5"
+    },
+    {
+      "build": "h7cc23a3_1",
+      "name": "xorg-libxext",
+      "subdir": "linux-64",
+      "version": "1.3.7"
+    },
+    {
+      "build": "h7cc23a3_1",
+      "name": "xorg-libxfixes",
+      "subdir": "linux-64",
+      "version": "6.0.2"
+    },
+    {
+      "build": "ha02ee65_1",
+      "name": "xz",
+      "subdir": "linux-64",
+      "version": "5.8.3"
+    },
+    {
+      "build": "ha02ee65_1",
+      "name": "xz-gpl-tools",
+      "subdir": "linux-64",
+      "version": "5.8.3"
+    },
+    {
+      "build": "hb03c661_1",
+      "name": "xz-tools",
+      "subdir": "linux-64",
+      "version": "5.8.3"
+    },
+    {
+      "build": "hebe6cf0_3",
+      "name": "yaml",
+      "subdir": "linux-64",
+      "version": "0.2.5"
+    },
+    {
+      "build": "h25fd6f3_3",
+      "name": "zlib",
+      "subdir": "linux-64",
+      "version": "1.3.2"
+    },
+    {
+      "build": "hb78ec9c_7",
+      "name": "zstd",
+      "subdir": "linux-64",
+      "version": "1.5.7"
+    }
+  ],
+  "conda_prefix": "/opt/4d-native-cu121",
+  "kind": "installed-native-dependency-inventory",
+  "packages": {
+    "accelerate": "1.15.0",
+    "antlr4-python3-runtime": "4.9.3",
+    "anyio": "4.15.1",
+    "backports-zstd": "1.7.0",
+    "brotli": "1.2.0",
+    "certifi": "2026.7.22",
+    "charset-normalizer": "3.5.2",
+    "dataclasses": "0.8",
+    "diffusers": "0.36.0",
+    "diso": "0.1.4",
+    "einops": "0.8.2",
+    "fast-simplification": "0.2.0",
+    "filelock": "4.0.12",
+    "fsspec": "2026.9.0",
+    "gmpy2": "2.3.2",
+    "h11": "0.16.0",
+    "h2": "4.4.1",
+    "hf-xet": "1.7.0",
+    "hpack": "4.2.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface-hub": "0.36.2",
+    "hydra-core": "1.3.7",
+    "hyperframe": "6.1.0",
+    "idna": "3.20",
+    "imageio": "2.38.0",
+    "imageio-ffmpeg": "0.6.0",
+    "importlib-metadata": "9.0.1",
+    "iopath": "0.1.10",
+    "jaxtyping": "0.3.11",
+    "jinja2": "3.1.6",
+    "lazy-loader": "0.6",
+    "markupsafe": "3.0.4",
+    "mpmath": "1.4.1",
+    "natsort": "8.4.0",
+    "networkx": "3.6.1",
+    "numpy": "1.26.4",
+    "omegaconf": "2.3.1",
+    "opencv-python": "4.11.0.86",
+    "packaging": "26.3",
+    "pillow": "11.1.0",
+    "pip": "24.0",
+    "portalocker": "3.2.0",
+    "psutil": "7.2.2",
+    "pysocks": "1.7.1",
+    "pytorch3d": "0.7.8",
+    "pyyaml": "6.0.3",
+    "regex": "2026.9.29",
+    "requests": "2.34.2",
+    "safetensors": "0.8.0",
+    "scikit-image": "0.26.0",
+    "scipy": "1.13.1",
+    "setuptools": "79.0.1",
+    "sympy": "1.14.0",
+    "tifffile": "2026.3.3",
+    "tokenizers": "0.22.2",
+    "torch": "2.4.0",
+    "torchvision": "0.19.0",
+    "tqdm": "4.70.1",
+    "transformers": "4.57.6",
+    "trimesh": "5.1.0",
+    "triton": "3.0.0",
+    "typeguard": "4.6.0",
+    "typing-extensions": "4.16.0",
+    "urllib3": "2.8.0",
+    "wadler-lindig": "0.1.7",
+    "wheel": "0.48.0",
+    "zipp": "4.1.1"
+  },
+  "python_executable": "/opt/4d-native-diffusers036/bin/python",
+  "python_prefix": "/opt/4d-native-diffusers036",
+  "python_version": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+  "scope": "Observed package identities; not an upstream artifact checksum or reproducible solver lock",
+  "version": "1.0.0"
+}

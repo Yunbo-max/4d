@@ -1,0 +1,26 @@
+{
+  "kind": "independent-software-source-review",
+  "reviewer": "/root/review_repairs",
+  "source_commit": "62fe8785f0f554e4342cb227972cd87c00c3528b",
+  "status": "no_important_blocking_source_issues",
+  "scope": "CPU-only staged native import diagnostic and source-based Diffusers0.36 compatibility hypothesis",
+  "actual_execution_evidence": "repair-evidence/RESULT.json",
+  "scientific_admission": false,
+  "files": [
+    {
+      "path": "actionmesh/prepare_native_import_check.py",
+      "sha256": "38edc9954933caf0d084dfd34b975ac9feb21a6e9af19fb419f430108c5f7857"
+    },
+    {
+      "path": "actionmesh/research_math/native_import_check.py",
+      "sha256": "70d70e9264af26b1a38b53d41bcb6b0a5fd85bb02c6759f6954f496dab3d9ee6"
+    }
+  ],
+  "repair_plan_review": {
+    "reviewer": "/root/review_repairs",
+    "verdict": "no_blocking_issues",
+    "harness_digest": "e209c7377f8b32a5f3280a20fc80ce56e2ae38762598dac8fb6837599573b6ab",
+    "native_digest": "07365dc75ab33b7048de2ea2ba32ed1d47767ead9bb62d4822bc7f3d1b3aa041",
+    "scientific_admission": false
+  }
+}

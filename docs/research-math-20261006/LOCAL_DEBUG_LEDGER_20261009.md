@@ -8,7 +8,7 @@
 - 最新运行：`native-cu121-software-001`（新建 Python3.11 / Torch2.4 / CUDA12.1 环境），**852 项检查，846 通过、6 跳过、0 失败、0 错误**，110.695 秒。
 - 6 项跳过需要真实 C01/C03/C04/C06/C07/C08 工件，仍未完成，不能算通过。
 - 全部 workload 通过 committed plan builder + 已安装的 Research_Autopilot harness；上述检查均为零 GPU。
-- 15 个 idea 的源码存在；native 方法结果仍 **0/15**，GPU STOP 保持有效。
+- 15 个 idea 的源码存在；native 方法结果仍 **0/15**。用户随后明确授权恢复 GPU；实际首轮失败及修复见下方新增记录。
 
 [最新环境验证、回执与日志](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/RESULT.json) · [家族修复 red/green 证据](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/RESULT.json) · [此前七轮完整记录](../../rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/RESULT.json) · [资产下载与三项 CPU 准入](../../rounds/20261008-native-context/windows/20261009-local-asset-admission/REVIEW_PACKET.md)
 
@@ -83,7 +83,7 @@
 - 家族分组程序缺陷已修复，但**真实128样本家族映射尚未准入**。共作者、相同字符串或独立文件哈希均不足以证明统计独立；仍需上游谱系、几何证据和独立复核。
 - DISO构建安装和CPU runtime metadata capture已完成；GPU运行兼容性、baseline/scorer qualification仍待完成。
 - 六项真实工件检查及15个候选的Gate0/IPCG/科学准入和官方GPU评分未完成。
-- 下载/安装成功、CPU测试通过均不改变GPU STOP，也不替代具体GPU执行授权。
+- 下载/安装成功、CPU测试通过不构成科学准入。用户随后明确授权GPU恢复；候选评分仍须满足各自的科学准入条件。
 
 ## 所有失败条目索引
 
@@ -119,3 +119,14 @@
 | `test_research_supervisor` | 3 | S18 | 全部对应检查通过 |
 | `test_self_map_plan` | 1 | S02 | 全部对应检查通过 |
 | `test_trajectory_bridge_candidate` | 2 | S09 | 全部对应检查通过 |
+
+
+## GPU 恢复后的新增问题：Diffusers / Torch 导入兼容性
+
+用户明确表示“可以开始正式实验了”后，首个真实GPU工程运行 `paired-native-context-seed42-20261009-001` 在模型导入时失败。根因是Diffusers0.39的算子注册使用推迟求值的类型注解，Torch2.4的schema推断不接受字符串 `torch.Tensor`。模型尚未生成输出；完整失败目录及终止后的输入完整性复核均保留。
+
+处理：保留原环境，使用清华镜像在独立venv固定Diffusers0.36.0；其余依赖继承原Conda环境。新建并独立审查了仅经harness执行的CPU诊断：原环境实际复现失败（4.307秒），新环境7个导入与2个实际调用选项的微型CPU组件检查通过（5.805秒），`cuda_initialized=false`。随后重新采集运行环境metadata并按receipt哈希原样提升。没有修改算法、种子、精度或比较容差。
+
+[本轮失败、根因、修复与证据](../../rounds/20261008-native-context/windows/20261009-native-compatibility/REVIEW_PACKET.md) · [red/green回执](../../rounds/20261008-native-context/windows/20261009-native-compatibility/repair-evidence/RESULT.json)。上述71个不同条目/139次记录是此前单元检查索引；本次native导入失败及同因CPU复现另列，不能把旧的零失败状态当作完整GPU验证。
+
+控制器另遇到一次Git bundle ref名称不匹配：bundle只导出了HEAD，却请求了分支名；查看`bundle list-heads`后改取实际HEAD，核对准确提交，未触发项目workload。未成功的命令不算测试或科学尝试。

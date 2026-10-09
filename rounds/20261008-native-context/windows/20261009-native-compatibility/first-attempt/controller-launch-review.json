@@ -1,0 +1,35 @@
+{
+  "kind": "controller-launch-review",
+  "recorded_at": "2026-10-09T15:45:18.787288+00:00",
+  "authority_source": "User directly stated 可以开始正式实验了 in the current conversation; this record describes that instruction and is not an approval issuer",
+  "user_gpu_resume_observed": true,
+  "run_id": "paired-native-context-seed42-20261009-001",
+  "purpose": "engineering prerequisites for requested formal experiments",
+  "candidate_scientific_admission": false,
+  "source_commit": "462b6f5e5d23a98d9e71e66e5bb6025d6f42c577",
+  "source_status": "?? inputs/\n?? plans/\n",
+  "harness_digest": "ff290ea97c4ed6db71d7fa852132dfe4290e9ced3677219abbfa6ca30a06da03",
+  "gpu_uuid": "GPU-305023ac-8457-0ac4-0432-4ff19b30de46",
+  "physical_gpu": "Tesla T4",
+  "historical_device_note": "Retained R7 manifest describes its historical 2080Ti; current device identity comes from this T4 inventory and runtime receipt. No historical device/timing equivalence claimed.",
+  "budget": {
+    "hard_window_seconds": 28800,
+    "collection_reserve_seconds": 1800,
+    "this_instrument_workload_seconds": 12600,
+    "this_instrument_collection_deadline": "2026-10-09T19:45:18.787288+00:00",
+    "hard_window_deadline": "2026-10-09T23:45:18.787288+00:00",
+    "budget_is_allocation_not_timing_estimate": true
+  },
+  "max_attempts": 1,
+  "max_retries": 0,
+  "atol": 0,
+  "rtol": 0,
+  "outputs": [
+    "result.json",
+    "raw-manifest.json",
+    "raw-evidence.tar"
+  ],
+  "raw_failure_policy": "retain actual partial tree; no automatic rerun or synthetic bundle",
+  "device_inventory": "Tesla T4, GPU-305023ac-8457-0ac4-0432-4ff19b30de46, 580.119.02, 15360 MiB, 14913 MiB, 0 %",
+  "disk_free_bytes": 19611238400
+}

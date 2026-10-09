@@ -1,0 +1,47 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "paired-native-context-seed42-20261009-r2",
+  "tasks": [
+    {
+      "task_id": "paired-native-context",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/paired-native-context-seed42-20261009-r2/native.json",
+        "sha256": "9de370ef22aff12e1315fe76c6bae788f370f99afa3b0a6c3c0f95fdf6a42066"
+      },
+      "resources": {
+        "cpu_cores": 8,
+        "ram_mib": 32768,
+        "gpu_count": 1,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-complete-unit",
+          "paired-native-context"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 12600,
+    "window_seconds": 14400,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 8,
+    "ram_mib": 32768,
+    "max_gpu_task_seconds": 12600
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [
+      "GPU-305023ac-8457-0ac4-0432-4ff19b30de46"
+    ],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "e209c7377f8b32a5f3280a20fc80ce56e2ae38762598dac8fb6837599573b6ab"
+}

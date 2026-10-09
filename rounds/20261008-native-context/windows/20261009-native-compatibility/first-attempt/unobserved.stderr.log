@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/research_math/native_context_runner.py", line 580, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/research_math/native_context_runner.py", line 575, in main
+    return _stage(args.stage_request, args.stage_request_sha256)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/research_math/native_context_runner.py", line 275, in _stage
+    Pipeline, Autoencoder, run_actionmesh = _source_modules(
+                                            ^^^^^^^^^^^^^^^^
+  File "/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/research_math/native_context_runner.py", line 224, in _source_modules
+    from actionmesh.pipeline import ActionMeshPipeline
+  File "/root/rivermind-data/4d-native-r7-assets/actionmesh/actionmesh/pipeline.py", line 13, in <module>
+    from actionmesh.external.triposg import TripoSGPipelinePlus
+  File "/root/rivermind-data/4d-native-r7-assets/actionmesh/actionmesh/external/__init__.py", line 7, in <module>
+    from actionmesh.external.triposg import TripoSGPipelinePlus
+  File "/root/rivermind-data/4d-native-r7-assets/actionmesh/actionmesh/external/triposg.py", line 14, in <module>
+    from triposg.models.autoencoders import TripoSGVAEModel
+  File "/root/rivermind-data/4d-native-r7-assets/actionmesh/third_party/TripoSG/triposg/models/autoencoders/__init__.py", line 1, in <module>
+    from .autoencoder_kl_triposg import TripoSGVAEModel
+  File "/root/rivermind-data/4d-native-r7-assets/actionmesh/third_party/TripoSG/triposg/models/autoencoders/autoencoder_kl_triposg.py", line 8, in <module>
+    from diffusers.models.autoencoders.vae import DecoderOutput
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/autoencoders/__init__.py", line 1, in <module>
+    from .autoencoder_asym_kl import AsymmetricAutoencoderKL
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/autoencoders/autoencoder_asym_kl.py", line 21, in <module>
+    from .vae import AutoencoderMixin, DecoderOutput, DiagonalGaussianDistribution, Encoder, MaskConditionDecoder
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/autoencoders/vae.py", line 24, in <module>
+    from ..unets.unet_2d_blocks import (
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/unets/__init__.py", line 6, in <module>
+    from .unet_2d import UNet2DModel
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/unets/unet_2d.py", line 23, in <module>
+    from .unet_2d_blocks import UNetMidBlock2D, get_down_block, get_up_block
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/unets/unet_2d_blocks.py", line 36, in <module>
+    from ..transformers.dual_transformer_2d import DualTransformer2DModel
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/transformers/__init__.py", line 5, in <module>
+    from .ace_step_transformer import AceStepTransformer1DModel
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/transformers/ace_step_transformer.py", line 26, in <module>
+    from ..attention_dispatch import (
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/diffusers/models/attention_dispatch.py", line 748, in <module>
+    @_custom_op("_diffusers_flash_attn_3::_flash_attn_forward", mutates_args=(), device_types="cuda")
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/torch/_library/custom_ops.py", line 119, in inner
+    schema_str = torch._custom_op.impl.infer_schema(fn, mutates_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/torch/_library/infer_schema.py", line 42, in infer_schema
+    error_fn(
+  File "/opt/4d-native-cu121/lib/python3.11/site-packages/torch/_library/infer_schema.py", line 21, in error_fn
+    raise ValueError(
+ValueError: infer_schema(func): Parameter q has unsupported type torch.Tensor. The valid types are: dict_keys([<class 'torch.Tensor'>, typing.Optional[torch.Tensor], typing.Sequence[torch.Tensor], typing.List[torch.Tensor], typing.Sequence[typing.Optional[torch.Tensor]], typing.List[typing.Optional[torch.Tensor]], <class 'int'>, typing.Optional[int], typing.Sequence[int], typing.List[int], typing.Optional[typing.Sequence[int]], typing.Optional[typing.List[int]], <class 'float'>, typing.Optional[float], typing.Sequence[float], typing.List[float], typing.Optional[typing.Sequence[float]], typing.Optional[typing.List[float]], <class 'bool'>, typing.Optional[bool], typing.Sequence[bool], typing.List[bool], typing.Optional[typing.Sequence[bool]], typing.Optional[typing.List[bool]], <class 'str'>, typing.Optional[str], typing.Union[int, float, bool], typing.Union[int, float, bool, NoneType], typing.Sequence[typing.Union[int, float, bool]], typing.List[typing.Union[int, float, bool]], <class 'torch.dtype'>, typing.Optional[torch.dtype], <class 'torch.device'>, typing.Optional[torch.device]]). Got func with signature (q: 'torch.Tensor', k: 'torch.Tensor', v: 'torch.Tensor', softmax_scale: 'float | None' = None, causal: 'bool' = False, qv: 'torch.Tensor | None' = None, q_descale: 'torch.Tensor | None' = None, k_descale: 'torch.Tensor | None' = None, v_descale: 'torch.Tensor | None' = None, attention_chunk: 'int' = 0, softcap: 'float' = 0.0, num_splits: 'int' = 1, pack_gqa: 'bool | None' = None, deterministic: 'bool' = False, sm_margin: 'int' = 0) -> 'tuple[torch.Tensor, torch.Tensor]')

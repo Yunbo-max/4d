@@ -1,0 +1,16 @@
+{
+  "command": [
+    "/opt/4d-native-cu121/bin/python",
+    "-m",
+    "research_math.native_context_runner",
+    "--stage-request",
+    "/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/context-output/requests/unobserved.json",
+    "--stage-request-sha256",
+    "e8f1e8847f8274737854ec00eb886f6b75b29930a3647ca05cbf4a2647f56d36"
+  ],
+  "cwd": "/root/rivermind-data/4d-native-r7-assets/actionmesh",
+  "exit_code": 1,
+  "status": "failed",
+  "timeout_seconds": 12550.98252845183,
+  "elapsed_seconds": 4.220177206210792
+}

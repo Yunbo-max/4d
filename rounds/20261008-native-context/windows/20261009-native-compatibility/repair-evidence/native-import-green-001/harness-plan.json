@@ -1,0 +1,44 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "native-import-green-001",
+  "tasks": [
+    {
+      "task_id": "native-import-check",
+      "idea_id": "native-runtime",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/native-import-green-001/native.json",
+        "sha256": "0ee953242e972fa5dbcac71cf15d76faf41177bda57384baf5fb6d59cce0b367"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 4096,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "native-import-check"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 240,
+    "window_seconds": 240,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 4096,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "3c1bfca88401aef11fffec9ca969ace48afeec35ae3134c6b674042c95693e31"
+}

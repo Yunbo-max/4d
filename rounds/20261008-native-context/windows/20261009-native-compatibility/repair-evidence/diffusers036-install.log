@@ -1,0 +1,13 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting diffusers==0.36.0
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/35/50/281f92cb1f83854dbd79b6e958b3bc5018607e2542971d41604ba7a14b2f/diffusers-0.36.0-py3-none-any.whl (4.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 21.0 MB/s eta 0:00:00
+Installing collected packages: diffusers
+  Attempting uninstall: diffusers
+    Found existing installation: diffusers 0.39.0
+    Not uninstalling diffusers at /opt/4d-native-cu121/lib/python3.11/site-packages, outside environment /opt/4d-native-diffusers036
+    Can't uninstall 'diffusers'. No files were found to uninstall.
+Successfully installed diffusers-0.36.0
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /opt/4d-native-diffusers036/bin/python -m pip install --upgrade pip

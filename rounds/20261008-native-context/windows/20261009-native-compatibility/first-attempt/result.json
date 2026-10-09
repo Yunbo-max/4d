@@ -1,0 +1,136 @@
+{
+  "kind": "paired-native-context-instrument",
+  "version": 1,
+  "status": "failed",
+  "scientific_effect_qualification": false,
+  "native_context_qualified": false,
+  "replay_qualified": false,
+  "candidate_methods_tested": false,
+  "dispatch_ready": false,
+  "stages": {},
+  "gpu_uuid": "GPU-305023ac-8457-0ac4-0432-4ff19b30de46",
+  "instrument_wall_seconds": 12600,
+  "prerequisite_unit_wall_seconds": 12600,
+  "atol": 0.0,
+  "rtol": 0.0,
+  "source_time_query_requested": true,
+  "offline_environment": {
+    "HF_HUB_OFFLINE": "1",
+    "TRANSFORMERS_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "PYTHONPATH": "/root/rivermind-data/4d-native-r7-assets/actionmesh:/root/rivermind-data/4d-native-r7-assets/actionmesh/third_party/TripoSG:/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh"
+  },
+  "error": "RuntimeError: unobserved exited 1",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/research_math/native_context_runner.py\", line 449, in execute\n    result[\"stages\"][stage] = run_stage(stage, command, args.source_root,\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/root/rivermind-data/4d-family-green/runs/attempts/paired-native-context-seed42-20261009-001/paired-native-context-a1-99f06e17024745e2aaea1498665e0839/workspace/actionmesh/research_math/complete_unit_runner.py\", line 43, in run_stage\n    if returncode:raise RuntimeError(name+' exited '+str(returncode))\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: unobserved exited 1\n",
+  "final_integrity": "matched",
+  "device_memory": {
+    "sample_interval_seconds": 1,
+    "samples": 50,
+    "observed_peak_mib": 3.0,
+    "exact_peak": false,
+    "errors": []
+  },
+  "host_resources": {
+    "sample_interval_seconds": 1,
+    "samples": 102,
+    "exact_peak": false,
+    "errors": [],
+    "scope": "generation/replay/final input verification; before raw bundle collection",
+    "process_tree_rss_bytes": 654483456,
+    "output_bytes": 1029724,
+    "free_disk_bytes": 19606437888
+  },
+  "outputs": [
+    {
+      "path": "device-samples.jsonl",
+      "bytes": 9550,
+      "sha256": "bfa732206e4cf888c50dce7d6b168fb66d1f5a39e493320ea96d7a343afd3966"
+    },
+    {
+      "path": "final-integrity/revalidated-unit-manifest.json",
+      "bytes": 14956,
+      "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+    },
+    {
+      "path": "generation-identity.json",
+      "bytes": 29650,
+      "sha256": "6ae1a54624da53b15e863893744f37783a62f4f228b1e72ca17d4ade8430ef20"
+    },
+    {
+      "path": "host-samples.jsonl",
+      "bytes": 12418,
+      "sha256": "e88b03895cfab809b201e5cb50bbd2bc06a369b1062ae24dfc23223962dafbf4"
+    },
+    {
+      "path": "inputs/contract.json",
+      "bytes": 8366,
+      "sha256": "96405eb7e11027e911423cb4bf2a89643ef2b7794d3c164bf7034b465c0bf49c"
+    },
+    {
+      "path": "inputs/dataset_semantics.json",
+      "bytes": 143608,
+      "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b"
+    },
+    {
+      "path": "inputs/dependencies.json",
+      "bytes": 21759,
+      "sha256": "ad0282d24a86c2193182f021deac1c37e7c4910bf3965bc7c3d11e6477cb95e3"
+    },
+    {
+      "path": "inputs/environment.json",
+      "bytes": 952,
+      "sha256": "359d72319157f708550872c93ae568102e21dff019cb826635dd2cdbbf2c26b9"
+    },
+    {
+      "path": "inputs/population.json",
+      "bytes": 6425,
+      "sha256": "6f472cb7df575d171873377cad17ffd775e0ac71a616724490dca569431c3190"
+    },
+    {
+      "path": "inputs/snapshot_admission.json",
+      "bytes": 700147,
+      "sha256": "be4d61684f3f1f3a6a049415fc69f0342de8c9897a093b7e06cfeacb2a0efc04"
+    },
+    {
+      "path": "inputs/snapshot_contract.json",
+      "bytes": 4785,
+      "sha256": "3a9b1a2fe016efb63e3559b78e875692b2380f5f8a36a954c54dd8004990406d"
+    },
+    {
+      "path": "inputs/unit_manifest.json",
+      "bytes": 14956,
+      "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+    },
+    {
+      "path": "requests/unobserved.json",
+      "bytes": 32237,
+      "sha256": "e8f1e8847f8274737854ec00eb886f6b75b29930a3647ca05cbf4a2647f56d36"
+    },
+    {
+      "path": "revalidated-unit-manifest.json",
+      "bytes": 14956,
+      "sha256": "b551cbcac49b9c71f7be5becfa331745c03bb96feae758847858a1b723047ae6"
+    },
+    {
+      "path": "unobserved/stage-result.json",
+      "bytes": 7610,
+      "sha256": "5a920d22a418fff3057e9e8da9088a1504cf0b5c44e178b4010b9bf903c9c3a4"
+    },
+    {
+      "path": "unobserved.execution.json",
+      "bytes": 642,
+      "sha256": "7d7be41534da184cb7bf03fc7662d68dedbfd027df594979f368df7b9b3a4700"
+    },
+    {
+      "path": "unobserved.stderr.log",
+      "bytes": 6347,
+      "sha256": "09c29d311aa3dc22ba5f5db7a916ac2791f158209cba3bd1f5af2c2f1e6f8b91"
+    },
+    {
+      "path": "unobserved.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "elapsed_seconds": 100.6943887937814
+}

@@ -1,0 +1,179 @@
+{
+  "source_commit": "62fe8785f0f554e4342cb227972cd87c00c3528b",
+  "attempts": [
+    {
+      "run_id": "native-import-red-001",
+      "status": "failed",
+      "seconds": 4.306749767623842,
+      "harness_digest": "0c4aaa5ce15e4d45439a374fec330976cea7ef32cc26796b7a0859ee0a10816d",
+      "refs": [
+        {
+          "path": "native-import-red-001/native-plan.json",
+          "sha256": "cc75e133814ebe999296f08b0b9ba49dbcc73d5066628570add8e9fccfca176a"
+        },
+        {
+          "path": "native-import-red-001/harness-plan.json",
+          "sha256": "0f5ed5ac38c4c13eb8e4b0f5c3778b4f9a9507140890723059a109e4339c082d"
+        },
+        {
+          "path": "native-import-red-001/harness-report.json",
+          "sha256": "badbe0851db4346b874e3c51dbfaf52ff645bf26c8739821902891d8848be84d"
+        },
+        {
+          "path": "native-import-red-001/receipt.json",
+          "sha256": "74ab8f49763c70dbea27b5abf39fef148c19f2d9f0613fae7b0c0fa10153e3df"
+        },
+        {
+          "path": "native-import-red-001/execution-context.json",
+          "sha256": "dbe51895538b20e57d82f72af9df6805d95378b5d391be201f9997fd9899d66b"
+        },
+        {
+          "path": "native-import-red-001/attempt.json",
+          "sha256": "853eac2a81120f06b1bd1f068abfbb9458c5de4d3be543d1599c5d3447597825"
+        },
+        {
+          "path": "native-import-red-001/stdout.log",
+          "sha256": "cedf83ee5f5086677775abd2afb62655ab4e8e1715c276ebd1e852212e44b2ef"
+        },
+        {
+          "path": "native-import-red-001/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "native-import-red-001/process-guard.json",
+          "sha256": "123636577cdf223d465843c89a9b537eaebd192deb9515d5edaa8a47cfd6e15f"
+        },
+        {
+          "path": "native-import-red-001/native-import-output.json",
+          "sha256": "63ff2a7b31ecd0eb282b4f9de1f00327475d81ac2aaa0a8910359f76e6dc128f"
+        },
+        {
+          "path": "native-import-red-001/source-inventory.json",
+          "sha256": "233610a2334fb4834d1532129b908610774aab093c35bd9d0c782261db715679"
+        }
+      ],
+      "raw_archive": {
+        "path": "/root/rivermind-data/4d-native-compatibility-20261009/native-import-red-001-raw.tar.gz",
+        "sha256": "bc5620b46434b518a51963927e572333dbdb4b68f5fe2f98de954335e22d981c",
+        "bytes": 233050
+      }
+    },
+    {
+      "run_id": "native-import-green-001",
+      "status": "completed",
+      "seconds": 5.805101944133639,
+      "harness_digest": "3c1bfca88401aef11fffec9ca969ace48afeec35ae3134c6b674042c95693e31",
+      "refs": [
+        {
+          "path": "native-import-green-001/native-plan.json",
+          "sha256": "0ee953242e972fa5dbcac71cf15d76faf41177bda57384baf5fb6d59cce0b367"
+        },
+        {
+          "path": "native-import-green-001/harness-plan.json",
+          "sha256": "85bd0b1728c52593598575f0c57321fc548cc742db04fa17a25f0d494eee51d4"
+        },
+        {
+          "path": "native-import-green-001/harness-report.json",
+          "sha256": "be98db0d17d41b48293a1ff76d1ea0c30c75d6797806a7f4c05a6590118f86f5"
+        },
+        {
+          "path": "native-import-green-001/receipt.json",
+          "sha256": "3edc25099a99e12c5a837d9e8cad7c79bf93b1c07152e5adc6d7befce38bc91c"
+        },
+        {
+          "path": "native-import-green-001/execution-context.json",
+          "sha256": "b57948299bb328bd65ed1b410d8447f55bdacc3fd588af8cb6a0a87489e18071"
+        },
+        {
+          "path": "native-import-green-001/attempt.json",
+          "sha256": "a2c0aef2555af437150a84b35701d36086e33475f9c87da789629d20818198cf"
+        },
+        {
+          "path": "native-import-green-001/stdout.log",
+          "sha256": "d7da9dd80c4cd07e5623d66131bde7f0c745adda63e75955b5b408d7312f07c4"
+        },
+        {
+          "path": "native-import-green-001/stderr.log",
+          "sha256": "8a019eb5a914b0588346b23d2de0ca0f00a24bac227bc63a78fc504789b668da"
+        },
+        {
+          "path": "native-import-green-001/process-guard.json",
+          "sha256": "96fa256288dc2143ff0ca7dc732de3aa4c851b429d80ff3792784d99ab73832d"
+        },
+        {
+          "path": "native-import-green-001/native-import-output.json",
+          "sha256": "1c119e1233a415193f956baafbf31407522729ac3f5eaa7aba3d0c0200f001a4"
+        },
+        {
+          "path": "native-import-green-001/source-inventory.json",
+          "sha256": "c349eb1136ff2788023daf19d930505534dd4506bd89f4dbbd33d2ef9f953e64"
+        }
+      ],
+      "raw_archive": {
+        "path": "/root/rivermind-data/4d-native-compatibility-20261009/native-import-green-001-raw.tar.gz",
+        "sha256": "abd575f9789baa89bcf6ea2a7352053137659c783ab0bb53cea767f7f467e3b7",
+        "bytes": 332988
+      }
+    },
+    {
+      "run_id": "native-diffusers036-metadata-001",
+      "status": "completed",
+      "seconds": 0.3193948296830058,
+      "harness_digest": "9307a092cce314654bd5a5506a6833a7be403117c35410dc3f779c32a39aa9a3",
+      "refs": [
+        {
+          "path": "native-diffusers036-metadata-001/native-plan.json",
+          "sha256": "d4d9b6bf9bb13d3ed25436c50f9737764dbcb0d817f6a9211ed4f5442f9f355b"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/harness-plan.json",
+          "sha256": "672ff926bb8b1c900a4f560e40872bb1d7e79a55e6a1fa0346210817b8b4bfdc"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/harness-report.json",
+          "sha256": "82bfe653ee9dbd0c0161f1ba64ebc3b34de231da7a725f3c5542a06ecfeb4fd1"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/receipt.json",
+          "sha256": "b101d6c3f46408395a04e67f67da3db8d9b113847c1b6bb592a652dd0df74895"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/execution-context.json",
+          "sha256": "4a238ce0345487d2d853691f58d8ae8cc5e88f3b653f09a23b429f5311b3cc78"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/attempt.json",
+          "sha256": "06dbad2eef8a13926b248fa36fd26251da5bd706997ca60c45e6e5ff0ba1332e"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/stdout.log",
+          "sha256": "3ed52869d9e8f86574e5959f32ec2cc18f60da90927f1d1c5a53d8fa42561482"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/process-guard.json",
+          "sha256": "60d2088c8fe6e854a214c66e8937c23de1be83bfd7b1ae77c603dcbb99dba492"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/environment.json",
+          "sha256": "1fbfa6e81f3b8757dd7dfd8ee3f06333a4fdeb175cdd709ec227de5319f1d0e7"
+        },
+        {
+          "path": "native-diffusers036-metadata-001/dependencies.json",
+          "sha256": "4f7666aaa091e3771e37d8e47d81124eb476a790c4c589e99b52ce970b6a4cb7"
+        }
+      ],
+      "raw_archive": {
+        "path": "/root/rivermind-data/4d-native-compatibility-20261009/native-diffusers036-metadata-001-raw.tar.gz",
+        "sha256": "640e40a22e290770ca6892e4c72c3e6445a77e5d106c45dfae226d2c7b047046",
+        "bytes": 17036
+      }
+    }
+  ],
+  "gpu_repair_plan": "paired-native-context-seed42-20261009-r2",
+  "gpu_repair_execution_started": false,
+  "scientific_admission": false
+}

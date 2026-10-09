@@ -1,0 +1,66 @@
+[
+  {
+    "path": "native-plan.json",
+    "sha256": "29bc744aa524551a4254b301320db7b678d09a448bf12a5a65613598065b0bc2"
+  },
+  {
+    "path": "harness-plan.json",
+    "sha256": "5cae7bf202449de97b7b3450287ec84bf4e98a516ac5ce2bdd3a6543542f63bb"
+  },
+  {
+    "path": "controller-launch-review.json",
+    "sha256": "9a7ab5375b3762be19302a5a260e534b20180eb740a36179f967ac3a73cca91a"
+  },
+  {
+    "path": "harness-report.json",
+    "sha256": "98fa69a69a1432629ccddc1427fec0f8906e30f284804dac8250c3ddbeeb21ae"
+  },
+  {
+    "path": "receipt.json",
+    "sha256": "a3ddf81e0cd730ffb09fce1d1ac6ceb8ed5f787ac9eac873972ce8519e60145d"
+  },
+  {
+    "path": "attempt.json",
+    "sha256": "a9eacc03a5d89559e234397151098535d25cdafd22b31bf7f6d66e940f7c1f0a"
+  },
+  {
+    "path": "stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "process-guard.json",
+    "sha256": "3117b29582c1741ef317c4c4690e66c27a75d68867b74251adfab3eb08cfbe52"
+  },
+  {
+    "path": "result.json",
+    "sha256": "deb199dc5f67a3fd3792fc32645b45c118ef528685742cb8b2241063e70cebe5"
+  },
+  {
+    "path": "unobserved.stderr.log",
+    "sha256": "09c29d311aa3dc22ba5f5db7a916ac2791f158209cba3bd1f5af2c2f1e6f8b91"
+  },
+  {
+    "path": "unobserved.stdout.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "unobserved.execution.json",
+    "sha256": "7d7be41534da184cb7bf03fc7662d68dedbfd027df594979f368df7b9b3a4700"
+  },
+  {
+    "path": "device-samples.jsonl",
+    "sha256": "bfa732206e4cf888c50dce7d6b168fb66d1f5a39e493320ea96d7a343afd3966"
+  },
+  {
+    "path": "host-samples.jsonl",
+    "sha256": "e88b03895cfab809b201e5cb50bbd2bc06a369b1062ae24dfc23223962dafbf4"
+  },
+  {
+    "path": "unobserved-stage-result.json",
+    "sha256": "5a920d22a418fff3057e9e8da9088a1504cf0b5c44e178b4010b9bf903c9c3a4"
+  }
+]

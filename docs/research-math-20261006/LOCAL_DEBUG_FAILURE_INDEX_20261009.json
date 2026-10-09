@@ -1979,5 +1979,19 @@
       "latest_verification": "passed",
       "verification_log": "rounds/20261008-native-context/windows/20261009-native-prerequisites/evidence/family-provenance-green-001/stderr.log"
     }
+  ],
+  "native_runtime_failures_20261009": [
+    {
+      "problem": "Diffusers0.39 postponed annotations incompatible with Torch2.4 custom_op infer_schema",
+      "failed_runs": [
+        "paired-native-context-seed42-20261009-001",
+        "native-import-red-001"
+      ],
+      "fix": "separate venv with Diffusers0.36.0; original environment retained",
+      "verified_scope": "7 imports and 2 tiny CPU component checks; cuda_initialized=false",
+      "verification_run": "native-import-green-001",
+      "evidence": "rounds/20261008-native-context/windows/20261009-native-compatibility/repair-evidence/RESULT.json",
+      "native_generation_verified": false
+    }
   ]
 }

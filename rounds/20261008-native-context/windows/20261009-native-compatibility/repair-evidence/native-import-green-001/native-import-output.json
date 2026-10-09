@@ -1,0 +1,59 @@
+{
+  "status": "completed",
+  "imports": [
+    {
+      "name": "torch",
+      "file": "/opt/4d-native-cu121/lib/python3.11/site-packages/torch/__init__.py"
+    },
+    {
+      "name": "torchvision",
+      "file": "/opt/4d-native-cu121/lib/python3.11/site-packages/torchvision/__init__.py"
+    },
+    {
+      "name": "pytorch3d.ops",
+      "file": "/opt/4d-native-cu121/lib/python3.11/site-packages/pytorch3d/ops/__init__.py"
+    },
+    {
+      "name": "diso",
+      "file": "/opt/4d-native-cu121/lib/python3.11/site-packages/diso/__init__.py"
+    },
+    {
+      "name": "actionmesh.pipeline",
+      "file": "/root/rivermind-data/4d-native-compatibility/runs/attempts/native-import-green-001/native-import-check-a1-ffb13394dead472db096292595da4375/workspace/plans/native-import-green-001/official-source/actionmesh/pipeline.py"
+    },
+    {
+      "name": "actionmesh.model.temporal_autoencoder",
+      "file": "/root/rivermind-data/4d-native-compatibility/runs/attempts/native-import-green-001/native-import-check-a1-ffb13394dead472db096292595da4375/workspace/plans/native-import-green-001/official-source/actionmesh/model/temporal_autoencoder.py"
+    },
+    {
+      "name": "official_inference_entry",
+      "file": "/root/rivermind-data/4d-native-compatibility/runs/attempts/native-import-green-001/native-import-check-a1-ffb13394dead472db096292595da4375/workspace/plans/native-import-green-001/official-source/inference/video_to_animated_mesh.py"
+    }
+  ],
+  "gpu_count": 0,
+  "scientific_qualification": false,
+  "model_loaded": false,
+  "python_executable": "/opt/4d-native-diffusers036/bin/python",
+  "source_inventory_sha256": "c349eb1136ff2788023daf19d930505534dd4506bd89f4dbbd33d2ef9f953e64",
+  "packages": {
+    "torch": "2.4.0",
+    "torchvision": "0.19.0",
+    "pytorch3d": "0.7.8",
+    "diffusers": "0.36.0",
+    "transformers": "4.57.6",
+    "diso": "0.1.4"
+  },
+  "component_checks": [
+    {
+      "cross_attention_norm": null,
+      "status": "completed",
+      "device": "cpu"
+    },
+    {
+      "cross_attention_norm": "layer_norm",
+      "status": "completed",
+      "device": "cpu"
+    }
+  ],
+  "cuda_initialized": false
+}
