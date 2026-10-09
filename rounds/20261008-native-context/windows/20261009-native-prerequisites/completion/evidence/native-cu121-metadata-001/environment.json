@@ -1,0 +1,26 @@
+{
+  "execution_mode": "native_host",
+  "python_executable": "/opt/4d-native-cu121/bin/python",
+  "python_version": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+  "python_prefix": "/opt/4d-native-cu121",
+  "conda_prefix": "/opt/4d-native-cu121",
+  "gpu_uuid": "GPU-305023ac-8457-0ac4-0432-4ff19b30de46",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.4.0",
+    "trimesh": "5.1.0",
+    "scipy": "1.13.1",
+    "pytorch3d": "0.7.8"
+  },
+  "dependency_lock_refs": [
+    {
+      "path": "inputs/native-runtime/dependencies.json",
+      "sha256": "ad0282d24a86c2193182f021deac1c37e7c4910bf3965bc7c3d11e6477cb95e3"
+    }
+  ],
+  "captured_at": "2026-10-09T13:41:39.024513+00:00",
+  "gpu_identity_source": "Controller-supplied; retain separate current host inventory",
+  "gpu_identity_verified": false,
+  "native_contract_qualified": false,
+  "scope": "Installed environment metadata only; no CUDA, compatibility or scorer parity established"
+}

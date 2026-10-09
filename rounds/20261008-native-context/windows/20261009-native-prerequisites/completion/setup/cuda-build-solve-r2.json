@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "actions": {
+    "FETCH": [
+      {
+        "name": "cuda-nvcc",
+        "version": "12.1.105",
+        "build": "0",
+        "build_number": 0,
+        "channel": "https://conda.anaconda.org/nvidia/linux-64",
+        "subdir": "linux-64",
+        "fn": "cuda-nvcc-12.1.105-0.tar.bz2",
+        "md5": "2dadb744089a5326480060bdd7d0c045",
+        "url": "https://conda.anaconda.org/nvidia/linux-64/cuda-nvcc-12.1.105-0.tar.bz2",
+        "sha256": "bb8176dd6595206ac393c03a54d10643bdfa2101af8285f3e48caa73be0ef4d7",
+        "depends": [],
+        "constrains": [],
+        "license": "",
+        "timestamp": 1680582964655,
+        "size": 54927996
+      },
+      {
+        "name": "cuda-cccl",
+        "version": "12.1.109",
+        "build": "0",
+        "build_number": 0,
+        "channel": "https://conda.anaconda.org/nvidia/linux-64",
+        "subdir": "linux-64",
+        "fn": "cuda-cccl-12.1.109-0.tar.bz2",
+        "md5": "9423b7c1cdaae4bc066eccd4059d833b",
+        "url": "https://conda.anaconda.org/nvidia/linux-64/cuda-cccl-12.1.109-0.tar.bz2",
+        "sha256": "b3aacf23055a5b0a2b8e52adbb59933775209e14274457dfb8673a3cf5f60ccb",
+        "depends": [],
+        "constrains": [],
+        "license": "",
+        "timestamp": 1681208902525,
+        "size": 1260072
+      },
+      {
+        "name": "cuda-cudart-dev",
+        "version": "12.1.105",
+        "build": "0",
+        "build_number": 0,
+        "channel": "https://conda.anaconda.org/nvidia/linux-64",
+        "subdir": "linux-64",
+        "fn": "cuda-cudart-dev-12.1.105-0.tar.bz2",
+        "md5": "accec90e42a0c11db1dd946031f3842f",
+        "url": "https://conda.anaconda.org/nvidia/linux-64/cuda-cudart-dev-12.1.105-0.tar.bz2",
+        "sha256": "eaf9ea2d6a606eb2883a356a24afe04c0075d802054524d9c4c6c10bbeef40de",
+        "depends": [
+          "cuda-cccl",
+          "cuda-cudart >=12.1.105"
+        ],
+        "constrains": [],
+        "license": "",
+        "timestamp": 1680585608812,
+        "size": 380810
+      }
+    ],
+    "PREFIX": "/opt/4d-cuda121-build",
+    "LINK": [
+      {
+        "base_url": "https://conda.anaconda.org/nvidia",
+        "build_number": 0,
+        "build_string": "0",
+        "channel": "nvidia",
+        "dist_name": "cuda-nvcc-12.1.105-0",
+        "name": "cuda-nvcc",
+        "platform": "linux-64",
+        "version": "12.1.105"
+      },
+      {
+        "base_url": "https://conda.anaconda.org/nvidia",
+        "build_number": 0,
+        "build_string": "0",
+        "channel": "nvidia",
+        "dist_name": "cuda-cccl-12.1.109-0",
+        "name": "cuda-cccl",
+        "platform": "linux-64",
+        "version": "12.1.109"
+      },
+      {
+        "base_url": "https://conda.anaconda.org/nvidia",
+        "build_number": 0,
+        "build_string": "0",
+        "channel": "nvidia",
+        "dist_name": "cuda-cudart-12.1.105-0",
+        "name": "cuda-cudart",
+        "platform": "linux-64",
+        "version": "12.1.105"
+      },
+      {
+        "base_url": "https://conda.anaconda.org/nvidia",
+        "build_number": 0,
+        "build_string": "0",
+        "channel": "nvidia",
+        "dist_name": "cuda-cudart-dev-12.1.105-0",
+        "name": "cuda-cudart-dev",
+        "platform": "linux-64",
+        "version": "12.1.105"
+      }
+    ]
+  },
+  "prefix": "/opt/4d-cuda121-build",
+  "dry_run": true
+}

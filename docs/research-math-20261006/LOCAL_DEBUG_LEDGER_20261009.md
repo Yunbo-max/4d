@@ -5,12 +5,12 @@
 ## 当前验证结果
 
 - 最新代码：`462b6f5e5d23a98d9e71e66e5bb6025d6f42c577`。
-- 最新运行：`family-provenance-green-001`，**852 项检查，846 通过、6 跳过、0 失败、0 错误**，127.390 秒。
+- 最新运行：`native-cu121-software-001`（新建 Python3.11 / Torch2.4 / CUDA12.1 环境），**852 项检查，846 通过、6 跳过、0 失败、0 错误**，110.695 秒。
 - 6 项跳过需要真实 C01/C03/C04/C06/C07/C08 工件，仍未完成，不能算通过。
 - 全部 workload 通过 committed plan builder + 已安装的 Research_Autopilot harness；上述检查均为零 GPU。
 - 15 个 idea 的源码存在；native 方法结果仍 **0/15**，GPU STOP 保持有效。
 
-[最新计划、回执与日志](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/RESULT.json) · [此前七轮完整记录](../../rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/RESULT.json) · [资产下载与三项 CPU 准入](../../rounds/20261008-native-context/windows/20261009-local-asset-admission/REVIEW_PACKET.md)
+[最新环境验证、回执与日志](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/RESULT.json) · [家族修复 red/green 证据](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/RESULT.json) · [此前七轮完整记录](../../rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/RESULT.json) · [资产下载与三项 CPU 准入](../../rounds/20261008-native-context/windows/20261009-local-asset-admission/REVIEW_PACKET.md)
 
 ## 代码问题：根因与解决办法
 
@@ -48,6 +48,7 @@
 | debug-r6-cpu-001 | 849 | 0 | 0 | 6 | completed |
 | family-provenance-red-002 | 850 | 1 | 0 | 6 | failed：128 != 55 |
 | family-provenance-green-001 | 852 | 0 | 0 | 6 | completed |
+| native-cu121-software-001 | 852 | 0 | 0 | 6 | completed：新 native Conda 环境中的 CPU 检查 |
 
 120秒超时的处理：保留真实中断目录，在新源码和新 run ID 上显式设置更充足的 CPU 上限；没有更改算法收敛容差或重写旧结果。最新两轮各一次、零重试，内部上限600秒、外部660秒。`family-provenance-red-001` 只生成了120秒计划，审查时发现预算不足，未执行；实际 red 运行是 `-002`。
 
@@ -67,14 +68,20 @@
 | 清华不提供 pytorch3d/nvidia channel | 主包用清华；这两个渠道使用官方Anaconda源，保存精确包URL/MD5/SHA-256清单。 |
 | explicit安装意外读取 defaults，触发ToS拒绝 | 显式 override-channels，移除无关默认渠道；未替用户接受新条款，随后安装exit0。 |
 | Conda explicit --json 返回空stdout | 安装exit0、Python路径及实际Conda记录可见；保留空日志，不伪造JSON成功结果，后续使用规定harness采集实际元数据。 |
-| DISO pip隔离构建报 No module named torch | 已定位到 setup.py 需要导入Torch，临时build环境不包含它；32个其他依赖已按版本/哈希锁安装。DISO须在已安装Torch环境中构建，并准备与Torch匹配的CUDA12.1编译器；当前仍在处理，未宣称完整native环境就绪。 |
+| DISO pip隔离构建报 No module named torch | setup.py 在生成 metadata 时需要导入Torch。固定 DISO0.1.4 源码哈希，在已有Torch环境中以 --no-build-isolation --no-deps 构建；独立安装与Torch匹配的CUDA12.1编译器，隐藏GPU，限定T4的sm75目标和2个编译进程。wheel构建与安装均exit0；随后852项CPU检查及runtime metadata harness完成。尚未验证GPU模型加载/执行。 |
 | Objaverse mirror API403 | 用官方API固定revision `556637099bf4fa79ea7b239d0d9c328b8a2e9ac8`；固定revision的镜像文件端点可读。全部128对象已匹配索引，89元数据分片已在Local保留。 |
-| 原始几何HTTP下载超时/SSL EOF | 记录原失败和partial，改用具有公开token刷新钩子的Xet下载；下载仍进行，未生成家族准入。 |
+| 原始几何HTTP下载超时/SSL EOF | 记录原失败和partial，改用具有公开token刷新钩子的Xet下载；218文件已完整下载并逐文件核对revision、ETag与SHA-256（128个GLB、89个metadata分片、1个索引，共835,810,699字节）；未生成家族准入。 |
+
+## 环境修复的可复查记录
+
+- [安装、编译与原始资产清单](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/setup/)：包含首次失败、精确依赖锁、DISO构建日志和源码/wheel哈希。CUDA工具链初次解析得到12.4 runtime，安装前补充12.1精确约束并重新解析。
+- [runtime metadata回执和两个原始输出](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/evidence/native-cu121-metadata-001/)：0 GPU，完成后按receipt重算哈希，原样复制到SSH canonical输入目录。`native_contract_qualified=false`，没有把metadata记录当成GPU兼容性验证。
+- 两次新增harness运行各1 attempt、0 retry。原始归档及其SHA-256列在[completion/RESULT.json](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/RESULT.json)。
 
 ## 尚未解决 / 不能宣称完成
 
 - 家族分组程序缺陷已修复，但**真实128样本家族映射尚未准入**。共作者、相同字符串或独立文件哈希均不足以证明统计独立；仍需上游谱系、几何证据和独立复核。
-- DISO构建、完整native runtime capture/兼容性和baseline/scorer qualification仍在继续。
+- DISO构建安装和CPU runtime metadata capture已完成；GPU运行兼容性、baseline/scorer qualification仍待完成。
 - 六项真实工件检查及15个候选的Gate0/IPCG/科学准入和官方GPU评分未完成。
 - 下载/安装成功、CPU测试通过均不改变GPU STOP，也不替代具体GPU执行授权。
 

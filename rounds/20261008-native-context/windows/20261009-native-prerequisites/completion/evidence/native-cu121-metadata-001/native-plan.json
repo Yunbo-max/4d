@@ -1,0 +1,60 @@
+{
+  "schema_id": "experiment-run-plan",
+  "schema_version": "1.0.0",
+  "run_id": "native-cu121-metadata-001",
+  "purpose": "engineering",
+  "evidence_mode": "developmental",
+  "protocol_ref": null,
+  "protocol_digest": null,
+  "output_root": "runs/attempts",
+  "provenance": {
+    "git_revision": "Actual collector source identities pinned by code_refs",
+    "model_revision": "none; metadata only",
+    "data_revision": "none; no native benchmark execution",
+    "environment_digest": "47f11c342d18945fb1dd3e352c4d928105f7bb0d04b14a850459a5707ca931c3"
+  },
+  "limits": {
+    "max_attempts": 1,
+    "max_development_trials": 1,
+    "max_confirmation_trials": 0,
+    "max_retries_per_trial": 0,
+    "wall_time_seconds": 120,
+    "attempt_timeout_seconds": 120
+  },
+  "jobs": [
+    {
+      "trial_id": "native-runtime-metadata",
+      "command": [
+        "/opt/4d-native-cu121/bin/python",
+        "-m",
+        "research_math.native_runtime",
+        "--root",
+        "..",
+        "--output",
+        "../inputs/native-runtime",
+        "--gpu-uuid",
+        "GPU-305023ac-8457-0ac4-0432-4ff19b30de46"
+      ],
+      "cwd": "actionmesh",
+      "input_refs": [],
+      "code_refs": [
+        {
+          "path": "actionmesh/research_math/__init__.py",
+          "sha256": "e26903cde2779a68b1e711f0ee8fb7ceeb2e322f2a9522891c444efb504fcd69"
+        },
+        {
+          "path": "actionmesh/research_math/native_runtime.py",
+          "sha256": "c13de3122f51847438ee15ccdc406e28e29da074491c4732de03ed76669c0398"
+        }
+      ],
+      "output_paths": [
+        "inputs/native-runtime/environment.json",
+        "inputs/native-runtime/dependencies.json"
+      ],
+      "seed": 0,
+      "group": "engineering",
+      "arm_role": "software-only"
+    }
+  ],
+  "plan_digest": "80031317ac8cb6b73803005774e12d0bc6c0ef1b3e8ef7bdfde5089f9334e529"
+}

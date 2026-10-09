@@ -2225,3 +2225,10 @@ native results 0/15 and scientific admission requirements remain unchanged.
 The real-source audit found that per-asset metadata/geometry hashes fractured statistical families. Red source fe82cd1 produced 128 instead of 55 fixture families; independently reviewed source 462b6f5 introduces derivation 1.1.0, retains every provenance check, rejects legacy semantics and passes 852 software checks (846 passed, 6 retained-native skips). New design digest: 22d352a3ec8d391dd2bbe0549a3a39d8dc4cd5e05a53c0d4e675c930dab9b098. No real family mapping or scientific admission is asserted. GPU STOP remains active.
 
 All 139 observed FAIL/ERROR records (71 different headings) are indexed in LOCAL_DEBUG_FAILURE_INDEX_20261009.json, with causes/fixes in LOCAL_DEBUG_LEDGER_20261009.md. Actual plans, receipts and raw archive locators are in rounds/20261008-native-context/windows/20261009-native-prerequisites/RESULT.json. Native environment and original family assets remain in preparation.
+
+
+## 2026-10-09 Local native environment completion
+
+DISO0.1.4 now builds and installs with the matching CUDA12.1 compiler in the isolated Python3.11/Torch2.4 environment. The complete CPU suite reports 852 checks,846 passed,6 retained-artifact skips,zero failures/errors (110.695s). A separate zero-GPU runtime metadata harness completed; its two receipt-bound outputs were rehashed and promoted unchanged. The fixed Objaverse revision now has all128 original GLBs,89 metadata shards and the index (218 files,835,810,699 bytes), with cached revision/ETag checks and SHA-256 inventory. These are engineering inputs; real family mapping, native GPU compatibility, scorer qualification and scientific admission remain pending. GPU STOP remains effective.
+
+Evidence: [completion/RESULT.json](../../rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/RESULT.json). The debug ledger retains all71 distinct failure headings and139 occurrences, their root causes and fix commits; these two new completed runs added no failures.

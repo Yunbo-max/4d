@@ -1,0 +1,26 @@
+{
+  "package": "diso",
+  "version": "0.1.4",
+  "scope": "Package compilation/install only; no GPU workload or native qualification",
+  "build_exit": "0",
+  "install_exit": "0",
+  "source_origin": {
+    "archive_info": {
+      "hash": "sha256=2ada1c21b84f72fdcec6abc3c4e09200824a7cc9d5de9623a28052e8b1f22c95",
+      "hashes": {
+        "sha256": "2ada1c21b84f72fdcec6abc3c4e09200824a7cc9d5de9623a28052e8b1f22c95"
+      }
+    },
+    "url": "https://pypi.tuna.tsinghua.edu.cn/packages/d4/d3/6138f73ed3ca3104a5021f1d9e65a46472d2325d0f921e03914a95b2541d/diso-0.1.4.tar.gz"
+  },
+  "wheel": {
+    "path": "/root/rivermind-data/4d-native-prerequisites-20261009/wheels/diso-0.1.4-cp311-cp311-linux_x86_64.whl",
+    "sha256": "7e273aabf31dcfe728ca58ec9cfb2665e74f0fe058cb40697095392d27f04ba2",
+    "bytes": 187051
+  },
+  "cuda_toolkit": "12.1.105",
+  "CUDA_VISIBLE_DEVICES": "",
+  "TORCH_CUDA_ARCH_LIST": "7.5",
+  "FORCE_CUDA": "1",
+  "MAX_JOBS": "2"
+}

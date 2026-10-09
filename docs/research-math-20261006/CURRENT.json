@@ -1590,7 +1590,7 @@
       "C01 original inference seeds314/2718 require native producer extension; no silent substitution",
       "complete reviewed G01/family splits/numeric criteria and scientific admission remain pending",
       "Local current-source CPU and real native interface acceptance pending; required raw native input closure absent",
-      "baseline indices10–15 coverage and UID008 full raw bundle remain unproven; do not overwrite or rerun old records"
+      "baseline indices10\u201315 coverage and UID008 full raw bundle remain unproven; do not overwrite or rerun old records"
     ],
     "next_step": "Continue the next independent ready retained candidate source chain (C04 by the maintained order), while Local may separately use the runbook CPU acceptance and retained-native C10 artifact plan when actual inputs exist. Keep GPU STOP; no new budget or scientific retry."
   },
@@ -2089,10 +2089,34 @@
     "debug_ledger": "docs/research-math-20261006/LOCAL_DEBUG_LEDGER_20261009.md",
     "remaining": [
       "real family provenance and independent review",
-      "DISO/native runtime completion",
+      "native GPU runtime compatibility qualification",
       "retained native artifacts",
       "baseline/scorer qualification",
       "candidate scientific admission and exact GPU resume"
     ]
+  },
+  "local_native_environment_20261009": {
+    "source_commit": "462b6f5e5d23a98d9e71e66e5bb6025d6f42c577",
+    "python": "/opt/4d-native-cu121/bin/python",
+    "status": "cpu_software_acceptance_and_runtime_metadata_completed",
+    "software_run": "native-cu121-software-001",
+    "metadata_run": "native-cu121-metadata-001",
+    "checks": {
+      "total": 852,
+      "passed": 846,
+      "skipped": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    "result_ref": {
+      "path": "rounds/20261008-native-context/windows/20261009-native-prerequisites/completion/RESULT.json",
+      "sha256": "921543109b7f54ae4e6bcdf7853047612b93c0ede77ad0e0e4787565594673a7"
+    },
+    "objaverse_acquired_files": 218,
+    "objaverse_bytes": 835810699,
+    "real_family_mapping_admitted": false,
+    "native_gpu_compatibility_verified": false,
+    "scientific_admission": false,
+    "gpu_stop": true
   }
 }

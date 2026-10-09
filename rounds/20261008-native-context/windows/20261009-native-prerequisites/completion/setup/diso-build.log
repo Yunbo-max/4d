@@ -1,0 +1,11 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting diso==0.1.4
+  Using cached diso-0.1.4.tar.gz (24 kB)
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: diso
+  Building wheel for diso (pyproject.toml): started
+  Building wheel for diso (pyproject.toml): finished with status 'done'
+  Created wheel for diso: filename=diso-0.1.4-cp311-cp311-linux_x86_64.whl size=187051 sha256=7e273aabf31dcfe728ca58ec9cfb2665e74f0fe058cb40697095392d27f04ba2
+  Stored in directory: /root/.cache/pip/wheels/e1/2a/40/364f61f61141319cba16b959b493905638ad2ccdc8cd55862c
+Successfully built diso

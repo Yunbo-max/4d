@@ -1,0 +1,4 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Processing ./rivermind-data/4d-native-prerequisites-20261009/wheels/diso-0.1.4-cp311-cp311-linux_x86_64.whl
+Installing collected packages: diso
+Successfully installed diso-0.1.4

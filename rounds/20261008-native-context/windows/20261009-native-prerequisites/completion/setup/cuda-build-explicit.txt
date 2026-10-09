@@ -1,0 +1,5 @@
+@EXPLICIT
+https://conda.anaconda.org/nvidia/linux-64/cuda-nvcc-12.1.105-0.tar.bz2#2dadb744089a5326480060bdd7d0c045
+https://conda.anaconda.org/nvidia/linux-64/cuda-cccl-12.1.109-0.tar.bz2#9423b7c1cdaae4bc066eccd4059d833b
+https://conda.anaconda.org/nvidia/linux-64/cuda-cudart-12.1.105-0.tar.bz2#001823a01c0d49300fd9622c4578eb40
+https://conda.anaconda.org/nvidia/linux-64/cuda-cudart-dev-12.1.105-0.tar.bz2#accec90e42a0c11db1dd946031f3842f

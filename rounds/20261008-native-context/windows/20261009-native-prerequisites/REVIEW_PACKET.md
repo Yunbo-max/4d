@@ -28,3 +28,10 @@ Local已校验delivery archive以及两份完整raw archive的SHA-256。完整�
 ## 科学状态
 
 GPU STOP仍有效。6个真实工件检查仍跳过；native方法结果与Local方法验证仍0/15。软件修复通过、下载或安装完成均不构成Gate0/IPCG、baseline/scorer qualification或精确GPU-resume授权。
+
+
+## 后续完成记录（保留上述初次快照）
+
+[completion/RESULT.json](completion/RESULT.json) 记录了安装和下载完成后的实际状态：DISO0.1.4在CUDA12.1工具链构建安装成功；native-cu121-software-001在新Python3.11环境完成852项CPU检查（846通过、6跳过），耗时110.695秒；native-cu121-metadata-001零GPU采集成功。两份runtime输出与receipt哈希一致，已原样复制到canonical输入路径。
+
+原始Objaverse输入218文件（128GLB、89元数据分片、1索引）全部取得，835,810,699字节，逐文件hash与固定revision/下载ETag验证通过。完整manifest、依赖锁、首次失败和最终构建日志见[completion/setup](completion/setup)。原有RESULT和失败attempt均未改写。GPU STOP、真实家族准入、六项真实工件检查及0/15 native结果状态保持原有边界。
