@@ -1,0 +1,941 @@
+{
+  "window_id": "20261009-local-asset-admission",
+  "recorded_at": "2026-10-09T12:15:48.227138+00:00",
+  "source_commit": "875d8e106a26be17bf80711b305d2b072523fcd8",
+  "runtime_commit": "bd368630ef623efa16c6c28fab894d692f82ee4d",
+  "remote_root": "/root/rivermind-data/4d-native-preparation",
+  "status": "engineering_inputs_admitted",
+  "runs": [
+    {
+      "run_id": "actionbench-snapshots-20261009-001",
+      "status": "completed",
+      "seconds": 86.41265759058297,
+      "approved_plan_digest": "c68920ae2958ab852a2c362cdafbbc0120e67d686d0db914041ce2b2dcbed395",
+      "receipt": {
+        "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/receipt.json",
+        "sha256": "28ad250ed25d1ada3eadf9f721aa6d7c00f4c144b2f88b621ee4e9fe6bc63832",
+        "bytes": 5442
+      },
+      "harness_report": {
+        "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-snapshots-20261009-001/report.json",
+        "sha256": "48d1a74aeebd7f29be89351233d12557df54a3e96919ec1135214b0046d518ab",
+        "bytes": 2131
+      },
+      "attempt_path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/actionbench-full128-snapshot-admission-a1-76ba8b016bd542248c7cbdba8612d8cf",
+      "outputs": [
+        {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/actionbench-full128-snapshot-admission-a1-76ba8b016bd542248c7cbdba8612d8cf/workspace/inputs/actionbench-full128-snapshots/admission.json",
+          "sha256": "a78400cec1ba79e94c1da7076a24e2bf8a99bbec518527b989dda2c4a9b47396",
+          "bytes": 703632
+        }
+      ],
+      "evidence_files": {
+        "native-plan.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/plans/actionbench-snapshots-20261009-001/native.json",
+          "sha256": "c4af9daab90680d3ae46d2e56eba50f910e97115d73125929f0969e75a2552e2",
+          "bytes": 3789
+        },
+        "harness-plan.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/plans/actionbench-snapshots-20261009-001/harness.json",
+          "sha256": "5be5684e6defbd943251a891f1e4a492d6479bc4adb3c724c024921d39d1e6b1",
+          "bytes": 1213
+        },
+        "harness-report.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-snapshots-20261009-001/report.json",
+          "sha256": "48d1a74aeebd7f29be89351233d12557df54a3e96919ec1135214b0046d518ab",
+          "bytes": 2131
+        },
+        "receipt.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/receipt.json",
+          "sha256": "28ad250ed25d1ada3eadf9f721aa6d7c00f4c144b2f88b621ee4e9fe6bc63832",
+          "bytes": 5442
+        },
+        "attempt.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/actionbench-full128-snapshot-admission-a1-76ba8b016bd542248c7cbdba8612d8cf/attempt.json",
+          "sha256": "fa92163ed0d467a6bb9e5f24b27b5bbf2cff6de7028bfacb882014fdaad0441d",
+          "bytes": 4396
+        },
+        "stdout.log": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/actionbench-full128-snapshot-admission-a1-76ba8b016bd542248c7cbdba8612d8cf/stdout.log",
+          "sha256": "f71202090085b131ae4c409a0545ea276a30252b87948e2005d66a84fab58209",
+          "bytes": 179
+        },
+        "stderr.log": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/actionbench-full128-snapshot-admission-a1-76ba8b016bd542248c7cbdba8612d8cf/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "process-guard.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-snapshots-20261009-001/actionbench-full128-snapshot-admission-a1-76ba8b016bd542248c7cbdba8612d8cf/process-guard.json",
+          "sha256": "9ff45ad0a4e06f8ddb6e3a85b7db0b00f78b69aa38b97683615109eb832130a8",
+          "bytes": 1695
+        },
+        "execution-context.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-snapshots-20261009-001/tasks/actionbench-full128-snapshot-admission/execution-context.json",
+          "sha256": "1216da0ff9cb937db92c1253a6e2c195620c779511d81c75e7a1c5b697e21684",
+          "bytes": 628
+        }
+      }
+    },
+    {
+      "run_id": "actionbench-semantics-20261009-001",
+      "status": "completed",
+      "seconds": 46.60091176442802,
+      "approved_plan_digest": "a70629b311c1647ce5c0c0c74d1b52751fcbeca2bf66d5a2efd20b833a207695",
+      "receipt": {
+        "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/receipt.json",
+        "sha256": "be2e5ee8d0858f4863ab3bddbb85fab51f79bebe11ff59e303b1ff4e95a577af",
+        "bytes": 5588
+      },
+      "harness_report": {
+        "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-semantics-20261009-001/report.json",
+        "sha256": "28fb306b33cde3f01eae6751cc9aceb3c022a3b3c002205564ab8db8511e5471",
+        "bytes": 2131
+      },
+      "attempt_path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/actionbench-full128-dataset-semantics-a1-4df902f0d7a54dc7b9b72a40dda6049f",
+      "outputs": [
+        {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/actionbench-full128-dataset-semantics-a1-4df902f0d7a54dc7b9b72a40dda6049f/workspace/inputs/actionbench-full128-snapshots/dataset-semantics.json",
+          "sha256": "5557c7496ebe98c30b1e3e618fbae1e33512f4248141046f12094b7c9b56499b",
+          "bytes": 143608
+        }
+      ],
+      "evidence_files": {
+        "native-plan.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/plans/actionbench-semantics-20261009-001/native.json",
+          "sha256": "e8b6664a653d9e74f7112eddcc72cbee96d8783d25a34d81dea1f68b025c53b4",
+          "bytes": 3712
+        },
+        "harness-plan.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/plans/actionbench-semantics-20261009-001/harness.json",
+          "sha256": "e85000c3f8421fa8f55d5ac7948629c2eeb275d076302fe94d6db27a6cdf70e6",
+          "bytes": 1211
+        },
+        "harness-report.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-semantics-20261009-001/report.json",
+          "sha256": "28fb306b33cde3f01eae6751cc9aceb3c022a3b3c002205564ab8db8511e5471",
+          "bytes": 2131
+        },
+        "receipt.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/receipt.json",
+          "sha256": "be2e5ee8d0858f4863ab3bddbb85fab51f79bebe11ff59e303b1ff4e95a577af",
+          "bytes": 5588
+        },
+        "attempt.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/actionbench-full128-dataset-semantics-a1-4df902f0d7a54dc7b9b72a40dda6049f/attempt.json",
+          "sha256": "3d64d5c497086761e92b5109fe5283eb960c3fa484c118b496174a42f85571bd",
+          "bytes": 4439
+        },
+        "stdout.log": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/actionbench-full128-dataset-semantics-a1-4df902f0d7a54dc7b9b72a40dda6049f/stdout.log",
+          "sha256": "7fabd324083e7c8fb34a9f91f161b0d4073272a0160f793ea16727ea9c27c11b",
+          "bytes": 196
+        },
+        "stderr.log": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/actionbench-full128-dataset-semantics-a1-4df902f0d7a54dc7b9b72a40dda6049f/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "process-guard.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-semantics-20261009-001/actionbench-full128-dataset-semantics-a1-4df902f0d7a54dc7b9b72a40dda6049f/process-guard.json",
+          "sha256": "4c859deea6a1590a0e113ce21c9bd655ff7c9db334f2d1e0c1e080416d3075a1",
+          "bytes": 1451
+        },
+        "execution-context.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-semantics-20261009-001/tasks/actionbench-full128-dataset-semantics/execution-context.json",
+          "sha256": "7c6459b8e020fc2559ca0aac879dd8661d245d2f20d0cdb8b4ac56060cb20f24",
+          "bytes": 626
+        }
+      }
+    },
+    {
+      "run_id": "actionbench-unit-manifest-20261009-001",
+      "status": "completed",
+      "seconds": 0.37887415662407875,
+      "approved_plan_digest": "8cf3ae9686570535c162173ae2168291b40977f468351c49a9ccd0ab7f6e5723",
+      "receipt": {
+        "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/receipt.json",
+        "sha256": "f2b4582b643089a04407182145f56f5d4beb428dd42c30db2ecefa5e7820cdd6",
+        "bytes": 6465
+      },
+      "harness_report": {
+        "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-unit-manifest-20261009-001/report.json",
+        "sha256": "b9afdcb61e99d7f892950a693974013a14823df0c868caddc3d0751b805123b1",
+        "bytes": 2159
+      },
+      "attempt_path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/actionbench-current-release-unit-manifest-a1-01c7168a14f84dda88a5d9cb932a3a48",
+      "outputs": [
+        {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/actionbench-current-release-unit-manifest-a1-01c7168a14f84dda88a5d9cb932a3a48/workspace/inputs/actionbench-full128-snapshots/unit-manifest.json",
+          "sha256": "a78043fc43a442e39b4273283b6933279e641b39bdecd15009ba8914e829cab3",
+          "bytes": 14606
+        }
+      ],
+      "evidence_files": {
+        "native-plan.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/plans/actionbench-unit-manifest-20261009-001/native.json",
+          "sha256": "e2293813da08f0fd51be58024db8db3920a8a87e119b7589e4ecc0de77d3e373",
+          "bytes": 4313
+        },
+        "harness-plan.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/plans/actionbench-unit-manifest-20261009-001/harness.json",
+          "sha256": "074aacc72143403448778f9c03e466d0bea520af204072866fc0f06ee26665a2",
+          "bytes": 1225
+        },
+        "harness-report.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-unit-manifest-20261009-001/report.json",
+          "sha256": "b9afdcb61e99d7f892950a693974013a14823df0c868caddc3d0751b805123b1",
+          "bytes": 2159
+        },
+        "receipt.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/receipt.json",
+          "sha256": "f2b4582b643089a04407182145f56f5d4beb428dd42c30db2ecefa5e7820cdd6",
+          "bytes": 6465
+        },
+        "attempt.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/actionbench-current-release-unit-manifest-a1-01c7168a14f84dda88a5d9cb932a3a48/attempt.json",
+          "sha256": "f63ab8b72ab9cd83472004c52d68852f38e19956f1842f137eae37d9990cfcbf",
+          "bytes": 5145
+        },
+        "stdout.log": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/actionbench-current-release-unit-manifest-a1-01c7168a14f84dda88a5d9cb932a3a48/stdout.log",
+          "sha256": "3a58627f430677917118368fc4eee3b34e82660dd108564d55233e2b71e45eaa",
+          "bytes": 222
+        },
+        "stderr.log": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/actionbench-current-release-unit-manifest-a1-01c7168a14f84dda88a5d9cb932a3a48/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "process-guard.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/attempts/actionbench-unit-manifest-20261009-001/actionbench-current-release-unit-manifest-a1-01c7168a14f84dda88a5d9cb932a3a48/process-guard.json",
+          "sha256": "d3315f9b63379bcbc0c222f63cf111b6a612295d11d2775d768cbc2106fdce8d",
+          "bytes": 1823
+        },
+        "execution-context.json": {
+          "path": "/root/rivermind-data/4d-native-preparation/runs/harness/actionbench-unit-manifest-20261009-001/tasks/actionbench-current-release-unit-manifest/execution-context.json",
+          "sha256": "bebcde005390c12d2d284784a0def27b191641d334cc920c65c3c4978baf6ab9",
+          "bytes": 634
+        }
+      }
+    }
+  ],
+  "snapshots": {
+    "dataset": {
+      "repository": "facebook/actionbench",
+      "revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+      "file_count": 2309,
+      "total_bytes": 5292032295,
+      "manifest_sha256": "489b8a95284bbddd322231e31e1935e8c1b23394fc56e6f87db6409dd1e77785"
+    },
+    "actionmesh": {
+      "repository": "facebook/ActionMesh",
+      "revision": "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+      "file_count": 10,
+      "total_bytes": 6615176099,
+      "manifest_sha256": "b4f7e0d4db009627cc90de5b23739ef12c09ea53e6a0ac8803ee25fcad650043"
+    },
+    "triposg": {
+      "repository": "VAST-AI/TripoSG",
+      "revision": "2c1c516d22d58db486a058d98d31bb6177344e06",
+      "file_count": 11,
+      "total_bytes": 7946494238,
+      "manifest_sha256": "0ea8f7bd6952e1ab375c46ce020728d5b2aa4aa3d38cd8074876fa5db997ac04"
+    },
+    "dinov2": {
+      "repository": "facebook/dinov2-large",
+      "revision": "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+      "file_count": 6,
+      "total_bytes": 2435142994,
+      "manifest_sha256": "618593a4453a2e0d5700501238554af15f67e6852a67cca654bd35757166dac7"
+    },
+    "rmbg": {
+      "repository": "briaai/RMBG-1.4",
+      "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+      "file_count": 20,
+      "total_bytes": 842215095,
+      "manifest_sha256": "6e5a2afb4d36adb10f76058f777994541f43bc780f0f6198e9ee32cbff0b78f1"
+    }
+  },
+  "total_files": 2356,
+  "total_bytes": 23131060721,
+  "population_size": 128,
+  "sample_semantics_sha256": "5cfce7fcc0b5689221762dbe8a59454560a85bef0d13af185aa593e1aca52d74",
+  "source_identity": {
+    "repository": "facebookresearch/actionmesh",
+    "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+    "tree": "aae2874f931d21e038966ecfde312638fff2091a",
+    "tracked_worktree_clean": true,
+    "submodules": {
+      "third_party/TripoSG": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c"
+    }
+  },
+  "raw_evidence_archive": {
+    "path": "/root/rivermind-data/actionbench-assets-20261009-raw-evidence.tar.gz",
+    "sha256": "b18a1f9abb944be142167c0544b96846a2693297862f992541aa7a7235fdc78a",
+    "bytes": 517952
+  },
+  "acquisition_evidence": [
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/acquisition-controller-record.json",
+        "sha256": "c7b2fb0c78d404caddd63dfc2bccbdc16d75c3b2c5ccb4d6dbcbc8f56c303291",
+        "bytes": 2298
+      },
+      "retained": "acquisition/acquisition-controller-record.json",
+      "retained_sha256": "c7b2fb0c78d404caddd63dfc2bccbdc16d75c3b2c5ccb4d6dbcbc8f56c303291",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-download-request.json",
+        "sha256": "77a8aff5c3d41e2ddeeee2627afeeff59a306b840eeffa64516c04cf5150417d",
+        "bytes": 420
+      },
+      "retained": "acquisition/actionmesh-download-request.json",
+      "retained_sha256": "77a8aff5c3d41e2ddeeee2627afeeff59a306b840eeffa64516c04cf5150417d",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-download.exit",
+        "sha256": "0e55cbbc9d11449b186092d82905aa6974858df7a0b7d706ae51c4716c9461ef",
+        "bytes": 4
+      },
+      "retained": "acquisition/actionmesh-download.exit",
+      "retained_sha256": "0e55cbbc9d11449b186092d82905aa6974858df7a0b7d706ae51c4716c9461ef",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-download.log",
+        "sha256": "8a2d461e3d5edb755d5683ae7f675b9769073082a1c27e430452e3eda128ed27",
+        "bytes": 841
+      },
+      "retained": "acquisition/actionmesh-download.log",
+      "retained_sha256": "8a2d461e3d5edb755d5683ae7f675b9769073082a1c27e430452e3eda128ed27",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-dry-run.json",
+        "sha256": "850e16ad5fe2d8024a3f0d02ea0b23ab896d7aa8893923e9bcbf865dc6fa57d3",
+        "bytes": 331
+      },
+      "retained": "acquisition/actionmesh-dry-run.json",
+      "retained_sha256": "850e16ad5fe2d8024a3f0d02ea0b23ab896d7aa8893923e9bcbf865dc6fa57d3",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-dry-run.log",
+        "sha256": "5666562e8f00f2aa4e56ce080ff6418c6f2fb51c259cd37cc368c6e146142f78",
+        "bytes": 1179
+      },
+      "retained": "acquisition/actionmesh-dry-run.log",
+      "retained_sha256": "5666562e8f00f2aa4e56ce080ff6418c6f2fb51c259cd37cc368c6e146142f78",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-xet-download.exit",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "retained": "acquisition/actionmesh-xet-download.exit",
+      "retained_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/actionmesh-xet-download.log",
+        "sha256": "4c8069704f4d1f1427f9f0b7b77b93ff8a33ace03eaf968c6a8668fe1254ae68",
+        "bytes": 342
+      },
+      "retained": "acquisition/actionmesh-xet-download.log",
+      "retained_sha256": "42804a88471405db4ebdf40d329acfc33f47febf33f9487646754a8d98f4f2d4",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-api.json",
+        "sha256": "62db829c1fa773289b552c3628e262307a0a9a68658bd88415a50ed6d19f45ef",
+        "bytes": 577240
+      },
+      "retained": "acquisition/dataset-api.json",
+      "retained_sha256": "62db829c1fa773289b552c3628e262307a0a9a68658bd88415a50ed6d19f45ef",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-download-r2.exit",
+        "sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396",
+        "bytes": 4
+      },
+      "retained": "acquisition/dataset-download-r2.exit",
+      "retained_sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-download-r2.log",
+        "sha256": "ec52ef3137bbc1e673ab3353e7a61ce17784e0f08900626f0cfd4d74940f1dd0",
+        "bytes": 66026
+      },
+      "retained": "acquisition/dataset-download-r2.log",
+      "retained_sha256": "eb95c1446d1f6ee67e38ebc6c3f4c7ab0e2804b21476357407e52495b96d60a2",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-download.exit",
+        "sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396",
+        "bytes": 4
+      },
+      "retained": "acquisition/dataset-download.exit",
+      "retained_sha256": "9d9b18720961e9b4689fd763b85e7b6f36160ccd3a8a1c9ddc5103bb0f66c396",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-download.log",
+        "sha256": "3331184d9dacdb8277b529a2355df6db6a292a55116b07926b3a6f9072eb25a5",
+        "bytes": 958
+      },
+      "retained": "acquisition/dataset-download.log",
+      "retained_sha256": "3387dce03a01ba7d88ceb8141a58fcc0ed2df492eeb29bcaddbb7edc1b8a7b05",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-dry-run.json",
+        "sha256": "49b445a146929f126f5448a59d1c2128c561caa61aa75bcf28de7ed278b42dae",
+        "bytes": 333
+      },
+      "retained": "acquisition/dataset-dry-run.json",
+      "retained_sha256": "49b445a146929f126f5448a59d1c2128c561caa61aa75bcf28de7ed278b42dae",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-dry-run.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "retained": "acquisition/dataset-dry-run.log",
+      "retained_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-xet-download.exit",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "retained": "acquisition/dataset-xet-download.exit",
+      "retained_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dataset-xet-download.log",
+        "sha256": "497a81367d8851f45542d5194759b17724ff086bd6ca59d8fdaaec8696ddb313",
+        "bytes": 95468
+      },
+      "retained": "acquisition/dataset-xet-download.log",
+      "retained_sha256": "b7db40d8277e00ff6c601ab718059d5bc0d090f04978761d404d838a19f6a117",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/device-before-admission.csv",
+        "sha256": "ac7de423e544c8c21b760378d6f3f9861b9c4a329bff2ca953ae8798f6592b65",
+        "bytes": 145
+      },
+      "retained": "acquisition/device-before-admission.csv",
+      "retained_sha256": "ac7de423e544c8c21b760378d6f3f9861b9c4a329bff2ca953ae8798f6592b65",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-download-request.json",
+        "sha256": "6ec818ea3eb2f58f9f9e0cc32915259377a492842aa2c2060ac9236e62de5871",
+        "bytes": 418
+      },
+      "retained": "acquisition/dinov2-download-request.json",
+      "retained_sha256": "6ec818ea3eb2f58f9f9e0cc32915259377a492842aa2c2060ac9236e62de5871",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-download.exit",
+        "sha256": "0e55cbbc9d11449b186092d82905aa6974858df7a0b7d706ae51c4716c9461ef",
+        "bytes": 4
+      },
+      "retained": "acquisition/dinov2-download.exit",
+      "retained_sha256": "0e55cbbc9d11449b186092d82905aa6974858df7a0b7d706ae51c4716c9461ef",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-download.log",
+        "sha256": "3ba96b1a5c616e51fa54218100655b7f764ef71c315de4cdc316fb0484091e49",
+        "bytes": 1626
+      },
+      "retained": "acquisition/dinov2-download.log",
+      "retained_sha256": "84e98b067c796f575c9ddb46e1071b16b67e0b2eaf02981403339cd0d36131f3",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-dry-run.json",
+        "sha256": "58a314a9776ebb6526eb383d4c3b12a35a6ca0329831e0702a61fc85d966e8b2",
+        "bytes": 329
+      },
+      "retained": "acquisition/dinov2-dry-run.json",
+      "retained_sha256": "58a314a9776ebb6526eb383d4c3b12a35a6ca0329831e0702a61fc85d966e8b2",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-dry-run.log",
+        "sha256": "ed5345dca07e647579334c9a075f9f179f10096c3ca63955f4cafbbb112ef4d7",
+        "bytes": 722
+      },
+      "retained": "acquisition/dinov2-dry-run.log",
+      "retained_sha256": "ed5345dca07e647579334c9a075f9f179f10096c3ca63955f4cafbbb112ef4d7",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-xet-download-request.json",
+        "sha256": "e5553d2fc786a401b939a64d2f309de0979e60b306f6b0c5254518a3d48ac329",
+        "bytes": 415
+      },
+      "retained": "acquisition/dinov2-xet-download-request.json",
+      "retained_sha256": "e5553d2fc786a401b939a64d2f309de0979e60b306f6b0c5254518a3d48ac329",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-xet-download.exit",
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "bytes": 2
+      },
+      "retained": "acquisition/dinov2-xet-download.exit",
+      "retained_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-xet-download.log",
+        "sha256": "3ef821c0584bc51cd81d8978153161367883add80e73560375581199cd949cb8",
+        "bytes": 5106
+      },
+      "retained": "acquisition/dinov2-xet-download.log",
+      "retained_sha256": "2dc981bd12189918fdd2b20a1486e4a3a33c2cb15510b1fe3880c5e31da7fd85",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-xet-r2-request.json",
+        "sha256": "1f4c795a1184af4dd9d963efff82aa23079379b3a4b7b6c78c9d12665f21c767",
+        "bytes": 515
+      },
+      "retained": "acquisition/dinov2-xet-r2-request.json",
+      "retained_sha256": "1f4c795a1184af4dd9d963efff82aa23079379b3a4b7b6c78c9d12665f21c767",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-xet-r2.exit",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "retained": "acquisition/dinov2-xet-r2.exit",
+      "retained_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/dinov2-xet-r2.log",
+        "sha256": "37e00b767fc291f0a2d3076dd3b863a4c6d87deaf64b9e2ae8e2b6c1147cee69",
+        "bytes": 403
+      },
+      "retained": "acquisition/dinov2-xet-r2.log",
+      "retained_sha256": "759331bc9d45103d9a5420fa71157b5d934d71a1fd0454de9b18d73d8a65966d",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/hf_mirror_pagination.py",
+        "sha256": "8a281c5630ad18ee467e0c2972cc5058d4992112e29eb068933e9be9c0496e3c",
+        "bytes": 815
+      },
+      "retained": "acquisition/hf_mirror_pagination.py",
+      "retained_sha256": "8a281c5630ad18ee467e0c2972cc5058d4992112e29eb068933e9be9c0496e3c",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/hf_mirror_transport_v2.py",
+        "sha256": "7a31eb3402b0c69c33d9e206a7cd38256144d7dcf95aae768d82a02285dbe16a",
+        "bytes": 1174
+      },
+      "retained": "acquisition/hf_mirror_transport_v2.py",
+      "retained_sha256": "7a31eb3402b0c69c33d9e206a7cd38256144d7dcf95aae768d82a02285dbe16a",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/model-relocation.json",
+        "sha256": "5367d7360d483b0d19c6c421dccd828a1b2248f328ee0df2c0378bf4037c8107",
+        "bytes": 1245
+      },
+      "retained": "acquisition/model-relocation.json",
+      "retained_sha256": "5367d7360d483b0d19c6c421dccd828a1b2248f328ee0df2c0378bf4037c8107",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/progress.jsonl",
+        "sha256": "d150ad03c307ec50b3f7e5d0f89744a96001ba29a2d29c13740a91fdd89d7e61",
+        "bytes": 11181
+      },
+      "retained": "acquisition/progress.jsonl",
+      "retained_sha256": "d150ad03c307ec50b3f7e5d0f89744a96001ba29a2d29c13740a91fdd89d7e61",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/rmbg-download-request.json",
+        "sha256": "ebb23d18144f316f7c9015529ebce0d98863e41cef6b2550cf77c0d0365fc78e",
+        "bytes": 410
+      },
+      "retained": "acquisition/rmbg-download-request.json",
+      "retained_sha256": "ebb23d18144f316f7c9015529ebce0d98863e41cef6b2550cf77c0d0365fc78e",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/rmbg-download.exit",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "retained": "acquisition/rmbg-download.exit",
+      "retained_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/rmbg-download.log",
+        "sha256": "6c2a1d345afc7fac517e7f280912110ccbf533bc3d07f718f58c26f2da8ca81c",
+        "bytes": 6095
+      },
+      "retained": "acquisition/rmbg-download.log",
+      "retained_sha256": "32e02d8330032be3ec57e9c1f2b99b92f842a398b601640c17ddf8378df12ba5",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/rmbg-dry-run.json",
+        "sha256": "f7690123bb850b5ca27a99d4c8741b0b57bcc0e17bb223531bb7bd4c8e2d2734",
+        "bytes": 321
+      },
+      "retained": "acquisition/rmbg-dry-run.json",
+      "retained_sha256": "f7690123bb850b5ca27a99d4c8741b0b57bcc0e17bb223531bb7bd4c8e2d2734",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/rmbg-dry-run.log",
+        "sha256": "689c7a54f26294f326a4bd99264d3d1ab1f95a0ac40943e8ca93aef733d144c3",
+        "bytes": 1909
+      },
+      "retained": "acquisition/rmbg-dry-run.log",
+      "retained_sha256": "689c7a54f26294f326a4bd99264d3d1ab1f95a0ac40943e8ca93aef733d144c3",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/semantics-builder.json",
+        "sha256": "a066ae5c7c13cba4c3135b2bec657e98c3bbfcccf506195f4c9a137f6fa82d4b",
+        "bytes": 369
+      },
+      "retained": "acquisition/semantics-builder.json",
+      "retained_sha256": "a066ae5c7c13cba4c3135b2bec657e98c3bbfcccf506195f4c9a137f6fa82d4b",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/semantics-harness.log",
+        "sha256": "28fb306b33cde3f01eae6751cc9aceb3c022a3b3c002205564ab8db8511e5471",
+        "bytes": 2131
+      },
+      "retained": "acquisition/semantics-harness.log",
+      "retained_sha256": "28fb306b33cde3f01eae6751cc9aceb3c022a3b3c002205564ab8db8511e5471",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/semantics-launch.json",
+        "sha256": "0d27001a7d7028afdb64e3bf8a349407cddc4818f5ea8a666a58ecacff69ab64",
+        "bytes": 549
+      },
+      "retained": "acquisition/semantics-launch.json",
+      "retained_sha256": "0d27001a7d7028afdb64e3bf8a349407cddc4818f5ea8a666a58ecacff69ab64",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/snapshot-builder.json",
+        "sha256": "a13e7b5c324baefb3734f00b58598e1f89479838e059dfeaaff057e7d8dcfc42",
+        "bytes": 373
+      },
+      "retained": "acquisition/snapshot-builder.json",
+      "retained_sha256": "a13e7b5c324baefb3734f00b58598e1f89479838e059dfeaaff057e7d8dcfc42",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/snapshot-harness.log",
+        "sha256": "48d1a74aeebd7f29be89351233d12557df54a3e96919ec1135214b0046d518ab",
+        "bytes": 2131
+      },
+      "retained": "acquisition/snapshot-harness.log",
+      "retained_sha256": "48d1a74aeebd7f29be89351233d12557df54a3e96919ec1135214b0046d518ab",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/snapshot-launch.json",
+        "sha256": "2b60cbcf39865eafe053a8f2a822fdfac311eef09b2e1fef03ac740d779ab934",
+        "bytes": 549
+      },
+      "retained": "acquisition/snapshot-launch.json",
+      "retained_sha256": "2b60cbcf39865eafe053a8f2a822fdfac311eef09b2e1fef03ac740d779ab934",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/source-checkout-r2.exit",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "retained": "acquisition/source-checkout-r2.exit",
+      "retained_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/source-checkout-r2.log",
+        "sha256": "ca06a5a8efaa767ca5f6dc852cb8d7b7153c6f3a32d8b9d08f6dd41d6469d0bf",
+        "bytes": 79
+      },
+      "retained": "acquisition/source-checkout-r2.log",
+      "retained_sha256": "ca06a5a8efaa767ca5f6dc852cb8d7b7153c6f3a32d8b9d08f6dd41d6469d0bf",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/source-identity.json",
+        "sha256": "f15a885b2a243426b51fa050a2e2cb935452098f34acc2f0bd78da30890313b7",
+        "bytes": 351
+      },
+      "retained": "acquisition/source-identity.json",
+      "retained_sha256": "f15a885b2a243426b51fa050a2e2cb935452098f34acc2f0bd78da30890313b7",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/source-submodule-bundle.log",
+        "sha256": "978ce7e282a4a52aa8c1c74a70ed987ddf3c699bcd3237881429a1ebfcb0eadb",
+        "bytes": 141
+      },
+      "retained": "acquisition/source-submodule-bundle.log",
+      "retained_sha256": "978ce7e282a4a52aa8c1c74a70ed987ddf3c699bcd3237881429a1ebfcb0eadb",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/source-submodule.exit",
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "bytes": 2
+      },
+      "retained": "acquisition/source-submodule.exit",
+      "retained_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/source-submodule.log",
+        "sha256": "65b871dc42c121e6043e4343cf284f0b80c9c13a880b89086e9d39e79875ed1d",
+        "bytes": 1095
+      },
+      "retained": "acquisition/source-submodule.log",
+      "retained_sha256": "4b3d74afbf967046890731fefde70ca97d74900693b6b10fabd332b45648b486",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/status.py",
+        "sha256": "05572a1f9182d5a0aa90916d1190ffd93b036617a543dc1fa99d5618cfb5811c",
+        "bytes": 1450
+      },
+      "retained": "acquisition/status.py",
+      "retained_sha256": "05572a1f9182d5a0aa90916d1190ffd93b036617a543dc1fa99d5618cfb5811c",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-download-request.json",
+        "sha256": "5080a94d473495860b50d44c2263d744322e856acfbac3b8f1abf72ab8fc9b36",
+        "bytes": 413
+      },
+      "retained": "acquisition/triposg-download-request.json",
+      "retained_sha256": "5080a94d473495860b50d44c2263d744322e856acfbac3b8f1abf72ab8fc9b36",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-download.exit",
+        "sha256": "0e55cbbc9d11449b186092d82905aa6974858df7a0b7d706ae51c4716c9461ef",
+        "bytes": 4
+      },
+      "retained": "acquisition/triposg-download.exit",
+      "retained_sha256": "0e55cbbc9d11449b186092d82905aa6974858df7a0b7d706ae51c4716c9461ef",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-download.log",
+        "sha256": "2640f8c5168ac02113d37798d744a80f06f9b366c4841c1eee69575693288e1a",
+        "bytes": 1861
+      },
+      "retained": "acquisition/triposg-download.log",
+      "retained_sha256": "ca05daaeb59899506624f6b0023b9ec77fe716dfdd394ce9fbce4f5540804d21",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-dry-run.json",
+        "sha256": "b36943152a6f9efdf2567ef014d77d43b1ce71c2b659770d06efd07b914091be",
+        "bytes": 324
+      },
+      "retained": "acquisition/triposg-dry-run.json",
+      "retained_sha256": "b36943152a6f9efdf2567ef014d77d43b1ce71c2b659770d06efd07b914091be",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-dry-run.log",
+        "sha256": "b04118738513ec7e09391daaf381ebb77cef90b0d10c2835ca79038c2d13d709",
+        "bytes": 1613
+      },
+      "retained": "acquisition/triposg-dry-run.log",
+      "retained_sha256": "88913a438a6b9989cdfab012fd0aa50e9bd9643171bcdbdbcfb00950ef1b3b9f",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-xet-download-request.json",
+        "sha256": "e669b7849276952f48e0dc54642e9db0680c3bc6f4cc175e2d663c78dfefe677",
+        "bytes": 410
+      },
+      "retained": "acquisition/triposg-xet-download-request.json",
+      "retained_sha256": "e669b7849276952f48e0dc54642e9db0680c3bc6f4cc175e2d663c78dfefe677",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-xet-download.exit",
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "bytes": 2
+      },
+      "retained": "acquisition/triposg-xet-download.exit",
+      "retained_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-xet-download.log",
+        "sha256": "732da9091143db0d7e2e4147530f982227f42595571153dddf87b4f98398f12e",
+        "bytes": 5111
+      },
+      "retained": "acquisition/triposg-xet-download.log",
+      "retained_sha256": "029adfd5a167db6033d3ac4be0b42218f367de2e1650df145d6fe83a4b8ce875",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-xet-r2-request.json",
+        "sha256": "a81e587841262aec68ca7f50682699705c2369f0a2658469f8e74d2880f5a4bd",
+        "bytes": 510
+      },
+      "retained": "acquisition/triposg-xet-r2-request.json",
+      "retained_sha256": "a81e587841262aec68ca7f50682699705c2369f0a2658469f8e74d2880f5a4bd",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-xet-r2.exit",
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "retained": "acquisition/triposg-xet-r2.exit",
+      "retained_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/triposg-xet-r2.log",
+        "sha256": "e43bbc39513745cc072d67a375adbd7420bb73d8d9c30f03bd8d666975cf3d05",
+        "bytes": 412
+      },
+      "retained": "acquisition/triposg-xet-r2.log",
+      "retained_sha256": "ab68c3d8ce7844d582db21e96b3f81b5b2cb2cee7e028a0f244385c28adb741a",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/unit-builder.json",
+        "sha256": "9e96a527aaf429746e86d433f0051e6df5b2449e838640087c83e45e91a39e2c",
+        "bytes": 316
+      },
+      "retained": "acquisition/unit-builder.json",
+      "retained_sha256": "9e96a527aaf429746e86d433f0051e6df5b2449e838640087c83e45e91a39e2c",
+      "url_redaction": false
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/unit-harness.log",
+        "sha256": "b9afdcb61e99d7f892950a693974013a14823df0c868caddc3d0751b805123b1",
+        "bytes": 2159
+      },
+      "retained": "acquisition/unit-harness.log",
+      "retained_sha256": "b9afdcb61e99d7f892950a693974013a14823df0c868caddc3d0751b805123b1",
+      "url_redaction": true
+    },
+    {
+      "source": {
+        "path": "/root/rivermind-data/4d-asset-acquisition-20261009/unit-launch.json",
+        "sha256": "c1ea4d8a5f562b228120fa3bb955128b0881f20d065bcc16f175e657a0d979e1",
+        "bytes": 553
+      },
+      "retained": "acquisition/unit-launch.json",
+      "retained_sha256": "c1ea4d8a5f562b228120fa3bb955128b0881f20d065bcc16f175e657a0d979e1",
+      "url_redaction": false
+    }
+  ],
+  "gpu_stop": true,
+  "gpu_workloads_executed": 0,
+  "candidate_native_results": 0,
+  "scientific_effect_qualification": false,
+  "dispatch_ready": false,
+  "remaining": [
+    "source-derived independently reviewed family evidence",
+    "qualified native runtime and baseline/scorer evidence",
+    "candidate Gate 0/IPCG and scientific admission",
+    "expiring exact-attempt authorization for actual Tesla T4 GPU"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "bundle_sha256": "7373c5540755aefcfa901fb3c511ead40c78019453bc56b62a41c69034932dfd",
+  "bundle_bytes": 16414645,
+  "revision": "d5c01f5045df55819e337369c9617f603c667e00",
+  "tree": "aae2874f931d21e038966ecfde312638fff2091a",
+  "tracked_status": "",
+  "submodule_status": " fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c third_party/TripoSG (fc5c409)"
+}

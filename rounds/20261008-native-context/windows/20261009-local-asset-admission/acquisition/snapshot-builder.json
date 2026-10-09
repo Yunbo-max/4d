@@ -1,0 +1,1 @@
+{"plan": "/root/rivermind-data/4d-native-preparation/plans/actionbench-snapshots-20261009-001/harness.json", "approved_plan_digest": "c68920ae2958ab852a2c362cdafbbc0120e67d686d0db914041ce2b2dcbed395", "execution_started": false, "scope": "CPU-only immutable snapshot byte/revision/file-closure admission", "scientific_effect_qualification": false, "dispatch_ready": false}

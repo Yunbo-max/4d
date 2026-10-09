@@ -1,0 +1,18 @@
+{
+  "command": [
+    "timeout",
+    "900",
+    "/root/rivermind-data/4d-asset-tools-env/bin/hf",
+    "download",
+    "VAST-AI/TripoSG",
+    "--revision",
+    "2c1c516d22d58db486a058d98d31bb6177344e06",
+    "--local-dir",
+    "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/triposg",
+    "--max-workers",
+    "4"
+  ],
+  "pid": 3644,
+  "scientific_execution": false,
+  "transport": "hf_xet"
+}

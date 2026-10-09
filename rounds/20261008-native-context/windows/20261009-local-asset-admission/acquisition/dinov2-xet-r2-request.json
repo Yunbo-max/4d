@@ -1,0 +1,19 @@
+{
+  "command": [
+    "timeout",
+    "900",
+    "/root/rivermind-data/4d-asset-tools-env/bin/python",
+    "/root/rivermind-data/4d-asset-acquisition-20261009/hf_mirror_transport_v2.py",
+    "download",
+    "facebook/dinov2-large",
+    "--revision",
+    "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "--local-dir",
+    "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/dinov2",
+    "--max-workers",
+    "4"
+  ],
+  "pid": 5627,
+  "scientific_execution": false,
+  "transport": "hf_xet_fresh_token"
+}

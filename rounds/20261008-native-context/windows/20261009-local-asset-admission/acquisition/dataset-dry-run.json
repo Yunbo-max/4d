@@ -1,0 +1,17 @@
+{
+  "name": "dataset",
+  "command": [
+    "/root/rivermind-data/4d-asset-tools-env/bin/hf",
+    "download",
+    "facebook/actionbench",
+    "--type",
+    "dataset",
+    "--revision",
+    "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+    "--dry-run",
+    "--max-workers",
+    "4"
+  ],
+  "returncode": 124,
+  "download_started": false
+}

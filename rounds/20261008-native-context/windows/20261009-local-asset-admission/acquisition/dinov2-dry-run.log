@@ -1,0 +1,10 @@
+[dry-run] Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s][dry-run] Fetching 6 files:  17%|█▋        | 1/6 [00:00<00:02,  2.37it/s][dry-run] Fetching 6 files:  50%|█████     | 3/6 [00:00<00:00,  6.78it/s][dry-run] Fetching 6 files:  83%|████████▎ | 5/6 [00:00<00:00,  6.20it/s][dry-run] Fetching 6 files: 100%|██████████| 6/6 [00:00<00:00,  6.80it/s]
+[dry-run] Will download 6 files (out of 6) totalling 2.4G.
+FILE                     SIZE 
+------------------------ -----
+.gitattributes           1.5K 
+README.md                3.0K 
+config.json              549.0
+model.safetensors        1.2G 
+preprocessor_config.json 436.0
+pytorch_model.bin        1.2G 

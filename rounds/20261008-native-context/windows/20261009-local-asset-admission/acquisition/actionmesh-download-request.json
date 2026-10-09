@@ -1,0 +1,19 @@
+{
+  "command": [
+    "timeout",
+    "1800",
+    "/root/rivermind-data/4d-asset-tools-env/bin/hf",
+    "download",
+    "facebook/ActionMesh",
+    "--type",
+    "model",
+    "--revision",
+    "fb69228ba8a4df684907b5d259cff3c22fb722f1",
+    "--local-dir",
+    "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/actionmesh",
+    "--max-workers",
+    "4"
+  ],
+  "pid": 3348,
+  "scientific_execution": false
+}

@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-09T12:00:00.086877+00:00",
+  "moves": [
+    {
+      "name": "actionmesh",
+      "from": "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/actionmesh",
+      "to": "/root/rivermind-data/4d-native-preparation/upstream/actionmesh/pretrained_weights/ActionMesh",
+      "download_exit": 0,
+      "metadata_moved_intact": true
+    },
+    {
+      "name": "triposg",
+      "from": "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/triposg",
+      "to": "/root/rivermind-data/4d-native-preparation/upstream/actionmesh/pretrained_weights/TripoSG",
+      "download_exit": 0,
+      "metadata_moved_intact": true
+    },
+    {
+      "name": "dinov2",
+      "from": "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/dinov2",
+      "to": "/root/rivermind-data/4d-native-preparation/upstream/actionmesh/pretrained_weights/dinov2",
+      "download_exit": 0,
+      "metadata_moved_intact": true
+    },
+    {
+      "name": "rmbg",
+      "from": "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/rmbg",
+      "to": "/root/rivermind-data/4d-native-preparation/upstream/actionmesh/pretrained_weights/RMBG",
+      "download_exit": 0,
+      "metadata_moved_intact": true
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "timeout",
+    "900",
+    "/root/rivermind-data/4d-asset-tools-env/bin/hf",
+    "download",
+    "facebook/dinov2-large",
+    "--revision",
+    "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "--local-dir",
+    "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/dinov2",
+    "--max-workers",
+    "4"
+  ],
+  "pid": 3655,
+  "scientific_execution": false,
+  "transport": "hf_xet"
+}

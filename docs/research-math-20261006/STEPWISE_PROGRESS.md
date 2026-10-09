@@ -2205,3 +2205,17 @@ was updated to `bd368630ef623efa16c6c28fab894d692f82ee4d`.
 The review packet and hash-bound raw archive locators are at
 `rounds/20261008-native-context/windows/20261009-local-cpu-acceptance/REVIEW_PACKET.md`
 and sibling `RESULT.json`. No raw assets or credentials are committed.
+
+
+## Local engineering input admission — 2026-10-09
+
+At source `875d8e106a26be17bf80711b305d2b072523fcd8`, Local downloaded and
+CPU-admitted five pinned snapshots: 2,356 files / 23,131,060,721 bytes.
+Three single-attempt, zero-GPU harness jobs completed: snapshot admission,
+128-sample dataset-semantics admission and prospective first-UID manifest.
+All outputs were receipt-rehashed and promoted only to absent targets.
+See `rounds/20261008-native-context/windows/20261009-local-asset-admission/REVIEW_PACKET.md` and its RESULT/evidence/outputs.
+Mirror pagination, expired Xet-token caching and source-transfer failures were
+diagnosed; original failure logs and partial controller transfers were retained.
+These are engineering input records only. GPU STOP, method verification 0/15,
+native results 0/15 and scientific admission requirements remain unchanged.

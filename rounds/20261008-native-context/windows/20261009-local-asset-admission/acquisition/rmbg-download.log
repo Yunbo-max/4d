@@ -1,0 +1,11 @@
+Fetching 20 files:   0%|          | 0/20 [00:00<?, ?it/s]Fetching 20 files:   5%|▌         | 1/20 [00:00<00:15,  1.21it/s]Fetching 20 files:  15%|█▌        | 3/20 [00:00<00:04,  3.81it/s]Fetching 20 files:  20%|██        | 4/20 [00:01<00:03,  4.34it/s]Fetching 20 files:  25%|██▌       | 5/20 [00:01<00:04,  3.03it/s]Fetching 20 files:  35%|███▌      | 7/20 [00:01<00:02,  4.99it/s]Fetching 20 files:  40%|████      | 8/20 [00:03<00:07,  1.66it/s]Error while downloading from [remote URL redacted] The read operation timed out
+Trying to resume download...
+Fetching 20 files:  45%|████▌     | 9/20 [00:58<02:47, 15.25s/it]Fetching 20 files:  50%|█████     | 10/20 [01:04<02:05, 12.56s/it]Fetching 20 files:  55%|█████▌    | 11/20 [01:04<01:22,  9.14s/it]Fetching 20 files:  60%|██████    | 12/20 [01:05<00:53,  6.68s/it]Error while downloading from [remote URL redacted] _ssl.c:993: The handshake operation timed out
+Trying to resume download...
+Fetching 20 files:  65%|██████▌   | 13/20 [01:28<01:21, 11.62s/it]Fetching 20 files:  70%|███████   | 14/20 [01:29<00:50,  8.43s/it]Fetching 20 files:  75%|███████▌  | 15/20 [01:31<00:32,  6.48s/it]Fetching 20 files:  80%|████████  | 16/20 [01:33<00:20,  5.18s/it]Fetching 20 files:  85%|████████▌ | 17/20 [01:34<00:11,  3.83s/it]Fetching 20 files:  90%|█████████ | 18/20 [02:07<00:25, 12.68s/it]Error while downloading from [remote URL redacted] The read operation timed out
+Trying to resume download...
+Fetching 20 files:  95%|█████████▌| 19/20 [03:16<00:29, 29.30s/it]Error while downloading from [remote URL redacted] The read operation timed out
+Trying to resume download...
+Fetching 20 files: 100%|██████████| 20/20 [11:40<00:00, 171.60s/it]Fetching 20 files: 100%|██████████| 20/20 [11:40<00:00, 35.04s/it] 
+✓ Downloaded
+  path: /root/rivermind-data/4d-native-preparation/inputs/model-snapshots/rmbg

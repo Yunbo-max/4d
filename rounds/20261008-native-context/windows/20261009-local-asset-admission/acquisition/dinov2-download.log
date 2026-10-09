@@ -1,0 +1,2 @@
+Fetching 6 files:   0%|          | 0/6 [00:00<?, ?it/s]Fetching 6 files:  17%|█▋        | 1/6 [00:04<00:21,  4.40s/it]Fetching 6 files:  33%|███▎      | 2/6 [00:06<00:11,  2.83s/it]Fetching 6 files:  50%|█████     | 3/6 [00:09<00:08,  2.94s/it]Fetching 6 files:  67%|██████▋   | 4/6 [00:12<00:06,  3.06s/it]Fetching 6 files:  83%|████████▎ | 5/6 [11:12<04:00, 240.11s/it]Error while downloading from [remote URL redacted] peer closed connection without sending complete message body (received 521609940 bytes, expected 1217522888)
+Trying to resume download...

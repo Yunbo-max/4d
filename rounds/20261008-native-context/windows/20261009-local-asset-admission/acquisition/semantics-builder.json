@@ -1,0 +1,1 @@
+{"plan": "/root/rivermind-data/4d-native-preparation/plans/actionbench-semantics-20261009-001/harness.json", "approved_plan_digest": "a70629b311c1647ce5c0c0c74d1b52751fcbeca2bf66d5a2efd20b833a207695", "execution_started": false, "scope": "CPU-only byte-bound ActionBench tensor/camera/RGBA semantics", "scientific_effect_qualification": false, "dispatch_ready": false}

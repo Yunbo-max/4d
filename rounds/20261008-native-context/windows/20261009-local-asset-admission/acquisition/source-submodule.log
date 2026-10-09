@@ -1,0 +1,9 @@
+Submodule 'third_party/TripoSG' (git@github.com:VAST-AI-Research/TripoSG.git) registered for path 'third_party/TripoSG'
+Cloning into '/root/rivermind-data/4d-native-preparation/upstream/actionmesh/third_party/TripoSG'...
+fatal: unable to access '[remote URL redacted] Failed to connect to github.com port 443 after 130203 ms: Connection timed out
+fatal: clone of 'git@github.com:VAST-AI-Research/TripoSG.git' into submodule path '/root/rivermind-data/4d-native-preparation/upstream/actionmesh/third_party/TripoSG' failed
+Failed to clone 'third_party/TripoSG'. Retry scheduled
+Cloning into '/root/rivermind-data/4d-native-preparation/upstream/actionmesh/third_party/TripoSG'...
+fatal: unable to access '[remote URL redacted] Operation too slow. Less than 1024 bytes/sec transferred the last 30 seconds
+fatal: clone of 'git@github.com:VAST-AI-Research/TripoSG.git' into submodule path '/root/rivermind-data/4d-native-preparation/upstream/actionmesh/third_party/TripoSG' failed
+Failed to clone 'third_party/TripoSG' a second time, aborting

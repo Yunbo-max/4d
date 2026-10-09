@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-10-09T11:41:30.963439+00:00",
+  "scope": "controller asset acquisition only",
+  "scientific_execution": false,
+  "gpu_stop": true,
+  "source_commit": "875d8e106a26be17bf80711b305d2b072523fcd8",
+  "dataset_revision": "2796071cbe6248422fcbeab3101fa9f9886cb7b9",
+  "dataset_first_attempt": {
+    "exit": 143,
+    "reason": "mirror tree pagination returned primary-host links; primary host unreachable; stopped own downloader after diagnosis",
+    "log": "dataset-download.log"
+  },
+  "dataset_r2": {
+    "wrapper": "hf_mirror_pagination.py",
+    "log": "dataset-download-r2.log",
+    "timeout_seconds": 1800,
+    "maximum_workers": 4,
+    "revision_unchanged": true
+  },
+  "official_git_revision": "d5c01f5045df55819e337369c9617f603c667e00",
+  "official_submodule_revision": "fc5c40990181e2a756c4e0b1c2f4d6b5202faf8c",
+  "snapshot_admission": "not_started",
+  "updated_at": "2026-10-09T12:06:36.413194+00:00",
+  "download_results": {
+    "dataset-download": 143,
+    "dataset-download-r2": 143,
+    "dataset-xet-download": 0,
+    "actionmesh-download": -15,
+    "actionmesh-xet-download": 0,
+    "triposg-download": -15,
+    "triposg-xet-download": 1,
+    "triposg-xet-r2": 0,
+    "dinov2-download": -15,
+    "dinov2-xet-download": 1,
+    "dinov2-xet-r2": 0,
+    "rmbg-download": 0
+  },
+  "repairs": {
+    "dataset_pagination": "Mirror pagination linked unreachable primary host; route only dataset API pagination back through mirror.",
+    "large_weights": "hf_xet chunk transport replaced slow HTTP with existing completed files retained.",
+    "xet_401": "Mirror cached expired public download token. Observed old expiration 1791509056 at server time 1791546974; query-nonce refresh returned expiration 1791547874. Immutable revision unchanged.",
+    "source_transfer": "Direct pinned ActionMesh checkout succeeded; TripoSG network clone failed; exact verified local Git bundle transferred with legacy SCP after SFTP stalls."
+  },
+  "scripts": {
+    "hf_mirror_pagination.py": "8a281c5630ad18ee467e0c2972cc5058d4992112e29eb068933e9be9c0496e3c",
+    "hf_mirror_transport_v2.py": "7a31eb3402b0c69c33d9e206a7cd38256144d7dcf95aae768d82a02285dbe16a",
+    "status.py": "05572a1f9182d5a0aa90916d1190ffd93b036617a543dc1fa99d5618cfb5811c"
+  },
+  "progress_is_not_admission": true
+}

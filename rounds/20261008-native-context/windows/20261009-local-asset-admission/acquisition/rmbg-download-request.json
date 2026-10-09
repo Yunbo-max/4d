@@ -1,0 +1,19 @@
+{
+  "command": [
+    "timeout",
+    "1800",
+    "/root/rivermind-data/4d-asset-tools-env/bin/hf",
+    "download",
+    "briaai/RMBG-1.4",
+    "--type",
+    "model",
+    "--revision",
+    "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+    "--local-dir",
+    "/root/rivermind-data/4d-native-preparation/inputs/model-snapshots/rmbg",
+    "--max-workers",
+    "4"
+  ],
+  "pid": 3351,
+  "scientific_execution": false
+}

@@ -1,0 +1,2 @@
+name, uuid, memory.total [MiB], memory.used [MiB], utilization.gpu [%]
+Tesla T4, GPU-305023ac-8457-0ac4-0432-4ff19b30de46, 15360 MiB, 0 MiB, 0 %

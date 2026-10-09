@@ -1,0 +1,17 @@
+{
+  "name": "dinov2",
+  "command": [
+    "/root/rivermind-data/4d-asset-tools-env/bin/hf",
+    "download",
+    "facebook/dinov2-large",
+    "--type",
+    "model",
+    "--revision",
+    "47b73eefe95e8d44ec3623f8890bd894b6ea2d6c",
+    "--dry-run",
+    "--max-workers",
+    "4"
+  ],
+  "returncode": 0,
+  "download_started": false
+}

@@ -1,0 +1,24 @@
+[dry-run] Fetching 20 files:   0%|          | 0/20 [00:00<?, ?it/s][dry-run] Fetching 20 files:   5%|▌         | 1/20 [00:00<00:08,  2.26it/s][dry-run] Fetching 20 files:  10%|█         | 2/20 [00:00<00:05,  3.32it/s][dry-run] Fetching 20 files:  15%|█▌        | 3/20 [00:00<00:04,  4.10it/s][dry-run] Fetching 20 files:  25%|██▌       | 5/20 [00:01<00:03,  4.26it/s][dry-run] Fetching 20 files:  40%|████      | 8/20 [00:01<00:01,  6.49it/s][dry-run] Fetching 20 files:  50%|█████     | 10/20 [00:01<00:01,  7.84it/s][dry-run] Fetching 20 files:  60%|██████    | 12/20 [00:01<00:00,  9.71it/s][dry-run] Fetching 20 files:  70%|███████   | 14/20 [00:02<00:00,  8.95it/s][dry-run] Fetching 20 files:  80%|████████  | 16/20 [00:02<00:00, 10.32it/s][dry-run] Fetching 20 files:  90%|█████████ | 18/20 [00:02<00:00,  7.57it/s][dry-run] Fetching 20 files: 100%|██████████| 20/20 [00:03<00:00,  6.35it/s][dry-run] Fetching 20 files: 100%|██████████| 20/20 [00:03<00:00,  6.58it/s]
+[dry-run] Will download 20 files (out of 20) totalling 842.2M.
+FILE                      SIZE  
+------------------------- ------
+.gitattributes            1.8K  
+MyConfig.py               326.0 
+MyPipe.py                 2.9K  
+README.md                 6.4K  
+briarmbg.py               13.1K 
+config.json               548.0 
+example_inference.py      1.1K  
+example_input.jpg         326.6K
+model.pth                 176.7M
+model.safetensors         176.4M
+onnx/model.onnx           176.2M
+onnx/model_fp16.onnx      88.2M 
+onnx/model_quantized.onnx 44.4M 
+onnx/quantize_config.json 527.0 
+preprocessor_config.json  345.0 
+pytorch_model.bin         176.6M
+requirements.txt          87.0  
+results.png               1.3M  
+t4.png                    2.2M  
+utilities.py              980.0 

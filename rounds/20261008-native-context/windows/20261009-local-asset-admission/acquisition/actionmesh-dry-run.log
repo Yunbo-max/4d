@@ -1,0 +1,14 @@
+[dry-run] Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s][dry-run] Fetching 10 files:  10%|█         | 1/10 [00:00<00:05,  1.74it/s][dry-run] Fetching 10 files:  20%|██        | 2/10 [00:00<00:02,  2.71it/s][dry-run] Fetching 10 files:  40%|████      | 4/10 [00:01<00:01,  4.48it/s][dry-run] Fetching 10 files:  50%|█████     | 5/10 [00:01<00:01,  4.79it/s][dry-run] Fetching 10 files:  60%|██████    | 6/10 [00:01<00:00,  5.47it/s][dry-run] Fetching 10 files:  80%|████████  | 8/10 [00:01<00:00,  6.14it/s][dry-run] Fetching 10 files: 100%|██████████| 10/10 [00:01<00:00,  5.96it/s]
+[dry-run] Will download 10 files (out of 10) totalling 6.6G.
+FILE                          SIZE  
+----------------------------- ------
+.gitattributes                1.5K  
+LICENSE.txt                   12.7K 
+README.md                     2.1K  
+autoencoder/README.md         352.0 
+autoencoder/config.json       335.0 
+autoencoder/model.safetensors 856.9M
+config.json                   57.0  
+denoiser/README.md            352.0 
+denoiser/config.json          248.0 
+denoiser/model.safetensors    5.8G  

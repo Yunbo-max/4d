@@ -2054,5 +2054,18 @@
     "scientific_admission": false,
     "gpu_dispatch_allowed": false,
     "real_native_acceptance": "pending six required real artifact checks and per-candidate admission"
+  },
+  "local_engineering_inputs_20261009": {
+    "status": "engineering_inputs_admitted",
+    "source_commit": "875d8e106a26be17bf80711b305d2b072523fcd8",
+    "result_locator": "rounds/20261008-native-context/windows/20261009-local-asset-admission/RESULT.json",
+    "files": 2356,
+    "bytes": 23131060721,
+    "population_size": 128,
+    "cpu_runs_completed": 3,
+    "gpu_stop": true,
+    "native_candidate_results": 0,
+    "scientific_effect_qualification": false,
+    "dispatch_ready": false
   }
 }

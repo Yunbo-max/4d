@@ -1,0 +1,44 @@
+{
+  "schema_id": "harness-plan",
+  "schema_version": "1.0.0",
+  "batch_id": "actionbench-semantics-20261009-001",
+  "tasks": [
+    {
+      "task_id": "actionbench-full128-dataset-semantics",
+      "idea_id": "baseline-qualification",
+      "depends_on": [],
+      "priority": 1,
+      "plan_ref": {
+        "path": "plans/actionbench-semantics-20261009-001/native.json",
+        "sha256": "e8b6664a653d9e74f7112eddcc72cbee96d8783d25a34d81dea1f68b025c53b4"
+      },
+      "resources": {
+        "cpu_cores": 1,
+        "ram_mib": 2048,
+        "gpu_count": 0,
+        "gpu_peak_mib": null,
+        "allow_gpu_share": false,
+        "memory_profile_ref": null,
+        "exclusive_keys": [
+          "actionbench-full128-dataset-semantics"
+        ]
+      }
+    }
+  ],
+  "limits": {
+    "total_wall_seconds": 3660,
+    "window_seconds": 3660,
+    "max_parallel_tasks": 1,
+    "cpu_cores": 1,
+    "ram_mib": 2048,
+    "max_gpu_task_seconds": 0
+  },
+  "pool_dir": "/root/.local/state/research-autopilot",
+  "output_root": "runs/harness",
+  "gpus": {
+    "uuids": [],
+    "safety_margin_mib": 1024,
+    "max_tasks_per_gpu": 1
+  },
+  "plan_digest": "a70629b311c1647ce5c0c0c74d1b52751fcbeca2bf66d5a2efd20b833a207695"
+}

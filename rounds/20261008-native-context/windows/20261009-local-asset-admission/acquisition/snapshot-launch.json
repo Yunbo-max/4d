@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/root/rivermind-data/4d-cpu-acceptance-env/bin/python",
+    "/root/rivermind-data/research-autopilot-bd36863/skills/research-autopilot/scripts/run_harness.py",
+    "/root/rivermind-data/4d-native-preparation/plans/actionbench-snapshots-20261009-001/harness.json",
+    "--root",
+    "/root/rivermind-data/4d-native-preparation",
+    "--execute",
+    "--approved-plan-digest",
+    "c68920ae2958ab852a2c362cdafbbc0120e67d686d0db914041ce2b2dcbed395"
+  ],
+  "pid": 11084,
+  "at": "2026-10-09T12:10:08.124847+00:00",
+  "gpu_count": 0
+}
